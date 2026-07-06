@@ -28028,6 +28028,25 @@
     "year": 1969,
     "festivalId": "cannes",
     "festivalName": "Cannes Film Festival",
+    "category": "Directors' Fortnight",
+    "result": "nominee",
+    "film": {
+      "title": "Winged Dialogue",
+      "releaseYear": 1969,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 1969,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
     "category": "Grand Prix",
     "result": "winner",
     "film": {
@@ -44219,7 +44238,7 @@
     "category": "Directors' Fortnight",
     "result": "nominee",
     "film": {
-      "title": "Los Gaminos",
+      "title": "Gamín",
       "releaseYear": 1978,
       "imdbId": null,
       "countryCodes": [],
@@ -54479,7 +54498,7 @@
     "category": "Foreign Film",
     "result": "winner",
     "film": {
-      "title": "Epílogo",
+      "title": "Epilogue",
       "releaseYear": 1984,
       "imdbId": null,
       "countryCodes": [],
@@ -74711,7 +74730,7 @@
     "year": 1995,
     "festivalId": "cannes",
     "festivalName": "Cannes Film Festival",
-    "category": "The White Ballon by Jafar Panahi Special Mention",
+    "category": "The White Balloon by Jafar Panahi Special Mention",
     "result": "winner",
     "film": {
       "title": "Denise Calls Up",
@@ -105472,690 +105491,6 @@
     "year": 2007,
     "festivalId": "cannes",
     "festivalName": "Cannes Film Festival",
-    "category": "Short film Competition",
-    "result": "nominee",
-    "film": {
-      "title": "Anthony Chen",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "Short film Competition",
-    "result": "nominee",
-    "film": {
-      "title": "Ark",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "Short film Competition",
-    "result": "nominee",
-    "film": {
-      "title": "Antonio Campos",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "Short film Competition",
-    "result": "nominee",
-    "film": {
-      "title": "Looking Glass",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "Short film Competition",
-    "result": "nominee",
-    "film": {
-      "title": "My Dear Rosseta",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "Short film Competition",
-    "result": "nominee",
-    "film": {
-      "title": "My Sister",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "Short film Competition",
-    "result": "nominee",
-    "film": {
-      "title": "The Oates' Valor",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "Short film Competition",
-    "result": "nominee",
-    "film": {
-      "title": "Resistance aux tremblements",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "Short film Competition",
-    "result": "nominee",
-    "film": {
-      "title": "Mark Albiston",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "Short film Competition",
-    "result": "nominee",
-    "film": {
-      "title": "Gia to onoma tou spourgitiou",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "Short film Competition",
-    "result": "nominee",
-    "film": {
-      "title": "Ver Llover",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "À l'intérieur",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "El Asaltante",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "Funuke Show Some Love, You Losers!",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "In Your Wake",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "Jellyfish",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "The Milky Way",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "The Orphanage",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "Párpados azules",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "Voleurs de chevaux",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "XXY",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "Um ramo",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "Madame Tutli-Putli",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "Saliva",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "Kamen Kalev",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "Peter Salmon",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "La Route, la nuit",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "Both",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "Héros",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "Déficit",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "Malos hábitos",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "The Mosquito Problem and Other Stories",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "Primrose Hill",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "Situation Frank",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "Chambre 616",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "International Critics' Week",
-    "result": "nominee",
-    "film": {
-      "title": "Expired",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
     "category": "Directors' Fortnight",
     "result": "nominee",
     "film": {
@@ -106707,7 +106042,7 @@
     "year": 2007,
     "festivalId": "cannes",
     "festivalName": "Cannes Film Festival",
-    "category": "Prix du Jury",
+    "category": "Jury Prize",
     "result": "winner",
     "film": {
       "title": "Persepolis",
@@ -106825,25 +106160,6 @@
     "result": "winner",
     "film": {
       "title": "The Band's Visit",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "Short Film Special Distinction",
-    "result": "winner",
-    "film": {
-      "title": "Run",
       "releaseYear": 2007,
       "imdbId": null,
       "countryCodes": [],
@@ -107622,64 +106938,7 @@
     "category": "Out of Competition",
     "result": "nominee",
     "film": {
-      "title": "Déficit",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "Out of Competition",
-    "result": "nominee",
-    "film": {
-      "title": "Expired",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "Out of Competition",
-    "result": "nominee",
-    "film": {
       "title": "Go Go Tales",
-      "releaseYear": 2007,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": []
-  },
-  {
-    "year": 2007,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "Out of Competition",
-    "result": "nominee",
-    "film": {
-      "title": "Héros",
       "releaseYear": 2007,
       "imdbId": null,
       "countryCodes": [],
@@ -108022,6 +107281,215 @@
     "result": "nominee",
     "film": {
       "title": "Young Yakuza",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Short film Competition",
+    "result": "nominee",
+    "film": {
+      "title": "Ah Ma",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Short film Competition",
+    "result": "nominee",
+    "film": {
+      "title": "Ark",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Short film Competition",
+    "result": "nominee",
+    "film": {
+      "title": "In the Name of the Sparrow",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Short film Competition",
+    "result": "nominee",
+    "film": {
+      "title": "The Last 15",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Short film Competition",
+    "result": "nominee",
+    "film": {
+      "title": "Looking Glass",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Short film Competition",
+    "result": "nominee",
+    "film": {
+      "title": "My Dear Rosseta",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Short film Competition",
+    "result": "nominee",
+    "film": {
+      "title": "My Sister",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Short film Competition",
+    "result": "nominee",
+    "film": {
+      "title": "The Oates' Valor",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Short film Competition",
+    "result": "nominee",
+    "film": {
+      "title": "Run",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Short film Competition",
+    "result": "nominee",
+    "film": {
+      "title": "Shock Resistant",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Short film Competition",
+    "result": "nominee",
+    "film": {
+      "title": "Ver Llover",
       "releaseYear": 2007,
       "imdbId": null,
       "countryCodes": [],
@@ -108421,6 +107889,481 @@
     "result": "nominee",
     "film": {
       "title": "Pierre Rissient",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "Blue Eyelids",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "Funuke Show Some Love, You Losers!",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "Inside",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "In the Arms of My Enemy",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "In Your Wake",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "Jellyfish",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "The Milky Way",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "The Mugger",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "The Orphanage",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "XXY",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "Bad Habits",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "Chambre 616",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "Déficit",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "Expired",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "Héros",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "The Mosquito Problem and Other Stories",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "Both",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "Fog",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "Madame Tutli-Putli",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "Rabbit Troubles",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "La Route, la nuit",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "Saliva",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "A Stem",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "Primrose Hill",
+      "releaseYear": 2007,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2007,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "International Critics' Week",
+    "result": "nominee",
+    "film": {
+      "title": "Situation Frank",
       "releaseYear": 2007,
       "imdbId": null,
       "countryCodes": [],
@@ -175072,7 +175015,7 @@
     "category": "Directors' Fortnight (Quinzaine des cinéastes)",
     "result": "nominee",
     "film": {
-      "title": "Yes!",
+      "title": "Yes",
       "releaseYear": 2025,
       "imdbId": null,
       "countryCodes": [],
@@ -175509,6 +175452,443 @@
     "category": "Palme d'Or",
     "result": "winner",
     "film": {
+      "title": "Fjord",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Grand Prix",
+    "result": "winner",
+    "film": {
+      "title": "Minotaur",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Jury Prize",
+    "result": "winner",
+    "film": {
+      "title": "The Dreamed Adventure",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Best Director",
+    "result": "winner",
+    "film": {
+      "title": "The Black Ball Paweł Pawlikowski for Fatherland",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Best Actress",
+    "result": "winner",
+    "film": {
+      "title": "All of a Sudden",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Best Actor",
+    "result": "winner",
+    "film": {
+      "title": "Coward",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Best Screenplay",
+    "result": "winner",
+    "film": {
+      "title": "A Man of His Time",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Palme d'Or",
+    "result": "winner",
+    "film": {
+      "title": "The Black Ball",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Palme d'Or",
+    "result": "winner",
+    "film": {
+      "title": "Fatherland",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Un Certain Regard Prize",
+    "result": "winner",
+    "film": {
+      "title": "Everytime",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Jury Prize",
+    "result": "winner",
+    "film": {
+      "title": "Elephants in the Fog",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Jury Prize",
+    "result": "winner",
+    "film": {
+      "title": "Iron Boy",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Best Actress",
+    "result": "winner",
+    "film": {
+      "title": "Forever Your Maternal Animal",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Best Actor",
+    "result": "winner",
+    "film": {
+      "title": "Congo Boy",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Caméra d'Or",
+    "result": "winner",
+    "film": {
+      "title": "Ben'Imana",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Palme d'Or",
+    "result": "winner",
+    "film": {
+      "title": "the Opponents by Federico Luis",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "First Prize",
+    "result": "winner",
+    "film": {
+      "title": "Laser-Cat",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Second Prize",
+    "result": "winner",
+    "film": {
+      "title": "Silent Voices",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Third Prize",
+    "result": "winner",
+    "film": {
+      "title": "Never Enough",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Cinéfondation",
+    "result": "winner",
+    "film": {
+      "title": "Never Enough",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Cinéfondation",
+    "result": "winner",
+    "film": {
+      "title": "Growing Stones, Flying Papers",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Katábasis by Ugo Arsac Special Mention",
+    "result": "winner",
+    "film": {
+      "title": "The Black Mirror Experience",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Special Mention",
+    "result": "winner",
+    "film": {
+      "title": "The Black Mirror Experience",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Palme d'Or",
+    "result": "winner",
+    "film": {
       "title": "Peter Jackson",
       "releaseYear": 2026,
       "imdbId": null,
@@ -175548,6 +175928,63 @@
     "result": "winner",
     "film": {
       "title": "John Travolta",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Un Certain Regard",
+    "result": "winner",
+    "film": {
+      "title": "Ben'Imana",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Parallel sections (first features)",
+    "result": "winner",
+    "film": {
+      "title": "A Girl Unknown",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Prix du Jury Œcuménique",
+    "result": "winner",
+    "film": {
+      "title": "Fjord",
       "releaseYear": 2026,
       "imdbId": null,
       "countryCodes": [],
@@ -175639,7 +176076,7 @@
     "year": 2026,
     "festivalId": "cannes",
     "festivalName": "Cannes Film Festival",
-    "category": "Canal+ Award for for Short Film",
+    "category": "Canal+ Award for Short Film",
     "result": "winner",
     "film": {
       "title": "\"Vaterland\" or a Bule Named Yanto",
@@ -175661,7 +176098,7 @@
     "category": "Discovery Prize for Short Film",
     "result": "winner",
     "film": {
-      "title": "by Skinny Boots",
+      "title": "Skinny Boots",
       "releaseYear": 2026,
       "imdbId": null,
       "countryCodes": [],
@@ -175680,7 +176117,7 @@
     "category": "Audience Award",
     "result": "winner",
     "film": {
-      "title": "Audience Award",
+      "title": "I See Buildings Fall Like Lightning",
       "releaseYear": 2026,
       "imdbId": null,
       "countryCodes": [],
@@ -175699,7 +176136,7 @@
     "category": "Europa Cinemas Label Award for Best European Film",
     "result": "winner",
     "film": {
-      "title": "by",
+      "title": "Too Many Beasts",
       "releaseYear": 2026,
       "imdbId": null,
       "countryCodes": [],
@@ -175718,7 +176155,7 @@
     "category": "SACD Prize for Best French Film",
     "result": "winner",
     "film": {
-      "title": "by",
+      "title": "Shana",
       "releaseYear": 2026,
       "imdbId": null,
       "countryCodes": [],
@@ -175738,6 +176175,329 @@
     "result": "winner",
     "film": {
       "title": "Claire Denis",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Golden Eye",
+    "result": "winner",
+    "film": {
+      "title": "a Revolution by Pegah Ahangarani",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Jury Prize",
+    "result": "winner",
+    "film": {
+      "title": "Tin Castle",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Best Film",
+    "result": "winner",
+    "film": {
+      "title": "Teenage Sex and Death at Camp Miasma",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Discovery Prize",
+    "result": "winner",
+    "film": {
+      "title": "Flesh and Fuel",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Best Short Film",
+    "result": "winner",
+    "film": {
+      "title": "Silent Voices",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "François Chalais Prize",
+    "result": "winner",
+    "film": {
+      "title": "Fjord",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Cannes Soundtrack Award",
+    "result": "winner",
+    "film": {
+      "title": "Minotaur Alberto Iglesias for Bitter Christmas",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Cannes Soundtrack Award",
+    "result": "winner",
+    "film": {
+      "title": "Minotaur",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Cannes Soundtrack Award",
+    "result": "winner",
+    "film": {
+      "title": "Bitter Christmas",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "CST Award for Best Artist-Technician",
+    "result": "winner",
+    "film": {
+      "title": "A Man of His Time",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "CST Award for Best Young Female Artist-Technician",
+    "result": "winner",
+    "film": {
+      "title": "The Birthday Party",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Citizenship Prize",
+    "result": "winner",
+    "film": {
+      "title": "Fjord",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Special Mention",
+    "result": "winner",
+    "film": {
+      "title": "A Man of His Time",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "AFCAE Art House Cinema Award",
+    "result": "winner",
+    "film": {
+      "title": "A Man of His Time",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Positive Cinema Prize",
+    "result": "winner",
+    "film": {
+      "title": "Coward",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Palm Dog Award",
+    "result": "winner",
+    "film": {
+      "title": "La Perra",
+      "releaseYear": 2026,
+      "imdbId": null,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": "",
+      "runtimeMinutes": 0
+    },
+    "directors": []
+  },
+  {
+    "year": 2026,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Jury Prize",
+    "result": "winner",
+    "film": {
+      "title": "I See Buildings Fall Like Lightning",
       "releaseYear": 2026,
       "imdbId": null,
       "countryCodes": [],
@@ -177922,7 +178682,7 @@
     "category": "Critics' Week (Semaine de la critique)",
     "result": "nominee",
     "film": {
-      "title": "In Waves",
+      "title": "Flesh and Fuel (CdO)",
       "releaseYear": 2026,
       "imdbId": null,
       "countryCodes": [],
@@ -177941,7 +178701,7 @@
     "category": "Critics' Week (Semaine de la critique)",
     "result": "nominee",
     "film": {
-      "title": "Made of Flesh and Fuel (CdO)",
+      "title": "In Waves",
       "releaseYear": 2026,
       "imdbId": null,
       "countryCodes": [],
@@ -179062,7 +179822,7 @@
     "category": "ACID",
     "result": "nominee",
     "film": {
-      "title": "A Secret Heart (ŒdO)",
+      "title": "A Secret Heart",
       "releaseYear": 2026,
       "imdbId": null,
       "countryCodes": [],

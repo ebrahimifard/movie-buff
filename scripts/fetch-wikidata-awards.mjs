@@ -1,6 +1,8 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { IMDB_ID_PATTERN } from "../lib/schemas.mjs";
+import { fetchWithRetry } from "./lib/http.mjs";
 
 const root = process.cwd();
 const festivalsPath = path.join(root, "data", "normalized", "festivals.json");
@@ -9,35 +11,6 @@ const outputPath = path.join(root, "data", "source", "wikidata-awards.json");
 const wikidataSearchUrl = "https://www.wikidata.org/w/api.php";
 const sparqlEndpoint = "https://query.wikidata.org/sparql";
 const entityQidCache = new Map();
-
-function sleep(ms) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
-}
-
-async function fetchWithRetry(url, options, label, maxAttempts = 6) {
-  let attempt = 0;
-  while (attempt < maxAttempts) {
-    attempt += 1;
-    const response = await fetch(url, options);
-    if (response.ok) {
-      return response;
-    }
-
-    const shouldRetry = response.status === 429 || response.status >= 500;
-    if (!shouldRetry || attempt >= maxAttempts) {
-      const body = await response.text();
-      throw new Error(`${label} failed: ${response.status} ${body.slice(0, 300)}`);
-    }
-
-    const retryAfter = Number(response.headers.get("retry-after") ?? "0");
-    const waitMs = Number.isFinite(retryAfter) && retryAfter > 0 ? retryAfter * 1000 : 300 * 2 ** attempt;
-    await sleep(waitMs);
-  }
-
-  throw new Error(`${label} failed after ${maxAttempts} attempts`);
-}
 
 function toYear(value) {
   if (!value) {
@@ -63,7 +36,7 @@ function normalizeIso2(input) {
   return [...new Set(String(input).split("|").map((part) => part.trim()).filter(Boolean))];
 }
 
-function normalizeNames(input) {
+export function normalizeNames(input) {
   if (!input) {
     return [];
   }
@@ -98,9 +71,9 @@ async function resolveEntityQid(label) {
   return qid;
 }
 
-function createWinnersByFestivalQuery(festivalQid) {
+export function createWinnersByFestivalQuery(festivalQid) {
   return `
-SELECT ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate
+SELECT ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate ?directorLabel
        (GROUP_CONCAT(DISTINCT ?directorLabel; separator="|") AS ?directors)
        (GROUP_CONCAT(DISTINCT ?countryCode; separator="|") AS ?countryCodes)
 WHERE {
@@ -124,15 +97,15 @@ WHERE {
 
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
-GROUP BY ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate
+GROUP BY ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate ?directorLabel
 ORDER BY DESC(?awardDate)
 LIMIT 20000
 `.trim();
 }
 
-function createWinnersByAwardQuery(awardQid) {
+export function createWinnersByAwardQuery(awardQid) {
   return `
-SELECT ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate
+SELECT ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate ?directorLabel
        (GROUP_CONCAT(DISTINCT ?directorLabel; separator="|") AS ?directors)
        (GROUP_CONCAT(DISTINCT ?countryCode; separator="|") AS ?countryCodes)
 WHERE {
@@ -156,15 +129,15 @@ WHERE {
 
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
-GROUP BY ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate
+GROUP BY ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate ?directorLabel
 ORDER BY DESC(?awardDate)
 LIMIT 12000
 `.trim();
 }
 
-function createNomineesByFestivalQuery(festivalQid) {
+export function createNomineesByFestivalQuery(festivalQid) {
   return `
-SELECT ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate
+SELECT ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate ?directorLabel
        (GROUP_CONCAT(DISTINCT ?directorLabel; separator="|") AS ?directors)
        (GROUP_CONCAT(DISTINCT ?countryCode; separator="|") AS ?countryCodes)
 WHERE {
@@ -188,15 +161,15 @@ WHERE {
 
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
-GROUP BY ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate
+GROUP BY ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate ?directorLabel
 ORDER BY DESC(?awardDate)
 LIMIT 40000
 `.trim();
 }
 
-function createNomineesByAwardQuery(awardQid) {
+export function createNomineesByAwardQuery(awardQid) {
   return `
-SELECT ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate
+SELECT ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate ?directorLabel
        (GROUP_CONCAT(DISTINCT ?directorLabel; separator="|") AS ?directors)
        (GROUP_CONCAT(DISTINCT ?countryCode; separator="|") AS ?countryCodes)
 WHERE {
@@ -220,15 +193,15 @@ WHERE {
 
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
-GROUP BY ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate
+GROUP BY ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate ?directorLabel
 ORDER BY DESC(?awardDate)
 LIMIT 18000
 `.trim();
 }
 
-function createEventWinnersQuery(festivalToken) {
+export function createEventWinnersQuery(festivalToken) {
   return `
-SELECT ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate
+SELECT ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate ?directorLabel
        (GROUP_CONCAT(DISTINCT ?directorLabel; separator="|") AS ?directors)
        (GROUP_CONCAT(DISTINCT ?countryCode; separator="|") AS ?countryCodes)
 WHERE {
@@ -252,15 +225,15 @@ WHERE {
 
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
-GROUP BY ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate
+GROUP BY ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate ?directorLabel
 ORDER BY DESC(?eventDate)
 LIMIT 30000
 `.trim();
 }
 
-function createEventNomineesQuery(festivalToken) {
+export function createEventNomineesQuery(festivalToken) {
   return `
-SELECT ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate
+SELECT ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate ?directorLabel
        (GROUP_CONCAT(DISTINCT ?directorLabel; separator="|") AS ?directors)
        (GROUP_CONCAT(DISTINCT ?countryCode; separator="|") AS ?countryCodes)
 WHERE {
@@ -284,15 +257,15 @@ WHERE {
 
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
-GROUP BY ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate
+GROUP BY ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate ?directorLabel
 ORDER BY DESC(?eventDate)
 LIMIT 40000
 `.trim();
 }
 
-function createOscarsCeremonyWinnersQuery(academyAwardsQid, ceremonyClassQid) {
+export function createOscarsCeremonyWinnersQuery(academyAwardsQid, ceremonyClassQid) {
   return `
-SELECT ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate
+SELECT ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate ?directorLabel
        (GROUP_CONCAT(DISTINCT ?directorLabel; separator="|") AS ?directors)
        (GROUP_CONCAT(DISTINCT ?countryCode; separator="|") AS ?countryCodes)
 WHERE {
@@ -320,15 +293,15 @@ WHERE {
 
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
-GROUP BY ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate
+GROUP BY ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate ?directorLabel
 ORDER BY DESC(?eventDate) DESC(?awardDate)
 LIMIT 90000
 `.trim();
 }
 
-function createOscarsCeremonyNomineesQuery(academyAwardsQid, ceremonyClassQid) {
+export function createOscarsCeremonyNomineesQuery(academyAwardsQid, ceremonyClassQid) {
   return `
-SELECT ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate
+SELECT ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate ?directorLabel
        (GROUP_CONCAT(DISTINCT ?directorLabel; separator="|") AS ?directors)
        (GROUP_CONCAT(DISTINCT ?countryCode; separator="|") AS ?countryCodes)
 WHERE {
@@ -356,15 +329,15 @@ WHERE {
 
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
-GROUP BY ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate
+GROUP BY ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate ?directorLabel
 ORDER BY DESC(?eventDate) DESC(?awardDate)
 LIMIT 120000
 `.trim();
 }
 
-function createBaftaCeremonyWinnersQuery(baftaQid, ceremonyClassQid) {
+export function createBaftaCeremonyWinnersQuery(baftaQid, ceremonyClassQid) {
   return `
-SELECT ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate
+SELECT ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate ?directorLabel
        (GROUP_CONCAT(DISTINCT ?directorLabel; separator="|") AS ?directors)
        (GROUP_CONCAT(DISTINCT ?countryCode; separator="|") AS ?countryCodes)
 WHERE {
@@ -392,15 +365,15 @@ WHERE {
 
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
-GROUP BY ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate
+GROUP BY ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate ?directorLabel
 ORDER BY DESC(?eventDate) DESC(?awardDate)
 LIMIT 90000
 `.trim();
 }
 
-function createBaftaCeremonyNomineesQuery(baftaQid, ceremonyClassQid) {
+export function createBaftaCeremonyNomineesQuery(baftaQid, ceremonyClassQid) {
   return `
-SELECT ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate
+SELECT ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate ?directorLabel
        (GROUP_CONCAT(DISTINCT ?directorLabel; separator="|") AS ?directors)
        (GROUP_CONCAT(DISTINCT ?countryCode; separator="|") AS ?countryCodes)
 WHERE {
@@ -428,7 +401,7 @@ WHERE {
 
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
 }
-GROUP BY ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate
+GROUP BY ?film ?filmLabel ?award ?awardLabel ?imdbId ?awardDate ?eventDate ?releaseDate ?directorLabel
 ORDER BY DESC(?eventDate) DESC(?awardDate)
 LIMIT 120000
 `.trim();
@@ -463,7 +436,7 @@ async function runSparql(query) {
   return response.json();
 }
 
-function extractImdb(binding) {
+export function extractImdb(binding) {
   const raw = binding?.imdbId?.value;
   if (!raw) {
     return null;
@@ -472,7 +445,7 @@ function extractImdb(binding) {
   return IMDB_ID_PATTERN.test(normalized) ? normalized : null;
 }
 
-function mapBindingToRecord({ binding, inferredResult, festivalId, festivalName, category, source, sourceAwardQid }) {
+export function mapBindingToRecord({ binding, inferredResult, festivalId, festivalName, category, source, sourceAwardQid }) {
   const year =
     toYear(binding?.awardDate?.value) ??
     toYear(binding?.eventDate?.value) ??
@@ -508,6 +481,46 @@ function mapBindingToRecord({ binding, inferredResult, festivalId, festivalName,
     },
     directors: normalizeNames(binding?.directors?.value)
   };
+}
+
+// Fragmenting the SPARQL results by director (required to make Wikidata's
+// label service bind ?directorLabel, see the SELECT/GROUP BY of the query
+// builders above) means a co-directed film returns one row per director,
+// all sharing the same dedupe key. Every collision — not just winner
+// promotions — must union `directors`/`countryCodes`, or a bare "promote on
+// win" merge would silently drop every director but one for such films.
+export function dedupeRecords(records) {
+  const deduped = [];
+  const seen = new Map();
+
+  for (const row of records) {
+    const key = [row.festivalId, row.year, row.category, row.film.imdbId ?? row.film.title].join("|");
+    const existingIndex = seen.get(key);
+    if (existingIndex === undefined) {
+      seen.set(key, deduped.length);
+      deduped.push(row);
+      continue;
+    }
+
+    const existing = deduped[existingIndex];
+    const shouldPromoteWinner = existing.result !== "winner" && row.result === "winner";
+    const primary = shouldPromoteWinner ? row : existing;
+    const secondary = shouldPromoteWinner ? existing : row;
+
+    deduped[existingIndex] = {
+      ...primary,
+      directors: [...new Set([...(existing.directors ?? []), ...(row.directors ?? [])])],
+      film: {
+        ...secondary.film,
+        ...primary.film,
+        title: primary.film.title || secondary.film.title,
+        imdbId: primary.film.imdbId || secondary.film.imdbId,
+        countryCodes: [...new Set([...(existing.film.countryCodes ?? []), ...(row.film.countryCodes ?? [])])]
+      }
+    };
+  }
+
+  return deduped;
 }
 
 async function run() {
@@ -736,32 +749,7 @@ async function run() {
     }
   }
 
-  const deduped = [];
-  const seen = new Map();
-  for (const row of results) {
-    const key = [row.festivalId, row.year, row.category, row.film.imdbId ?? row.film.title].join("|");
-    const existingIndex = seen.get(key);
-    if (existingIndex === undefined) {
-      seen.set(key, deduped.length);
-      deduped.push(row);
-      continue;
-    }
-
-    const existing = deduped[existingIndex];
-    const shouldPromoteWinner = existing.result !== "winner" && row.result === "winner";
-    if (shouldPromoteWinner) {
-      deduped[existingIndex] = {
-        ...row,
-        directors: row.directors.length ? row.directors : existing.directors,
-        film: {
-          ...existing.film,
-          ...row.film,
-          title: row.film.title || existing.film.title,
-          imdbId: row.film.imdbId || existing.film.imdbId
-        }
-      };
-    }
-  }
+  const deduped = dedupeRecords(results);
 
   const winners = deduped.filter((entry) => entry.result === "winner").length;
   const nominees = deduped.filter((entry) => entry.result === "nominee").length;
@@ -787,7 +775,9 @@ async function run() {
   console.log(`Wikidata collection complete. deduped=${deduped.length}, failures=${failures.length}`);
 }
 
-run().catch((error) => {
-  console.error("Wikidata ingestion failed", error);
-  process.exitCode = 1;
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  run().catch((error) => {
+    console.error("Wikidata ingestion failed", error);
+    process.exitCode = 1;
+  });
+}

@@ -1,5 +1,21 @@
 [
   {
+    "id": "bafta-2026",
+    "festivalId": "bafta",
+    "year": 2026,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "cannes-2026",
+    "festivalId": "cannes",
+    "year": 2026,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "golden-globes-2026",
     "festivalId": "golden-globes",
     "year": 2026,
@@ -376,6 +392,14 @@
     "endDate": null
   },
   {
+    "id": "cannes-2020",
+    "festivalId": "cannes",
+    "year": 2020,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "golden-globes-2020",
     "festivalId": "golden-globes",
     "year": 2020,
@@ -640,6 +664,14 @@
     "endDate": null
   },
   {
+    "id": "golden-globes-2016",
+    "festivalId": "golden-globes",
+    "year": 2016,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "locarno-2016",
     "festivalId": "locarno",
     "year": 2016,
@@ -754,6 +786,14 @@
   {
     "id": "cannes-2014",
     "festivalId": "cannes",
+    "year": 2014,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "golden-globes-2014",
+    "festivalId": "golden-globes",
     "year": 2014,
     "edition": null,
     "startDate": null,
@@ -882,6 +922,14 @@
   {
     "id": "cannes-2012",
     "festivalId": "cannes",
+    "year": 2012,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "golden-globes-2012",
+    "festivalId": "golden-globes",
     "year": 2012,
     "edition": null,
     "startDate": null,
@@ -1344,6 +1392,14 @@
     "endDate": null
   },
   {
+    "id": "golden-globes-2005",
+    "festivalId": "golden-globes",
+    "year": 2005,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "locarno-2005",
     "festivalId": "locarno",
     "year": 2005,
@@ -1394,6 +1450,14 @@
   {
     "id": "cannes-2004",
     "festivalId": "cannes",
+    "year": 2004,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "golden-globes-2004",
+    "festivalId": "golden-globes",
     "year": 2004,
     "edition": null,
     "startDate": null,
@@ -1658,6 +1722,14 @@
   {
     "id": "cannes-2000",
     "festivalId": "cannes",
+    "year": 2000,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "golden-globes-2000",
+    "festivalId": "golden-globes",
     "year": 2000,
     "edition": null,
     "startDate": null,
@@ -2328,6 +2400,14 @@
     "endDate": null
   },
   {
+    "id": "golden-globes-1990",
+    "festivalId": "golden-globes",
+    "year": 1990,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "locarno-1990",
     "festivalId": "locarno",
     "year": 1990,
@@ -2514,6 +2594,14 @@
   {
     "id": "cannes-1987",
     "festivalId": "cannes",
+    "year": 1987,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "golden-globes-1987",
+    "festivalId": "golden-globes",
     "year": 1987,
     "edition": null,
     "startDate": null,
@@ -2832,6 +2920,14 @@
     "endDate": null
   },
   {
+    "id": "golden-globes-1981",
+    "festivalId": "golden-globes",
+    "year": 1981,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "locarno-1981",
     "festivalId": "locarno",
     "year": 1981,
@@ -2880,6 +2976,14 @@
     "endDate": null
   },
   {
+    "id": "golden-globes-1980",
+    "festivalId": "golden-globes",
+    "year": 1980,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "locarno-1980",
     "festivalId": "locarno",
     "year": 1980,
@@ -2922,6 +3026,14 @@
   {
     "id": "cannes-1979",
     "festivalId": "cannes",
+    "year": 1979,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "golden-globes-1979",
+    "festivalId": "golden-globes",
     "year": 1979,
     "edition": null,
     "startDate": null,
@@ -3080,6 +3192,14 @@
     "endDate": null
   },
   {
+    "id": "golden-globes-1976",
+    "festivalId": "golden-globes",
+    "year": 1976,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "locarno-1976",
     "festivalId": "locarno",
     "year": 1976,
@@ -3106,6 +3226,14 @@
   {
     "id": "cannes-1975",
     "festivalId": "cannes",
+    "year": 1975,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "golden-globes-1975",
+    "festivalId": "golden-globes",
     "year": 1975,
     "edition": null,
     "startDate": null,
@@ -3226,6 +3354,14 @@
   {
     "id": "cannes-1972",
     "festivalId": "cannes",
+    "year": 1972,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "golden-globes-1972",
+    "festivalId": "golden-globes",
     "year": 1972,
     "edition": null,
     "startDate": null,
@@ -3368,6 +3504,14 @@
     "endDate": null
   },
   {
+    "id": "cannes-1968",
+    "festivalId": "cannes",
+    "year": 1968,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "golden-globes-1968",
     "festivalId": "golden-globes",
     "year": 1968,
@@ -3408,6 +3552,14 @@
     "endDate": null
   },
   {
+    "id": "golden-globes-1967",
+    "festivalId": "golden-globes",
+    "year": 1967,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "locarno-1967",
     "festivalId": "locarno",
     "year": 1967,
@@ -3434,6 +3586,14 @@
   {
     "id": "cannes-1966",
     "festivalId": "cannes",
+    "year": 1966,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "golden-globes-1966",
+    "festivalId": "golden-globes",
     "year": 1966,
     "edition": null,
     "startDate": null,
@@ -3560,6 +3720,14 @@
     "endDate": null
   },
   {
+    "id": "golden-globes-1963",
+    "festivalId": "golden-globes",
+    "year": 1963,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "locarno-1963",
     "festivalId": "locarno",
     "year": 1963,
@@ -3648,6 +3816,14 @@
     "endDate": null
   },
   {
+    "id": "golden-globes-1961",
+    "festivalId": "golden-globes",
+    "year": 1961,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "locarno-1961",
     "festivalId": "locarno",
     "year": 1961,
@@ -3667,6 +3843,14 @@
     "id": "venice-1961",
     "festivalId": "venice",
     "year": 1961,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "bafta-1960",
+    "festivalId": "bafta",
+    "year": 1960,
     "edition": null,
     "startDate": null,
     "endDate": null
@@ -4000,6 +4184,14 @@
     "endDate": null
   },
   {
+    "id": "bafta-1953",
+    "festivalId": "bafta",
+    "year": 1953,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "berlinale-1953",
     "festivalId": "berlinale",
     "year": 1953,
@@ -4096,6 +4288,14 @@
     "endDate": null
   },
   {
+    "id": "bafta-1951",
+    "festivalId": "bafta",
+    "year": 1951,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-1951",
     "festivalId": "cannes",
     "year": 1951,
@@ -4122,6 +4322,14 @@
   {
     "id": "bafta-1950",
     "festivalId": "bafta",
+    "year": 1950,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "cannes-1950",
+    "festivalId": "cannes",
     "year": 1950,
     "edition": null,
     "startDate": null,
@@ -4160,6 +4368,14 @@
     "endDate": null
   },
   {
+    "id": "cannes-1949",
+    "festivalId": "cannes",
+    "year": 1949,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "locarno-1949",
     "festivalId": "locarno",
     "year": 1949,
@@ -4184,6 +4400,14 @@
     "endDate": null
   },
   {
+    "id": "cannes-1948",
+    "festivalId": "cannes",
+    "year": 1948,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "locarno-1948",
     "festivalId": "locarno",
     "year": 1948,
@@ -4195,6 +4419,14 @@
     "id": "oscars-1948",
     "festivalId": "oscars",
     "year": 1948,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "cannes-1947",
+    "festivalId": "cannes",
+    "year": 1947,
     "edition": null,
     "startDate": null,
     "endDate": null

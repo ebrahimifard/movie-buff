@@ -7,3 +7,4 @@ out
 coverage
 logs
 *.tsbuildinfo
+.claude/

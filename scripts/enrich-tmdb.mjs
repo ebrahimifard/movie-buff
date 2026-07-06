@@ -1,10 +1,12 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
+import { fetchWithRetry } from "./lib/http.mjs";
 
 const root = process.cwd();
 const generatedPath = path.join(root, "data", "source", "master-data.generated.json");
 
-function chunk(items, size) {
+export function chunk(items, size) {
   const list = [];
   for (let index = 0; index < items.length; index += size) {
     list.push(items.slice(index, index + size));
@@ -12,35 +14,26 @@ function chunk(items, size) {
   return list;
 }
 
-async function fetchJson(url) {
-  const response = await fetch(url, {
-    headers: {
-      Accept: "application/json"
-    }
-  });
-
-  if (!response.ok) {
-    throw new Error(`TMDB request failed: ${response.status} ${url}`);
-  }
-
+async function fetchJson(url, label) {
+  const response = await fetchWithRetry(url, { headers: { Accept: "application/json" } }, label);
   return response.json();
 }
 
-function toIsoCountryCodes(productionCountries) {
+export function toIsoCountryCodes(productionCountries) {
   if (!Array.isArray(productionCountries)) {
     return [];
   }
   return [...new Set(productionCountries.map((item) => item?.iso_3166_1).filter(Boolean))];
 }
 
-function toLanguages(spokenLanguages) {
+export function toLanguages(spokenLanguages) {
   if (!Array.isArray(spokenLanguages)) {
     return [];
   }
   return [...new Set(spokenLanguages.map((item) => item?.english_name || item?.name).filter(Boolean))];
 }
 
-function toGenres(genres) {
+export function toGenres(genres) {
   if (!Array.isArray(genres)) {
     return [];
   }
@@ -57,7 +50,7 @@ async function enrichRecord(record, apiKey) {
   findUrl.searchParams.set("api_key", apiKey);
   findUrl.searchParams.set("external_source", "imdb_id");
 
-  const findPayload = await fetchJson(findUrl);
+  const findPayload = await fetchJson(findUrl, `TMDB find ${imdbId}`);
   const movie = findPayload?.movie_results?.[0];
   if (!movie?.id) {
     return record;
@@ -66,7 +59,7 @@ async function enrichRecord(record, apiKey) {
   const detailsUrl = new URL(`https://api.themoviedb.org/3/movie/${movie.id}`);
   detailsUrl.searchParams.set("api_key", apiKey);
 
-  const details = await fetchJson(detailsUrl);
+  const details = await fetchJson(detailsUrl, `TMDB movie ${movie.id}`);
   const posterPath = details?.poster_path ? `https://image.tmdb.org/t/p/w500${details.poster_path}` : "";
 
   return {
@@ -84,14 +77,33 @@ async function enrichRecord(record, apiKey) {
   };
 }
 
-// KNOWN LIMITATION: unlike fetch-wikidata-awards.mjs, this script has no
-// retry/backoff, and a single failed lookup inside enrichRecord() throws and
-// aborts the entire Promise.all chunk before any output is written (output is
-// only persisted once, at the very end of run()). collect-data.mjs treats this
-// script as "optional" and continues the pipeline on failure, but a partial
-// run's enrichment progress is discarded rather than saved incrementally.
-// Deferred: fixing this is data-completeness/pipeline-resilience work, out of
-// scope for this hardening pass.
+// Pure re-assembly of the output payload from the current enrichment state,
+// so it can be called after every chunk (incremental persistence) as well as
+// once at the end, without duplicating the overlay/metadata logic.
+export function buildEnrichedPayload(payload, records, imdbLookup, failures) {
+  const enrichedRecords = records.map((record) => {
+    const imdbId = record?.film?.imdbId;
+    if (!imdbId || !imdbLookup.has(imdbId)) {
+      return record;
+    }
+    return {
+      ...record,
+      film: imdbLookup.get(imdbId)
+    };
+  });
+
+  return {
+    ...payload,
+    records: enrichedRecords,
+    metadata: {
+      ...(payload.metadata ?? {}),
+      tmdbEnrichedAt: new Date().toISOString(),
+      tmdbEnrichedFilms: imdbLookup.size,
+      tmdbFailures: failures.length
+    }
+  };
+}
+
 async function run() {
   const apiKey = process.env.TMDB_API_KEY;
   if (!apiKey) {
@@ -105,6 +117,7 @@ async function run() {
 
   const imdbUnique = [...new Set(records.map((record) => record?.film?.imdbId).filter(Boolean))];
   const imdbLookup = new Map();
+  const failures = [];
 
   for (const group of chunk(imdbUnique, 5)) {
     await Promise.all(
@@ -113,38 +126,28 @@ async function run() {
         if (!matching) {
           return;
         }
-        const enriched = await enrichRecord(matching, apiKey);
-        imdbLookup.set(imdbId, enriched.film);
+        try {
+          const enriched = await enrichRecord(matching, apiKey);
+          imdbLookup.set(imdbId, enriched.film);
+        } catch (error) {
+          failures.push({ imdbId, message: error instanceof Error ? error.message : String(error) });
+          console.warn(`[WARN] TMDB enrichment failed for ${imdbId}:`, error);
+        }
       })
     );
+
+    // Persist after every chunk so a later failure only risks the current
+    // chunk's progress (at most 5 records), not the entire run's.
+    const enrichedPayload = buildEnrichedPayload(payload, records, imdbLookup, failures);
+    await writeFile(generatedPath, `${JSON.stringify(enrichedPayload, null, 2)}\n`, "utf8");
   }
 
-  const enrichedRecords = records.map((record) => {
-    const imdbId = record?.film?.imdbId;
-    if (!imdbId || !imdbLookup.has(imdbId)) {
-      return record;
-    }
-    return {
-      ...record,
-      film: imdbLookup.get(imdbId)
-    };
-  });
-
-  const enrichedPayload = {
-    ...payload,
-    records: enrichedRecords,
-    metadata: {
-      ...(payload.metadata ?? {}),
-      tmdbEnrichedAt: new Date().toISOString(),
-      tmdbEnrichedFilms: imdbLookup.size
-    }
-  };
-
-  await writeFile(generatedPath, `${JSON.stringify(enrichedPayload, null, 2)}\n`, "utf8");
-  console.log(`TMDB enrichment complete for ${imdbLookup.size} films.`);
+  console.log(`TMDB enrichment complete for ${imdbLookup.size} films. failures=${failures.length}`);
 }
 
-run().catch((error) => {
-  console.error("TMDB enrichment failed", error);
-  process.exitCode = 1;
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  run().catch((error) => {
+    console.error("TMDB enrichment failed", error);
+    process.exitCode = 1;
+  });
+}

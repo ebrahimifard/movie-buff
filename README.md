@@ -114,6 +114,31 @@ npm run data:coverage
 npm run data:update
 ```
 
+## Occasional: Wikipedia Data-Completeness Pass
+
+Beyond the routine monthly pipeline, three additional sources — Cannes, Golden Globes, and BAFTA Wikipedia scrapers — can fill in festival-years the Wikidata/TMDB pipeline is missing or weak on. These are **not** part of `npm run data:collect` and do **not** run automatically: historical years rarely change once filled, so re-scraping Wikipedia every month would add load for little benefit. Run this manually, occasionally:
+
+```bash
+# 1. Ensure normalized data + coverage report are current
+#    (BAFTA's scraper reads coverage-report.json to pick which years to target)
+npm run data:build
+npm run data:coverage
+
+# 2. Scrape Wikipedia sources
+npm run data:fetch:cannes-wikipedia
+npm run data:fetch:golden-globes-wikipedia
+npm run data:fetch:bafta-wikipedia
+
+# 3. Re-merge, rebuild, validate, and refresh coverage to incorporate the new data
+npm run data:merge
+npm run data:build
+npm run data:validate
+npm run data:coverage
+npm run data:update
+```
+
+Why two passes: BAFTA's scraper only targets years flagged `missingYears`/`weakYears` in `coverage-report.json`, so that report must be current *before* running it (step 1); afterward, coverage is regenerated again (step 3) to reflect the newly-added data. Step 3 uses `data:merge`, not `data:collect` — there's no need to re-hit the live Wikidata endpoint just to pick up the Wikipedia JSON already sitting on disk. `merge-sources.mjs` reads these three source files only if present (each is optional), matching them against existing seed/Wikidata records by IMDb ID when available and falling back to a title match otherwise — see `ARCHITECTURE.md` for the merge precedence.
+
 ## Next Data Upgrades
 
 - Add TMDB enrichment for posters/backdrops.

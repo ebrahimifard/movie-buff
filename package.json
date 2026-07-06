@@ -16,7 +16,10 @@
     "data:build": "node scripts/build-comprehensive-data.mjs",
     "data:validate": "node scripts/validate-data.mjs",
     "data:coverage": "node scripts/coverage-report.mjs",
-    "data:update": "node scripts/update-data.mjs"
+    "data:update": "node scripts/update-data.mjs",
+    "data:fetch:cannes-wikipedia": "node scripts/fetch-cannes-wikipedia.mjs",
+    "data:fetch:golden-globes-wikipedia": "node scripts/fetch-golden-globes-wikipedia.mjs",
+    "data:fetch:bafta-wikipedia": "node scripts/fetch-bafta-wikipedia.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.2.12",

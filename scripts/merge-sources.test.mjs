@@ -1,5 +1,14 @@
 import { describe, expect, it } from "vitest";
-import { buildRecordKey, chooseResult, mergeFilm, normalizeRecord, slugify } from "./merge-sources.mjs";
+import {
+  buildRecordKey,
+  buildSlugKey,
+  chooseResult,
+  mergeCandidatesInto,
+  mergeFilm,
+  normalizeRecord,
+  normalizeWikipediaPayload,
+  slugify
+} from "./merge-sources.mjs";
 
 describe("slugify", () => {
   it("lowercases and hyphenates", () => {
@@ -84,5 +93,110 @@ describe("buildRecordKey", () => {
   it("falls back to a slugified title when imdbId is absent", () => {
     const record = { festivalId: "cannes", year: 2020, category: "Palme d'Or", film: { title: "Grand Bouquet", imdbId: null } };
     expect(buildRecordKey(record)).toBe("cannes|2020|Palme d'Or|grand-bouquet");
+  });
+});
+
+describe("buildSlugKey", () => {
+  it("always uses the slugified title, ignoring imdbId", () => {
+    const record = { festivalId: "cannes", year: 2020, category: "Palme d'Or", film: { title: "Parasite", imdbId: "tt6751668" } };
+    expect(buildSlugKey(record)).toBe("cannes|2020|Palme d'Or|parasite");
+  });
+});
+
+describe("normalizeWikipediaPayload", () => {
+  it("passes through a bare array unchanged", () => {
+    expect(normalizeWikipediaPayload([{ id: 1 }])).toEqual([{ id: 1 }]);
+  });
+
+  it("extracts records from a { generatedAt, records } wrapper", () => {
+    expect(normalizeWikipediaPayload({ generatedAt: "2020-01-01", records: [{ id: 1 }] })).toEqual([{ id: 1 }]);
+  });
+
+  it("defaults to an empty array when records is missing", () => {
+    expect(normalizeWikipediaPayload({ generatedAt: "2020-01-01" })).toEqual([]);
+  });
+});
+
+describe("mergeCandidatesInto", () => {
+  function seedIndex(baseRecord) {
+    const outputRecords = [normalizeRecord(baseRecord)];
+    const primaryIndex = new Map([[buildRecordKey(outputRecords[0]), 0]]);
+    const titleIndex = new Map([[buildSlugKey(outputRecords[0]), 0]]);
+    return { outputRecords, primaryIndex, titleIndex };
+  }
+
+  it("merges a no-imdbId (Wikipedia-shaped) candidate into an existing imdbId-keyed record by title fallback", () => {
+    const { outputRecords, primaryIndex, titleIndex } = seedIndex({
+      year: 2020,
+      festivalId: "cannes",
+      category: "Palme d'Or",
+      result: "nominee",
+      film: { title: "Parasite", releaseYear: 2019, imdbId: "tt6751668" },
+      directors: []
+    });
+
+    const candidate = {
+      year: 2020,
+      festivalId: "cannes",
+      category: "Palme d'Or",
+      result: "winner",
+      film: { title: "Parasite", releaseYear: 2019, imdbId: null },
+      directors: []
+    };
+
+    mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, [candidate]);
+
+    expect(outputRecords).toHaveLength(1);
+    expect(outputRecords[0].film.imdbId).toBe("tt6751668");
+    expect(outputRecords[0].result).toBe("winner");
+  });
+
+  it("adds a genuinely new Wikipedia candidate as a new record", () => {
+    const { outputRecords, primaryIndex, titleIndex } = seedIndex({
+      year: 2020,
+      festivalId: "cannes",
+      category: "Palme d'Or",
+      result: "winner",
+      film: { title: "Parasite", releaseYear: 2019, imdbId: "tt6751668" },
+      directors: []
+    });
+
+    const candidate = {
+      year: 1975,
+      festivalId: "cannes",
+      category: "Palme d'Or",
+      result: "winner",
+      film: { title: "Some Old Film", releaseYear: 1975, imdbId: null },
+      directors: []
+    };
+
+    mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, [candidate]);
+
+    expect(outputRecords).toHaveLength(2);
+    expect(outputRecords[1].film.title).toBe("Some Old Film");
+  });
+
+  it("never fuzzy-matches an imdbId-bearing candidate by title alone", () => {
+    const { outputRecords, primaryIndex, titleIndex } = seedIndex({
+      year: 2020,
+      festivalId: "cannes",
+      category: "Palme d'Or",
+      result: "nominee",
+      film: { title: "Same Title", releaseYear: 2020, imdbId: null },
+      directors: []
+    });
+
+    const candidate = {
+      year: 2020,
+      festivalId: "cannes",
+      category: "Palme d'Or",
+      result: "winner",
+      film: { title: "Same Title", releaseYear: 2020, imdbId: "tt9999999" },
+      directors: []
+    };
+
+    mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, [candidate]);
+
+    expect(outputRecords).toHaveLength(2);
   });
 });

@@ -4,8 +4,9 @@
 
 import { writeFile } from "node:fs/promises";
 import path from "node:path";
-import fetch from "node-fetch";
+import { pathToFileURL } from "node:url";
 import { JSDOM } from "jsdom";
+import { DEFAULT_SCRAPE_DELAY_MS, fetchWithRetry, sleep } from "./lib/http.mjs";
 
 const root = process.cwd();
 const outputPath = path.join(root, "data", "source", "cannes-wikipedia.json");
@@ -256,14 +257,11 @@ async function run() {
     for (const url of urls) {
       try {
         console.log(`[INFO] Fetching ${url}`);
-        const res = await fetch(url, { headers: { "User-Agent": "movie-buff-archive-bot/0.2 (https://example.com)" } });
-        if (!res.ok) {
-          console.warn(`[WARN] Failed to fetch ${url}: ${res.status}`);
-          continue;
-        }
+        const res = await fetchWithRetry(url, { headers: { "User-Agent": "movie-buff-archive-bot/0.2 (https://example.com)" } }, `Cannes ${url}`);
         const html = await res.text();
         if (!html || html.length < 1000) {
           console.warn(`[WARN] Empty or very short HTML for ${url}`);
+          await sleep(DEFAULT_SCRAPE_DELAY_MS);
           continue;
         }
         const yearRecords = parseCannesWikipedia(html, year);
@@ -272,6 +270,7 @@ async function run() {
           records.push(...yearRecords);
           console.log(`[SUCCESS] Parsed ${year} from ${url}: ${yearRecords.length} records`);
           found = true;
+          await sleep(DEFAULT_SCRAPE_DELAY_MS);
           break;
         } else {
           // Try to log a snippet of the HTML for debugging
@@ -280,6 +279,7 @@ async function run() {
       } catch (err) {
         console.warn(`[ERROR] Error fetching/parsing ${url}:`, err);
       }
+      await sleep(DEFAULT_SCRAPE_DELAY_MS);
     }
     if (!found) {
       console.warn(`[FAIL] No data found for year ${year}`);
@@ -293,4 +293,9 @@ async function run() {
   }
 }
 
-run();
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  run().catch((error) => {
+    console.error("Cannes Wikipedia scraping failed", error);
+    process.exitCode = 1;
+  });
+}
