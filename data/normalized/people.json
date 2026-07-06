@@ -1,0 +1,443 @@
+[
+  {
+    "id": "person:a-v-rockwell",
+    "name": "A.V. Rockwell",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:alan-parker",
+    "name": "Alan Parker",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:alessandra-lacorazza",
+    "name": "Alessandra Lacorazza",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:alfonso-cuaron",
+    "name": "Alfonso Cuaron",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:ali-ahmadzadeh",
+    "name": "Ali Ahmadzadeh",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:andre-klotzel",
+    "name": "Andre Klotzel",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:antonia-bird",
+    "name": "Antonia Bird",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:bong-joon-ho",
+    "name": "Bong Joon Ho",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:bryan-singer",
+    "name": "Bryan Singer",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:chinonye-chukwu",
+    "name": "Chinonye Chukwu",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:christopher-nolan",
+    "name": "Christopher Nolan",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:claudia-weill",
+    "name": "Claudia Weill",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:cord-jefferson",
+    "name": "Cord Jefferson",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:daniel-kwan",
+    "name": "Daniel Kwan",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:daniel-scheinert",
+    "name": "Daniel Scheinert",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:edward-berger",
+    "name": "Edward Berger",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:ermanno-olmi",
+    "name": "Ermanno Olmi",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:jean-pierre-jeunet",
+    "name": "Jean-Pierre Jeunet",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:jim-sheridan",
+    "name": "Jim Sheridan",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:john-hanson",
+    "name": "John Hanson",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:jose-luis-garcia-sanchez",
+    "name": "Jose Luis Garcia Sanchez",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:justine-triet",
+    "name": "Justine Triet",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:kurdwin-ayub",
+    "name": "Kurdwin Ayub",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:mati-diop",
+    "name": "Mati Diop",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:michael-cimino",
+    "name": "Michael Cimino",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:mike-flanagan",
+    "name": "Mike Flanagan",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:mira-nair",
+    "name": "Mira Nair",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:nadav-lapid",
+    "name": "Nadav Lapid",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:nanni-moretti",
+    "name": "Nanni Moretti",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:nicolas-philibert",
+    "name": "Nicolas Philibert",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:patrice-chereau",
+    "name": "Patrice Chereau",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:pedro-almodovar",
+    "name": "Pedro Almodovar",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:pedro-costa",
+    "name": "Pedro Costa",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:peter-farrelly",
+    "name": "Peter Farrelly",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:peter-handke",
+    "name": "Peter Handke",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:quentin-tarantino",
+    "name": "Quentin Tarantino",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:ridley-scott",
+    "name": "Ridley Scott",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:rob-nilsson",
+    "name": "Rob Nilsson",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:robert-pulcini",
+    "name": "Robert Pulcini",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:sandrine-veysset",
+    "name": "Sandrine Veysset",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:sean-baker",
+    "name": "Sean Baker",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:shari-springer-berman",
+    "name": "Shari Springer Berman",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:steven-spielberg",
+    "name": "Steven Spielberg",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:taika-waititi",
+    "name": "Taika Waititi",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:todd-phillips",
+    "name": "Todd Phillips",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:tom-noonan",
+    "name": "Tom Noonan",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:tsai-ming-liang",
+    "name": "Tsai Ming-liang",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:woody-allen",
+    "name": "Woody Allen",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:yorgos-lanthimos",
+    "name": "Yorgos Lanthimos",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  }
+]

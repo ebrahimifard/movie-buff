@@ -1,0 +1,1068 @@
+{
+  "festivals": [
+    {
+      "id": "oscars",
+      "name": "Academy Awards",
+      "country": "US",
+      "city": "Los Angeles",
+      "foundedYear": 1929,
+      "type": "award"
+    },
+    {
+      "id": "cannes",
+      "name": "Cannes Film Festival",
+      "country": "FR",
+      "city": "Cannes",
+      "foundedYear": 1946,
+      "type": "festival"
+    },
+    {
+      "id": "venice",
+      "name": "Venice Film Festival",
+      "country": "IT",
+      "city": "Venice",
+      "foundedYear": 1932,
+      "type": "festival"
+    },
+    {
+      "id": "berlinale",
+      "name": "Berlin International Film Festival",
+      "country": "DE",
+      "city": "Berlin",
+      "foundedYear": 1951,
+      "type": "festival"
+    },
+    {
+      "id": "locarno",
+      "name": "Locarno Film Festival",
+      "country": "CH",
+      "city": "Locarno",
+      "foundedYear": 1946,
+      "type": "festival"
+    },
+    {
+      "id": "sundance",
+      "name": "Sundance Film Festival",
+      "country": "US",
+      "city": "Park City",
+      "foundedYear": 1978,
+      "type": "festival"
+    },
+    {
+      "id": "tiff",
+      "name": "Toronto International Film Festival",
+      "country": "CA",
+      "city": "Toronto",
+      "foundedYear": 1976,
+      "type": "festival"
+    },
+    {
+      "id": "bafta",
+      "name": "BAFTA Awards",
+      "country": "GB",
+      "city": "London",
+      "foundedYear": 1949,
+      "type": "award"
+    },
+    {
+      "id": "golden-globes",
+      "name": "Golden Globes",
+      "country": "US",
+      "city": "Beverly Hills",
+      "foundedYear": 1944,
+      "type": "award"
+    }
+  ],
+  "records": [
+    {
+      "year": 1978,
+      "festivalId": "oscars",
+      "category": "Best Picture",
+      "result": "winner",
+      "film": {
+        "title": "The Deer Hunter",
+        "releaseYear": 1978,
+        "imdbId": "tt0077416",
+        "runtimeMinutes": 183,
+        "countryCodes": ["US"],
+        "languages": ["English", "Russian"],
+        "genres": ["Drama", "War"],
+        "synopsis": "A steelworker and his friends are transformed by the Vietnam War.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/pvhsAzi5VnLiiP9o8kqF6nFe4xN.jpg"
+      },
+      "directors": ["Michael Cimino"]
+    },
+    {
+      "year": 1978,
+      "festivalId": "oscars",
+      "category": "Best Picture",
+      "result": "nominee",
+      "film": {
+        "title": "Midnight Express",
+        "releaseYear": 1978,
+        "imdbId": "tt0077928",
+        "runtimeMinutes": 121,
+        "countryCodes": ["US", "GB"],
+        "languages": ["English", "Turkish"],
+        "genres": ["Drama", "Crime"],
+        "synopsis": "An American student is imprisoned in Turkey after being caught smuggling.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/3jM6Qf8fI95YfM5mP8wW9j9m2Wf.jpg"
+      },
+      "directors": ["Alan Parker"]
+    },
+    {
+      "year": 1978,
+      "festivalId": "cannes",
+      "category": "Palme d'Or",
+      "result": "winner",
+      "film": {
+        "title": "The Tree of Wooden Clogs",
+        "releaseYear": 1978,
+        "imdbId": "tt0077138",
+        "runtimeMinutes": 186,
+        "countryCodes": ["IT"],
+        "languages": ["Italian", "Lombard"],
+        "genres": ["Drama", "History"],
+        "synopsis": "Rural families in nineteenth-century Lombardy struggle under poverty and faith.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/8kB5L4dD6GJgS95zAnP6Z4wAQoA.jpg"
+      },
+      "directors": ["Ermanno Olmi"]
+    },
+    {
+      "year": 1978,
+      "festivalId": "venice",
+      "category": "Golden Lion",
+      "result": "winner",
+      "film": {
+        "title": "The Tree of Wooden Clogs",
+        "releaseYear": 1978,
+        "imdbId": "tt0077138",
+        "runtimeMinutes": 186,
+        "countryCodes": ["IT"],
+        "languages": ["Italian", "Lombard"],
+        "genres": ["Drama", "History"],
+        "synopsis": "Rural families in nineteenth-century Lombardy struggle under poverty and faith.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/8kB5L4dD6GJgS95zAnP6Z4wAQoA.jpg"
+      },
+      "directors": ["Ermanno Olmi"]
+    },
+    {
+      "year": 1978,
+      "festivalId": "berlinale",
+      "category": "Golden Bear",
+      "result": "winner",
+      "film": {
+        "title": "Las truchas",
+        "releaseYear": 1978,
+        "imdbId": "tt0076836",
+        "runtimeMinutes": 96,
+        "countryCodes": ["ES"],
+        "languages": ["Spanish"],
+        "genres": ["Drama", "Comedy"],
+        "synopsis": "A satirical portrait of social hypocrisy around a ceremonial dinner.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/7i2v0JQz9a1PqM9hkncX0C4W5sL.jpg"
+      },
+      "directors": ["Jose Luis Garcia Sanchez"]
+    },
+    {
+      "year": 1978,
+      "festivalId": "locarno",
+      "category": "Golden Leopard",
+      "result": "winner",
+      "film": {
+        "title": "The Left-Handed Woman",
+        "releaseYear": 1978,
+        "imdbId": "tt0077932",
+        "runtimeMinutes": 119,
+        "countryCodes": ["DE"],
+        "languages": ["German"],
+        "genres": ["Drama"],
+        "synopsis": "A woman leaves her marriage and redefines autonomy in suburban Germany.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/a0X9mWBTU8xQXG9zRZ2Y2Wc2Y3r.jpg"
+      },
+      "directors": ["Peter Handke"]
+    },
+    {
+      "year": 1978,
+      "festivalId": "sundance",
+      "category": "Grand Jury Prize",
+      "result": "winner",
+      "film": {
+        "title": "Northern Lights",
+        "releaseYear": 1978,
+        "imdbId": "tt0079668",
+        "runtimeMinutes": 98,
+        "countryCodes": ["US"],
+        "languages": ["English"],
+        "genres": ["Drama"],
+        "synopsis": "North Dakota farmers organize a populist movement against financial power.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/6yX2N8zN8Yb3N9cW0Yb7xvF9TjM.jpg"
+      },
+      "directors": ["John Hanson", "Rob Nilsson"]
+    },
+    {
+      "year": 1978,
+      "festivalId": "tiff",
+      "category": "People's Choice Award",
+      "result": "winner",
+      "film": {
+        "title": "Girlfriends",
+        "releaseYear": 1978,
+        "imdbId": "tt0077613",
+        "runtimeMinutes": 86,
+        "countryCodes": ["US"],
+        "languages": ["English"],
+        "genres": ["Drama", "Comedy"],
+        "synopsis": "A photographer and her friend confront love, work, and artistic independence.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/tK7p2x8YjX0kQ2h7C9hY9xM7hQH.jpg"
+      },
+      "directors": ["Claudia Weill"]
+    },
+    {
+      "year": 1978,
+      "festivalId": "bafta",
+      "category": "Best Film",
+      "result": "winner",
+      "film": {
+        "title": "Annie Hall",
+        "releaseYear": 1977,
+        "imdbId": "tt0075686",
+        "runtimeMinutes": 93,
+        "countryCodes": ["US"],
+        "languages": ["English"],
+        "genres": ["Romance", "Comedy"],
+        "synopsis": "A comedian revisits a failed relationship in fragmented, self-aware memories.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/4nD5b6iNQ8d7Y9x5Yc2f8YQqD9k.jpg"
+      },
+      "directors": ["Woody Allen"]
+    },
+    {
+      "year": 1978,
+      "festivalId": "golden-globes",
+      "category": "Best Motion Picture - Drama",
+      "result": "winner",
+      "film": {
+        "title": "Midnight Express",
+        "releaseYear": 1978,
+        "imdbId": "tt0077928",
+        "runtimeMinutes": 121,
+        "countryCodes": ["US", "GB"],
+        "languages": ["English", "Turkish"],
+        "genres": ["Drama", "Crime"],
+        "synopsis": "An American student is imprisoned in Turkey after being caught smuggling.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/3jM6Qf8fI95YfM5mP8wW9j9m2Wf.jpg"
+      },
+      "directors": ["Alan Parker"]
+    },
+    {
+      "year": 1994,
+      "festivalId": "oscars",
+      "category": "Best Picture",
+      "result": "winner",
+      "film": {
+        "title": "Schindler's List",
+        "releaseYear": 1993,
+        "imdbId": "tt0108052",
+        "runtimeMinutes": 195,
+        "countryCodes": ["US"],
+        "languages": ["English", "German", "Polish"],
+        "genres": ["Drama", "History", "War"],
+        "synopsis": "A German industrialist saves more than one thousand Jews during the Holocaust.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg"
+      },
+      "directors": ["Steven Spielberg"]
+    },
+    {
+      "year": 1994,
+      "festivalId": "cannes",
+      "category": "Palme d'Or",
+      "result": "winner",
+      "film": {
+        "title": "Pulp Fiction",
+        "releaseYear": 1994,
+        "imdbId": "tt0110912",
+        "runtimeMinutes": 154,
+        "countryCodes": ["US"],
+        "languages": ["English", "French", "Spanish"],
+        "genres": ["Crime", "Drama"],
+        "synopsis": "Interlocking stories of criminals and chance encounters in Los Angeles.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg"
+      },
+      "directors": ["Quentin Tarantino"]
+    },
+    {
+      "year": 1994,
+      "festivalId": "venice",
+      "category": "Golden Lion",
+      "result": "winner",
+      "film": {
+        "title": "Vive L'Amour",
+        "releaseYear": 1994,
+        "imdbId": "tt0110081",
+        "runtimeMinutes": 118,
+        "countryCodes": ["TW"],
+        "languages": ["Mandarin"],
+        "genres": ["Drama"],
+        "synopsis": "Three lonely Taipei residents drift through an empty apartment and each other.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/8dU4tYgO6hK0J8fVw0S9M2bS8Re.jpg"
+      },
+      "directors": ["Tsai Ming-liang"]
+    },
+    {
+      "year": 1994,
+      "festivalId": "berlinale",
+      "category": "Golden Bear",
+      "result": "winner",
+      "film": {
+        "title": "In the Name of the Father",
+        "releaseYear": 1993,
+        "imdbId": "tt0107207",
+        "runtimeMinutes": 133,
+        "countryCodes": ["IE", "GB", "US"],
+        "languages": ["English"],
+        "genres": ["Drama", "Biography"],
+        "synopsis": "A man falsely imprisoned for an IRA bombing fights to clear his name.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/7w0QwJvG7z3dE9xvVd3sB4J8K2V.jpg"
+      },
+      "directors": ["Jim Sheridan"]
+    },
+    {
+      "year": 1994,
+      "festivalId": "locarno",
+      "category": "Golden Leopard",
+      "result": "winner",
+      "film": {
+        "title": "Mascara",
+        "releaseYear": 1994,
+        "imdbId": "tt0110473",
+        "runtimeMinutes": 119,
+        "countryCodes": ["BR"],
+        "languages": ["Portuguese"],
+        "genres": ["Drama"],
+        "synopsis": "A turbulent friendship between two journalists unfolds amid personal obsession.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/5sR0h0k6X2wNfL9gU3Q7u8K5J2p.jpg"
+      },
+      "directors": ["Andre Klotzel"]
+    },
+    {
+      "year": 1994,
+      "festivalId": "sundance",
+      "category": "Grand Jury Prize",
+      "result": "winner",
+      "film": {
+        "title": "What Happened Was...",
+        "releaseYear": 1994,
+        "imdbId": "tt0111689",
+        "runtimeMinutes": 91,
+        "countryCodes": ["US"],
+        "languages": ["English"],
+        "genres": ["Drama", "Comedy"],
+        "synopsis": "A painfully awkward office date exposes loneliness and emotional vulnerability.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/6m2t7vJw4k7n8wJm0R9qV7qL5hN.jpg"
+      },
+      "directors": ["Tom Noonan"]
+    },
+    {
+      "year": 1994,
+      "festivalId": "tiff",
+      "category": "People's Choice Award",
+      "result": "winner",
+      "film": {
+        "title": "Priest",
+        "releaseYear": 1994,
+        "imdbId": "tt0110877",
+        "runtimeMinutes": 98,
+        "countryCodes": ["GB"],
+        "languages": ["English"],
+        "genres": ["Drama"],
+        "synopsis": "A young Catholic priest faces institutional pressure and personal identity conflict.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/0aX8d8H0mF9nP8sW4aN5k2dJ7wX.jpg"
+      },
+      "directors": ["Antonia Bird"]
+    },
+    {
+      "year": 1994,
+      "festivalId": "bafta",
+      "category": "Best Film",
+      "result": "winner",
+      "film": {
+        "title": "Schindler's List",
+        "releaseYear": 1993,
+        "imdbId": "tt0108052",
+        "runtimeMinutes": 195,
+        "countryCodes": ["US"],
+        "languages": ["English", "German", "Polish"],
+        "genres": ["Drama", "History", "War"],
+        "synopsis": "A German industrialist saves more than one thousand Jews during the Holocaust.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg"
+      },
+      "directors": ["Steven Spielberg"]
+    },
+    {
+      "year": 1994,
+      "festivalId": "golden-globes",
+      "category": "Best Motion Picture - Drama",
+      "result": "winner",
+      "film": {
+        "title": "Schindler's List",
+        "releaseYear": 1993,
+        "imdbId": "tt0108052",
+        "runtimeMinutes": 195,
+        "countryCodes": ["US"],
+        "languages": ["English", "German", "Polish"],
+        "genres": ["Drama", "History", "War"],
+        "synopsis": "A German industrialist saves more than one thousand Jews during the Holocaust.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg"
+      },
+      "directors": ["Steven Spielberg"]
+    },
+    {
+      "year": 2001,
+      "festivalId": "oscars",
+      "category": "Best Picture",
+      "result": "winner",
+      "film": {
+        "title": "Gladiator",
+        "releaseYear": 2000,
+        "imdbId": "tt0172495",
+        "runtimeMinutes": 155,
+        "countryCodes": ["US", "GB"],
+        "languages": ["English"],
+        "genres": ["Action", "Drama", "History"],
+        "synopsis": "A betrayed Roman general seeks vengeance in the arena.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg"
+      },
+      "directors": ["Ridley Scott"]
+    },
+    {
+      "year": 2001,
+      "festivalId": "cannes",
+      "category": "Palme d'Or",
+      "result": "winner",
+      "film": {
+        "title": "The Son's Room",
+        "releaseYear": 2001,
+        "imdbId": "tt0208990",
+        "runtimeMinutes": 99,
+        "countryCodes": ["IT", "FR"],
+        "languages": ["Italian"],
+        "genres": ["Drama"],
+        "synopsis": "A family is shattered after a tragedy and tries to rebuild emotional life.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/fxk9sG8z8v8aQ9V2wYwL5g7zF5R.jpg"
+      },
+      "directors": ["Nanni Moretti"]
+    },
+    {
+      "year": 2001,
+      "festivalId": "venice",
+      "category": "Golden Lion",
+      "result": "winner",
+      "film": {
+        "title": "Monsoon Wedding",
+        "releaseYear": 2001,
+        "imdbId": "tt0265343",
+        "runtimeMinutes": 114,
+        "countryCodes": ["IN", "US", "IT"],
+        "languages": ["Hindi", "English", "Punjabi"],
+        "genres": ["Drama", "Romance", "Comedy"],
+        "synopsis": "An extended family converges for a wedding where joy and secrets collide.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/yA0f0uGx8Y8H5Q9bX2J0W8nV2Yf.jpg"
+      },
+      "directors": ["Mira Nair"]
+    },
+    {
+      "year": 2001,
+      "festivalId": "berlinale",
+      "category": "Golden Bear",
+      "result": "winner",
+      "film": {
+        "title": "Intimacy",
+        "releaseYear": 2001,
+        "imdbId": "tt0250468",
+        "runtimeMinutes": 119,
+        "countryCodes": ["FR", "GB", "DE"],
+        "languages": ["English"],
+        "genres": ["Drama", "Romance"],
+        "synopsis": "A man in London enters a weekly anonymous relationship that grows complicated.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/9x2jL7r2aK1hV8n0K3dR7gL1Q6N.jpg"
+      },
+      "directors": ["Patrice Chereau"]
+    },
+    {
+      "year": 2001,
+      "festivalId": "locarno",
+      "category": "Golden Leopard",
+      "result": "winner",
+      "film": {
+        "title": "Martha... Martha",
+        "releaseYear": 2001,
+        "imdbId": "tt0288110",
+        "runtimeMinutes": 95,
+        "countryCodes": ["FR"],
+        "languages": ["French"],
+        "genres": ["Drama"],
+        "synopsis": "A young woman struggles with isolation, memory, and unstable family ties.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/5fR8w0J8d6k5xQ2mK7m2sH6kL1V.jpg"
+      },
+      "directors": ["Sandrine Veysset"]
+    },
+    {
+      "year": 2001,
+      "festivalId": "sundance",
+      "category": "Grand Jury Prize",
+      "result": "winner",
+      "film": {
+        "title": "American Splendor",
+        "releaseYear": 2003,
+        "imdbId": "tt0305206",
+        "runtimeMinutes": 101,
+        "countryCodes": ["US"],
+        "languages": ["English"],
+        "genres": ["Comedy", "Drama", "Biography"],
+        "synopsis": "A comic writer's mundane life becomes unexpectedly cinematic.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/r4KpQK9P7z8bQ8mP2k7f2Q9kV8G.jpg"
+      },
+      "directors": ["Shari Springer Berman", "Robert Pulcini"]
+    },
+    {
+      "year": 2001,
+      "festivalId": "tiff",
+      "category": "People's Choice Award",
+      "result": "winner",
+      "film": {
+        "title": "Amelie",
+        "releaseYear": 2001,
+        "imdbId": "tt0211915",
+        "runtimeMinutes": 122,
+        "countryCodes": ["FR", "DE"],
+        "languages": ["French", "Russian"],
+        "genres": ["Romance", "Comedy"],
+        "synopsis": "A shy Parisian woman quietly changes the lives of strangers.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/oTKduWL2tpIKEmkAqF4mFEAWAsv.jpg"
+      },
+      "directors": ["Jean-Pierre Jeunet"]
+    },
+    {
+      "year": 2001,
+      "festivalId": "bafta",
+      "category": "Best Film",
+      "result": "winner",
+      "film": {
+        "title": "Gladiator",
+        "releaseYear": 2000,
+        "imdbId": "tt0172495",
+        "runtimeMinutes": 155,
+        "countryCodes": ["US", "GB"],
+        "languages": ["English"],
+        "genres": ["Action", "Drama", "History"],
+        "synopsis": "A betrayed Roman general seeks vengeance in the arena.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg"
+      },
+      "directors": ["Ridley Scott"]
+    },
+    {
+      "year": 2001,
+      "festivalId": "golden-globes",
+      "category": "Best Motion Picture - Drama",
+      "result": "winner",
+      "film": {
+        "title": "Gladiator",
+        "releaseYear": 2000,
+        "imdbId": "tt0172495",
+        "runtimeMinutes": 155,
+        "countryCodes": ["US", "GB"],
+        "languages": ["English"],
+        "genres": ["Action", "Drama", "History"],
+        "synopsis": "A betrayed Roman general seeks vengeance in the arena.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg"
+      },
+      "directors": ["Ridley Scott"]
+    },
+    {
+      "year": 2019,
+      "festivalId": "oscars",
+      "category": "Best Picture",
+      "result": "winner",
+      "film": {
+        "title": "Green Book",
+        "releaseYear": 2018,
+        "imdbId": "tt6966692",
+        "runtimeMinutes": 130,
+        "countryCodes": ["US"],
+        "languages": ["English", "Italian", "Russian"],
+        "genres": ["Drama", "Comedy"],
+        "synopsis": "A touring pianist and his driver travel the segregated American South.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/7BsvSuDQuoqhWmU2fL7W2GOcZHU.jpg"
+      },
+      "directors": ["Peter Farrelly"]
+    },
+    {
+      "year": 2019,
+      "festivalId": "cannes",
+      "category": "Palme d'Or",
+      "result": "winner",
+      "film": {
+        "title": "Parasite",
+        "releaseYear": 2019,
+        "imdbId": "tt6751668",
+        "runtimeMinutes": 132,
+        "countryCodes": ["KR"],
+        "languages": ["Korean", "English"],
+        "genres": ["Thriller", "Drama"],
+        "synopsis": "A poor family infiltrates a wealthy household with escalating consequences.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg"
+      },
+      "directors": ["Bong Joon Ho"]
+    },
+    {
+      "year": 2019,
+      "festivalId": "venice",
+      "category": "Golden Lion",
+      "result": "winner",
+      "film": {
+        "title": "Joker",
+        "releaseYear": 2019,
+        "imdbId": "tt7286456",
+        "runtimeMinutes": 122,
+        "countryCodes": ["US"],
+        "languages": ["English"],
+        "genres": ["Crime", "Drama", "Thriller"],
+        "synopsis": "An isolated man in Gotham descends into violence and notoriety.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"
+      },
+      "directors": ["Todd Phillips"]
+    },
+    {
+      "year": 2019,
+      "festivalId": "berlinale",
+      "category": "Golden Bear",
+      "result": "winner",
+      "film": {
+        "title": "Synonyms",
+        "releaseYear": 2019,
+        "imdbId": "tt7016254",
+        "runtimeMinutes": 123,
+        "countryCodes": ["FR", "IL", "DE"],
+        "languages": ["French", "Hebrew"],
+        "genres": ["Drama"],
+        "synopsis": "An Israeli expatriate in Paris attempts to reinvent identity through language.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/gXw3S7vY8x4M2V8tN9kL0D2m4aN.jpg"
+      },
+      "directors": ["Nadav Lapid"]
+    },
+    {
+      "year": 2019,
+      "festivalId": "locarno",
+      "category": "Golden Leopard",
+      "result": "winner",
+      "film": {
+        "title": "Vitalina Varela",
+        "releaseYear": 2019,
+        "imdbId": "tt10199590",
+        "runtimeMinutes": 124,
+        "countryCodes": ["PT"],
+        "languages": ["Portuguese", "Cape Verdean Creole"],
+        "genres": ["Drama"],
+        "synopsis": "A widow arrives in Lisbon and confronts absence, memory, and unfinished life.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/y6mYl2m8z8Nqg3K6t8gQ8m6kF7A.jpg"
+      },
+      "directors": ["Pedro Costa"]
+    },
+    {
+      "year": 2019,
+      "festivalId": "sundance",
+      "category": "Grand Jury Prize",
+      "result": "winner",
+      "film": {
+        "title": "Clemency",
+        "releaseYear": 2019,
+        "imdbId": "tt8266310",
+        "runtimeMinutes": 112,
+        "countryCodes": ["US"],
+        "languages": ["English"],
+        "genres": ["Drama"],
+        "synopsis": "A prison warden carries emotional scars while preparing for an execution.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/vM0Y8m9j3M2R7Y8c2Q4n8m7L2S3.jpg"
+      },
+      "directors": ["Chinonye Chukwu"]
+    },
+    {
+      "year": 2019,
+      "festivalId": "tiff",
+      "category": "People's Choice Award",
+      "result": "winner",
+      "film": {
+        "title": "Jojo Rabbit",
+        "releaseYear": 2019,
+        "imdbId": "tt2584384",
+        "runtimeMinutes": 108,
+        "countryCodes": ["US", "CZ", "NZ"],
+        "languages": ["English", "German"],
+        "genres": ["Comedy", "Drama", "War"],
+        "synopsis": "A boy in Nazi Germany confronts propaganda, empathy, and absurdity.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/7GsM4mtM0worCtIVeiQt28HieeN.jpg"
+      },
+      "directors": ["Taika Waititi"]
+    },
+    {
+      "year": 2019,
+      "festivalId": "bafta",
+      "category": "Best Film",
+      "result": "winner",
+      "film": {
+        "title": "Roma",
+        "releaseYear": 2018,
+        "imdbId": "tt6155172",
+        "runtimeMinutes": 135,
+        "countryCodes": ["MX"],
+        "languages": ["Spanish", "Mixtec"],
+        "genres": ["Drama"],
+        "synopsis": "A domestic worker navigates class tensions and family upheaval in 1970s Mexico City.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/dtIIyQyALk57ko5bjac7hi01YQ.jpg"
+      },
+      "directors": ["Alfonso Cuaron"]
+    },
+    {
+      "year": 2019,
+      "festivalId": "golden-globes",
+      "category": "Best Motion Picture - Drama",
+      "result": "winner",
+      "film": {
+        "title": "Bohemian Rhapsody",
+        "releaseYear": 2018,
+        "imdbId": "tt1727824",
+        "runtimeMinutes": 134,
+        "countryCodes": ["GB", "US"],
+        "languages": ["English"],
+        "genres": ["Drama", "Music"],
+        "synopsis": "The rise of Queen and Freddie Mercury leads to a defining live performance.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/lHu1wtNaczFPGFDTrjCSzeLPTKN.jpg"
+      },
+      "directors": ["Bryan Singer"]
+    },
+    {
+      "year": 2023,
+      "festivalId": "oscars",
+      "category": "Best Picture",
+      "result": "winner",
+      "film": {
+        "title": "Everything Everywhere All at Once",
+        "releaseYear": 2022,
+        "imdbId": "tt6710474",
+        "runtimeMinutes": 139,
+        "countryCodes": ["US"],
+        "languages": ["English", "Mandarin", "Cantonese"],
+        "genres": ["Science Fiction", "Comedy", "Drama"],
+        "synopsis": "A laundromat owner traverses multiverses while confronting family and identity.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/w3LxiVYdWWRvEVdn5RYq6jIqkb1.jpg"
+      },
+      "directors": ["Daniel Kwan", "Daniel Scheinert"]
+    },
+    {
+      "year": 2023,
+      "festivalId": "cannes",
+      "category": "Palme d'Or",
+      "result": "winner",
+      "film": {
+        "title": "Anatomy of a Fall",
+        "releaseYear": 2023,
+        "imdbId": "tt17009710",
+        "runtimeMinutes": 151,
+        "countryCodes": ["FR"],
+        "languages": ["French", "English", "German"],
+        "genres": ["Drama", "Thriller", "Crime"],
+        "synopsis": "A writer is put on trial after her husband's suspicious death.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/kQs6keheMwCxJxrzV83VUwFtHkB.jpg"
+      },
+      "directors": ["Justine Triet"]
+    },
+    {
+      "year": 2023,
+      "festivalId": "venice",
+      "category": "Golden Lion",
+      "result": "winner",
+      "film": {
+        "title": "Poor Things",
+        "releaseYear": 2023,
+        "imdbId": "tt14230458",
+        "runtimeMinutes": 141,
+        "countryCodes": ["IE", "GB", "US"],
+        "languages": ["English", "Portuguese", "French"],
+        "genres": ["Fantasy", "Drama", "Romance"],
+        "synopsis": "A resurrected woman discovers autonomy, desire, and social constraint.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/kCGlIMHnOm8JPXq3rXM6c5wMxcT.jpg"
+      },
+      "directors": ["Yorgos Lanthimos"]
+    },
+    {
+      "year": 2023,
+      "festivalId": "berlinale",
+      "category": "Golden Bear",
+      "result": "winner",
+      "film": {
+        "title": "On the Adamant",
+        "releaseYear": 2023,
+        "imdbId": "tt27155341",
+        "runtimeMinutes": 109,
+        "countryCodes": ["FR", "JP"],
+        "languages": ["French"],
+        "genres": ["Documentary"],
+        "synopsis": "A floating Paris day center offers psychiatric patients a creative refuge.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/2a5A6Q4B9S5wX9uN6dR7L8eM9kP.jpg"
+      },
+      "directors": ["Nicolas Philibert"]
+    },
+    {
+      "year": 2023,
+      "festivalId": "locarno",
+      "category": "Golden Leopard",
+      "result": "winner",
+      "film": {
+        "title": "Critical Zone",
+        "releaseYear": 2023,
+        "imdbId": "tt28623455",
+        "runtimeMinutes": 99,
+        "countryCodes": ["IR", "DE"],
+        "languages": ["Persian"],
+        "genres": ["Drama"],
+        "synopsis": "A night-time journey through Tehran reveals a fractured urban underworld.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/4kQ8eW2k5Q2hR7yL1rX8mN3qJ2b.jpg"
+      },
+      "directors": ["Ali Ahmadzadeh"]
+    },
+    {
+      "year": 2023,
+      "festivalId": "sundance",
+      "category": "Grand Jury Prize",
+      "result": "winner",
+      "film": {
+        "title": "A Thousand and One",
+        "releaseYear": 2023,
+        "imdbId": "tt12427158",
+        "runtimeMinutes": 117,
+        "countryCodes": ["US"],
+        "languages": ["English"],
+        "genres": ["Drama"],
+        "synopsis": "A mother and son attempt to build stability in a changing New York City.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/mfI9F6w7y9rA7hY9u2yW9iF5w2K.jpg"
+      },
+      "directors": ["A.V. Rockwell"]
+    },
+    {
+      "year": 2023,
+      "festivalId": "tiff",
+      "category": "People's Choice Award",
+      "result": "winner",
+      "film": {
+        "title": "American Fiction",
+        "releaseYear": 2023,
+        "imdbId": "tt23561236",
+        "runtimeMinutes": 117,
+        "countryCodes": ["US"],
+        "languages": ["English"],
+        "genres": ["Comedy", "Drama"],
+        "synopsis": "A novelist's satire unexpectedly becomes a commercial sensation.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/57MFWGHarg9jid1u3wpqpcfWq6C.jpg"
+      },
+      "directors": ["Cord Jefferson"]
+    },
+    {
+      "year": 2023,
+      "festivalId": "bafta",
+      "category": "Best Film",
+      "result": "winner",
+      "film": {
+        "title": "All Quiet on the Western Front",
+        "releaseYear": 2022,
+        "imdbId": "tt1016150",
+        "runtimeMinutes": 148,
+        "countryCodes": ["DE"],
+        "languages": ["German", "French", "English"],
+        "genres": ["War", "Drama", "History"],
+        "synopsis": "Young soldiers confront devastation and disillusionment in World War I.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/hYqOjJ7Gh1fbqXrxlIao1g8ZehF.jpg"
+      },
+      "directors": ["Edward Berger"]
+    },
+    {
+      "year": 2023,
+      "festivalId": "golden-globes",
+      "category": "Best Motion Picture - Drama",
+      "result": "winner",
+      "film": {
+        "title": "The Fabelmans",
+        "releaseYear": 2022,
+        "imdbId": "tt14208870",
+        "runtimeMinutes": 151,
+        "countryCodes": ["US"],
+        "languages": ["English"],
+        "genres": ["Drama"],
+        "synopsis": "An aspiring filmmaker comes of age while his family life unravels.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/d2IywyOPS78vEnJvwVqkVRTiNC1.jpg"
+      },
+      "directors": ["Steven Spielberg"]
+    },
+    {
+      "year": 2024,
+      "festivalId": "oscars",
+      "category": "Best Picture",
+      "result": "winner",
+      "film": {
+        "title": "Oppenheimer",
+        "releaseYear": 2023,
+        "imdbId": "tt15398776",
+        "runtimeMinutes": 180,
+        "countryCodes": ["US", "GB"],
+        "languages": ["English", "German", "Dutch"],
+        "genres": ["Drama", "History", "Biography"],
+        "synopsis": "The life of J. Robert Oppenheimer and the moral burden of the atomic age.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/ptpr0kGAckfQkJeJIt8st5dglvd.jpg"
+      },
+      "directors": ["Christopher Nolan"]
+    },
+    {
+      "year": 2024,
+      "festivalId": "cannes",
+      "category": "Palme d'Or",
+      "result": "winner",
+      "film": {
+        "title": "Anora",
+        "releaseYear": 2024,
+        "imdbId": "tt28607951",
+        "runtimeMinutes": 139,
+        "countryCodes": ["US"],
+        "languages": ["English", "Russian"],
+        "genres": ["Drama", "Comedy", "Romance"],
+        "synopsis": "A dancer's whirlwind marriage collides with family power and class violence.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/xv5Qm7vP7fX4wY8Z9wA6q9Y3k2D.jpg"
+      },
+      "directors": ["Sean Baker"]
+    },
+    {
+      "year": 2024,
+      "festivalId": "venice",
+      "category": "Golden Lion",
+      "result": "winner",
+      "film": {
+        "title": "The Room Next Door",
+        "releaseYear": 2024,
+        "imdbId": "tt29439114",
+        "runtimeMinutes": 112,
+        "countryCodes": ["ES", "US"],
+        "languages": ["English", "Spanish"],
+        "genres": ["Drama"],
+        "synopsis": "Two old friends reconnect and confront mortality with tenderness and wit.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/t9wN9z5t6bQ2c7mV3rX4p8qJ2mK.jpg"
+      },
+      "directors": ["Pedro Almodovar"]
+    },
+    {
+      "year": 2024,
+      "festivalId": "berlinale",
+      "category": "Golden Bear",
+      "result": "winner",
+      "film": {
+        "title": "Dahomey",
+        "releaseYear": 2024,
+        "imdbId": "tt31098041",
+        "runtimeMinutes": 68,
+        "countryCodes": ["FR", "SN", "BJ"],
+        "languages": ["French"],
+        "genres": ["Documentary"],
+        "synopsis": "A film about restitution, memory, and return of looted royal artifacts.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/u4X8x9R2hQ7aN5mP2rS7q2K6yVf.jpg"
+      },
+      "directors": ["Mati Diop"]
+    },
+    {
+      "year": 2024,
+      "festivalId": "locarno",
+      "category": "Golden Leopard",
+      "result": "winner",
+      "film": {
+        "title": "Moon",
+        "releaseYear": 2024,
+        "imdbId": "tt32766557",
+        "runtimeMinutes": 110,
+        "countryCodes": ["AT", "CH"],
+        "languages": ["German", "English"],
+        "genres": ["Drama", "Thriller"],
+        "synopsis": "A retired fighter faces danger and isolation in a remote mountain hotel.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/v8Q9q2M4s6hR1jK7mN3p5xY2wWf.jpg"
+      },
+      "directors": ["Kurdwin Ayub"]
+    },
+    {
+      "year": 2024,
+      "festivalId": "sundance",
+      "category": "Grand Jury Prize",
+      "result": "winner",
+      "film": {
+        "title": "In the Summers",
+        "releaseYear": 2024,
+        "imdbId": "tt15676442",
+        "runtimeMinutes": 98,
+        "countryCodes": ["US"],
+        "languages": ["English", "Spanish"],
+        "genres": ["Drama"],
+        "synopsis": "Two sisters revisit their father across seasons and shifting family memory.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/r2Q7k8s5fV3nL1yH9mX4j6p2aWd.jpg"
+      },
+      "directors": ["Alessandra Lacorazza"]
+    },
+    {
+      "year": 2024,
+      "festivalId": "tiff",
+      "category": "People's Choice Award",
+      "result": "winner",
+      "film": {
+        "title": "The Life of Chuck",
+        "releaseYear": 2024,
+        "imdbId": "tt12908150",
+        "runtimeMinutes": 110,
+        "countryCodes": ["US"],
+        "languages": ["English"],
+        "genres": ["Drama", "Fantasy"],
+        "synopsis": "A reverse-chronology meditation on one life and the cosmos around it.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/m8Q2m9fW2sK3hV8yP6j2L7mX9cA.jpg"
+      },
+      "directors": ["Mike Flanagan"]
+    },
+    {
+      "year": 2024,
+      "festivalId": "bafta",
+      "category": "Best Film",
+      "result": "winner",
+      "film": {
+        "title": "Oppenheimer",
+        "releaseYear": 2023,
+        "imdbId": "tt15398776",
+        "runtimeMinutes": 180,
+        "countryCodes": ["US", "GB"],
+        "languages": ["English", "German", "Dutch"],
+        "genres": ["Drama", "History", "Biography"],
+        "synopsis": "The life of J. Robert Oppenheimer and the moral burden of the atomic age.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/ptpr0kGAckfQkJeJIt8st5dglvd.jpg"
+      },
+      "directors": ["Christopher Nolan"]
+    },
+    {
+      "year": 2024,
+      "festivalId": "golden-globes",
+      "category": "Best Motion Picture - Drama",
+      "result": "winner",
+      "film": {
+        "title": "Oppenheimer",
+        "releaseYear": 2023,
+        "imdbId": "tt15398776",
+        "runtimeMinutes": 180,
+        "countryCodes": ["US", "GB"],
+        "languages": ["English", "German", "Dutch"],
+        "genres": ["Drama", "History", "Biography"],
+        "synopsis": "The life of J. Robert Oppenheimer and the moral burden of the atomic age.",
+        "posterUrl": "https://image.tmdb.org/t/p/w500/ptpr0kGAckfQkJeJIt8st5dglvd.jpg"
+      },
+      "directors": ["Christopher Nolan"]
+    }
+  ]
+}

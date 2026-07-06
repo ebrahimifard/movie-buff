@@ -1,0 +1,83 @@
+[
+  {
+    "id": "oscars",
+    "name": "Academy Awards",
+    "country": "US",
+    "city": "Los Angeles",
+    "foundedYear": 1929,
+    "type": "award",
+    "website": null
+  },
+  {
+    "id": "bafta",
+    "name": "BAFTA Awards",
+    "country": "GB",
+    "city": "London",
+    "foundedYear": 1949,
+    "type": "award",
+    "website": null
+  },
+  {
+    "id": "berlinale",
+    "name": "Berlin International Film Festival",
+    "country": "DE",
+    "city": "Berlin",
+    "foundedYear": 1951,
+    "type": "festival",
+    "website": null
+  },
+  {
+    "id": "cannes",
+    "name": "Cannes Film Festival",
+    "country": "FR",
+    "city": "Cannes",
+    "foundedYear": 1946,
+    "type": "festival",
+    "website": null
+  },
+  {
+    "id": "golden-globes",
+    "name": "Golden Globes",
+    "country": "US",
+    "city": "Beverly Hills",
+    "foundedYear": 1944,
+    "type": "award",
+    "website": null
+  },
+  {
+    "id": "locarno",
+    "name": "Locarno Film Festival",
+    "country": "CH",
+    "city": "Locarno",
+    "foundedYear": 1946,
+    "type": "festival",
+    "website": null
+  },
+  {
+    "id": "sundance",
+    "name": "Sundance Film Festival",
+    "country": "US",
+    "city": "Park City",
+    "foundedYear": 1978,
+    "type": "festival",
+    "website": null
+  },
+  {
+    "id": "tiff",
+    "name": "Toronto International Film Festival",
+    "country": "CA",
+    "city": "Toronto",
+    "foundedYear": 1976,
+    "type": "festival",
+    "website": null
+  },
+  {
+    "id": "venice",
+    "name": "Venice Film Festival",
+    "country": "IT",
+    "city": "Venice",
+    "foundedYear": 1932,
+    "type": "festival",
+    "website": null
+  }
+]

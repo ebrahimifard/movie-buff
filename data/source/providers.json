@@ -1,0 +1,74 @@
+[
+  {
+    "festivalId": "oscars",
+    "festivalName": "Academy Awards",
+    "category": "Best Picture",
+    "awardLabel": "Academy Award for Best Picture",
+    "result": "winner",
+    "includeNominees": true
+  },
+  {
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "category": "Palme d'Or",
+    "awardLabel": "Palme d'Or",
+    "result": "winner",
+    "includeNominees": true
+  },
+  {
+    "festivalId": "venice",
+    "festivalName": "Venice Film Festival",
+    "category": "Golden Lion",
+    "awardLabel": "Golden Lion",
+    "result": "winner",
+    "includeNominees": true
+  },
+  {
+    "festivalId": "berlinale",
+    "festivalName": "Berlin International Film Festival",
+    "category": "Golden Bear",
+    "awardLabel": "Golden Bear",
+    "result": "winner",
+    "includeNominees": true
+  },
+  {
+    "festivalId": "locarno",
+    "festivalName": "Locarno Film Festival",
+    "category": "Golden Leopard",
+    "awardLabel": "Golden Leopard",
+    "result": "winner",
+    "includeNominees": true
+  },
+  {
+    "festivalId": "sundance",
+    "festivalName": "Sundance Film Festival",
+    "category": "Grand Jury Prize",
+    "awardLabel": "Grand Jury Prize: Dramatic",
+    "result": "winner",
+    "includeNominees": true
+  },
+  {
+    "festivalId": "tiff",
+    "festivalName": "Toronto International Film Festival",
+    "category": "People's Choice Award",
+    "awardLabel": "Toronto International Film Festival People's Choice Award",
+    "result": "winner",
+    "includeNominees": true
+  },
+  {
+    "festivalId": "bafta",
+    "festivalName": "BAFTA Awards",
+    "category": "Best Film",
+    "awardLabel": "BAFTA Award for Best Film",
+    "result": "winner",
+    "includeNominees": true
+  },
+  {
+    "festivalId": "golden-globes",
+    "festivalName": "Golden Globes",
+    "category": "Best Motion Picture - Drama",
+    "awardLabel": "Golden Globe Award for Best Motion Picture - Drama",
+    "result": "winner",
+    "includeNominees": true
+  }
+]

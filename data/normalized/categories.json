@@ -1,0 +1,1087 @@
+[
+  {
+    "id": "bafta:bafta-award-for-best-actor-in-a-leading-role",
+    "festivalId": "bafta",
+    "name": "BAFTA Award for Best Actor in a Leading Role",
+    "normalizedName": "bafta-award-for-best-actor-in-a-leading-role",
+    "scope": "film"
+  },
+  {
+    "id": "bafta:bafta-award-for-best-actor-in-a-supporting-role",
+    "festivalId": "bafta",
+    "name": "BAFTA Award for Best Actor in a Supporting Role",
+    "normalizedName": "bafta-award-for-best-actor-in-a-supporting-role",
+    "scope": "film"
+  },
+  {
+    "id": "bafta:bafta-award-for-best-actress-in-a-leading-role",
+    "festivalId": "bafta",
+    "name": "BAFTA Award for Best Actress in a Leading Role",
+    "normalizedName": "bafta-award-for-best-actress-in-a-leading-role",
+    "scope": "film"
+  },
+  {
+    "id": "bafta:bafta-award-for-best-animated-film",
+    "festivalId": "bafta",
+    "name": "BAFTA Award for Best Animated Film",
+    "normalizedName": "bafta-award-for-best-animated-film",
+    "scope": "film"
+  },
+  {
+    "id": "bafta:bafta-award-for-best-direction",
+    "festivalId": "bafta",
+    "name": "BAFTA Award for Best Direction",
+    "normalizedName": "bafta-award-for-best-direction",
+    "scope": "film"
+  },
+  {
+    "id": "bafta:bafta-award-for-best-film",
+    "festivalId": "bafta",
+    "name": "BAFTA Award for Best Film",
+    "normalizedName": "bafta-award-for-best-film",
+    "scope": "film"
+  },
+  {
+    "id": "bafta:bafta-award-for-best-foreign-actor",
+    "festivalId": "bafta",
+    "name": "BAFTA Award for Best Foreign Actor",
+    "normalizedName": "bafta-award-for-best-foreign-actor",
+    "scope": "film"
+  },
+  {
+    "id": "bafta:bafta-award-for-best-production-design",
+    "festivalId": "bafta",
+    "name": "BAFTA Award for Best Production Design",
+    "normalizedName": "bafta-award-for-best-production-design",
+    "scope": "film"
+  },
+  {
+    "id": "bafta:bafta-award-for-best-screenplay",
+    "festivalId": "bafta",
+    "name": "BAFTA Award for Best Screenplay",
+    "normalizedName": "bafta-award-for-best-screenplay",
+    "scope": "film"
+  },
+  {
+    "id": "bafta:bafta-award-for-best-short-animation",
+    "festivalId": "bafta",
+    "name": "BAFTA Award for Best Short Animation",
+    "normalizedName": "bafta-award-for-best-short-animation",
+    "scope": "film"
+  },
+  {
+    "id": "bafta:bafta-award-for-best-short-film",
+    "festivalId": "bafta",
+    "name": "BAFTA Award for Best Short Film",
+    "normalizedName": "bafta-award-for-best-short-film",
+    "scope": "film"
+  },
+  {
+    "id": "bafta:bafta-s-children-young-people-award-animation",
+    "festivalId": "bafta",
+    "name": "BAFTA's Children & Young People Award - Animation",
+    "normalizedName": "bafta-s-children-young-people-award-animation",
+    "scope": "film"
+  },
+  {
+    "id": "bafta:bafta-s-children-young-people-award-director",
+    "festivalId": "bafta",
+    "name": "BAFTA's Children & Young People Award - Director",
+    "normalizedName": "bafta-s-children-young-people-award-director",
+    "scope": "film"
+  },
+  {
+    "id": "bafta:bafta-s-children-young-people-award-feature-film",
+    "festivalId": "bafta",
+    "name": "BAFTA's Children & Young People Award - Feature Film",
+    "normalizedName": "bafta-s-children-young-people-award-feature-film",
+    "scope": "film"
+  },
+  {
+    "id": "bafta:bafta-s-children-young-people-award-performer",
+    "festivalId": "bafta",
+    "name": "BAFTA's Children & Young People Award - Performer",
+    "normalizedName": "bafta-s-children-young-people-award-performer",
+    "scope": "film"
+  },
+  {
+    "id": "bafta:best-film",
+    "festivalId": "bafta",
+    "name": "Best Film",
+    "normalizedName": "best-film",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:amnesty-international-film-award",
+    "festivalId": "berlinale",
+    "name": "Amnesty International Film Award",
+    "normalizedName": "amnesty-international-film-award",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:award-for-best-film",
+    "festivalId": "berlinale",
+    "name": "award for best film",
+    "normalizedName": "award-for-best-film",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:berlinale-documentary-award",
+    "festivalId": "berlinale",
+    "name": "Berlinale Documentary Award",
+    "normalizedName": "berlinale-documentary-award",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:best-first-feature-award-of-berlinale",
+    "festivalId": "berlinale",
+    "name": "Best First Feature Award of Berlinale",
+    "normalizedName": "best-first-feature-award-of-berlinale",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:caligari-award",
+    "festivalId": "berlinale",
+    "name": "Caligari Award",
+    "normalizedName": "caligari-award",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:fipresci-prize-at-berlinale",
+    "festivalId": "berlinale",
+    "name": "FIPRESCI Prize at Berlinale",
+    "normalizedName": "fipresci-prize-at-berlinale",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:golden-bear",
+    "festivalId": "berlinale",
+    "name": "Golden Bear",
+    "normalizedName": "golden-bear",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:heiner-carow-award",
+    "festivalId": "berlinale",
+    "name": "Heiner Carow Award",
+    "normalizedName": "heiner-carow-award",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:short-film-golden-bear",
+    "festivalId": "berlinale",
+    "name": "Short Film Golden Bear",
+    "normalizedName": "short-film-golden-bear",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:silver-bear-for-best-director",
+    "festivalId": "berlinale",
+    "name": "Silver Bear for Best Director",
+    "normalizedName": "silver-bear-for-best-director",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:silver-bear-for-best-short-film",
+    "festivalId": "berlinale",
+    "name": "Silver Bear for Best Short Film",
+    "normalizedName": "silver-bear-for-best-short-film",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:silver-bear-grand-jury-prize",
+    "festivalId": "berlinale",
+    "name": "Silver Bear Grand Jury Prize",
+    "normalizedName": "silver-bear-grand-jury-prize",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:silver-bear-jury-prize",
+    "festivalId": "berlinale",
+    "name": "Silver Bear Jury Prize",
+    "normalizedName": "silver-bear-jury-prize",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:teddy-award",
+    "festivalId": "berlinale",
+    "name": "Teddy Award",
+    "normalizedName": "teddy-award",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:wolfgang-staudte-award",
+    "festivalId": "berlinale",
+    "name": "Wolfgang Staudte Award",
+    "normalizedName": "wolfgang-staudte-award",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:1954-cannes-film-festival",
+    "festivalId": "cannes",
+    "name": "1954 Cannes Film Festival",
+    "normalizedName": "1954-cannes-film-festival",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:1985-cannes-film-festival",
+    "festivalId": "cannes",
+    "name": "1985 Cannes Film Festival",
+    "normalizedName": "1985-cannes-film-festival",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:2019-cannes-film-festival",
+    "festivalId": "cannes",
+    "name": "2019 Cannes Film Festival",
+    "normalizedName": "2019-cannes-film-festival",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:best-screenplay-award",
+    "festivalId": "cannes",
+    "name": "Best Screenplay Award",
+    "normalizedName": "best-screenplay-award",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:cam-ra-d-or",
+    "festivalId": "cannes",
+    "name": "Caméra d'Or",
+    "normalizedName": "cam-ra-d-or",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:cannes-best-director-award",
+    "festivalId": "cannes",
+    "name": "Cannes Best Director Award",
+    "normalizedName": "cannes-best-director-award",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:cannes-film-festival-award-for-best-actor",
+    "festivalId": "cannes",
+    "name": "Cannes Film Festival Award for Best Actor",
+    "normalizedName": "cannes-film-festival-award-for-best-actor",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:cannes-film-festival-award-for-best-actress",
+    "festivalId": "cannes",
+    "name": "Cannes Film Festival Award for Best Actress",
+    "normalizedName": "cannes-film-festival-award-for-best-actress",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:cannes-film-festival-grand-prix",
+    "festivalId": "cannes",
+    "name": "Cannes Film Festival Grand Prix",
+    "normalizedName": "cannes-film-festival-grand-prix",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:directors-fortnight",
+    "festivalId": "cannes",
+    "name": "Directors' Fortnight",
+    "normalizedName": "directors-fortnight",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:fipresci-prize-of-the-festival-de-cannes",
+    "festivalId": "cannes",
+    "name": "FIPRESCI Prize of the Festival de Cannes",
+    "normalizedName": "fipresci-prize-of-the-festival-de-cannes",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:jury-prize",
+    "festivalId": "cannes",
+    "name": "Jury Prize",
+    "normalizedName": "jury-prize",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:ocic-prize-of-festival-de-cannes",
+    "festivalId": "cannes",
+    "name": "OCIC Prize of Festival de Cannes",
+    "normalizedName": "ocic-prize-of-festival-de-cannes",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:palme-d-or",
+    "festivalId": "cannes",
+    "name": "Palme d'Or",
+    "normalizedName": "palme-d-or",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:prize-of-the-ecumenical-jury-cannes",
+    "festivalId": "cannes",
+    "name": "Prize of the Ecumenical Jury Cannes",
+    "normalizedName": "prize-of-the-ecumenical-jury-cannes",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:queer-palm",
+    "festivalId": "cannes",
+    "name": "Queer Palm",
+    "normalizedName": "queer-palm",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:short-film-palme-d-or",
+    "festivalId": "cannes",
+    "name": "Short Film Palme d'Or",
+    "normalizedName": "short-film-palme-d-or",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:special-jury-prize",
+    "festivalId": "cannes",
+    "name": "Special Jury Prize",
+    "normalizedName": "special-jury-prize",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:un-certain-regard",
+    "festivalId": "cannes",
+    "name": "Un Certain Regard",
+    "normalizedName": "un-certain-regard",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:un-certain-regard-award",
+    "festivalId": "cannes",
+    "name": "Un certain regard Award",
+    "normalizedName": "un-certain-regard-award",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-motion-picture-drama",
+    "festivalId": "golden-globes",
+    "name": "Best Motion Picture - Drama",
+    "normalizedName": "best-motion-picture-drama",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:golden-globe-award-for-best-actor-motion-picture-drama",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for Best Actor – Motion Picture Drama",
+    "normalizedName": "golden-globe-award-for-best-actor-motion-picture-drama",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:golden-globe-award-for-best-actor-motion-picture-musical-or-come",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for Best Actor – Motion Picture Musical or Comedy",
+    "normalizedName": "golden-globe-award-for-best-actor-motion-picture-musical-or-come",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:golden-globe-award-for-best-actress-motion-picture-drama",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for Best Actress – Motion Picture Drama",
+    "normalizedName": "golden-globe-award-for-best-actress-motion-picture-drama",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:golden-globe-award-for-best-animated-feature-film",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for Best Animated Feature Film",
+    "normalizedName": "golden-globe-award-for-best-animated-feature-film",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:golden-globe-award-for-best-director",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for Best Director",
+    "normalizedName": "golden-globe-award-for-best-director",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:golden-globe-award-for-best-english-language-foreign-film",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for Best English-Language Foreign Film",
+    "normalizedName": "golden-globe-award-for-best-english-language-foreign-film",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:golden-globe-award-for-best-motion-picture-drama",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for Best Motion Picture – Drama",
+    "normalizedName": "golden-globe-award-for-best-motion-picture-drama",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:golden-globe-award-for-best-motion-picture-musical-or-comedy",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for Best Motion Picture – Musical or Comedy",
+    "normalizedName": "golden-globe-award-for-best-motion-picture-musical-or-comedy",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:golden-globe-award-for-best-non-english-language-film",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for Best Non-English Language Film",
+    "normalizedName": "golden-globe-award-for-best-non-english-language-film",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:golden-globe-award-for-best-original-score",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for Best Original Score",
+    "normalizedName": "golden-globe-award-for-best-original-score",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:golden-globe-award-for-best-screenplay",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for Best Screenplay",
+    "normalizedName": "golden-globe-award-for-best-screenplay",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:golden-globe-award-for-best-supporting-actor-motion-picture",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for Best Supporting Actor – Motion Picture",
+    "normalizedName": "golden-globe-award-for-best-supporting-actor-motion-picture",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:golden-globe-award-for-best-supporting-actress-motion-picture",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for Best Supporting Actress – Motion Picture",
+    "normalizedName": "golden-globe-award-for-best-supporting-actress-motion-picture",
+    "scope": "film"
+  },
+  {
+    "id": "locarno:best-performance-award-locarno-international-film-festival",
+    "festivalId": "locarno",
+    "name": "Best Performance Award (Locarno International Film Festival)",
+    "normalizedName": "best-performance-award-locarno-international-film-festival",
+    "scope": "film"
+  },
+  {
+    "id": "locarno:bronze-leopard",
+    "festivalId": "locarno",
+    "name": "Bronze Leopard",
+    "normalizedName": "bronze-leopard",
+    "scope": "film"
+  },
+  {
+    "id": "locarno:golden-leopard",
+    "festivalId": "locarno",
+    "name": "Golden Leopard",
+    "normalizedName": "golden-leopard",
+    "scope": "film"
+  },
+  {
+    "id": "locarno:golden-leopard-filmmakers-of-the-present",
+    "festivalId": "locarno",
+    "name": "Golden Leopard - Filmmakers of the Present",
+    "normalizedName": "golden-leopard-filmmakers-of-the-present",
+    "scope": "film"
+  },
+  {
+    "id": "locarno:leopard-for-best-direction",
+    "festivalId": "locarno",
+    "name": "Leopard for Best Direction",
+    "normalizedName": "leopard-for-best-direction",
+    "scope": "film"
+  },
+  {
+    "id": "locarno:locarno-international-film-festival-best-actress-award",
+    "festivalId": "locarno",
+    "name": "Locarno International Film Festival Best Actress Award",
+    "normalizedName": "locarno-international-film-festival-best-actress-award",
+    "scope": "film"
+  },
+  {
+    "id": "locarno:locarno-international-film-festival-special-jury-prize",
+    "festivalId": "locarno",
+    "name": "Locarno International Film Festival Special Jury Prize",
+    "normalizedName": "locarno-international-film-festival-special-jury-prize",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-achievement-in-casting",
+    "festivalId": "oscars",
+    "name": "Academy Award for Achievement in Casting",
+    "normalizedName": "academy-award-for-achievement-in-casting",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-actor",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Actor",
+    "normalizedName": "academy-award-for-best-actor",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-actress",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Actress",
+    "normalizedName": "academy-award-for-best-actress",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-animated-feature",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Animated Feature",
+    "normalizedName": "academy-award-for-best-animated-feature",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-animated-short-film",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Animated Short Film",
+    "normalizedName": "academy-award-for-best-animated-short-film",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-art-direction-black-and-white",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Art Direction, Black and White",
+    "normalizedName": "academy-award-for-best-art-direction-black-and-white",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-art-direction-color",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Art Direction, Color",
+    "normalizedName": "academy-award-for-best-art-direction-color",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-cinematography",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Cinematography",
+    "normalizedName": "academy-award-for-best-cinematography",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-cinematography-black-and-white",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Cinematography, Black-and-White",
+    "normalizedName": "academy-award-for-best-cinematography-black-and-white",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-cinematography-color",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Cinematography, Color",
+    "normalizedName": "academy-award-for-best-cinematography-color",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-costume-design",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Costume Design",
+    "normalizedName": "academy-award-for-best-costume-design",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-costume-design-black-and-white",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Costume Design, Black-and-White",
+    "normalizedName": "academy-award-for-best-costume-design-black-and-white",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-costume-design-color",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Costume Design, Color",
+    "normalizedName": "academy-award-for-best-costume-design-color",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-director",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Director",
+    "normalizedName": "academy-award-for-best-director",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-director-comedy-picture",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Director (Comedy Picture)",
+    "normalizedName": "academy-award-for-best-director-comedy-picture",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-director-dramatic-picture",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Director (Dramatic Picture)",
+    "normalizedName": "academy-award-for-best-director-dramatic-picture",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-documentary-short-subject",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Documentary (Short Subject)",
+    "normalizedName": "academy-award-for-best-documentary-short-subject",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-documentary-feature-film",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Documentary Feature Film",
+    "normalizedName": "academy-award-for-best-documentary-feature-film",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-engineering-effects",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Engineering Effects",
+    "normalizedName": "academy-award-for-best-engineering-effects",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-film-editing",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Film Editing",
+    "normalizedName": "academy-award-for-best-film-editing",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-international-feature-film",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best International Feature Film",
+    "normalizedName": "academy-award-for-best-international-feature-film",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-live-action-short-film",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Live Action Short Film",
+    "normalizedName": "academy-award-for-best-live-action-short-film",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-live-action-short-film-color",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Live Action Short Film, Color",
+    "normalizedName": "academy-award-for-best-live-action-short-film-color",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-live-action-short-film-comedy",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Live Action Short Film, Comedy",
+    "normalizedName": "academy-award-for-best-live-action-short-film-comedy",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-live-action-short-film-one-reel",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Live Action Short Film, One-Reel",
+    "normalizedName": "academy-award-for-best-live-action-short-film-one-reel",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-makeup-and-hairstyling",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Makeup and Hairstyling",
+    "normalizedName": "academy-award-for-best-makeup-and-hairstyling",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-original-dramatic-or-comedy-score",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Original Dramatic or Comedy Score",
+    "normalizedName": "academy-award-for-best-original-dramatic-or-comedy-score",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-original-dramatic-score",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Original Dramatic Score",
+    "normalizedName": "academy-award-for-best-original-dramatic-score",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-original-musical-or-comedy-score",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Original Musical or Comedy Score",
+    "normalizedName": "academy-award-for-best-original-musical-or-comedy-score",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-original-musical-score",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Original Musical Score",
+    "normalizedName": "academy-award-for-best-original-musical-score",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-original-score",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Original Score",
+    "normalizedName": "academy-award-for-best-original-score",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-original-score-no-musical",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Original Score, no Musical",
+    "normalizedName": "academy-award-for-best-original-score-no-musical",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-original-song",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Original Song",
+    "normalizedName": "academy-award-for-best-original-song",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-original-song-score",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Original Song Score",
+    "normalizedName": "academy-award-for-best-original-song-score",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-picture",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Picture",
+    "normalizedName": "academy-award-for-best-picture",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-production-design",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Production Design",
+    "normalizedName": "academy-award-for-best-production-design",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-score-adaptation-or-treatment",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Score, Adaptation or Treatment",
+    "normalizedName": "academy-award-for-best-score-adaptation-or-treatment",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-short-subject-novelty",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Short Subject, Novelty",
+    "normalizedName": "academy-award-for-best-short-subject-novelty",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-short-subject-two-reel",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Short Subject, Two-reel",
+    "normalizedName": "academy-award-for-best-short-subject-two-reel",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-sound",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Sound",
+    "normalizedName": "academy-award-for-best-sound",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-sound-editing",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Sound Editing",
+    "normalizedName": "academy-award-for-best-sound-editing",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-special-effects",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Special Effects",
+    "normalizedName": "academy-award-for-best-special-effects",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-story",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Story",
+    "normalizedName": "academy-award-for-best-story",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-supporting-actor",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Supporting Actor",
+    "normalizedName": "academy-award-for-best-supporting-actor",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-supporting-actress",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Supporting Actress",
+    "normalizedName": "academy-award-for-best-supporting-actress",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-visual-effects",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Visual Effects",
+    "normalizedName": "academy-award-for-best-visual-effects",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-writing",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Writing",
+    "normalizedName": "academy-award-for-best-writing",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-writing-adapted-screenplay",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Writing, Adapted Screenplay",
+    "normalizedName": "academy-award-for-best-writing-adapted-screenplay",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-award-for-best-writing-original-screenplay",
+    "festivalId": "oscars",
+    "name": "Academy Award for Best Writing, Original Screenplay",
+    "normalizedName": "academy-award-for-best-writing-original-screenplay",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:academy-honorary-award",
+    "festivalId": "oscars",
+    "name": "Academy Honorary Award",
+    "normalizedName": "academy-honorary-award",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:best-picture",
+    "festivalId": "oscars",
+    "name": "Best Picture",
+    "normalizedName": "best-picture",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:c-sar-award-for-best-foreign-film",
+    "festivalId": "oscars",
+    "name": "César Award for Best Foreign Film",
+    "normalizedName": "c-sar-award-for-best-foreign-film",
+    "scope": "film"
+  },
+  {
+    "id": "oscars:special-achievement-academy-award",
+    "festivalId": "oscars",
+    "name": "Special Achievement Academy Award",
+    "normalizedName": "special-achievement-academy-award",
+    "scope": "film"
+  },
+  {
+    "id": "sundance:alfred-p-sloan-prize",
+    "festivalId": "sundance",
+    "name": "Alfred P. Sloan Prize",
+    "normalizedName": "alfred-p-sloan-prize",
+    "scope": "film"
+  },
+  {
+    "id": "sundance:grand-jury-prize",
+    "festivalId": "sundance",
+    "name": "Grand Jury Prize",
+    "normalizedName": "grand-jury-prize",
+    "scope": "film"
+  },
+  {
+    "id": "sundance:sundance-audience-award-u-s-documentary",
+    "festivalId": "sundance",
+    "name": "Sundance Audience Award: U.S. Documentary",
+    "normalizedName": "sundance-audience-award-u-s-documentary",
+    "scope": "film"
+  },
+  {
+    "id": "sundance:sundance-audience-award-u-s-dramatic",
+    "festivalId": "sundance",
+    "name": "Sundance Audience Award: U.S. Dramatic",
+    "normalizedName": "sundance-audience-award-u-s-dramatic",
+    "scope": "film"
+  },
+  {
+    "id": "sundance:sundance-film-festival-grand-jury-prize-for-best-documentary",
+    "festivalId": "sundance",
+    "name": "Sundance Film Festival Grand Jury Prize for Best Documentary",
+    "normalizedName": "sundance-film-festival-grand-jury-prize-for-best-documentary",
+    "scope": "film"
+  },
+  {
+    "id": "sundance:sundance-film-festival-u-s-dramatic-grand-jury-prize-award",
+    "festivalId": "sundance",
+    "name": "Sundance Film Festival U.S. Dramatic Grand Jury Prize Award",
+    "normalizedName": "sundance-film-festival-u-s-dramatic-grand-jury-prize-award",
+    "scope": "film"
+  },
+  {
+    "id": "sundance:sundance-film-festival-world-cinema-dramatic-grand-jury-prize",
+    "festivalId": "sundance",
+    "name": "Sundance Film Festival World Cinema Dramatic Grand Jury Prize",
+    "normalizedName": "sundance-film-festival-world-cinema-dramatic-grand-jury-prize",
+    "scope": "film"
+  },
+  {
+    "id": "sundance:sundance-special-jury-prize-for-acting",
+    "festivalId": "sundance",
+    "name": "Sundance Special Jury Prize for Acting",
+    "normalizedName": "sundance-special-jury-prize-for-acting",
+    "scope": "film"
+  },
+  {
+    "id": "sundance:sundance-u-s-directing-award-documentary",
+    "festivalId": "sundance",
+    "name": "Sundance U.S. Directing Award: Documentary",
+    "normalizedName": "sundance-u-s-directing-award-documentary",
+    "scope": "film"
+  },
+  {
+    "id": "sundance:sundance-u-s-directing-award-dramatic",
+    "festivalId": "sundance",
+    "name": "Sundance U.S. Directing Award: Dramatic",
+    "normalizedName": "sundance-u-s-directing-award-dramatic",
+    "scope": "film"
+  },
+  {
+    "id": "sundance:sundance-world-cinema-audience-award-documentary",
+    "festivalId": "sundance",
+    "name": "Sundance World Cinema Audience Award: Documentary",
+    "normalizedName": "sundance-world-cinema-audience-award-documentary",
+    "scope": "film"
+  },
+  {
+    "id": "sundance:sundance-world-cinema-directing-award-documentary",
+    "festivalId": "sundance",
+    "name": "Sundance World Cinema Directing Award: Documentary",
+    "normalizedName": "sundance-world-cinema-directing-award-documentary",
+    "scope": "film"
+  },
+  {
+    "id": "sundance:sundance-world-cinema-dramatic-special-jury-award-for-ensemble-a",
+    "festivalId": "sundance",
+    "name": "Sundance World Cinema Dramatic Special Jury Award for Ensemble Acting",
+    "normalizedName": "sundance-world-cinema-dramatic-special-jury-award-for-ensemble-a",
+    "scope": "film"
+  },
+  {
+    "id": "sundance:the-waldo-salt-screenwriting-award",
+    "festivalId": "sundance",
+    "name": "The Waldo Salt Screenwriting Award",
+    "normalizedName": "the-waldo-salt-screenwriting-award",
+    "scope": "film"
+  },
+  {
+    "id": "tiff:people-s-choice-award",
+    "festivalId": "tiff",
+    "name": "People's Choice Award",
+    "normalizedName": "people-s-choice-award",
+    "scope": "film"
+  },
+  {
+    "id": "tiff:platform-prize",
+    "festivalId": "tiff",
+    "name": "Platform Prize",
+    "normalizedName": "platform-prize",
+    "scope": "film"
+  },
+  {
+    "id": "tiff:toronto-international-film-festival-award-for-best-canadian-film",
+    "festivalId": "tiff",
+    "name": "Toronto International Film Festival Award for Best Canadian Film",
+    "normalizedName": "toronto-international-film-festival-award-for-best-canadian-film",
+    "scope": "film"
+  },
+  {
+    "id": "tiff:toronto-international-film-festival-award-for-best-canadian-firs",
+    "festivalId": "tiff",
+    "name": "Toronto International Film Festival Award for Best Canadian First Feature Film",
+    "normalizedName": "toronto-international-film-festival-award-for-best-canadian-firs",
+    "scope": "film"
+  },
+  {
+    "id": "tiff:toronto-international-film-festival-award-for-best-canadian-shor",
+    "festivalId": "tiff",
+    "name": "Toronto International Film Festival Award for Best Canadian Short Film",
+    "normalizedName": "toronto-international-film-festival-award-for-best-canadian-shor",
+    "scope": "film"
+  },
+  {
+    "id": "tiff:toronto-international-film-festival-changemaker-award",
+    "festivalId": "tiff",
+    "name": "Toronto International Film Festival Changemaker Award",
+    "normalizedName": "toronto-international-film-festival-changemaker-award",
+    "scope": "film"
+  },
+  {
+    "id": "tiff:toronto-international-film-festival-people-s-choice-award",
+    "festivalId": "tiff",
+    "name": "Toronto International Film Festival People's Choice Award",
+    "normalizedName": "toronto-international-film-festival-people-s-choice-award",
+    "scope": "film"
+  },
+  {
+    "id": "tiff:toronto-international-film-festival-people-s-choice-award-docume",
+    "festivalId": "tiff",
+    "name": "Toronto International Film Festival People's Choice Award: Documentaries",
+    "normalizedName": "toronto-international-film-festival-people-s-choice-award-docume",
+    "scope": "film"
+  },
+  {
+    "id": "tiff:toronto-international-film-festival-people-s-choice-award-midnig",
+    "festivalId": "tiff",
+    "name": "Toronto International Film Festival People's Choice Award: Midnight Madness",
+    "normalizedName": "toronto-international-film-festival-people-s-choice-award-midnig",
+    "scope": "film"
+  },
+  {
+    "id": "venice:film-award",
+    "festivalId": "venice",
+    "name": "film award",
+    "normalizedName": "film-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:golden-lion",
+    "festivalId": "venice",
+    "name": "Golden Lion",
+    "normalizedName": "golden-lion",
+    "scope": "film"
+  },
+  {
+    "id": "venice:grand-jury-prize-of-the-venice-film-festival",
+    "festivalId": "venice",
+    "name": "Grand Jury Prize of the Venice Film Festival",
+    "normalizedName": "grand-jury-prize-of-the-venice-film-festival",
+    "scope": "film"
+  },
+  {
+    "id": "venice:premio-pasinetti",
+    "festivalId": "venice",
+    "name": "Premio Pasinetti",
+    "normalizedName": "premio-pasinetti",
+    "scope": "film"
+  },
+  {
+    "id": "venice:silver-lion",
+    "festivalId": "venice",
+    "name": "Silver Lion",
+    "normalizedName": "silver-lion",
+    "scope": "film"
+  },
+  {
+    "id": "venice:special-jury-prize",
+    "festivalId": "venice",
+    "name": "Special Jury Prize",
+    "normalizedName": "special-jury-prize",
+    "scope": "film"
+  },
+  {
+    "id": "venice:starlight-international-cinema-award",
+    "festivalId": "venice",
+    "name": "Starlight International Cinema Award",
+    "normalizedName": "starlight-international-cinema-award",
+    "scope": "film"
+  }
+]

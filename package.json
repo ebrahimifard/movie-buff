@@ -1,0 +1,43 @@
+{
+  "name": "movie-buff-archive",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "data:collect": "node scripts/collect-data.mjs",
+    "data:fetch:wikidata": "node scripts/fetch-wikidata-awards.mjs",
+    "data:merge": "node scripts/merge-sources.mjs",
+    "data:enrich:tmdb": "node scripts/enrich-tmdb.mjs",
+    "data:build": "node scripts/build-comprehensive-data.mjs",
+    "data:validate": "node scripts/validate-data.mjs",
+    "data:coverage": "node scripts/coverage-report.mjs",
+    "data:update": "node scripts/update-data.mjs"
+  },
+  "dependencies": {
+    "framer-motion": "^11.2.12",
+    "jsdom": "^29.1.1",
+    "next": "^15.3.3",
+    "node-fetch": "^3.3.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.15.0",
+    "eslint-config-next": "^15.3.3",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "typescript": "^5.7.2",
+    "vitest": "^4.1.10",
+    "zod": "^4.4.3"
+  }
+}
