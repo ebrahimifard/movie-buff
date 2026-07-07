@@ -351,7 +351,7 @@
     "directorIds": [
       "person:marie-cl-mentine-dusabejambo"
     ],
-    "country": "XX",
+    "country": "GA",
     "result": "winner",
     "imdbId": "tt38820979",
     "filmId": "tt38820979"
@@ -7795,7 +7795,7 @@
       "person:david-borenstein",
       "person:pavel-talankin"
     ],
-    "country": "DK",
+    "country": "CZ",
     "result": "winner",
     "imdbId": "tt34965515",
     "filmId": "tt34965515"
@@ -10754,7 +10754,7 @@
     "directorIds": [
       "person:jafar-panahi"
     ],
-    "country": "IR",
+    "country": "FR",
     "result": "winner",
     "imdbId": "tt36491653",
     "filmId": "tt36491653"
@@ -19259,7 +19259,7 @@
     "directorIds": [
       "person:q27042397"
     ],
-    "country": "FR",
+    "country": "SI",
     "result": "winner",
     "imdbId": "tt20519854",
     "filmId": "tt20519854"
@@ -24766,7 +24766,7 @@
     "directorIds": [
       "person:edward-berger"
     ],
-    "country": "DE",
+    "country": "US",
     "result": "winner",
     "imdbId": "tt1016150",
     "filmId": "tt1016150"
@@ -32127,7 +32127,7 @@
     "directorIds": [
       "person:ena-sendijarevi"
     ],
-    "country": "XX",
+    "country": "ID",
     "result": "winner",
     "imdbId": "tt13110998",
     "filmId": "tt13110998"
@@ -32145,7 +32145,7 @@
     "directorIds": [
       "person:ena-sendijarevi"
     ],
-    "country": "XX",
+    "country": "ID",
     "result": "nominee",
     "imdbId": "tt13110998",
     "filmId": "tt13110998"
@@ -33323,7 +33323,7 @@
     "title": "Here We Are: Notes for Living on Planet Earth",
     "director": "",
     "directorIds": [],
-    "country": "XX",
+    "country": "GB",
     "result": "winner",
     "imdbId": "tt11692010",
     "filmId": "tt11692010"
@@ -55718,7 +55718,7 @@
       "person:alfonso-cuaron",
       "person:alfonso-cuar-n"
     ],
-    "country": "MX",
+    "country": "US",
     "result": "winner",
     "imdbId": "tt6155172",
     "filmId": "tt6155172"
@@ -61254,7 +61254,7 @@
     "directorIds": [
       "person:bryan-singer"
     ],
-    "country": "GB",
+    "country": "US",
     "result": "winner",
     "imdbId": "tt1727824",
     "filmId": "tt1727824"
@@ -97637,7 +97637,7 @@
     "directorIds": [
       "person:marieke-blaauw"
     ],
-    "country": "XX",
+    "country": "NL",
     "result": "nominee",
     "imdbId": "tt3838700",
     "filmId": "tt3838700"
@@ -184672,7 +184672,7 @@
     "directorIds": [
       "person:ben-sombogaart"
     ],
-    "country": "XX",
+    "country": "LU",
     "result": "nominee",
     "imdbId": "tt0322674",
     "filmId": "tt0322674"
@@ -191723,7 +191723,7 @@
     "directorIds": [
       "person:paula-van-der-oest"
     ],
-    "country": "XX",
+    "country": "NL",
     "result": "nominee",
     "imdbId": "tt0245157",
     "filmId": "tt0245157"
@@ -207096,7 +207096,7 @@
     "ceremonyId": "tiff-2001",
     "categoryId": "tiff:people-s-choice-award",
     "category": "People's Choice Award",
-    "title": "Amelie",
+    "title": "Amélie",
     "director": "Jean-Pierre Jeunet",
     "directorIds": [
       "person:jean-pierre-jeunet"
@@ -212307,7 +212307,7 @@
     "directorIds": [
       "person:paul-driessen"
     ],
-    "country": "XX",
+    "country": "NL",
     "result": "nominee",
     "imdbId": "tt0239206",
     "filmId": "tt0239206"
@@ -241183,7 +241183,7 @@
     "directorIds": [
       "person:marleen-gorris"
     ],
-    "country": "XX",
+    "country": "NL",
     "result": "winner",
     "imdbId": "tt0112379",
     "filmId": "tt0112379"
@@ -254556,12 +254556,12 @@
     "ceremonyId": "tiff-1994",
     "categoryId": "tiff:people-s-choice-award",
     "category": "People's Choice Award",
-    "title": "Priest",
+    "title": "Il Postino: The Postman",
     "director": "Antonia Bird",
     "directorIds": [
       "person:antonia-bird"
     ],
-    "country": "GB",
+    "country": "BE",
     "result": "winner",
     "imdbId": "tt0110877",
     "filmId": "tt0110877"
@@ -259059,7 +259059,7 @@
     "directorIds": [
       "person:michaela-pavl-tov"
     ],
-    "country": "XX",
+    "country": "XC",
     "result": "nominee",
     "imdbId": "tt0105224",
     "filmId": "tt0105224"
@@ -267198,7 +267198,7 @@
     "directorIds": [
       "person:jan-sv-r-k"
     ],
-    "country": "XX",
+    "country": "XC",
     "result": "nominee",
     "imdbId": "tt0102571",
     "filmId": "tt0102571"
@@ -274639,7 +274639,7 @@
     "directorIds": [
       "person:sergei-bodrov"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "winner",
     "imdbId": "tt0098240",
     "filmId": "tt0098240"
@@ -278787,7 +278787,7 @@
     "directorIds": [
       "person:svetlana-proskurina"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "winner",
     "imdbId": "tt0128542",
     "filmId": "tt0128542"
@@ -279004,7 +279004,7 @@
     "directorIds": [
       "person:aleksandr-petrov"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "nominee",
     "imdbId": "tt0097118",
     "filmId": "tt0097118"
@@ -295814,7 +295814,7 @@
     "directorIds": [
       "person:gleb-panfilov"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "winner",
     "imdbId": "tt0079999",
     "filmId": "tt0079999"
@@ -300958,7 +300958,7 @@
     "directorIds": [
       "person:ji-menzel"
     ],
-    "country": "XX",
+    "country": "XC",
     "result": "nominee",
     "imdbId": "tt0090257",
     "filmId": "tt0090257"
@@ -301012,7 +301012,7 @@
     "directorIds": [
       "person:fons-rademakers"
     ],
-    "country": "XX",
+    "country": "NL",
     "result": "winner",
     "imdbId": "tt0090576",
     "filmId": "tt0090576"
@@ -301066,7 +301066,7 @@
     "directorIds": [
       "person:richard-masur"
     ],
-    "country": "XX",
+    "country": "US",
     "result": "nominee",
     "imdbId": "tt0091438",
     "filmId": "tt0091438"
@@ -306250,7 +306250,7 @@
     "directorIds": [
       "person:b-rge-ring"
     ],
-    "country": "XX",
+    "country": "NL",
     "result": "winner",
     "imdbId": "tt0088725",
     "filmId": "tt0088725"
@@ -306899,7 +306899,7 @@
     "directorIds": [
       "person:emir-kusturica"
     ],
-    "country": "XX",
+    "country": "YU",
     "result": "nominee",
     "imdbId": "tt0089748",
     "filmId": "tt0089748"
@@ -310053,7 +310053,7 @@
     "directorIds": [
       "person:emir-kusturica"
     ],
-    "country": "XX",
+    "country": "YU",
     "result": "winner",
     "imdbId": "tt0089748",
     "filmId": "tt0089748"
@@ -310503,7 +310503,7 @@
     "directorIds": [
       "person:emir-kusturica"
     ],
-    "country": "XX",
+    "country": "YU",
     "result": "winner",
     "imdbId": "tt0089748",
     "filmId": "tt0089748"
@@ -313874,7 +313874,7 @@
     "directorIds": [
       "person:irina-kalinina"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "nominee",
     "imdbId": "tt0087984",
     "filmId": "tt0087984"
@@ -314000,7 +314000,7 @@
     "directorIds": [
       "person:pyotr-todorovsky"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "nominee",
     "imdbId": "tt0086561",
     "filmId": "tt0086561"
@@ -326488,7 +326488,7 @@
     "directorIds": [
       "person:wolfgang-petersen"
     ],
-    "country": "XX",
+    "country": "DE",
     "result": "nominee",
     "imdbId": "tt0082096",
     "filmId": "tt0082096"
@@ -326668,7 +326668,7 @@
     "directorIds": [
       "person:wolfgang-petersen"
     ],
-    "country": "XX",
+    "country": "DE",
     "result": "nominee",
     "imdbId": "tt0082096",
     "filmId": "tt0082096"
@@ -326937,7 +326937,7 @@
     "directorIds": [
       "person:wolfgang-petersen"
     ],
-    "country": "XX",
+    "country": "DE",
     "result": "nominee",
     "imdbId": "tt0082096",
     "filmId": "tt0082096"
@@ -327063,7 +327063,7 @@
     "directorIds": [
       "person:yuli-raizman"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "nominee",
     "imdbId": "tt0083732",
     "filmId": "tt0083732"
@@ -327567,7 +327567,7 @@
     "directorIds": [
       "person:wolfgang-petersen"
     ],
-    "country": "XX",
+    "country": "DE",
     "result": "nominee",
     "imdbId": "tt0082096",
     "filmId": "tt0082096"
@@ -327621,7 +327621,7 @@
     "directorIds": [
       "person:wolfgang-petersen"
     ],
-    "country": "XX",
+    "country": "DE",
     "result": "nominee",
     "imdbId": "tt0082096",
     "filmId": "tt0082096"
@@ -327927,7 +327927,7 @@
     "directorIds": [
       "person:wolfgang-petersen"
     ],
-    "country": "XX",
+    "country": "DE",
     "result": "nominee",
     "imdbId": "tt0082096",
     "filmId": "tt0082096"
@@ -332873,7 +332873,7 @@
     "directorIds": [
       "person:john-n-smith"
     ],
-    "country": "XX",
+    "country": "CA",
     "result": "nominee",
     "imdbId": "tt0082383",
     "filmId": "tt0082383"
@@ -338449,7 +338449,7 @@
     "directorIds": [
       "person:vladimir-menshov"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "winner",
     "imdbId": "tt0079579",
     "filmId": "tt0079579"
@@ -344067,7 +344067,7 @@
       "person:erik-van-zuylen",
       "person:marja-kok"
     ],
-    "country": "XX",
+    "country": "NL",
     "result": "winner",
     "imdbId": "tt0079674",
     "filmId": "tt0079674"
@@ -349921,7 +349921,7 @@
     "directorIds": [
       "person:b-rge-ring"
     ],
-    "country": "XX",
+    "country": "NL",
     "result": "nominee",
     "imdbId": "tt0078017",
     "filmId": "tt0078017"
@@ -350517,7 +350517,7 @@
     "directorIds": [
       "person:stanislav-rostotsky"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "nominee",
     "imdbId": "tt0077222",
     "filmId": "tt0077222"
@@ -363976,7 +363976,7 @@
     "directorIds": [
       "person:marjie-short"
     ],
-    "country": "XX",
+    "country": "US",
     "result": "nominee",
     "imdbId": "tt0074765",
     "filmId": "tt0074765"
@@ -364012,7 +364012,7 @@
     "directorIds": [
       "person:robin-lehman"
     ],
-    "country": "XX",
+    "country": "US",
     "result": "nominee",
     "imdbId": "tt0074966",
     "filmId": "tt0074966"
@@ -370738,7 +370738,7 @@
     "directorIds": [
       "person:louis-marcus"
     ],
-    "country": "XX",
+    "country": "IE",
     "result": "nominee",
     "imdbId": "tt0072816",
     "filmId": "tt0072816"
@@ -370756,7 +370756,7 @@
     "directorIds": [
       "person:larry-lansburgh"
     ],
-    "country": "XX",
+    "country": "US",
     "result": "nominee",
     "imdbId": "tt0072846",
     "filmId": "tt0072846"
@@ -376107,7 +376107,7 @@
     "directorIds": [
       "person:jerzy-hoffman"
     ],
-    "country": "XX",
+    "country": "PL",
     "result": "nominee",
     "imdbId": "tt0072021",
     "filmId": "tt0072021"
@@ -381537,7 +381537,7 @@
     "directorIds": [
       "person:louis-marcus"
     ],
-    "country": "XX",
+    "country": "IE",
     "result": "nominee",
     "imdbId": "tt0070500",
     "filmId": "tt0070500"
@@ -381735,7 +381735,7 @@
     "directorIds": [
       "person:paul-verhoeven"
     ],
-    "country": "XX",
+    "country": "NL",
     "result": "nominee",
     "imdbId": "tt0070842",
     "filmId": "tt0070842"
@@ -387240,7 +387240,7 @@
     "directorIds": [
       "person:bert-haanstra"
     ],
-    "country": "XX",
+    "country": "NL",
     "result": "nominee",
     "imdbId": "tt0068275",
     "filmId": "tt0068275"
@@ -387387,7 +387387,7 @@
     "directorIds": [
       "person:charles-huguenot-van-der-linden"
     ],
-    "country": "XX",
+    "country": "NL",
     "result": "winner",
     "imdbId": "tt0069373",
     "filmId": "tt0069373"
@@ -387531,7 +387531,7 @@
     "directorIds": [
       "person:stanislav-rostotsky"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "nominee",
     "imdbId": "tt0068161",
     "filmId": "tt0068161"
@@ -393267,7 +393267,7 @@
     "directorIds": [
       "person:han-van-gelder"
     ],
-    "country": "XX",
+    "country": "NL",
     "result": "nominee",
     "imdbId": "tt0066748",
     "filmId": "tt0066748"
@@ -393445,7 +393445,7 @@
     "directorIds": [
       "person:igor-talankin"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "nominee",
     "imdbId": "tt0065127",
     "filmId": "tt0065127"
@@ -393679,7 +393679,7 @@
     "directorIds": [
       "person:igor-talankin"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "nominee",
     "imdbId": "tt0065127",
     "filmId": "tt0065127"
@@ -399561,7 +399561,7 @@
     "directorIds": [
       "person:patrick-carey"
     ],
-    "country": "XX",
+    "country": "IE",
     "result": "nominee",
     "imdbId": "tt0066178",
     "filmId": "tt0066178"
@@ -399815,7 +399815,7 @@
     "directorIds": [
       "person:john-d-hancock"
     ],
-    "country": "XX",
+    "country": "US",
     "result": "nominee",
     "imdbId": "tt0066406",
     "filmId": "tt0066406"
@@ -400777,7 +400777,7 @@
     "directorIds": [
       "person:sarah-erulkar"
     ],
-    "country": "XX",
+    "country": "GB",
     "result": "winner",
     "imdbId": "tt0316401",
     "filmId": "tt0316401"
@@ -407166,7 +407166,7 @@
       "person:kirill-lavrov",
       "person:mikhail-ulyanov"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "nominee",
     "imdbId": "tt0062757",
     "filmId": "tt0062757"
@@ -408246,7 +408246,7 @@
     "directorIds": [
       "person:ji-trnka"
     ],
-    "country": "XX",
+    "country": "XC",
     "result": "nominee",
     "imdbId": "tt0239921",
     "filmId": "tt0239921"
@@ -413696,7 +413696,7 @@
     "directorIds": [
       "person:gleb-panfilov"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "winner",
     "imdbId": "tt0062428",
     "filmId": "tt0062428"
@@ -414613,7 +414613,7 @@
     "directorIds": [
       "person:sergei-bondarchuk"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "winner",
     "imdbId": "tt0063794",
     "filmId": "tt0063794"
@@ -415045,7 +415045,7 @@
     "directorIds": [
       "person:sergei-bondarchuk"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "nominee",
     "imdbId": "tt0063794",
     "filmId": "tt0063794"
@@ -418496,7 +418496,7 @@
     "directorIds": [
       "person:ji-menzel"
     ],
-    "country": "XX",
+    "country": "XC",
     "result": "winner",
     "imdbId": "tt0060802",
     "filmId": "tt0060802"
@@ -418622,7 +418622,7 @@
     "directorIds": [
       "person:john-fernhout"
     ],
-    "country": "XX",
+    "country": "NL",
     "result": "nominee",
     "imdbId": "tt0062278",
     "filmId": "tt0062278"
@@ -422863,7 +422863,7 @@
       "person:elmar-klos",
       "person:j-n-kad-r"
     ],
-    "country": "XX",
+    "country": "XC",
     "result": "nominee",
     "imdbId": "tt0059527",
     "filmId": "tt0059527"
@@ -423942,7 +423942,7 @@
     "directorIds": [
       "person:milo-forman"
     ],
-    "country": "XX",
+    "country": "XC",
     "result": "nominee",
     "imdbId": "tt0059415",
     "filmId": "tt0059415"
@@ -423978,7 +423978,7 @@
     "directorIds": [
       "person:jerzy-kawalerowicz"
     ],
-    "country": "XX",
+    "country": "PL",
     "result": "nominee",
     "imdbId": "tt0060401",
     "filmId": "tt0060401"
@@ -426986,7 +426986,7 @@
     "directorIds": [
       "person:evald-schorm"
     ],
-    "country": "XX",
+    "country": "XC",
     "result": "winner",
     "imdbId": "tt0058259",
     "filmId": "tt0058259"
@@ -428048,7 +428048,7 @@
     "directorIds": [
       "person:patrick-carey"
     ],
-    "country": "XX",
+    "country": "IE",
     "result": "nominee",
     "imdbId": "tt0059926",
     "filmId": "tt0059926"
@@ -428229,7 +428229,7 @@
       "person:elmar-klos",
       "person:j-n-kad-r"
     ],
-    "country": "XX",
+    "country": "XC",
     "result": "winner",
     "imdbId": "tt0059527",
     "filmId": "tt0059527"
@@ -433302,7 +433302,7 @@
     "directorIds": [
       "person:bert-haanstra"
     ],
-    "country": "XX",
+    "country": "NL",
     "result": "nominee",
     "imdbId": "tt0056819",
     "filmId": "tt0056819"
@@ -437136,7 +437136,7 @@
     "directorIds": [
       "person:milo-forman"
     ],
-    "country": "XX",
+    "country": "XC",
     "result": "winner",
     "imdbId": "tt0056919",
     "filmId": "tt0056919"
@@ -441871,7 +441871,7 @@
     "directorIds": [
       "person:zbyn-k-brynych"
     ],
-    "country": "XX",
+    "country": "XC",
     "result": "winner",
     "imdbId": "tt0056609",
     "filmId": "tt0056609"
@@ -443109,7 +443109,7 @@
     "directorIds": [
       "person:hayward-anderson"
     ],
-    "country": "XX",
+    "country": "US",
     "result": "nominee",
     "imdbId": "tt0055853",
     "filmId": "tt0055853"
@@ -443146,7 +443146,7 @@
     "directorIds": [
       "person:herman-van-der-horst"
     ],
-    "country": "XX",
+    "country": "NL",
     "result": "nominee",
     "imdbId": "tt1534484",
     "filmId": "tt1534484"
@@ -447365,7 +447365,7 @@
     "directorIds": [
       "person:paul-rotha"
     ],
-    "country": "XX",
+    "country": "IE",
     "result": "nominee",
     "imdbId": "tt0054767",
     "filmId": "tt0054767"
@@ -447632,7 +447632,7 @@
     "title": "The Face of Jesus",
     "director": "",
     "directorIds": [],
-    "country": "XX",
+    "country": "US",
     "result": "nominee",
     "imdbId": "tt0054863",
     "filmId": "tt0054863"
@@ -447828,7 +447828,7 @@
     "directorIds": [
       "person:vera-stroyeva"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "nominee",
     "imdbId": "tt0055046",
     "filmId": "tt0055046"
@@ -448356,7 +448356,7 @@
     "directorIds": [
       "person:grigori-chukhrai"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "nominee",
     "imdbId": "tt0052600",
     "filmId": "tt0052600"
@@ -448537,7 +448537,7 @@
     "directorIds": [
       "person:andrei-tarkovsky"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "winner",
     "imdbId": "tt0056111",
     "filmId": "tt0056111"
@@ -450755,7 +450755,7 @@
     "directorIds": [
       "person:franti-ek-vystr-il"
     ],
-    "country": "XX",
+    "country": "XC",
     "result": "nominee",
     "imdbId": "tt0054186",
     "filmId": "tt0054186"
@@ -454520,7 +454520,7 @@
     "directorIds": [
       "person:bert-haanstra"
     ],
-    "country": "XX",
+    "country": "NL",
     "result": "winner",
     "imdbId": "tt0052852",
     "filmId": "tt0052852"
@@ -454628,7 +454628,7 @@
     "directorIds": [
       "person:fons-rademakers"
     ],
-    "country": "XX",
+    "country": "NL",
     "result": "nominee",
     "imdbId": "tt0051552",
     "filmId": "tt0051552"
@@ -458605,7 +458605,7 @@
     "directorIds": [
       "person:ren-clair"
     ],
-    "country": "IT",
+    "country": "FR",
     "result": "nominee",
     "imdbId": "tt0050850",
     "filmId": "tt0050850"
@@ -458833,7 +458833,7 @@
     "directorIds": [
       "person:mikhail-kalatozov"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "winner",
     "imdbId": "tt0050634",
     "filmId": "tt0050634"
@@ -460078,7 +460078,7 @@
     "directorIds": [
       "person:ren-clair"
     ],
-    "country": "IT",
+    "country": "FR",
     "result": "nominee",
     "imdbId": "tt0050850",
     "filmId": "tt0050850"
@@ -464123,7 +464123,7 @@
       "person:john-farrow",
       "person:michael-anderson"
     ],
-    "country": "FR",
+    "country": "US",
     "result": "winner",
     "imdbId": "tt0048960",
     "filmId": "tt0048960"
@@ -468618,7 +468618,7 @@
       "person:ji-trnka",
       "person:milo-makovec"
     ],
-    "country": "XX",
+    "country": "XC",
     "result": "winner",
     "imdbId": "tt0043410",
     "filmId": "tt0043410"
@@ -472610,7 +472610,7 @@
     "directorIds": [
       "person:ji-trnka"
     ],
-    "country": "XX",
+    "country": "XC",
     "result": "winner",
     "imdbId": "tt0225145",
     "filmId": "tt0225145"
@@ -473741,7 +473741,7 @@
     "directorIds": [
       "person:vincenzo-lucci-chiarissi"
     ],
-    "country": "XX",
+    "country": "IT",
     "result": "nominee",
     "imdbId": "tt0045625",
     "filmId": "tt0045625"
@@ -474174,7 +474174,7 @@
     "directorIds": [
       "person:john-jay"
     ],
-    "country": "XX",
+    "country": "US",
     "result": "nominee",
     "imdbId": "tt0046554",
     "filmId": "tt0046554"
@@ -475989,7 +475989,7 @@
     "directorIds": [
       "person:grigori-aleksandrov"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "winner",
     "imdbId": "tt0044804",
     "filmId": "tt0044804"
@@ -482923,7 +482923,7 @@
     "directorIds": [
       "person:mikhail-slutsky"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "winner",
     "imdbId": "tt28298265",
     "filmId": "tt28298265"
@@ -496375,7 +496375,7 @@
     "directorIds": [
       "person:aleksandr-zguridi"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "nominee",
     "imdbId": "tt0038690",
     "filmId": "tt0038690"
@@ -496391,7 +496391,7 @@
     "title": "Paramount News Issue #37",
     "director": "",
     "directorIds": [],
-    "country": "XX",
+    "country": "US",
     "result": "nominee",
     "imdbId": "tt0038825",
     "filmId": "tt0038825"
@@ -497418,7 +497418,7 @@
     "directorIds": [
       "person:roberto-rossellini"
     ],
-    "country": "XX",
+    "country": "IT",
     "result": "nominee",
     "imdbId": "tt0038890",
     "filmId": "tt0038890"
@@ -498064,7 +498064,7 @@
     "directorIds": [
       "person:chetan-anand"
     ],
-    "country": "XX",
+    "country": "IN",
     "result": "winner",
     "imdbId": "tt0154942",
     "filmId": "tt0154942"
@@ -508661,7 +508661,7 @@
       "person:ilya-kopalin",
       "person:leonid-varlamov"
     ],
-    "country": "XX",
+    "country": "SU",
     "result": "winner",
     "imdbId": "tt0035085",
     "filmId": "tt0035085"
@@ -511923,7 +511923,7 @@
     "title": "Russian Soil",
     "director": "",
     "directorIds": [],
-    "country": "XX",
+    "country": "SU",
     "result": "nominee",
     "imdbId": "tt1847681",
     "filmId": "tt1847681"
@@ -524216,7 +524216,7 @@
     "title": "Popular Science",
     "director": "",
     "directorIds": [],
-    "country": "XX",
+    "country": "US",
     "result": "nominee",
     "imdbId": "tt0026880",
     "filmId": "tt0026880"

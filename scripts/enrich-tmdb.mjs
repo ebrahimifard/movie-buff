@@ -2,6 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { fetchWithRetry } from "./lib/http.mjs";
+import { loadLocalEnv } from "./lib/env.mjs";
 
 const root = process.cwd();
 const generatedPath = path.join(root, "data", "source", "master-data.generated.json");
@@ -105,6 +106,7 @@ export function buildEnrichedPayload(payload, records, imdbLookup, failures) {
 }
 
 async function run() {
+  loadLocalEnv();
   const apiKey = process.env.TMDB_API_KEY;
   if (!apiKey) {
     console.log("TMDB_API_KEY is not set; skipping TMDB enrichment.");
