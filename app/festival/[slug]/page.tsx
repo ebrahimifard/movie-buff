@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { FilmCard } from "@/components/film-card";
-import { getByFestival, getFestivalBySlug, getYears } from "@/lib/data";
+import { BackLink } from "@/components/back-link";
+import { FestivalFilters } from "@/components/festival-filters";
+import { getByFestival, getFestivalBySlug, getFilmsById, getYears } from "@/lib/data";
+import { buildFestivalFilterRows } from "@/lib/festival-filters";
 
 type FestivalPageProps = {
   params: Promise<{
@@ -32,6 +34,7 @@ export default async function FestivalPage({ params }: FestivalPageProps) {
 
   const entries = getByFestival(resolvedParams.slug);
   const latestYear = getYears()[0];
+  const rows = buildFestivalFilterRows(entries, getFilmsById());
 
   return (
     <main className="mx-auto max-w-7xl px-6 pb-20 pt-10 sm:px-8 lg:px-12">
@@ -43,19 +46,18 @@ export default async function FestivalPage({ params }: FestivalPageProps) {
             {festival.city}, {festival.country} · founded {festival.foundedYear}
           </p>
         </div>
-        <Link
-          href={`/year/${latestYear}`}
-          className="focus-ring meta text-xs text-bone/70 underline decoration-gold/70 underline-offset-4"
-        >
-          Jump to latest year
-        </Link>
+        <div className="flex items-center gap-4">
+          <Link
+            href={`/year/${latestYear}`}
+            className="focus-ring meta text-xs text-bone/70 underline decoration-gold/70 underline-offset-4"
+          >
+            Jump to latest year
+          </Link>
+          <BackLink />
+        </div>
       </div>
 
-      <section className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {entries.map((entry) => (
-          <FilmCard key={entry.id} {...entry} />
-        ))}
-      </section>
+      <FestivalFilters rows={rows} />
     </main>
   );
 }

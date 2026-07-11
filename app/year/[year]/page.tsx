@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { BackLink } from "@/components/back-link";
 import { FilmCard } from "@/components/film-card";
 import { FESTIVALS, getByYear, getYears } from "@/lib/data";
 
@@ -48,9 +49,7 @@ export default async function YearPage({ params, searchParams }: YearPageProps) 
     <main className="mx-auto max-w-7xl px-6 pb-20 pt-10 sm:px-8 lg:px-12">
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-bone/20 pb-6">
         <h1 className="cinematic-title text-6xl text-bone">{year}</h1>
-        <Link href="/" className="focus-ring meta text-xs text-bone/70 underline decoration-gold/70 underline-offset-4">
-          Back to homepage
-        </Link>
+        <BackLink />
       </div>
 
       <section className="mt-7 rounded-xl border border-bone/15 bg-charcoal/60 p-4">

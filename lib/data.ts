@@ -9,6 +9,15 @@ export const FESTIVALS = festivals as Festival[];
 export const FILMS = films as Film[];
 export const NOMINATIONS = nominations as Nomination[];
 
+// Built once at module load. FilmCard resolves a film per rendered
+// nomination card — a linear .find() here would be O(n) per card, O(n*m)
+// for a full festival page (e.g. Oscars: 10,000+ cards over 22,000+ films).
+const FILMS_BY_IMDB_ID = new Map<string, Film>(
+  FILMS.filter((film): film is Film & { imdbId: string } => typeof film.imdbId === "string").map((film) => [film.imdbId, film])
+);
+const FILMS_BY_ID = new Map<string, Film>(FILMS.map((film) => [film.id, film]));
+const FESTIVALS_BY_SLUG = new Map<string, Festival>(FESTIVALS.map((festival) => [festival.id, festival]));
+
 export function getYears(): number[] {
   return [...new Set(NOMINATIONS.map((entry) => entry.year))].sort((a, b) => b - a);
 }
@@ -18,7 +27,7 @@ export function getByYear(year: number): Nomination[] {
 }
 
 export function getFestivalBySlug(slug: string): Festival | undefined {
-  return FESTIVALS.find((festival) => festival.id === slug);
+  return FESTIVALS_BY_SLUG.get(slug);
 }
 
 export function getByFestival(slug: string): Nomination[] {
@@ -26,7 +35,14 @@ export function getByFestival(slug: string): Nomination[] {
 }
 
 export function getFilmByImdbId(imdbId: string): Film | undefined {
-  return FILMS.find((film) => typeof film.imdbId === "string" && film.imdbId === imdbId);
+  return FILMS_BY_IMDB_ID.get(imdbId);
+}
+
+// Keyed by Film.id (an imdbId, or a synthetic "film:{slug}" id when no
+// imdbId exists — see resolveFilmId() in scripts/build-comprehensive-data.mjs),
+// which is what Nomination.filmId always references.
+export function getFilmsById(): Map<string, Film> {
+  return FILMS_BY_ID;
 }
 
 export function getNominationsByImdbId(imdbId: string): Nomination[] {

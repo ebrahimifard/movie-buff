@@ -201,4 +201,126 @@ describe("parseSimpleAwardsWikipedia", () => {
     const emiliaPerez = records.find((r) => r.film.title === "Emilia Pérez");
     expect(emiliaPerez.result).toBe("winner");
   });
+
+  it("handles a flat category-prefixed award list (Berlinale/Venice 'Category: Title by Director' pattern)", () => {
+    // Mirrors the real structure of Berlinale/Venice "Official Awards"
+    // sections: one umbrella heading, one flat <ul>, each <li> embedding its
+    // own award category as a wikilink before a colon.
+    const html = wrapHtml(`
+      <div><h3><span>Main Competition</span><span class="mw-editsection">[edit]</span></h3></div>
+      <ul>
+        <li><a href="/wiki/Golden_Bear">Golden Bear</a>: <i><a href="/wiki/X">Dreams (Sex Love)</a></i> by <a href="/wiki/Y">Dag Johan Haugerud</a></li>
+        <li><a href="/wiki/Silver_Bear_for_Best_Director">Silver Bear for Best Director</a>: Huo Meng for <i><a href="/wiki/Z">Living the Land</a></i></li>
+      </ul>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 2025, config);
+    expect(records).toHaveLength(2);
+
+    const goldenBear = records.find((r) => r.category === "Golden Bear");
+    expect(goldenBear.film.title).toBe("Dreams (Sex Love)");
+    expect(goldenBear.result).toBe("winner");
+
+    const silverBear = records.find((r) => r.category === "Silver Bear for Best Director");
+    expect(silverBear.film.title).toBe("Living the Land");
+  });
+
+  it("does not misread a colon inside a plain (non-category-prefixed) title as a category separator", () => {
+    const html = wrapHtml(`
+      <h3>Best Picture</h3>
+      <ul>
+        <li><a href="/wiki/KB2">Kill Bill: Volume 2</a></li>
+      </ul>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 2004, config);
+    expect(records).toHaveLength(1);
+    expect(records[0].category).toBe("Best Picture");
+    expect(records[0].film.title).toBe("Kill Bill: Volume 2");
+  });
+
+  it("finds the <ul> after a heading wrapped in a MediaWiki editable-section div", () => {
+    const html = wrapHtml(`
+      <div><h3><span>Best Director</span><span class="mw-editsection">[edit]</span></h3></div>
+      <ul><li><b>Bong Joon-ho</b> - Parasite</li></ul>
+    `);
+    const records = parseSimpleAwardsWikipedia(html, 2020, config);
+    expect(records).toHaveLength(1);
+    expect(records[0].category).toBe("Best Director");
+  });
+
+  it("handles a nested tier -> subcategory award list (older Berlinale years: 'Golden Bear' groups per-genre sub-awards)", () => {
+    // Mirrors the real 1951 Berlinale structure: an outer tier li ("Golden
+    // Bear:") has no title of its own, just a nested <ul> of the tier's
+    // actual per-category winners, each with a BOLD (not linked) category
+    // label before the colon.
+    const html = wrapHtml(`
+      <h2>Official Awards</h2>
+      <ul>
+        <li><a href="/wiki/Golden_Bear">Golden Bear</a>:
+          <ul>
+            <li><b>Best Drama Film</b>: <i><a href="/wiki/Four">Four in a Jeep</a></i> by <a href="/wiki/Leopold">Leopold Lindtberg</a></li>
+            <li><b>Best Music Film</b>: <i><a href="/wiki/Cinderella">Cinderella</a></i> by <a href="/wiki/Wilfred">Wilfred Jackson</a></li>
+          </ul>
+        </li>
+        <li><a href="/wiki/Silver_Bear">Silver Bear</a>:
+          <ul>
+            <li><b>Best Drama Film</b>: <i><a href="/wiki/Path">Path of Hope</a></i> by <a href="/wiki/Pietro">Pietro Germi</a></li>
+          </ul>
+        </li>
+      </ul>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 1951, config);
+    expect(records).toHaveLength(3);
+
+    const goldenDrama = records.find((r) => r.category === "Golden Bear – Best Drama Film");
+    expect(goldenDrama.film.title).toBe("Four in a Jeep");
+
+    const goldenMusic = records.find((r) => r.category === "Golden Bear – Best Music Film");
+    expect(goldenMusic.film.title).toBe("Cinderella");
+
+    // Same sub-category name under a different tier must stay a distinct award.
+    const silverDrama = records.find((r) => r.category === "Silver Bear – Best Drama Film");
+    expect(silverDrama.film.title).toBe("Path of Hope");
+    expect(records.some((r) => r.category === "Best Drama Film")).toBe(false);
+  });
+
+  it("treats a single spanning <td colspan> the same as <th colspan> for category-separator rows", () => {
+    const html = wrapHtml(`
+      <table class="wikitable">
+        <tr><th>English title</th><th>Director</th></tr>
+        <tr><td colspan="2" style="font-weight:bold">Drama</td></tr>
+        <tr><td>Path of Hope</td><td>Pietro Germi</td></tr>
+      </table>
+    `);
+    const records = parseSimpleAwardsWikipedia(html, 1951, config);
+    expect(records).toHaveLength(1);
+    expect(records[0].category).toBe("Drama");
+    expect(records[0].film.title).toBe("Path of Hope");
+  });
+
+  it("does not misclassify a genuine single-cell data row (no colspan) as a category separator", () => {
+    const html = wrapHtml(`
+      <h2>Best Picture</h2>
+      <table class="wikitable">
+        <tr><td><a href="/wiki/Parasite">Parasite</a> directed by Bong Joon-ho</td></tr>
+      </table>
+    `);
+    const records = parseSimpleAwardsWikipedia(html, 2020, config);
+    expect(records).toHaveLength(1);
+    expect(records[0].film.title).toBe("Parasite");
+    expect(records[0].category).toBe("Best Picture");
+  });
+
+  it("excludes boilerplate sections like External links / References from heading+list parsing", () => {
+    const html = wrapHtml(`
+      <h2>External links</h2>
+      <ul><li><a href="https://example.com">Official website</a></li></ul>
+      <h2>References</h2>
+      <ul><li>Some citation text</li></ul>
+    `);
+    const records = parseSimpleAwardsWikipedia(html, 2020, config);
+    expect(records).toHaveLength(0);
+  });
 });

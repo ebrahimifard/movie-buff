@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-07T00:15:41.272Z",
+  "generatedAt": "2026-07-11T14:45:45.228Z",
   "sourcePath": "data\\source\\master-data.generated.json",
   "stats": {
     "festivals": 9,
-    "ceremonies": 577,
-    "categories": 683,
-    "films": 22073,
+    "ceremonies": 629,
+    "categories": 1553,
+    "films": 31296,
     "people": 2864,
-    "nominations": 31876
+    "nominations": 42632
   }
 }

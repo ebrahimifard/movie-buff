@@ -6,10 +6,20 @@ import { pathToFileURL } from "node:url";
 const root = process.cwd();
 const masterPath = path.join(root, "data", "source", "master-data.json");
 const wikidataPath = path.join(root, "data", "source", "wikidata-awards.json");
-const cannesWikipediaPath = path.join(root, "data", "source", "cannes-wikipedia.json");
-const goldenGlobesWikipediaPath = path.join(root, "data", "source", "golden-globes-wikipedia.json");
-const baftaWikipediaPath = path.join(root, "data", "source", "bafta-wikipedia.json");
 const mergedPath = path.join(root, "data", "source", "master-data.generated.json");
+
+// Each optional Wikipedia source is merged after Wikidata, in this order.
+// Adding a new festival's scraper output is a one-line addition here — no
+// other change to run()'s merge sequence is needed. Order among these does
+// not affect correctness (non-overlapping festivalIds), only matters for
+// preserving existing merge-precedence/test expectations for the first 3.
+export const WIKIPEDIA_SOURCES = [
+  { sourceId: "cannesWikipedia", filePath: path.join(root, "data", "source", "cannes-wikipedia.json") },
+  { sourceId: "goldenGlobesWikipedia", filePath: path.join(root, "data", "source", "golden-globes-wikipedia.json") },
+  { sourceId: "baftaWikipedia", filePath: path.join(root, "data", "source", "bafta-wikipedia.json") },
+  { sourceId: "berlinaleWikipedia", filePath: path.join(root, "data", "source", "berlinale-wikipedia.json") },
+  { sourceId: "veniceWikipedia", filePath: path.join(root, "data", "source", "venice-wikipedia.json") }
+];
 
 export function slugify(input) {
   return String(input)
@@ -145,9 +155,10 @@ async function run() {
     wikidataRecords = [];
   }
 
-  const cannesWikipediaRecords = await readOptionalWikipediaSource(cannesWikipediaPath);
-  const goldenGlobesWikipediaRecords = await readOptionalWikipediaSource(goldenGlobesWikipediaPath);
-  const baftaWikipediaRecords = await readOptionalWikipediaSource(baftaWikipediaPath);
+  const wikipediaSources = [];
+  for (const { sourceId, filePath } of WIKIPEDIA_SOURCES) {
+    wikipediaSources.push({ sourceId, records: await readOptionalWikipediaSource(filePath) });
+  }
 
   const outputRecords = [];
   const primaryIndex = new Map();
@@ -161,9 +172,9 @@ async function run() {
   }
 
   mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, wikidataRecords);
-  mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, cannesWikipediaRecords);
-  mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, goldenGlobesWikipediaRecords);
-  mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, baftaWikipediaRecords);
+  for (const { records } of wikipediaSources) {
+    mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, records);
+  }
 
   outputRecords.sort((a, b) => {
     if (a.year !== b.year) {
@@ -174,28 +185,24 @@ async function run() {
     return left.localeCompare(right);
   });
 
+  const sourceCounts = {
+    seed: master.records?.length ?? 0,
+    wikidata: wikidataRecords.length,
+    ...Object.fromEntries(wikipediaSources.map(({ sourceId, records }) => [sourceId, records.length])),
+    merged: outputRecords.length
+  };
+
   const payload = {
     festivals: master.festivals,
     records: outputRecords,
     metadata: {
       generatedAt: new Date().toISOString(),
-      sourceCounts: {
-        seed: master.records?.length ?? 0,
-        wikidata: wikidataRecords.length,
-        cannesWikipedia: cannesWikipediaRecords.length,
-        goldenGlobesWikipedia: goldenGlobesWikipediaRecords.length,
-        baftaWikipedia: baftaWikipediaRecords.length,
-        merged: outputRecords.length
-      }
+      sourceCounts
     }
   };
 
   await writeFile(mergedPath, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
-  console.log(
-    `Merged sources. seed=${payload.metadata.sourceCounts.seed}, wikidata=${payload.metadata.sourceCounts.wikidata}, ` +
-      `cannesWikipedia=${payload.metadata.sourceCounts.cannesWikipedia}, goldenGlobesWikipedia=${payload.metadata.sourceCounts.goldenGlobesWikipedia}, ` +
-      `baftaWikipedia=${payload.metadata.sourceCounts.baftaWikipedia}, merged=${payload.metadata.sourceCounts.merged}`
-  );
+  console.log(`Merged sources. ${Object.entries(sourceCounts).map(([key, value]) => `${key}=${value}`).join(", ")}`);
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

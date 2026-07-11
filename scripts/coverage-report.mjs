@@ -5,6 +5,7 @@ import { pathToFileURL } from "node:url";
 const root = process.cwd();
 const festivalsPath = path.join(root, "data", "normalized", "festivals.json");
 const nominationsPath = path.join(root, "data", "normalized", "nominations.json");
+const filmsPath = path.join(root, "data", "normalized", "films.json");
 const outputPath = path.join(root, "data", "normalized", "coverage-report.json");
 
 export function range(start, end) {
@@ -56,9 +57,54 @@ export function computeCoverageForFestival(festival, grouped, currentYear) {
   };
 }
 
+// Catalogue-completeness stats, distinct from year-coverage: for a festival
+// that DOES have data, how much of it is actually filled in (poster,
+// runtime, a resolvable country) versus present-but-empty. Joins each
+// nomination to its film via filmId, mirroring lib/festival-filters.ts's
+// buildFestivalFilterRows join.
+export function computeCatalogueStatsForFestival(festivalId, nominations, filmsById) {
+  const festivalNominations = nominations.filter((entry) => entry.festivalId === festivalId);
+  const totalRecords = festivalNominations.length;
+  const winners = festivalNominations.filter((entry) => entry.result === "winner").length;
+
+  let missingPoster = 0;
+  let missingRuntime = 0;
+  let missingCountry = 0;
+
+  for (const nomination of festivalNominations) {
+    const film = filmsById.get(nomination.filmId);
+    if (!film?.posterUrl) {
+      missingPoster += 1;
+    }
+    if (!film?.runtimeMinutes) {
+      missingRuntime += 1;
+    }
+    if (!nomination.country || nomination.country === "XX") {
+      missingCountry += 1;
+    }
+  }
+
+  const coveragePct = (missing) => (totalRecords ? Math.round(((totalRecords - missing) / totalRecords) * 1000) / 10 : 0);
+
+  return {
+    festivalId,
+    totalRecords,
+    winners,
+    nominees: totalRecords - winners,
+    missingPoster,
+    missingRuntime,
+    missingCountry,
+    posterCoveragePct: coveragePct(missingPoster),
+    runtimeCoveragePct: coveragePct(missingRuntime),
+    countryCoveragePct: coveragePct(missingCountry)
+  };
+}
+
 async function run() {
   const festivals = JSON.parse(await readFile(festivalsPath, "utf8"));
   const nominations = JSON.parse(await readFile(nominationsPath, "utf8"));
+  const films = JSON.parse(await readFile(filmsPath, "utf8"));
+  const filmsById = new Map(films.map((film) => [film.id, film]));
 
   const currentYear = new Date().getUTCFullYear();
   const grouped = new Map();
@@ -82,7 +128,10 @@ async function run() {
     }
   }
 
-  const festivalsReport = festivals.map((festival) => computeCoverageForFestival(festival, grouped, currentYear));
+  const festivalsReport = festivals.map((festival) => ({
+    ...computeCoverageForFestival(festival, grouped, currentYear),
+    catalogue: computeCatalogueStatsForFestival(festival.id, nominations, filmsById)
+  }));
 
   const summary = {
     generatedAt: new Date().toISOString(),

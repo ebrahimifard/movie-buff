@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Poster } from "./poster";
 import { getFilmByImdbId } from "@/lib/data";
 import type { Nomination } from "@/lib/data";
 
@@ -20,7 +21,8 @@ export function FilmCard({
 
   return (
     <article className="texture rounded-xl border border-bone/15 bg-charcoal/70 p-4 transition hover:-translate-y-1 hover:border-gold/60">
-      <p className="meta text-xs text-bone/60">{festivalName}</p>
+      <Poster posterUrl={film?.posterUrl} alt={title} variant="card" />
+      <p className="meta mt-3 text-xs text-bone/60">{festivalName}</p>
       <h3 className="cinematic-title mt-2 text-3xl text-bone">{title}</h3>
       <p className="mt-2 text-bone/80">
         {director} · {year}

@@ -14,12 +14,15 @@
     "data:merge": "node scripts/merge-sources.mjs",
     "data:enrich:tmdb": "node scripts/enrich-tmdb.mjs",
     "data:build": "node scripts/build-comprehensive-data.mjs",
+    "data:posters": "node scripts/download-posters.mjs",
     "data:validate": "node scripts/validate-data.mjs",
     "data:coverage": "node scripts/coverage-report.mjs",
     "data:update": "node scripts/update-data.mjs",
     "data:fetch:cannes-wikipedia": "node scripts/fetch-cannes-wikipedia.mjs",
     "data:fetch:golden-globes-wikipedia": "node scripts/fetch-golden-globes-wikipedia.mjs",
-    "data:fetch:bafta-wikipedia": "node scripts/fetch-bafta-wikipedia.mjs"
+    "data:fetch:bafta-wikipedia": "node scripts/fetch-bafta-wikipedia.mjs",
+    "data:fetch:berlinale-wikipedia": "node scripts/fetch-berlinale-wikipedia.mjs",
+    "data:fetch:venice-wikipedia": "node scripts/fetch-venice-wikipedia.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.2.12",

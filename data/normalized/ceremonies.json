@@ -8,6 +8,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-2026",
+    "festivalId": "berlinale",
+    "year": 2026,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-2026",
     "festivalId": "cannes",
     "year": 2026,
@@ -34,6 +42,14 @@
   {
     "id": "oscars-2026",
     "festivalId": "oscars",
+    "year": 2026,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "venice-2026",
+    "festivalId": "venice",
     "year": 2026,
     "edition": null,
     "startDate": null,
@@ -592,6 +608,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-2017",
+    "festivalId": "berlinale",
+    "year": 2017,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-2017",
     "festivalId": "cannes",
     "year": 2017,
@@ -720,6 +744,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-2015",
+    "festivalId": "berlinale",
+    "year": 2015,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-2015",
     "festivalId": "cannes",
     "year": 2015,
@@ -778,6 +810,14 @@
   {
     "id": "bafta-2014",
     "festivalId": "bafta",
+    "year": 2014,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "berlinale-2014",
+    "festivalId": "berlinale",
     "year": 2014,
     "edition": null,
     "startDate": null,
@@ -920,6 +960,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-2012",
+    "festivalId": "berlinale",
+    "year": 2012,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-2012",
     "festivalId": "cannes",
     "year": 2012,
@@ -1056,6 +1104,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-2010",
+    "festivalId": "berlinale",
+    "year": 2010,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-2010",
     "festivalId": "cannes",
     "year": 2010,
@@ -1114,6 +1170,14 @@
   {
     "id": "bafta-2009",
     "festivalId": "bafta",
+    "year": 2009,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "berlinale-2009",
+    "festivalId": "berlinale",
     "year": 2009,
     "edition": null,
     "startDate": null,
@@ -1184,6 +1248,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-2008",
+    "festivalId": "berlinale",
+    "year": 2008,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-2008",
     "festivalId": "cannes",
     "year": 2008,
@@ -1242,6 +1314,14 @@
   {
     "id": "bafta-2007",
     "festivalId": "bafta",
+    "year": 2007,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "berlinale-2007",
+    "festivalId": "berlinale",
     "year": 2007,
     "edition": null,
     "startDate": null,
@@ -1448,6 +1528,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-2004",
+    "festivalId": "berlinale",
+    "year": 2004,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-2004",
     "festivalId": "cannes",
     "year": 2004,
@@ -1506,6 +1594,14 @@
   {
     "id": "bafta-2003",
     "festivalId": "bafta",
+    "year": 2003,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "berlinale-2003",
+    "festivalId": "berlinale",
     "year": 2003,
     "edition": null,
     "startDate": null,
@@ -1720,6 +1816,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-2000",
+    "festivalId": "berlinale",
+    "year": 2000,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-2000",
     "festivalId": "cannes",
     "year": 2000,
@@ -1784,6 +1888,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-1999",
+    "festivalId": "berlinale",
+    "year": 1999,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-1999",
     "festivalId": "cannes",
     "year": 1999,
@@ -1835,6 +1947,14 @@
     "id": "venice-1999",
     "festivalId": "venice",
     "year": 1999,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "berlinale-1998",
+    "festivalId": "berlinale",
+    "year": 1998,
     "edition": null,
     "startDate": null,
     "endDate": null
@@ -1898,6 +2018,14 @@
   {
     "id": "bafta-1997",
     "festivalId": "bafta",
+    "year": 1997,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "berlinale-1997",
+    "festivalId": "berlinale",
     "year": 1997,
     "edition": null,
     "startDate": null,
@@ -2256,6 +2384,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-1992",
+    "festivalId": "berlinale",
+    "year": 1992,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-1992",
     "festivalId": "cannes",
     "year": 1992,
@@ -2520,6 +2656,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-1988",
+    "festivalId": "berlinale",
+    "year": 1988,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-1988",
     "festivalId": "cannes",
     "year": 1988,
@@ -2640,6 +2784,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-1986",
+    "festivalId": "berlinale",
+    "year": 1986,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-1986",
     "festivalId": "cannes",
     "year": 1986,
@@ -2698,6 +2850,14 @@
   {
     "id": "bafta-1985",
     "festivalId": "bafta",
+    "year": 1985,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "berlinale-1985",
+    "festivalId": "berlinale",
     "year": 1985,
     "edition": null,
     "startDate": null,
@@ -2768,6 +2928,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-1984",
+    "festivalId": "berlinale",
+    "year": 1984,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-1984",
     "festivalId": "cannes",
     "year": 1984,
@@ -2824,6 +2992,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-1983",
+    "festivalId": "berlinale",
+    "year": 1983,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-1983",
     "festivalId": "cannes",
     "year": 1983,
@@ -2872,6 +3048,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-1982",
+    "festivalId": "berlinale",
+    "year": 1982,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-1982",
     "festivalId": "cannes",
     "year": 1982,
@@ -2907,6 +3091,14 @@
     "id": "venice-1982",
     "festivalId": "venice",
     "year": 1982,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "berlinale-1981",
+    "festivalId": "berlinale",
+    "year": 1981,
     "edition": null,
     "startDate": null,
     "endDate": null
@@ -2968,6 +3160,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-1980",
+    "festivalId": "berlinale",
+    "year": 1980,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-1980",
     "festivalId": "cannes",
     "year": 1980,
@@ -3018,6 +3218,14 @@
   {
     "id": "bafta-1979",
     "festivalId": "bafta",
+    "year": 1979,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "berlinale-1979",
+    "festivalId": "berlinale",
     "year": 1979,
     "edition": null,
     "startDate": null,
@@ -3144,6 +3352,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-1977",
+    "festivalId": "berlinale",
+    "year": 1977,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-1977",
     "festivalId": "cannes",
     "year": 1977,
@@ -3184,6 +3400,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-1976",
+    "festivalId": "berlinale",
+    "year": 1976,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-1976",
     "festivalId": "cannes",
     "year": 1976,
@@ -3218,6 +3442,14 @@
   {
     "id": "bafta-1975",
     "festivalId": "bafta",
+    "year": 1975,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "berlinale-1975",
+    "festivalId": "berlinale",
     "year": 1975,
     "edition": null,
     "startDate": null,
@@ -3298,6 +3530,14 @@
   {
     "id": "bafta-1973",
     "festivalId": "bafta",
+    "year": 1973,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "berlinale-1973",
+    "festivalId": "berlinale",
     "year": 1973,
     "edition": null,
     "startDate": null,
@@ -3392,6 +3632,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-1971",
+    "festivalId": "berlinale",
+    "year": 1971,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-1971",
     "festivalId": "cannes",
     "year": 1971,
@@ -3426,6 +3674,14 @@
   {
     "id": "bafta-1970",
     "festivalId": "bafta",
+    "year": 1970,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "berlinale-1970",
+    "festivalId": "berlinale",
     "year": 1970,
     "edition": null,
     "startDate": null,
@@ -3472,6 +3728,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-1969",
+    "festivalId": "berlinale",
+    "year": 1969,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-1969",
     "festivalId": "cannes",
     "year": 1969,
@@ -3499,6 +3763,14 @@
     "id": "oscars-1969",
     "festivalId": "oscars",
     "year": 1969,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "berlinale-1968",
+    "festivalId": "berlinale",
+    "year": 1968,
     "edition": null,
     "startDate": null,
     "endDate": null
@@ -3538,6 +3810,14 @@
   {
     "id": "bafta-1967",
     "festivalId": "bafta",
+    "year": 1967,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "berlinale-1967",
+    "festivalId": "berlinale",
     "year": 1967,
     "edition": null,
     "startDate": null,
@@ -3584,6 +3864,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-1966",
+    "festivalId": "berlinale",
+    "year": 1966,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-1966",
     "festivalId": "cannes",
     "year": 1966,
@@ -3618,6 +3906,14 @@
   {
     "id": "bafta-1965",
     "festivalId": "bafta",
+    "year": 1965,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "berlinale-1965",
+    "festivalId": "berlinale",
     "year": 1965,
     "edition": null,
     "startDate": null,
@@ -3659,6 +3955,14 @@
     "id": "venice-1965",
     "festivalId": "venice",
     "year": 1965,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "berlinale-1964",
+    "festivalId": "berlinale",
+    "year": 1964,
     "edition": null,
     "startDate": null,
     "endDate": null
@@ -3706,6 +4010,14 @@
   {
     "id": "bafta-1963",
     "festivalId": "bafta",
+    "year": 1963,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "berlinale-1963",
+    "festivalId": "berlinale",
     "year": 1963,
     "edition": null,
     "startDate": null,
@@ -3760,6 +4072,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-1962",
+    "festivalId": "berlinale",
+    "year": 1962,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-1962",
     "festivalId": "cannes",
     "year": 1962,
@@ -3808,6 +4128,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-1961",
+    "festivalId": "berlinale",
+    "year": 1961,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-1961",
     "festivalId": "cannes",
     "year": 1961,
@@ -3850,6 +4178,14 @@
   {
     "id": "bafta-1960",
     "festivalId": "bafta",
+    "year": 1960,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "berlinale-1960",
+    "festivalId": "berlinale",
     "year": 1960,
     "edition": null,
     "startDate": null,
@@ -3952,6 +4288,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-1958",
+    "festivalId": "berlinale",
+    "year": 1958,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-1958",
     "festivalId": "cannes",
     "year": 1958,
@@ -4042,6 +4386,14 @@
   {
     "id": "bafta-1956",
     "festivalId": "bafta",
+    "year": 1956,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "berlinale-1956",
+    "festivalId": "berlinale",
     "year": 1956,
     "edition": null,
     "startDate": null,
@@ -4296,6 +4648,14 @@
     "endDate": null
   },
   {
+    "id": "berlinale-1951",
+    "festivalId": "berlinale",
+    "year": 1951,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-1951",
     "festivalId": "cannes",
     "year": 1951,
@@ -4424,6 +4784,14 @@
     "endDate": null
   },
   {
+    "id": "venice-1948",
+    "festivalId": "venice",
+    "year": 1948,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "cannes-1947",
     "festivalId": "cannes",
     "year": 1947,
@@ -4442,6 +4810,14 @@
   {
     "id": "oscars-1947",
     "festivalId": "oscars",
+    "year": 1947,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "venice-1947",
+    "festivalId": "venice",
     "year": 1947,
     "edition": null,
     "startDate": null,
@@ -4552,8 +4928,24 @@
     "endDate": null
   },
   {
+    "id": "venice-1937",
+    "festivalId": "venice",
+    "year": 1937,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "oscars-1936",
     "festivalId": "oscars",
+    "year": 1936,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "venice-1936",
+    "festivalId": "venice",
     "year": 1936,
     "edition": null,
     "startDate": null,
@@ -4568,6 +4960,14 @@
     "endDate": null
   },
   {
+    "id": "venice-1935",
+    "festivalId": "venice",
+    "year": 1935,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "oscars-1934",
     "festivalId": "oscars",
     "year": 1934,
@@ -4576,8 +4976,24 @@
     "endDate": null
   },
   {
+    "id": "venice-1934",
+    "festivalId": "venice",
+    "year": 1934,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "oscars-1932",
     "festivalId": "oscars",
+    "year": 1932,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "venice-1932",
+    "festivalId": "venice",
     "year": 1932,
     "edition": null,
     "startDate": null,

@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  WIKIPEDIA_SOURCES,
   buildRecordKey,
   buildSlugKey,
   chooseResult,
@@ -114,6 +115,50 @@ describe("normalizeWikipediaPayload", () => {
 
   it("defaults to an empty array when records is missing", () => {
     expect(normalizeWikipediaPayload({ generatedAt: "2020-01-01" })).toEqual([]);
+  });
+});
+
+describe("WIKIPEDIA_SOURCES", () => {
+  it("lists a unique sourceId for every optional source, existing three first", () => {
+    const sourceIds = WIKIPEDIA_SOURCES.map((source) => source.sourceId);
+    expect(sourceIds.slice(0, 3)).toEqual(["cannesWikipedia", "goldenGlobesWikipedia", "baftaWikipedia"]);
+    expect(new Set(sourceIds).size).toBe(sourceIds.length);
+  });
+
+  it("includes Berlinale and Venice as additional sources", () => {
+    const sourceIds = WIKIPEDIA_SOURCES.map((source) => source.sourceId);
+    expect(sourceIds).toContain("berlinaleWikipedia");
+    expect(sourceIds).toContain("veniceWikipedia");
+  });
+});
+
+describe("mergeCandidatesInto over a loop of multiple sources (the generalized merge sequence)", () => {
+  it("merges every source in a fake WIKIPEDIA_SOURCES-shaped list into the same output", () => {
+    const outputRecords = [];
+    const primaryIndex = new Map();
+    const titleIndex = new Map();
+
+    const fakeSources = [
+      {
+        sourceId: "sourceA",
+        records: [
+          { year: 2020, festivalId: "cannes", category: "Palme d'Or", result: "nominee", film: { title: "Film A", releaseYear: 2020, imdbId: null }, directors: [] }
+        ]
+      },
+      {
+        sourceId: "sourceB",
+        records: [
+          { year: 2021, festivalId: "cannes", category: "Palme d'Or", result: "winner", film: { title: "Film B", releaseYear: 2021, imdbId: null }, directors: [] }
+        ]
+      }
+    ];
+
+    for (const { records } of fakeSources) {
+      mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, records);
+    }
+
+    expect(outputRecords).toHaveLength(2);
+    expect(outputRecords.map((record) => record.film.title).sort()).toEqual(["Film A", "Film B"]);
   });
 });
 

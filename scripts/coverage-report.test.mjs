@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { computeCoverageForFestival, range } from "./coverage-report.mjs";
+import { computeCatalogueStatsForFestival, computeCoverageForFestival, range } from "./coverage-report.mjs";
 
 describe("range", () => {
   it("is inclusive of both bounds", () => {
@@ -40,5 +40,44 @@ describe("computeCoverageForFestival", () => {
     expect(year2019.isInactive).toBe(true);
     expect(report.weakYears).not.toContain(2019);
     expect(report.missingYears).not.toContain(2019);
+  });
+});
+
+describe("computeCatalogueStatsForFestival", () => {
+  const nominations = [
+    { id: "n1", festivalId: "venice", result: "winner", country: "IT", filmId: "tt1" },
+    { id: "n2", festivalId: "venice", result: "nominee", country: "XX", filmId: "tt2" },
+    { id: "n3", festivalId: "venice", result: "nominee", country: "US", filmId: "missing" },
+    { id: "n4", festivalId: "cannes", result: "winner", country: "FR", filmId: "tt3" }
+  ];
+
+  const filmsById = new Map([
+    ["tt1", { id: "tt1", posterUrl: "/posters/tt1.jpg", runtimeMinutes: 120 }],
+    ["tt2", { id: "tt2", posterUrl: "", runtimeMinutes: 0 }]
+  ]);
+
+  it("scopes stats to the given festival only", () => {
+    const stats = computeCatalogueStatsForFestival("venice", nominations, filmsById);
+    expect(stats.totalRecords).toBe(3);
+    expect(stats.winners).toBe(1);
+    expect(stats.nominees).toBe(2);
+  });
+
+  it("counts missing poster/runtime/country, including when the film doesn't resolve", () => {
+    const stats = computeCatalogueStatsForFestival("venice", nominations, filmsById);
+    expect(stats.missingPoster).toBe(2); // tt2 (empty) + missing film
+    expect(stats.missingRuntime).toBe(2); // tt2 (0) + missing film
+    expect(stats.missingCountry).toBe(1); // the "XX" fallback code
+  });
+
+  it("computes coverage percentages", () => {
+    const stats = computeCatalogueStatsForFestival("venice", nominations, filmsById);
+    expect(stats.posterCoveragePct).toBeCloseTo(33.3, 1);
+  });
+
+  it("returns zeroed stats for a festival with no records", () => {
+    const stats = computeCatalogueStatsForFestival("locarno", nominations, filmsById);
+    expect(stats.totalRecords).toBe(0);
+    expect(stats.posterCoveragePct).toBe(0);
   });
 });

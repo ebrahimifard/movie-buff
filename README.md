@@ -58,7 +58,7 @@ Each film record additionally contains:
 - genres
 - languages
 - synopsis
-- poster URL
+- poster URL — a local `/posters/{id}.{ext}` path served from `public/posters/`, never a remote URL (see "Systematic API Pipeline" below)
 
 ## Local Development
 
@@ -79,8 +79,8 @@ npm run dev
 Workflow: `.github/workflows/update-data.yml`
 
 - Runs monthly on schedule
-- Executes `npm run data:collect`, `npm run data:build`, and `npm run data:update`
-- Opens PR with dataset refresh
+- Executes `npm run data:collect`, `npm run data:build`, `npm run data:posters`, `npm run data:validate`, `npm run data:coverage`, and `npm run data:update`
+- Opens PR with dataset refresh (including any newly downloaded poster images under `public/posters/`)
 
 You can trigger it manually via **Run workflow** in GitHub Actions.
 
@@ -100,9 +100,13 @@ The project now includes a multi-stage data pipeline to collect and expand recor
 	- Requires `TMDB_API_KEY`.
 4. `npm run data:build`
 	- Compiles normalized datasets (`films`, `people`, `ceremonies`, `nominations`, etc.).
-5. `npm run data:coverage`
+5. `npm run data:posters`
+	- Downloads each film's poster image into `public/posters/` and rewrites `Film.posterUrl` to the local path.
+	- Safe to re-run: skips any poster already present on disk, and never removes a downloaded file.
+	- The site itself never fetches posters remotely — this is the only step that touches an external image host.
+6. `npm run data:coverage`
 	- Computes per-festival yearly coverage, including missing and weak years.
-6. `npm run data:update`
+7. `npm run data:update`
 	- Sorts and normalizes JSON formatting for clean diffs.
 
 Run the full pipeline locally:
@@ -110,17 +114,19 @@ Run the full pipeline locally:
 ```bash
 npm run data:collect
 npm run data:build
+npm run data:posters
+npm run data:validate
 npm run data:coverage
 npm run data:update
 ```
 
 ## Occasional: Wikipedia Data-Completeness Pass
 
-Beyond the routine monthly pipeline, three additional sources — Cannes, Golden Globes, and BAFTA Wikipedia scrapers — can fill in festival-years the Wikidata/TMDB pipeline is missing or weak on. These are **not** part of `npm run data:collect` and do **not** run automatically: historical years rarely change once filled, so re-scraping Wikipedia every month would add load for little benefit. Run this manually, occasionally:
+Beyond the routine monthly pipeline, five additional sources — Cannes, Golden Globes, BAFTA, Berlinale, and Venice Wikipedia scrapers — can fill in festival-years the Wikidata/TMDB pipeline is missing or weak on. These are **not** part of `npm run data:collect` and do **not** run automatically: historical years rarely change once filled, so re-scraping Wikipedia every month would add load for little benefit. Run this manually, occasionally:
 
 ```bash
 # 1. Ensure normalized data + coverage report are current
-#    (BAFTA's scraper reads coverage-report.json to pick which years to target)
+#    (BAFTA/Berlinale/Venice scrapers read coverage-report.json to pick which years to target)
 npm run data:build
 npm run data:coverage
 
@@ -128,20 +134,28 @@ npm run data:coverage
 npm run data:fetch:cannes-wikipedia
 npm run data:fetch:golden-globes-wikipedia
 npm run data:fetch:bafta-wikipedia
+npm run data:fetch:berlinale-wikipedia
+npm run data:fetch:venice-wikipedia
 
-# 3. Re-merge, rebuild, validate, and refresh coverage to incorporate the new data
+# 3. Re-merge (⚠️ always re-run TMDB enrichment right after any data:merge —
+#    merge-sources.mjs rebuilds master-data.generated.json from raw sources
+#    each time, which discards previously-applied poster/runtime/genre/
+#    synopsis enrichment until enrich:tmdb re-applies it), then rebuild,
+#    download any new posters, validate, and refresh coverage
 npm run data:merge
+npm run data:enrich:tmdb
 npm run data:build
+npm run data:posters
 npm run data:validate
 npm run data:coverage
 npm run data:update
 ```
 
-Why two passes: BAFTA's scraper only targets years flagged `missingYears`/`weakYears` in `coverage-report.json`, so that report must be current *before* running it (step 1); afterward, coverage is regenerated again (step 3) to reflect the newly-added data. Step 3 uses `data:merge`, not `data:collect` — there's no need to re-hit the live Wikidata endpoint just to pick up the Wikipedia JSON already sitting on disk. `merge-sources.mjs` reads these three source files only if present (each is optional), matching them against existing seed/Wikidata records by IMDb ID when available and falling back to a title match otherwise — see `ARCHITECTURE.md` for the merge precedence.
+Why two passes: BAFTA/Berlinale/Venice's scrapers only target years flagged `missingYears`/`weakYears` in `coverage-report.json`, so that report must be current *before* running them (step 1); afterward, coverage is regenerated again (step 3) to reflect the newly-added data. Step 3 uses `data:merge`, not `data:collect` — there's no need to re-hit the live Wikidata endpoint just to pick up the Wikipedia JSON already sitting on disk (TMDB enrichment is still re-run directly, since it's cheap to skip already-enriched records and `data:merge` always resets the enrichment state). `merge-sources.mjs` reads these five source files only if present (each is optional, driven by the `WIKIPEDIA_SOURCES` list — adding a sixth festival is a one-line addition there), matching them against existing seed/Wikidata records by IMDb ID when available and falling back to a title match otherwise — see `ARCHITECTURE.md` for the merge precedence.
+
+Cannes, BAFTA, and Golden Globes share a parser (`scripts/lib/wikipedia-scrape.mjs`) that handles both the modern Wikipedia "category grid" template and a flat "Category: Title by Director" award-list format (Berlinale and Venice's "Official Awards" sections use the latter). Golden Globes and BAFTA's Wikipedia pages don't have Cannes' proliferation of named sub-sections, so they use the shared parser directly; Cannes keeps its own bespoke parser for that reason.
 
 ## Next Data Upgrades
 
-- Add TMDB enrichment for posters/backdrops.
-- Add Wikidata SPARQL import for historical completeness.
 - Add confidence scoring and curator approval queue.
 - Add relationship graph generation.
