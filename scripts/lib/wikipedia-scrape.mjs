@@ -16,6 +16,29 @@ export function cleanText(text) {
     .trim();
 }
 
+// Classifies which Person.roles value a category's credited individual
+// should be recorded under, so a category like "Best Actor" attaches its
+// nominee's name as cast metadata on the FILM's nomination record rather
+// than as the nomination's title (see extractTitleAndPerson). Order matters:
+// checked most-specific-first since some real category names combine terms
+// (e.g. Venice's "Best Directing and Screenwriting").
+export function classifyPersonRole(category) {
+  const text = String(category ?? "").toLowerCase();
+  if (/direct/.test(text)) {
+    return "director";
+  }
+  if (/actor|actress|acting|performance|cast|ensemble/.test(text)) {
+    return "cast";
+  }
+  if (/screenplay|screenwriting|writing|writer|script/.test(text)) {
+    return "writer";
+  }
+  if (/produc/.test(text)) {
+    return "producer";
+  }
+  return null;
+}
+
 export function detectColumnIndex(headers, pattern) {
   return headers.findIndex((header) => pattern.test(header));
 }
@@ -53,25 +76,69 @@ function findPrecedingHeadingText(element) {
 function extractRowTitle(cells, headers) {
   const titleIndex = headers.length === cells.length ? detectColumnIndex(headers, /title|film/) : -1;
   const titleCell = titleIndex >= 0 ? cells[titleIndex] : cells[0];
-  const link = titleCell.querySelector("a");
-  const title = link ? cleanText(link.textContent) : cleanText(titleCell.textContent);
-  return { title, titleCell };
+  const { title, personName } = extractTitleAndPerson(titleCell, null);
+  return { title: title ?? cleanText(titleCell.textContent), personName, titleCell };
 }
 
 function directChild(element, tagName) {
   return Array.from(element.children).find((child) => child.tagName === tagName);
 }
 
+// Wikipedia's style convention (MOS:TITLE) italicizes creative-work titles
+// (films) but never a person's name — true regardless of display order
+// ("Person – Film" on modern Golden Globes/BAFTA pages, "Film – Person" on
+// older BAFTA pages) — making this a far more reliable signal for which
+// linked entity is the film than a fixed first-link/last-link position
+// guess. Without this, an individual-award category (Best Actor, Best
+// Director, ...) whose nominee text links the person before the film would
+// have the PERSON's name extracted as the film title. Restricted to the
+// element's own content (excluding a nested <ul> of further nominees) via
+// nestedUl, matching the existing nested-list exclusion pattern used
+// elsewhere in this file (isLiWinner, extractCategoryLabel). Exported so
+// fetch-cannes-wikipedia.mjs's bespoke parser can reuse the same signal
+// rather than duplicating it.
+export function extractTitleAndPerson(container, nestedUl) {
+  const ownItalics = Array.from(container.querySelectorAll("i")).filter((i) => !nestedUl || !nestedUl.contains(i));
+  const italicLinks = new Set();
+  let title = null;
+  for (const italic of ownItalics) {
+    const link = italic.querySelector("a");
+    if (link) {
+      italicLinks.add(link);
+    }
+    if (!title) {
+      const text = link ? cleanText(link.textContent) : cleanText(italic.textContent);
+      if (text) {
+        title = text;
+      }
+    }
+  }
+
+  const ownLinks = Array.from(container.querySelectorAll("a")).filter((a) => !nestedUl || !nestedUl.contains(a));
+  const personLink = ownLinks.find((a) => !italicLinks.has(a));
+  const personName = personLink ? cleanText(personLink.textContent) : null;
+
+  if (title) {
+    return { title, personName };
+  }
+
+  const ownLink = ownLinks[0];
+  if (ownLink) {
+    return { title: cleanText(ownLink.textContent), personName: null };
+  }
+
+  return { title: null, personName: null };
+}
+
 // A modern Wikipedia "{{Award category}}" cell nests its nominee list inside
 // itself: the winner is the (possibly sole) top-level <li>, wrapped in <b>,
 // and any further nominees live in a <ul> nested one level inside that same
 // <li>. Recurse so nominees at any nesting depth are still captured.
-function extractLiTitle(li) {
+function extractLiTitleAndPerson(li) {
   const nestedUl = directChild(li, "UL");
-  const links = Array.from(li.querySelectorAll("a"));
-  const ownLink = links.find((a) => !nestedUl || !nestedUl.contains(a));
-  if (ownLink) {
-    return cleanText(ownLink.textContent);
+  const { title, personName } = extractTitleAndPerson(li, nestedUl);
+  if (title) {
+    return { title, personName };
   }
 
   let text = "";
@@ -81,7 +148,7 @@ function extractLiTitle(li) {
     }
     text += node.textContent ?? "";
   }
-  return cleanText(text);
+  return { title: cleanText(text), personName: null };
 }
 
 function isLiWinner(li) {
@@ -102,9 +169,9 @@ function extractCategoryLabel(cell) {
 function collectListRecords(list, results) {
   const items = Array.from(list.children).filter((child) => child.tagName === "LI");
   items.forEach((li) => {
-    const title = extractLiTitle(li);
+    const { title, personName } = extractLiTitleAndPerson(li);
     if (title) {
-      results.push({ title, result: isLiWinner(li) ? "winner" : "nominee" });
+      results.push({ title, result: isLiWinner(li) ? "winner" : "nominee", personName });
     }
     const nested = directChild(li, "UL");
     if (nested) {
@@ -192,19 +259,33 @@ function parseCategoryPrefixedListItem(li, groupPrefix = "") {
   const byMatch = rhs.match(/^(.+?)\s+\bby\b\s+/i);
 
   let title = "";
+  let personName = null;
   if (forMatch) {
+    // "Huo Meng for Living the Land" — person precedes "for", film follows.
     title = forMatch[1];
+    personName = rhs.slice(0, forMatch.index).trim();
   } else if (byMatch) {
+    // "Dreams (Sex Love) by Dag Johan Haugerud" — film precedes "by", person follows.
     title = byMatch[1];
+    personName = rhs.slice(byMatch[0].length).trim();
   } else {
-    const links = Array.from(li.querySelectorAll("a"))
-      .map((a) => cleanText(a.textContent))
-      .filter(Boolean);
-    title = links.length > 1 ? links[links.length - 1] : rhs;
+    const italicLink = Array.from(li.querySelectorAll("i"))
+      .map((i) => i.querySelector("a"))
+      .find(Boolean);
+    const link = italicLink ?? li.querySelector("a");
+    title = link ? cleanText(link.textContent) : rhs;
+    const otherLink = Array.from(li.querySelectorAll("a")).find((a) => a !== link);
+    personName = otherLink ? cleanText(otherLink.textContent) : null;
   }
 
   const category = groupPrefix ? `${groupPrefix} – ${ownLabel}` : ownLabel;
-  return [{ category: cleanText(category), title: cleanText(title) }];
+  return [
+    {
+      category: cleanText(category),
+      title: cleanText(title),
+      personName: personName ? cleanText(personName) : null
+    }
+  ];
 }
 
 // Modern MediaWiki wraps section headings in an editable-section <div>
@@ -231,7 +312,7 @@ export function parseSimpleAwardsWikipedia(html, year, { festivalId, festivalNam
   const records = [];
   const isFirstSeen = createDeduper();
 
-  function addRecord(rawCategory, result, rawTitle) {
+  function addRecord(rawCategory, result, rawTitle, personName) {
     const title = cleanText(rawTitle);
     if (!title || JUNK_TITLE_PATTERN.test(title)) {
       return;
@@ -242,6 +323,10 @@ export function parseSimpleAwardsWikipedia(html, year, { festivalId, festivalNam
     if (!isFirstSeen(key)) {
       return;
     }
+
+    const role = personName ? classifyPersonRole(category) : null;
+    const directors = role === "director" && personName ? [personName] : [];
+    const credits = role && role !== "director" && personName ? [{ name: personName, role }] : [];
 
     records.push({
       year,
@@ -260,7 +345,8 @@ export function parseSimpleAwardsWikipedia(html, year, { festivalId, festivalNam
         posterUrl: "",
         runtimeMinutes: 0
       },
-      directors: []
+      directors,
+      credits
     });
   }
 
@@ -300,17 +386,17 @@ export function parseSimpleAwardsWikipedia(html, year, { festivalId, festivalNam
       if (gridCells.length > 0) {
         gridCells.forEach((cell) => {
           const extracted = extractCategoryCellRecords(cell, currentCategory);
-          extracted?.records.forEach(({ title, result }) => addRecord(extracted.category, result, title));
+          extracted?.records.forEach(({ title, result, personName }) => addRecord(extracted.category, result, title, personName));
         });
         return;
       }
 
-      const { title, titleCell } = extractRowTitle(cells, headers);
+      const { title, personName, titleCell } = extractRowTitle(cells, headers);
       if (!title) {
         return;
       }
       const result = titleCell.querySelector("b") ? "winner" : "nominee";
-      addRecord(currentCategory, result, title);
+      addRecord(currentCategory, result, title, personName);
     });
   });
 
@@ -328,11 +414,14 @@ export function parseSimpleAwardsWikipedia(html, year, { festivalId, festivalNam
     Array.from(list.querySelectorAll(":scope > li")).forEach((li) => {
       const prefixed = parseCategoryPrefixedListItem(li);
       if (prefixed.length > 0) {
-        prefixed.forEach(({ category, title }) => addRecord(category, "winner", title));
+        prefixed.forEach(({ category, title, personName }) => addRecord(category, "winner", title, personName));
         return;
       }
 
-      const link = li.querySelector("a");
+      const italicLink = Array.from(li.querySelectorAll("i"))
+        .map((i) => i.querySelector("a"))
+        .find(Boolean);
+      const link = italicLink ?? li.querySelector("a");
       const fallback = cleanText(li.textContent)
         .replace(/^[-:*\s]+/, "")
         .replace(/\s+directed by\s+.*/i, "")
@@ -341,8 +430,10 @@ export function parseSimpleAwardsWikipedia(html, year, { festivalId, festivalNam
       if (!title) {
         return;
       }
+      const otherLink = Array.from(li.querySelectorAll("a")).find((a) => a !== link);
+      const personName = otherLink ? cleanText(otherLink.textContent) : null;
       const isWinner = Boolean(li.querySelector("b")) || /^\*/.test(li.textContent.trim());
-      addRecord(headingCategory, isWinner ? "winner" : "nominee", title);
+      addRecord(headingCategory, isWinner ? "winner" : "nominee", title, personName);
     });
   });
 

@@ -4,6 +4,7 @@ import {
   buildRecordKey,
   buildSlugKey,
   chooseResult,
+  dedupeCredits,
   mergeCandidatesInto,
   mergeFilm,
   normalizeRecord,
@@ -82,6 +83,51 @@ describe("normalizeRecord", () => {
     expect(normalized.film.runtimeMinutes).toBe(0);
     expect(normalized.film.countryCodes).toEqual([]);
     expect(normalized.film.synopsis).toBe("");
+  });
+
+  it("defaults credits to an empty array when absent, and dedupes when present", () => {
+    const noCredits = normalizeRecord({
+      year: 2020,
+      festivalId: "cannes",
+      category: "Palme d'Or",
+      result: "winner",
+      film: { title: "T", releaseYear: 2020, imdbId: null },
+      directors: []
+    });
+    expect(noCredits.credits).toEqual([]);
+
+    const withCredits = normalizeRecord({
+      year: 2020,
+      festivalId: "cannes",
+      category: "Best Actor",
+      result: "winner",
+      film: { title: "T", releaseYear: 2020, imdbId: null },
+      directors: [],
+      credits: [{ name: "Anthony Hopkins", role: "cast" }, { name: "Anthony Hopkins", role: "cast" }]
+    });
+    expect(withCredits.credits).toEqual([{ name: "Anthony Hopkins", role: "cast" }]);
+  });
+});
+
+describe("dedupeCredits", () => {
+  it("dedupes by name+role composite key", () => {
+    const credits = [
+      { name: "Anthony Hopkins", role: "cast" },
+      { name: "Anthony Hopkins", role: "cast" },
+      { name: "Anthony Hopkins", role: "director" }
+    ];
+    expect(dedupeCredits(credits)).toEqual([
+      { name: "Anthony Hopkins", role: "cast" },
+      { name: "Anthony Hopkins", role: "director" }
+    ]);
+  });
+
+  it("drops entries missing a name or role", () => {
+    expect(dedupeCredits([{ name: "", role: "cast" }, { name: "X", role: "" }, null])).toEqual([]);
+  });
+
+  it("returns an empty array for undefined input", () => {
+    expect(dedupeCredits(undefined)).toEqual([]);
   });
 });
 
@@ -219,6 +265,34 @@ describe("mergeCandidatesInto", () => {
 
     expect(outputRecords).toHaveLength(2);
     expect(outputRecords[1].film.title).toBe("Some Old Film");
+  });
+
+  it("unions credits across merged candidates rather than dropping the existing record's credits", () => {
+    const { outputRecords, primaryIndex, titleIndex } = seedIndex({
+      year: 2020,
+      festivalId: "bafta",
+      category: "Best Actor",
+      result: "nominee",
+      film: { title: "Some Film", releaseYear: 2020, imdbId: "tt1" },
+      directors: [],
+      credits: [{ name: "Anthony Hopkins", role: "cast" }]
+    });
+
+    const candidate = {
+      year: 2020,
+      festivalId: "bafta",
+      category: "Best Actor",
+      result: "winner",
+      film: { title: "Some Film", releaseYear: 2020, imdbId: null },
+      directors: [],
+      credits: [{ name: "Anthony Hopkins", role: "cast" }]
+    };
+
+    mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, [candidate]);
+
+    expect(outputRecords).toHaveLength(1);
+    expect(outputRecords[0].credits).toEqual([{ name: "Anthony Hopkins", role: "cast" }]);
+    expect(outputRecords[0].result).toBe("winner");
   });
 
   it("never fuzzy-matches an imdbId-bearing candidate by title alone", () => {

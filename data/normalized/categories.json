@@ -112,6 +112,20 @@
     "scope": "film"
   },
   {
+    "id": "bafta:bafta-special-award",
+    "festivalId": "bafta",
+    "name": "BAFTA Special Award",
+    "normalizedName": "bafta-special-award",
+    "scope": "film"
+  },
+  {
+    "id": "bafta:bafta-special-award-for-craft",
+    "festivalId": "bafta",
+    "name": "BAFTA Special Award for Craft",
+    "normalizedName": "bafta-special-award-for-craft",
+    "scope": "film"
+  },
+  {
     "id": "bafta:best-actor-in-a-leading-role",
     "festivalId": "bafta",
     "name": "Best Actor in a Leading Role",
@@ -284,13 +298,6 @@
     "festivalId": "bafta",
     "name": "Best Documentary",
     "normalizedName": "best-documentary",
-    "scope": "film"
-  },
-  {
-    "id": "bafta:best-documentary-picture",
-    "festivalId": "bafta",
-    "name": "Best Documentary Picture",
-    "normalizedName": "best-documentary-picture",
     "scope": "film"
   },
   {
@@ -520,7 +527,7 @@
   {
     "id": "berlinale:1st-place",
     "festivalId": "berlinale",
-    "name": "1st Place",
+    "name": "1st place",
     "normalizedName": "1st-place",
     "scope": "film"
   },
@@ -550,6 +557,13 @@
     "festivalId": "berlinale",
     "name": "Advertising Film",
     "normalizedName": "advertising-film",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:ag-kino-gilde-cinema-vision-14plus",
+    "festivalId": "berlinale",
+    "name": "AG KINO GILDE – CINEMA VISION 14plus",
+    "normalizedName": "ag-kino-gilde-cinema-vision-14plus",
     "scope": "film"
   },
   {
@@ -592,6 +606,13 @@
     "festivalId": "berlinale",
     "name": "ARTE International Prize",
     "normalizedName": "arte-international-prize",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:artekino-international-prize",
+    "festivalId": "berlinale",
+    "name": "ARTEKino International Prize",
+    "normalizedName": "artekino-international-prize",
     "scope": "film"
   },
   {
@@ -728,10 +749,31 @@
     "scope": "film"
   },
   {
+    "id": "berlinale:berlinale-series-award",
+    "festivalId": "berlinale",
+    "name": "Berlinale Series Award",
+    "normalizedName": "berlinale-series-award",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:berlinale-series-competition",
+    "festivalId": "berlinale",
+    "name": "Berlinale Series Competition",
+    "normalizedName": "berlinale-series-competition",
+    "scope": "film"
+  },
+  {
     "id": "berlinale:berlinale-short-film-competition",
     "festivalId": "berlinale",
     "name": "Berlinale Short Film Competition",
     "normalizedName": "berlinale-short-film-competition",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:berlinale-short-films-competition",
+    "festivalId": "berlinale",
+    "name": "Berlinale Short Films Competition",
+    "normalizedName": "berlinale-short-films-competition",
     "scope": "film"
   },
   {
@@ -774,6 +816,13 @@
     "festivalId": "berlinale",
     "name": "Berlinale Talents",
     "normalizedName": "berlinale-talents",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:berliner-morgenpost-reader-s-jury-award",
+    "festivalId": "berlinale",
+    "name": "Berliner Morgenpost Reader's Jury Award",
+    "normalizedName": "berliner-morgenpost-reader-s-jury-award",
     "scope": "film"
   },
   {
@@ -1113,6 +1162,13 @@
     "scope": "film"
   },
   {
+    "id": "berlinale:crystal-bear-for-best-short-film-special-mention",
+    "festivalId": "berlinale",
+    "name": "Crystal Bear for Best Short Film – Special Mention",
+    "normalizedName": "crystal-bear-for-best-short-film-special-mention",
+    "scope": "film"
+  },
+  {
     "id": "berlinale:crystal-bear-for-best-short-film-special-mention-short-film",
     "festivalId": "berlinale",
     "name": "Crystal Bear for Best Short Film – Special Mention Short Film",
@@ -1267,6 +1323,20 @@
     "scope": "film"
   },
   {
+    "id": "berlinale:documentary-award-jury",
+    "festivalId": "berlinale",
+    "name": "Documentary Award Jury",
+    "normalizedName": "documentary-award-jury",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:documentary-competition",
+    "festivalId": "berlinale",
+    "name": "Documentary Competition",
+    "normalizedName": "documentary-competition",
+    "scope": "film"
+  },
+  {
     "id": "berlinale:documentary-film",
     "festivalId": "berlinale",
     "name": "Documentary Film",
@@ -1393,6 +1463,13 @@
     "scope": "film"
   },
   {
+    "id": "berlinale:first-feature-award-jury",
+    "festivalId": "berlinale",
+    "name": "First Feature Award Jury",
+    "normalizedName": "first-feature-award-jury",
+    "scope": "film"
+  },
+  {
     "id": "berlinale:forum",
     "festivalId": "berlinale",
     "name": "Forum",
@@ -1404,6 +1481,13 @@
     "festivalId": "berlinale",
     "name": "Forum Expanded",
     "normalizedName": "forum-expanded",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:forum-expanded-exhibition",
+    "festivalId": "berlinale",
+    "name": "Forum Expanded Exhibition",
+    "normalizedName": "forum-expanded-exhibition",
     "scope": "film"
   },
   {
@@ -1425,6 +1509,13 @@
     "festivalId": "berlinale",
     "name": "Forum Special",
     "normalizedName": "forum-special",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:forum-special-fiktionsbescheinigung",
+    "festivalId": "berlinale",
+    "name": "Forum Special Fiktionsbescheinigung",
+    "normalizedName": "forum-special-fiktionsbescheinigung",
     "scope": "film"
   },
   {
@@ -1456,6 +1547,27 @@
     "scope": "film"
   },
   {
+    "id": "berlinale:generation-14plus-documentary-competition",
+    "festivalId": "berlinale",
+    "name": "Generation 14plus - Documentary Competition",
+    "normalizedName": "generation-14plus-documentary-competition",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:generation-14plus-feature-or-short-competition",
+    "festivalId": "berlinale",
+    "name": "Generation 14plus - Feature or Short Competition",
+    "normalizedName": "generation-14plus-feature-or-short-competition",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:generation-14plus-international",
+    "festivalId": "berlinale",
+    "name": "Generation 14plus International",
+    "normalizedName": "generation-14plus-international",
+    "scope": "film"
+  },
+  {
     "id": "berlinale:generation-14plus-short-films",
     "festivalId": "berlinale",
     "name": "Generation 14plus – Short Films",
@@ -1481,6 +1593,13 @@
     "festivalId": "berlinale",
     "name": "Generation Kplus",
     "normalizedName": "generation-kplus",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:generation-kplus-international",
+    "festivalId": "berlinale",
+    "name": "Generation Kplus International",
+    "normalizedName": "generation-kplus-international",
     "scope": "film"
   },
   {
@@ -1642,6 +1761,13 @@
     "festivalId": "berlinale",
     "name": "Heiner Carow Prize",
     "normalizedName": "heiner-carow-prize",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:homage-films",
+    "festivalId": "berlinale",
+    "name": "Homage films",
+    "normalizedName": "homage-films",
     "scope": "film"
   },
   {
@@ -1864,7 +1990,7 @@
   {
     "id": "berlinale:out-of-competition",
     "festivalId": "berlinale",
-    "name": "Out of competition",
+    "name": "Out of Competition",
     "normalizedName": "out-of-competition",
     "scope": "film"
   },
@@ -2345,6 +2471,13 @@
     "scope": "film"
   },
   {
+    "id": "berlinale:silver-bear-special-mention",
+    "festivalId": "berlinale",
+    "name": "Silver Bear – Special Mention",
+    "normalizedName": "silver-bear-special-mention",
+    "scope": "film"
+  },
+  {
     "id": "berlinale:silver-medal-best-advertising-film",
     "festivalId": "berlinale",
     "name": "Silver Medal – Best Advertising Film",
@@ -2492,6 +2625,13 @@
     "scope": "film"
   },
   {
+    "id": "berlinale:tagesspiegel-reader-s-jury-award",
+    "festivalId": "berlinale",
+    "name": "Tagesspiegel Reader's Jury Award",
+    "normalizedName": "tagesspiegel-reader-s-jury-award",
+    "scope": "film"
+  },
+  {
     "id": "berlinale:tagesspiegel-readers-jury-award",
     "festivalId": "berlinale",
     "name": "Tagesspiegel Readers' Jury Award",
@@ -2541,6 +2681,13 @@
     "scope": "film"
   },
   {
+    "id": "berlinale:teddy-readers-award-powered-by-queer-de",
+    "festivalId": "berlinale",
+    "name": "TEDDY Readers’ Award Powered by QUEER.DE",
+    "normalizedName": "teddy-readers-award-powered-by-queer-de",
+    "scope": "film"
+  },
+  {
     "id": "berlinale:teddy30",
     "festivalId": "berlinale",
     "name": "Teddy30",
@@ -2573,6 +2720,13 @@
     "festivalId": "berlinale",
     "name": "The Homage films",
     "normalizedName": "the-homage-films",
+    "scope": "film"
+  },
+  {
+    "id": "berlinale:the-perspektive-deutsches-kino-award",
+    "festivalId": "berlinale",
+    "name": "The Perspektive Deutsches Kino Award",
+    "normalizedName": "the-perspektive-deutsches-kino-award",
     "scope": "film"
   },
   {
@@ -4921,13 +5075,6 @@
     "scope": "film"
   },
   {
-    "id": "cannes:special-encouragement-award-for-promising-cinematographer",
-    "festivalId": "cannes",
-    "name": "Special Encouragement Award for promising cinematographer",
-    "normalizedName": "special-encouragement-award-for-promising-cinematographer",
-    "scope": "film"
-  },
-  {
     "id": "cannes:special-jury-prize",
     "festivalId": "cannes",
     "name": "Special Jury Prize",
@@ -5474,17 +5621,17 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:actor",
+    "id": "golden-globes:acting",
     "festivalId": "golden-globes",
-    "name": "Actor",
-    "normalizedName": "actor",
+    "name": "Acting",
+    "normalizedName": "acting",
     "scope": "film"
   },
   {
-    "id": "golden-globes:animated",
+    "id": "golden-globes:arthur-s-theme-best-that-you-can-do-carole-bayer-sager-burt-bach",
     "festivalId": "golden-globes",
-    "name": "Animated",
-    "normalizedName": "animated",
+    "name": "\"Arthur's Theme (Best That You Can Do)\" (Carole Bayer Sager, Burt Bacharach, Peter Allen, Christopher Cross) – Arthur \"Endless Love\" (Lionel Richie) – Endless Love \"For Your Eyes Only\" (Bill Conti, Mick Leeson) – For Your Eyes Only \"It's Wrong for Me to Love You\" (Ennio Morricone, Carol Connors) – Butterfly \"One More Hour\" (Randy Newman, Jennifer Warnes) – Ragtime",
+    "normalizedName": "arthur-s-theme-best-that-you-can-do-carole-bayer-sager-burt-bach",
     "scope": "film"
   },
   {
@@ -5495,10 +5642,10 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:best-actor-drama-series",
+    "id": "golden-globes:best-actor-in-a-leading-role",
     "festivalId": "golden-globes",
-    "name": "Best Actor - Drama Series",
-    "normalizedName": "best-actor-drama-series",
+    "name": "Best Actor in a Leading Role",
+    "normalizedName": "best-actor-in-a-leading-role",
     "scope": "film"
   },
   {
@@ -5537,24 +5684,10 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:best-actor-miniseries-or-television-film",
+    "id": "golden-globes:best-actress-in-a-leading-role",
     "festivalId": "golden-globes",
-    "name": "Best Actor - Miniseries or Television Film",
-    "normalizedName": "best-actor-miniseries-or-television-film",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-actor-miniseries-or-television-movie",
-    "festivalId": "golden-globes",
-    "name": "Best Actor – Miniseries or Television Movie",
-    "normalizedName": "best-actor-miniseries-or-television-movie",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-actress-drama-series",
-    "festivalId": "golden-globes",
-    "name": "Best Actress - Drama Series",
-    "normalizedName": "best-actress-drama-series",
+    "name": "Best Actress in a Leading Role",
+    "normalizedName": "best-actress-in-a-leading-role",
     "scope": "film"
   },
   {
@@ -5593,27 +5726,6 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:best-animated-feature",
-    "festivalId": "golden-globes",
-    "name": "Best Animated Feature",
-    "normalizedName": "best-animated-feature",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-animated-feature-film",
-    "festivalId": "golden-globes",
-    "name": "Best Animated Feature Film",
-    "normalizedName": "best-animated-feature-film",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-cinematography-black-white",
-    "festivalId": "golden-globes",
-    "name": "Best Cinematography (Black & White)",
-    "normalizedName": "best-cinematography-black-white",
-    "scope": "film"
-  },
-  {
     "id": "golden-globes:best-director",
     "festivalId": "golden-globes",
     "name": "Best Director",
@@ -5625,20 +5737,6 @@
     "festivalId": "golden-globes",
     "name": "Best Director – Motion Picture",
     "normalizedName": "best-director-motion-picture",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-documentary-film",
-    "festivalId": "golden-globes",
-    "name": "Best Documentary Film",
-    "normalizedName": "best-documentary-film",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-drama-series",
-    "festivalId": "golden-globes",
-    "name": "Best Drama Series",
-    "normalizedName": "best-drama-series",
     "scope": "film"
   },
   {
@@ -5677,27 +5775,6 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:best-film-comedy",
-    "festivalId": "golden-globes",
-    "name": "Best Film - Comedy",
-    "normalizedName": "best-film-comedy",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-film-drama",
-    "festivalId": "golden-globes",
-    "name": "Best Film - Drama",
-    "normalizedName": "best-film-drama",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-film-musical",
-    "festivalId": "golden-globes",
-    "name": "Best Film - Musical",
-    "normalizedName": "best-film-musical",
-    "scope": "film"
-  },
-  {
     "id": "golden-globes:best-film-promoting-international-understanding",
     "festivalId": "golden-globes",
     "name": "Best Film Promoting International Understanding",
@@ -5712,17 +5789,17 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:best-foreign-film-english-language",
+    "id": "golden-globes:best-lead-actor-in-a-television-series",
     "festivalId": "golden-globes",
-    "name": "Best Foreign Film (English Language)",
-    "normalizedName": "best-foreign-film-english-language",
+    "name": "Best Lead Actor in a Television Series",
+    "normalizedName": "best-lead-actor-in-a-television-series",
     "scope": "film"
   },
   {
-    "id": "golden-globes:best-foreign-language-film",
+    "id": "golden-globes:best-lead-actress-in-a-television-series",
     "festivalId": "golden-globes",
-    "name": "Best Foreign Language Film",
-    "normalizedName": "best-foreign-language-film",
+    "name": "Best Lead Actress in a Television Series",
+    "normalizedName": "best-lead-actress-in-a-television-series",
     "scope": "film"
   },
   {
@@ -5768,20 +5845,6 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:best-miniseries-or-television-film",
-    "festivalId": "golden-globes",
-    "name": "Best Miniseries or Television Film",
-    "normalizedName": "best-miniseries-or-television-film",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-miniseries-or-television-movie",
-    "festivalId": "golden-globes",
-    "name": "Best Miniseries or Television Movie",
-    "normalizedName": "best-miniseries-or-television-movie",
-    "scope": "film"
-  },
-  {
     "id": "golden-globes:best-motion-picture",
     "festivalId": "golden-globes",
     "name": "Best Motion Picture",
@@ -5796,10 +5859,10 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:best-music-original-score",
+    "id": "golden-globes:best-music-original-score-motion-picture",
     "festivalId": "golden-globes",
-    "name": "Best Music, Original Score",
-    "normalizedName": "best-music-original-score",
+    "name": "Best Music, Original Score – Motion Picture",
+    "normalizedName": "best-music-original-score-motion-picture",
     "scope": "film"
   },
   {
@@ -5810,34 +5873,6 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:best-original-song",
-    "festivalId": "golden-globes",
-    "name": "Best Original Song",
-    "normalizedName": "best-original-song",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-original-song-motion-picture",
-    "festivalId": "golden-globes",
-    "name": "Best Original Song – Motion Picture",
-    "normalizedName": "best-original-song-motion-picture",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-performance-by-an-actor-in-a-motion-picture-drama",
-    "festivalId": "golden-globes",
-    "name": "Best Performance by an Actor in a Motion Picture – Drama",
-    "normalizedName": "best-performance-by-an-actor-in-a-motion-picture-drama",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-performance-by-an-actor-in-a-motion-picture-musical-or-come",
-    "festivalId": "golden-globes",
-    "name": "Best Performance by an Actor in a Motion Picture – Musical or Comedy",
-    "normalizedName": "best-performance-by-an-actor-in-a-motion-picture-musical-or-come",
-    "scope": "film"
-  },
-  {
     "id": "golden-globes:best-performance-by-an-actor-in-a-supporting-role-in-a-motion-pi",
     "festivalId": "golden-globes",
     "name": "Best Performance by an Actor in a Supporting Role in a Motion Picture",
@@ -5845,10 +5880,94 @@
     "scope": "film"
   },
   {
+    "id": "golden-globes:best-performance-by-an-actress-in-a-supporting-role-in-a-motion-",
+    "festivalId": "golden-globes",
+    "name": "Best Performance by an Actress in a Supporting Role in a Motion Picture",
+    "normalizedName": "best-performance-by-an-actress-in-a-supporting-role-in-a-motion-",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-performance-in-a-limited-series-anthology-series-or-motion-",
+    "festivalId": "golden-globes",
+    "name": "Best Performance in a Limited Series, Anthology Series, or Motion Picture Made for Television",
+    "normalizedName": "best-performance-in-a-limited-series-anthology-series-or-motion-",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-performance-in-a-miniseries-or-television-film",
+    "festivalId": "golden-globes",
+    "name": "Best Performance in a Miniseries or Television Film",
+    "normalizedName": "best-performance-in-a-miniseries-or-television-film",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-performance-in-a-motion-picture-comedy-or-musical",
+    "festivalId": "golden-globes",
+    "name": "Best Performance in a Motion Picture – Comedy or Musical",
+    "normalizedName": "best-performance-in-a-motion-picture-comedy-or-musical",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-performance-in-a-motion-picture-drama",
+    "festivalId": "golden-globes",
+    "name": "Best Performance in a Motion Picture – Drama",
+    "normalizedName": "best-performance-in-a-motion-picture-drama",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-performance-in-a-motion-picture-musical-or-comedy",
+    "festivalId": "golden-globes",
+    "name": "Best Performance in a Motion Picture – Musical or Comedy",
+    "normalizedName": "best-performance-in-a-motion-picture-musical-or-comedy",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-performance-in-a-television-series",
+    "festivalId": "golden-globes",
+    "name": "Best Performance in a Television Series",
+    "normalizedName": "best-performance-in-a-television-series",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-performance-in-a-television-series-comedy-or-musical",
+    "festivalId": "golden-globes",
+    "name": "Best Performance in a Television Series – Comedy or Musical",
+    "normalizedName": "best-performance-in-a-television-series-comedy-or-musical",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-performance-in-a-television-series-drama",
+    "festivalId": "golden-globes",
+    "name": "Best Performance in a Television Series – Drama",
+    "normalizedName": "best-performance-in-a-television-series-drama",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-performance-in-a-television-series-musical-or-comedy",
+    "festivalId": "golden-globes",
+    "name": "Best Performance in a Television Series – Musical or Comedy",
+    "normalizedName": "best-performance-in-a-television-series-musical-or-comedy",
+    "scope": "film"
+  },
+  {
     "id": "golden-globes:best-performance-in-stand-up-comedy-on-television",
     "festivalId": "golden-globes",
     "name": "Best Performance in Stand-Up Comedy on Television",
     "normalizedName": "best-performance-in-stand-up-comedy-on-television",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-picture",
+    "festivalId": "golden-globes",
+    "name": "Best Picture",
+    "normalizedName": "best-picture",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-picture-tie",
+    "festivalId": "golden-globes",
+    "name": "Best Picture (tie)",
+    "normalizedName": "best-picture-tie",
     "scope": "film"
   },
   {
@@ -5866,10 +5985,17 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:best-series-drama",
+    "id": "golden-globes:best-screenplay-motion-picture",
     "festivalId": "golden-globes",
-    "name": "Best Series - Drama",
-    "normalizedName": "best-series-drama",
+    "name": "Best Screenplay – Motion Picture",
+    "normalizedName": "best-screenplay-motion-picture",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-series",
+    "festivalId": "golden-globes",
+    "name": "Best Series",
+    "normalizedName": "best-series",
     "scope": "film"
   },
   {
@@ -5884,20 +6010,6 @@
     "festivalId": "golden-globes",
     "name": "Best Supporting Actor on Television",
     "normalizedName": "best-supporting-actor-on-television",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-supporting-actor-series-miniseries-or-television-film",
-    "festivalId": "golden-globes",
-    "name": "Best Supporting Actor - Series, Miniseries or Television Film",
-    "normalizedName": "best-supporting-actor-series-miniseries-or-television-film",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-supporting-actor-series-miniseries-or-television-movie",
-    "festivalId": "golden-globes",
-    "name": "Best Supporting Actor - Series, Miniseries or Television Movie",
-    "normalizedName": "best-supporting-actor-series-miniseries-or-television-movie",
     "scope": "film"
   },
   {
@@ -5943,6 +6055,76 @@
     "scope": "film"
   },
   {
+    "id": "golden-globes:best-supporting-performance-in-a-limited-series-anthology-series",
+    "festivalId": "golden-globes",
+    "name": "Best Supporting Performance in a Limited Series, Anthology Series, or Motion Picture Made for Television",
+    "normalizedName": "best-supporting-performance-in-a-limited-series-anthology-series",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-supporting-performance-in-a-motion-picture",
+    "festivalId": "golden-globes",
+    "name": "Best Supporting Performance in a Motion Picture",
+    "normalizedName": "best-supporting-performance-in-a-motion-picture",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-supporting-performance-in-a-motion-picture-drama-comedy-or-",
+    "festivalId": "golden-globes",
+    "name": "Best Supporting Performance in a Motion Picture – Drama, Comedy or Musical",
+    "normalizedName": "best-supporting-performance-in-a-motion-picture-drama-comedy-or-",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-supporting-performance-in-a-motion-picture-drama-musical-or",
+    "festivalId": "golden-globes",
+    "name": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+    "normalizedName": "best-supporting-performance-in-a-motion-picture-drama-musical-or",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-supporting-performance-in-a-series-miniseries-or-television",
+    "festivalId": "golden-globes",
+    "name": "Best Supporting Performance in a Series, Miniseries or Television Film",
+    "normalizedName": "best-supporting-performance-in-a-series-miniseries-or-television",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-supporting-performance-in-a-television-series-musical-comed",
+    "festivalId": "golden-globes",
+    "name": "Best Supporting Performance in a Television Series – Musical-Comedy or Drama",
+    "normalizedName": "best-supporting-performance-in-a-television-series-musical-comed",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-supporting-performance-series-miniseries-or-a-television-fi",
+    "festivalId": "golden-globes",
+    "name": "Best Supporting Performance – Series, Miniseries or a Television Film",
+    "normalizedName": "best-supporting-performance-series-miniseries-or-a-television-fi",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-supporting-performance-series-miniseries-or-television-film",
+    "festivalId": "golden-globes",
+    "name": "Best Supporting Performance - Series, Miniseries or Television Film",
+    "normalizedName": "best-supporting-performance-series-miniseries-or-television-film",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-supporting-performance-series-miniseries-or-television-movi",
+    "festivalId": "golden-globes",
+    "name": "Best Supporting Performance - Series, Miniseries or Television Movie",
+    "normalizedName": "best-supporting-performance-series-miniseries-or-television-movi",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:best-supporting-performance-tv-series-miniseries-or-television-f",
+    "festivalId": "golden-globes",
+    "name": "Best Supporting Performance - TV Series, Miniseries or Television Film",
+    "normalizedName": "best-supporting-performance-tv-series-miniseries-or-television-f",
+    "scope": "film"
+  },
+  {
     "id": "golden-globes:best-television-series",
     "festivalId": "golden-globes",
     "name": "Best Television Series",
@@ -5964,31 +6146,24 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:best-tv-program",
-    "festivalId": "golden-globes",
-    "name": "Best TV Program",
-    "normalizedName": "best-tv-program",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-tv-show",
-    "festivalId": "golden-globes",
-    "name": "Best TV Show",
-    "normalizedName": "best-tv-show",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-tv-star-male",
-    "festivalId": "golden-globes",
-    "name": "Best TV Star - Male",
-    "normalizedName": "best-tv-star-male",
-    "scope": "film"
-  },
-  {
     "id": "golden-globes:best-variety-series",
     "festivalId": "golden-globes",
     "name": "Best Variety Series",
     "normalizedName": "best-variety-series",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:carol-burnett-award",
+    "festivalId": "golden-globes",
+    "name": "Carol Burnett Award",
+    "normalizedName": "carol-burnett-award",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:cecil-b-demille-award",
+    "festivalId": "golden-globes",
+    "name": "Cecil B. DeMille Award",
+    "normalizedName": "cecil-b-demille-award",
     "scope": "film"
   },
   {
@@ -5999,17 +6174,10 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:drama",
+    "id": "golden-globes:cinematography",
     "festivalId": "golden-globes",
-    "name": "Drama",
-    "normalizedName": "drama",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:drama-series",
-    "festivalId": "golden-globes",
-    "name": "Drama Series",
-    "normalizedName": "drama-series",
+    "name": "Cinematography",
+    "normalizedName": "cinematography",
     "scope": "film"
   },
   {
@@ -6038,6 +6206,13 @@
     "festivalId": "golden-globes",
     "name": "Films with multiple wins",
     "normalizedName": "films-with-multiple-wins",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:gandhi-united-kingdom-india-fitzcarraldo-west-germany-la-traviat",
+    "festivalId": "golden-globes",
+    "name": "Gandhi (United Kingdom/India) Fitzcarraldo (West Germany) La Traviata (Italy) The Man from Snowy River (Australia) Quest for Fire (Canada/France) Yol (Switzerland/Turkey)",
+    "normalizedName": "gandhi-united-kingdom-india-fitzcarraldo-west-germany-la-traviat",
     "scope": "film"
   },
   {
@@ -6139,31 +6314,45 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:limited-series-anthology-series-or-motion-picture-made-for-telev",
+    "id": "golden-globes:in-memoriam-segment",
     "festivalId": "golden-globes",
-    "name": "Limited Series, Anthology Series, or Motion Picture Made for Television",
-    "normalizedName": "limited-series-anthology-series-or-motion-picture-made-for-telev",
+    "name": "\"In Memoriam\" segment",
+    "normalizedName": "in-memoriam-segment",
     "scope": "film"
   },
   {
-    "id": "golden-globes:miniseries-or-television-film",
+    "id": "golden-globes:miss-golden-globe",
     "festivalId": "golden-globes",
-    "name": "Miniseries or Television Film",
-    "normalizedName": "miniseries-or-television-film",
+    "name": "Miss Golden Globe",
+    "normalizedName": "miss-golden-globe",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:most-promising-newcomer-female",
+    "festivalId": "golden-globes",
+    "name": "Most Promising Newcomer – Female",
+    "normalizedName": "most-promising-newcomer-female",
     "scope": "film"
   },
   {
     "id": "golden-globes:most-promising-newcomer-male",
     "festivalId": "golden-globes",
-    "name": "Most Promising Newcomer - Male",
+    "name": "Most Promising Newcomer – Male",
     "normalizedName": "most-promising-newcomer-male",
     "scope": "film"
   },
   {
-    "id": "golden-globes:new-star-of-the-year-actor",
+    "id": "golden-globes:mr-golden-globe",
     "festivalId": "golden-globes",
-    "name": "New Star of the Year – Actor",
-    "normalizedName": "new-star-of-the-year-actor",
+    "name": "Mr. Golden Globe",
+    "normalizedName": "mr-golden-globe",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:other",
+    "festivalId": "golden-globes",
+    "name": "Other",
+    "normalizedName": "other",
     "scope": "film"
   },
   {
@@ -6171,6 +6360,13 @@
     "festivalId": "golden-globes",
     "name": "Presenters",
     "normalizedName": "presenters",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:promoting-international-understanding",
+    "festivalId": "golden-globes",
+    "name": "Promoting International Understanding",
+    "normalizedName": "promoting-international-understanding",
     "scope": "film"
   },
   {
@@ -6188,10 +6384,24 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:supporting-actor",
+    "id": "golden-globes:sources",
     "festivalId": "golden-globes",
-    "name": "Supporting Actor",
-    "normalizedName": "supporting-actor",
+    "name": "Sources",
+    "normalizedName": "sources",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:special-achievement-award",
+    "festivalId": "golden-globes",
+    "name": "Special Achievement Award",
+    "normalizedName": "special-achievement-award",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:special-award-best-juvenile-actor",
+    "festivalId": "golden-globes",
+    "name": "Special Award – Best Juvenile Actor",
+    "normalizedName": "special-award-best-juvenile-actor",
     "scope": "film"
   },
   {
@@ -6199,6 +6409,13 @@
     "festivalId": "golden-globes",
     "name": "Television",
     "normalizedName": "television",
+    "scope": "film"
+  },
+  {
+    "id": "golden-globes:trivia",
+    "festivalId": "golden-globes",
+    "name": "Trivia",
+    "normalizedName": "trivia",
     "scope": "film"
   },
   {
@@ -6790,6 +7007,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:1964-pop-art-award",
+    "festivalId": "venice",
+    "name": "1964 Pop Art Award",
+    "normalizedName": "1964-pop-art-award",
+    "scope": "film"
+  },
+  {
     "id": "venice:1st-akai-international-film-festival",
     "festivalId": "venice",
     "name": "1st Akai International Film Festival",
@@ -6811,6 +7035,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:aiaca-award",
+    "festivalId": "venice",
+    "name": "AIACA Award",
+    "normalizedName": "aiaca-award",
+    "scope": "film"
+  },
+  {
     "id": "venice:aiace-award",
     "festivalId": "venice",
     "name": "AIACE Award",
@@ -6822,6 +7053,13 @@
     "festivalId": "venice",
     "name": "AIF - FORFILMFEST Award",
     "normalizedName": "aif-forfilmfest-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:air-for-film-fest-award",
+    "festivalId": "venice",
+    "name": "Air For Film Fest Award",
+    "normalizedName": "air-for-film-fest-award",
     "scope": "film"
   },
   {
@@ -6846,6 +7084,20 @@
     "scope": "film"
   },
   {
+    "id": "venice:altre-visioni-award",
+    "festivalId": "venice",
+    "name": "\"Altre Visioni\" Award",
+    "normalizedName": "altre-visioni-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:ambassador-of-hope-award",
+    "festivalId": "venice",
+    "name": "Ambassador of Hope Award",
+    "normalizedName": "ambassador-of-hope-award",
+    "scope": "film"
+  },
+  {
     "id": "venice:ambiente-wwf-award",
     "festivalId": "venice",
     "name": "Ambiente WWF Award",
@@ -6860,6 +7112,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:andrea-purgatori-siae-career-award",
+    "festivalId": "venice",
+    "name": "Andrea Purgatori SIAE Career Award",
+    "normalizedName": "andrea-purgatori-siae-career-award",
+    "scope": "film"
+  },
+  {
     "id": "venice:anica-cup",
     "festivalId": "venice",
     "name": "ANICA Cup",
@@ -6871,6 +7130,13 @@
     "festivalId": "venice",
     "name": "Anicaflash Prize",
     "normalizedName": "anicaflash-prize",
+    "scope": "film"
+  },
+  {
+    "id": "venice:arca-cinemagiovani-award",
+    "festivalId": "venice",
+    "name": "ARCA CinemaGiovani Award",
+    "normalizedName": "arca-cinemagiovani-award",
     "scope": "film"
   },
   {
@@ -6909,6 +7175,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:art-cinema-award",
+    "festivalId": "venice",
+    "name": "Art Cinema Award",
+    "normalizedName": "art-cinema-award",
+    "scope": "film"
+  },
+  {
     "id": "venice:assomusica-ho-visto-una-canzone-award",
     "festivalId": "venice",
     "name": "AssoMusica \"Ho visto una Canzone\" Award",
@@ -6934,6 +7207,13 @@
     "festivalId": "venice",
     "name": "Audience Award Pietro Barzisa",
     "normalizedName": "audience-award-pietro-barzisa",
+    "scope": "film"
+  },
+  {
+    "id": "venice:authors-under-40-award",
+    "festivalId": "venice",
+    "name": "Authors Under 40 Award",
+    "normalizedName": "authors-under-40-award",
     "scope": "film"
   },
   {
@@ -6979,6 +7259,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:bastone-bianco-award-filmcritica",
+    "festivalId": "venice",
+    "name": "Bastone Bianco Award (Filmcritica)",
+    "normalizedName": "bastone-bianco-award-filmcritica",
+    "scope": "film"
+  },
+  {
     "id": "venice:best-actor",
     "festivalId": "venice",
     "name": "Best Actor",
@@ -7014,6 +7301,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:best-actress-special-award",
+    "festivalId": "venice",
+    "name": "Best Actress – Special award",
+    "normalizedName": "best-actress-special-award",
+    "scope": "film"
+  },
+  {
     "id": "venice:best-actress-special-golden-ciak",
     "festivalId": "venice",
     "name": "Best Actress – Special Golden Ciak",
@@ -7023,7 +7317,7 @@
   {
     "id": "venice:best-actress-special-mention",
     "festivalId": "venice",
-    "name": "Best Actress – Special mention",
+    "name": "Best Actress – Special Mention",
     "normalizedName": "best-actress-special-mention",
     "scope": "film"
   },
@@ -7070,10 +7364,24 @@
     "scope": "film"
   },
   {
+    "id": "venice:best-chief-electrician",
+    "festivalId": "venice",
+    "name": "Best Chief Electrician",
+    "normalizedName": "best-chief-electrician",
+    "scope": "film"
+  },
+  {
     "id": "venice:best-cinematography",
     "festivalId": "venice",
     "name": "Best Cinematography",
     "normalizedName": "best-cinematography",
+    "scope": "film"
+  },
+  {
+    "id": "venice:best-costume-designer",
+    "festivalId": "venice",
+    "name": "Best Costume Designer",
+    "normalizedName": "best-costume-designer",
     "scope": "film"
   },
   {
@@ -7105,6 +7413,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:best-directing",
+    "festivalId": "venice",
+    "name": "Best Directing",
+    "normalizedName": "best-directing",
+    "scope": "film"
+  },
+  {
     "id": "venice:best-directing-and-screenwriting",
     "festivalId": "venice",
     "name": "Best Directing and Screenwriting",
@@ -7112,10 +7427,24 @@
     "scope": "film"
   },
   {
+    "id": "venice:best-directing-special-mention",
+    "festivalId": "venice",
+    "name": "Best Directing – Special Mention",
+    "normalizedName": "best-directing-special-mention",
+    "scope": "film"
+  },
+  {
     "id": "venice:best-director",
     "festivalId": "venice",
     "name": "Best Director",
     "normalizedName": "best-director",
+    "scope": "film"
+  },
+  {
+    "id": "venice:best-director-award",
+    "festivalId": "venice",
+    "name": "Best Director Award",
+    "normalizedName": "best-director-award",
     "scope": "film"
   },
   {
@@ -7149,8 +7478,15 @@
   {
     "id": "venice:best-documentary-special-mention",
     "festivalId": "venice",
-    "name": "Best Documentary – Special Mention",
+    "name": "Best Documentary – Special mention",
     "normalizedName": "best-documentary-special-mention",
+    "scope": "film"
+  },
+  {
+    "id": "venice:best-experience",
+    "festivalId": "venice",
+    "name": "Best Experience",
+    "normalizedName": "best-experience",
     "scope": "film"
   },
   {
@@ -7168,6 +7504,20 @@
     "scope": "film"
   },
   {
+    "id": "venice:best-feature-film-special-mention",
+    "festivalId": "venice",
+    "name": "Best Feature Film – Special Mention",
+    "normalizedName": "best-feature-film-special-mention",
+    "scope": "film"
+  },
+  {
+    "id": "venice:best-fiction-film",
+    "festivalId": "venice",
+    "name": "Best Fiction Film",
+    "normalizedName": "best-fiction-film",
+    "scope": "film"
+  },
+  {
     "id": "venice:best-film",
     "festivalId": "venice",
     "name": "Best Film",
@@ -7179,6 +7529,20 @@
     "festivalId": "venice",
     "name": "Best Film (Critics' Week)",
     "normalizedName": "best-film-critics-week",
+    "scope": "film"
+  },
+  {
+    "id": "venice:best-film-from-venezia-81",
+    "festivalId": "venice",
+    "name": "Best Film from Venezia 81",
+    "normalizedName": "best-film-from-venezia-81",
+    "scope": "film"
+  },
+  {
+    "id": "venice:best-film-from-venezia-82",
+    "festivalId": "venice",
+    "name": "Best Film from Venezia 82",
+    "normalizedName": "best-film-from-venezia-82",
     "scope": "film"
   },
   {
@@ -7259,6 +7623,20 @@
     "scope": "film"
   },
   {
+    "id": "venice:best-film-of-venezia-81",
+    "festivalId": "venice",
+    "name": "Best Film of Venezia 81",
+    "normalizedName": "best-film-of-venezia-81",
+    "scope": "film"
+  },
+  {
+    "id": "venice:best-film-of-venezia-82",
+    "festivalId": "venice",
+    "name": "Best Film of Venezia 82",
+    "normalizedName": "best-film-of-venezia-82",
+    "scope": "film"
+  },
+  {
     "id": "venice:best-film-on-the-relationship-man-nature",
     "festivalId": "venice",
     "name": "Best Film on the Relationship Man-Nature",
@@ -7270,6 +7648,13 @@
     "festivalId": "venice",
     "name": "Best Film (other sections)",
     "normalizedName": "best-film-other-sections",
+    "scope": "film"
+  },
+  {
+    "id": "venice:best-film-out-of-competition",
+    "festivalId": "venice",
+    "name": "Best Film (Out of competition)",
+    "normalizedName": "best-film-out-of-competition",
     "scope": "film"
   },
   {
@@ -7392,6 +7777,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:best-new-young-actors",
+    "festivalId": "venice",
+    "name": "Best New Young Actors",
+    "normalizedName": "best-new-young-actors",
+    "scope": "film"
+  },
+  {
     "id": "venice:best-new-young-actress",
     "festivalId": "venice",
     "name": "Best New Young Actress",
@@ -7399,10 +7791,24 @@
     "scope": "film"
   },
   {
+    "id": "venice:best-of-experiences",
+    "festivalId": "venice",
+    "name": "Best of Experiences",
+    "normalizedName": "best-of-experiences",
+    "scope": "film"
+  },
+  {
     "id": "venice:best-of-immersive-out-of-competition",
     "festivalId": "venice",
     "name": "Best of Immersive - Out of Competition",
     "normalizedName": "best-of-immersive-out-of-competition",
+    "scope": "film"
+  },
+  {
+    "id": "venice:best-of-worlds",
+    "festivalId": "venice",
+    "name": "Best of Worlds",
+    "normalizedName": "best-of-worlds",
     "scope": "film"
   },
   {
@@ -7427,6 +7833,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:best-production-manager",
+    "festivalId": "venice",
+    "name": "Best Production Manager",
+    "normalizedName": "best-production-manager",
+    "scope": "film"
+  },
+  {
     "id": "venice:best-production-manager-in-an-international-film",
     "festivalId": "venice",
     "name": "Best Production Manager in an International Film",
@@ -7438,6 +7851,13 @@
     "festivalId": "venice",
     "name": "Best Production Manager in an Italian Film",
     "normalizedName": "best-production-manager-in-an-italian-film",
+    "scope": "film"
+  },
+  {
+    "id": "venice:best-prop-maker",
+    "festivalId": "venice",
+    "name": "Best Prop Maker",
+    "normalizedName": "best-prop-maker",
     "scope": "film"
   },
   {
@@ -7497,6 +7917,20 @@
     "scope": "film"
   },
   {
+    "id": "venice:best-short-film-award",
+    "festivalId": "venice",
+    "name": "Best Short Film Award",
+    "normalizedName": "best-short-film-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:best-soundtrack",
+    "festivalId": "venice",
+    "name": "Best Soundtrack",
+    "normalizedName": "best-soundtrack",
+    "scope": "film"
+  },
+  {
     "id": "venice:best-soundtrack-award",
     "festivalId": "venice",
     "name": "Best Soundtrack Award",
@@ -7553,6 +7987,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:best-technical-contribution-fondazione-fare-cinema",
+    "festivalId": "venice",
+    "name": "Best Technical Contribution – Fondazione Fare Cinema",
+    "normalizedName": "best-technical-contribution-fondazione-fare-cinema",
+    "scope": "film"
+  },
+  {
     "id": "venice:best-visual-effects",
     "festivalId": "venice",
     "name": "Best Visual Effects",
@@ -7588,6 +8029,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:biennale-college-cinema-immersive",
+    "festivalId": "venice",
+    "name": "Biennale College Cinema Immersive",
+    "normalizedName": "biennale-college-cinema-immersive",
+    "scope": "film"
+  },
+  {
     "id": "venice:biennale-college-cinema-vr-out-of-competition",
     "festivalId": "venice",
     "name": "Biennale College Cinema VR - Out of Competition",
@@ -7616,6 +8064,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:bisato-d-oro-award",
+    "festivalId": "venice",
+    "name": "Bisato d'Oro Award",
+    "normalizedName": "bisato-d-oro-award",
+    "scope": "film"
+  },
+  {
     "id": "venice:bnl-award",
     "festivalId": "venice",
     "name": "BNL Award",
@@ -7637,10 +8092,24 @@
     "scope": "film"
   },
   {
+    "id": "venice:bookciak-award",
+    "festivalId": "venice",
+    "name": "BookCiak Award",
+    "normalizedName": "bookciak-award",
+    "scope": "film"
+  },
+  {
     "id": "venice:brain-award",
     "festivalId": "venice",
     "name": "Brain Award",
     "normalizedName": "brain-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:bresson-award",
+    "festivalId": "venice",
+    "name": "Bresson Award",
+    "normalizedName": "bresson-award",
     "scope": "film"
   },
   {
@@ -7655,6 +8124,13 @@
     "festivalId": "venice",
     "name": "Brian Award - UAAR",
     "normalizedName": "brian-award-uaar",
+    "scope": "film"
+  },
+  {
+    "id": "venice:brian-prize-by-uaar",
+    "festivalId": "venice",
+    "name": "Brian Prize by UAAR",
+    "normalizedName": "brian-prize-by-uaar",
     "scope": "film"
   },
   {
@@ -7693,6 +8169,20 @@
     "scope": "film"
   },
   {
+    "id": "venice:campari-passion-for-film-award",
+    "festivalId": "venice",
+    "name": "Campari Passion for Film Award",
+    "normalizedName": "campari-passion-for-film-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:campari-passion-for-the-cinema-award",
+    "festivalId": "venice",
+    "name": "Campari Passion for the Cinema Award",
+    "normalizedName": "campari-passion-for-the-cinema-award",
+    "scope": "film"
+  },
+  {
     "id": "venice:career-award",
     "festivalId": "venice",
     "name": "Career Award",
@@ -7721,6 +8211,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:centennial-of-rossellini-soldati-and-visconti",
+    "festivalId": "venice",
+    "name": "Centennial of Rossellini, Soldati and Visconti",
+    "normalizedName": "centennial-of-rossellini-soldati-and-visconti",
+    "scope": "film"
+  },
+  {
     "id": "venice:children-and-cinema-award",
     "festivalId": "venice",
     "name": "Children and Cinema Award",
@@ -7735,6 +8232,27 @@
     "scope": "film"
   },
   {
+    "id": "venice:christopher-d-smithers-foundation-special-award",
+    "festivalId": "venice",
+    "name": "Christopher D. Smithers Foundation Special Award",
+    "normalizedName": "christopher-d-smithers-foundation-special-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:christopher-d-smithers-foundation-special-awards",
+    "festivalId": "venice",
+    "name": "Christopher D. Smithers Foundation Special Awards",
+    "normalizedName": "christopher-d-smithers-foundation-special-awards",
+    "scope": "film"
+  },
+  {
+    "id": "venice:cicae-award",
+    "festivalId": "venice",
+    "name": "CICAE Award",
+    "normalizedName": "cicae-award",
+    "scope": "film"
+  },
+  {
     "id": "venice:cicae-cinema-d-arte-e-d-essai-award",
     "festivalId": "venice",
     "name": "CICAE - Cinema d’Arte e d’Essai Award",
@@ -7746,6 +8264,13 @@
     "festivalId": "venice",
     "name": "Cicae Prize",
     "normalizedName": "cicae-prize",
+    "scope": "film"
+  },
+  {
+    "id": "venice:cict-iftc-award",
+    "festivalId": "venice",
+    "name": "CICT-IFTC Award",
+    "normalizedName": "cict-iftc-award",
     "scope": "film"
   },
   {
@@ -7791,6 +8316,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:cinema-doc-venice-days-selection",
+    "festivalId": "venice",
+    "name": "Cinema.Doc - Venice Days Selection",
+    "normalizedName": "cinema-doc-venice-days-selection",
+    "scope": "film"
+  },
+  {
     "id": "venice:cinema-for-peace",
     "festivalId": "venice",
     "name": "Cinema for Peace",
@@ -7809,6 +8341,13 @@
     "festivalId": "venice",
     "name": "Cinema for UNICEF Award",
     "normalizedName": "cinema-for-unicef-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:cinema-for-unicef-commendation",
+    "festivalId": "venice",
+    "name": "Cinema for UNICEF Commendation",
+    "normalizedName": "cinema-for-unicef-commendation",
     "scope": "film"
   },
   {
@@ -7835,7 +8374,7 @@
   {
     "id": "venice:cinemavvenire-award",
     "festivalId": "venice",
-    "name": "'CinemAvvenire' Award",
+    "name": "CinemAvvenire Award",
     "normalizedName": "cinemavvenire-award",
     "scope": "film"
   },
@@ -7844,6 +8383,20 @@
     "festivalId": "venice",
     "name": "CinemAvvenire Award – Best Film",
     "normalizedName": "cinemavvenire-award-best-film",
+    "scope": "film"
+  },
+  {
+    "id": "venice:cinemavvenire-best-film-in-competition",
+    "festivalId": "venice",
+    "name": "CinemAvvenire, Best Film in Competition",
+    "normalizedName": "cinemavvenire-best-film-in-competition",
+    "scope": "film"
+  },
+  {
+    "id": "venice:cinemavvenire-il-cerchio-non-rotondo-award",
+    "festivalId": "venice",
+    "name": "CinemAvvenire \"Il cerchio non è rotondo\" Award",
+    "normalizedName": "cinemavvenire-il-cerchio-non-rotondo-award",
     "scope": "film"
   },
   {
@@ -7910,6 +8463,27 @@
     "scope": "film"
   },
   {
+    "id": "venice:corto-cortissimo",
+    "festivalId": "venice",
+    "name": "Corto Cortissimo",
+    "normalizedName": "corto-cortissimo",
+    "scope": "film"
+  },
+  {
+    "id": "venice:corto-cortissimo-short-film-competition",
+    "festivalId": "venice",
+    "name": "Corto-Cortissimo (Short Film Competition)",
+    "normalizedName": "corto-cortissimo-short-film-competition",
+    "scope": "film"
+  },
+  {
+    "id": "venice:cortocampo-italiano",
+    "festivalId": "venice",
+    "name": "Cortocampo Italiano",
+    "normalizedName": "cortocampo-italiano",
+    "scope": "film"
+  },
+  {
     "id": "venice:critic-s-choice-award",
     "festivalId": "venice",
     "name": "Critic's Choice Award",
@@ -7935,6 +8509,13 @@
     "festivalId": "venice",
     "name": "Critics' Week Award",
     "normalizedName": "critics-week-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:croce-rossa-italiana-award",
+    "festivalId": "venice",
+    "name": "Croce Rossa Italiana Award",
+    "normalizedName": "croce-rossa-italiana-award",
     "scope": "film"
   },
   {
@@ -7987,6 +8568,27 @@
     "scope": "film"
   },
   {
+    "id": "venice:doc-it-award-sicilia-film-commission",
+    "festivalId": "venice",
+    "name": "Doc/it Award – Sicilia Film Commission",
+    "normalizedName": "doc-it-award-sicilia-film-commission",
+    "scope": "film"
+  },
+  {
+    "id": "venice:doc-it-award-special-mention",
+    "festivalId": "venice",
+    "name": "Doc/it Award – Special mention",
+    "normalizedName": "doc-it-award-special-mention",
+    "scope": "film"
+  },
+  {
+    "id": "venice:docufiction",
+    "festivalId": "venice",
+    "name": "Docufiction",
+    "normalizedName": "docufiction",
+    "scope": "film"
+  },
+  {
     "id": "venice:documentaries",
     "festivalId": "venice",
     "name": "Documentaries",
@@ -7996,8 +8598,15 @@
   {
     "id": "venice:documentaries-about-cinema",
     "festivalId": "venice",
-    "name": "Documentaries about Cinema",
+    "name": "Documentaries About Cinema",
     "normalizedName": "documentaries-about-cinema",
+    "scope": "film"
+  },
+  {
+    "id": "venice:documentaries-and-shorts",
+    "festivalId": "venice",
+    "name": "Documentaries and shorts",
+    "normalizedName": "documentaries-and-shorts",
     "scope": "film"
   },
   {
@@ -8019,6 +8628,13 @@
     "festivalId": "venice",
     "name": "Documents",
     "normalizedName": "documents",
+    "scope": "film"
+  },
+  {
+    "id": "venice:don-gnocchi-award",
+    "festivalId": "venice",
+    "name": "Don Gnocchi Award",
+    "normalizedName": "don-gnocchi-award",
     "scope": "film"
   },
   {
@@ -8050,6 +8666,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:eiuc-human-rights-film-award",
+    "festivalId": "venice",
+    "name": "EIUC Human Rights Film Award",
+    "normalizedName": "eiuc-human-rights-film-award",
+    "scope": "film"
+  },
+  {
     "id": "venice:elvira-notari-prize",
     "festivalId": "venice",
     "name": "Elvira Notari Prize",
@@ -8078,10 +8701,24 @@
     "scope": "film"
   },
   {
+    "id": "venice:enzo-serafin-award",
+    "festivalId": "venice",
+    "name": "Enzo Serafin Award",
+    "normalizedName": "enzo-serafin-award",
+    "scope": "film"
+  },
+  {
     "id": "venice:equal-opportunity-award",
     "festivalId": "venice",
     "name": "Equal Opportunity Award",
     "normalizedName": "equal-opportunity-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:europa-cinemas-label",
+    "festivalId": "venice",
+    "name": "Europa Cinemas Label",
+    "normalizedName": "europa-cinemas-label",
     "scope": "film"
   },
   {
@@ -8106,10 +8743,24 @@
     "scope": "film"
   },
   {
+    "id": "venice:events",
+    "festivalId": "venice",
+    "name": "Events",
+    "normalizedName": "events",
+    "scope": "film"
+  },
+  {
     "id": "venice:events-of-the-retrospective",
     "festivalId": "venice",
     "name": "Events of the Retrospective",
     "normalizedName": "events-of-the-retrospective",
+    "scope": "film"
+  },
+  {
+    "id": "venice:evira-notari-prize",
+    "festivalId": "venice",
+    "name": "Evira Notari Prize",
+    "normalizedName": "evira-notari-prize",
     "scope": "film"
   },
   {
@@ -8159,6 +8810,13 @@
     "festivalId": "venice",
     "name": "Feature films - Non Fiction",
     "normalizedName": "feature-films-non-fiction",
+    "scope": "film"
+  },
+  {
+    "id": "venice:febbre-da-cavallo-1976",
+    "festivalId": "venice",
+    "name": "Febbre da cavallo (1976)",
+    "normalizedName": "febbre-da-cavallo-1976",
     "scope": "film"
   },
   {
@@ -8267,6 +8925,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:film-music",
+    "festivalId": "venice",
+    "name": "Film & Music",
+    "normalizedName": "film-music",
+    "scope": "film"
+  },
+  {
     "id": "venice:filmcritica-bastone-bianco-award",
     "festivalId": "venice",
     "name": "Filmcritica \"Bastone Bianco\" Award",
@@ -8292,6 +8957,20 @@
     "festivalId": "venice",
     "name": "FIPRESCI Prize",
     "normalizedName": "fipresci-prize",
+    "scope": "film"
+  },
+  {
+    "id": "venice:fondazione-fare-cinema-best-technical-contribution-award",
+    "festivalId": "venice",
+    "name": "Fondazione Fare Cinema Best Technical Contribution Award",
+    "normalizedName": "fondazione-fare-cinema-best-technical-contribution-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:fondazione-mimmo-rotella",
+    "festivalId": "venice",
+    "name": "Fondazione Mimmo Rotella",
+    "normalizedName": "fondazione-mimmo-rotella",
     "scope": "film"
   },
   {
@@ -8351,10 +9030,24 @@
     "scope": "film"
   },
   {
+    "id": "venice:fuoriprogramma",
+    "festivalId": "venice",
+    "name": "Fuoriprogramma",
+    "normalizedName": "fuoriprogramma",
+    "scope": "film"
+  },
+  {
     "id": "venice:future-film-festival-digital-award",
     "festivalId": "venice",
     "name": "Future Film Festival Digital Award",
     "normalizedName": "future-film-festival-digital-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:future-film-festival-digital-award-special-mention",
+    "festivalId": "venice",
+    "name": "Future Film Festival Digital Award – Special Mention",
+    "normalizedName": "future-film-festival-digital-award-special-mention",
     "scope": "film"
   },
   {
@@ -8386,6 +9079,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:gillo-pontecorvo-award-best-co-production-for-a-debut-film",
+    "festivalId": "venice",
+    "name": "Gillo Pontecorvo Award (Best co-production for a debut film)",
+    "normalizedName": "gillo-pontecorvo-award-best-co-production-for-a-debut-film",
+    "scope": "film"
+  },
+  {
     "id": "venice:giornate-degli-autori",
     "festivalId": "venice",
     "name": "Giornate degli Autori",
@@ -8407,6 +9107,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:glory-to-the-filmmaker-award",
+    "festivalId": "venice",
+    "name": "Glory to the Filmmaker Award",
+    "normalizedName": "glory-to-the-filmmaker-award",
+    "scope": "film"
+  },
+  {
     "id": "venice:gold-mouse",
     "festivalId": "venice",
     "name": "Gold Mouse",
@@ -8418,6 +9125,13 @@
     "festivalId": "venice",
     "name": "Golden Ciak",
     "normalizedName": "golden-ciak",
+    "scope": "film"
+  },
+  {
+    "id": "venice:golden-globe-impact-prize-for-documentary",
+    "festivalId": "venice",
+    "name": "Golden Globe Impact Prize for Documentary",
+    "normalizedName": "golden-globe-impact-prize-for-documentary",
     "scope": "film"
   },
   {
@@ -8491,6 +9205,27 @@
     "scope": "film"
   },
   {
+    "id": "venice:golden-osella-best-original-music",
+    "festivalId": "venice",
+    "name": "Golden Osella – Best Original Music",
+    "normalizedName": "golden-osella-best-original-music",
+    "scope": "film"
+  },
+  {
+    "id": "venice:golden-osella-best-original-screenplay",
+    "festivalId": "venice",
+    "name": "Golden Osella – Best Original Screenplay",
+    "normalizedName": "golden-osella-best-original-screenplay",
+    "scope": "film"
+  },
+  {
+    "id": "venice:golden-osella-best-production-design",
+    "festivalId": "venice",
+    "name": "Golden Osella – Best Production Design",
+    "normalizedName": "golden-osella-best-production-design",
+    "scope": "film"
+  },
+  {
     "id": "venice:golden-osella-best-score",
     "festivalId": "venice",
     "name": "Golden Osella – Best Score",
@@ -8523,6 +9258,13 @@
     "festivalId": "venice",
     "name": "Golden Osella for Best Screenplay",
     "normalizedName": "golden-osella-for-best-screenplay",
+    "scope": "film"
+  },
+  {
+    "id": "venice:golden-osella-for-outstanding-technical-contribution",
+    "festivalId": "venice",
+    "name": "Golden Osella for Outstanding Technical Contribution",
+    "normalizedName": "golden-osella-for-outstanding-technical-contribution",
     "scope": "film"
   },
   {
@@ -8575,6 +9317,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:grand-prize-jury-special-mention",
+    "festivalId": "venice",
+    "name": "Grand Prize – Jury special mention",
+    "normalizedName": "grand-prize-jury-special-mention",
+    "scope": "film"
+  },
+  {
     "id": "venice:grand-prize-of-the-european-academy",
     "festivalId": "venice",
     "name": "Grand Prize of the European Academy",
@@ -8596,6 +9345,20 @@
     "scope": "film"
   },
   {
+    "id": "venice:gucci-award",
+    "festivalId": "venice",
+    "name": "Gucci Award",
+    "normalizedName": "gucci-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:hearst-film-award",
+    "festivalId": "venice",
+    "name": "Hearst Film Award",
+    "normalizedName": "hearst-film-award",
+    "scope": "film"
+  },
+  {
     "id": "venice:homage-to-alberto-lattuada",
     "festivalId": "venice",
     "name": "Homage to Alberto Lattuada",
@@ -8610,6 +9373,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:homage-to-otto-preminger",
+    "festivalId": "venice",
+    "name": "Homage to Otto Preminger",
+    "normalizedName": "homage-to-otto-preminger",
+    "scope": "film"
+  },
+  {
     "id": "venice:homage-to-ousmane-sembene",
     "festivalId": "venice",
     "name": "Homage to Ousmane Sembene",
@@ -8621,6 +9391,13 @@
     "festivalId": "venice",
     "name": "Honorable Mention",
     "normalizedName": "honorable-mention",
+    "scope": "film"
+  },
+  {
+    "id": "venice:horizon-an-american-saga-chapter-2",
+    "festivalId": "venice",
+    "name": "Horizon: An American Saga – Chapter 2",
+    "normalizedName": "horizon-an-american-saga-chapter-2",
     "scope": "film"
   },
   {
@@ -8656,6 +9433,13 @@
     "festivalId": "venice",
     "name": "Horizons Events",
     "normalizedName": "horizons-events",
+    "scope": "film"
+  },
+  {
+    "id": "venice:horizons-extra",
+    "festivalId": "venice",
+    "name": "Horizons Extra",
+    "normalizedName": "horizons-extra",
     "scope": "film"
   },
   {
@@ -8722,6 +9506,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:il-cinema-ritrovato",
+    "festivalId": "venice",
+    "name": "Il cinema ritrovato",
+    "normalizedName": "il-cinema-ritrovato",
+    "scope": "film"
+  },
+  {
     "id": "venice:impact-award",
     "festivalId": "venice",
     "name": "ImpACT Award",
@@ -8731,7 +9522,7 @@
   {
     "id": "venice:in-competition",
     "festivalId": "venice",
-    "name": "In competition",
+    "name": "In Competition",
     "normalizedName": "in-competition",
     "scope": "film"
   },
@@ -8743,10 +9534,24 @@
     "scope": "film"
   },
   {
+    "id": "venice:in-competition-venezia-63",
+    "festivalId": "venice",
+    "name": "In Competition (Venezia 63)",
+    "normalizedName": "in-competition-venezia-63",
+    "scope": "film"
+  },
+  {
     "id": "venice:in-competition-venezia-64",
     "festivalId": "venice",
     "name": "In Competition (Venezia 64)",
     "normalizedName": "in-competition-venezia-64",
+    "scope": "film"
+  },
+  {
+    "id": "venice:in-competition-venezia-67",
+    "festivalId": "venice",
+    "name": "In Competition (Venezia 67)",
+    "normalizedName": "in-competition-venezia-67",
     "scope": "film"
   },
   {
@@ -8768,6 +9573,20 @@
     "festivalId": "venice",
     "name": "In Competition (Venezia 80)",
     "normalizedName": "in-competition-venezia-80",
+    "scope": "film"
+  },
+  {
+    "id": "venice:in-competition-venezia-81",
+    "festivalId": "venice",
+    "name": "In Competition (Venezia 81)",
+    "normalizedName": "in-competition-venezia-81",
+    "scope": "film"
+  },
+  {
+    "id": "venice:in-competition-venezia-82",
+    "festivalId": "venice",
+    "name": "In Competition (Venezia 82)",
+    "normalizedName": "in-competition-venezia-82",
     "scope": "film"
   },
   {
@@ -8841,6 +9660,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:isvema-award-for-a-debut-or-second-feature-film",
+    "festivalId": "venice",
+    "name": "Isvema Award for a debut or second feature film",
+    "normalizedName": "isvema-award-for-a-debut-or-second-feature-film",
+    "scope": "film"
+  },
+  {
     "id": "venice:italian-avant-garde-retrospective",
     "festivalId": "venice",
     "name": "Italian avant-garde retrospective",
@@ -8859,6 +9685,13 @@
     "festivalId": "venice",
     "name": "Italian Cinema Clubs Awards",
     "normalizedName": "italian-cinema-clubs-awards",
+    "scope": "film"
+  },
+  {
+    "id": "venice:italian-cinema-week",
+    "festivalId": "venice",
+    "name": "Italian Cinema Week",
+    "normalizedName": "italian-cinema-week",
     "scope": "film"
   },
   {
@@ -8890,6 +9723,41 @@
     "scope": "film"
   },
   {
+    "id": "venice:italian-retrospective",
+    "festivalId": "venice",
+    "name": "Italian Retrospective",
+    "normalizedName": "italian-retrospective",
+    "scope": "film"
+  },
+  {
+    "id": "venice:italian-retrospective-these-phantoms-2",
+    "festivalId": "venice",
+    "name": "Italian Retrospective: These Phantoms 2",
+    "normalizedName": "italian-retrospective-these-phantoms-2",
+    "scope": "film"
+  },
+  {
+    "id": "venice:iwonderfull-grand-prize",
+    "festivalId": "venice",
+    "name": "IWONDERFULL Grand Prize",
+    "normalizedName": "iwonderfull-grand-prize",
+    "scope": "film"
+  },
+  {
+    "id": "venice:iwonderfull-grand-prize-iwonderfull-grand-prize-jury-special-men",
+    "festivalId": "venice",
+    "name": "IWONDERFULL Grand Prize – IWONDERFULL Grand Prize - Jury Special Mention",
+    "normalizedName": "iwonderfull-grand-prize-iwonderfull-grand-prize-jury-special-men",
+    "scope": "film"
+  },
+  {
+    "id": "venice:jaeger-le-coultre-glory-to-the-filmmaker-award",
+    "festivalId": "venice",
+    "name": "Jaeger-Le Coultre Glory to the Filmmaker Award",
+    "normalizedName": "jaeger-le-coultre-glory-to-the-filmmaker-award",
+    "scope": "film"
+  },
+  {
     "id": "venice:jaeger-lecoultre-glory-to-the-filmmaker-award",
     "festivalId": "venice",
     "name": "Jaeger-LeCoultre Glory to the Filmmaker Award",
@@ -8911,6 +9779,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:kodak-award",
+    "festivalId": "venice",
+    "name": "Kodak Award",
+    "normalizedName": "kodak-award",
+    "scope": "film"
+  },
+  {
     "id": "venice:kodak-cinecritica-award",
     "festivalId": "venice",
     "name": "Kodak-Cinecritica Award",
@@ -8922,6 +9797,13 @@
     "festivalId": "venice",
     "name": "L'Oréal Paris Award for Cinema",
     "normalizedName": "l-or-al-paris-award-for-cinema",
+    "scope": "film"
+  },
+  {
+    "id": "venice:l-or-al-paris-for-the-cinema-award",
+    "festivalId": "venice",
+    "name": "L’Oréal Paris for the Cinema Award",
+    "normalizedName": "l-or-al-paris-for-the-cinema-award",
     "scope": "film"
   },
   {
@@ -9044,6 +9926,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:lifetime-achievement-award-special-mention",
+    "festivalId": "venice",
+    "name": "Lifetime Achievement Award – Special Mention",
+    "normalizedName": "lifetime-achievement-award-special-mention",
+    "scope": "film"
+  },
+  {
     "id": "venice:lina-mangiacapre-award",
     "festivalId": "venice",
     "name": "Lina Mangiacapre Award",
@@ -9062,6 +9951,13 @@
     "festivalId": "venice",
     "name": "\"Lino Miccichè\" First Feature Award",
     "normalizedName": "lino-miccich-first-feature-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:lion-for-best-short-film-special-mention",
+    "festivalId": "venice",
+    "name": "Lion for Best Short Film – Special Mention",
+    "normalizedName": "lion-for-best-short-film-special-mention",
     "scope": "film"
   },
   {
@@ -9104,6 +10000,13 @@
     "festivalId": "venice",
     "name": "LSD (1970)",
     "normalizedName": "lsd-1970",
+    "scope": "film"
+  },
+  {
+    "id": "venice:luciano-sovena-award-for-best-independent-producer",
+    "festivalId": "venice",
+    "name": "Luciano Sovena Award for Best Independent Producer",
+    "normalizedName": "luciano-sovena-award-for-best-independent-producer",
     "scope": "film"
   },
   {
@@ -9151,7 +10054,7 @@
   {
     "id": "venice:luigi-de-laurentis-award",
     "festivalId": "venice",
-    "name": "Luigi De Laurentis Award",
+    "name": "Luigi de Laurentis Award",
     "normalizedName": "luigi-de-laurentis-award",
     "scope": "film"
   },
@@ -9177,6 +10080,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:luigi-de-laurentis-award-for-debut-film",
+    "festivalId": "venice",
+    "name": "Luigi de Laurentis Award for Debut Film",
+    "normalizedName": "luigi-de-laurentis-award-for-debut-film",
+    "scope": "film"
+  },
+  {
     "id": "venice:lux-award",
     "festivalId": "venice",
     "name": "Lux Award",
@@ -9188,6 +10098,13 @@
     "festivalId": "venice",
     "name": "Lux Prize",
     "normalizedName": "lux-prize",
+    "scope": "film"
+  },
+  {
+    "id": "venice:macuna-ma-1969",
+    "festivalId": "venice",
+    "name": "Macunaíma (1969)",
+    "normalizedName": "macuna-ma-1969",
     "scope": "film"
   },
   {
@@ -9219,10 +10136,38 @@
     "scope": "film"
   },
   {
+    "id": "venice:main-competition-venezia-63",
+    "festivalId": "venice",
+    "name": "Main Competition (Venezia 63)",
+    "normalizedName": "main-competition-venezia-63",
+    "scope": "film"
+  },
+  {
     "id": "venice:main-competition-venezia-64",
     "festivalId": "venice",
     "name": "Main Competition (Venezia 64)",
     "normalizedName": "main-competition-venezia-64",
+    "scope": "film"
+  },
+  {
+    "id": "venice:main-competition-venezia-65",
+    "festivalId": "venice",
+    "name": "Main Competition (Venezia 65)",
+    "normalizedName": "main-competition-venezia-65",
+    "scope": "film"
+  },
+  {
+    "id": "venice:main-competition-venezia-66",
+    "festivalId": "venice",
+    "name": "Main competition (Venezia 66)",
+    "normalizedName": "main-competition-venezia-66",
+    "scope": "film"
+  },
+  {
+    "id": "venice:main-competition-venezia-67",
+    "festivalId": "venice",
+    "name": "Main Competition (Venezia 67)",
+    "normalizedName": "main-competition-venezia-67",
     "scope": "film"
   },
   {
@@ -9275,10 +10220,38 @@
     "scope": "film"
   },
   {
+    "id": "venice:main-competition-venezia-75",
+    "festivalId": "venice",
+    "name": "Main Competition (Venezia 75)",
+    "normalizedName": "main-competition-venezia-75",
+    "scope": "film"
+  },
+  {
+    "id": "venice:main-competition-venezia-76",
+    "festivalId": "venice",
+    "name": "Main Competition (Venezia 76)",
+    "normalizedName": "main-competition-venezia-76",
+    "scope": "film"
+  },
+  {
+    "id": "venice:main-competition-venezia-77",
+    "festivalId": "venice",
+    "name": "Main Competition (Venezia 77)",
+    "normalizedName": "main-competition-venezia-77",
+    "scope": "film"
+  },
+  {
     "id": "venice:main-competition-venezia-78",
     "festivalId": "venice",
     "name": "Main Competition (Venezia 78)",
     "normalizedName": "main-competition-venezia-78",
+    "scope": "film"
+  },
+  {
+    "id": "venice:main-competition-venezia-79",
+    "festivalId": "venice",
+    "name": "Main competition (Venezia 79)",
+    "normalizedName": "main-competition-venezia-79",
     "scope": "film"
   },
   {
@@ -9293,6 +10266,20 @@
     "festivalId": "venice",
     "name": "Main Competition (Venezia 80)",
     "normalizedName": "main-competition-venezia-80",
+    "scope": "film"
+  },
+  {
+    "id": "venice:main-competition-venezia-81",
+    "festivalId": "venice",
+    "name": "Main Competition (Venezia 81)",
+    "normalizedName": "main-competition-venezia-81",
+    "scope": "film"
+  },
+  {
+    "id": "venice:main-competition-venezia-82",
+    "festivalId": "venice",
+    "name": "Main Competition (Venezia 82)",
+    "normalizedName": "main-competition-venezia-82",
     "scope": "film"
   },
   {
@@ -9331,10 +10318,31 @@
     "scope": "film"
   },
   {
+    "id": "venice:mario-serandrei-hotel-saturnia-award-for-best-technical-contribu",
+    "festivalId": "venice",
+    "name": "Mario Serandrei - Hotel Saturnia Award for Best Technical Contribution",
+    "normalizedName": "mario-serandrei-hotel-saturnia-award-for-best-technical-contribu",
+    "scope": "film"
+  },
+  {
     "id": "venice:mario-serandrei-hotel-saturnia-award-for-the-best-technical-cont",
     "festivalId": "venice",
     "name": "Mario Serandrei – Hotel Saturnia Award for the Best Technical Contribution",
     "normalizedName": "mario-serandrei-hotel-saturnia-award-for-the-best-technical-cont",
+    "scope": "film"
+  },
+  {
+    "id": "venice:mattinate-del-cinema-italiano",
+    "festivalId": "venice",
+    "name": "Mattinate del Cinema Italiano",
+    "normalizedName": "mattinate-del-cinema-italiano",
+    "scope": "film"
+  },
+  {
+    "id": "venice:max-factor-award",
+    "festivalId": "venice",
+    "name": "Max Factor Award",
+    "normalizedName": "max-factor-award",
     "scope": "film"
   },
   {
@@ -9347,7 +10355,7 @@
   {
     "id": "venice:mention-fedic-il-giornale-del-cibo",
     "festivalId": "venice",
-    "name": "Mention FEDIC - Il giornale del cibo",
+    "name": "Mention FEDIC Il Giornale del Cibo",
     "normalizedName": "mention-fedic-il-giornale-del-cibo",
     "scope": "film"
   },
@@ -9356,6 +10364,20 @@
     "festivalId": "venice",
     "name": "Mezzogiorno-Mezzanotte",
     "normalizedName": "mezzogiorno-mezzanotte",
+    "scope": "film"
+  },
+  {
+    "id": "venice:midday-mezzogiorno",
+    "festivalId": "venice",
+    "name": "Midday (mezzogiorno)",
+    "normalizedName": "midday-mezzogiorno",
+    "scope": "film"
+  },
+  {
+    "id": "venice:midnight-mezzanotte",
+    "festivalId": "venice",
+    "name": "Midnight (mezzanotte)",
+    "normalizedName": "midnight-mezzanotte",
     "scope": "film"
   },
   {
@@ -9403,7 +10425,7 @@
   {
     "id": "venice:netpac-award",
     "festivalId": "venice",
-    "name": "Netpac Award",
+    "name": "NETPAC Award",
     "normalizedName": "netpac-award",
     "scope": "film"
   },
@@ -9422,9 +10444,16 @@
     "scope": "film"
   },
   {
+    "id": "venice:nights-and-stars-notti-e-stelle",
+    "festivalId": "venice",
+    "name": "Nights and Stars (Notti e Stelle)",
+    "normalizedName": "nights-and-stars-notti-e-stelle",
+    "scope": "film"
+  },
+  {
     "id": "venice:non-fiction",
     "festivalId": "venice",
-    "name": "Non Fiction",
+    "name": "Non-fiction",
     "normalizedName": "non-fiction",
     "scope": "film"
   },
@@ -9440,6 +10469,13 @@
     "festivalId": "venice",
     "name": "OCIC Award - Honorable Mention",
     "normalizedName": "ocic-award-honorable-mention",
+    "scope": "film"
+  },
+  {
+    "id": "venice:ocic-special-award",
+    "festivalId": "venice",
+    "name": "OCIC Special Award",
+    "normalizedName": "ocic-special-award",
     "scope": "film"
   },
   {
@@ -9461,6 +10497,20 @@
     "festivalId": "venice",
     "name": "Open Award",
     "normalizedName": "open-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:open-award-2008",
+    "festivalId": "venice",
+    "name": "Open Award 2008",
+    "normalizedName": "open-award-2008",
+    "scope": "film"
+  },
+  {
+    "id": "venice:open-award-2009",
+    "festivalId": "venice",
+    "name": "Open Award 2009",
+    "normalizedName": "open-award-2009",
     "scope": "film"
   },
   {
@@ -9499,6 +10549,27 @@
     "scope": "film"
   },
   {
+    "id": "venice:orizzonti-award",
+    "festivalId": "venice",
+    "name": "Orizzonti Award",
+    "normalizedName": "orizzonti-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:orizzonti-award-for-short-experimental-films",
+    "festivalId": "venice",
+    "name": "Orizzonti Award for Short Experimental Films",
+    "normalizedName": "orizzonti-award-for-short-experimental-films",
+    "scope": "film"
+  },
+  {
+    "id": "venice:orizzonti-award-for-short-medium-length-films-special-mention",
+    "festivalId": "venice",
+    "name": "Orizzonti Award for Short/Medium-length Films – Special Mention",
+    "normalizedName": "orizzonti-award-for-short-medium-length-films-special-mention",
+    "scope": "film"
+  },
+  {
     "id": "venice:orizzonti-extra",
     "festivalId": "venice",
     "name": "Orizzonti Extra",
@@ -9513,6 +10584,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:orizzonti-short-films-international-competition",
+    "festivalId": "venice",
+    "name": "Orizzonti Short Films International Competition",
+    "normalizedName": "orizzonti-short-films-international-competition",
+    "scope": "film"
+  },
+  {
     "id": "venice:other-formats",
     "festivalId": "venice",
     "name": "Other Formats",
@@ -9524,6 +10602,27 @@
     "festivalId": "venice",
     "name": "Out of Competition",
     "normalizedName": "out-of-competition",
+    "scope": "film"
+  },
+  {
+    "id": "venice:out-of-competition-homage-to-the-new-zealand-s-film-school-a-wav",
+    "festivalId": "venice",
+    "name": "Out of Competition - Homage to the New Zealand's Film School “A Wave in the Ocean” (AWITO)",
+    "normalizedName": "out-of-competition-homage-to-the-new-zealand-s-film-school-a-wav",
+    "scope": "film"
+  },
+  {
+    "id": "venice:out-of-competition-midnight",
+    "festivalId": "venice",
+    "name": "Out of Competition – Midnight",
+    "normalizedName": "out-of-competition-midnight",
+    "scope": "film"
+  },
+  {
+    "id": "venice:out-of-competition-special-events",
+    "festivalId": "venice",
+    "name": "Out of Competition - Special Events",
+    "normalizedName": "out-of-competition-special-events",
     "scope": "film"
   },
   {
@@ -9604,6 +10703,27 @@
     "scope": "film"
   },
   {
+    "id": "venice:people-s-choice-award",
+    "festivalId": "venice",
+    "name": "People's Choice Award",
+    "normalizedName": "people-s-choice-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:persol-3-d",
+    "festivalId": "venice",
+    "name": "Persol 3-D",
+    "normalizedName": "persol-3-d",
+    "scope": "film"
+  },
+  {
+    "id": "venice:persol-3-d-award-for-best-stereoscopic-film",
+    "festivalId": "venice",
+    "name": "Persol 3-D Award for Best Stereoscopic Film",
+    "normalizedName": "persol-3-d-award-for-best-stereoscopic-film",
+    "scope": "film"
+  },
+  {
     "id": "venice:persol-3d-award-for-the-most-creative-stereoscopic-film",
     "festivalId": "venice",
     "name": "Persol 3D Award for the Most Creative Stereoscopic Film",
@@ -9636,6 +10756,27 @@
     "festivalId": "venice",
     "name": "Pietro Bianchi Award",
     "normalizedName": "pietro-bianchi-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:pietro-bianco-award",
+    "festivalId": "venice",
+    "name": "Pietro Bianco Award",
+    "normalizedName": "pietro-bianco-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:portraits-documentaries",
+    "festivalId": "venice",
+    "name": "Portraits (documentaries)",
+    "normalizedName": "portraits-documentaries",
+    "scope": "film"
+  },
+  {
+    "id": "venice:poveri-ma-belli-award",
+    "festivalId": "venice",
+    "name": "\"Poveri ma belli\" Award",
+    "normalizedName": "poveri-ma-belli-award",
     "scope": "film"
   },
   {
@@ -9695,6 +10836,27 @@
     "scope": "film"
   },
   {
+    "id": "venice:premio-selezione-cinema-doc-official-selection",
+    "festivalId": "venice",
+    "name": "Premio Selezione Cinema.Doc - Official Selection",
+    "normalizedName": "premio-selezione-cinema-doc-official-selection",
+    "scope": "film"
+  },
+  {
+    "id": "venice:premio-soundtrack-stars-award",
+    "festivalId": "venice",
+    "name": "Premio Soundtrack Stars Award",
+    "normalizedName": "premio-soundtrack-stars-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:premio-speciale-film-impresa",
+    "festivalId": "venice",
+    "name": "Premio Speciale Film Impresa",
+    "normalizedName": "premio-speciale-film-impresa",
+    "scope": "film"
+  },
+  {
     "id": "venice:premio-unimed",
     "festivalId": "venice",
     "name": "Premio UNIMED",
@@ -9702,10 +10864,24 @@
     "scope": "film"
   },
   {
+    "id": "venice:prix-pierrot",
+    "festivalId": "venice",
+    "name": "Prix Pierrot",
+    "normalizedName": "prix-pierrot",
+    "scope": "film"
+  },
+  {
     "id": "venice:prix-uip-venice-european-short-film",
     "festivalId": "venice",
     "name": "Prix UIP Venice (European Short Film)",
     "normalizedName": "prix-uip-venice-european-short-film",
+    "scope": "film"
+  },
+  {
+    "id": "venice:prize-arca-cinemagiovani-young-cinema-award-best-movie-other-vis",
+    "festivalId": "venice",
+    "name": "Prize Arca Cinemagiovani (Young Cinema Award) – Best Movie \"Other Visions\"",
+    "normalizedName": "prize-arca-cinemagiovani-young-cinema-award-best-movie-other-vis",
     "scope": "film"
   },
   {
@@ -9723,6 +10899,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:prize-of-the-international-youth-jury",
+    "festivalId": "venice",
+    "name": "Prize of the International Youth Jury",
+    "normalizedName": "prize-of-the-international-youth-jury",
+    "scope": "film"
+  },
+  {
     "id": "venice:prize-of-the-students-of-the-university-la-sapienza",
     "festivalId": "venice",
     "name": "Prize of the Students of the University 'La Sapienza'",
@@ -9734,6 +10917,13 @@
     "festivalId": "venice",
     "name": "Programma Speciale",
     "normalizedName": "programma-speciale",
+    "scope": "film"
+  },
+  {
+    "id": "venice:prospectives-prospettive",
+    "festivalId": "venice",
+    "name": "Prospectives (Prospettive)",
+    "normalizedName": "prospectives-prospettive",
     "scope": "film"
   },
   {
@@ -9772,6 +10962,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:region-of-veneto-for-quality-cinema-award",
+    "festivalId": "venice",
+    "name": "\"Region of Veneto for quality cinema\" Award",
+    "normalizedName": "region-of-veneto-for-quality-cinema-award",
+    "scope": "film"
+  },
+  {
     "id": "venice:restored-classic-films",
     "festivalId": "venice",
     "name": "Restored classic films",
@@ -9781,7 +10978,7 @@
   {
     "id": "venice:restored-films",
     "festivalId": "venice",
-    "name": "Restored films",
+    "name": "Restored Films",
     "normalizedName": "restored-films",
     "scope": "film"
   },
@@ -9821,6 +11018,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:retrospective-the-secret-story-of-russian-cinema",
+    "festivalId": "venice",
+    "name": "Retrospective - The Secret Story of Russian cinema",
+    "normalizedName": "retrospective-the-secret-story-of-russian-cinema",
+    "scope": "film"
+  },
+  {
     "id": "venice:risguardi-evgenij-francevic-bauer",
     "festivalId": "venice",
     "name": "Risguardi - Evgenij Francevic Bauer",
@@ -9839,6 +11043,20 @@
     "festivalId": "venice",
     "name": "Robert Bresson Award",
     "normalizedName": "robert-bresson-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:roberto-bognanno-prize",
+    "festivalId": "venice",
+    "name": "Roberto Bognanno Prize",
+    "normalizedName": "roberto-bognanno-prize",
+    "scope": "film"
+  },
+  {
+    "id": "venice:romana-maggiora-vergano-special-mention",
+    "festivalId": "venice",
+    "name": "Romana Maggiora Vergano – Special Mention",
+    "normalizedName": "romana-maggiora-vergano-special-mention",
     "scope": "film"
   },
   {
@@ -9891,6 +11109,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:sconfini",
+    "festivalId": "venice",
+    "name": "Sconfini",
+    "normalizedName": "sconfini",
+    "scope": "film"
+  },
+  {
     "id": "venice:sergio-trasatti-award",
     "festivalId": "venice",
     "name": "Sergio Trasatti Award",
@@ -9905,10 +11130,31 @@
     "scope": "film"
   },
   {
+    "id": "venice:sessantotto-e-dintorni",
+    "festivalId": "venice",
+    "name": "Sessantotto e dintorni",
+    "normalizedName": "sessantotto-e-dintorni",
+    "scope": "film"
+  },
+  {
     "id": "venice:sfera-1932-award",
     "festivalId": "venice",
     "name": "Sfera 1932 Award",
     "normalizedName": "sfera-1932-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:short-documentaries-films",
+    "festivalId": "venice",
+    "name": "Short Documentaries Films",
+    "normalizedName": "short-documentaries-films",
+    "scope": "film"
+  },
+  {
+    "id": "venice:short-experimental-films",
+    "festivalId": "venice",
+    "name": "Short Experimental Films",
+    "normalizedName": "short-experimental-films",
     "scope": "film"
   },
   {
@@ -9940,9 +11186,16 @@
     "scope": "film"
   },
   {
+    "id": "venice:short-films-in-competition",
+    "festivalId": "venice",
+    "name": "Short films – In competition",
+    "normalizedName": "short-films-in-competition",
+    "scope": "film"
+  },
+  {
     "id": "venice:short-films-out-of-competition",
     "festivalId": "venice",
-    "name": "Short films - Out of Competition",
+    "name": "Short films – Out of competition",
     "normalizedName": "short-films-out-of-competition",
     "scope": "film"
   },
@@ -9958,6 +11211,20 @@
     "festivalId": "venice",
     "name": "SIAE Award",
     "normalizedName": "siae-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:siae-creative-talent-award",
+    "festivalId": "venice",
+    "name": "SIAE Creative Talent Award",
+    "normalizedName": "siae-creative-talent-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:siae-creative-talent-prize",
+    "festivalId": "venice",
+    "name": "SIAE Creative Talent Prize",
+    "normalizedName": "siae-creative-talent-prize",
     "scope": "film"
   },
   {
@@ -10045,6 +11312,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:silver-lion-revelation",
+    "festivalId": "venice",
+    "name": "Silver Lion Revelation",
+    "normalizedName": "silver-lion-revelation",
+    "scope": "film"
+  },
+  {
     "id": "venice:silver-mouse",
     "festivalId": "venice",
     "name": "Silver Mouse",
@@ -10119,6 +11393,13 @@
     "festivalId": "venice",
     "name": "Sorriso Diverso Venezia Award - Best Italian Film",
     "normalizedName": "sorriso-diverso-venezia-award-best-italian-film",
+    "scope": "film"
+  },
+  {
+    "id": "venice:sorriso-diverso-venezia-award-xi-edition",
+    "festivalId": "venice",
+    "name": "“Sorriso Diverso Venezia Award” XI edition",
+    "normalizedName": "sorriso-diverso-venezia-award-xi-edition",
     "scope": "film"
   },
   {
@@ -10243,7 +11524,7 @@
   {
     "id": "venice:special-events-out-of-competition",
     "festivalId": "venice",
-    "name": "Special Events - Out of competition",
+    "name": "Special events – Out of competition",
     "normalizedName": "special-events-out-of-competition",
     "scope": "film"
   },
@@ -10276,6 +11557,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:special-jury-orizzonti-prize",
+    "festivalId": "venice",
+    "name": "Special Jury Orizzonti Prize",
+    "normalizedName": "special-jury-orizzonti-prize",
+    "scope": "film"
+  },
+  {
     "id": "venice:special-jury-prize",
     "festivalId": "venice",
     "name": "Special Jury Prize",
@@ -10301,6 +11589,27 @@
     "festivalId": "venice",
     "name": "Special Mention Best Short Film",
     "normalizedName": "special-mention-best-short-film",
+    "scope": "film"
+  },
+  {
+    "id": "venice:special-mention-for-best-cinematography",
+    "festivalId": "venice",
+    "name": "Special Mention for Best Cinematography",
+    "normalizedName": "special-mention-for-best-cinematography",
+    "scope": "film"
+  },
+  {
+    "id": "venice:special-mention-for-best-film",
+    "festivalId": "venice",
+    "name": "Special Mention for Best Film",
+    "normalizedName": "special-mention-for-best-film",
+    "scope": "film"
+  },
+  {
+    "id": "venice:special-mention-for-best-short-film",
+    "festivalId": "venice",
+    "name": "Special Mention for Best Short Film",
+    "normalizedName": "special-mention-for-best-short-film",
     "scope": "film"
   },
   {
@@ -10346,6 +11655,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:special-screening-event-out-of-competition",
+    "festivalId": "venice",
+    "name": "Special Screening Event – Out of competition",
+    "normalizedName": "special-screening-event-out-of-competition",
+    "scope": "film"
+  },
+  {
     "id": "venice:special-screenings",
     "festivalId": "venice",
     "name": "Special Screenings",
@@ -10357,6 +11673,13 @@
     "festivalId": "venice",
     "name": "Starlight International Cinema Award",
     "normalizedName": "starlight-international-cinema-award",
+    "scope": "film"
+  },
+  {
+    "id": "venice:sun-film-group-audience-award",
+    "festivalId": "venice",
+    "name": "Sun Film Group Audience Award",
+    "normalizedName": "sun-film-group-audience-award",
     "scope": "film"
   },
   {
@@ -10388,6 +11711,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:the-numbers-and-the-nations-of-the-63rd-show",
+    "festivalId": "venice",
+    "name": "The numbers and the nations of the 63rd Show",
+    "normalizedName": "the-numbers-and-the-nations-of-the-63rd-show",
+    "scope": "film"
+  },
+  {
     "id": "venice:the-president-of-the-italian-senate-s-gold-medal",
     "festivalId": "venice",
     "name": "The President of the Italian Senate's Gold Medal",
@@ -10409,10 +11739,24 @@
     "scope": "film"
   },
   {
+    "id": "venice:the-secret-story-of-italian-cinema",
+    "festivalId": "venice",
+    "name": "The secret story of Italian cinema",
+    "normalizedName": "the-secret-story-of-italian-cinema",
+    "scope": "film"
+  },
+  {
     "id": "venice:titanus-s-one-hundredth-year",
     "festivalId": "venice",
     "name": "Titanus's one hundredth year",
     "normalizedName": "titanus-s-one-hundredth-year",
+    "scope": "film"
+  },
+  {
+    "id": "venice:tribute-to-alida-valli",
+    "festivalId": "venice",
+    "name": "Tribute to Alida Valli",
+    "normalizedName": "tribute-to-alida-valli",
     "scope": "film"
   },
   {
@@ -10451,6 +11795,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:tribute-to-gerard-depardieu",
+    "festivalId": "venice",
+    "name": "Tribute to Gerard Depardieu",
+    "normalizedName": "tribute-to-gerard-depardieu",
+    "scope": "film"
+  },
+  {
     "id": "venice:tribute-to-jacques-doillon",
     "festivalId": "venice",
     "name": "Tribute to Jacques Doillon",
@@ -10472,6 +11823,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:tribute-to-marcello-mastroianni",
+    "festivalId": "venice",
+    "name": "Tribute to Marcello Mastroianni",
+    "normalizedName": "tribute-to-marcello-mastroianni",
+    "scope": "film"
+  },
+  {
     "id": "venice:tribute-to-michael-powell",
     "festivalId": "venice",
     "name": "Tribute to Michael Powell",
@@ -10479,10 +11837,38 @@
     "scope": "film"
   },
   {
+    "id": "venice:tribute-to-roberto-rossellini",
+    "festivalId": "venice",
+    "name": "Tribute to Roberto Rossellini",
+    "normalizedName": "tribute-to-roberto-rossellini",
+    "scope": "film"
+  },
+  {
+    "id": "venice:tribute-to-tot",
+    "festivalId": "venice",
+    "name": "Tribute to Totò",
+    "normalizedName": "tribute-to-tot",
+    "scope": "film"
+  },
+  {
     "id": "venice:tribute-to-yuriy-norshteyn",
     "festivalId": "venice",
     "name": "Tribute to Yuriy Norshteyn",
     "normalizedName": "tribute-to-yuriy-norshteyn",
+    "scope": "film"
+  },
+  {
+    "id": "venice:u-i-p-award-for-best-european-short",
+    "festivalId": "venice",
+    "name": "U.I.P. Award for Best European Short",
+    "normalizedName": "u-i-p-award-for-best-european-short",
+    "scope": "film"
+  },
+  {
+    "id": "venice:uaar-award",
+    "festivalId": "venice",
+    "name": "UAAR Award",
+    "normalizedName": "uaar-award",
     "scope": "film"
   },
   {
@@ -10563,6 +11949,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:vacanze-di-natale-1983",
+    "festivalId": "venice",
+    "name": "Vacanze di Natale (1983)",
+    "normalizedName": "vacanze-di-natale-1983",
+    "scope": "film"
+  },
+  {
     "id": "venice:vanguard",
     "festivalId": "venice",
     "name": "Vanguard",
@@ -10577,6 +11970,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:venetian-workshop",
+    "festivalId": "venice",
+    "name": "Venetian workshop",
+    "normalizedName": "venetian-workshop",
+    "scope": "film"
+  },
+  {
     "id": "venice:venezia-60",
     "festivalId": "venice",
     "name": "Venezia 60",
@@ -10588,6 +11988,13 @@
     "festivalId": "venice",
     "name": "Venezia 74 Best Film",
     "normalizedName": "venezia-74-best-film",
+    "scope": "film"
+  },
+  {
+    "id": "venice:venezia-75-best-film",
+    "festivalId": "venice",
+    "name": "Venezia 75 Best Film",
+    "normalizedName": "venezia-75-best-film",
     "scope": "film"
   },
   {
@@ -10731,6 +12138,13 @@
     "scope": "film"
   },
   {
+    "id": "venice:venice-nights-notti-veneziane",
+    "festivalId": "venice",
+    "name": "Venice Nights (Notti Veneziane)",
+    "normalizedName": "venice-nights-notti-veneziane",
+    "scope": "film"
+  },
+  {
     "id": "venice:venice-nights-special-screening",
     "festivalId": "venice",
     "name": "Venice Nights - Special Screening",
@@ -10742,6 +12156,27 @@
     "festivalId": "venice",
     "name": "Venice Nights - Tribute to Jean-Marc Vallée in collaboration with SODEC and the Delegation of Quebec in Rome",
     "normalizedName": "venice-nights-tribute-to-jean-marc-vall-e-in-collaboration-with-",
+    "scope": "film"
+  },
+  {
+    "id": "venice:venice-nomination-to-the-european-film-awards-2009-special-menti",
+    "festivalId": "venice",
+    "name": "Venice Nomination to the European Film Awards 2009 – Special mention",
+    "normalizedName": "venice-nomination-to-the-european-film-awards-2009-special-menti",
+    "scope": "film"
+  },
+  {
+    "id": "venice:venice-short-film-nominee-for-the-european-film-awards",
+    "festivalId": "venice",
+    "name": "Venice Short Film Nominee for the European Film Awards",
+    "normalizedName": "venice-short-film-nominee-for-the-european-film-awards",
+    "scope": "film"
+  },
+  {
+    "id": "venice:venice-spotlight",
+    "festivalId": "venice",
+    "name": "Venice Spotlight",
+    "normalizedName": "venice-spotlight",
     "scope": "film"
   },
   {
@@ -10766,10 +12201,24 @@
     "scope": "film"
   },
   {
+    "id": "venice:verona-film-club-award-for-most-innovative-film",
+    "festivalId": "venice",
+    "name": "Verona Film Club Award for Most Innovative Film",
+    "normalizedName": "verona-film-club-award-for-most-innovative-film",
+    "scope": "film"
+  },
+  {
     "id": "venice:vietnam-1967",
     "festivalId": "venice",
     "name": "Vietnam (1967)",
     "normalizedName": "vietnam-1967",
+    "scope": "film"
+  },
+  {
+    "id": "venice:villa-degli-autori-open-space",
+    "festivalId": "venice",
+    "name": "Villa degli Autori – Open Space",
+    "normalizedName": "villa-degli-autori-open-space",
     "scope": "film"
   },
   {
@@ -10791,6 +12240,13 @@
     "festivalId": "venice",
     "name": "Volpi Cup for Best Actor – Best Supporting Actor",
     "normalizedName": "volpi-cup-for-best-actor-best-supporting-actor",
+    "scope": "film"
+  },
+  {
+    "id": "venice:volpi-cup-for-best-actor-volpi-cup-for-best-supporting-actor",
+    "festivalId": "venice",
+    "name": "Volpi Cup for Best Actor – Volpi Cup for Best Supporting Actor",
+    "normalizedName": "volpi-cup-for-best-actor-volpi-cup-for-best-supporting-actor",
     "scope": "film"
   },
   {
@@ -10857,10 +12313,31 @@
     "scope": "film"
   },
   {
+    "id": "venice:xr-fan-experience",
+    "festivalId": "venice",
+    "name": "XR Fan Experience",
+    "normalizedName": "xr-fan-experience",
+    "scope": "film"
+  },
+  {
     "id": "venice:xr-fan-experience-xr-special-mention",
     "festivalId": "venice",
     "name": "XR Fan Experience – XR Special Mention",
     "normalizedName": "xr-fan-experience-xr-special-mention",
+    "scope": "film"
+  },
+  {
+    "id": "venice:xr-special-mention",
+    "festivalId": "venice",
+    "name": "XR Special Mention",
+    "normalizedName": "xr-special-mention",
+    "scope": "film"
+  },
+  {
+    "id": "venice:young-cinema-award-best-international-film",
+    "festivalId": "venice",
+    "name": "Young Cinema Award – Best International Film",
+    "normalizedName": "young-cinema-award-best-international-film",
     "scope": "film"
   },
   {

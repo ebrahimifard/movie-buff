@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { resolveFilmId, slugify, uniqueSorted } from "./build-comprehensive-data.mjs";
+import { resolveFilmId, resolvePersonId, slugify, uniqueSorted } from "./build-comprehensive-data.mjs";
 
 describe("resolveFilmId", () => {
   it("uses imdbId when present", () => {
@@ -20,6 +20,29 @@ describe("resolveFilmId", () => {
     const a = resolveFilmId({ imdbId: null, title: "Same Title", releaseYear: 2020 });
     const b = resolveFilmId({ imdbId: null, title: "Same Title", releaseYear: 2020 });
     expect(a).toBe(b);
+  });
+});
+
+describe("resolvePersonId", () => {
+  it("creates a new person with the given role when none exists", () => {
+    const personMap = new Map();
+    const id = resolvePersonId(personMap, "Anthony Hopkins", "cast");
+    expect(id).toBe("person:anthony-hopkins");
+    expect(personMap.get(id).roles).toEqual(["cast"]);
+  });
+
+  it("merges a new role into an existing person rather than overwriting their roles", () => {
+    const personMap = new Map();
+    resolvePersonId(personMap, "Clint Eastwood", "cast");
+    const id = resolvePersonId(personMap, "Clint Eastwood", "director");
+    expect(personMap.get(id).roles).toEqual(["cast", "director"]);
+  });
+
+  it("does not duplicate a role the person already has", () => {
+    const personMap = new Map();
+    resolvePersonId(personMap, "Jane Doe", "director");
+    resolvePersonId(personMap, "Jane Doe", "director");
+    expect(personMap.get("person:jane-doe").roles).toEqual(["director"]);
   });
 });
 

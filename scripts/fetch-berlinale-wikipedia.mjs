@@ -50,12 +50,29 @@ function getOrdinal(n) {
   return `${n}${suffix}`;
 }
 
+// Coverage-gap targeting (the default) can only ever ADD years, never
+// retroactively re-scrape a year that already parsed "successfully" but
+// wrong (e.g. a parser bug that mis-extracted a person's name as the film
+// title — such a year has full category depth, so coverage-report.mjs
+// scores it as complete, not missing/weak, and the gap-driven scraper would
+// never revisit it). --full (or FULL_RESCRAPE=1) switches to every year
+// since Berlinale's first edition instead, for exactly that
+// retroactive-fix case.
+export function resolveTargetYears(berlinale, { full }) {
+  if (full) {
+    const currentYear = new Date().getFullYear();
+    return Array.from({ length: currentYear - 1951 + 1 }, (_, index) => 1951 + index);
+  }
+  return [...berlinale.missingYears, ...berlinale.weakYears];
+}
+
 async function run() {
+  const full = process.argv.includes("--full") || process.env.FULL_RESCRAPE === "1";
   const coverage = JSON.parse(await readFile(coveragePath, "utf8"));
   const berlinale = coverage.festivals.find((f) => f.festivalId === "berlinale");
   if (!berlinale) throw new Error("Berlinale not found in coverage report");
 
-  const targetYears = [...berlinale.missingYears, ...berlinale.weakYears];
+  const targetYears = resolveTargetYears(berlinale, { full });
 
   const records = [];
   for (const year of targetYears) {

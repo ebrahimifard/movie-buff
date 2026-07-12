@@ -33,6 +33,24 @@ export function resolveFilmId(film) {
   return `film:${slugify(`${film.title}-${film.releaseYear}`)}`;
 }
 
+// Gets-or-creates a Person record, merging `role` into an existing person's
+// roles rather than skipping the update — a person can legitimately be
+// credited under different roles across different records (e.g. an
+// actor-director), and re-adding them as director-only must not clobber a
+// previously-recorded cast credit, or vice versa.
+export function resolvePersonId(personMap, name, role) {
+  const personId = `person:${slugify(name)}`;
+  const existing = personMap.get(personId);
+  if (existing) {
+    if (!existing.roles.includes(role)) {
+      existing.roles = [...existing.roles, role].sort();
+    }
+    return personId;
+  }
+  personMap.set(personId, { id: personId, name, roles: [role], imdbId: null, tmdbId: null });
+  return personId;
+}
+
 async function writeJson(relativePath, value) {
   const filePath = path.join(normalizedDir, relativePath);
   await writeFile(filePath, `${JSON.stringify(value, null, 2)}\n`, "utf8");
@@ -97,19 +115,16 @@ async function run() {
     }
 
     const directorNames = uniqueSorted(entry.directors);
-    const directorIds = directorNames.map((name) => {
-      const personId = `person:${slugify(name)}`;
-      if (!personMap.has(personId)) {
-        personMap.set(personId, {
-          id: personId,
-          name,
-          roles: ["director"],
-          imdbId: null,
-          tmdbId: null
-        });
-      }
-      return personId;
-    });
+    const directorIds = directorNames.map((name) => resolvePersonId(personMap, name, "director"));
+
+    // entry.credits (populated by the Wikipedia scrapers for individual-award
+    // categories like Best Actor/Screenplay — see classifyPersonRole in
+    // scripts/lib/wikipedia-scrape.mjs) carries the credited person as
+    // metadata on the FILM's nomination record, never as the nomination's
+    // own title/identity — see Nomination.credits in lib/schemas.mjs.
+    const credits = (entry.credits ?? [])
+      .filter((credit) => credit?.name && credit?.role)
+      .map(({ name, role }) => ({ personId: resolvePersonId(personMap, name, role), role }));
 
     nominations.push({
       id: `${entry.year}-${entry.festivalId}-${slugify(entry.category)}-${filmId}`,
@@ -125,7 +140,8 @@ async function run() {
       country: entry.film.countryCodes[0] ?? "XX",
       result: entry.result,
       imdbId: entry.film.imdbId,
-      filmId
+      filmId,
+      ...(credits.length > 0 ? { credits } : {})
     });
   }
 

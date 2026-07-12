@@ -43,6 +43,27 @@ export function mergeFilm(primary, secondary) {
   };
 }
 
+// Credits are {name, role} objects (not primitives), so a plain Set can't
+// dedupe them — a composite name+role key is used instead. A person can
+// legitimately hold more than one role across categories (e.g. an
+// actor-director), so role is part of the identity, not dropped.
+export function dedupeCredits(credits) {
+  const seen = new Set();
+  const result = [];
+  for (const credit of credits ?? []) {
+    if (!credit?.name || !credit?.role) {
+      continue;
+    }
+    const key = `${credit.name}|${credit.role}`;
+    if (seen.has(key)) {
+      continue;
+    }
+    seen.add(key);
+    result.push({ name: credit.name, role: credit.role });
+  }
+  return result;
+}
+
 export function normalizeRecord(input) {
   return {
     year: input.year,
@@ -60,7 +81,8 @@ export function normalizeRecord(input) {
       synopsis: input.film.synopsis ?? "",
       posterUrl: input.film.posterUrl ?? ""
     },
-    directors: [...new Set((input.directors ?? []).filter(Boolean))]
+    directors: [...new Set((input.directors ?? []).filter(Boolean))],
+    credits: dedupeCredits(input.credits)
   };
 }
 
@@ -127,7 +149,8 @@ export function mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, can
       ...existing,
       result: chooseResult(existing.result, normalized.result),
       film: mergeFilm(existing.film, normalized.film),
-      directors: [...new Set([...(existing.directors ?? []), ...(normalized.directors ?? [])])]
+      directors: [...new Set([...(existing.directors ?? []), ...(normalized.directors ?? [])])],
+      credits: dedupeCredits([...(existing.credits ?? []), ...(normalized.credits ?? [])])
     };
   }
 

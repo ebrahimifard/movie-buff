@@ -14,9 +14,12 @@ const nominationsFixture = [
   { id: "n2", year: 2020, festivalId: "cannes", festivalName: "Cannes", category: "Palme d'Or", ceremonyId: "cannes-2020", categoryId: "cannes:palme-dor", title: "Film One", director: "Jane Doe", directorIds: [], country: "FR", result: "nominee", imdbId: "tt1", filmId: "tt1" }
 ];
 
+const peopleFixture = [{ id: "person:jane-doe", name: "Jane Doe", roles: ["director"], imdbId: null, tmdbId: null }];
+
 vi.mock("@/data/normalized/festivals.json", () => ({ default: festivalsFixture }));
 vi.mock("@/data/normalized/films.json", () => ({ default: filmsFixture }));
 vi.mock("@/data/normalized/nominations.json", () => ({ default: nominationsFixture }));
+vi.mock("@/data/normalized/people.json", () => ({ default: peopleFixture }));
 
 const {
   getYears,
@@ -24,7 +27,8 @@ const {
   getByFestival,
   getFestivalBySlug,
   getFilmByImdbId,
-  getNominationsByImdbId
+  getNominationsByImdbId,
+  getPersonById
 } = await import("./data");
 
 describe("getYears", () => {
@@ -69,5 +73,15 @@ describe("getNominationsByImdbId", () => {
   it("returns nominations sorted by year descending", () => {
     const results = getNominationsByImdbId("tt1");
     expect(results.map((entry) => entry.year)).toEqual([2021, 2020]);
+  });
+});
+
+describe("getPersonById", () => {
+  it("finds a person by id", () => {
+    expect(getPersonById("person:jane-doe")?.name).toBe("Jane Doe");
+  });
+
+  it("returns undefined for an unknown id", () => {
+    expect(getPersonById("person:unknown")).toBeUndefined();
   });
 });

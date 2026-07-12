@@ -57,7 +57,7 @@ export default async function FestivalPage({ params }: FestivalPageProps) {
         </div>
       </div>
 
-      <FestivalFilters rows={rows} />
+      <FestivalFilters rows={rows} festivalId={festival.id} festivalName={festival.name} />
     </main>
   );
 }

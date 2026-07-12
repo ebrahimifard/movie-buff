@@ -7,6 +7,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { JSDOM } from "jsdom";
 import { DEFAULT_SCRAPE_DELAY_MS, fetchWithRetry, sleep } from "./lib/http.mjs";
+import { classifyPersonRole, extractTitleAndPerson } from "./lib/wikipedia-scrape.mjs";
 
 const root = process.cwd();
 const outputPath = path.join(root, "data", "source", "cannes-wikipedia.json");
@@ -33,7 +34,7 @@ function getOrdinal(n) {
   return `${n}${suffix}`;
 }
 
-function parseCannesWikipedia(html, year) {
+export function parseCannesWikipedia(html, year) {
   // Robust parser for Cannes Wikipedia pages (tables and lists)
   const dom = new JSDOM(html);
   const doc = dom.window.document;
@@ -92,7 +93,7 @@ function parseCannesWikipedia(html, year) {
     };
   }
 
-  function addRecord(category, result, title) {
+  function addRecord(category, result, title, personName) {
     const cleanTitle = cleanText(title)
       .replace(/^[-:*\s]+/, "")
       .replace(/\s*\([^)]*\)\s*$/, "")
@@ -105,6 +106,10 @@ function parseCannesWikipedia(html, year) {
     const key = `${year}|${normalizedCategory}|${result}|${cleanTitle.toLowerCase()}`;
     if (dedupe.has(key)) return;
     dedupe.add(key);
+
+    const role = personName ? classifyPersonRole(normalizedCategory) : null;
+    const directors = role === "director" && personName ? [personName] : [];
+    const credits = role && role !== "director" && personName ? [{ name: personName, role }] : [];
 
     records.push({
       year,
@@ -123,52 +128,58 @@ function parseCannesWikipedia(html, year) {
         posterUrl: "",
         runtimeMinutes: 0
       },
-      directors: []
+      directors,
+      credits
     });
   }
 
+  // Was `text.split(/:\s+/, 2)`, which does NOT stop at the first match — it
+  // computes the FULL split array (every colon in the text) and only then
+  // truncates to 2 elements, silently mis-slicing any item whose title or
+  // director text itself contains a colon. A regex match anchored to the
+  // first "label: rest" boundary avoids that (same fix already applied to
+  // wikipedia-scrape.mjs's parseCategoryPrefixedListItem).
   function parseAwardsListItem(li, sectionCategory) {
     const text = cleanText(li.textContent);
     if (!text) return;
 
-    const parts = text.split(/:\s+/, 2);
-    const category = parts.length === 2 ? parts[0] : sectionCategory;
-    const rhs = parts.length === 2 ? parts[1] : text;
+    const colonMatch = text.match(/^(.+?):\s+(.+)$/s);
+    const category = colonMatch ? colonMatch[1] : sectionCategory;
+    const rhs = colonMatch ? colonMatch[2] : text;
 
     const forMatch = rhs.match(/\bfor\b\s+(.+)$/i);
     const byMatch = rhs.match(/^(.+?)\s+\bby\b\s+/i);
 
     let title = "";
+    let personName = null;
     if (forMatch) {
       title = forMatch[1];
+      personName = rhs.slice(0, forMatch.index).trim();
     } else if (byMatch) {
       title = byMatch[1];
+      personName = rhs.slice(byMatch[0].length).trim();
     } else {
-      const links = Array.from(li.querySelectorAll("a"))
-        .map(a => cleanText(a.textContent))
-        .filter(Boolean);
-      title = links.length > 0 ? links[links.length - 1] : rhs;
+      const extracted = extractTitleAndPerson(li, null);
+      title = extracted.title ?? rhs;
+      personName = extracted.personName;
     }
 
-    addRecord(category, "winner", title);
+    addRecord(category, "winner", title, personName);
   }
 
   function parseNomineeListItem(li, sectionCategory) {
     const text = cleanText(li.textContent);
     if (!text) return;
 
-    const links = Array.from(li.querySelectorAll("a"))
-      .map(a => cleanText(a.textContent))
-      .filter(Boolean);
-
+    const extracted = extractTitleAndPerson(li, null);
     const fallback = text
       .replace(/^[-:*\s]+/, "")
       .replace(/\s+directed by\s+.*/i, "")
       .replace(/\s+by\s+.*/i, "")
       .trim();
 
-    const title = links.length > 0 ? links[0] : fallback;
-    addRecord(sectionCategory, "nominee", title);
+    const title = extracted.title ?? fallback;
+    addRecord(sectionCategory, "nominee", title, extracted.personName);
   }
 
   function parseTable(table, sectionCategory, isAwardsSection) {
@@ -187,15 +198,19 @@ function parseCannesWikipedia(html, year) {
       if (cells.every(c => c.tagName === "TH")) return;
 
       let title = "";
+      let personName = null;
       if (headers.length && headers.length === cells.length) {
-        const filmIdx = headers.findIndex(h => /title|film/.test(h));
+        const filmIdx = headers.findIndex(h => /title|film|winner/.test(h));
         if (filmIdx >= 0) {
-          title = cleanText(cells[filmIdx].textContent);
+          const extracted = extractTitleAndPerson(cells[filmIdx], null);
+          title = extracted.title ?? cleanText(cells[filmIdx].textContent);
+          personName = extracted.personName;
         }
       }
       if (!title) {
-        const firstLink = cells[0].querySelector("a");
-        title = firstLink ? cleanText(firstLink.textContent) : cleanText(cells[0].textContent);
+        const extracted = extractTitleAndPerson(cells[0], null);
+        title = extracted.title ?? cleanText(cells[0].textContent);
+        personName = personName ?? extracted.personName;
       }
       if (!title) return;
 
@@ -207,9 +222,9 @@ function parseCannesWikipedia(html, year) {
             category = cleanText(cells[awardIdx].textContent) || sectionCategory;
           }
         }
-        addRecord(category, "winner", title);
+        addRecord(category, "winner", title, personName);
       } else {
-        addRecord(sectionCategory, "nominee", title);
+        addRecord(sectionCategory, "nominee", title, personName);
       }
     });
   }

@@ -4,11 +4,16 @@ import type { ReactNode } from "react";
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { Poster } from "./poster";
+import { simplifyCategoryLabel } from "@/lib/category-labels";
+import { buildMissingInfoIssueUrl } from "@/lib/missing-info";
 import {
   filterNominations,
+  getCategoryOptions,
   getFacetOptions,
+  groupRowsByFilm,
   type FestivalFilterRow,
   type FestivalFilterState,
+  type FestivalMovieGroup,
   type RuntimeBucket
 } from "@/lib/festival-filters";
 
@@ -30,20 +35,46 @@ const RUNTIME_OPTIONS: { value: RuntimeBucket; label: string }[] = [
 // only after client hydration. Plain state keeps the grid part of the
 // static output and avoids that trap, at the cost of filter state not
 // surviving a full page reload or being independently bookmarkable.
-export function FestivalFilters({ rows }: { rows: FestivalFilterRow[] }) {
+export function FestivalFilters({
+  rows,
+  festivalId,
+  festivalName
+}: {
+  rows: FestivalFilterRow[];
+  festivalId: string;
+  festivalName: string;
+}) {
   const [filters, setFilters] = useState<FestivalFilterState>({});
   const [isOpen, setIsOpen] = useState(true);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const facets = useMemo(() => getFacetOptions(rows), [rows]);
-  const filtered = useMemo(() => filterNominations(rows, filters), [rows, filters]);
+  const categoryOptions = useMemo(() => getCategoryOptions(rows, filters), [rows, filters]);
+
+  // Every movie's card, built once from the full row set. Filters (below)
+  // only decide which of these groups are visible — a card's badges and
+  // category list always reflect the movie's complete record at this
+  // festival, not just the rows that happen to match the active filters.
+  const allGroups = useMemo(() => groupRowsByFilm(rows), [rows]);
+  const filteredRows = useMemo(() => filterNominations(rows, filters), [rows, filters]);
+  const qualifyingFilmIds = useMemo(() => new Set(filteredRows.map((row) => row.filmId)), [filteredRows]);
+  const filtered = useMemo(() => allGroups.filter((group) => qualifyingFilmIds.has(group.filmId)), [allGroups, qualifyingFilmIds]);
+
   const visible = filtered.slice(0, visibleCount);
   const useCountryPills = facets.countries.length <= COUNTRY_PILL_THRESHOLD;
-  const hasActiveFilters = Boolean(filters.result || filters.runtime || filters.year !== undefined || filters.country);
+  const hasActiveFilters = Boolean(
+    filters.result || filters.runtime || filters.year !== undefined || filters.country || (filters.categories && filters.categories.length > 0)
+  );
 
   function updateFilters(next: FestivalFilterState) {
     setVisibleCount(PAGE_SIZE);
     setFilters(next);
+  }
+
+  function toggleCategory(category: string) {
+    const current = filters.categories ?? [];
+    const next = current.includes(category) ? current.filter((entry) => entry !== category) : [...current, category];
+    updateFilters({ ...filters, categories: next.length > 0 ? next : undefined });
   }
 
   return (
@@ -61,7 +92,7 @@ export function FestivalFilters({ rows }: { rows: FestivalFilterRow[] }) {
             Filters
           </button>
           <p className="meta text-xs text-bone/60">
-            {filtered.length} of {rows.length} records
+            {filtered.length} of {allGroups.length} movies
           </p>
         </div>
 
@@ -72,12 +103,43 @@ export function FestivalFilters({ rows }: { rows: FestivalFilterRow[] }) {
                 All
               </Pill>
               <Pill active={filters.result === "winner"} onClick={() => updateFilters({ ...filters, result: "winner" })}>
-                Winners
+                Winners only
               </Pill>
               <Pill active={filters.result === "nominee"} onClick={() => updateFilters({ ...filters, result: "nominee" })}>
-                Nominees
+                Nominations only
               </Pill>
             </FilterGroup>
+
+            <div>
+              <div className="flex items-center justify-between gap-3">
+                <p className="meta text-xs text-bone/60">Category</p>
+                {filters.categories && filters.categories.length > 0 ? (
+                  <button
+                    type="button"
+                    onClick={() => updateFilters({ ...filters, categories: undefined })}
+                    className="focus-ring meta text-xs text-gold underline decoration-gold/70 underline-offset-4"
+                  >
+                    All categories
+                  </button>
+                ) : null}
+              </div>
+              <div className="mt-2 flex max-h-48 flex-wrap gap-2 overflow-y-auto rounded-md border border-bone/10 bg-obsidian/40 p-2">
+                {categoryOptions.length === 0 ? (
+                  <p className="meta px-1 py-1 text-xs text-bone/50">No categories match the current filters</p>
+                ) : (
+                  categoryOptions.map((category) => (
+                    <Pill
+                      key={category}
+                      active={Boolean(filters.categories?.includes(category))}
+                      onClick={() => toggleCategory(category)}
+                      title={category}
+                    >
+                      {simplifyCategoryLabel(category, festivalId)}
+                    </Pill>
+                  ))
+                )}
+              </div>
+            </div>
 
             <FilterGroup label="Runtime">
               <Pill active={!filters.runtime} onClick={() => updateFilters({ ...filters, runtime: undefined })}>
@@ -154,7 +216,7 @@ export function FestivalFilters({ rows }: { rows: FestivalFilterRow[] }) {
 
       {filtered.length === 0 ? (
         <div className="texture mt-8 rounded-xl border border-bone/15 bg-charcoal/60 p-10 text-center">
-          <p className="meta text-xs text-bone/60">No records match the selected filters</p>
+          <p className="meta text-xs text-bone/60">No movies match the selected filters</p>
           <button
             type="button"
             onClick={() => updateFilters({})}
@@ -166,8 +228,8 @@ export function FestivalFilters({ rows }: { rows: FestivalFilterRow[] }) {
       ) : (
         <>
           <section className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {visible.map((row) => (
-              <FestivalResultCard key={row.nominationId} row={row} />
+            {visible.map((group) => (
+              <FestivalMovieCard key={group.filmId} group={group} festivalId={festivalId} festivalName={festivalName} />
             ))}
           </section>
 
@@ -197,12 +259,13 @@ function FilterGroup({ label, children }: { label: string; children: ReactNode }
   );
 }
 
-function Pill({ active, onClick, children }: { active: boolean; onClick: () => void; children: ReactNode }) {
+function Pill({ active, onClick, children, title }: { active: boolean; onClick: () => void; children: ReactNode; title?: string }) {
   return (
     <button
       type="button"
       onClick={onClick}
       aria-pressed={active}
+      title={title}
       className={`focus-ring meta rounded-full border px-3 py-1 text-xs transition ${
         active ? "border-gold/60 bg-gold/20 text-gold" : "border-bone/20 text-bone/80 hover:border-bone/40"
       }`}
@@ -213,25 +276,97 @@ function Pill({ active, onClick, children }: { active: boolean; onClick: () => v
   );
 }
 
-function FestivalResultCard({ row }: { row: FestivalFilterRow }) {
+const MAX_VISIBLE_CATEGORY_CHIPS = 3;
+
+function CategoryChip({ entry, festivalId }: { entry: { category: string; result: "winner" | "nominee" }; festivalId: string }) {
+  return (
+    <span
+      title={entry.category}
+      className={`meta rounded-full border px-2 py-0.5 text-[11px] ${
+        entry.result === "winner" ? "border-gold/50 text-gold" : "border-bone/20 text-bone/70"
+      }`}
+    >
+      {simplifyCategoryLabel(entry.category, festivalId)}
+    </span>
+  );
+}
+
+// One card per movie (see groupRowsByFilm). Card size stays bounded
+// regardless of nomination count: at most MAX_VISIBLE_CATEGORY_CHIPS
+// category chips render inline, with any remainder tucked behind a native
+// <details> disclosure rather than growing the card.
+function FestivalMovieCard({
+  group,
+  festivalId,
+  festivalName
+}: {
+  group: FestivalMovieGroup;
+  festivalId: string;
+  festivalName: string;
+}) {
+  const visibleCategories = group.categories.slice(0, MAX_VISIBLE_CATEGORY_CHIPS);
+  const overflowCategories = group.categories.slice(MAX_VISIBLE_CATEGORY_CHIPS);
+  const yearLabel = group.years.length > 1 ? `${group.years[group.years.length - 1]}–${group.years[0]}` : String(group.year);
+
+  const missingFields = [
+    !group.imdbId ? "IMDb link" : null,
+    !group.posterUrl || !group.posterUrl.startsWith("/posters/") ? "poster" : null,
+    !group.runtimeMinutes ? "runtime" : null
+  ].filter((field): field is string => field !== null);
+
   return (
     <article className="texture rounded-xl border border-bone/15 bg-charcoal/70 p-4 transition hover:-translate-y-1 hover:border-gold/60">
-      <Poster posterUrl={row.posterUrl} alt={row.title} variant="card" />
-      <p className="meta mt-3 text-xs text-bone/60">{row.year}</p>
-      <h3 className="cinematic-title mt-1 text-2xl text-bone">{row.title}</h3>
-      <p className="mt-2 text-bone/80">{row.director || "Unknown director"}</p>
-      {row.genres.length ? <p className="mt-2 text-sm text-bone/65">{row.genres.slice(0, 2).join(" / ")}</p> : null}
-      <p className="meta mt-4 text-xs text-silver">{row.category}</p>
-      <div className="mt-4 flex items-center justify-between">
-        <span className={`meta rounded-full px-3 py-1 text-xs ${row.result === "winner" ? "bg-gold/20 text-gold" : "bg-bone/10 text-bone/80"}`}>
-          {row.result}
-        </span>
-        {row.imdbId ? (
-          <Link href={`/film/${row.imdbId}`} className="focus-ring meta text-xs text-bone/90 underline decoration-bone/60 underline-offset-4">
+      <Poster posterUrl={group.posterUrl} alt={group.title} variant="card" />
+      <p className="meta mt-3 text-xs text-bone/60">{yearLabel}</p>
+      <h3 className="cinematic-title mt-1 text-2xl text-bone">{group.title}</h3>
+      <p className="mt-2 text-bone/80">{group.director || "Unknown director"}</p>
+      {group.genres.length ? <p className="mt-2 text-sm text-bone/65">{group.genres.slice(0, 2).join(" / ")}</p> : null}
+
+      <div className="mt-4 flex flex-wrap gap-2">
+        {group.winCount > 0 ? (
+          <span className="meta rounded-full bg-gold/20 px-3 py-1 text-xs text-gold">
+            {group.winCount} win{group.winCount === 1 ? "" : "s"}
+          </span>
+        ) : null}
+        {group.nomineeCount > 0 ? (
+          <span className="meta rounded-full bg-bone/10 px-3 py-1 text-xs text-bone/80">
+            {group.nomineeCount} nomination{group.nomineeCount === 1 ? "" : "s"}
+          </span>
+        ) : null}
+      </div>
+
+      <div className="mt-3 flex flex-wrap items-center gap-1.5">
+        {visibleCategories.map((entry) => (
+          <CategoryChip key={`${entry.category}-${entry.result}`} entry={entry} festivalId={festivalId} />
+        ))}
+        {overflowCategories.length > 0 ? (
+          <details className="inline-block">
+            <summary className="focus-ring meta cursor-pointer list-none rounded-full border border-bone/20 px-2 py-0.5 text-[11px] text-bone/70 hover:border-gold/60">
+              +{overflowCategories.length} more
+            </summary>
+            <div className="mt-2 flex w-full flex-wrap gap-1.5">
+              {overflowCategories.map((entry) => (
+                <CategoryChip key={`${entry.category}-${entry.result}`} entry={entry} festivalId={festivalId} />
+              ))}
+            </div>
+          </details>
+        ) : null}
+      </div>
+
+      <div className="mt-4 flex items-center justify-end">
+        {group.imdbId ? (
+          <Link href={`/film/${group.imdbId}`} className="focus-ring meta text-xs text-bone/90 underline decoration-bone/60 underline-offset-4">
             Details
           </Link>
         ) : (
-          <span className="meta text-xs text-silver">Details unavailable</span>
+          <Link
+            href={buildMissingInfoIssueUrl({ title: group.title, year: group.year, festivalName, missingFields })}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="focus-ring meta text-xs text-silver underline decoration-silver/50 underline-offset-4"
+          >
+            Suggest a correction
+          </Link>
         )}
       </div>
     </article>

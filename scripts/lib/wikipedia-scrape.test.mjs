@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { cleanText, createDeduper, detectColumnIndex, parseSimpleAwardsWikipedia } from "./wikipedia-scrape.mjs";
+import { classifyPersonRole, cleanText, createDeduper, detectColumnIndex, parseSimpleAwardsWikipedia } from "./wikipedia-scrape.mjs";
 
 describe("cleanText", () => {
   it("strips footnote markers", () => {
@@ -322,5 +322,172 @@ describe("parseSimpleAwardsWikipedia", () => {
     `);
     const records = parseSimpleAwardsWikipedia(html, 2020, config);
     expect(records).toHaveLength(0);
+  });
+
+  it("extracts the FILM (not the person) as the title for an individual-award grid category, using the italicized link — mirrors real Golden Globes 'Best Director' markup", () => {
+    // Real structure: <b><a>Person</a></b> – <i><a>Film</a></i>, with the
+    // person's name appearing FIRST in reading order. A first-link heuristic
+    // would incorrectly pick the person.
+    const html = wrapHtml(`
+      <table class="wikitable">
+        <tr>
+          <td>
+            <div><b><a href="/wiki/x">Best Director</a></b></div>
+            <ul>
+              <li><b><a href="/wiki/Paul_Thomas_Anderson">Paul Thomas Anderson</a></b> – <i><a href="/wiki/One_Battle">One Battle After Another</a></i>
+                <ul>
+                  <li><a href="/wiki/Ryan_Coogler">Ryan Coogler</a> – <i><a href="/wiki/Sinners">Sinners</a></i></li>
+                </ul>
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 2026, {
+      festivalId: "golden-globes",
+      festivalName: "Golden Globes",
+      normalizeCategory: (raw) => raw
+    });
+
+    expect(records).toHaveLength(2);
+    const winner = records.find((r) => r.result === "winner");
+    expect(winner.film.title).toBe("One Battle After Another");
+    expect(winner.directors).toEqual(["Paul Thomas Anderson"]);
+
+    const nominee = records.find((r) => r.result === "nominee");
+    expect(nominee.film.title).toBe("Sinners");
+    expect(nominee.directors).toEqual(["Ryan Coogler"]);
+  });
+
+  it("extracts the FILM as the title when the film precedes the person (older BAFTA 'Film – Person' order)", () => {
+    const html = wrapHtml(`
+      <table class="wikitable">
+        <tr>
+          <td>
+            <div><b><a href="/wiki/x">Best Direction</a></b></div>
+            <ul>
+              <li><b><i><a href="/wiki/Julia">Julia</a></i></b> – <a href="/wiki/Fred_Zinnemann">Fred Zinnemann</a></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 1978, {
+      festivalId: "bafta",
+      festivalName: "BAFTA Awards",
+      normalizeCategory: (raw) => raw
+    });
+
+    expect(records).toHaveLength(1);
+    expect(records[0].film.title).toBe("Julia");
+    expect(records[0].directors).toEqual(["Fred Zinnemann"]);
+  });
+
+  it("attaches a Best Actor nominee's name as a cast credit rather than the film title", () => {
+    const html = wrapHtml(`
+      <table class="wikitable">
+        <tr>
+          <td>
+            <div><b><a href="/wiki/x">Best Actor</a></b></div>
+            <ul>
+              <li><b><a href="/wiki/Anthony_Hopkins">Anthony Hopkins</a></b> – <i><a href="/wiki/The_Father">The Father</a></i></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 2021, {
+      festivalId: "bafta",
+      festivalName: "BAFTA Awards",
+      normalizeCategory: (raw) => raw
+    });
+
+    expect(records).toHaveLength(1);
+    expect(records[0].film.title).toBe("The Father");
+    expect(records[0].directors).toEqual([]);
+    expect(records[0].credits).toEqual([{ name: "Anthony Hopkins", role: "cast" }]);
+  });
+
+  it("does not invent a person credit for a pure film-only category (no italics ambiguity)", () => {
+    const html = wrapHtml(`
+      <table class="wikitable">
+        <tr>
+          <td>
+            <div><b><a href="/wiki/x">Best Motion Picture</a></b></div>
+            <ul>
+              <li><i><b><a href="/wiki/y">The Brutalist</a></b></i></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 2025, {
+      festivalId: "golden-globes",
+      festivalName: "Golden Globes",
+      normalizeCategory: (raw) => raw
+    });
+
+    expect(records).toHaveLength(1);
+    expect(records[0].film.title).toBe("The Brutalist");
+    expect(records[0].directors).toEqual([]);
+    expect(records[0].credits).toEqual([]);
+  });
+
+  it("extracts the film and person correctly in the classic table-row layout (header-detected film column absent, italics present)", () => {
+    const html = wrapHtml(`
+      <table class="wikitable">
+        <tr><th>Winner</th><th>Other nominees</th></tr>
+        <tr><td><a href="/wiki/Meryl">Meryl Streep</a> – <i><a href="/wiki/Sophie">Sophie's Choice</a></i></td><td></td></tr>
+      </table>
+    `);
+    const records = parseSimpleAwardsWikipedia(html, 1983, config);
+    expect(records).toHaveLength(1);
+    expect(records[0].film.title).toBe("Sophie's Choice");
+  });
+
+  it("prefers an italicized link over the raw text in the flat category-prefixed list's non-for/by fallback", () => {
+    const html = wrapHtml(`
+      <div><h3><span>Main Competition</span><span class="mw-editsection">[edit]</span></h3></div>
+      <ul>
+        <li><a href="/wiki/Best_Actor">Best Actor</a>: <a href="/wiki/Some_Actor">Some Actor</a> in <i><a href="/wiki/Some_Film">Some Film</a></i></li>
+      </ul>
+    `);
+    const records = parseSimpleAwardsWikipedia(html, 2020, config);
+    expect(records).toHaveLength(1);
+    expect(records[0].film.title).toBe("Some Film");
+  });
+});
+
+describe("classifyPersonRole", () => {
+  it("classifies directing categories as director", () => {
+    expect(classifyPersonRole("Best Director")).toBe("director");
+    expect(classifyPersonRole("Silver Bear for Best Director")).toBe("director");
+  });
+
+  it("classifies acting categories as cast", () => {
+    expect(classifyPersonRole("Best Actor")).toBe("cast");
+    expect(classifyPersonRole("Best Supporting Actress")).toBe("cast");
+  });
+
+  it("classifies writing categories as writer", () => {
+    expect(classifyPersonRole("Best Original Screenplay")).toBe("writer");
+  });
+
+  it("classifies producing categories as producer", () => {
+    expect(classifyPersonRole("Best Picture (Producer)")).toBe("producer");
+  });
+
+  it("prioritizes director over other terms when a category name combines both", () => {
+    expect(classifyPersonRole("Best Directing and Screenwriting")).toBe("director");
+  });
+
+  it("returns null for a film-scoped category with no person role", () => {
+    expect(classifyPersonRole("Best Picture")).toBeNull();
+    expect(classifyPersonRole("Palme d'Or")).toBeNull();
   });
 });

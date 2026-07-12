@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { VENICE_CONFIG } from "./fetch-venice-wikipedia.mjs";
+import { VENICE_CONFIG, resolveTargetYears } from "./fetch-venice-wikipedia.mjs";
 
 describe("VENICE_CONFIG", () => {
   it("uses the festivalId consistent with the rest of the codebase", () => {
@@ -12,5 +12,24 @@ describe("VENICE_CONFIG", () => {
 
   it("passes through real category names unchanged", () => {
     expect(VENICE_CONFIG.normalizeCategory("Golden Lion")).toBe("Golden Lion");
+  });
+});
+
+describe("resolveTargetYears", () => {
+  const coverageEntry = { missingYears: [1950], weakYears: [1985] };
+
+  it("targets only coverage gap years by default", () => {
+    expect(resolveTargetYears(coverageEntry, { full: false })).toEqual([1950, 1985]);
+  });
+
+  it("targets every active year since 1932 in full mode, excluding WWII and the 1969-1979 suspension", () => {
+    const years = resolveTargetYears(coverageEntry, { full: true });
+    expect(years[0]).toBe(1932);
+    expect(years).not.toContain(1943);
+    expect(years).not.toContain(1944);
+    expect(years).not.toContain(1945);
+    expect(years).not.toContain(1975);
+    expect(years).toContain(1980);
+    expect(years).toContain(2020);
   });
 });

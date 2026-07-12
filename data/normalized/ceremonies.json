@@ -4736,6 +4736,14 @@
     "endDate": null
   },
   {
+    "id": "golden-globes-1949",
+    "festivalId": "golden-globes",
+    "year": 1949,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "locarno-1949",
     "festivalId": "locarno",
     "year": 1949,
@@ -4762,6 +4770,14 @@
   {
     "id": "cannes-1948",
     "festivalId": "cannes",
+    "year": 1948,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "golden-globes-1948",
+    "festivalId": "golden-globes",
     "year": 1948,
     "edition": null,
     "startDate": null,
@@ -4800,6 +4816,14 @@
     "endDate": null
   },
   {
+    "id": "golden-globes-1947",
+    "festivalId": "golden-globes",
+    "year": 1947,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "locarno-1947",
     "festivalId": "locarno",
     "year": 1947,
@@ -4832,6 +4856,14 @@
     "endDate": null
   },
   {
+    "id": "golden-globes-1946",
+    "festivalId": "golden-globes",
+    "year": 1946,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "locarno-1946",
     "festivalId": "locarno",
     "year": 1946,
@@ -4848,9 +4880,25 @@
     "endDate": null
   },
   {
+    "id": "golden-globes-1945",
+    "festivalId": "golden-globes",
+    "year": 1945,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "oscars-1945",
     "festivalId": "oscars",
     "year": 1945,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "golden-globes-1944",
+    "festivalId": "golden-globes",
+    "year": 1944,
     "edition": null,
     "startDate": null,
     "endDate": null
