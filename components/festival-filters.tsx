@@ -405,14 +405,13 @@ function FestivalMovieCard({
               festivalName,
               missingFields,
               internalId: group.filmId,
-              pageUrl: `/festival/${festivalId}`,
-              category: group.categories[0]?.category
+              pageUrl: `/festival/${festivalId}`
             })}
             target="_blank"
             rel="noopener noreferrer"
             className="focus-ring meta text-xs text-silver underline decoration-silver/50 underline-offset-4"
           >
-            Suggest a correction
+            Suggest a Change
           </Link>
         )}
       </div>

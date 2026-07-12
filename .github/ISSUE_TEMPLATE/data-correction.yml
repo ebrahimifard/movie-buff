@@ -1,5 +1,5 @@
 name: Data correction
-description: Report missing or incorrect information about a film, award, or nomination in the archive.
+description: Propose a correction to a film's data in the archive.
 title: "[Data correction] "
 labels: ["data-correction"]
 body:
@@ -8,12 +8,14 @@ body:
       value: |
         Thanks for helping improve the archive's accuracy.
 
-        **How this is reviewed**: this site has no database and no automated import — every
-        correction is reviewed by a maintainer against the source you cite below, then applied
-        by hand to `data/source/master-data.json` (the hand-curated seed file, which always wins
-        over the automated Wikidata/Wikipedia sources during the next data rebuild) before the
-        normal data pipeline re-runs. See `CONTRIBUTING.md` for the full process. There is no
-        automatic acceptance of submitted values — a source is required so it can be verified.
+        **How this is reviewed**: submissions for the fields listed below (IMDb ID, poster URL,
+        runtime, genres, synopsis, release year, country codes, languages) are checked
+        automatically. If validation passes, a pull request is opened and merged automatically
+        once it passes the site's tests and data-quality checks. If validation fails, you'll get
+        a comment explaining what to fix — just edit this issue and it will be re-checked.
+        Everything else ("Something else") is reviewed and applied by hand by a maintainer. See
+        `CONTRIBUTING.md` for the full process either way. **A source is always required** so the
+        change can be verified, automatically or by a human.
 
   - type: input
     id: film_title
@@ -29,16 +31,25 @@ body:
       label: Internal identifier
       description: >-
         The film's IMDb ID (e.g. tt6751668) or internal archive ID, shown in the page URL this
-        was linked from. Pre-filled automatically when reached via a "Suggest a correction" link
-        — please don't remove it, it's how a maintainer finds the exact record.
+        was linked from. Pre-filled automatically when reached via a "Suggest a Change" link —
+        please don't remove it, it's how the record is found.
     validations:
       required: true
 
-  - type: input
+  - type: dropdown
     id: festival
     attributes:
       label: Festival
-      placeholder: "e.g. Cannes Film Festival"
+      options:
+        - Academy Awards
+        - Cannes Film Festival
+        - Venice Film Festival
+        - Berlin International Film Festival
+        - Locarno Film Festival
+        - Sundance Film Festival
+        - Toronto International Film Festival
+        - BAFTA Awards
+        - Golden Globes
     validations:
       required: true
 
@@ -51,14 +62,6 @@ body:
       required: true
 
   - type: input
-    id: category
-    attributes:
-      label: Award category (if applicable)
-      placeholder: "e.g. Best Director"
-    validations:
-      required: false
-
-  - type: input
     id: page_url
     attributes:
       label: Page URL
@@ -67,34 +70,36 @@ body:
     validations:
       required: true
 
-  - type: checkboxes
-    id: affected_fields
+  - type: dropdown
+    id: field
     attributes:
-      label: What's missing or incorrect?
-      description: Select every field this correction touches.
+      label: What field is wrong?
+      description: >-
+        Only these fields can be corrected automatically. For anything else (director, cast,
+        award category, release year of an entirely new record, duplicates, etc.), pick
+        "Something else" — a maintainer will review it by hand.
       options:
-        - label: IMDb link
-        - label: Poster
-        - label: Runtime
-        - label: Genres
-        - label: Synopsis
-        - label: Director
-        - label: Cast / other credited person
-        - label: Release year
-        - label: Country
-        - label: Award category name
-        - label: Something else (describe below)
+        - IMDb ID
+        - Poster URL
+        - Runtime (minutes)
+        - Genres
+        - Synopsis
+        - Release year
+        - Country codes
+        - Languages
+        - Something else (manual review required)
     validations:
       required: true
 
-  - type: textarea
-    id: correction
+  - type: input
+    id: new_value
     attributes:
-      label: Suggested correction
-      description: The correct value(s) for the field(s) you selected above.
-      placeholder: |
-        e.g. Runtime should be 132 minutes, not 0.
-        e.g. Director credit is missing: Jane Doe.
+      label: Proposed new value
+      description: >-
+        The correct value for the field selected above. For Genres, Country codes, or Languages,
+        separate multiple values with commas (e.g. "Drama, War" or "US, FR"). If you picked
+        "Something else", briefly describe the change here instead — a maintainer will read it.
+      placeholder: "e.g. 132"
     validations:
       required: true
 
@@ -103,10 +108,11 @@ body:
     attributes:
       label: Source
       description: >-
-        A link or citation a maintainer can use to verify this correction. Acceptable sources:
-        IMDb, the official festival website, Wikipedia (with its own citation), or another
-        primary/reputable source. Submissions without a checkable source may sit unreviewed —
-        this is what keeps the archive from filling up with unverifiable guesses.
+        A link or citation used to verify this correction. Acceptable sources: IMDb, the
+        official festival website, Wikipedia (with its own citation), or another
+        primary/reputable source. Submissions without a checkable source will fail validation
+        (or, for manual submissions, are unlikely to be reviewed) — this is what keeps the
+        archive from filling up with unverifiable guesses.
       placeholder: "https://www.imdb.com/title/... or https://www.festival-site.org/..."
     validations:
       required: true

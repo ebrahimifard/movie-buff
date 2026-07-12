@@ -47,27 +47,24 @@ export default async function FilmPage({ params }: FilmPageProps) {
           <h1 className="cinematic-title mt-2 text-5xl text-bone">{film.title}</h1>
           <p className="mt-3 text-bone/80">{film.synopsis || "No synopsis available."}</p>
 
-          {missingFields.length > 0 ? (
-            <div className="mt-4 rounded-lg border border-oxide/50 bg-oxide/10 p-4">
-              <p className="meta text-xs text-bone/70">Missing: {missingFields.join(", ")}</p>
-              <Link
-                href={buildMissingInfoIssueUrl({
-                  title: film.title,
-                  year: film.releaseYear,
-                  festivalName: festivalGroups[0]?.festivalName ?? "Unknown festival",
-                  missingFields,
-                  internalId: film.id,
-                  pageUrl: `/film/${imdbId}`,
-                  category: festivalGroups[0]?.entries[0]?.category
-                })}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="focus-ring meta mt-1 inline-block text-xs text-gold underline decoration-gold/70 underline-offset-4"
-              >
-                Suggest a correction
-              </Link>
-            </div>
-          ) : null}
+          <div className="mt-4 rounded-lg border border-oxide/50 bg-oxide/10 p-4">
+            {missingFields.length > 0 ? <p className="meta text-xs text-bone/70">Missing: {missingFields.join(", ")}</p> : null}
+            <Link
+              href={buildMissingInfoIssueUrl({
+                title: film.title,
+                year: film.releaseYear,
+                festivalName: festivalGroups[0]?.festivalName ?? "Unknown festival",
+                missingFields,
+                internalId: film.id,
+                pageUrl: `/film/${imdbId}`
+              })}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="focus-ring meta mt-1 inline-block text-xs text-gold underline decoration-gold/70 underline-offset-4"
+            >
+              Suggest a Change
+            </Link>
+          </div>
 
           <dl className="mt-8 grid gap-4 sm:grid-cols-2">
             <div className="rounded-lg border border-bone/15 bg-charcoal/60 p-4">

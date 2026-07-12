@@ -2,10 +2,11 @@ import Link from "next/link";
 import { Poster } from "./poster";
 import { getFilmByImdbId } from "@/lib/data";
 import type { Nomination } from "@/lib/data";
+import { buildMissingInfoIssueUrl, getMissingFields } from "@/lib/missing-info";
 
 export type FilmCardData = Pick<
   Nomination,
-  "title" | "director" | "year" | "category" | "result" | "imdbId" | "festivalName"
+  "title" | "director" | "year" | "category" | "result" | "imdbId" | "festivalName" | "filmId"
 >;
 
 export function FilmCard({
@@ -15,9 +16,11 @@ export function FilmCard({
   category,
   result,
   imdbId,
-  festivalName
+  festivalName,
+  filmId
 }: FilmCardData) {
   const film = imdbId ? getFilmByImdbId(imdbId) : undefined;
+  const missingFields = film ? getMissingFields(film) : [];
 
   return (
     <article className="texture rounded-xl border border-bone/15 bg-charcoal/70 p-4 transition hover:-translate-y-1 hover:border-gold/60">
@@ -55,6 +58,21 @@ export function FilmCard({
           ) : (
             <span className="meta text-xs text-silver">IMDb unavailable</span>
           )}
+          <Link
+            href={buildMissingInfoIssueUrl({
+              title,
+              year,
+              festivalName,
+              missingFields,
+              internalId: filmId,
+              pageUrl: imdbId ? `/film/${imdbId}` : undefined
+            })}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="focus-ring meta text-xs text-silver underline decoration-silver/50 underline-offset-4"
+          >
+            Suggest a Change
+          </Link>
         </div>
       </div>
     </article>

@@ -1,0 +1,190 @@
+name: Process Data Correction
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: process-correction-${{ github.event.issue.number }}
+  cancel-in-progress: true
+
+jobs:
+  process:
+    # Only structured "data-correction" issues, and only while still open —
+    # editing a closed issue (e.g. one already merged) must not reprocess it.
+    if: contains(github.event.issue.labels.*.name, 'data-correction') && github.event.issue.state == 'open'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      # Written straight to a file via the Node fs API, never interpolated
+      # into a shell string — the issue body is untrusted input and must
+      # never be treated as anything but data.
+      - name: Save issue body to a file
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            fs.writeFileSync(`${process.env.RUNNER_TEMP}/issue-body.md`, context.payload.issue.body || '');
+
+      # Parses + validates the submission and, if valid, patches
+      # data/source/master-data.json in place. Never executes anything from
+      # the issue body — it's read as plain text and matched against a fixed
+      # set of labels/formats. continue-on-error lets later steps branch on
+      # steps.import.outcome instead of aborting the whole job.
+      - name: Validate and apply correction
+        id: import
+        continue-on-error: true
+        run: |
+          node scripts/import-correction.mjs \
+            --body-file "$RUNNER_TEMP/issue-body.md" \
+            --issue-number "${{ github.event.issue.number }}" \
+            > "$RUNNER_TEMP/import-output.log" 2>&1
+
+      - name: Run data pipeline
+        id: pipeline
+        if: steps.import.outcome == 'success'
+        continue-on-error: true
+        run: |
+          npm run data:merge
+          npm run data:build
+          npm run data:posters
+          npm run data:validate
+          npm run data:coverage
+          npm run data:update
+
+      # Hard enforcement of "automatic changes must be limited to the
+      # movie-data files" — independent of what import-correction.mjs is
+      # supposed to touch, this checks what actually changed on disk.
+      - name: Scope guard
+        id: scope_guard
+        if: steps.import.outcome == 'success' && steps.pipeline.outcome == 'success'
+        continue-on-error: true
+        run: |
+          allowed='^(data/source/master-data\.json|data/source/master-data\.generated\.json|data/normalized/[^/]+\.json|public/posters/.*)$'
+          bad=0
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            if ! echo "$file" | grep -Eq "$allowed"; then
+              echo "::error::Unexpected file changed outside the movie-data allow-list: $file"
+              bad=1
+            fi
+          done <<< "$(git diff --name-only)"
+          [ "$bad" -eq 0 ]
+
+      # Same checks verify-build.yml runs on a normal PR — run inline here
+      # because GITHUB_TOKEN-authored PRs don't trigger other
+      # `pull_request` workflows, so verify-build.yml would never fire on
+      # this bot's own PR otherwise.
+      - name: Run checks
+        id: checks
+        if: steps.import.outcome == 'success' && steps.pipeline.outcome == 'success' && steps.scope_guard.outcome == 'success'
+        continue-on-error: true
+        run: |
+          npm run lint
+          npx tsc --noEmit
+          npm test
+          npm run build
+
+      - name: Create pull request
+        id: create_pr
+        if: steps.import.outcome == 'success' && steps.pipeline.outcome == 'success' && steps.scope_guard.outcome == 'success' && steps.checks.outcome == 'success'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: data-correction/issue-${{ github.event.issue.number }}
+          commit-message: "data: apply correction from #${{ github.event.issue.number }}"
+          title: "data: apply correction from issue #${{ github.event.issue.number }}"
+          body: |
+            Automated data correction generated from #${{ github.event.issue.number }}.
+
+            Closes #${{ github.event.issue.number }}
+
+            Opened automatically after the submission passed validation (required
+            fields, format/type checks, duplicate/consistency checks, confirmation
+            that the referenced film exists) and the full data pipeline, test suite,
+            and build ran clean. See CONTRIBUTING.md for how to review or override
+            this.
+          labels: data-correction,automated
+          add-paths: |
+            data/source/master-data.json
+            data/source/master-data.generated.json
+            data/normalized/*.json
+            public/posters/**
+
+      # Safety valve: a maintainer can label the issue "blocked" or "hold"
+      # (before or after the PR opens) to stop it from auto-merging.
+      - name: Enable auto-merge
+        if: >-
+          steps.create_pr.outcome == 'success' && steps.create_pr.outputs.pull-request-number &&
+          !contains(github.event.issue.labels.*.name, 'blocked') &&
+          !contains(github.event.issue.labels.*.name, 'hold')
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh pr merge --auto --squash "${{ steps.create_pr.outputs.pull-request-number }}"
+
+      - name: Comment with the result
+        if: steps.create_pr.outcome == 'success' && steps.create_pr.outputs.pull-request-number
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const held = ${{ contains(github.event.issue.labels.*.name, 'blocked') || contains(github.event.issue.labels.*.name, 'hold') }};
+            const prNumber = "${{ steps.create_pr.outputs.pull-request-number }}";
+            const prUrl = "${{ steps.create_pr.outputs.pull-request-url }}";
+            const body = held
+              ? `Validation passed — opened [#${prNumber}](${prUrl}) with the proposed change, but this issue is labeled "blocked"/"hold" so it was **not** set to auto-merge. Remove the label to enable auto-merge, or merge the PR by hand.`
+              : `Validation passed — opened [#${prNumber}](${prUrl}) with the proposed change. It will merge automatically once it passes the repository's required checks and branch protection rules (if "Allow auto-merge" isn't turned on for this repo yet, a maintainer will need to merge it by hand — see CONTRIBUTING.md). This issue closes automatically when the PR merges.`;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
+
+      # Covers every way this can fail: invalid submission (import), a
+      # pipeline/validate break, an out-of-scope file change, or a failing
+      # test/build — always leaves the issue open and readable, never a
+      # silent close.
+      - name: Comment on failure
+        if: >-
+          steps.import.outcome == 'failure' || steps.pipeline.outcome == 'failure' ||
+          steps.scope_guard.outcome == 'failure' || steps.checks.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const importFailed = '${{ steps.import.outcome }}' === 'failure';
+            let body;
+            if (importFailed) {
+              const report = fs.readFileSync(`${process.env.RUNNER_TEMP}/import-output.log`, 'utf8').trim();
+              body = `Automated validation found problems with this submission:\n\n\`\`\`\n${report}\n\`\`\`\n\nEdit this issue to fix them — it will be re-checked automatically. See CONTRIBUTING.md for the list of auto-fixable fields.`;
+            } else {
+              body = "This submission passed initial validation, but building/testing the resulting change failed internally (not something you did wrong). A maintainer will need to look at the workflow run logs — see CONTRIBUTING.md for how this can be picked up by hand.";
+            }
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['needs-changes']
+            });

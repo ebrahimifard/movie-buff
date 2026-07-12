@@ -9,8 +9,7 @@ describe("buildMissingInfoIssueUrl", () => {
       festivalName: "Cannes Film Festival",
       missingFields: ["poster", "IMDb link"],
       internalId: "film:some-film-2019",
-      pageUrl: "/festival/cannes",
-      category: "Palme d'Or"
+      pageUrl: "/festival/cannes"
     });
 
     expect(url.startsWith("https://github.com/ebrahimifard/movie-buff/issues/new?")).toBe(true);
@@ -20,10 +19,8 @@ describe("buildMissingInfoIssueUrl", () => {
     expect(params.get("film_title")).toBe("Some Film");
     expect(params.get("festival")).toBe("Cannes Film Festival");
     expect(params.get("year")).toBe("2019");
-    expect(params.get("category")).toBe("Palme d'Or");
     expect(params.get("internal_id")).toBe("film:some-film-2019");
     expect(params.get("page_url")).toBe("/festival/cannes");
-    expect(params.get("correction")).toContain("poster, IMDb link");
   });
 
   it("omits optional query params entirely when not provided, rather than sending empty values", () => {
@@ -35,10 +32,8 @@ describe("buildMissingInfoIssueUrl", () => {
     });
 
     const params = new URL(url).searchParams;
-    expect(params.has("category")).toBe(false);
     expect(params.has("internal_id")).toBe(false);
     expect(params.has("page_url")).toBe(false);
-    expect(params.has("correction")).toBe(false);
   });
 });
 
