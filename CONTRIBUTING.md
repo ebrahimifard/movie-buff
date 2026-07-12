@@ -13,11 +13,12 @@ repository's [Data correction issue form](../../issues/new?template=data-correct
 pre-filled with the film's title, festival, year, its internal identifier, and the page you
 found it on.
 
-Pick the one field that's wrong from the **"What field is wrong?"** dropdown and give the
-correct value in **"Proposed new value"**. If what you're reporting isn't one of the listed
-fields (a wrong director, an incorrect award category, a duplicate record, etc.), choose
-**"Something else"** and describe it in "Proposed new value" instead — a maintainer will read
-and apply it by hand.
+Fill in only the field(s) that are actually wrong — leave the rest blank — and give the
+correct value(s). You can correct several fields on the same film in one submission (e.g.
+runtime and genres together). If what you're reporting isn't one of the listed fields (an
+incorrect award category, a duplicate record, cast credits, etc.), describe it under
+**"Other"** instead — a maintainer will read and apply it by hand. Filling in "Other" routes
+the whole submission to manual review, even if you also filled in fields above.
 
 **A source is always required**, automated or not. Acceptable sources are IMDb, the official
 festival website, Wikipedia (with its own citation), or another primary/reputable reference.
@@ -31,11 +32,13 @@ without one. "I think this is wrong" without a citation won't be actioned.
 
 1. **Validate**: `scripts/import-correction.mjs` parses the issue's structured fields (never
    executes anything from the issue body — it's read as plain text) and checks required
-   fields, per-field format/type (an IMDb ID must match `tt\d+`, a URL must be `http(s)`, a
-   year/runtime must be in a plausible range, list fields must parse into non-empty items,
-   etc.), that the referenced film actually exists in the archive, and that the change
-   wouldn't create a duplicate (e.g. an IMDb ID already used by a different film). "Something
-   else" always fails validation on purpose — it's how it's routed to manual review.
+   fields, per-field format/type on every field you actually filled in (an IMDb ID must match
+   `tt\d+`, a URL must be `http(s)`, a year/runtime must be in a plausible range, list fields
+   must parse into non-empty items, etc.), that the referenced film actually exists in the
+   archive, and that none of the changes would create a duplicate (e.g. an IMDb ID already
+   used by a different film). A non-blank "Other" always fails validation on purpose — it's
+   how a submission is routed to manual review, even alongside other filled-in fields; a
+   submission with nothing filled in at all also fails ("no changes were proposed").
    - **If validation fails**: you get a comment explaining exactly what to fix, and the
      `needs-changes` label. Edit the issue and it's re-checked automatically — no need to
      open a new one.
@@ -55,7 +58,7 @@ without one. "I think this is wrong" without a citation won't be actioned.
    normal PR (run inline here because a bot-authored PR doesn't trigger other workflows on
    GitHub).
 5. **Pull request**: only if every step above passed, a PR is opened (never a direct push to
-   `main`) with the single field change, referencing the issue.
+   `main`) with the requested field change(s), referencing the issue.
 6. **Auto-merge**: the PR is set to merge automatically via `gh pr merge --auto`, which
    respects this repository's branch protection and required checks/reviews rather than
    bypassing them. The issue closes automatically when the PR merges.
@@ -65,11 +68,12 @@ turned on (Settings → General). If it isn't, the PR still opens (fully auditab
 tested) — a maintainer just has to click merge instead of it happening on its own.
 
 **Configuration**: the auto-fixable fields are IMDb ID, poster URL, runtime, genres,
-synopsis, release year, country codes, and languages — defined in both the issue form's
-"What field is wrong?" dropdown and `FIELD_MAP` in `scripts/import-correction.mjs`. To add a
-new one: add a dropdown option to `.github/ISSUE_TEMPLATE/data-correction.yml` and a matching
-entry to `FIELD_MAP` with a `validate`/`parse` pair — `scripts/import-correction.test.mjs`
-checks the two stay in sync and will fail if they don't.
+synopsis, release year, country codes, languages, and director(s) — each its own optional
+field on the issue form, matched by label to `FIELD_MAP` in `scripts/import-correction.mjs`.
+To add a new one: add an input to `.github/ISSUE_TEMPLATE/data-correction.yml` with a `label`
+and a matching entry to `FIELD_MAP` (same label, plus `scope: "film"` or `"record"`, a
+`validate`, and a `parse`) — `scripts/import-correction.test.mjs` checks the two stay in sync
+and will fail if they don't.
 
 ### Manually reviewing or overriding a submission
 
@@ -98,10 +102,10 @@ checks the two stay in sync and will fail if they don't.
 This stays manual for anything outside the fixed, auto-fixable field list on purpose: the
 archive's whole design principle (see `ARCHITECTURE.md`'s merge-precedence notes) is that
 hand-curated seed data is trusted precisely *because* it's been checked — automatically
-importing an unbounded range of unverified issue submissions (new records, director/cast
-changes, category renames, duplicate merges) would undermine that guarantee for every other
+importing an unbounded range of unverified issue submissions (new records, cast changes,
+award category renames, duplicate merges) would undermine that guarantee for every other
 record in the dataset. The automated path only ever touches a narrow, mechanically-verifiable
-set of scalar/array film fields for exactly this reason.
+set of scalar/array fields for exactly this reason.
 
 ### Why the internal identifier matters
 

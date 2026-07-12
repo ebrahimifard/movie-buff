@@ -63,12 +63,13 @@ Each film record additionally contains:
 ## Reporting a Data Correction
 
 Every movie card and film page has a **"Suggest a Change"** link — it opens a structured,
-pre-filled GitHub issue. Corrections to a fixed set of film fields (IMDb ID, poster, runtime,
-genres, synopsis, release year, country, language) are validated and turned into a pull
-request automatically by `.github/workflows/process-correction.yml`, which merges once it
-passes the site's tests and data-quality checks; anything else is reviewed and applied by
-hand. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full workflow, required permissions, and
-how a maintainer can review or override a submission.
+pre-filled GitHub issue where you fill in only the field(s) that are wrong (IMDb ID, poster,
+runtime, genres, synopsis, release year, country, language, director — any combination in one
+submission). These are validated and turned into a pull request automatically by
+`.github/workflows/process-correction.yml`, which merges once it passes the site's tests and
+data-quality checks; anything else goes under "Other" and is reviewed and applied by hand. See
+[CONTRIBUTING.md](CONTRIBUTING.md) for the full workflow, required permissions, and how a
+maintainer can review or override a submission.
 
 ## Local Development
 

@@ -11,23 +11,16 @@ const nominationsPath = path.join(root, "data", "normalized", "nominations.json"
 const festivalsPath = path.join(root, "data", "normalized", "festivals.json");
 
 const CURRENT_YEAR = new Date().getFullYear();
-const MANUAL_REVIEW_OPTION = "Something else (manual review required)";
 
-// The exact `label:` values in .github/ISSUE_TEMPLATE/data-correction.yml,
-// in the order GitHub renders them as "### <label>" headers in the issue
-// body. Keep this in sync with the template — the consistency test below
-// checks the "What field is wrong?" options against FIELD_MAP, but the
-// labels themselves aren't machine-checked against the YAML.
-const FORM_LABELS = [
-  "Film title",
-  "Internal identifier",
-  "Festival",
-  "Year",
-  "Page URL",
-  "What field is wrong?",
-  "Proposed new value",
-  "Source"
-];
+// Labels that must always be filled in — they're how the target film is
+// located, independent of which (if any) fields are being corrected.
+const REQUIRED_LABELS = ["Film title", "Internal identifier", "Festival", "Year", "Page URL", "Source"];
+
+// A non-blank "Other" always routes the whole submission to manual review,
+// even if some of the fields in FIELD_MAP were also filled in — never
+// partially auto-apply while also flagging something else for a human on
+// the same issue.
+const OTHER_LABEL = "Other";
 
 // Parses the rendered markdown body of a GitHub Issue Form submission
 // ("### Label\n\nvalue\n\n### Next label\n\n...") into a plain object keyed
@@ -82,7 +75,7 @@ function isValidReleaseYear(value) {
 
 function isValidStringList(value) {
   const items = parseCommaList(value);
-  return items.length > 0 && items.every((item) => item.length > 0 && item.length <= 40);
+  return items.length > 0 && items.every((item) => item.length > 0 && item.length <= 60);
 }
 
 function isValidCountryCodeList(value) {
@@ -95,49 +88,68 @@ function isValidSynopsis(value) {
   return trimmed.length >= 10 && trimmed.length <= 2000;
 }
 
-// Maps each "What field is wrong?" dropdown option (except the manual-review
-// escape hatch) to how its proposed value is validated and parsed into the
-// shape master-data.json's `film` sub-object expects. Adding a new
-// auto-fixable field is: add an option to the YAML dropdown, add an entry
-// here — the test suite's YAML-consistency check will catch a mismatch.
+// Maps each optional issue-form field (by its exact label) to how its value
+// is validated/parsed and where it's applied on a master-data.json seed
+// record: `scope: "film"` patches `record.film[key]`; `scope: "record"`
+// patches `record[key]` directly (currently only "Director(s)" — a plain
+// string array on the seed record itself, same shape as genres/languages;
+// no people.json/Person-id resolution needed here, that's already handled
+// downstream by resolvePersonId in build-comprehensive-data.mjs). Adding a
+// new auto-fixable field is: add the input to the YAML template, add an
+// entry here — the test suite's YAML-consistency check will catch a
+// mismatch.
 export const FIELD_MAP = {
   "IMDb ID": {
-    filmKey: "imdbId",
+    scope: "film",
+    key: "imdbId",
     validate: isValidImdbId,
     parse: (value) => value.trim()
   },
   "Poster URL": {
-    filmKey: "posterUrl",
+    scope: "film",
+    key: "posterUrl",
     validate: isValidHttpUrl,
     parse: (value) => value.trim()
   },
   "Runtime (minutes)": {
-    filmKey: "runtimeMinutes",
+    scope: "film",
+    key: "runtimeMinutes",
     validate: isValidRuntime,
     parse: (value) => Number(value.trim())
   },
   Genres: {
-    filmKey: "genres",
+    scope: "film",
+    key: "genres",
     validate: isValidStringList,
     parse: parseCommaList
   },
   Synopsis: {
-    filmKey: "synopsis",
+    scope: "film",
+    key: "synopsis",
     validate: isValidSynopsis,
     parse: (value) => value.trim()
   },
   "Release year": {
-    filmKey: "releaseYear",
+    scope: "film",
+    key: "releaseYear",
     validate: isValidReleaseYear,
     parse: (value) => Number(value.trim())
   },
   "Country codes": {
-    filmKey: "countryCodes",
+    scope: "film",
+    key: "countryCodes",
     validate: isValidCountryCodeList,
     parse: (value) => parseCommaList(value).map((code) => code.toUpperCase())
   },
   Languages: {
-    filmKey: "languages",
+    scope: "film",
+    key: "languages",
+    validate: isValidStringList,
+    parse: parseCommaList
+  },
+  "Director(s)": {
+    scope: "record",
+    key: "directors",
     validate: isValidStringList,
     parse: parseCommaList
   }
@@ -190,15 +202,18 @@ export function findTargetFilm(payload, { films, nominations, festivals }) {
   return { film, nominationsForFilm: nominations.filter((nomination) => nomination.filmId === filmId) };
 }
 
-// Validates a parsed submission against required-field, format/type, and
-// duplicate/consistency rules. Never touches the filesystem. Returns
-// { valid: true } or { valid: false, problems: string[] } — "Something
-// else" submissions are always invalid here (by design: they're routed to
-// manual review, not silently rejected — see the problems message).
+// Validates a parsed submission against required-field, per-field
+// format/type, and duplicate/consistency rules. Never touches the
+// filesystem. Returns { valid: true, changes, target } or
+// { valid: false, problems: string[] } — any submission with "Other"
+// filled in is always invalid here (by design: it's routed to manual
+// review, not silently rejected — see the problems message), and a
+// submission with none of FIELD_MAP's fields filled in is rejected too
+// (nothing to do).
 export function validateSubmission(payload, { films, nominations, festivals }) {
   const problems = [];
 
-  for (const label of FORM_LABELS) {
+  for (const label of REQUIRED_LABELS) {
     if (!payload[label]) {
       problems.push(`"${label}" is required but was left blank.`);
     }
@@ -207,24 +222,13 @@ export function validateSubmission(payload, { films, nominations, festivals }) {
     return { valid: false, problems };
   }
 
-  const field = payload["What field is wrong?"];
-  if (field === MANUAL_REVIEW_OPTION) {
+  if (payload[OTHER_LABEL]) {
     return {
       valid: false,
       problems: [
-        "This submission is marked \"Something else\" and needs manual review — a maintainer will read it and apply the change by hand if it checks out. No automatic pull request will be opened."
+        "This submission includes \"Other\" and needs manual review — a maintainer will read it and apply the change by hand if it checks out. No automatic pull request will be opened."
       ]
     };
-  }
-
-  const fieldConfig = FIELD_MAP[field];
-  if (!fieldConfig) {
-    return { valid: false, problems: [`"${field}" is not a recognized field.`] };
-  }
-
-  const rawValue = payload["Proposed new value"];
-  if (!fieldConfig.validate(rawValue)) {
-    problems.push(`"${rawValue}" is not a valid value for "${field}".`);
   }
 
   if (!isValidReleaseYear(payload.Year)) {
@@ -235,6 +239,23 @@ export function validateSubmission(payload, { films, nominations, festivals }) {
     problems.push('"Source" must be a checkable http(s) link (a plain citation without a URL cannot be verified automatically).');
   }
 
+  const changes = [];
+  for (const [label, config] of Object.entries(FIELD_MAP)) {
+    const rawValue = payload[label];
+    if (!rawValue) {
+      continue;
+    }
+    if (!config.validate(rawValue)) {
+      problems.push(`"${rawValue}" is not a valid value for "${label}".`);
+      continue;
+    }
+    changes.push({ label, config, value: config.parse(rawValue) });
+  }
+
+  if (changes.length === 0) {
+    problems.push('No changes were proposed — fill in at least one field, or describe the change under "Other".');
+  }
+
   const target = findTargetFilm(payload, { films, nominations, festivals });
   if (!target) {
     problems.push(
@@ -242,11 +263,15 @@ export function validateSubmission(payload, { films, nominations, festivals }) {
     );
   }
 
-  if (target && field === "IMDb ID") {
-    const newImdbId = fieldConfig.parse(rawValue);
-    const conflict = films.find((film) => film.imdbId === newImdbId && film.id !== target.film.id);
-    if (conflict) {
-      problems.push(`IMDb ID "${newImdbId}" already belongs to a different film in the archive ("${conflict.title}") — this would create a duplicate.`);
+  if (target) {
+    const imdbChange = changes.find((change) => change.label === "IMDb ID");
+    if (imdbChange) {
+      const conflict = films.find((film) => film.imdbId === imdbChange.value && film.id !== target.film.id);
+      if (conflict) {
+        problems.push(
+          `IMDb ID "${imdbChange.value}" already belongs to a different film in the archive ("${conflict.title}") — this would create a duplicate.`
+        );
+      }
     }
   }
 
@@ -254,7 +279,7 @@ export function validateSubmission(payload, { films, nominations, festivals }) {
     return { valid: false, problems };
   }
 
-  return { valid: true, field, fieldConfig, newValue: fieldConfig.parse(rawValue), target };
+  return { valid: true, changes, target };
 }
 
 // Builds the plan for what to change in master-data.json: patch every
@@ -288,20 +313,34 @@ export function planCorrection(masterData, target) {
   return { existingSeedIndexes, missingCombos };
 }
 
-// Pure: returns a new master-data object with the requested field patched
-// onto every already-covered seed record, plus one freshly constructed seed
-// record per previously-uncovered nomination (see planCorrection). Never
-// mutates its inputs.
-export function applyCorrection(masterData, target, plan, fieldConfig, newValue) {
-  const records = masterData.records.map((record, index) => {
-    if (!plan.existingSeedIndexes.includes(index)) {
-      return record;
+// Applies every change in `changes` to a single record, returning a new
+// object (never mutates `record`). `scope: "film"` changes patch
+// `film[key]`; `scope: "record"` changes patch the top-level record itself
+// (currently only `directors`).
+function applyChangesToRecord(record, changes) {
+  const film = { ...record.film };
+  const top = {};
+  for (const change of changes) {
+    if (change.config.scope === "film") {
+      film[change.config.key] = change.value;
+    } else {
+      top[change.config.key] = change.value;
     }
-    return { ...record, film: { ...record.film, [fieldConfig.filmKey]: newValue } };
-  });
+  }
+  return { ...record, ...top, film };
+}
+
+// Pure: returns a new master-data object with every requested change
+// applied to every already-covered seed record, plus one freshly
+// constructed seed record per previously-uncovered nomination (see
+// planCorrection). Never mutates its inputs.
+export function applyCorrection(masterData, target, plan, changes) {
+  const records = masterData.records.map((record, index) =>
+    plan.existingSeedIndexes.includes(index) ? applyChangesToRecord(record, changes) : record
+  );
 
   for (const nomination of plan.missingCombos) {
-    records.push({
+    const baseRecord = {
       year: nomination.year,
       festivalId: nomination.festivalId,
       category: nomination.category,
@@ -315,11 +354,11 @@ export function applyCorrection(masterData, target, plan, fieldConfig, newValue)
         languages: target.film.languages,
         genres: target.film.genres,
         synopsis: target.film.synopsis,
-        posterUrl: target.film.posterUrl,
-        [fieldConfig.filmKey]: newValue
+        posterUrl: target.film.posterUrl
       },
       directors: nomination.director ? [nomination.director] : []
-    });
+    };
+    records.push(applyChangesToRecord(baseRecord, changes));
   }
 
   return { ...masterData, records };
@@ -369,11 +408,12 @@ async function run() {
   }
 
   const plan = planCorrection(masterData, result.target);
-  const patched = applyCorrection(masterData, result.target, plan, result.fieldConfig, result.newValue);
+  const patched = applyCorrection(masterData, result.target, plan, result.changes);
   await writeFile(masterPath, `${JSON.stringify(patched, null, 2)}\n`, "utf8");
 
+  const changeSummary = result.changes.map((change) => `${change.label} -> ${JSON.stringify(change.value)}`).join(", ");
   console.log(
-    `Applied correction: ${result.field} -> ${JSON.stringify(result.newValue)} for "${result.target.film.title}" ` +
+    `Applied correction(s) for "${result.target.film.title}": ${changeSummary} ` +
       `(${plan.existingSeedIndexes.length} seed record(s) patched, ${plan.missingCombos.length} new seed record(s) added).`
   );
 }

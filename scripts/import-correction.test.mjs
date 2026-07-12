@@ -11,23 +11,24 @@ import {
   validateSubmission
 } from "./import-correction.mjs";
 
-const MANUAL_REVIEW_OPTION = "Something else (manual review required)";
-
 function buildBody(fields) {
   return Object.entries(fields)
-    .map(([label, value]) => `### ${label}\n\n${value === "" ? "_No response_" : value}`)
+    .map(([label, value]) => `### ${label}\n\n${value === "" || value === undefined ? "_No response_" : value}`)
     .join("\n\n");
 }
 
-const VALID_FIELDS = {
+const BASE_FIELDS = {
   "Film title": "Parasite",
   "Internal identifier": "tt6751668",
   Festival: "Academy Awards",
   Year: "2020",
   "Page URL": "https://example.com/film/tt6751668",
-  "What field is wrong?": "Runtime (minutes)",
-  "Proposed new value": "132",
   Source: "https://www.imdb.com/title/tt6751668/"
+};
+
+const VALID_FIELDS = {
+  ...BASE_FIELDS,
+  "Runtime (minutes)": "132"
 };
 
 const FILMS = [
@@ -57,8 +58,8 @@ describe("parseIssueForm", () => {
   });
 
   it("treats GitHub's empty-field placeholder as an empty string", () => {
-    const body = buildBody({ ...VALID_FIELDS, "Page URL": "" });
-    expect(parseIssueForm(body)["Page URL"]).toBe("");
+    const body = buildBody({ ...VALID_FIELDS, "Poster URL": "" });
+    expect(parseIssueForm(body)["Poster URL"]).toBe("");
   });
 
   it("returns an empty object for an empty body", () => {
@@ -66,29 +67,15 @@ describe("parseIssueForm", () => {
   });
 });
 
-describe("FIELD_MAP stays in sync with the issue template's dropdown", () => {
-  it("every FIELD_MAP key appears verbatim as a 'field' dropdown option in the YAML", async () => {
+describe("FIELD_MAP stays in sync with the issue template", () => {
+  it("every FIELD_MAP key appears verbatim as a field label in the YAML", async () => {
     const yamlPath = path.join(process.cwd(), ".github", "ISSUE_TEMPLATE", "data-correction.yml");
     const yamlText = await readFile(yamlPath, "utf8");
+    const labels = [...yamlText.matchAll(/^\s+label:\s*(.+?)\s*$/gm)].map((match) => match[1].replace(/^"|"$/g, ""));
 
-    const idIndex = yamlText.indexOf("id: field\n");
-    expect(idIndex).toBeGreaterThan(-1);
-    const optionsIndex = yamlText.indexOf("options:", idIndex);
-    const lines = yamlText.slice(optionsIndex).split("\n").slice(1);
-    const options = [];
-    for (const line of lines) {
-      const match = line.match(/^\s{8}- (.+)$/);
-      if (!match) break;
-      options.push(match[1].trim());
-    }
-
-    expect(options).toContain(MANUAL_REVIEW_OPTION);
+    expect(labels).toContain("Other");
     for (const key of Object.keys(FIELD_MAP)) {
-      expect(options).toContain(key);
-    }
-    // and nothing in FIELD_MAP that isn't a real option (would silently never match)
-    for (const key of Object.keys(FIELD_MAP)) {
-      expect(options.includes(key)).toBe(true);
+      expect(labels).toContain(key);
     }
   });
 });
@@ -126,11 +113,21 @@ describe("findTargetFilm", () => {
 });
 
 describe("validateSubmission", () => {
-  it("passes for a well-formed submission on an existing film", () => {
+  it("passes for a well-formed single-field submission on an existing film", () => {
     const result = validateSubmission(VALID_FIELDS, DATA);
     expect(result.valid).toBe(true);
-    expect(result.newValue).toBe(132);
+    expect(result.changes).toEqual([{ label: "Runtime (minutes)", config: FIELD_MAP["Runtime (minutes)"], value: 132 }]);
     expect(result.target.film.id).toBe("tt6751668");
+  });
+
+  it("collects multiple changes from one submission", () => {
+    const payload = { ...BASE_FIELDS, "Runtime (minutes)": "132", Genres: "Drama, Thriller", "Director(s)": "Bong Joon Ho" };
+    const result = validateSubmission(payload, DATA);
+    expect(result.valid).toBe(true);
+    expect(result.changes.map((change) => change.label).sort()).toEqual(["Director(s)", "Genres", "Runtime (minutes)"]);
+    const directorChange = result.changes.find((change) => change.label === "Director(s)");
+    expect(directorChange.value).toEqual(["Bong Joon Ho"]);
+    expect(directorChange.config.scope).toBe("record");
   });
 
   it("fails when a required field is blank", () => {
@@ -139,16 +136,25 @@ describe("validateSubmission", () => {
     expect(result.problems.some((p) => p.includes("Source"))).toBe(true);
   });
 
-  it("routes 'Something else' straight to manual review, not a generic error", () => {
-    const result = validateSubmission({ ...VALID_FIELDS, "What field is wrong?": MANUAL_REVIEW_OPTION }, DATA);
+  it("fails when nothing was actually changed", () => {
+    const result = validateSubmission(BASE_FIELDS, DATA);
+    expect(result.valid).toBe(false);
+    expect(result.problems.some((p) => p.includes("No changes were proposed"))).toBe(true);
+  });
+
+  it("routes a submission with 'Other' filled in straight to manual review, even alongside structured fields", () => {
+    const payload = { ...VALID_FIELDS, Other: "The award category name is wrong too." };
+    const result = validateSubmission(payload, DATA);
     expect(result.valid).toBe(false);
     expect(result.problems[0]).toMatch(/manual review/i);
   });
 
-  it("rejects a malformed value for the selected field", () => {
-    const result = validateSubmission({ ...VALID_FIELDS, "Proposed new value": "not-a-number" }, DATA);
+  it("collects problems across multiple invalid fields at once", () => {
+    const payload = { ...BASE_FIELDS, "Runtime (minutes)": "not-a-number", "Country codes": "USA" };
+    const result = validateSubmission(payload, DATA);
     expect(result.valid).toBe(false);
-    expect(result.problems.some((p) => p.includes("not a valid value"))).toBe(true);
+    expect(result.problems.some((p) => p.includes("Runtime (minutes)"))).toBe(true);
+    expect(result.problems.some((p) => p.includes("Country codes"))).toBe(true);
   });
 
   it("rejects an implausible year", () => {
@@ -169,39 +175,53 @@ describe("validateSubmission", () => {
   });
 
   it("rejects an IMDb ID that already belongs to a different film", () => {
-    const payload = { ...VALID_FIELDS, "What field is wrong?": "IMDb ID", "Proposed new value": "tt0111161" };
+    const payload = { ...BASE_FIELDS, "IMDb ID": "tt0111161" };
+    const result = validateSubmission(payload, DATA);
+    expect(result.valid).toBe(false);
+    expect(result.problems.some((p) => p.includes("already belongs to a different film"))).toBe(true);
+  });
+
+  it("still catches a duplicate IMDb ID when it's one of several changes", () => {
+    const payload = { ...BASE_FIELDS, "IMDb ID": "tt0111161", Genres: "Drama, Thriller" };
     const result = validateSubmission(payload, DATA);
     expect(result.valid).toBe(false);
     expect(result.problems.some((p) => p.includes("already belongs to a different film"))).toBe(true);
   });
 
   it("accepts a poster URL correction", () => {
-    const payload = { ...VALID_FIELDS, "What field is wrong?": "Poster URL", "Proposed new value": "https://image.tmdb.org/p.jpg" };
+    const payload = { ...BASE_FIELDS, "Poster URL": "https://image.tmdb.org/p.jpg" };
     expect(validateSubmission(payload, DATA).valid).toBe(true);
   });
 
   it("accepts a comma-separated genres correction", () => {
-    const payload = { ...VALID_FIELDS, "What field is wrong?": "Genres", "Proposed new value": "Drama, Thriller" };
+    const payload = { ...BASE_FIELDS, Genres: "Drama, Thriller" };
     const result = validateSubmission(payload, DATA);
     expect(result.valid).toBe(true);
-    expect(result.newValue).toEqual(["Drama", "Thriller"]);
+    expect(result.changes[0].value).toEqual(["Drama", "Thriller"]);
   });
 
   it("uppercases and validates country codes", () => {
-    const payload = { ...VALID_FIELDS, "What field is wrong?": "Country codes", "Proposed new value": "us, fr" };
+    const payload = { ...BASE_FIELDS, "Country codes": "us, fr" };
     const result = validateSubmission(payload, DATA);
     expect(result.valid).toBe(true);
-    expect(result.newValue).toEqual(["US", "FR"]);
+    expect(result.changes[0].value).toEqual(["US", "FR"]);
   });
 
   it("rejects a country code that isn't two letters", () => {
-    const payload = { ...VALID_FIELDS, "What field is wrong?": "Country codes", "Proposed new value": "USA" };
+    const payload = { ...BASE_FIELDS, "Country codes": "USA" };
     expect(validateSubmission(payload, DATA).valid).toBe(false);
   });
 
   it("rejects a synopsis that's too short to be real content", () => {
-    const payload = { ...VALID_FIELDS, "What field is wrong?": "Synopsis", "Proposed new value": "ok" };
+    const payload = { ...BASE_FIELDS, Synopsis: "ok" };
     expect(validateSubmission(payload, DATA).valid).toBe(false);
+  });
+
+  it("accepts multiple co-directors", () => {
+    const payload = { ...BASE_FIELDS, "Director(s)": "Bong Joon Ho, Jane Doe" };
+    const result = validateSubmission(payload, DATA);
+    expect(result.valid).toBe(true);
+    expect(result.changes[0].value).toEqual(["Bong Joon Ho", "Jane Doe"]);
   });
 });
 
@@ -254,17 +274,36 @@ describe("applyCorrection", () => {
     const frozenOriginal = JSON.parse(JSON.stringify(masterData));
     const target = findTargetFilm(VALID_FIELDS, DATA);
     const plan = planCorrection(masterData, target);
-    const patched = applyCorrection(masterData, target, plan, FIELD_MAP["Runtime (minutes)"], 132);
+    const patched = applyCorrection(masterData, target, plan, [{ label: "Runtime (minutes)", config: FIELD_MAP["Runtime (minutes)"], value: 132 }]);
 
     expect(patched.records[0].film.runtimeMinutes).toBe(132);
     expect(masterData).toEqual(frozenOriginal);
+  });
+
+  it("applies multiple film-scope and record-scope changes together", () => {
+    const masterData = {
+      festivals: [],
+      records: [
+        { year: 2020, festivalId: "oscars", category: "Best Picture", result: "winner", film: { title: "Parasite", releaseYear: 2019, imdbId: "tt6751668", runtimeMinutes: 0, countryCodes: [], languages: [], genres: [], synopsis: "", posterUrl: "" }, directors: ["Old Director"] }
+      ]
+    };
+    const target = findTargetFilm(VALID_FIELDS, DATA);
+    const plan = planCorrection(masterData, target);
+    const changes = [
+      { label: "Runtime (minutes)", config: FIELD_MAP["Runtime (minutes)"], value: 132 },
+      { label: "Director(s)", config: FIELD_MAP["Director(s)"], value: ["New Director"] }
+    ];
+    const patched = applyCorrection(masterData, target, plan, changes);
+
+    expect(patched.records[0].film.runtimeMinutes).toBe(132);
+    expect(patched.records[0].directors).toEqual(["New Director"]);
   });
 
   it("appends a new, fully-formed seed record for each previously-uncovered nomination", () => {
     const masterData = { festivals: [], records: [] };
     const target = findTargetFilm(VALID_FIELDS, DATA);
     const plan = planCorrection(masterData, target);
-    const patched = applyCorrection(masterData, target, plan, FIELD_MAP["Runtime (minutes)"], 132);
+    const patched = applyCorrection(masterData, target, plan, [{ label: "Runtime (minutes)", config: FIELD_MAP["Runtime (minutes)"], value: 132 }]);
 
     expect(patched.records).toHaveLength(2);
     for (const record of patched.records) {

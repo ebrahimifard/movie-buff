@@ -8,14 +8,16 @@ body:
       value: |
         Thanks for helping improve the archive's accuracy.
 
-        **How this is reviewed**: submissions for the fields listed below (IMDb ID, poster URL,
-        runtime, genres, synopsis, release year, country codes, languages) are checked
-        automatically. If validation passes, a pull request is opened and merged automatically
-        once it passes the site's tests and data-quality checks. If validation fails, you'll get
-        a comment explaining what to fix — just edit this issue and it will be re-checked.
-        Everything else ("Something else") is reviewed and applied by hand by a maintainer. See
-        `CONTRIBUTING.md` for the full process either way. **A source is always required** so the
-        change can be verified, automatically or by a human.
+        **Fill in only the field(s) you're correcting** — leave the rest blank. Submissions
+        touching only the fields below (IMDb ID, poster URL, runtime, genres, synopsis, release
+        year, country codes, languages, director) are checked automatically. If validation
+        passes, a pull request is opened and merged automatically once it passes the site's
+        tests and data-quality checks. If validation fails, you'll get a comment explaining
+        what to fix — just edit this issue and it will be re-checked. Anything under "Other"
+        (award category, a duplicate record, a brand-new record, etc.) is reviewed and applied
+        by hand by a maintainer instead. See `CONTRIBUTING.md` for the full process either way.
+        **A source is always required** so the change can be verified, automatically or by a
+        human.
 
   - type: input
     id: film_title
@@ -70,38 +72,100 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: field
+  - type: input
+    id: imdb_id
     attributes:
-      label: What field is wrong?
-      description: >-
-        Only these fields can be corrected automatically. For anything else (director, cast,
-        award category, release year of an entirely new record, duplicates, etc.), pick
-        "Something else" — a maintainer will review it by hand.
-      options:
-        - IMDb ID
-        - Poster URL
-        - Runtime (minutes)
-        - Genres
-        - Synopsis
-        - Release year
-        - Country codes
-        - Languages
-        - Something else (manual review required)
+      label: IMDb ID
+      description: Leave blank unless this is wrong.
+      placeholder: "e.g. tt6751668"
     validations:
-      required: true
+      required: false
 
   - type: input
-    id: new_value
+    id: poster_url
     attributes:
-      label: Proposed new value
-      description: >-
-        The correct value for the field selected above. For Genres, Country codes, or Languages,
-        separate multiple values with commas (e.g. "Drama, War" or "US, FR"). If you picked
-        "Something else", briefly describe the change here instead — a maintainer will read it.
+      label: Poster URL
+      description: Leave blank unless this is wrong. A direct link to a poster image.
+      placeholder: "https://..."
+    validations:
+      required: false
+
+  - type: input
+    id: runtime_minutes
+    attributes:
+      label: Runtime (minutes)
+      description: Leave blank unless this is wrong.
       placeholder: "e.g. 132"
     validations:
-      required: true
+      required: false
+
+  - type: input
+    id: genres
+    attributes:
+      label: Genres
+      description: "Leave blank unless this is wrong. Separate multiple values with commas."
+      placeholder: "e.g. Drama, War"
+    validations:
+      required: false
+
+  - type: textarea
+    id: synopsis
+    attributes:
+      label: Synopsis
+      description: Leave blank unless this is wrong.
+    validations:
+      required: false
+
+  - type: input
+    id: release_year
+    attributes:
+      label: Release year
+      description: Leave blank unless this is wrong.
+      placeholder: "e.g. 2019"
+    validations:
+      required: false
+
+  - type: input
+    id: country_codes
+    attributes:
+      label: Country codes
+      description: >-
+        Leave blank unless this is wrong. Two-letter codes, separated by commas if more than
+        one.
+      placeholder: "e.g. US, FR"
+    validations:
+      required: false
+
+  - type: input
+    id: languages
+    attributes:
+      label: Languages
+      description: "Leave blank unless this is wrong. Separate multiple values with commas."
+      placeholder: "e.g. Korean, English"
+    validations:
+      required: false
+
+  - type: input
+    id: director
+    attributes:
+      label: Director(s)
+      description: >-
+        Leave blank unless this is wrong. Separate multiple co-directors with commas.
+      placeholder: "e.g. Bong Joon Ho"
+    validations:
+      required: false
+
+  - type: textarea
+    id: other
+    attributes:
+      label: Other
+      description: >-
+        Anything not covered above — award category, cast, a duplicate record, a brand-new
+        record, etc. Describe it here; a maintainer will review and apply it by hand. Filling
+        this in routes the whole submission to manual review, even if you also filled in fields
+        above.
+    validations:
+      required: false
 
   - type: textarea
     id: source
