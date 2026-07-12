@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-11T22:51:58.158Z",
+  "generatedAt": "2026-07-12T12:07:01.778Z",
   "records": [
     {
       "year": 1951,
@@ -28947,26 +28947,6 @@
       "year": 1982,
       "festivalId": "berlinale",
       "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "James Stewart",
-        "releaseYear": 1982,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 1982,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
       "category": "FIPRESCI Award",
       "result": "nominee",
       "film": {
@@ -46547,46 +46527,6 @@
       "year": 1993,
       "festivalId": "berlinale",
       "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Billy Wilder",
-        "releaseYear": 1993,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 1993,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Gregory Peck",
-        "releaseYear": 1993,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 1993,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
       "category": "Berlinale Camera",
       "result": "nominee",
       "film": {
@@ -47124,26 +47064,6 @@
       "credits": []
     },
     {
-      "year": 1994,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Sophia Loren",
-        "releaseYear": 1994,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
       "year": 1995,
       "festivalId": "berlinale",
       "festivalName": "Berlin International Film Festival",
@@ -47624,26 +47544,6 @@
       "credits": []
     },
     {
-      "year": 1995,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Alain Delon",
-        "releaseYear": 1995,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
       "year": 1996,
       "festivalId": "berlinale",
       "festivalName": "Berlin International Film Festival",
@@ -48091,46 +47991,6 @@
       "result": "nominee",
       "film": {
         "title": "What I Have Written",
-        "releaseYear": 1996,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 1996,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Jack Lemmon",
-        "releaseYear": 1996,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 1996,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Elia Kazan",
         "releaseYear": 1996,
         "imdbId": null,
         "countryCodes": [],
@@ -49007,26 +48867,6 @@
       "year": 1997,
       "festivalId": "berlinale",
       "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Kim Novak",
-        "releaseYear": 1997,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 1997,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
       "category": "Berlinale Camera",
       "result": "nominee",
       "film": {
@@ -49627,26 +49467,6 @@
       "year": 1998,
       "festivalId": "berlinale",
       "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Catherine Deneuve",
-        "releaseYear": 1998,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 1998,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
       "category": "Berlinale Camera",
       "result": "nominee",
       "film": {
@@ -50211,26 +50031,6 @@
       "result": "nominee",
       "film": {
         "title": "War in the Highlands",
-        "releaseYear": 1999,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 1999,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Shirley MacLaine",
         "releaseYear": 1999,
         "imdbId": null,
         "countryCodes": [],
@@ -51031,26 +50831,6 @@
       "result": "nominee",
       "film": {
         "title": "Andrzej Wajda",
-        "releaseYear": 2000,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2000,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Jeanne Moreau",
         "releaseYear": 2000,
         "imdbId": null,
         "countryCodes": [],
@@ -52531,26 +52311,6 @@
       "result": "nominee",
       "film": {
         "title": "Dominique Blanc",
-        "releaseYear": 2001,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2001,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Kirk Douglas",
         "releaseYear": 2001,
         "imdbId": null,
         "countryCodes": [],
@@ -54479,46 +54239,6 @@
       "year": 2002,
       "festivalId": "berlinale",
       "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Claudia Cardinale",
-        "releaseYear": 2002,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2002,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Robert Altman",
-        "releaseYear": 2002,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2002,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
       "category": "Berlinale Camera",
       "result": "nominee",
       "film": {
@@ -56299,26 +56019,6 @@
       "year": 2003,
       "festivalId": "berlinale",
       "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Anouk Aimée",
-        "releaseYear": 2003,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2003,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
       "category": "Berlinale Camera",
       "result": "nominee",
       "film": {
@@ -57499,26 +57199,6 @@
       "year": 2004,
       "festivalId": "berlinale",
       "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Fernando E. Solanas",
-        "releaseYear": 2004,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2004,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
       "category": "Short Film Golden Bear",
       "result": "winner",
       "film": {
@@ -58579,46 +58259,6 @@
       "year": 2005,
       "festivalId": "berlinale",
       "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Fernando Fernán Gómez",
-        "releaseYear": 2005,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2005,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Im Kwon-taek",
-        "releaseYear": 2005,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2005,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
       "category": "Short Films Competition",
       "result": "nominee",
       "film": {
@@ -59483,46 +59123,6 @@
       "result": "nominee",
       "film": {
         "title": "Jung-Wan Oh, South Korean producer",
-        "releaseYear": 2006,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2006,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Andrzej Wajda",
-        "releaseYear": 2006,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2006,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Ian McKellen",
         "releaseYear": 2006,
         "imdbId": null,
         "countryCodes": [],
@@ -63691,46 +63291,6 @@
       "year": 2010,
       "festivalId": "berlinale",
       "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Wolfgang Kohlhaase",
-        "releaseYear": 2010,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2010,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Hanna Schygulla",
-        "releaseYear": 2010,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2010,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
       "category": "The Berlinale Camera",
       "result": "nominee",
       "film": {
@@ -66011,26 +65571,6 @@
       "year": 2011,
       "festivalId": "berlinale",
       "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Armin Mueller-Stahl",
-        "releaseYear": 2011,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2011,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
       "category": "Crystal Bears",
       "result": "nominee",
       "film": {
@@ -67355,26 +66895,6 @@
       "result": "nominee",
       "film": {
         "title": "David O'Reilly",
-        "releaseYear": 2012,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2012,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Meryl Streep",
         "releaseYear": 2012,
         "imdbId": null,
         "countryCodes": [],
@@ -71905,26 +71425,6 @@
       "year": 2014,
       "festivalId": "berlinale",
       "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Ken Loach",
-        "releaseYear": 2014,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2014,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
       "category": "Best First Feature Award",
       "result": "nominee",
       "film": {
@@ -76401,26 +75901,6 @@
       "result": "winner",
       "film": {
         "title": "Crosscurrent (Cinematography)",
-        "releaseYear": 2016,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2016,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Michael Ballhaus",
         "releaseYear": 2016,
         "imdbId": null,
         "countryCodes": [],
@@ -94426,26 +93906,6 @@
       "year": 2022,
       "festivalId": "berlinale",
       "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Isabelle Huppert",
-        "releaseYear": 2022,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2022,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
       "category": "Best Film",
       "result": "winner",
       "film": {
@@ -101165,26 +100625,6 @@
       "year": 2023,
       "festivalId": "berlinale",
       "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Steven Spielberg",
-        "releaseYear": 2023,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2023,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
       "category": "Berlinale Camera",
       "result": "nominee",
       "film": {
@@ -107004,26 +106444,6 @@
       "year": 2024,
       "festivalId": "berlinale",
       "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Martin Scorsese",
-        "releaseYear": 2024,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2024,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
       "category": "Berlinale Camera",
       "result": "nominee",
       "film": {
@@ -112667,26 +112087,6 @@
       "result": "winner",
       "film": {
         "title": "The Ice Tower",
-        "releaseYear": 2025,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2025,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Tilda Swinton",
         "releaseYear": 2025,
         "imdbId": null,
         "countryCodes": [],
@@ -119639,26 +119039,6 @@
       "result": "winner",
       "film": {
         "title": "Yo (Love Is a Rebellious Bird)",
-        "releaseYear": 2026,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2026,
-      "festivalId": "berlinale",
-      "festivalName": "Berlin International Film Festival",
-      "category": "Honorary Golden Bear",
-      "result": "nominee",
-      "film": {
-        "title": "Michelle Yeoh",
         "releaseYear": 2026,
         "imdbId": null,
         "countryCodes": [],

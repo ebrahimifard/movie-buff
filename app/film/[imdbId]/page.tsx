@@ -55,7 +55,10 @@ export default async function FilmPage({ params }: FilmPageProps) {
                   title: film.title,
                   year: film.releaseYear,
                   festivalName: festivalGroups[0]?.festivalName ?? "Unknown festival",
-                  missingFields
+                  missingFields,
+                  internalId: film.id,
+                  pageUrl: `/film/${imdbId}`,
+                  category: festivalGroups[0]?.entries[0]?.category
                 })}
                 target="_blank"
                 rel="noopener noreferrer"

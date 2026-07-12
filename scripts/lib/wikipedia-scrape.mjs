@@ -3,11 +3,19 @@ import { JSDOM } from "jsdom";
 const JUNK_TITLE_PATTERN =
   /^(title|film|category|award|prize|director\(s\)|directors|production country|country|winner|nominee|nominees|year|ref(erences)?)$/i;
 
-// Standard Wikipedia article boilerplate sections — never award data, but
-// structurally identical (heading followed by a <ul>) to the sections that
-// are, so must be explicitly excluded. Mirrors the same exclusion already
-// proven in fetch-cannes-wikipedia.mjs's shouldSkipSection.
-const BOILERPLATE_SECTION_PATTERN = /^(contents|references|external links|see also|notes|media|further reading|bibliography)$/i;
+// Sections that are structurally identical to real award data (a heading
+// followed by a <ul> or containing a table) but never contain it — matching
+// only by heading NAME would be a fragile blocklist on its own, so this is
+// combined with getSectionAncestors() below: a table or list is excluded
+// when ANY enclosing heading (not just the nearest one) matches this
+// pattern, which is what actually stops e.g. a "Films" H3 nested inside an
+// "Awards breakdown" H2 statistics section from being mistaken for the
+// legitimate "Winners and nominees > Film" section that happens to share
+// part of its name. "Television" is Golden Globes-specific (its page covers
+// both film and TV under sibling sections) — harmless to check for
+// film-only festivals since they never have a heading named that.
+export const NON_AWARD_SECTION_PATTERN =
+  /^(contents|references|external links|see also|notes|media|further reading|bibliography|sources|trivia|cerem(ony|onies)|presenters|jur(y|ies)|special events and homages|awards breakdown|multiple nominations|multiple wins|films? with multiple nominations|films? with multiple wins|series with multiple nominations|series with multiple wins|digital audio|in memoriam|miss golden globe|expansion|reduction|television)$/i;
 
 export function cleanText(text) {
   return String(text ?? "")
@@ -37,6 +45,22 @@ export function classifyPersonRole(category) {
     return "producer";
   }
   return null;
+}
+
+// Career/honorary categories (Honorary Golden Bear, Golden Lion for
+// Lifetime Achievement, Academy Honorary Award, ...) are given directly to
+// a person for their body of work, not competitively to one film — the
+// Wikipedia source text for these is often just the honoree's bare name
+// with no associated film at all. Combined with hasFilmSignal (see
+// extractTitleAndPerson) in addRecord: when a category matches this AND no
+// reliable film signal was found, the record is dropped rather than using
+// the person's name as a fake movie title. Deliberately does NOT drop
+// every record in a matching category outright — some (older Academy
+// Honorary Awards given to a specific foreign-language film before that
+// competitive category existed) genuinely are film-tied and carry a real
+// film signal, so those are kept.
+export function isHonoraryCategory(category) {
+  return /honorary|career (award|golden)|lifetime achievement/i.test(String(category ?? ""));
 }
 
 export function detectColumnIndex(headers, pattern) {
@@ -73,11 +97,44 @@ function findPrecedingHeadingText(element) {
   return heading;
 }
 
+// Returns the full chain of enclosing heading texts for `element`, ordered
+// outermost to innermost — e.g. a table appearing after <h3>Film</h3> which
+// itself follows <h2>Winners and nominees</h2> returns ["Winners and
+// nominees", "Film"]. Unlike findPrecedingHeadingText (which only returns
+// the single nearest heading), this walks the full ancestor stack so a
+// heading can be told apart from an unrelated section that happens to reuse
+// the same heading text one level down — Golden Globes' "Awards breakdown"
+// statistics section has its own "Films"/"Television" H3 subheadings that
+// must not be confused with the real "Winners and nominees > Film" section
+// just because the nearest heading text matches.
+// DOCUMENT_POSITION_FOLLOWING (4) is a fixed DOM-spec bitmask value, not
+// realm-specific, so no `Node` reference from the JSDOM window is needed.
+const DOCUMENT_POSITION_FOLLOWING = 4;
+
+function getSectionAncestors(element, headings) {
+  const stack = [];
+  for (const heading of headings) {
+    if (!(heading.compareDocumentPosition(element) & DOCUMENT_POSITION_FOLLOWING)) {
+      break;
+    }
+    const level = Number(heading.tagName.slice(1));
+    while (stack.length && stack[stack.length - 1].level >= level) {
+      stack.pop();
+    }
+    stack.push({ level, text: cleanText(heading.textContent) });
+  }
+  return stack.map((entry) => entry.text);
+}
+
+function isTrustedAwardSection(ancestors) {
+  return !ancestors.some((heading) => NON_AWARD_SECTION_PATTERN.test(heading));
+}
+
 function extractRowTitle(cells, headers) {
   const titleIndex = headers.length === cells.length ? detectColumnIndex(headers, /title|film/) : -1;
   const titleCell = titleIndex >= 0 ? cells[titleIndex] : cells[0];
-  const { title, personName } = extractTitleAndPerson(titleCell, null);
-  return { title: title ?? cleanText(titleCell.textContent), personName, titleCell };
+  const { title, personName, hasFilmSignal } = extractTitleAndPerson(titleCell, null);
+  return { title: title ?? cleanText(titleCell.textContent), personName, hasFilmSignal, titleCell };
 }
 
 function directChild(element, tagName) {
@@ -118,16 +175,22 @@ export function extractTitleAndPerson(container, nestedUl) {
   const personLink = ownLinks.find((a) => !italicLinks.has(a));
   const personName = personLink ? cleanText(personLink.textContent) : null;
 
+  // hasFilmSignal is true only when the title came from Wikipedia's own
+  // italics convention for creative-work titles — i.e. a genuine positive
+  // signal that this IS a film, not just "some link/text existed". Used by
+  // addRecord to decide whether an honorary/career category (which often
+  // has no associated film at all — just the honoree's bare name) should be
+  // dropped rather than fabricating a movie from whatever text was found.
   if (title) {
-    return { title, personName };
+    return { title, personName, hasFilmSignal: true };
   }
 
   const ownLink = ownLinks[0];
   if (ownLink) {
-    return { title: cleanText(ownLink.textContent), personName: null };
+    return { title: cleanText(ownLink.textContent), personName: null, hasFilmSignal: false };
   }
 
-  return { title: null, personName: null };
+  return { title: null, personName: null, hasFilmSignal: false };
 }
 
 // A modern Wikipedia "{{Award category}}" cell nests its nominee list inside
@@ -136,9 +199,9 @@ export function extractTitleAndPerson(container, nestedUl) {
 // <li>. Recurse so nominees at any nesting depth are still captured.
 function extractLiTitleAndPerson(li) {
   const nestedUl = directChild(li, "UL");
-  const { title, personName } = extractTitleAndPerson(li, nestedUl);
+  const { title, personName, hasFilmSignal } = extractTitleAndPerson(li, nestedUl);
   if (title) {
-    return { title, personName };
+    return { title, personName, hasFilmSignal };
   }
 
   let text = "";
@@ -148,7 +211,7 @@ function extractLiTitleAndPerson(li) {
     }
     text += node.textContent ?? "";
   }
-  return { title: cleanText(text), personName: null };
+  return { title: cleanText(text), personName: null, hasFilmSignal: false };
 }
 
 function isLiWinner(li) {
@@ -169,9 +232,9 @@ function extractCategoryLabel(cell) {
 function collectListRecords(list, results) {
   const items = Array.from(list.children).filter((child) => child.tagName === "LI");
   items.forEach((li) => {
-    const { title, personName } = extractLiTitleAndPerson(li);
+    const { title, personName, hasFilmSignal } = extractLiTitleAndPerson(li);
     if (title) {
-      results.push({ title, result: isLiWinner(li) ? "winner" : "nominee", personName });
+      results.push({ title, result: isLiWinner(li) ? "winner" : "nominee", personName, hasFilmSignal });
     }
     const nested = directChild(li, "UL");
     if (nested) {
@@ -260,6 +323,7 @@ function parseCategoryPrefixedListItem(li, groupPrefix = "") {
 
   let title = "";
   let personName = null;
+  let hasFilmSignal = true;
   if (forMatch) {
     // "Huo Meng for Living the Land" — person precedes "for", film follows.
     title = forMatch[1];
@@ -269,13 +333,24 @@ function parseCategoryPrefixedListItem(li, groupPrefix = "") {
     title = byMatch[1];
     personName = rhs.slice(byMatch[0].length).trim();
   } else {
+    // The category LABEL itself (li.children[0], already captured as
+    // ownLabel above) is very often its own wikilink — e.g. <a>Golden
+    // Bear</a>: <a>Some Film</a> — and must be excluded here, or a
+    // link search over the whole li would pick up the label link instead
+    // of the actual film/person link that follows the colon.
+    const labelElement = li.children[0];
+    const rhsLinks = Array.from(li.querySelectorAll("a")).filter((a) => a !== labelElement && !labelElement?.contains(a));
     const italicLink = Array.from(li.querySelectorAll("i"))
       .map((i) => i.querySelector("a"))
-      .find(Boolean);
-    const link = italicLink ?? li.querySelector("a");
+      .find((a) => a && rhsLinks.includes(a));
+    const link = italicLink ?? rhsLinks[0];
     title = link ? cleanText(link.textContent) : rhs;
-    const otherLink = Array.from(li.querySelectorAll("a")).find((a) => a !== link);
+    const otherLink = rhsLinks.find((a) => a !== link);
     personName = otherLink ? cleanText(otherLink.textContent) : null;
+    // Only italics is a genuine film signal here — a bare first-link guess
+    // (or plain text with no links at all, e.g. "Honorary Golden Bear:
+    // Michelle Yeoh" with no film mentioned) is not.
+    hasFilmSignal = Boolean(italicLink);
   }
 
   const category = groupPrefix ? `${groupPrefix} – ${ownLabel}` : ownLabel;
@@ -283,7 +358,8 @@ function parseCategoryPrefixedListItem(li, groupPrefix = "") {
     {
       category: cleanText(category),
       title: cleanText(title),
-      personName: personName ? cleanText(personName) : null
+      personName: personName ? cleanText(personName) : null,
+      hasFilmSignal
     }
   ];
 }
@@ -305,20 +381,59 @@ function findListAfterHeading(heading) {
 // per nominee). Cannes' page structure needs section-hierarchy-aware parsing
 // and is NOT a fit for this shared parser — it keeps its own bespoke
 // implementation.
-export function parseSimpleAwardsWikipedia(html, year, { festivalId, festivalName, normalizeCategory }) {
+//
+// scanTables (default true): an opt-out for any festival whose real
+// competitive-award data lives entirely in the "Official Awards"
+// heading+<ul> section (handled below, independent of this flag) rather
+// than in any `table.wikitable`. Not currently needed for Berlinale/Venice
+// — despite their pages also containing unrelated `table.wikitable`s for
+// sidebar SELECTION listings (Berlinale Special, Panorama, Forum,
+// Generation, ...) that reuse the same colspan category-separator
+// convention as real award tables (confirmed live: a "Berlinale Special"
+// table's "Honorary Golden Bear" tribute-program sub-heading was being read
+// as an award category) — because isHonoraryCategory + the hasFilmSignal
+// check in addRecord already drops the one problematic case (a bare
+// honoree name with no associated film) while correctly keeping genuine
+// film records that happen to sit in that same table. Left available here
+// for a future page/festival where that isn't sufficient — e.g. a
+// selection table with no honorary-category framing at all.
+export function parseSimpleAwardsWikipedia(html, year, { festivalId, festivalName, normalizeCategory, scanTables = true }) {
   const dom = new JSDOM(html);
   const doc = dom.window.document;
   const contentRoot = doc.querySelector("#mw-content-text .mw-parser-output") || doc.querySelector("#mw-content-text") || doc.body;
   const records = [];
   const isFirstSeen = createDeduper();
+  const headings = Array.from(contentRoot.querySelectorAll("h2, h3, h4"));
 
-  function addRecord(rawCategory, result, rawTitle, personName) {
+  function addRecord(rawCategory, result, rawTitle, personName, hasFilmSignal = true) {
     const title = cleanText(rawTitle);
     if (!title || JUNK_TITLE_PATTERN.test(title)) {
       return;
     }
 
     const category = normalizeCategory(rawCategory);
+
+    // Belt-and-braces: catches a non-award category that reached this point
+    // via a path getSectionAncestors doesn't see at all — an in-table
+    // colspan category-separator row (see the "Acting" case below), not a
+    // heading — by checking the resolved category value itself, regardless
+    // of which extraction path produced it.
+    if (NON_AWARD_SECTION_PATTERN.test(category)) {
+      return;
+    }
+
+    // Career/honorary categories (Honorary Golden Bear, Golden Lion for
+    // Lifetime Achievement, ...) are given directly to a person, often with
+    // no associated film mentioned in the source text at all — without a
+    // real film signal, `title` here is just whatever text/link happened to
+    // be nearest (typically the honoree's own name). Drop rather than
+    // represent a person as a movie. Categories that DO carry a genuine
+    // film signal (a handful of older Academy Honorary Awards were given to
+    // a specific foreign-language film) are kept.
+    if (isHonoraryCategory(category) && !hasFilmSignal) {
+      return;
+    }
+
     const key = `${year}|${category}|${result}|${title.toLowerCase()}`;
     if (!isFirstSeen(key)) {
       return;
@@ -350,8 +465,11 @@ export function parseSimpleAwardsWikipedia(html, year, { festivalId, festivalNam
     });
   }
 
-  const tables = Array.from(contentRoot.querySelectorAll("table.wikitable"));
+  const tables = scanTables ? Array.from(contentRoot.querySelectorAll("table.wikitable")) : [];
   tables.forEach((table) => {
+    if (!isTrustedAwardSection(getSectionAncestors(table, headings))) {
+      return;
+    }
     const fallbackCategory = findPrecedingHeadingText(table) ?? "Unknown category";
     const rows = Array.from(table.querySelectorAll("tr"));
     let headers = [];
@@ -386,24 +504,25 @@ export function parseSimpleAwardsWikipedia(html, year, { festivalId, festivalNam
       if (gridCells.length > 0) {
         gridCells.forEach((cell) => {
           const extracted = extractCategoryCellRecords(cell, currentCategory);
-          extracted?.records.forEach(({ title, result, personName }) => addRecord(extracted.category, result, title, personName));
+          extracted?.records.forEach(({ title, result, personName, hasFilmSignal }) =>
+            addRecord(extracted.category, result, title, personName, hasFilmSignal)
+          );
         });
         return;
       }
 
-      const { title, personName, titleCell } = extractRowTitle(cells, headers);
+      const { title, personName, hasFilmSignal, titleCell } = extractRowTitle(cells, headers);
       if (!title) {
         return;
       }
       const result = titleCell.querySelector("b") ? "winner" : "nominee";
-      addRecord(currentCategory, result, title, personName);
+      addRecord(currentCategory, result, title, personName, hasFilmSignal);
     });
   });
 
-  const headings = Array.from(contentRoot.querySelectorAll("h2, h3, h4"));
   headings.forEach((heading) => {
     const headingCategory = cleanText(heading.textContent);
-    if (BOILERPLATE_SECTION_PATTERN.test(headingCategory)) {
+    if (!isTrustedAwardSection([...getSectionAncestors(heading, headings), headingCategory])) {
       return;
     }
     const list = findListAfterHeading(heading);
@@ -414,7 +533,7 @@ export function parseSimpleAwardsWikipedia(html, year, { festivalId, festivalNam
     Array.from(list.querySelectorAll(":scope > li")).forEach((li) => {
       const prefixed = parseCategoryPrefixedListItem(li);
       if (prefixed.length > 0) {
-        prefixed.forEach(({ category, title, personName }) => addRecord(category, "winner", title, personName));
+        prefixed.forEach(({ category, title, personName, hasFilmSignal }) => addRecord(category, "winner", title, personName, hasFilmSignal));
         return;
       }
 
@@ -433,7 +552,7 @@ export function parseSimpleAwardsWikipedia(html, year, { festivalId, festivalNam
       const otherLink = Array.from(li.querySelectorAll("a")).find((a) => a !== link);
       const personName = otherLink ? cleanText(otherLink.textContent) : null;
       const isWinner = Boolean(li.querySelector("b")) || /^\*/.test(li.textContent.trim());
-      addRecord(headingCategory, isWinner ? "winner" : "nominee", title, personName);
+      addRecord(headingCategory, isWinner ? "winner" : "nominee", title, personName, Boolean(italicLink));
     });
   });
 

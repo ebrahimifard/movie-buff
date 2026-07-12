@@ -4,6 +4,7 @@ import {
   filterNominations,
   getCategoryOptions,
   getFacetOptions,
+  getGenreOptions,
   groupNominationsByFestival,
   groupRowsByFilm,
   getRuntimeBucket
@@ -276,5 +277,73 @@ describe("groupNominationsByFestival", () => {
 
   it("returns an empty array for an empty input", () => {
     expect(groupNominationsByFestival([])).toEqual([]);
+  });
+});
+
+describe("filterNominations genre filter", () => {
+  const rows = buildFestivalFilterRows(
+    [
+      nomination({ id: "n1", filmId: "tt1" }),
+      nomination({ id: "n2", filmId: "tt2" }),
+      nomination({ id: "n3", filmId: "tt3" })
+    ],
+    new Map([
+      ["tt1", film({ id: "tt1", genres: ["Drama", "War"] })],
+      ["tt2", film({ id: "tt2", genres: ["Comedy"] })],
+      ["tt3", film({ id: "tt3", genres: [] })]
+    ])
+  );
+
+  it("returns everything when genres is undefined or empty", () => {
+    expect(filterNominations(rows, {})).toHaveLength(3);
+    expect(filterNominations(rows, { genres: [] })).toHaveLength(3);
+  });
+
+  it("matches a film that has ANY of the selected genres (OR within the dimension)", () => {
+    const result = filterNominations(rows, { genres: ["War"] });
+    expect(result.map((row) => row.nominationId)).toEqual(["n1"]);
+  });
+
+  it("matches across multiple selected genres", () => {
+    const result = filterNominations(rows, { genres: ["War", "Comedy"] });
+    expect(result.map((row) => row.nominationId).sort()).toEqual(["n1", "n2"]);
+  });
+
+  it("never matches a film with no genres at all, without throwing", () => {
+    expect(filterNominations(rows, { genres: ["Drama"] }).map((row) => row.nominationId)).not.toContain("n3");
+  });
+
+  it("combines with other filters using AND", () => {
+    const result = filterNominations(rows, { genres: ["Drama"], result: "nominee" });
+    expect(result).toEqual([]);
+  });
+});
+
+describe("getGenreOptions", () => {
+  const rows = buildFestivalFilterRows(
+    [
+      nomination({ id: "n1", year: 2019, filmId: "tt1" }),
+      nomination({ id: "n2", year: 2020, filmId: "tt2" }),
+      nomination({ id: "n3", year: 2020, filmId: "tt3" })
+    ],
+    new Map([
+      ["tt1", film({ id: "tt1", genres: ["Drama"] })],
+      ["tt2", film({ id: "tt2", genres: ["Comedy", "Drama"] })],
+      ["tt3", film({ id: "tt3", genres: [] })]
+    ])
+  );
+
+  it("returns unique, sorted genre values, ignoring films with no genres", () => {
+    expect(getGenreOptions(rows, {})).toEqual(["Comedy", "Drama"]);
+  });
+
+  it("narrows to genres present within the other active filters, ignoring its own genres filter", () => {
+    expect(getGenreOptions(rows, { year: 2019 })).toEqual(["Drama"]);
+    expect(getGenreOptions(rows, { year: 2019, genres: ["Comedy"] })).toEqual(["Drama"]);
+  });
+
+  it("returns an empty array when no film has any genre", () => {
+    const noGenreRows = buildFestivalFilterRows([nomination({ id: "n1", filmId: "tt1" })], new Map([["tt1", film({ id: "tt1", genres: [] })]]));
+    expect(getGenreOptions(noGenreRows, {})).toEqual([]);
   });
 });

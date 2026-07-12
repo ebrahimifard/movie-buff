@@ -10,6 +10,7 @@ import {
   filterNominations,
   getCategoryOptions,
   getFacetOptions,
+  getGenreOptions,
   groupRowsByFilm,
   type FestivalFilterRow,
   type FestivalFilterState,
@@ -50,6 +51,7 @@ export function FestivalFilters({
 
   const facets = useMemo(() => getFacetOptions(rows), [rows]);
   const categoryOptions = useMemo(() => getCategoryOptions(rows, filters), [rows, filters]);
+  const genreOptions = useMemo(() => getGenreOptions(rows, filters), [rows, filters]);
 
   // Every movie's card, built once from the full row set. Filters (below)
   // only decide which of these groups are visible — a card's badges and
@@ -63,7 +65,12 @@ export function FestivalFilters({
   const visible = filtered.slice(0, visibleCount);
   const useCountryPills = facets.countries.length <= COUNTRY_PILL_THRESHOLD;
   const hasActiveFilters = Boolean(
-    filters.result || filters.runtime || filters.year !== undefined || filters.country || (filters.categories && filters.categories.length > 0)
+    filters.result ||
+      filters.runtime ||
+      filters.year !== undefined ||
+      filters.country ||
+      (filters.categories && filters.categories.length > 0) ||
+      (filters.genres && filters.genres.length > 0)
   );
 
   function updateFilters(next: FestivalFilterState) {
@@ -75,6 +82,12 @@ export function FestivalFilters({
     const current = filters.categories ?? [];
     const next = current.includes(category) ? current.filter((entry) => entry !== category) : [...current, category];
     updateFilters({ ...filters, categories: next.length > 0 ? next : undefined });
+  }
+
+  function toggleGenre(genre: string) {
+    const current = filters.genres ?? [];
+    const next = current.includes(genre) ? current.filter((entry) => entry !== genre) : [...current, genre];
+    updateFilters({ ...filters, genres: next.length > 0 ? next : undefined });
   }
 
   return (
@@ -135,6 +148,32 @@ export function FestivalFilters({
                       title={category}
                     >
                       {simplifyCategoryLabel(category, festivalId)}
+                    </Pill>
+                  ))
+                )}
+              </div>
+            </div>
+
+            <div>
+              <div className="flex items-center justify-between gap-3">
+                <p className="meta text-xs text-bone/60">Genre</p>
+                {filters.genres && filters.genres.length > 0 ? (
+                  <button
+                    type="button"
+                    onClick={() => updateFilters({ ...filters, genres: undefined })}
+                    className="focus-ring meta text-xs text-gold underline decoration-gold/70 underline-offset-4"
+                  >
+                    All genres
+                  </button>
+                ) : null}
+              </div>
+              <div className="mt-2 flex max-h-48 flex-wrap gap-2 overflow-y-auto rounded-md border border-bone/10 bg-obsidian/40 p-2">
+                {genreOptions.length === 0 ? (
+                  <p className="meta px-1 py-1 text-xs text-bone/50">No genres match the current filters</p>
+                ) : (
+                  genreOptions.map((genre) => (
+                    <Pill key={genre} active={Boolean(filters.genres?.includes(genre))} onClick={() => toggleGenre(genre)}>
+                      {genre}
                     </Pill>
                   ))
                 )}
@@ -360,7 +399,15 @@ function FestivalMovieCard({
           </Link>
         ) : (
           <Link
-            href={buildMissingInfoIssueUrl({ title: group.title, year: group.year, festivalName, missingFields })}
+            href={buildMissingInfoIssueUrl({
+              title: group.title,
+              year: group.year,
+              festivalName,
+              missingFields,
+              internalId: group.filmId,
+              pageUrl: `/festival/${festivalId}`,
+              category: group.categories[0]?.category
+            })}
             target="_blank"
             rel="noopener noreferrer"
             className="focus-ring meta text-xs text-silver underline decoration-silver/50 underline-offset-4"

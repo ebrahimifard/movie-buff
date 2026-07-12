@@ -64,4 +64,24 @@ describe("parseCannesWikipedia", () => {
     expect(records[0].directors).toEqual([]);
     expect(records[0].credits).toEqual([]);
   });
+
+  it("drops an honorary award entry whose source text is just the honoree's bare name (no film signal)", () => {
+    const html = wrapHtml(`
+      <h2>Official Awards</h2>
+      <ul>
+        <li>Honorary Palm d'Or: <a href="/wiki/Clint_Eastwood">Clint Eastwood</a></li>
+      </ul>
+    `);
+    expect(parseCannesWikipedia(html, 2009)).toEqual([]);
+  });
+
+  it("excludes a Sources/References section from being read as award data", () => {
+    const html = wrapHtml(`
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="/wiki/x">Some citation title</a></li>
+      </ul>
+    `);
+    expect(parseCannesWikipedia(html, 2009)).toEqual([]);
+  });
 });

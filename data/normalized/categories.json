@@ -4074,27 +4074,6 @@
     "scope": "film"
   },
   {
-    "id": "cannes:honorary-award",
-    "festivalId": "cannes",
-    "name": "Honorary Award",
-    "normalizedName": "honorary-award",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:honorary-golden-palm",
-    "festivalId": "cannes",
-    "name": "Honorary Golden Palm",
-    "normalizedName": "honorary-golden-palm",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:honorary-palm-d-or",
-    "festivalId": "cannes",
-    "name": "Honorary Palm d'Or",
-    "normalizedName": "honorary-palm-d-or",
-    "scope": "film"
-  },
-  {
     "id": "cannes:hotel-terminus",
     "festivalId": "cannes",
     "name": "Hotel Terminus",
@@ -4316,13 +4295,6 @@
     "festivalId": "cannes",
     "name": "Libera me by Alain Cavalier Special Mention",
     "normalizedName": "libera-me-by-alain-cavalier-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:lifetime-achievement-award",
-    "festivalId": "cannes",
-    "name": "Lifetime Achievement Award",
-    "normalizedName": "lifetime-achievement-award",
     "scope": "film"
   },
   {
@@ -5635,24 +5607,10 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:awards-breakdown",
-    "festivalId": "golden-globes",
-    "name": "Awards breakdown",
-    "normalizedName": "awards-breakdown",
-    "scope": "film"
-  },
-  {
     "id": "golden-globes:best-actor-in-a-leading-role",
     "festivalId": "golden-globes",
     "name": "Best Actor in a Leading Role",
     "normalizedName": "best-actor-in-a-leading-role",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-actor-in-a-limited-series-anthology-series-or-motion-pictur",
-    "festivalId": "golden-globes",
-    "name": "Best Actor in a Limited Series, Anthology Series, or Motion Picture Made for Television",
-    "normalizedName": "best-actor-in-a-limited-series-anthology-series-or-motion-pictur",
     "scope": "film"
   },
   {
@@ -5670,31 +5628,10 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:best-actor-in-a-television-series-drama",
-    "festivalId": "golden-globes",
-    "name": "Best Actor in a Television Series – Drama",
-    "normalizedName": "best-actor-in-a-television-series-drama",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-actor-in-a-television-series-musical-or-comedy",
-    "festivalId": "golden-globes",
-    "name": "Best Actor in a Television Series – Musical or Comedy",
-    "normalizedName": "best-actor-in-a-television-series-musical-or-comedy",
-    "scope": "film"
-  },
-  {
     "id": "golden-globes:best-actress-in-a-leading-role",
     "festivalId": "golden-globes",
     "name": "Best Actress in a Leading Role",
     "normalizedName": "best-actress-in-a-leading-role",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-actress-in-a-limited-series-anthology-series-or-motion-pict",
-    "festivalId": "golden-globes",
-    "name": "Best Actress in a Limited Series, Anthology Series, or Motion Picture Made for Television",
-    "normalizedName": "best-actress-in-a-limited-series-anthology-series-or-motion-pict",
     "scope": "film"
   },
   {
@@ -5712,20 +5649,6 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:best-actress-in-a-television-series-drama",
-    "festivalId": "golden-globes",
-    "name": "Best Actress in a Television Series – Drama",
-    "normalizedName": "best-actress-in-a-television-series-drama",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-actress-in-a-television-series-musical-or-comedy",
-    "festivalId": "golden-globes",
-    "name": "Best Actress in a Television Series – Musical or Comedy",
-    "normalizedName": "best-actress-in-a-television-series-musical-or-comedy",
-    "scope": "film"
-  },
-  {
     "id": "golden-globes:best-director",
     "festivalId": "golden-globes",
     "name": "Best Director",
@@ -5737,13 +5660,6 @@
     "festivalId": "golden-globes",
     "name": "Best Director – Motion Picture",
     "normalizedName": "best-director-motion-picture",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-female-actor-in-a-limited-series-anthology-series-or-motion",
-    "festivalId": "golden-globes",
-    "name": "Best Female Actor in a Limited Series, Anthology Series, or Motion Picture Made for Television",
-    "normalizedName": "best-female-actor-in-a-limited-series-anthology-series-or-motion",
     "scope": "film"
   },
   {
@@ -5761,20 +5677,6 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:best-female-actor-in-a-television-series-drama",
-    "festivalId": "golden-globes",
-    "name": "Best Female Actor in a Television Series – Drama",
-    "normalizedName": "best-female-actor-in-a-television-series-drama",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-female-actor-in-a-television-series-musical-or-comedy",
-    "festivalId": "golden-globes",
-    "name": "Best Female Actor in a Television Series – Musical or Comedy",
-    "normalizedName": "best-female-actor-in-a-television-series-musical-or-comedy",
-    "scope": "film"
-  },
-  {
     "id": "golden-globes:best-film-promoting-international-understanding",
     "festivalId": "golden-globes",
     "name": "Best Film Promoting International Understanding",
@@ -5789,34 +5691,6 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:best-lead-actor-in-a-television-series",
-    "festivalId": "golden-globes",
-    "name": "Best Lead Actor in a Television Series",
-    "normalizedName": "best-lead-actor-in-a-television-series",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-lead-actress-in-a-television-series",
-    "festivalId": "golden-globes",
-    "name": "Best Lead Actress in a Television Series",
-    "normalizedName": "best-lead-actress-in-a-television-series",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-limited-series-anthology-series-or-motion-picture-made-for-",
-    "festivalId": "golden-globes",
-    "name": "Best Limited Series, Anthology Series, or Motion Picture Made for Television",
-    "normalizedName": "best-limited-series-anthology-series-or-motion-picture-made-for-",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-male-actor-in-a-limited-series-anthology-series-or-motion-p",
-    "festivalId": "golden-globes",
-    "name": "Best Male Actor in a Limited Series, Anthology Series, or Motion Picture Made for Television",
-    "normalizedName": "best-male-actor-in-a-limited-series-anthology-series-or-motion-p",
-    "scope": "film"
-  },
-  {
     "id": "golden-globes:best-male-actor-in-a-motion-picture-drama",
     "festivalId": "golden-globes",
     "name": "Best Male Actor in a Motion Picture – Drama",
@@ -5828,20 +5702,6 @@
     "festivalId": "golden-globes",
     "name": "Best Male Actor in a Motion Picture – Musical or Comedy",
     "normalizedName": "best-male-actor-in-a-motion-picture-musical-or-comedy",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-male-actor-in-a-television-series-drama",
-    "festivalId": "golden-globes",
-    "name": "Best Male Actor in a Television Series – Drama",
-    "normalizedName": "best-male-actor-in-a-television-series-drama",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-male-actor-in-a-television-series-musical-or-comedy",
-    "festivalId": "golden-globes",
-    "name": "Best Male Actor in a Television Series – Musical or Comedy",
-    "normalizedName": "best-male-actor-in-a-television-series-musical-or-comedy",
     "scope": "film"
   },
   {
@@ -5887,20 +5747,6 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:best-performance-in-a-limited-series-anthology-series-or-motion-",
-    "festivalId": "golden-globes",
-    "name": "Best Performance in a Limited Series, Anthology Series, or Motion Picture Made for Television",
-    "normalizedName": "best-performance-in-a-limited-series-anthology-series-or-motion-",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-performance-in-a-miniseries-or-television-film",
-    "festivalId": "golden-globes",
-    "name": "Best Performance in a Miniseries or Television Film",
-    "normalizedName": "best-performance-in-a-miniseries-or-television-film",
-    "scope": "film"
-  },
-  {
     "id": "golden-globes:best-performance-in-a-motion-picture-comedy-or-musical",
     "festivalId": "golden-globes",
     "name": "Best Performance in a Motion Picture – Comedy or Musical",
@@ -5922,41 +5768,6 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:best-performance-in-a-television-series",
-    "festivalId": "golden-globes",
-    "name": "Best Performance in a Television Series",
-    "normalizedName": "best-performance-in-a-television-series",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-performance-in-a-television-series-comedy-or-musical",
-    "festivalId": "golden-globes",
-    "name": "Best Performance in a Television Series – Comedy or Musical",
-    "normalizedName": "best-performance-in-a-television-series-comedy-or-musical",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-performance-in-a-television-series-drama",
-    "festivalId": "golden-globes",
-    "name": "Best Performance in a Television Series – Drama",
-    "normalizedName": "best-performance-in-a-television-series-drama",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-performance-in-a-television-series-musical-or-comedy",
-    "festivalId": "golden-globes",
-    "name": "Best Performance in a Television Series – Musical or Comedy",
-    "normalizedName": "best-performance-in-a-television-series-musical-or-comedy",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-performance-in-stand-up-comedy-on-television",
-    "festivalId": "golden-globes",
-    "name": "Best Performance in Stand-Up Comedy on Television",
-    "normalizedName": "best-performance-in-stand-up-comedy-on-television",
-    "scope": "film"
-  },
-  {
     "id": "golden-globes:best-picture",
     "festivalId": "golden-globes",
     "name": "Best Picture",
@@ -5968,13 +5779,6 @@
     "festivalId": "golden-globes",
     "name": "Best Picture (tie)",
     "normalizedName": "best-picture-tie",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-podcast",
-    "festivalId": "golden-globes",
-    "name": "Best Podcast",
-    "normalizedName": "best-podcast",
     "scope": "film"
   },
   {
@@ -5992,24 +5796,10 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:best-series",
-    "festivalId": "golden-globes",
-    "name": "Best Series",
-    "normalizedName": "best-series",
-    "scope": "film"
-  },
-  {
     "id": "golden-globes:best-supporting-actor-in-a-motion-picture",
     "festivalId": "golden-globes",
     "name": "Best Supporting Actor in a Motion Picture",
     "normalizedName": "best-supporting-actor-in-a-motion-picture",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-supporting-actor-on-television",
-    "festivalId": "golden-globes",
-    "name": "Best Supporting Actor on Television",
-    "normalizedName": "best-supporting-actor-on-television",
     "scope": "film"
   },
   {
@@ -6020,13 +5810,6 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:best-supporting-actress-on-television",
-    "festivalId": "golden-globes",
-    "name": "Best Supporting Actress on Television",
-    "normalizedName": "best-supporting-actress-on-television",
-    "scope": "film"
-  },
-  {
     "id": "golden-globes:best-supporting-female-actor-in-a-motion-picture",
     "festivalId": "golden-globes",
     "name": "Best Supporting Female Actor in a Motion Picture",
@@ -6034,31 +5817,10 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:best-supporting-female-actor-on-television",
-    "festivalId": "golden-globes",
-    "name": "Best Supporting Female Actor on Television",
-    "normalizedName": "best-supporting-female-actor-on-television",
-    "scope": "film"
-  },
-  {
     "id": "golden-globes:best-supporting-male-actor-in-a-motion-picture",
     "festivalId": "golden-globes",
     "name": "Best Supporting Male Actor in a Motion Picture",
     "normalizedName": "best-supporting-male-actor-in-a-motion-picture",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-supporting-male-actor-on-television",
-    "festivalId": "golden-globes",
-    "name": "Best Supporting Male Actor on Television",
-    "normalizedName": "best-supporting-male-actor-on-television",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-supporting-performance-in-a-limited-series-anthology-series",
-    "festivalId": "golden-globes",
-    "name": "Best Supporting Performance in a Limited Series, Anthology Series, or Motion Picture Made for Television",
-    "normalizedName": "best-supporting-performance-in-a-limited-series-anthology-series",
     "scope": "film"
   },
   {
@@ -6080,83 +5842,6 @@
     "festivalId": "golden-globes",
     "name": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
     "normalizedName": "best-supporting-performance-in-a-motion-picture-drama-musical-or",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-supporting-performance-in-a-series-miniseries-or-television",
-    "festivalId": "golden-globes",
-    "name": "Best Supporting Performance in a Series, Miniseries or Television Film",
-    "normalizedName": "best-supporting-performance-in-a-series-miniseries-or-television",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-supporting-performance-in-a-television-series-musical-comed",
-    "festivalId": "golden-globes",
-    "name": "Best Supporting Performance in a Television Series – Musical-Comedy or Drama",
-    "normalizedName": "best-supporting-performance-in-a-television-series-musical-comed",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-supporting-performance-series-miniseries-or-a-television-fi",
-    "festivalId": "golden-globes",
-    "name": "Best Supporting Performance – Series, Miniseries or a Television Film",
-    "normalizedName": "best-supporting-performance-series-miniseries-or-a-television-fi",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-supporting-performance-series-miniseries-or-television-film",
-    "festivalId": "golden-globes",
-    "name": "Best Supporting Performance - Series, Miniseries or Television Film",
-    "normalizedName": "best-supporting-performance-series-miniseries-or-television-film",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-supporting-performance-series-miniseries-or-television-movi",
-    "festivalId": "golden-globes",
-    "name": "Best Supporting Performance - Series, Miniseries or Television Movie",
-    "normalizedName": "best-supporting-performance-series-miniseries-or-television-movi",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-supporting-performance-tv-series-miniseries-or-television-f",
-    "festivalId": "golden-globes",
-    "name": "Best Supporting Performance - TV Series, Miniseries or Television Film",
-    "normalizedName": "best-supporting-performance-tv-series-miniseries-or-television-f",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-television-series",
-    "festivalId": "golden-globes",
-    "name": "Best Television Series",
-    "normalizedName": "best-television-series",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-television-series-drama",
-    "festivalId": "golden-globes",
-    "name": "Best Television Series – Drama",
-    "normalizedName": "best-television-series-drama",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-television-series-musical-or-comedy",
-    "festivalId": "golden-globes",
-    "name": "Best Television Series – Musical or Comedy",
-    "normalizedName": "best-television-series-musical-or-comedy",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:best-variety-series",
-    "festivalId": "golden-globes",
-    "name": "Best Variety Series",
-    "normalizedName": "best-variety-series",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:carol-burnett-award",
-    "festivalId": "golden-globes",
-    "name": "Carol Burnett Award",
-    "normalizedName": "carol-burnett-award",
     "scope": "film"
   },
   {
@@ -6185,27 +5870,6 @@
     "festivalId": "golden-globes",
     "name": "Film",
     "normalizedName": "film",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:films",
-    "festivalId": "golden-globes",
-    "name": "Films",
-    "normalizedName": "films",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:films-with-multiple-nominations",
-    "festivalId": "golden-globes",
-    "name": "Films with multiple nominations",
-    "normalizedName": "films-with-multiple-nominations",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:films-with-multiple-wins",
-    "festivalId": "golden-globes",
-    "name": "Films with multiple wins",
-    "normalizedName": "films-with-multiple-wins",
     "scope": "film"
   },
   {
@@ -6314,20 +5978,6 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:in-memoriam-segment",
-    "festivalId": "golden-globes",
-    "name": "\"In Memoriam\" segment",
-    "normalizedName": "in-memoriam-segment",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:miss-golden-globe",
-    "festivalId": "golden-globes",
-    "name": "Miss Golden Globe",
-    "normalizedName": "miss-golden-globe",
-    "scope": "film"
-  },
-  {
     "id": "golden-globes:most-promising-newcomer-female",
     "festivalId": "golden-globes",
     "name": "Most Promising Newcomer – Female",
@@ -6342,13 +5992,6 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:mr-golden-globe",
-    "festivalId": "golden-globes",
-    "name": "Mr. Golden Globe",
-    "normalizedName": "mr-golden-globe",
-    "scope": "film"
-  },
-  {
     "id": "golden-globes:other",
     "festivalId": "golden-globes",
     "name": "Other",
@@ -6356,38 +5999,10 @@
     "scope": "film"
   },
   {
-    "id": "golden-globes:presenters",
-    "festivalId": "golden-globes",
-    "name": "Presenters",
-    "normalizedName": "presenters",
-    "scope": "film"
-  },
-  {
     "id": "golden-globes:promoting-international-understanding",
     "festivalId": "golden-globes",
     "name": "Promoting International Understanding",
     "normalizedName": "promoting-international-understanding",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:series-with-multiple-nominations",
-    "festivalId": "golden-globes",
-    "name": "Series with multiple nominations",
-    "normalizedName": "series-with-multiple-nominations",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:series-with-multiple-wins",
-    "festivalId": "golden-globes",
-    "name": "Series with multiple wins",
-    "normalizedName": "series-with-multiple-wins",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:sources",
-    "festivalId": "golden-globes",
-    "name": "Sources",
-    "normalizedName": "sources",
     "scope": "film"
   },
   {
@@ -6402,20 +6017,6 @@
     "festivalId": "golden-globes",
     "name": "Special Award – Best Juvenile Actor",
     "normalizedName": "special-award-best-juvenile-actor",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:television",
-    "festivalId": "golden-globes",
-    "name": "Television",
-    "normalizedName": "television",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:trivia",
-    "festivalId": "golden-globes",
-    "name": "Trivia",
-    "normalizedName": "trivia",
     "scope": "film"
   },
   {
@@ -7112,13 +6713,6 @@
     "scope": "film"
   },
   {
-    "id": "venice:andrea-purgatori-siae-career-award",
-    "festivalId": "venice",
-    "name": "Andrea Purgatori SIAE Career Award",
-    "normalizedName": "andrea-purgatori-siae-career-award",
-    "scope": "film"
-  },
-  {
     "id": "venice:anica-cup",
     "festivalId": "venice",
     "name": "ANICA Cup",
@@ -7214,13 +6808,6 @@
     "festivalId": "venice",
     "name": "Authors Under 40 Award",
     "normalizedName": "authors-under-40-award",
-    "scope": "film"
-  },
-  {
-    "id": "venice:award-for-lifetime-achievement",
-    "festivalId": "venice",
-    "name": "Award for Lifetime Achievement",
-    "normalizedName": "award-for-lifetime-achievement",
     "scope": "film"
   },
   {
@@ -8183,20 +7770,6 @@
     "scope": "film"
   },
   {
-    "id": "venice:career-award",
-    "festivalId": "venice",
-    "name": "Career Award",
-    "normalizedName": "career-award",
-    "scope": "film"
-  },
-  {
-    "id": "venice:career-golden-lion",
-    "festivalId": "venice",
-    "name": "Career Golden Lion",
-    "normalizedName": "career-golden-lion",
-    "scope": "film"
-  },
-  {
     "id": "venice:casa-wabi-mantarraya-award",
     "festivalId": "venice",
     "name": "Casa Wabi - Mantarraya Award",
@@ -8470,13 +8043,6 @@
     "scope": "film"
   },
   {
-    "id": "venice:corto-cortissimo-short-film-competition",
-    "festivalId": "venice",
-    "name": "Corto-Cortissimo (Short Film Competition)",
-    "normalizedName": "corto-cortissimo-short-film-competition",
-    "scope": "film"
-  },
-  {
     "id": "venice:cortocampo-italiano",
     "festivalId": "venice",
     "name": "Cortocampo Italiano",
@@ -8526,24 +8092,10 @@
     "scope": "film"
   },
   {
-    "id": "venice:das-ph-nomen-der-oper",
-    "festivalId": "venice",
-    "name": "Das Phänomen der Oper",
-    "normalizedName": "das-ph-nomen-der-oper",
-    "scope": "film"
-  },
-  {
     "id": "venice:de-sica-award",
     "festivalId": "venice",
     "name": "De Sica Award",
     "normalizedName": "de-sica-award",
-    "scope": "film"
-  },
-  {
-    "id": "venice:der-zauber-der-verdunkelten-seele",
-    "festivalId": "venice",
-    "name": "Der Zauber der verdunkelten Seele",
-    "normalizedName": "der-zauber-der-verdunkelten-seele",
     "scope": "film"
   },
   {
@@ -9142,20 +8694,6 @@
     "scope": "film"
   },
   {
-    "id": "venice:golden-lion-for-lifetime-achievement",
-    "festivalId": "venice",
-    "name": "Golden Lion for Lifetime Achievement",
-    "normalizedName": "golden-lion-for-lifetime-achievement",
-    "scope": "film"
-  },
-  {
-    "id": "venice:golden-lion-honorary-award",
-    "festivalId": "venice",
-    "name": "Golden Lion Honorary Award",
-    "normalizedName": "golden-lion-honorary-award",
-    "scope": "film"
-  },
-  {
     "id": "venice:golden-mouse",
     "festivalId": "venice",
     "name": "Golden Mouse",
@@ -9440,13 +8978,6 @@
     "festivalId": "venice",
     "name": "Horizons Extra",
     "normalizedName": "horizons-extra",
-    "scope": "film"
-  },
-  {
-    "id": "venice:horizons-orizzonti",
-    "festivalId": "venice",
-    "name": "Horizons (Orizzonti)",
-    "normalizedName": "horizons-orizzonti",
     "scope": "film"
   },
   {
@@ -9772,13 +9303,6 @@
     "scope": "film"
   },
   {
-    "id": "venice:jury",
-    "festivalId": "venice",
-    "name": "Jury",
-    "normalizedName": "jury",
-    "scope": "film"
-  },
-  {
     "id": "venice:kodak-award",
     "festivalId": "venice",
     "name": "Kodak Award",
@@ -9919,13 +9443,6 @@
     "scope": "film"
   },
   {
-    "id": "venice:lifetime-achievement-award",
-    "festivalId": "venice",
-    "name": "Lifetime Achievement Award",
-    "normalizedName": "lifetime-achievement-award",
-    "scope": "film"
-  },
-  {
     "id": "venice:lifetime-achievement-award-special-mention",
     "festivalId": "venice",
     "name": "Lifetime Achievement Award – Special Mention",
@@ -9975,13 +9492,6 @@
     "scope": "film"
   },
   {
-    "id": "venice:lisandro-alonso",
-    "festivalId": "venice",
-    "name": "Lisandro Alonso",
-    "normalizedName": "lisandro-alonso",
-    "scope": "film"
-  },
-  {
     "id": "venice:little-golden-lion",
     "festivalId": "venice",
     "name": "Little Golden Lion",
@@ -10010,13 +9520,6 @@
     "scope": "film"
   },
   {
-    "id": "venice:luigi-de-laurentiis-award-for-a-debut-feature",
-    "festivalId": "venice",
-    "name": "Luigi De Laurentiis Award for a Debut Feature",
-    "normalizedName": "luigi-de-laurentiis-award-for-a-debut-feature",
-    "scope": "film"
-  },
-  {
     "id": "venice:luigi-de-laurentiis-award-for-a-debut-film",
     "festivalId": "venice",
     "name": "Luigi De Laurentiis Award for a Debut Film",
@@ -10038,13 +9541,6 @@
     "scope": "film"
   },
   {
-    "id": "venice:luigi-de-laurentiis-award-for-debut-film",
-    "festivalId": "venice",
-    "name": "Luigi de Laurentiis Award for Debut Film",
-    "normalizedName": "luigi-de-laurentiis-award-for-debut-film",
-    "scope": "film"
-  },
-  {
     "id": "venice:luigi-de-laurentiis-venice-award-for-a-debut-film",
     "festivalId": "venice",
     "name": "Luigi De Laurentiis Venice Award For A Debut Film",
@@ -10054,7 +9550,7 @@
   {
     "id": "venice:luigi-de-laurentis-award",
     "festivalId": "venice",
-    "name": "Luigi de Laurentis Award",
+    "name": "Luigi De Laurentis Award",
     "normalizedName": "luigi-de-laurentis-award",
     "scope": "film"
   },
@@ -10077,13 +9573,6 @@
     "festivalId": "venice",
     "name": "Luigi De Laurentis Award for Debut Feature",
     "normalizedName": "luigi-de-laurentis-award-for-debut-feature",
-    "scope": "film"
-  },
-  {
-    "id": "venice:luigi-de-laurentis-award-for-debut-film",
-    "festivalId": "venice",
-    "name": "Luigi de Laurentis Award for Debut Film",
-    "normalizedName": "luigi-de-laurentis-award-for-debut-film",
     "scope": "film"
   },
   {
@@ -10112,181 +9601,6 @@
     "festivalId": "venice",
     "name": "Main Competition",
     "normalizedName": "main-competition",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-60",
-    "festivalId": "venice",
-    "name": "Main Competition (Venezia 60)",
-    "normalizedName": "main-competition-venezia-60",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-61",
-    "festivalId": "venice",
-    "name": "Main Competition (Venezia 61)",
-    "normalizedName": "main-competition-venezia-61",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-62",
-    "festivalId": "venice",
-    "name": "Main Competition (Venezia 62)",
-    "normalizedName": "main-competition-venezia-62",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-63",
-    "festivalId": "venice",
-    "name": "Main Competition (Venezia 63)",
-    "normalizedName": "main-competition-venezia-63",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-64",
-    "festivalId": "venice",
-    "name": "Main Competition (Venezia 64)",
-    "normalizedName": "main-competition-venezia-64",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-65",
-    "festivalId": "venice",
-    "name": "Main Competition (Venezia 65)",
-    "normalizedName": "main-competition-venezia-65",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-66",
-    "festivalId": "venice",
-    "name": "Main competition (Venezia 66)",
-    "normalizedName": "main-competition-venezia-66",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-67",
-    "festivalId": "venice",
-    "name": "Main Competition (Venezia 67)",
-    "normalizedName": "main-competition-venezia-67",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-68",
-    "festivalId": "venice",
-    "name": "Main competition (Venezia 68)",
-    "normalizedName": "main-competition-venezia-68",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-69",
-    "festivalId": "venice",
-    "name": "Main competition (Venezia 69)",
-    "normalizedName": "main-competition-venezia-69",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-70",
-    "festivalId": "venice",
-    "name": "Main competition (Venezia 70)",
-    "normalizedName": "main-competition-venezia-70",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-71",
-    "festivalId": "venice",
-    "name": "Main Competition (Venezia 71)",
-    "normalizedName": "main-competition-venezia-71",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-72",
-    "festivalId": "venice",
-    "name": "Main competition (Venezia 72)",
-    "normalizedName": "main-competition-venezia-72",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-73",
-    "festivalId": "venice",
-    "name": "Main competition (Venezia 73)",
-    "normalizedName": "main-competition-venezia-73",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-74",
-    "festivalId": "venice",
-    "name": "Main Competition (Venezia 74)",
-    "normalizedName": "main-competition-venezia-74",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-75",
-    "festivalId": "venice",
-    "name": "Main Competition (Venezia 75)",
-    "normalizedName": "main-competition-venezia-75",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-76",
-    "festivalId": "venice",
-    "name": "Main Competition (Venezia 76)",
-    "normalizedName": "main-competition-venezia-76",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-77",
-    "festivalId": "venice",
-    "name": "Main Competition (Venezia 77)",
-    "normalizedName": "main-competition-venezia-77",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-78",
-    "festivalId": "venice",
-    "name": "Main Competition (Venezia 78)",
-    "normalizedName": "main-competition-venezia-78",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-79",
-    "festivalId": "venice",
-    "name": "Main competition (Venezia 79)",
-    "normalizedName": "main-competition-venezia-79",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-8",
-    "festivalId": "venice",
-    "name": "Main Competition (Venezia 8)",
-    "normalizedName": "main-competition-venezia-8",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-80",
-    "festivalId": "venice",
-    "name": "Main Competition (Venezia 80)",
-    "normalizedName": "main-competition-venezia-80",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-81",
-    "festivalId": "venice",
-    "name": "Main Competition (Venezia 81)",
-    "normalizedName": "main-competition-venezia-81",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-82",
-    "festivalId": "venice",
-    "name": "Main Competition (Venezia 82)",
-    "normalizedName": "main-competition-venezia-82",
-    "scope": "film"
-  },
-  {
-    "id": "venice:main-competition-venezia-83",
-    "festivalId": "venice",
-    "name": "Main Competition (Venezia 83)",
-    "normalizedName": "main-competition-venezia-83",
     "scope": "film"
   },
   {
@@ -10528,20 +9842,6 @@
     "scope": "film"
   },
   {
-    "id": "venice:opera-prima-luigi-de-laurentiis-award-for-a-debut-film",
-    "festivalId": "venice",
-    "name": "Opera Prima (\"Luigi de Laurentiis\" Award for a Debut Film)",
-    "normalizedName": "opera-prima-luigi-de-laurentiis-award-for-a-debut-film",
-    "scope": "film"
-  },
-  {
-    "id": "venice:opera-prima-venice-award-for-a-debut-film",
-    "festivalId": "venice",
-    "name": "Opera Prima (Venice Award for a Debut Film)",
-    "normalizedName": "opera-prima-venice-award-for-a-debut-film",
-    "scope": "film"
-  },
-  {
     "id": "venice:orizzonti",
     "festivalId": "venice",
     "name": "Orizzonti",
@@ -10707,13 +10007,6 @@
     "festivalId": "venice",
     "name": "People's Choice Award",
     "normalizedName": "people-s-choice-award",
-    "scope": "film"
-  },
-  {
-    "id": "venice:persol-3-d",
-    "festivalId": "venice",
-    "name": "Persol 3-D",
-    "normalizedName": "persol-3-d",
     "scope": "film"
   },
   {
@@ -11158,13 +10451,6 @@
     "scope": "film"
   },
   {
-    "id": "venice:short-film-competition-corto-cortissimo",
-    "festivalId": "venice",
-    "name": "Short Film Competition (Corto Cortissimo)",
-    "normalizedName": "short-film-competition-corto-cortissimo",
-    "scope": "film"
-  },
-  {
     "id": "venice:short-films",
     "festivalId": "venice",
     "name": "Short Films",
@@ -11176,13 +10462,6 @@
     "festivalId": "venice",
     "name": "Short Films Competition",
     "normalizedName": "short-films-competition",
-    "scope": "film"
-  },
-  {
-    "id": "venice:short-films-competition-corto-cortissimo",
-    "festivalId": "venice",
-    "name": "Short Films Competition (Corto Cortissimo)",
-    "normalizedName": "short-films-competition-corto-cortissimo",
     "scope": "film"
   },
   {
@@ -11491,13 +10770,6 @@
     "festivalId": "venice",
     "name": "Special Events 3 - Corto d'autore: Italia",
     "normalizedName": "special-events-3-corto-d-autore-italia",
-    "scope": "film"
-  },
-  {
-    "id": "venice:special-events-and-homages",
-    "festivalId": "venice",
-    "name": "Special Events and Homages",
-    "normalizedName": "special-events-and-homages",
     "scope": "film"
   },
   {
@@ -12005,13 +11277,6 @@
     "scope": "film"
   },
   {
-    "id": "venice:venezia-cinema-digitale",
-    "festivalId": "venice",
-    "name": "Venezia Cinema Digitale",
-    "normalizedName": "venezia-cinema-digitale",
-    "scope": "film"
-  },
-  {
     "id": "venice:venezia-de-sica",
     "festivalId": "venice",
     "name": "Venezia De Sica",
@@ -12103,13 +11368,6 @@
     "scope": "film"
   },
   {
-    "id": "venice:venice-immersive",
-    "festivalId": "venice",
-    "name": "Venice Immersive",
-    "normalizedName": "venice-immersive",
-    "scope": "film"
-  },
-  {
     "id": "venice:venice-international-critics-week",
     "festivalId": "venice",
     "name": "Venice International Critics' Week",
@@ -12177,20 +11435,6 @@
     "festivalId": "venice",
     "name": "Venice Spotlight",
     "normalizedName": "venice-spotlight",
-    "scope": "film"
-  },
-  {
-    "id": "venice:venice-virtual-reality",
-    "festivalId": "venice",
-    "name": "Venice Virtual Reality",
-    "normalizedName": "venice-virtual-reality",
-    "scope": "film"
-  },
-  {
-    "id": "venice:venice-vr-expanded",
-    "festivalId": "venice",
-    "name": "Venice VR Expanded",
-    "normalizedName": "venice-vr-expanded",
     "scope": "film"
   },
   {

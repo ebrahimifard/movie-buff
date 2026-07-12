@@ -2,20 +2,43 @@ import { describe, expect, it } from "vitest";
 import { buildMissingInfoIssueUrl, getMissingFields } from "./missing-info";
 
 describe("buildMissingInfoIssueUrl", () => {
-  it("builds a GitHub issue URL against this repo with the film's details in the body", () => {
+  it("links to the structured data-correction Issue Form, pre-filled with the film's details", () => {
     const url = buildMissingInfoIssueUrl({
       title: "Some Film",
       year: 2019,
       festivalName: "Cannes Film Festival",
-      missingFields: ["poster", "IMDb link"]
+      missingFields: ["poster", "IMDb link"],
+      internalId: "film:some-film-2019",
+      pageUrl: "/festival/cannes",
+      category: "Palme d'Or"
     });
 
     expect(url.startsWith("https://github.com/ebrahimifard/movie-buff/issues/new?")).toBe(true);
     const params = new URL(url).searchParams;
-    expect(params.get("title")).toBe("Missing data: Some Film (2019)");
-    expect(params.get("body")).toContain("Cannes Film Festival");
-    expect(params.get("body")).toContain("poster, IMDb link");
-    expect(params.get("labels")).toBe("data-correction");
+    expect(params.get("template")).toBe("data-correction.yml");
+    expect(params.get("title")).toBe("[Data correction] Some Film (2019)");
+    expect(params.get("film_title")).toBe("Some Film");
+    expect(params.get("festival")).toBe("Cannes Film Festival");
+    expect(params.get("year")).toBe("2019");
+    expect(params.get("category")).toBe("Palme d'Or");
+    expect(params.get("internal_id")).toBe("film:some-film-2019");
+    expect(params.get("page_url")).toBe("/festival/cannes");
+    expect(params.get("correction")).toContain("poster, IMDb link");
+  });
+
+  it("omits optional query params entirely when not provided, rather than sending empty values", () => {
+    const url = buildMissingInfoIssueUrl({
+      title: "Some Film",
+      year: 2019,
+      festivalName: "Cannes Film Festival",
+      missingFields: []
+    });
+
+    const params = new URL(url).searchParams;
+    expect(params.has("category")).toBe(false);
+    expect(params.has("internal_id")).toBe(false);
+    expect(params.has("page_url")).toBe(false);
+    expect(params.has("correction")).toBe(false);
   });
 });
 

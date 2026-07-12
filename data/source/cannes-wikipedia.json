@@ -49948,26 +49948,6 @@
     "year": 1979,
     "festivalId": "cannes",
     "festivalName": "Cannes Film Festival",
-    "category": "Honorary Award",
-    "result": "winner",
-    "film": {
-      "title": "Miklós Jancsó",
-      "releaseYear": 1979,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": [],
-    "credits": []
-  },
-  {
-    "year": 1979,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
     "category": "Palme d'Or",
     "result": "winner",
     "film": {
@@ -55455,26 +55435,6 @@
     "result": "winner",
     "film": {
       "title": "Identification of a Woman",
-      "releaseYear": 1982,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": [],
-    "credits": []
-  },
-  {
-    "year": 1982,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "Honorary Award",
-    "result": "winner",
-    "film": {
-      "title": "Satyajit Ray",
       "releaseYear": 1982,
       "imdbId": null,
       "countryCodes": [],
@@ -102470,26 +102430,6 @@
     "year": 2003,
     "festivalId": "cannes",
     "festivalName": "Cannes Film Festival",
-    "category": "Honorary Golden Palm",
-    "result": "winner",
-    "film": {
-      "title": "Jeanne Moreau",
-      "releaseYear": 2003,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": [],
-    "credits": []
-  },
-  {
-    "year": 2003,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
     "category": "Cinema Prize of the French National Education System",
     "result": "winner",
     "film": {
@@ -121528,26 +121468,6 @@
     "year": 2009,
     "festivalId": "cannes",
     "festivalName": "Cannes Film Festival",
-    "category": "Lifetime Achievement Award",
-    "result": "winner",
-    "film": {
-      "title": "Alain Resnais",
-      "releaseYear": 2009,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": [],
-    "credits": []
-  },
-  {
-    "year": 2009,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
     "category": "Palme d'Or",
     "result": "winner",
     "film": {
@@ -121572,26 +121492,6 @@
     "result": "winner",
     "film": {
       "title": "Fish Tank",
-      "releaseYear": 2009,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": [],
-    "credits": []
-  },
-  {
-    "year": 2009,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "Honorary Palm d'Or",
-    "result": "winner",
-    "film": {
-      "title": "Clint Eastwood",
       "releaseYear": 2009,
       "imdbId": null,
       "countryCodes": [],
@@ -175943,26 +175843,6 @@
     "result": "winner",
     "film": {
       "title": "Vincent Must Die",
-      "releaseYear": 2023,
-      "imdbId": null,
-      "countryCodes": [],
-      "languages": [],
-      "genres": [],
-      "synopsis": "",
-      "posterUrl": "",
-      "runtimeMinutes": 0
-    },
-    "directors": [],
-    "credits": []
-  },
-  {
-    "year": 2023,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "category": "Lifetime Achievement Award",
-    "result": "winner",
-    "film": {
-      "title": "Ken Loach",
       "releaseYear": 2023,
       "imdbId": null,
       "countryCodes": [],

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { classifyPersonRole, cleanText, createDeduper, detectColumnIndex, parseSimpleAwardsWikipedia } from "./wikipedia-scrape.mjs";
+import { classifyPersonRole, cleanText, createDeduper, detectColumnIndex, isHonoraryCategory, parseSimpleAwardsWikipedia } from "./wikipedia-scrape.mjs";
 
 describe("cleanText", () => {
   it("strips footnote markers", () => {
@@ -489,5 +489,235 @@ describe("classifyPersonRole", () => {
   it("returns null for a film-scoped category with no person role", () => {
     expect(classifyPersonRole("Best Picture")).toBeNull();
     expect(classifyPersonRole("Palme d'Or")).toBeNull();
+  });
+});
+
+describe("isHonoraryCategory", () => {
+  it("matches the real category-name variants observed across festivals", () => {
+    const variants = [
+      "Honorary Golden Bear",
+      "Golden Lion for Lifetime Achievement",
+      "Andrea Purgatori SIAE Career Award",
+      "Lifetime Achievement Award",
+      "Lifetime Achievement Award – Special Mention",
+      "Career Award",
+      "Award for Lifetime Achievement",
+      "Honorary Palm d'Or",
+      "Golden Lion Honorary Award",
+      "Career Golden Lion",
+      "Honorary Award",
+      "Academy Honorary Award"
+    ];
+    for (const category of variants) {
+      expect(isHonoraryCategory(category)).toBe(true);
+    }
+  });
+
+  it("does not match ordinary competitive categories", () => {
+    expect(isHonoraryCategory("Best Picture")).toBe(false);
+    expect(isHonoraryCategory("Best Actor")).toBe(false);
+    expect(isHonoraryCategory("Golden Bear")).toBe(false);
+  });
+});
+
+describe("parseSimpleAwardsWikipedia: non-award section exclusion", () => {
+  const config = {
+    festivalId: "golden-globes",
+    festivalName: "Golden Globes",
+    normalizeCategory: (raw) => raw || "Unknown category"
+  };
+
+  it("excludes a References/Sources-style citation list from being read as award data", () => {
+    const html = wrapHtml(`
+      <h2>Sources</h2>
+      <ul>
+        <li><a href="/wiki/x">Elvis and the Colonel: An Insider's Look</a></li>
+        <li>HFPA</li>
+      </ul>
+    `);
+    expect(parseSimpleAwardsWikipedia(html, 1973, config)).toEqual([]);
+  });
+
+  it("excludes a Juries section, even when its sub-heading text is ambiguous with a real competition category name", () => {
+    // Mirrors the real 2026 Venice page: H2 "Juries" > H3 "Main Competition
+    // (Venezia 83)" contains jury MEMBER bios (person names), not the film
+    // lineup — despite the sub-heading text looking like it could be a real
+    // award category. getSectionAncestors must catch this via the "Juries"
+    // ancestor, not just the nearest heading.
+    const html = wrapHtml(`
+      <h2>Juries</h2>
+      <h3>Main Competition (Venezia 83)</h3>
+      <ul>
+        <li><a href="/wiki/Maggie_Gyllenhaal">Maggie Gyllenhaal</a>, American actress and filmmaker – Jury President</li>
+        <li><a href="/wiki/Daniel_Blumberg">Daniel Blumberg</a>, English artist, musician and composer</li>
+      </ul>
+    `);
+    expect(parseSimpleAwardsWikipedia(html, 2026, config)).toEqual([]);
+  });
+
+  it("excludes a Trivia section", () => {
+    const html = wrapHtml(`
+      <h2>Trivia</h2>
+      <ul>
+        <li>At no time during the telecast was a tribute made.</li>
+      </ul>
+    `);
+    expect(parseSimpleAwardsWikipedia(html, 2006, config)).toEqual([]);
+  });
+
+  it("excludes 'Films with multiple nominations/wins' summary tables — real film titles, but a redundant statistics duplicate of data already captured under their real categories", () => {
+    const html = wrapHtml(`
+      <h2>Films with multiple nominations</h2>
+      <table class="wikitable">
+        <tr><th>Film</th><th>Nominations</th></tr>
+        <tr><td>Lincoln</td><td>4</td></tr>
+      </table>
+      <h2>Films with multiple wins</h2>
+      <table class="wikitable">
+        <tr><th>Film</th><th>Wins</th></tr>
+        <tr><td>Argo</td><td>2</td></tr>
+      </table>
+    `);
+    expect(parseSimpleAwardsWikipedia(html, 2012, config)).toEqual([]);
+  });
+
+  it("excludes an Awards breakdown statistics table, including a nested subheading that reuses a legitimate section's name", () => {
+    // Mirrors the real 2009 Golden Globes page: H2 "Awards breakdown"
+    // contains its OWN H3 "Films" subheading (distinct from the real
+    // H2 "Winners and nominees" > H3 "Film" section), whose table lists
+    // category NAMES as if they were nominee titles.
+    const html = wrapHtml(`
+      <h2>Awards breakdown</h2>
+      <h3>Films</h3>
+      <table class="wikitable">
+        <tr><th>Category</th></tr>
+        <tr><td>Best Director – Motion Picture</td></tr>
+        <tr><td>Best Foreign Language Film</td></tr>
+      </table>
+    `);
+    expect(parseSimpleAwardsWikipedia(html, 2009, config)).toEqual([]);
+  });
+
+  it("excludes a Television section on a dual-medium festival page while keeping the sibling Film section", () => {
+    const html = wrapHtml(`
+      <h2>Winners and nominees</h2>
+      <h3>Film</h3>
+      <table class="wikitable">
+        <tr><th>Film</th></tr>
+        <tr><td>Parasite</td></tr>
+      </table>
+      <h3>Television</h3>
+      <table class="wikitable">
+        <tr><th>Series</th></tr>
+        <tr><td>Game of Thrones</td></tr>
+      </table>
+    `);
+    const records = parseSimpleAwardsWikipedia(html, 2012, config);
+    expect(records.map((r) => r.film.title)).toEqual(["Parasite"]);
+  });
+
+  it("still parses a legitimate Film section nested under 'Winners and nominees', unaffected by the Awards breakdown exclusion", () => {
+    const html = wrapHtml(`
+      <h2>Winners and nominees</h2>
+      <h3>Film</h3>
+      <table class="wikitable">
+        <tr><th>Film</th></tr>
+        <tr><td>Parasite</td></tr>
+      </table>
+      <h2>Awards breakdown</h2>
+      <h3>Films</h3>
+      <table class="wikitable">
+        <tr><th>Category</th></tr>
+        <tr><td>Best Director</td></tr>
+      </table>
+    `);
+    const records = parseSimpleAwardsWikipedia(html, 2009, config);
+    expect(records.map((r) => r.film.title)).toEqual(["Parasite"]);
+  });
+});
+
+describe("parseSimpleAwardsWikipedia: scanTables option", () => {
+  const config = {
+    festivalId: "berlinale",
+    festivalName: "Berlin International Film Festival",
+    normalizeCategory: (raw) => raw || "Unknown category",
+    scanTables: false
+  };
+
+  it("ignores every table.wikitable on the page when scanTables is false, only using heading+<ul> sections", () => {
+    // Mirrors the real Berlinale/Venice case: a "Berlinale Special" table
+    // (an out-of-competition SELECTION listing, not real award data) sits
+    // alongside the real "Official Awards" heading+list section.
+    const html = wrapHtml(`
+      <h3>Berlinale Special — Out of Competition</h3>
+      <table class="wikitable">
+        <tr><th>English Title</th></tr>
+        <tr><td>Some Selected Film</td></tr>
+      </table>
+      <h2>Official Awards</h2>
+      <ul>
+        <li><a href="/wiki/Golden_Bear">Golden Bear</a>: <i><a href="/wiki/X">Real Winner</a></i> by <a href="/wiki/Y">A Director</a></li>
+      </ul>
+    `);
+    const records = parseSimpleAwardsWikipedia(html, 2026, config);
+    expect(records).toHaveLength(1);
+    expect(records[0].film.title).toBe("Real Winner");
+  });
+});
+
+describe("parseSimpleAwardsWikipedia: honorary/career award handling", () => {
+  const config = {
+    festivalId: "berlinale",
+    festivalName: "Berlin International Film Festival",
+    normalizeCategory: (raw) => raw || "Unknown category"
+  };
+
+  it("drops an honorary-award entry whose source text is just the honoree's bare name (no film signal)", () => {
+    // Mirrors the real Berlinale page: <h3>Honorary Golden Bear</h3> followed
+    // by a <ul> with a single <li> containing only a linked person name.
+    const html = wrapHtml(`
+      <h3>Honorary Golden Bear</h3>
+      <ul>
+        <li><a href="/wiki/Michelle_Yeoh">Michelle Yeoh</a></li>
+      </ul>
+    `);
+    expect(parseSimpleAwardsWikipedia(html, 2026, config)).toEqual([]);
+  });
+
+  it("keeps an honorary-award entry that DOES carry a genuine film signal (italicized title)", () => {
+    // Some older Academy Honorary Awards were given to a specific
+    // foreign-language film before a competitive category existed for it —
+    // these are legitimately film-tied and must not be dropped.
+    const html = wrapHtml(`
+      <h3>Academy Honorary Award</h3>
+      <ul>
+        <li><i><a href="/wiki/Rashomon">Rashomon</a></i></li>
+      </ul>
+    `);
+    const records = parseSimpleAwardsWikipedia(html, 1952, config);
+    expect(records).toHaveLength(1);
+    expect(records[0].film.title).toBe("Rashomon");
+  });
+
+  it("drops a colon-prefixed honorary category with no for/by film pattern and no italics", () => {
+    const html = wrapHtml(`
+      <h2>Official Awards</h2>
+      <ul>
+        <li><a href="/wiki/Career_Golden_Lion">Career Golden Lion</a>: <a href="/wiki/George_Clooney">George Clooney</a></li>
+      </ul>
+    `);
+    expect(parseSimpleAwardsWikipedia(html, 2026, config)).toEqual([]);
+  });
+
+  it("does not drop a non-honorary category even when it has no film signal (existing first-link fallback behavior preserved)", () => {
+    const html = wrapHtml(`
+      <h2>Official Awards</h2>
+      <ul>
+        <li><a href="/wiki/Golden_Bear">Golden Bear</a>: <a href="/wiki/Some_Film">Some Film</a></li>
+      </ul>
+    `);
+    const records = parseSimpleAwardsWikipedia(html, 2020, config);
+    expect(records).toHaveLength(1);
+    expect(records[0].film.title).toBe("Some Film");
   });
 });

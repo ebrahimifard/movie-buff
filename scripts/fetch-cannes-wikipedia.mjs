@@ -7,7 +7,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { JSDOM } from "jsdom";
 import { DEFAULT_SCRAPE_DELAY_MS, fetchWithRetry, sleep } from "./lib/http.mjs";
-import { classifyPersonRole, extractTitleAndPerson } from "./lib/wikipedia-scrape.mjs";
+import { NON_AWARD_SECTION_PATTERN, classifyPersonRole, extractTitleAndPerson, isHonoraryCategory } from "./lib/wikipedia-scrape.mjs";
 
 const root = process.cwd();
 const outputPath = path.join(root, "data", "source", "cannes-wikipedia.json");
@@ -52,7 +52,7 @@ export function parseCannesWikipedia(html, year) {
   }
 
   function shouldSkipSection(section) {
-    return /^(contents|references|external links|see also|notes|media|further reading|bibliography)$/i.test(cleanText(section));
+    return NON_AWARD_SECTION_PATTERN.test(cleanText(section));
   }
 
   function normalizeCategory(raw) {
@@ -93,7 +93,7 @@ export function parseCannesWikipedia(html, year) {
     };
   }
 
-  function addRecord(category, result, title, personName) {
+  function addRecord(category, result, title, personName, hasFilmSignal = true) {
     const cleanTitle = cleanText(title)
       .replace(/^[-:*\s]+/, "")
       .replace(/\s*\([^)]*\)\s*$/, "")
@@ -103,6 +103,13 @@ export function parseCannesWikipedia(html, year) {
     if (/^(english title|original title|director\(s\)|directors|production country|country|school|year|main page|current events|random article|about wikipedia)$/i.test(cleanTitle)) return;
 
     const normalizedCategory = normalizeCategory(category);
+
+    // Career/honorary categories (Honorary Palm d'Or, Lifetime Achievement
+    // Award, ...) are given directly to a person, often with no associated
+    // film mentioned in the source text at all — see the matching comment
+    // in wikipedia-scrape.mjs's addRecord.
+    if (isHonoraryCategory(normalizedCategory) && !hasFilmSignal) return;
+
     const key = `${year}|${normalizedCategory}|${result}|${cleanTitle.toLowerCase()}`;
     if (dedupe.has(key)) return;
     dedupe.add(key);
@@ -152,6 +159,7 @@ export function parseCannesWikipedia(html, year) {
 
     let title = "";
     let personName = null;
+    let hasFilmSignal = true;
     if (forMatch) {
       title = forMatch[1];
       personName = rhs.slice(0, forMatch.index).trim();
@@ -162,9 +170,10 @@ export function parseCannesWikipedia(html, year) {
       const extracted = extractTitleAndPerson(li, null);
       title = extracted.title ?? rhs;
       personName = extracted.personName;
+      hasFilmSignal = extracted.hasFilmSignal;
     }
 
-    addRecord(category, "winner", title, personName);
+    addRecord(category, "winner", title, personName, hasFilmSignal);
   }
 
   function parseNomineeListItem(li, sectionCategory) {
@@ -179,7 +188,7 @@ export function parseCannesWikipedia(html, year) {
       .trim();
 
     const title = extracted.title ?? fallback;
-    addRecord(sectionCategory, "nominee", title, extracted.personName);
+    addRecord(sectionCategory, "nominee", title, extracted.personName, extracted.hasFilmSignal);
   }
 
   function parseTable(table, sectionCategory, isAwardsSection) {
@@ -199,18 +208,21 @@ export function parseCannesWikipedia(html, year) {
 
       let title = "";
       let personName = null;
+      let hasFilmSignal = false;
       if (headers.length && headers.length === cells.length) {
         const filmIdx = headers.findIndex(h => /title|film|winner/.test(h));
         if (filmIdx >= 0) {
           const extracted = extractTitleAndPerson(cells[filmIdx], null);
           title = extracted.title ?? cleanText(cells[filmIdx].textContent);
           personName = extracted.personName;
+          hasFilmSignal = extracted.hasFilmSignal;
         }
       }
       if (!title) {
         const extracted = extractTitleAndPerson(cells[0], null);
         title = extracted.title ?? cleanText(cells[0].textContent);
         personName = personName ?? extracted.personName;
+        hasFilmSignal = extracted.hasFilmSignal;
       }
       if (!title) return;
 
@@ -222,9 +234,9 @@ export function parseCannesWikipedia(html, year) {
             category = cleanText(cells[awardIdx].textContent) || sectionCategory;
           }
         }
-        addRecord(category, "winner", title, personName);
+        addRecord(category, "winner", title, personName, hasFilmSignal);
       } else {
-        addRecord(sectionCategory, "nominee", title, personName);
+        addRecord(sectionCategory, "nominee", title, personName, hasFilmSignal);
       }
     });
   }

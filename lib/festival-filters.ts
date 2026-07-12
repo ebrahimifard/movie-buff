@@ -23,6 +23,7 @@ export type FestivalFilterState = {
   year?: number;
   country?: string;
   categories?: string[];
+  genres?: string[];
 };
 
 export type FestivalCategoryEntry = { category: string; result: "winner" | "nominee" };
@@ -159,6 +160,15 @@ export function filterNominations(rows: FestivalFilterRow[], filters: FestivalFi
     if (filters.categories && filters.categories.length > 0 && !filters.categories.includes(row.category)) {
       return false;
     }
+    // A film can carry several genres (row.genres), so this is OR-within
+    // the selected genre set (matches if the film has ANY of the selected
+    // genres) — consistent with the categories filter's semantics above.
+    // A film with no genres at all (genres: []) simply never matches an
+    // active genre filter, which is the correct behavior: it's neither
+    // wrongly included nor does it crash on the empty array.
+    if (filters.genres && filters.genres.length > 0 && !row.genres.some((genre) => filters.genres!.includes(genre))) {
+      return false;
+    }
     return true;
   });
 }
@@ -177,6 +187,29 @@ export function getCategoryOptions(rows: FestivalFilterRow[], filters: FestivalF
   const otherFilters: FestivalFilterState = { ...filters, categories: undefined };
   const scoped = filterNominations(rows, otherFilters);
   return [...new Set(scoped.map((row) => row.category))].sort();
+}
+
+// Genre options are scoped to every *other* active filter (year, result,
+// category, ...) but never to `filters.genres` itself, mirroring
+// getCategoryOptions — so the genre list narrows along with everything
+// else (e.g. picking a year only shows genres actually present that year)
+// without a selected genre hiding its own sibling options. Genre values
+// come straight from Film.genres (already deduped/normalized at the data
+// layer — see toGenres() in scripts/enrich-tmdb.mjs), so no further
+// normalization is needed here; a film with no genres simply contributes
+// nothing to this list.
+export function getGenreOptions(rows: FestivalFilterRow[], filters: FestivalFilterState): string[] {
+  const otherFilters: FestivalFilterState = { ...filters, genres: undefined };
+  const scoped = filterNominations(rows, otherFilters);
+  const genres = new Set<string>();
+  for (const row of scoped) {
+    for (const genre of row.genres) {
+      if (genre) {
+        genres.add(genre);
+      }
+    }
+  }
+  return [...genres].sort();
 }
 
 export type FestivalGroup = {

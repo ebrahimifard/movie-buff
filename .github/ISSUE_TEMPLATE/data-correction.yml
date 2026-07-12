@@ -1,0 +1,112 @@
+name: Data correction
+description: Report missing or incorrect information about a film, award, or nomination in the archive.
+title: "[Data correction] "
+labels: ["data-correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the archive's accuracy.
+
+        **How this is reviewed**: this site has no database and no automated import — every
+        correction is reviewed by a maintainer against the source you cite below, then applied
+        by hand to `data/source/master-data.json` (the hand-curated seed file, which always wins
+        over the automated Wikidata/Wikipedia sources during the next data rebuild) before the
+        normal data pipeline re-runs. See `CONTRIBUTING.md` for the full process. There is no
+        automatic acceptance of submitted values — a source is required so it can be verified.
+
+  - type: input
+    id: film_title
+    attributes:
+      label: Film title
+      placeholder: "e.g. Parasite"
+    validations:
+      required: true
+
+  - type: input
+    id: internal_id
+    attributes:
+      label: Internal identifier
+      description: >-
+        The film's IMDb ID (e.g. tt6751668) or internal archive ID, shown in the page URL this
+        was linked from. Pre-filled automatically when reached via a "Suggest a correction" link
+        — please don't remove it, it's how a maintainer finds the exact record.
+    validations:
+      required: true
+
+  - type: input
+    id: festival
+    attributes:
+      label: Festival
+      placeholder: "e.g. Cannes Film Festival"
+    validations:
+      required: true
+
+  - type: input
+    id: year
+    attributes:
+      label: Year
+      placeholder: "e.g. 2019"
+    validations:
+      required: true
+
+  - type: input
+    id: category
+    attributes:
+      label: Award category (if applicable)
+      placeholder: "e.g. Best Director"
+    validations:
+      required: false
+
+  - type: input
+    id: page_url
+    attributes:
+      label: Page URL
+      description: The archive page you found this on.
+      placeholder: "https://..."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: affected_fields
+    attributes:
+      label: What's missing or incorrect?
+      description: Select every field this correction touches.
+      options:
+        - label: IMDb link
+        - label: Poster
+        - label: Runtime
+        - label: Genres
+        - label: Synopsis
+        - label: Director
+        - label: Cast / other credited person
+        - label: Release year
+        - label: Country
+        - label: Award category name
+        - label: Something else (describe below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: correction
+    attributes:
+      label: Suggested correction
+      description: The correct value(s) for the field(s) you selected above.
+      placeholder: |
+        e.g. Runtime should be 132 minutes, not 0.
+        e.g. Director credit is missing: Jane Doe.
+    validations:
+      required: true
+
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: >-
+        A link or citation a maintainer can use to verify this correction. Acceptable sources:
+        IMDb, the official festival website, Wikipedia (with its own citation), or another
+        primary/reputable source. Submissions without a checkable source may sit unreviewed —
+        this is what keeps the archive from filling up with unverifiable guesses.
+      placeholder: "https://www.imdb.com/title/... or https://www.festival-site.org/..."
+    validations:
+      required: true

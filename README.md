@@ -60,6 +60,14 @@ Each film record additionally contains:
 - synopsis
 - poster URL — a local `/posters/{id}.{ext}` path served from `public/posters/`, never a remote URL (see "Systematic API Pipeline" below)
 
+## Reporting a Data Correction
+
+Every movie card and film page has a **"Suggest a correction"** link for missing or wrong
+information — it opens a structured, pre-filled GitHub issue. See
+[CONTRIBUTING.md](CONTRIBUTING.md) for what happens after you submit one (short version:
+manual review against a cited source, then a hand edit to `data/source/master-data.json`,
+which always wins over the automated sources on the next rebuild).
+
 ## Local Development
 
 ```bash
@@ -152,6 +160,8 @@ npm run data:update
 ```
 
 Why two passes: BAFTA/Berlinale/Venice's scrapers only target years flagged `missingYears`/`weakYears` in `coverage-report.json`, so that report must be current *before* running them (step 1); afterward, coverage is regenerated again (step 3) to reflect the newly-added data. Step 3 uses `data:merge`, not `data:collect` — there's no need to re-hit the live Wikidata endpoint just to pick up the Wikipedia JSON already sitting on disk (TMDB enrichment is still re-run directly, since it's cheap to skip already-enriched records and `data:merge` always resets the enrichment state). `merge-sources.mjs` reads these five source files only if present (each is optional, driven by the `WIKIPEDIA_SOURCES` list — adding a sixth festival is a one-line addition there), matching them against existing seed/Wikidata records by IMDb ID when available and falling back to a title match otherwise — see `ARCHITECTURE.md` for the merge precedence.
+
+**⚠️ Coverage-gap targeting can only ever *add* years, never retroactively fix one that already parsed "successfully" but wrong.** If you're re-scraping BAFTA/Berlinale/Venice after a parser bug fix (not just to fill new gaps), pass `--full` (or set `FULL_RESCRAPE=1`) to `data:fetch:bafta-wikipedia`/`data:fetch:berlinale-wikipedia`/`data:fetch:venice-wikipedia` to force every year to be re-scraped — otherwise a year with full category depth is scored complete by `coverage-report.mjs` and the gap-driven default will never revisit it, silently leaving the old, wrong data in place. Running these normally (without `--full`) after such a fix also **overwrites the output file with only the gap years**, shrinking it — always check the resulting `data/source/*-wikipedia.json` record count looks right before committing.
 
 Cannes, BAFTA, and Golden Globes share a parser (`scripts/lib/wikipedia-scrape.mjs`) that handles both the modern Wikipedia "category grid" template and a flat "Category: Title by Director" award-list format (Berlinale and Venice's "Official Awards" sections use the latter). Golden Globes and BAFTA's Wikipedia pages don't have Cannes' proliferation of named sub-sections, so they use the shared parser directly; Cannes keeps its own bespoke parser for that reason.
 
