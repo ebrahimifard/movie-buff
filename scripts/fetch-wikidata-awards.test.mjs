@@ -12,6 +12,8 @@ import {
   createWinnersByFestivalQuery,
   dedupeRecords,
   extractImdb,
+  isFestivalEditionLeak,
+  isUnresolvedWikidataLabel,
   mapBindingToRecord,
   normalizeNames
 } from "./fetch-wikidata-awards.mjs";
@@ -148,5 +150,83 @@ describe("mapBindingToRecord", () => {
     expect(result.directors).toEqual(["Bong Joon-ho"]);
     expect(result.film.imdbId).toBe("tt6751668");
     expect(result.year).toBe(2019);
+  });
+
+  it("drops a record whose category is a raw, unresolved Wikidata QID", () => {
+    const result = mapBindingToRecord({
+      binding: { filmLabel: { value: "Simon of the Mountain" }, awardDate: { value: "2024-05-25T00:00:00Z" } },
+      inferredResult: "winner",
+      festivalId: "cannes",
+      festivalName: "Cannes Film Festival",
+      category: "Q3114791"
+    });
+    expect(result).toBeNull();
+  });
+
+  it("drops a record whose film title is a raw, unresolved Wikidata QID", () => {
+    const result = mapBindingToRecord({
+      binding: { filmLabel: { value: "Q139584611" }, awardDate: { value: "2024-05-25T00:00:00Z" } },
+      inferredResult: "winner",
+      festivalId: "cannes",
+      festivalName: "Cannes Film Festival",
+      category: "L'Œil d'or"
+    });
+    expect(result).toBeNull();
+  });
+
+  it("drops a record whose category is just the festival edition leaking in as an award", () => {
+    const result = mapBindingToRecord({
+      binding: { filmLabel: { value: "Naked Amazon" }, awardDate: { value: "1954-04-15T00:00:00Z" } },
+      inferredResult: "nominee",
+      festivalId: "cannes",
+      festivalName: "Cannes Film Festival",
+      category: "1954 Cannes Film Festival"
+    });
+    expect(result).toBeNull();
+  });
+
+  it("keeps a real award whose label happens to mention a year, as long as it isn't the bare edition label", () => {
+    const result = mapBindingToRecord({
+      binding: { filmLabel: { value: "Some Film" }, awardDate: { value: "1954-04-15T00:00:00Z" } },
+      inferredResult: "winner",
+      festivalId: "cannes",
+      festivalName: "Cannes Film Festival",
+      category: "1954 Cannes Film Festival Grand Prize"
+    });
+    expect(result).not.toBeNull();
+    expect(result.category).toBe("1954 Cannes Film Festival Grand Prize");
+  });
+});
+
+describe("isUnresolvedWikidataLabel", () => {
+  it("matches a bare QID", () => {
+    expect(isUnresolvedWikidataLabel("Q3114791")).toBe(true);
+  });
+
+  it("does not match a real label", () => {
+    expect(isUnresolvedWikidataLabel("Palme d'Or")).toBe(false);
+    expect(isUnresolvedWikidataLabel("Parasite")).toBe(false);
+  });
+});
+
+describe("isFestivalEditionLeak", () => {
+  it("matches the exact '<year> <festival name>' edition label", () => {
+    expect(isFestivalEditionLeak("1954 Cannes Film Festival", 1954, "Cannes Film Festival")).toBe(true);
+  });
+
+  it("does not match a real award that merely mentions the year", () => {
+    expect(isFestivalEditionLeak("1954 Cannes Film Festival Grand Prize", 1954, "Cannes Film Festival")).toBe(false);
+  });
+
+  it("does not match an unrelated category", () => {
+    expect(isFestivalEditionLeak("Palme d'Or", 1954, "Cannes Film Festival")).toBe(false);
+  });
+
+  it("matches an edition leak even when the record's own computed year disagrees with the label's year", () => {
+    // Real case found live: a film's award/release date fields resolved to
+    // 2021, but its "nominated for" statement pointed at the 2019 edition
+    // entity — still a leak, just not one whose year matches this
+    // particular binding's own `year`.
+    expect(isFestivalEditionLeak("2019 Cannes Film Festival", 2021, "Cannes Film Festival")).toBe(true);
   });
 });

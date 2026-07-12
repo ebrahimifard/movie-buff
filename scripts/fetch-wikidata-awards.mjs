@@ -445,6 +445,34 @@ export function extractImdb(binding) {
   return IMDB_ID_PATTERN.test(normalized) ? normalized : null;
 }
 
+// Wikidata's `SERVICE wikibase:label` fallback returns the bare QID string
+// itself when an entity has no label in the requested language, and that
+// string sails straight through normalizeTitle unless checked — this has
+// shown up both as a fake award category and as a fake film title.
+export function isUnresolvedWikidataLabel(value) {
+  return /^Q\d+$/.test(String(value ?? "").trim());
+}
+
+// A film's `award received`/`nominated for` statement sometimes points at
+// the *festival edition itself* rather than a specific prize — that edition
+// entity carries the same "part of <festival>" tag as a real award, so
+// nothing in the query itself distinguishes them. The edition's own label
+// is always exactly "<some year> <festival name>" (e.g. "1954 Cannes Film
+// Festival") — checked against ANY leading 4-digit year, not just this
+// specific binding's own computed `year`, since Wikidata's date fields for
+// a film and its award-edition entity can legitimately disagree (a film
+// nominated for the 2019 edition might carry a 2021 release/award date
+// elsewhere) without the leak being any less real. A real award is not
+// going to be named exactly "<year> <festival name>" verbatim regardless.
+export function isFestivalEditionLeak(category, year, festivalName) {
+  const trimmed = String(category ?? "").trim();
+  if (trimmed === `${year} ${festivalName}`) {
+    return true;
+  }
+  const match = trimmed.match(/^\d{4}\s+(.+)$/);
+  return Boolean(match && match[1] === festivalName);
+}
+
 export function mapBindingToRecord({ binding, inferredResult, festivalId, festivalName, category, source, sourceAwardQid }) {
   const year =
     toYear(binding?.awardDate?.value) ??
@@ -456,6 +484,14 @@ export function mapBindingToRecord({ binding, inferredResult, festivalId, festiv
 
   const title = normalizeTitle(binding?.filmLabel?.value);
   if (!title) {
+    return null;
+  }
+
+  if (isUnresolvedWikidataLabel(title) || isUnresolvedWikidataLabel(category)) {
+    return null;
+  }
+
+  if (isFestivalEditionLeak(category, year, festivalName)) {
     return null;
   }
 
@@ -532,6 +568,10 @@ async function run() {
   const results = [];
   const failures = [];
   const resolvedFestivals = [];
+  // Counts bindings mapBindingToRecord rejected for any reason (missing
+  // year/title, an unresolved-label QID leak, or a festival-edition leak) —
+  // visibility for what would otherwise silently vanish.
+  let droppedBindings = 0;
 
   try {
     const academyAwardsQid = await resolveEntityQid("Academy Awards");
@@ -679,6 +719,8 @@ async function run() {
         });
         if (record) {
           results.push(record);
+        } else {
+          droppedBindings += 1;
         }
       }
     } catch (error) {
@@ -738,6 +780,8 @@ async function run() {
         });
         if (record) {
           results.push(record);
+        } else {
+          droppedBindings += 1;
         }
       }
     } catch (error) {
@@ -763,7 +807,8 @@ async function run() {
       deduped: deduped.length,
       winners,
       nominees,
-      failures: failures.length
+      failures: failures.length,
+      droppedBindings
     },
     failures,
     records: deduped

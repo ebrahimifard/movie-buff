@@ -111,7 +111,7 @@ function findPrecedingHeadingText(element) {
 // realm-specific, so no `Node` reference from the JSDOM window is needed.
 const DOCUMENT_POSITION_FOLLOWING = 4;
 
-function getSectionAncestors(element, headings) {
+export function getSectionAncestors(element, headings) {
   const stack = [];
   for (const heading of headings) {
     if (!(heading.compareDocumentPosition(element) & DOCUMENT_POSITION_FOLLOWING)) {
@@ -260,7 +260,7 @@ function extractCategoryCellRecords(cell, fallbackCategory) {
 // Bear: ...") and the category as bold text ("Best Drama Film: ...", used
 // one level deeper in nested tier->subcategory lists — see
 // parseCategoryPrefixedListItem).
-function getOwnLabel(li) {
+export function getOwnLabel(li) {
   const first = li.children[0];
   if (first && (first.tagName === "A" || first.tagName === "B")) {
     return cleanText(first.textContent);

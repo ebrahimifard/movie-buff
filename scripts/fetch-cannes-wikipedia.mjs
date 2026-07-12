@@ -7,7 +7,49 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { JSDOM } from "jsdom";
 import { DEFAULT_SCRAPE_DELAY_MS, fetchWithRetry, sleep } from "./lib/http.mjs";
-import { NON_AWARD_SECTION_PATTERN, classifyPersonRole, extractTitleAndPerson, isHonoraryCategory } from "./lib/wikipedia-scrape.mjs";
+import {
+  NON_AWARD_SECTION_PATTERN,
+  classifyPersonRole,
+  extractTitleAndPerson,
+  getOwnLabel,
+  getSectionAncestors,
+  isHonoraryCategory
+} from "./lib/wikipedia-scrape.mjs";
+
+// Cannes' parallel sections (ACID, Critics' Week, Directors' Fortnight,
+// and "Parallel sections" itself — the umbrella heading for all three) are
+// legitimate selection strands — isFilmSelectionSection is right to include
+// them — but a film merely *listed* under the strand itself, with no more
+// specific award name anywhere in the heading chain, was never actually
+// given an award. Case/pluralization varies across Wikipedia's own editing
+// history ("Parallel section" vs "Parallel Sections"), hence a
+// case-insensitive pattern rather than an exact Set. Anchored on the whole
+// string, so a qualified real prize (e.g. "Critics' Week – Grand Prize")
+// is unaffected and stays.
+const NON_COMPETITIVE_SELECTION_PATTERN = /^(acid|critics'?\s+week|directors'?\s+fortnight|parallel sections?)$/i;
+
+// Sub-headings that exist purely to group films by format/length/genre
+// within a strand (e.g. Critics' Week > "Features", 1946-49's "Awards" >
+// "Short films", 2020's COVID-cancelled "Official sections" > "Comedy
+// Films"/"The First Features"), not to name an award. Anchored on the whole
+// heading text so a real prize like "Short Film Palme d'Or" (which has
+// trailing content) never matches.
+const FORMAT_BUCKET_PATTERN = /^(the\s+)?(short|feature|documentary|animated|comedy)s?(\s+films?)?$/i;
+const FIRST_FEATURES_PATTERN = /^(the\s+first\s+features?|parallel sections?\s*\(first features\))$/i;
+
+function isFormatBucketHeading(text) {
+  return FORMAT_BUCKET_PATTERN.test(text) || FIRST_FEATURES_PATTERN.test(text);
+}
+
+// A colon-split sub-label only gets qualified with its enclosing section
+// (e.g. "Cinéfondation – First Prize") when it's one of these known-
+// ambiguous short labels that reads as meaningless on its own — real,
+// already-complete award names like "Best Actor" or "Palme d'Or" must NOT
+// be qualified this way (confirmed live: on the actual page these are
+// links, not bold text, so they pass the ownLabel guard below just like a
+// genuine sub-label does — qualifying them too would turn a clean "Best
+// Actor" into unwanted noise like "In Competition – Best Actor").
+const AMBIGUOUS_SUB_AWARD_PATTERN = /^(1st|2nd|3rd|4th|5th|first|second|third|fourth|fifth)\s+prize$|^(foreign|french)\s+film$/i;
 
 const root = process.cwd();
 const outputPath = path.join(root, "data", "source", "cannes-wikipedia.json");
@@ -41,7 +83,6 @@ export function parseCannesWikipedia(html, year) {
   const contentRoot = doc.querySelector("#mw-content-text .mw-parser-output") || doc.querySelector("#mw-content-text") || doc.body;
   const records = [];
   const dedupe = new Set();
-  const Node = dom.window.Node;
   const headings = Array.from(contentRoot.querySelectorAll("h2, h3, h4"));
 
   function cleanText(text) {
@@ -70,26 +111,25 @@ export function parseCannesWikipedia(html, year) {
     return /(feature film competition|in competition|official sections|parallel sections|out of competition|short films?|special screenings|cannes classics|cin[eé]ma de la plage|un certain regard|critics' week|directors' fortnight|acid|camera d'or|caméra d'or|cinefondation|queer palm|l'œil d'or|l'oeil d'or)/.test(combined);
   }
 
+  // Walks the FULL enclosing heading chain (not just the nearest heading),
+  // so a purely organizational sub-heading that just groups films by
+  // format/length within a strand (Critics' Week > "Features") can be told
+  // apart from an actual award name one level up — the nearest heading
+  // alone can't make that distinction.
   function getHeadingContext(element) {
-    let section = "Unknown category";
-    let top = "";
+    const ancestors = getSectionAncestors(element, headings);
+    if (ancestors.length === 0) {
+      return { section: normalizeCategory("Unknown category"), top: "" };
+    }
 
-    for (const h of headings) {
-      const pos = h.compareDocumentPosition(element);
-      if (pos & Node.DOCUMENT_POSITION_FOLLOWING) {
-        const headingText = cleanText(h.textContent);
-        section = headingText || section;
-        if (h.tagName.toUpperCase() === "H2") {
-          top = headingText;
-        }
-      } else {
-        break;
-      }
+    let nearestIndex = ancestors.length - 1;
+    if (nearestIndex > 0 && isFormatBucketHeading(cleanText(ancestors[nearestIndex]))) {
+      nearestIndex -= 1;
     }
 
     return {
-      section: normalizeCategory(section),
-      top: cleanText(top)
+      section: normalizeCategory(ancestors[nearestIndex]),
+      top: cleanText(ancestors[0])
     };
   }
 
@@ -103,6 +143,13 @@ export function parseCannesWikipedia(html, year) {
     if (/^(english title|original title|director\(s\)|directors|production country|country|school|year|main page|current events|random article|about wikipedia)$/i.test(cleanTitle)) return;
 
     const normalizedCategory = normalizeCategory(category);
+
+    // A film merely selected for a non-competitive parallel section, with
+    // no more specific award name anywhere in the heading chain, was never
+    // actually given an award — see NON_COMPETITIVE_SELECTION_PATTERN.
+    // Anchored match only, so a qualified real prize within one of these
+    // strands is unaffected.
+    if (NON_COMPETITIVE_SELECTION_PATTERN.test(normalizedCategory)) return;
 
     // Career/honorary categories (Honorary Palm d'Or, Lifetime Achievement
     // Award, ...) are given directly to a person, often with no associated
@@ -145,14 +192,45 @@ export function parseCannesWikipedia(html, year) {
   // truncates to 2 elements, silently mis-slicing any item whose title or
   // director text itself contains a colon. A regex match anchored to the
   // first "label: rest" boundary avoids that (same fix already applied to
-  // wikipedia-scrape.mjs's parseCategoryPrefixedListItem).
+  // wikipedia-scrape.mjs's parseCategoryPrefixedListItem) — but isn't
+  // sufficient on its own: a film whose OWN title contains a colon (e.g.
+  // "Swan Lake: The Zone") and has no real category prefix at all still has
+  // a first colon, which would otherwise get mistaken for one. The fix is
+  // the same ownLabel guard wikipedia-scrape.mjs's
+  // parseCategoryPrefixedListItem already uses: only trust the pre-colon
+  // text as a real category/sub-award name when it independently matches
+  // the list item's own linked/bold label (confirmed live: Cannes' award
+  // names — "Best Actor", "Cinéfondation"'s "First Prize", etc — are always
+  // their own link or bold span, never bare text), not just "whatever's
+  // before the first colon." When trusted AND the label is one of the
+  // known-ambiguous short sub-labels (AMBIGUOUS_SUB_AWARD_PATTERN), it's
+  // qualified with its enclosing section ("Cinéfondation – First Prize")
+  // instead of standing alone — this is what previously turned
+  // "Award of the Youth > Foreign Film" into the bare, unqualified
+  // "Foreign Film". Already-complete award names are left exactly as-is.
+  //
+  // A trusted label can still turn out to be a format/eligibility
+  // annotation rather than an award name — e.g. "Parallel section (first
+  // features): Film by Director" is a genuine bold own-label inside the
+  // main "In Competition" awards list, marking a Caméra d'Or eligibility
+  // note, not a prize. isFormatBucketHeading catches that case too (it's
+  // the same "names a grouping, not an award" pattern as a heading like
+  // "Features"), and the fallback is the same: use the enclosing section
+  // instead — but rhs still advances past the label, since it WAS a real,
+  // recognized label, just not a category-worthy one.
   function parseAwardsListItem(li, sectionCategory) {
     const text = cleanText(li.textContent);
     if (!text) return;
 
     const colonMatch = text.match(/^(.+?):\s+(.+)$/s);
-    const category = colonMatch ? colonMatch[1] : sectionCategory;
-    const rhs = colonMatch ? colonMatch[2] : text;
+    const ownLabel = colonMatch ? getOwnLabel(li) : null;
+    const hasTrustedLabel = Boolean(colonMatch && ownLabel && cleanText(colonMatch[1]) === ownLabel);
+    const trustedSubLabel = hasTrustedLabel && !isFormatBucketHeading(colonMatch[1]) ? colonMatch[1] : null;
+
+    const shouldQualify =
+      trustedSubLabel && AMBIGUOUS_SUB_AWARD_PATTERN.test(trustedSubLabel) && sectionCategory && sectionCategory !== trustedSubLabel;
+    const category = trustedSubLabel ? (shouldQualify ? `${sectionCategory} – ${trustedSubLabel}` : trustedSubLabel) : sectionCategory;
+    const rhs = hasTrustedLabel ? colonMatch[2] : text;
 
     const forMatch = rhs.match(/\bfor\b\s+(.+)$/i);
     const byMatch = rhs.match(/^(.+?)\s+\bby\b\s+/i);

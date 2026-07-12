@@ -2821,34 +2821,6 @@
     "scope": "film"
   },
   {
-    "id": "cannes:1954-cannes-film-festival",
-    "festivalId": "cannes",
-    "name": "1954 Cannes Film Festival",
-    "normalizedName": "1954-cannes-film-festival",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:1985-cannes-film-festival",
-    "festivalId": "cannes",
-    "name": "1985 Cannes Film Festival",
-    "normalizedName": "1985-cannes-film-festival",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:1st-prize",
-    "festivalId": "cannes",
-    "name": "1st Prize",
-    "normalizedName": "1st-prize",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:2019-cannes-film-festival",
-    "festivalId": "cannes",
-    "name": "2019 Cannes Film Festival",
-    "normalizedName": "2019-cannes-film-festival",
-    "scope": "film"
-  },
-  {
     "id": "cannes:20th-anniversary-prize",
     "festivalId": "cannes",
     "name": "20th Anniversary Prize",
@@ -2860,13 +2832,6 @@
     "festivalId": "cannes",
     "name": "25th Anniversary Prize",
     "normalizedName": "25th-anniversary-prize",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:2nd-prize",
-    "festivalId": "cannes",
-    "name": "2nd Prize",
-    "normalizedName": "2nd-prize",
     "scope": "film"
   },
   {
@@ -2891,13 +2856,6 @@
     "scope": "film"
   },
   {
-    "id": "cannes:3rd-prize",
-    "festivalId": "cannes",
-    "name": "3rd Prize",
-    "normalizedName": "3rd-prize",
-    "scope": "film"
-  },
-  {
     "id": "cannes:40th-anniversary-prize",
     "festivalId": "cannes",
     "name": "40th Anniversary Prize",
@@ -2909,13 +2867,6 @@
     "festivalId": "cannes",
     "name": "45th Anniversary Prize",
     "normalizedName": "45th-anniversary-prize",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:50-ans-by-gilles-carle-best-short-film",
-    "festivalId": "cannes",
-    "name": "50 ans by Gilles Carle Best Short Film",
-    "normalizedName": "50-ans-by-gilles-carle-best-short-film",
     "scope": "film"
   },
   {
@@ -2961,27 +2912,6 @@
     "scope": "film"
   },
   {
-    "id": "cannes:a-hero-by-asghar-farhadi-special-mention",
-    "festivalId": "cannes",
-    "name": "A Hero by Asghar Farhadi Special Mention",
-    "normalizedName": "a-hero-by-asghar-farhadi-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:a-world-apart-by-chris-menges-special-mention",
-    "festivalId": "cannes",
-    "name": "A World Apart by Chris Menges Special Mention",
-    "normalizedName": "a-world-apart-by-chris-menges-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:acid",
-    "festivalId": "cannes",
-    "name": "ACID",
-    "normalizedName": "acid",
-    "scope": "film"
-  },
-  {
     "id": "cannes:acid-award",
     "festivalId": "cannes",
     "name": "ACID Award",
@@ -3024,34 +2954,6 @@
     "scope": "film"
   },
   {
-    "id": "cannes:ali",
-    "festivalId": "cannes",
-    "name": "Ali",
-    "normalizedName": "ali",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:all-about-my-mother-by-pedro-almod-var-special-mention",
-    "festivalId": "cannes",
-    "name": "All About My Mother by Pedro Almodóvar Special Mention",
-    "normalizedName": "all-about-my-mother-by-pedro-almod-var-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:animated-films",
-    "festivalId": "cannes",
-    "name": "Animated Films",
-    "normalizedName": "animated-films",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:armand-by-halfdan-ullmann-t-ndel-special-mention",
-    "festivalId": "cannes",
-    "name": "Armand by Halfdan Ullmann Tøndel Special Mention",
-    "normalizedName": "armand-by-halfdan-ullmann-t-ndel-special-mention",
-    "scope": "film"
-  },
-  {
     "id": "cannes:art-cinema-award",
     "festivalId": "cannes",
     "name": "Art Cinema Award",
@@ -3063,13 +2965,6 @@
     "festivalId": "cannes",
     "name": "Artistic Direction Mention",
     "normalizedName": "artistic-direction-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:atanarjuat",
-    "festivalId": "cannes",
-    "name": "Atanarjuat",
-    "normalizedName": "atanarjuat",
     "scope": "film"
   },
   {
@@ -3143,6 +3038,20 @@
     "scope": "film"
   },
   {
+    "id": "cannes:award-of-the-youth-foreign-film",
+    "festivalId": "cannes",
+    "name": "Award of the Youth – Foreign Film",
+    "normalizedName": "award-of-the-youth-foreign-film",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:award-of-the-youth-french-film",
+    "festivalId": "cannes",
+    "name": "Award of the Youth – French Film",
+    "normalizedName": "award-of-the-youth-french-film",
+    "scope": "film"
+  },
+  {
     "id": "cannes:award-of-visual-narration",
     "festivalId": "cannes",
     "name": "Award of Visual Narration",
@@ -3150,10 +3059,10 @@
     "scope": "film"
   },
   {
-    "id": "cannes:babel-by-alejandro-gonz-lez-i-rritu-special-mention",
+    "id": "cannes:awards",
     "festivalId": "cannes",
-    "name": "Babel by Alejandro González Iñárritu Special Mention",
-    "normalizedName": "babel-by-alejandro-gonz-lez-i-rritu-special-mention",
+    "name": "Awards",
+    "normalizedName": "awards",
     "scope": "film"
   },
   {
@@ -3178,24 +3087,10 @@
     "scope": "film"
   },
   {
-    "id": "cannes:best-adventure-and-crime-film",
-    "festivalId": "cannes",
-    "name": "Best Adventure and Crime Film",
-    "normalizedName": "best-adventure-and-crime-film",
-    "scope": "film"
-  },
-  {
     "id": "cannes:best-animation",
     "festivalId": "cannes",
     "name": "Best Animation",
     "normalizedName": "best-animation",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:best-animation-design",
-    "festivalId": "cannes",
-    "name": "Best Animation Design",
-    "normalizedName": "best-animation-design",
     "scope": "film"
   },
   {
@@ -3213,13 +3108,6 @@
     "scope": "film"
   },
   {
-    "id": "cannes:best-avant-garde-film",
-    "festivalId": "cannes",
-    "name": "Best Avant-garde Film",
-    "normalizedName": "best-avant-garde-film",
-    "scope": "film"
-  },
-  {
     "id": "cannes:best-cinematic-transposition",
     "festivalId": "cannes",
     "name": "Best Cinematic Transposition",
@@ -3231,13 +3119,6 @@
     "festivalId": "cannes",
     "name": "Best Cinematography",
     "normalizedName": "best-cinematography",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:best-colour",
-    "festivalId": "cannes",
-    "name": "Best Colour",
-    "normalizedName": "best-colour",
     "scope": "film"
   },
   {
@@ -3367,13 +3248,6 @@
     "scope": "film"
   },
   {
-    "id": "cannes:best-musical-comedy",
-    "festivalId": "cannes",
-    "name": "Best Musical Comedy",
-    "normalizedName": "best-musical-comedy",
-    "scope": "film"
-  },
-  {
     "id": "cannes:best-participation",
     "festivalId": "cannes",
     "name": "Best participation",
@@ -3392,13 +3266,6 @@
     "festivalId": "cannes",
     "name": "Best Poetic Humour",
     "normalizedName": "best-poetic-humour",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:best-psychological-and-love-film",
-    "festivalId": "cannes",
-    "name": "Best Psychological and Love Film",
-    "normalizedName": "best-psychological-and-love-film",
     "scope": "film"
   },
   {
@@ -3423,24 +3290,10 @@
     "scope": "film"
   },
   {
-    "id": "cannes:best-short-documentary",
-    "festivalId": "cannes",
-    "name": "Best Short Documentary",
-    "normalizedName": "best-short-documentary",
-    "scope": "film"
-  },
-  {
     "id": "cannes:best-short-film",
     "festivalId": "cannes",
     "name": "Best Short Film",
     "normalizedName": "best-short-film",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:best-social-film",
-    "festivalId": "cannes",
-    "name": "Best Social Film",
-    "normalizedName": "best-social-film",
     "scope": "film"
   },
   {
@@ -3455,13 +3308,6 @@
     "festivalId": "cannes",
     "name": "Best Supporting Actress",
     "normalizedName": "best-supporting-actress",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:beyond-my-grandfather-allende-by-marcia-tambutti-allende-special",
-    "festivalId": "cannes",
-    "name": "Beyond My Grandfather Allende by Marcia Tambutti Allende Special Mention",
-    "normalizedName": "beyond-my-grandfather-allende-by-marcia-tambutti-allende-special",
     "scope": "film"
   },
   {
@@ -3556,20 +3402,6 @@
     "scope": "film"
   },
   {
-    "id": "cannes:capernaum-by-nadine-labaki-special-mention",
-    "festivalId": "cannes",
-    "name": "Capernaum by Nadine Labaki Special Mention",
-    "normalizedName": "capernaum-by-nadine-labaki-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:carol-by-todd-haynes-special-mention",
-    "festivalId": "cannes",
-    "name": "Carol by Todd Haynes Special Mention",
-    "normalizedName": "carol-by-todd-haynes-special-mention",
-    "scope": "film"
-  },
-  {
     "id": "cannes:carrosse-d-or",
     "festivalId": "cannes",
     "name": "Carrosse d'Or",
@@ -3598,17 +3430,52 @@
     "scope": "film"
   },
   {
+    "id": "cannes:cin-fondation-1st-prize",
+    "festivalId": "cannes",
+    "name": "Cinéfondation – 1st Prize",
+    "normalizedName": "cin-fondation-1st-prize",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:cin-fondation-2nd-prize",
+    "festivalId": "cannes",
+    "name": "Cinéfondation – 2nd Prize",
+    "normalizedName": "cin-fondation-2nd-prize",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:cin-fondation-3rd-prize",
+    "festivalId": "cannes",
+    "name": "Cinéfondation – 3rd Prize",
+    "normalizedName": "cin-fondation-3rd-prize",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:cin-fondation-first-prize",
+    "festivalId": "cannes",
+    "name": "Cinéfondation – First Prize",
+    "normalizedName": "cin-fondation-first-prize",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:cin-fondation-second-prize",
+    "festivalId": "cannes",
+    "name": "Cinéfondation – Second Prize",
+    "normalizedName": "cin-fondation-second-prize",
+    "scope": "film"
+  },
+  {
+    "id": "cannes:cin-fondation-third-prize",
+    "festivalId": "cannes",
+    "name": "Cinéfondation – Third Prize",
+    "normalizedName": "cin-fondation-third-prize",
+    "scope": "film"
+  },
+  {
     "id": "cannes:cin-ma-de-la-plage",
     "festivalId": "cannes",
     "name": "Cinéma de la Plage",
     "normalizedName": "cin-ma-de-la-plage",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:cinema-novo-by-eryk-rocha-special-mention",
-    "festivalId": "cannes",
-    "name": "Cinema Novo by Eryk Rocha Special Mention",
-    "normalizedName": "cinema-novo-by-eryk-rocha-special-mention",
     "scope": "film"
   },
   {
@@ -3633,20 +3500,6 @@
     "scope": "film"
   },
   {
-    "id": "cannes:comedy-films",
-    "festivalId": "cannes",
-    "name": "Comedy Films",
-    "normalizedName": "comedy-films",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:coming-to-terms-with-the-dead-by-pascale-ferran-special-mention",
-    "festivalId": "cannes",
-    "name": "Coming to Terms with the Dead by Pascale Ferran Special Mention",
-    "normalizedName": "coming-to-terms-with-the-dead-by-pascale-ferran-special-mention",
-    "scope": "film"
-  },
-  {
     "id": "cannes:commendations",
     "festivalId": "cannes",
     "name": "Commendations",
@@ -3665,13 +3518,6 @@
     "festivalId": "cannes",
     "name": "Coup de Cœur Award",
     "normalizedName": "coup-de-c-ur-award",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:critics-week",
-    "festivalId": "cannes",
-    "name": "Critics' Week",
-    "normalizedName": "critics-week",
     "scope": "film"
   },
   {
@@ -3759,24 +3605,10 @@
     "scope": "film"
   },
   {
-    "id": "cannes:documentary-films",
-    "festivalId": "cannes",
-    "name": "Documentary Films",
-    "normalizedName": "documentary-films",
-    "scope": "film"
-  },
-  {
     "id": "cannes:documentary-prize",
     "festivalId": "cannes",
     "name": "Documentary Prize",
     "normalizedName": "documentary-prize",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:drive-my-car-by-ryusuke-hamaguchi-special-mention",
-    "festivalId": "cannes",
-    "name": "Drive My Car by Ryusuke Hamaguchi Special Mention",
-    "normalizedName": "drive-my-car-by-ryusuke-hamaguchi-special-mention",
     "scope": "film"
   },
   {
@@ -3791,13 +3623,6 @@
     "festivalId": "cannes",
     "name": "Ecumenical Jury - Special Award",
     "normalizedName": "ecumenical-jury-special-award",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:ernest-cole",
-    "festivalId": "cannes",
-    "name": "Ernest Cole",
-    "normalizedName": "ernest-cole",
     "scope": "film"
   },
   {
@@ -3819,34 +3644,6 @@
     "festivalId": "cannes",
     "name": "Europa Cinemas Label Award for Best European Film",
     "normalizedName": "europa-cinemas-label-award-for-best-european-film",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:everybody-s-fine-by-giuseppe-tornatore-special-mention",
-    "festivalId": "cannes",
-    "name": "Everybody's Fine by Giuseppe Tornatore Special Mention",
-    "normalizedName": "everybody-s-fine-by-giuseppe-tornatore-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:faces-places-by-agn-s-varda-and-jr-special-mention",
-    "festivalId": "cannes",
-    "name": "Faces Places by Agnès Varda and JR Special Mention",
-    "normalizedName": "faces-places-by-agn-s-varda-and-jr-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:feature-films",
-    "festivalId": "cannes",
-    "name": "Feature films",
-    "normalizedName": "feature-films",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:features",
-    "festivalId": "cannes",
-    "name": "Features",
-    "normalizedName": "features",
     "scope": "film"
   },
   {
@@ -3878,31 +3675,10 @@
     "scope": "film"
   },
   {
-    "id": "cannes:first-prize",
-    "festivalId": "cannes",
-    "name": "First Prize",
-    "normalizedName": "first-prize",
-    "scope": "film"
-  },
-  {
     "id": "cannes:first-prize-of-the-jury",
     "festivalId": "cannes",
     "name": "First Prize of the Jury",
     "normalizedName": "first-prize-of-the-jury",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:flora-volpeli-re-editing-and-julien-poupard-cinematography-for-l",
-    "festivalId": "cannes",
-    "name": "Flora Volpelière (editing) and Julien Poupard (cinematography) for Les Misérables Special Mention",
-    "normalizedName": "flora-volpeli-re-editing-and-julien-poupard-cinematography-for-l",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:foreign-film",
-    "festivalId": "cannes",
-    "name": "Foreign Film",
-    "normalizedName": "foreign-film",
     "scope": "film"
   },
   {
@@ -3927,20 +3703,6 @@
     "scope": "film"
   },
   {
-    "id": "cannes:freeze-die-come-to-life-by-vitali-kanevsky-special-mention",
-    "festivalId": "cannes",
-    "name": "Freeze Die Come to Life by Vitali Kanevsky Special Mention",
-    "normalizedName": "freeze-die-come-to-life-by-vitali-kanevsky-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:french-film",
-    "festivalId": "cannes",
-    "name": "French Film",
-    "normalizedName": "french-film",
-    "scope": "film"
-  },
-  {
     "id": "cannes:french-touch-prize-of-the-jury",
     "festivalId": "cannes",
     "name": "French Touch Prize of the Jury",
@@ -3952,13 +3714,6 @@
     "festivalId": "cannes",
     "name": "Future talent Award",
     "normalizedName": "future-talent-award",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:gaijin",
-    "festivalId": "cannes",
-    "name": "Gaijin",
-    "normalizedName": "gaijin",
     "scope": "film"
   },
   {
@@ -4046,13 +3801,6 @@
     "scope": "film"
   },
   {
-    "id": "cannes:hidden-by-michael-haneke-special-mention",
-    "festivalId": "cannes",
-    "name": "Hidden by Michael Haneke Special mention",
-    "normalizedName": "hidden-by-michael-haneke-special-mention",
-    "scope": "film"
-  },
-  {
     "id": "cannes:highly-commended-canine",
     "festivalId": "cannes",
     "name": "Highly Commended Canine",
@@ -4071,20 +3819,6 @@
     "festivalId": "cannes",
     "name": "Hommage",
     "normalizedName": "hommage",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:hotel-terminus",
-    "festivalId": "cannes",
-    "name": "Hotel Terminus",
-    "normalizedName": "hotel-terminus",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:hunger-by-steve-mcqueen-special-mention",
-    "festivalId": "cannes",
-    "name": "Hunger by Steve McQueen Special mention",
-    "normalizedName": "hunger-by-steve-mcqueen-special-mention",
     "scope": "film"
   },
   {
@@ -4158,20 +3892,6 @@
     "scope": "film"
   },
   {
-    "id": "cannes:jellyfish-by-etgar-keret-and-shira-geffen-special-mention",
-    "festivalId": "cannes",
-    "name": "Jellyfish by Etgar Keret and Shira Geffen Special mention",
-    "normalizedName": "jellyfish-by-etgar-keret-and-shira-geffen-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:jesus-of-montreal-by-denys-arcand-special-mention",
-    "festivalId": "cannes",
-    "name": "Jesus of Montreal by Denys Arcand Special Mention",
-    "normalizedName": "jesus-of-montreal-by-denys-arcand-special-mention",
-    "scope": "film"
-  },
-  {
     "id": "cannes:jury-prize",
     "festivalId": "cannes",
     "name": "Jury Prize",
@@ -4197,20 +3917,6 @@
     "festivalId": "cannes",
     "name": "Jury Special Prize - Legion of Honour",
     "normalizedName": "jury-special-prize-legion-of-honour",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:kandahar-by-mohsen-makhmalbaf-special-mention",
-    "festivalId": "cannes",
-    "name": "Kandahar by Mohsen Makhmalbaf Special Mention",
-    "normalizedName": "kandahar-by-mohsen-makhmalbaf-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:kat-basis-by-ugo-arsac-special-mention",
-    "festivalId": "cannes",
-    "name": "Katábasis by Ugo Arsac Special Mention",
-    "normalizedName": "kat-basis-by-ugo-arsac-special-mention",
     "scope": "film"
   },
   {
@@ -4249,24 +3955,10 @@
     "scope": "film"
   },
   {
-    "id": "cannes:la-joconde",
-    "festivalId": "cannes",
-    "name": "La Joconde",
-    "normalizedName": "la-joconde",
-    "scope": "film"
-  },
-  {
     "id": "cannes:label-europa-cin-ma",
     "festivalId": "cannes",
     "name": "Label Europa Cinéma",
     "normalizedName": "label-europa-cin-ma",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:land-and-freedom-by-ken-loach-special-mention",
-    "festivalId": "cannes",
-    "name": "Land and Freedom by Ken Loach Special Mention",
-    "normalizedName": "land-and-freedom-by-ken-loach-special-mention",
     "scope": "film"
   },
   {
@@ -4291,24 +3983,10 @@
     "scope": "film"
   },
   {
-    "id": "cannes:libera-me-by-alain-cavalier-special-mention",
-    "festivalId": "cannes",
-    "name": "Libera me by Alain Cavalier Special Mention",
-    "normalizedName": "libera-me-by-alain-cavalier-special-mention",
-    "scope": "film"
-  },
-  {
     "id": "cannes:little-golden-rail",
     "festivalId": "cannes",
     "name": "Little Golden Rail",
     "normalizedName": "little-golden-rail",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:looking-for-eric-by-ken-loach-special-mention",
-    "festivalId": "cannes",
-    "name": "Looking for Eric by Ken Loach Special Mention",
-    "normalizedName": "looking-for-eric-by-ken-loach-special-mention",
     "scope": "film"
   },
   {
@@ -4323,13 +4001,6 @@
     "festivalId": "cannes",
     "name": "Male Revelation of the Year",
     "normalizedName": "male-revelation-of-the-year",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:man-of-iron-by-andrzej-wajda-special-mention",
-    "festivalId": "cannes",
-    "name": "Man of Iron by Andrzej Wajda Special Mention",
-    "normalizedName": "man-of-iron-by-andrzej-wajda-special-mention",
     "scope": "film"
   },
   {
@@ -4351,13 +4022,6 @@
     "festivalId": "cannes",
     "name": "Mutt Moment",
     "normalizedName": "mutt-moment",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:my-20th-century-by-ildik-enyedi-special-mention",
-    "festivalId": "cannes",
-    "name": "My 20th Century by Ildikó Enyedi Special Mention",
-    "normalizedName": "my-20th-century-by-ildik-enyedi-special-mention",
     "scope": "film"
   },
   {
@@ -4396,17 +4060,17 @@
     "scope": "film"
   },
   {
+    "id": "cannes:official-sections",
+    "festivalId": "cannes",
+    "name": "Official sections",
+    "normalizedName": "official-sections",
+    "scope": "film"
+  },
+  {
     "id": "cannes:omnibus-film",
     "festivalId": "cannes",
     "name": "Omnibus Film",
     "normalizedName": "omnibus-film",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:or-my-treasure-by-keren-yedaya-special-mention",
-    "festivalId": "cannes",
-    "name": "Or (My Treasure) by Keren Yedaya Special Mention",
-    "normalizedName": "or-my-treasure-by-keren-yedaya-special-mention",
     "scope": "film"
   },
   {
@@ -4466,34 +4130,6 @@
     "scope": "film"
   },
   {
-    "id": "cannes:parallel-section",
-    "festivalId": "cannes",
-    "name": "Parallel section",
-    "normalizedName": "parallel-section",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:parallel-section-first-features",
-    "festivalId": "cannes",
-    "name": "Parallel section (first features)",
-    "normalizedName": "parallel-section-first-features",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:parallel-sections-first-features",
-    "festivalId": "cannes",
-    "name": "Parallel sections (first features)",
-    "normalizedName": "parallel-sections-first-features",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:paris-texas-by-wim-wenders-special-mention",
-    "festivalId": "cannes",
-    "name": "Paris, Texas by Wim Wenders Special Mention",
-    "normalizedName": "paris-texas-by-wim-wenders-special-mention",
-    "scope": "film"
-  },
-  {
     "id": "cannes:petit-rail-d-orpresented-by-cinephile-railwaymen",
     "festivalId": "cannes",
     "name": "Petit Rail d'Orpresented by \"cinephile railwaymen\"",
@@ -4550,20 +4186,6 @@
     "scope": "film"
   },
   {
-    "id": "cannes:prix-d-interpr-tation-f-minine",
-    "festivalId": "cannes",
-    "name": "Prix d'interprétation féminine",
-    "normalizedName": "prix-d-interpr-tation-f-minine",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:prix-d-interpr-tation-masculine",
-    "festivalId": "cannes",
-    "name": "Prix d'interprétation masculine",
-    "normalizedName": "prix-d-interpr-tation-masculine",
-    "scope": "film"
-  },
-  {
     "id": "cannes:prix-de-la-critique-internationale",
     "festivalId": "cannes",
     "name": "Prix de la Critique Internationale",
@@ -4606,13 +4228,6 @@
     "scope": "film"
   },
   {
-    "id": "cannes:prix-du-pr-sident-du-jury-un-certain-regard",
-    "festivalId": "cannes",
-    "name": "Prix du Président du Jury Un Certain Regard",
-    "normalizedName": "prix-du-pr-sident-du-jury-un-certain-regard",
-    "scope": "film"
-  },
-  {
     "id": "cannes:prix-du-regard-original",
     "festivalId": "cannes",
     "name": "Prix du Regard Original",
@@ -4624,13 +4239,6 @@
     "festivalId": "cannes",
     "name": "Prix du Regard vers l'Avenir",
     "normalizedName": "prix-du-regard-vers-l-avenir",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:prix-du-reportage-film",
-    "festivalId": "cannes",
-    "name": "Prix du reportage filmé",
-    "normalizedName": "prix-du-reportage-film",
     "scope": "film"
   },
   {
@@ -4732,41 +4340,6 @@
     "scope": "film"
   },
   {
-    "id": "cannes:prize-for-best-cinematography",
-    "festivalId": "cannes",
-    "name": "Prize for Best Cinematography",
-    "normalizedName": "prize-for-best-cinematography",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:prize-for-best-colour",
-    "festivalId": "cannes",
-    "name": "Prize for Best Colour",
-    "normalizedName": "prize-for-best-colour",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:prize-for-best-editing",
-    "festivalId": "cannes",
-    "name": "Prize for Best Editing",
-    "normalizedName": "prize-for-best-editing",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:prize-for-best-filmed-coverage",
-    "festivalId": "cannes",
-    "name": "Prize for Best Filmed Coverage",
-    "normalizedName": "prize-for-best-filmed-coverage",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:prize-for-best-subject",
-    "festivalId": "cannes",
-    "name": "Prize for Best Subject",
-    "normalizedName": "prize-for-best-subject",
-    "scope": "film"
-  },
-  {
     "id": "cannes:prize-for-film-in-nature",
     "festivalId": "cannes",
     "name": "Prize for Film in Nature",
@@ -4795,24 +4368,10 @@
     "scope": "film"
   },
   {
-    "id": "cannes:q3114791",
-    "festivalId": "cannes",
-    "name": "Q3114791",
-    "normalizedName": "q3114791",
-    "scope": "film"
-  },
-  {
     "id": "cannes:queer-palm",
     "festivalId": "cannes",
     "name": "Queer Palm",
     "normalizedName": "queer-palm",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:reconstruction-by-christoffer-boe-special-mention",
-    "festivalId": "cannes",
-    "name": "Reconstruction by Christoffer Boe Special Mention",
-    "normalizedName": "reconstruction-by-christoffer-boe-special-mention",
     "scope": "film"
   },
   {
@@ -4823,24 +4382,10 @@
     "scope": "film"
   },
   {
-    "id": "cannes:repentance-by-tengiz-abuladze-special-mention",
-    "festivalId": "cannes",
-    "name": "Repentance by Tengiz Abuladze Special Mention",
-    "normalizedName": "repentance-by-tengiz-abuladze-special-mention",
-    "scope": "film"
-  },
-  {
     "id": "cannes:rising-star-award",
     "festivalId": "cannes",
     "name": "Rising Star Award",
     "normalizedName": "rising-star-award",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:s-21",
-    "festivalId": "cannes",
-    "name": "S-21",
-    "normalizedName": "s-21",
     "scope": "film"
   },
   {
@@ -4879,52 +4424,10 @@
     "scope": "film"
   },
   {
-    "id": "cannes:samouni-road-by-stefano-savona-special-mention",
-    "festivalId": "cannes",
-    "name": "Samouni Road by Stefano Savona Special Mention",
-    "normalizedName": "samouni-road-by-stefano-savona-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:samson-and-delilah-by-warwick-thornton-special-mention",
-    "festivalId": "cannes",
-    "name": "Samson and Delilah by Warwick Thornton Special Mention",
-    "normalizedName": "samson-and-delilah-by-warwick-thornton-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:seaside-by-julie-lopes-curval-special-mention",
-    "festivalId": "cannes",
-    "name": "Seaside by Julie Lopes-Curval Special Mention",
-    "normalizedName": "seaside-by-julie-lopes-curval-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:second-prize",
-    "festivalId": "cannes",
-    "name": "Second Prize",
-    "normalizedName": "second-prize",
-    "scope": "film"
-  },
-  {
     "id": "cannes:second-prize-of-the-jury",
     "festivalId": "cannes",
     "name": "Second Prize of the Jury",
     "normalizedName": "second-prize-of-the-jury",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:secrets-lies-by-mike-leigh-special-mention",
-    "festivalId": "cannes",
-    "name": "Secrets & Lies by Mike Leigh Special Mention",
-    "normalizedName": "secrets-lies-by-mike-leigh-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:shinran",
-    "festivalId": "cannes",
-    "name": "Shinran",
-    "normalizedName": "shinran",
     "scope": "film"
   },
   {
@@ -5002,13 +4505,6 @@
     "festivalId": "cannes",
     "name": "Short Films Competition",
     "normalizedName": "short-films-competition",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:shorts",
-    "festivalId": "cannes",
-    "name": "Shorts",
-    "normalizedName": "shorts",
     "scope": "film"
   },
   {
@@ -5117,45 +4613,10 @@
     "scope": "film"
   },
   {
-    "id": "cannes:suzaku-by-naomi-kawase-special-mention",
-    "festivalId": "cannes",
-    "name": "Suzaku by Naomi Kawase Special Mention",
-    "normalizedName": "suzaku-by-naomi-kawase-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:swan-lake",
-    "festivalId": "cannes",
-    "name": "Swan Lake",
-    "normalizedName": "swan-lake",
-    "scope": "film"
-  },
-  {
     "id": "cannes:technical-grand-prize",
     "festivalId": "cannes",
     "name": "Technical Grand Prize",
     "normalizedName": "technical-grand-prize",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:technical-grand-prize-feature-film-special-mention",
-    "festivalId": "cannes",
-    "name": "Technical Grand Prize - Feature film Special Mention",
-    "normalizedName": "technical-grand-prize-feature-film-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:technical-grand-prize-special-mention",
-    "festivalId": "cannes",
-    "name": "Technical Grand Prize - Special Mention",
-    "normalizedName": "technical-grand-prize-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:the-double-life-of-veronique-by-krzysztof-kie-lowski-special-men",
-    "festivalId": "cannes",
-    "name": "The Double Life of Veronique by Krzysztof Kieślowski Special Mention",
-    "normalizedName": "the-double-life-of-veronique-by-krzysztof-kie-lowski-special-men",
     "scope": "film"
   },
   {
@@ -5166,59 +4627,10 @@
     "scope": "film"
   },
   {
-    "id": "cannes:the-first-features",
-    "festivalId": "cannes",
-    "name": "The First Features",
-    "normalizedName": "the-first-features",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:the-hunt-by-thomas-vinterberg-special-mention",
-    "festivalId": "cannes",
-    "name": "The Hunt by Thomas Vinterberg Special Mention",
-    "normalizedName": "the-hunt-by-thomas-vinterberg-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:the-man-who-could-not-remain-silent-by-neboj-a-slijep-evi-specia",
-    "festivalId": "cannes",
-    "name": "The Man Who Could Not Remain Silent by Nebojša Slijepčević Special Mention",
-    "normalizedName": "the-man-who-could-not-remain-silent-by-neboj-a-slijep-evi-specia",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:the-man-without-a-past-by-aki-kaurism-ki-special-mention",
-    "festivalId": "cannes",
-    "name": "The Man Without a Past by Aki Kaurismäki Special Mention",
-    "normalizedName": "the-man-without-a-past-by-aki-kaurism-ki-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:the-motorcycle-diaries-by-walter-salles-special-mention",
-    "festivalId": "cannes",
-    "name": "The Motorcycle Diaries by Walter Salles Special mention",
-    "normalizedName": "the-motorcycle-diaries-by-walter-salles-special-mention",
-    "scope": "film"
-  },
-  {
     "id": "cannes:the-newcomers",
     "festivalId": "cannes",
     "name": "The Newcomers",
     "normalizedName": "the-newcomers",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:the-night-of-the-shooting-stars-by-paolo-and-vittorio-taviani-sp",
-    "festivalId": "cannes",
-    "name": "The Night of the Shooting Stars by Paolo and Vittorio Taviani Special Mention",
-    "normalizedName": "the-night-of-the-shooting-stars-by-paolo-and-vittorio-taviani-sp",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:the-past-by-asghar-farhadi-special-mention",
-    "festivalId": "cannes",
-    "name": "The Past by Asghar Farhadi Special Mention",
-    "normalizedName": "the-past-by-asghar-farhadi-special-mention",
     "scope": "film"
   },
   {
@@ -5229,80 +4641,10 @@
     "scope": "film"
   },
   {
-    "id": "cannes:the-sacrifice-by-andrei-tarkovsky-special-mention",
-    "festivalId": "cannes",
-    "name": "The Sacrifice by Andrei Tarkovsky Special Mention",
-    "normalizedName": "the-sacrifice-by-andrei-tarkovsky-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:the-scent-of-green-papaya-by-tran-anh-hung-special-mention",
-    "festivalId": "cannes",
-    "name": "The Scent of Green Papaya by Tran Anh Hung Special Mention",
-    "normalizedName": "the-scent-of-green-papaya-by-tran-anh-hung-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:the-stolen-children-by-gianni-amelio-special-mention",
-    "festivalId": "cannes",
-    "name": "The Stolen Children by Gianni Amelio Special Mention",
-    "normalizedName": "the-stolen-children-by-gianni-amelio-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:the-sweet-hereafter-by-atom-egoyan-special-mention",
-    "festivalId": "cannes",
-    "name": "The Sweet Hereafter by Atom Egoyan Special Mention",
-    "normalizedName": "the-sweet-hereafter-by-atom-egoyan-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:the-white-balloon-by-jafar-panahi-special-mention",
-    "festivalId": "cannes",
-    "name": "The White Balloon by Jafar Panahi Special Mention",
-    "normalizedName": "the-white-balloon-by-jafar-panahi-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:things-you-can-tell-just-by-looking-at-her-by-rodrigo-garcia-spe",
-    "festivalId": "cannes",
-    "name": "Things You Can Tell Just by Looking at Her by Rodrigo Garcia Special Mention",
-    "normalizedName": "things-you-can-tell-just-by-looking-at-her-by-rodrigo-garcia-spe",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:third-prize",
-    "festivalId": "cannes",
-    "name": "Third Prize",
-    "normalizedName": "third-prize",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:this-must-be-the-place-by-paolo-sorrentino-special-mention",
-    "festivalId": "cannes",
-    "name": "This Must Be the Place by Paolo Sorrentino Special Mention",
-    "normalizedName": "this-must-be-the-place-by-paolo-sorrentino-special-mention",
-    "scope": "film"
-  },
-  {
     "id": "cannes:three-films-for-ukraine",
     "festivalId": "cannes",
     "name": "Three films for Ukraine",
     "normalizedName": "three-films-for-ukraine",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:timbuktu-by-abderrahmane-sissako-special-mention",
-    "festivalId": "cannes",
-    "name": "Timbuktu by Abderrahmane Sissako Special mention",
-    "normalizedName": "timbuktu-by-abderrahmane-sissako-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:toto-le-h-ros-by-jaco-van-dormael-special-mention",
-    "festivalId": "cannes",
-    "name": "Toto le Héros by Jaco Van Dormael Special Mention",
-    "normalizedName": "toto-le-h-ros-by-jaco-van-dormael-special-mention",
     "scope": "film"
   },
   {
@@ -5317,13 +4659,6 @@
     "festivalId": "cannes",
     "name": "Trophée Chopard",
     "normalizedName": "troph-e-chopard",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:two-cents-worth-of-hope-by-renato-castellani-special-mention",
-    "festivalId": "cannes",
-    "name": "Two Cents Worth of Hope by Renato Castellani Special Mention",
-    "normalizedName": "two-cents-worth-of-hope-by-renato-castellani-special-mention",
     "scope": "film"
   },
   {
@@ -5453,20 +4788,6 @@
     "scope": "film"
   },
   {
-    "id": "cannes:un-certain-regard-prix-de-l-espoir",
-    "festivalId": "cannes",
-    "name": "Un Certain Regard Prix de l'espoir",
-    "normalizedName": "un-certain-regard-prix-de-l-espoir",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:un-certain-regard-prix-de-l-intimit",
-    "festivalId": "cannes",
-    "name": "Un Certain Regard Prix de l'intimité",
-    "normalizedName": "un-certain-regard-prix-de-l-intimit",
-    "scope": "film"
-  },
-  {
     "id": "cannes:un-certain-regard-prize",
     "festivalId": "cannes",
     "name": "Un Certain Regard Prize",
@@ -5509,13 +4830,6 @@
     "scope": "film"
   },
   {
-    "id": "cannes:un-certain-regard-youth-prize",
-    "festivalId": "cannes",
-    "name": "Un Certain Regard Youth Prize",
-    "normalizedName": "un-certain-regard-youth-prize",
-    "scope": "film"
-  },
-  {
     "id": "cannes:underdog-award",
     "festivalId": "cannes",
     "name": "Underdog Award",
@@ -5544,20 +4858,6 @@
     "scope": "film"
   },
   {
-    "id": "cannes:war-pony-by-riley-keough-and-gina-gammell-special-mention",
-    "festivalId": "cannes",
-    "name": "War Pony by Riley Keough and Gina Gammell Special Mention",
-    "normalizedName": "war-pony-by-riley-keough-and-gina-gammell-special-mention",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:without-anesthesia-by-andrzej-wajda-special-mention",
-    "festivalId": "cannes",
-    "name": "Without Anesthesia by Andrzej Wajda Special Mention",
-    "normalizedName": "without-anesthesia-by-andrzej-wajda-special-mention",
-    "scope": "film"
-  },
-  {
     "id": "cannes:young-cinema-award",
     "festivalId": "cannes",
     "name": "Young Cinema Award",
@@ -5583,13 +4883,6 @@
     "festivalId": "cannes",
     "name": "Young Critics Award - Best Short",
     "normalizedName": "young-critics-award-best-short",
-    "scope": "film"
-  },
-  {
-    "id": "cannes:young-t-rless-by-volker-schl-ndorff-special-mention",
-    "festivalId": "cannes",
-    "name": "Young Törless by Volker Schlöndorff Special Mention",
-    "normalizedName": "young-t-rless-by-volker-schl-ndorff-special-mention",
     "scope": "film"
   },
   {
@@ -5947,13 +5240,6 @@
     "festivalId": "golden-globes",
     "name": "Golden Globe Award for Best Original Score",
     "normalizedName": "golden-globe-award-for-best-original-score",
-    "scope": "film"
-  },
-  {
-    "id": "golden-globes:golden-globe-award-for-best-original-song",
-    "festivalId": "golden-globes",
-    "name": "Golden Globe Award for Best Original Song",
-    "normalizedName": "golden-globe-award-for-best-original-song",
     "scope": "film"
   },
   {
