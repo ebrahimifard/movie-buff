@@ -1,6 +1,6 @@
 {
   "summary": {
-    "generatedAt": "2026-07-11T23:45:16.792Z",
+    "generatedAt": "2026-07-12T00:31:32.244Z",
     "festivals": 9,
     "totalMissingYears": 45,
     "totalWeakYears": 201
@@ -1474,12 +1474,12 @@
         "totalRecords": 2713,
         "winners": 563,
         "nominees": 2150,
-        "missingPoster": 2146,
-        "missingRuntime": 2146,
-        "missingCountry": 2147,
-        "posterCoveragePct": 20.9,
-        "runtimeCoveragePct": 20.9,
-        "countryCoveragePct": 20.9
+        "missingPoster": 1376,
+        "missingRuntime": 1373,
+        "missingCountry": 1377,
+        "posterCoveragePct": 49.3,
+        "runtimeCoveragePct": 49.4,
+        "countryCoveragePct": 49.2
       }
     },
     {
@@ -2106,12 +2106,12 @@
         "totalRecords": 6038,
         "winners": 726,
         "nominees": 5312,
-        "missingPoster": 4426,
-        "missingRuntime": 4408,
-        "missingCountry": 4434,
-        "posterCoveragePct": 26.7,
-        "runtimeCoveragePct": 27,
-        "countryCoveragePct": 26.6
+        "missingPoster": 3523,
+        "missingRuntime": 3487,
+        "missingCountry": 3539,
+        "posterCoveragePct": 41.7,
+        "runtimeCoveragePct": 42.2,
+        "countryCoveragePct": 41.4
       }
     },
     {
@@ -2778,12 +2778,12 @@
         "totalRecords": 9480,
         "winners": 2317,
         "nominees": 7163,
-        "missingPoster": 7791,
-        "missingRuntime": 7783,
-        "missingCountry": 7801,
-        "posterCoveragePct": 17.8,
-        "runtimeCoveragePct": 17.9,
-        "countryCoveragePct": 17.7
+        "missingPoster": 5358,
+        "missingRuntime": 5202,
+        "missingCountry": 5367,
+        "posterCoveragePct": 43.5,
+        "runtimeCoveragePct": 45.1,
+        "countryCoveragePct": 43.4
       }
     },
     {
@@ -3487,12 +3487,12 @@
         "totalRecords": 10107,
         "winners": 1113,
         "nominees": 8994,
-        "missingPoster": 9166,
-        "missingRuntime": 9163,
-        "missingCountry": 9172,
-        "posterCoveragePct": 9.3,
-        "runtimeCoveragePct": 9.3,
-        "countryCoveragePct": 9.3
+        "missingPoster": 7594,
+        "missingRuntime": 7588,
+        "missingCountry": 7604,
+        "posterCoveragePct": 24.9,
+        "runtimeCoveragePct": 24.9,
+        "countryCoveragePct": 24.8
       }
     },
     {
@@ -5993,12 +5993,12 @@
         "totalRecords": 8234,
         "winners": 1368,
         "nominees": 6866,
-        "missingPoster": 6816,
-        "missingRuntime": 6823,
-        "missingCountry": 6844,
-        "posterCoveragePct": 17.2,
-        "runtimeCoveragePct": 17.1,
-        "countryCoveragePct": 16.9
+        "missingPoster": 4144,
+        "missingRuntime": 4098,
+        "missingCountry": 4215,
+        "posterCoveragePct": 49.7,
+        "runtimeCoveragePct": 50.2,
+        "countryCoveragePct": 48.8
       }
     }
   ]
