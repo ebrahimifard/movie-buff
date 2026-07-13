@@ -70,13 +70,47 @@ bespoke parser) both guard against this the same way:
   `table.wikitable`) but never contain it — References/Sources citation lists, Trivia,
   Ceremony/Presenters listings, Golden Globes' "Awards breakdown" statistics tables and
   "Television" sections (a dual-medium page whose non-film awards don't belong in a
-  film-festival archive), "Multiple nominations"/"Multiple wins" summary tables. Excluding
-  these by heading name alone is fragile if only the *nearest* heading is checked — Golden
-  Globes' "Awards breakdown" section has its own "Films"/"Television" H3 subheadings that
-  would otherwise be confused with the real "Winners and nominees > Film" section just
-  because the nearest heading text matches. `getSectionAncestors` walks the *full* enclosing
-  heading chain (not just the nearest one) so a table or list can be told apart by its
-  complete path, not a single ambiguous heading string.
+  film-festival archive), "Multiple nominations"/"Multiple wins" summary tables, and
+  Retrospective/Homage/Tribute/Centennial programming (a retrospective's own heading is
+  often itself a director/star's representative film title — e.g. Berlinale 1977's Marlene
+  Dietrich retrospective is headed "Dishonored", with her other films listed as if they were
+  that "category"'s nominees). Excluding these by heading name alone is fragile if only the
+  *nearest* heading is checked — Golden Globes' "Awards breakdown" section has its own
+  "Films"/"Television" H3 subheadings that would otherwise be confused with the real
+  "Winners and nominees > Film" section just because the nearest heading text matches.
+  `getSectionAncestors` walks the *full* enclosing heading chain (not just the nearest one)
+  so a table or list can be told apart by its complete path, not a single ambiguous heading
+  string.
+- **`FORMAT_BUCKET_PATTERN` + `resolveCategoryFromChain` + per-festival
+  `nonCompetitiveSectionNames`**: a film merely *listed* under a non-competitive sidebar
+  section (Berlinale's Panorama/Forum/Generation Kplus, Venice's Orizzonti/Venice
+  Days/Corto Cortissimo, Cannes' ACID/Critics' Week/Directors' Fortnight) — with no more
+  specific award name anywhere in the heading chain — was never actually given an award.
+  `resolveCategoryFromChain` walks a heading-ancestor chain backward past any pure
+  format/length/genre-grouping heading (e.g. "Documentaries", "Feature Films") to the
+  nearest heading that names something more specific; if that turns out to be one of a
+  festival's own non-competitive section names (supplied per-festival, since these are
+  proper nouns — see `BERLINALE_CONFIG`/`VENICE_CONFIG`'s `nonCompetitiveSectionNames`),
+  the record is dropped entirely rather than kept under a meaningless bare section label. A
+  qualified real prize within one of these sections (e.g. "Panorama Audience Award") is
+  unaffected by either mechanism. Originally built for Cannes' bespoke parser, generalized
+  into the shared `parseSimpleAwardsWikipedia` so every festival using it benefits.
+- **`Category.isAward` + `data/source/category-classifications.json`**: even after every
+  structural fix above, some category values that survive are real Wikipedia/Wikidata
+  content that simply isn't an award (a section name a different heuristic didn't catch, a
+  bare genre-track label, a malformed parser artifact) — and some genuine awards have no
+  lexical "award"/"prize" signal at all (Teddy Award, Volpi Cup, Golden Osella, Palm Dog,
+  sponsor-named prizes like BNL/Campari/L'Oréal). Regex/keyword matching can't reliably tell
+  these apart — only understanding what each one actually *is* can. `category-
+  classifications.json` records that judgment explicitly, as data: every `(festivalId,
+  category)` pair reviewed, each with an `isAward` boolean (see `scripts/lib/generate-
+  category-classifications.mjs` for how it was authored). `build-comprehensive-data.mjs`
+  sets `Category.isAward` from this lookup — a pair with no entry conservatively defaults to
+  `false` and is surfaced by `scripts/validate-data.mjs`'s classification-coverage check
+  rather than silently guessed at either way. `getCategoryOptions` (`lib/festival-
+  filters.ts`) is the only consumer: it excludes non-award categories from the Category
+  filter's option list, without touching the underlying `Nomination`/`Category` records or
+  how a category is displayed on a film's own card/detail page.
 
 ## Extensibility
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BackLink } from "@/components/back-link";
 import { FestivalFilters } from "@/components/festival-filters";
-import { getByFestival, getFestivalBySlug, getFilmsById, getYears } from "@/lib/data";
+import { getByFestival, getCategoriesById, getFestivalBySlug, getFilmsById, getYears } from "@/lib/data";
 import { buildFestivalFilterRows } from "@/lib/festival-filters";
 
 type FestivalPageProps = {
@@ -34,7 +34,7 @@ export default async function FestivalPage({ params }: FestivalPageProps) {
 
   const entries = getByFestival(resolvedParams.slug);
   const latestYear = getYears()[0];
-  const rows = buildFestivalFilterRows(entries, getFilmsById());
+  const rows = buildFestivalFilterRows(entries, getFilmsById(), getCategoriesById());
 
   return (
     <main className="mx-auto max-w-7xl px-6 pb-20 pt-10 sm:px-8 lg:px-12">

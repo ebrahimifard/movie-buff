@@ -9,7 +9,7 @@ import {
   groupRowsByFilm,
   getRuntimeBucket
 } from "./festival-filters";
-import type { Film, Nomination } from "./types";
+import type { Category, Film, Nomination } from "./types";
 
 describe("getRuntimeBucket", () => {
   it("treats 0 or missing runtime as unknown", () => {
@@ -66,31 +66,64 @@ function nomination(overrides: Partial<Nomination>): Nomination {
   };
 }
 
+// Derives a Category lookup from a set of nominations, defaulting every
+// category to isAward: true so existing tests that don't care about
+// award-classification keep their prior behavior (every category included)
+// without each having to construct Category fixtures by hand. Pass
+// `nonAwardCategoryIds` for the specific tests that DO care.
+function categoriesById(nominations: Nomination[], nonAwardCategoryIds: string[] = []): Map<string, Category> {
+  const nonAward = new Set(nonAwardCategoryIds);
+  const map = new Map<string, Category>();
+  for (const entry of nominations) {
+    if (!map.has(entry.categoryId)) {
+      map.set(entry.categoryId, {
+        id: entry.categoryId,
+        festivalId: entry.festivalId,
+        name: entry.category,
+        normalizedName: entry.category.toLowerCase(),
+        scope: "film",
+        isAward: !nonAward.has(entry.categoryId)
+      });
+    }
+  }
+  return map;
+}
+
 describe("buildFestivalFilterRows", () => {
   it("joins runtime from the film map", () => {
     const filmsById = new Map([["tt1", film({ runtimeMinutes: 133 })]]);
-    const rows = buildFestivalFilterRows([nomination({})], filmsById);
+    const nominations = [nomination({})];
+    const rows = buildFestivalFilterRows(nominations, filmsById, categoriesById(nominations));
     expect(rows[0].runtimeMinutes).toBe(133);
     expect(rows[0].countryCode).toBe("FR");
   });
 
   it("defaults runtime to 0 when the film doesn't resolve, without throwing", () => {
     const filmsById = new Map<string, Film>();
-    const rows = buildFestivalFilterRows([nomination({ filmId: "unknown" })], filmsById);
+    const nominations = [nomination({ filmId: "unknown" })];
+    const rows = buildFestivalFilterRows(nominations, filmsById, categoriesById(nominations));
     expect(rows[0].runtimeMinutes).toBe(0);
+  });
+
+  it("joins Category.isAward, defaulting to false when the category doesn't resolve", () => {
+    const nominations = [nomination({})];
+    const rows = buildFestivalFilterRows(nominations, new Map([["tt1", film({})]]), new Map());
+    expect(rows[0].categoryIsAward).toBe(false);
   });
 });
 
 describe("filterNominations", () => {
+  const nominations = [
+    nomination({ id: "n1", year: 2020, result: "winner", country: "FR", filmId: "tt1" }),
+    nomination({ id: "n2", year: 2021, result: "nominee", country: "US", filmId: "tt2" })
+  ];
   const rows = buildFestivalFilterRows(
-    [
-      nomination({ id: "n1", year: 2020, result: "winner", country: "FR", filmId: "tt1" }),
-      nomination({ id: "n2", year: 2021, result: "nominee", country: "US", filmId: "tt2" })
-    ],
+    nominations,
     new Map([
       ["tt1", film({ id: "tt1", runtimeMinutes: 80 })],
       ["tt2", film({ id: "tt2", runtimeMinutes: 150 })]
-    ])
+    ]),
+    categoriesById(nominations)
   );
 
   it("returns everything when no filters are set", () => {
@@ -126,26 +159,26 @@ describe("filterNominations", () => {
 
 describe("getFacetOptions", () => {
   it("returns unique years sorted descending and unique countries sorted ascending", () => {
-    const rows = buildFestivalFilterRows(
-      [nomination({ id: "n1", year: 2019, country: "US" }), nomination({ id: "n2", year: 2020, country: "FR" }), nomination({ id: "n3", year: 2019, country: "US" })],
-      new Map([["tt1", film({})]])
-    );
+    const nominations = [nomination({ id: "n1", year: 2019, country: "US" }), nomination({ id: "n2", year: 2020, country: "FR" }), nomination({ id: "n3", year: 2019, country: "US" })];
+    const rows = buildFestivalFilterRows(nominations, new Map([["tt1", film({})]]), categoriesById(nominations));
     expect(getFacetOptions(rows)).toEqual({ years: [2020, 2019], countries: ["FR", "US"] });
   });
 });
 
 describe("filterNominations category filter", () => {
+  const nominations = [
+    nomination({ id: "n1", category: "Best Picture", categoryId: "c:best-picture", filmId: "tt1" }),
+    nomination({ id: "n2", category: "Best Director", categoryId: "c:best-director", filmId: "tt2" }),
+    nomination({ id: "n3", category: "Best Actor", categoryId: "c:best-actor", filmId: "tt3" })
+  ];
   const rows = buildFestivalFilterRows(
-    [
-      nomination({ id: "n1", category: "Best Picture", filmId: "tt1" }),
-      nomination({ id: "n2", category: "Best Director", filmId: "tt2" }),
-      nomination({ id: "n3", category: "Best Actor", filmId: "tt3" })
-    ],
+    nominations,
     new Map([
       ["tt1", film({ id: "tt1" })],
       ["tt2", film({ id: "tt2" })],
       ["tt3", film({ id: "tt3" })]
-    ])
+    ]),
+    categoriesById(nominations)
   );
 
   it("returns everything when categories is undefined or empty", () => {
@@ -165,17 +198,19 @@ describe("filterNominations category filter", () => {
 });
 
 describe("getCategoryOptions", () => {
+  const nominations = [
+    nomination({ id: "n1", year: 2019, category: "Best Picture", categoryId: "c:best-picture", filmId: "tt1" }),
+    nomination({ id: "n2", year: 2020, category: "Best Director", categoryId: "c:best-director", filmId: "tt2" }),
+    nomination({ id: "n3", year: 2020, category: "Best Actor", categoryId: "c:best-actor", filmId: "tt3" })
+  ];
   const rows = buildFestivalFilterRows(
-    [
-      nomination({ id: "n1", year: 2019, category: "Best Picture", filmId: "tt1" }),
-      nomination({ id: "n2", year: 2020, category: "Best Director", filmId: "tt2" }),
-      nomination({ id: "n3", year: 2020, category: "Best Actor", filmId: "tt3" })
-    ],
+    nominations,
     new Map([
       ["tt1", film({ id: "tt1" })],
       ["tt2", film({ id: "tt2" })],
       ["tt3", film({ id: "tt3" })]
-    ])
+    ]),
+    categoriesById(nominations)
   );
 
   it("returns all categories sorted when no other filters are active", () => {
@@ -186,20 +221,46 @@ describe("getCategoryOptions", () => {
     expect(getCategoryOptions(rows, { year: 2020 })).toEqual(["Best Actor", "Best Director"]);
     expect(getCategoryOptions(rows, { year: 2020, categories: ["Best Actor"] })).toEqual(["Best Actor", "Best Director"]);
   });
+
+  it("excludes a category classified as non-award, even though real nomination rows exist for it", () => {
+    // Mirrors the real "Panorama"/"Unknown category"/"Documentaries" cases:
+    // Category.isAward: false hides the value from the filter dropdown
+    // without touching the underlying nomination data at all.
+    const withNonAward = buildFestivalFilterRows(
+      nominations,
+      new Map([
+        ["tt1", film({ id: "tt1" })],
+        ["tt2", film({ id: "tt2" })],
+        ["tt3", film({ id: "tt3" })]
+      ]),
+      categoriesById(nominations, ["c:best-director"])
+    );
+    expect(getCategoryOptions(withNonAward, {})).toEqual(["Best Actor", "Best Picture"]);
+    // and the nomination itself is still present for every OTHER filter/view:
+    expect(filterNominations(withNonAward, {})).toHaveLength(3);
+  });
+
+  it("keeps a genuine award with no lexical award signal at all (no 'award'/'prize'/'best' in the name)", () => {
+    const namedAward = [nomination({ id: "n1", category: "Teddy Award", categoryId: "c:teddy", filmId: "tt1" })];
+    const rows2 = buildFestivalFilterRows(namedAward, new Map([["tt1", film({ id: "tt1" })]]), categoriesById(namedAward));
+    expect(getCategoryOptions(rows2, {})).toEqual(["Teddy Award"]);
+  });
 });
 
 describe("groupRowsByFilm", () => {
   it("collapses multiple nominations for the same film into one group", () => {
+    const nominations = [
+      nomination({ id: "n1", filmId: "tt1", category: "Best Picture", categoryId: "c:best-picture", result: "winner" }),
+      nomination({ id: "n2", filmId: "tt1", category: "Best Director", categoryId: "c:best-director", result: "nominee" }),
+      nomination({ id: "n3", filmId: "tt2", category: "Best Actor", categoryId: "c:best-actor", result: "nominee" })
+    ];
     const rows = buildFestivalFilterRows(
-      [
-        nomination({ id: "n1", filmId: "tt1", category: "Best Picture", result: "winner" }),
-        nomination({ id: "n2", filmId: "tt1", category: "Best Director", result: "nominee" }),
-        nomination({ id: "n3", filmId: "tt2", category: "Best Actor", result: "nominee" })
-      ],
+      nominations,
       new Map([
         ["tt1", film({ id: "tt1" })],
         ["tt2", film({ id: "tt2" })]
-      ])
+      ]),
+      categoriesById(nominations)
     );
 
     const groups = groupRowsByFilm(rows);
@@ -214,12 +275,14 @@ describe("groupRowsByFilm", () => {
   });
 
   it("groups films with no imdbId by filmId (never fails to collapse Wikipedia-sourced records)", () => {
+    const nominations = [
+      nomination({ id: "n1", filmId: "film:untitled-2019", imdbId: null, category: "Palme d'Or", result: "nominee" }),
+      nomination({ id: "n2", filmId: "film:untitled-2019", imdbId: null, category: "Jury Prize", categoryId: "c:jury-prize", result: "nominee" })
+    ];
     const rows = buildFestivalFilterRows(
-      [
-        nomination({ id: "n1", filmId: "film:untitled-2019", imdbId: null, category: "Palme d'Or", result: "nominee" }),
-        nomination({ id: "n2", filmId: "film:untitled-2019", imdbId: null, category: "Jury Prize", result: "nominee" })
-      ],
-      new Map([["film:untitled-2019", film({ id: "film:untitled-2019", imdbId: null })]])
+      nominations,
+      new Map([["film:untitled-2019", film({ id: "film:untitled-2019", imdbId: null })]]),
+      categoriesById(nominations)
     );
 
     const groups = groupRowsByFilm(rows);
@@ -229,13 +292,11 @@ describe("groupRowsByFilm", () => {
   });
 
   it("tracks distinct years sorted descending and uses the latest as the primary year", () => {
-    const rows = buildFestivalFilterRows(
-      [
-        nomination({ id: "n1", filmId: "tt1", year: 2018 }),
-        nomination({ id: "n2", filmId: "tt1", year: 2020 })
-      ],
-      new Map([["tt1", film({ id: "tt1" })]])
-    );
+    const nominations = [
+      nomination({ id: "n1", filmId: "tt1", year: 2018 }),
+      nomination({ id: "n2", filmId: "tt1", year: 2020 })
+    ];
+    const rows = buildFestivalFilterRows(nominations, new Map([["tt1", film({ id: "tt1" })]]), categoriesById(nominations));
 
     const groups = groupRowsByFilm(rows);
     expect(groups[0].year).toBe(2020);
@@ -243,13 +304,11 @@ describe("groupRowsByFilm", () => {
   });
 
   it("dedupes identical (category, result) pairs but not distinct ones", () => {
-    const rows = buildFestivalFilterRows(
-      [
-        nomination({ id: "n1", filmId: "tt1", year: 2018, category: "Best Picture", result: "nominee" }),
-        nomination({ id: "n2", filmId: "tt1", year: 2019, category: "Best Picture", result: "nominee" })
-      ],
-      new Map([["tt1", film({ id: "tt1" })]])
-    );
+    const nominations = [
+      nomination({ id: "n1", filmId: "tt1", year: 2018, category: "Best Picture", result: "nominee" }),
+      nomination({ id: "n2", filmId: "tt1", year: 2019, category: "Best Picture", result: "nominee" })
+    ];
+    const rows = buildFestivalFilterRows(nominations, new Map([["tt1", film({ id: "tt1" })]]), categoriesById(nominations));
 
     const groups = groupRowsByFilm(rows);
     expect(groups[0].categories).toEqual([{ category: "Best Picture", result: "nominee" }]);
@@ -281,17 +340,19 @@ describe("groupNominationsByFestival", () => {
 });
 
 describe("filterNominations genre filter", () => {
+  const nominations = [
+    nomination({ id: "n1", filmId: "tt1" }),
+    nomination({ id: "n2", filmId: "tt2" }),
+    nomination({ id: "n3", filmId: "tt3" })
+  ];
   const rows = buildFestivalFilterRows(
-    [
-      nomination({ id: "n1", filmId: "tt1" }),
-      nomination({ id: "n2", filmId: "tt2" }),
-      nomination({ id: "n3", filmId: "tt3" })
-    ],
+    nominations,
     new Map([
       ["tt1", film({ id: "tt1", genres: ["Drama", "War"] })],
       ["tt2", film({ id: "tt2", genres: ["Comedy"] })],
       ["tt3", film({ id: "tt3", genres: [] })]
-    ])
+    ]),
+    categoriesById(nominations)
   );
 
   it("returns everything when genres is undefined or empty", () => {
@@ -320,17 +381,19 @@ describe("filterNominations genre filter", () => {
 });
 
 describe("getGenreOptions", () => {
+  const nominations = [
+    nomination({ id: "n1", year: 2019, filmId: "tt1" }),
+    nomination({ id: "n2", year: 2020, filmId: "tt2" }),
+    nomination({ id: "n3", year: 2020, filmId: "tt3" })
+  ];
   const rows = buildFestivalFilterRows(
-    [
-      nomination({ id: "n1", year: 2019, filmId: "tt1" }),
-      nomination({ id: "n2", year: 2020, filmId: "tt2" }),
-      nomination({ id: "n3", year: 2020, filmId: "tt3" })
-    ],
+    nominations,
     new Map([
       ["tt1", film({ id: "tt1", genres: ["Drama"] })],
       ["tt2", film({ id: "tt2", genres: ["Comedy", "Drama"] })],
       ["tt3", film({ id: "tt3", genres: [] })]
-    ])
+    ]),
+    categoriesById(nominations)
   );
 
   it("returns unique, sorted genre values, ignoring films with no genres", () => {
@@ -343,7 +406,8 @@ describe("getGenreOptions", () => {
   });
 
   it("returns an empty array when no film has any genre", () => {
-    const noGenreRows = buildFestivalFilterRows([nomination({ id: "n1", filmId: "tt1" })], new Map([["tt1", film({ id: "tt1", genres: [] })]]));
+    const noGenreNominations = [nomination({ id: "n1", filmId: "tt1" })];
+    const noGenreRows = buildFestivalFilterRows(noGenreNominations, new Map([["tt1", film({ id: "tt1", genres: [] })]]), categoriesById(noGenreNominations));
     expect(getGenreOptions(noGenreRows, {})).toEqual([]);
   });
 });

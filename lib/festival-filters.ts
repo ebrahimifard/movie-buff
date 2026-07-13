@@ -1,4 +1,4 @@
-import type { Film, Nomination } from "./types";
+import type { Category, Film, Nomination } from "./types";
 
 export type RuntimeBucket = "under-90" | "90-120" | "over-120" | "unknown";
 
@@ -8,6 +8,12 @@ export type FestivalFilterRow = {
   year: number;
   title: string;
   category: string;
+  // Whether `category` genuinely represents a competitive festival
+  // distinction (award, prize, nomination, jury/audience recognition), per
+  // Category.isAward — see data/source/category-classifications.json. Only
+  // affects which values getCategoryOptions offers as filter options; the
+  // underlying nomination data and every other filter are unaffected.
+  categoryIsAward: boolean;
   result: "winner" | "nominee";
   imdbId: string | null;
   director: string;
@@ -67,15 +73,25 @@ export function getRuntimeBucket(runtimeMinutes: number): RuntimeBucket {
 // (runtime lives only on Film, not Nomination) into the narrow projection the
 // client filter panel actually needs — avoids shipping full Nomination/Film
 // objects to the browser for large festivals (Oscars: 10,000+ rows).
-export function buildFestivalFilterRows(nominations: Nomination[], filmsById: Map<string, Film>): FestivalFilterRow[] {
+// categoriesById is the same kind of one-time lookup, used only to read
+// Category.isAward (see FestivalFilterRow.categoryIsAward) — a missing
+// lookup (should never happen once data:validate passes) conservatively
+// defaults to false rather than assuming a category is a real award.
+export function buildFestivalFilterRows(
+  nominations: Nomination[],
+  filmsById: Map<string, Film>,
+  categoriesById: Map<string, Category>
+): FestivalFilterRow[] {
   return nominations.map((nomination) => {
     const film = filmsById.get(nomination.filmId);
+    const category = categoriesById.get(nomination.categoryId);
     return {
       nominationId: nomination.id,
       filmId: nomination.filmId,
       year: nomination.year,
       title: nomination.title,
       category: nomination.category,
+      categoryIsAward: category?.isAward ?? false,
       result: nomination.result,
       imdbId: nomination.imdbId,
       director: nomination.director,
@@ -183,10 +199,15 @@ export function getFacetOptions(rows: FestivalFilterRow[]): { years: number[]; c
 // runtime, country) but never to `filters.categories` itself — otherwise
 // picking one category would immediately hide every other option. This is
 // what makes the category list narrow when, e.g., a year is selected.
+// Only genuine award/prize/nomination categories (categoryIsAward) are ever
+// offered as options — a row whose category is a section name, genre tag,
+// or other non-award value (see Category.isAward /
+// data/source/category-classifications.json) never appears here, though the
+// underlying nomination/film data is untouched.
 export function getCategoryOptions(rows: FestivalFilterRow[], filters: FestivalFilterState): string[] {
   const otherFilters: FestivalFilterState = { ...filters, categories: undefined };
   const scoped = filterNominations(rows, otherFilters);
-  return [...new Set(scoped.map((row) => row.category))].sort();
+  return [...new Set(scoped.filter((row) => row.categoryIsAward).map((row) => row.category))].sort();
 }
 
 // Genre options are scoped to every *other* active filter (year, result,

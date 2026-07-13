@@ -1,4 +1,5 @@
 import { readFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import {
@@ -12,6 +13,7 @@ import {
 
 const root = process.cwd();
 const normalizedDir = path.join(root, "data", "normalized");
+const categoryClassificationsPath = path.join(root, "data", "source", "category-classifications.json");
 
 const ENTITY_FILES = [
   { key: "festivals", file: "festivals.json", schema: FestivalSchema },
@@ -86,6 +88,27 @@ export function checkReferentialIntegrity(entities) {
   return issues;
 }
 
+// Every Category record's isAward is set from data/source/category-
+// classifications.json — a curated record of a real semantic review (see
+// scripts/lib/generate-category-classifications.mjs), never a keyword
+// guess. A category with no entry there conservatively defaults to
+// isAward: false (see build-comprehensive-data.mjs), which is schema-valid
+// and therefore invisible to validateEntities/checkReferentialIntegrity —
+// this check is what actually surfaces it, so an unreviewed category never
+// silently sits at "excluded" (or, if the default ever changed, "included")
+// forever without anyone noticing there was a decision to make.
+export function checkCategoryClassificationCoverage(categories, classifications) {
+  const classified = new Set((classifications ?? []).map((entry) => `${entry.festivalId}|${entry.category}`));
+  const unclassified = [];
+  for (const category of categories ?? []) {
+    const key = `${category.festivalId}|${category.name}`;
+    if (!classified.has(key)) {
+      unclassified.push(`[${category.festivalId}] "${category.name}"`);
+    }
+  }
+  return unclassified;
+}
+
 async function loadEntities() {
   const entities = {};
   for (const { key, file } of ENTITY_FILES) {
@@ -100,6 +123,21 @@ async function run() {
   const schemaIssues = validateEntities(entities);
   const referentialIssues = checkReferentialIntegrity(entities);
   const issues = [...schemaIssues, ...referentialIssues];
+
+  // Warning-only, not a hard failure: an unclassified category defaults to
+  // isAward: false (schema-valid), so it can't fail validateEntities or
+  // checkReferentialIntegrity — this is purely visibility so it doesn't sit
+  // unnoticed.
+  if (existsSync(categoryClassificationsPath)) {
+    const classificationsRaw = JSON.parse(await readFile(categoryClassificationsPath, "utf8"));
+    const unclassified = checkCategoryClassificationCoverage(entities.categories, classificationsRaw.classifications);
+    if (unclassified.length > 0) {
+      console.warn(`${unclassified.length} categor${unclassified.length === 1 ? "y has" : "ies have"} no entry in category-classifications.json (defaulted to isAward: false):`);
+      for (const entry of unclassified) {
+        console.warn(`  - ${entry}`);
+      }
+    }
+  }
 
   if (issues.length === 0) {
     console.log("Data validation passed: all normalized files conform to schema and pass referential integrity checks.");

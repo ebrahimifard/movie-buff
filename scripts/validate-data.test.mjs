@@ -1,11 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { checkReferentialIntegrity, validateEntities } from "./validate-data.mjs";
+import { checkCategoryClassificationCoverage, checkReferentialIntegrity, validateEntities } from "./validate-data.mjs";
 
 function baseEntities() {
   return {
     festivals: [{ id: "cannes", name: "Cannes", country: "FR", city: "Cannes", foundedYear: 1946, type: "festival", website: null }],
     ceremonies: [{ id: "cannes-2020", festivalId: "cannes", year: 2020, edition: null, startDate: null, endDate: null }],
-    categories: [{ id: "cannes:palme-dor", festivalId: "cannes", name: "Palme d'Or", normalizedName: "palme-dor", scope: "film" }],
+    categories: [{ id: "cannes:palme-dor", festivalId: "cannes", name: "Palme d'Or", normalizedName: "palme-dor", scope: "film", isAward: true }],
     films: [{ id: "tt1", title: "T", releaseYear: 2020, imdbId: "tt1", posterUrl: "", runtimeMinutes: 0, countryCodes: [], languages: [], genres: [], synopsis: "" }],
     people: [{ id: "person:jane-doe", name: "Jane Doe", roles: ["director"], imdbId: null, tmdbId: null }],
     nominations: [
@@ -74,5 +74,36 @@ describe("checkReferentialIntegrity", () => {
     entities.ceremonies[0].festivalId = "unknown-festival";
     const issues = checkReferentialIntegrity(entities);
     expect(issues.some((issue) => issue.includes("[ceremonies]"))).toBe(true);
+  });
+});
+
+describe("checkCategoryClassificationCoverage", () => {
+  const categories = [
+    { festivalId: "cannes", name: "Palme d'Or" },
+    { festivalId: "berlinale", name: "Golden Bear" }
+  ];
+
+  it("reports no gaps when every category has a classification entry", () => {
+    const classifications = [
+      { festivalId: "cannes", category: "Palme d'Or", isAward: true },
+      { festivalId: "berlinale", category: "Golden Bear", isAward: true }
+    ];
+    expect(checkCategoryClassificationCoverage(categories, classifications)).toEqual([]);
+  });
+
+  it("flags a category with no classification entry at all, regardless of what isAward would default to", () => {
+    const classifications = [{ festivalId: "cannes", category: "Palme d'Or", isAward: true }];
+    const unclassified = checkCategoryClassificationCoverage(categories, classifications);
+    expect(unclassified).toEqual(['[berlinale] "Golden Bear"']);
+  });
+
+  it("scopes matching by festivalId — the same category name at a different festival is still unclassified", () => {
+    const classifications = [{ festivalId: "venice", category: "Golden Bear", isAward: true }];
+    const unclassified = checkCategoryClassificationCoverage(categories, classifications);
+    expect(unclassified).toContain('[berlinale] "Golden Bear"');
+  });
+
+  it("returns an empty array when there are no categories", () => {
+    expect(checkCategoryClassificationCoverage([], [])).toEqual([]);
   });
 });

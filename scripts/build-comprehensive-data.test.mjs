@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { resolveFilmId, resolvePersonId, slugify, uniqueSorted } from "./build-comprehensive-data.mjs";
+import { buildCategoryClassificationLookup, resolveCategoryIsAward, resolveFilmId, resolvePersonId, slugify, uniqueSorted } from "./build-comprehensive-data.mjs";
 
 describe("resolveFilmId", () => {
   it("uses imdbId when present", () => {
@@ -56,5 +56,35 @@ describe("slugify", () => {
 describe("uniqueSorted", () => {
   it("dedupes and sorts", () => {
     expect(uniqueSorted(["b", "a", "b", "c"])).toEqual(["a", "b", "c"]);
+  });
+});
+
+describe("buildCategoryClassificationLookup / resolveCategoryIsAward", () => {
+  it("resolves a classified pair's isAward value", () => {
+    const lookup = buildCategoryClassificationLookup([
+      { festivalId: "cannes", category: "Palme d'Or", isAward: true },
+      { festivalId: "cannes", category: "Unknown category", isAward: false }
+    ]);
+    expect(resolveCategoryIsAward(lookup, "cannes", "Palme d'Or")).toBe(true);
+    expect(resolveCategoryIsAward(lookup, "cannes", "Unknown category")).toBe(false);
+  });
+
+  it("returns undefined (not a default) for an unclassified pair, so the caller can tell 'reviewed: no' apart from 'never reviewed'", () => {
+    const lookup = buildCategoryClassificationLookup([{ festivalId: "cannes", category: "Palme d'Or", isAward: true }]);
+    expect(resolveCategoryIsAward(lookup, "cannes", "Some Brand New Category")).toBeUndefined();
+  });
+
+  it("scopes by festivalId — the same category name at a different festival is a distinct entry", () => {
+    const lookup = buildCategoryClassificationLookup([
+      { festivalId: "berlinale", category: "Golden Bear", isAward: true },
+      { festivalId: "venice", category: "Golden Bear", isAward: false }
+    ]);
+    expect(resolveCategoryIsAward(lookup, "berlinale", "Golden Bear")).toBe(true);
+    expect(resolveCategoryIsAward(lookup, "venice", "Golden Bear")).toBe(false);
+  });
+
+  it("handles an empty/missing classifications list without throwing", () => {
+    expect(resolveCategoryIsAward(buildCategoryClassificationLookup(undefined), "cannes", "Palme d'Or")).toBeUndefined();
+    expect(resolveCategoryIsAward(buildCategoryClassificationLookup([]), "cannes", "Palme d'Or")).toBeUndefined();
   });
 });

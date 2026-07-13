@@ -6,7 +6,32 @@ import { pathToFileURL } from "node:url";
 const root = process.cwd();
 const generatedSourcePath = path.join(root, "data", "source", "master-data.generated.json");
 const seedSourcePath = path.join(root, "data", "source", "master-data.json");
+const categoryClassificationsPath = path.join(root, "data", "source", "category-classifications.json");
 const normalizedDir = path.join(root, "data", "normalized");
+
+// Builds a `${festivalId}|${category}` -> isAward lookup from
+// data/source/category-classifications.json — a curated record of a real
+// semantic review of every category value (see
+// scripts/lib/generate-category-classifications.mjs), not a keyword/regex
+// classifier. A pair with no entry (a brand-new category from a future
+// re-scrape nobody has reviewed yet) is intentionally NOT defaulted to true
+// here — resolveCategoryIsAward returns undefined for it, and the caller
+// treats that as "unclassified", conservatively excluding it from the
+// Category filter until a human/AI reviews it. See
+// scripts/validate-data.mjs's classification-coverage check, which is what
+// actually surfaces an unclassified pair instead of it staying silently
+// hidden forever.
+export function buildCategoryClassificationLookup(classifications) {
+  const map = new Map();
+  for (const entry of classifications ?? []) {
+    map.set(`${entry.festivalId}|${entry.category}`, entry.isAward);
+  }
+  return map;
+}
+
+export function resolveCategoryIsAward(lookup, festivalId, category) {
+  return lookup.get(`${festivalId}|${category}`);
+}
 
 export function slugify(input) {
   return input
@@ -61,6 +86,10 @@ async function run() {
   const sourceRaw = await readFile(selectedSourcePath, "utf8");
   const source = JSON.parse(sourceRaw);
 
+  const classificationsRaw = existsSync(categoryClassificationsPath) ? await readFile(categoryClassificationsPath, "utf8") : null;
+  const categoryLookup = buildCategoryClassificationLookup(classificationsRaw ? JSON.parse(classificationsRaw).classifications : []);
+  const unclassifiedCategories = new Set();
+
   const festivals = source.festivals
     .map((festival) => ({
       ...festival,
@@ -105,12 +134,21 @@ async function run() {
 
     const categoryId = `${entry.festivalId}:${slugify(entry.category)}`;
     if (!categoryMap.has(categoryId)) {
+      const isAward = resolveCategoryIsAward(categoryLookup, entry.festivalId, entry.category);
+      if (isAward === undefined) {
+        unclassifiedCategories.add(`${entry.festivalId}|${entry.category}`);
+      }
       categoryMap.set(categoryId, {
         id: categoryId,
         festivalId: entry.festivalId,
         name: entry.category,
         normalizedName: slugify(entry.category),
-        scope: "film"
+        scope: "film",
+        // Conservative default for an unclassified pair — see
+        // buildCategoryClassificationLookup's comment above. Never true by
+        // accident: an unreviewed category simply doesn't show up as a
+        // Category filter option until someone classifies it.
+        isAward: isAward ?? false
       });
     }
 
@@ -176,6 +214,12 @@ async function run() {
 
   console.log("Comprehensive normalized dataset generated.");
   console.log(JSON.stringify(manifest.stats, null, 2));
+
+  if (unclassifiedCategories.size > 0) {
+    console.warn(
+      `${unclassifiedCategories.size} category value(s) have no entry in data/source/category-classifications.json and were conservatively excluded from the Category filter (isAward: false). Run scripts/validate-data.mjs for the full list, then classify each one by its actual meaning — never by keyword.`
+    );
+  }
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
