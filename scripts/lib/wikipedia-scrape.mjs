@@ -14,8 +14,20 @@ const JUNK_TITLE_PATTERN =
 // part of its name. "Television" is Golden Globes-specific (its page covers
 // both film and TV under sibling sections) — harmless to check for
 // film-only festivals since they never have a heading named that.
+//
+// retrospective.*/homage.*/tribute.*/centennial.* (not anchored to an exact
+// phrase like the rest, since these headings are rarely bare — "Retrospective
+// - Secret History of Italian Cinema 4", "Tribute to Otto Preminger",
+// "Centennial of Rossellini, Soldati and Visconti") catch a whole class of
+// bug confirmed live on Berlinale/Venice pages: a retrospective's own
+// heading is itself a director/star's representative film title (e.g.
+// Berlinale 1977's Marlene Dietrich retrospective is headed "Dishonored",
+// with other Dietrich films — "Knight Without Armour", "Morocco" — listed
+// as if they were that "category"'s nominees). No real award name in any
+// festival's data starts with these words, confirmed by inspecting every
+// festival's current category list before adding this.
 export const NON_AWARD_SECTION_PATTERN =
-  /^(contents|references|external links|see also|notes|media|further reading|bibliography|sources|trivia|cerem(ony|onies)|presenters|jur(y|ies)|special events and homages|awards breakdown|multiple nominations|multiple wins|films? with multiple nominations|films? with multiple wins|series with multiple nominations|series with multiple wins|digital audio|in memoriam|miss golden globe|expansion|reduction|television)$/i;
+  /^(contents|references|external links|see also|notes|media|further reading|bibliography|sources|trivia|cerem(ony|onies)|presenters|jur(y|ies)|special events and homages|awards breakdown|multiple nominations|multiple wins|films? with multiple nominations|films? with multiple wins|series with multiple nominations|series with multiple wins|digital audio|in memoriam|miss golden globe|expansion|reduction|television|(the\s+)?retrospective.*|(the\s+)?homage.*|(the\s+)?tribute.*|(the\s+)?centennial.*)$/i;
 
 export function cleanText(text) {
   return String(text ?? "")
@@ -110,6 +122,33 @@ function findPrecedingHeadingText(element) {
 // DOCUMENT_POSITION_FOLLOWING (4) is a fixed DOM-spec bitmask value, not
 // realm-specific, so no `Node` reference from the JSDOM window is needed.
 const DOCUMENT_POSITION_FOLLOWING = 4;
+
+// Sub-headings that exist purely to group films by format/length/genre
+// within a real, legitimate section (e.g. Berlinale's Critics' Week-style
+// "Feature Films"/"Documentaries" splits), not to name an award. Anchored
+// on the whole heading text so a real prize like "Short Film Palme d'Or"
+// (which has trailing content) never matches. Shared across every festival
+// using this parser — first proven out for Cannes' bespoke parser, ported
+// here so Berlinale/Venice/BAFTA/Golden Globes get the same walk-up.
+// "documentary"/"comedy" pluralize irregularly (documentar-y/-ies,
+// come-dy/-dies), so a plain trailing `s?` (fine for short/feature/animated)
+// would miss "Documentaries"/"Comedies" — handled as their own alternatives.
+export const FORMAT_BUCKET_PATTERN = /^(the\s+)?((short|feature|animated)s?|come(dy|dies)|documentar(y|ies))(\s+films?)?$/i;
+
+// Walks a heading-ancestor chain (outermost to innermost, as returned by
+// getSectionAncestors — optionally with the current heading itself appended
+// as the last entry) backward past any pure format-grouping headings,
+// returning the nearest heading that actually names something more
+// specific. Falls back to the chain's own last entry if every level happens
+// to be a format bucket, so this never returns undefined.
+export function resolveCategoryFromChain(chain) {
+  for (let i = chain.length - 1; i >= 0; i -= 1) {
+    if (!FORMAT_BUCKET_PATTERN.test(chain[i])) {
+      return chain[i];
+    }
+  }
+  return chain[chain.length - 1];
+}
 
 export function getSectionAncestors(element, headings) {
   const stack = [];
@@ -397,13 +436,18 @@ function findListAfterHeading(heading) {
 // film records that happen to sit in that same table. Left available here
 // for a future page/festival where that isn't sufficient — e.g. a
 // selection table with no honorary-category framing at all.
-export function parseSimpleAwardsWikipedia(html, year, { festivalId, festivalName, normalizeCategory, scanTables = true }) {
+export function parseSimpleAwardsWikipedia(
+  html,
+  year,
+  { festivalId, festivalName, normalizeCategory, scanTables = true, nonCompetitiveSectionNames = [] }
+) {
   const dom = new JSDOM(html);
   const doc = dom.window.document;
   const contentRoot = doc.querySelector("#mw-content-text .mw-parser-output") || doc.querySelector("#mw-content-text") || doc.body;
   const records = [];
   const isFirstSeen = createDeduper();
   const headings = Array.from(contentRoot.querySelectorAll("h2, h3, h4"));
+  const nonCompetitiveNameSet = new Set(nonCompetitiveSectionNames.map((name) => name.toLowerCase()));
 
   function addRecord(rawCategory, result, rawTitle, personName, hasFilmSignal = true) {
     const title = cleanText(rawTitle);
@@ -419,6 +463,17 @@ export function parseSimpleAwardsWikipedia(html, year, { festivalId, festivalNam
     // heading — by checking the resolved category value itself, regardless
     // of which extraction path produced it.
     if (NON_AWARD_SECTION_PATTERN.test(category)) {
+      return;
+    }
+
+    // A film merely listed under a non-competitive parallel/sidebar section
+    // (Panorama, Forum, Generation Kplus, ...) — supplied per-festival via
+    // `nonCompetitiveSectionNames`, since these are festival-specific proper
+    // nouns, not a structural pattern — with no more specific award name
+    // anywhere in the heading chain was never actually given an award.
+    // Exact match only, so a qualified real prize within one of these
+    // sections (e.g. "Panorama Audience Award") is unaffected and stays.
+    if (nonCompetitiveNameSet.has(category.toLowerCase())) {
       return;
     }
 
@@ -521,10 +576,15 @@ export function parseSimpleAwardsWikipedia(html, year, { festivalId, festivalNam
   });
 
   headings.forEach((heading) => {
-    const headingCategory = cleanText(heading.textContent);
-    if (!isTrustedAwardSection([...getSectionAncestors(heading, headings), headingCategory])) {
+    const fullChain = [...getSectionAncestors(heading, headings), cleanText(heading.textContent)];
+    if (!isTrustedAwardSection(fullChain)) {
       return;
     }
+    // Walk up past a pure format-grouping heading (e.g. Berlinale's
+    // "Documentaries" under a real section) to the nearest ancestor that
+    // actually names something more specific, mirroring the equivalent
+    // Cannes fix — see FORMAT_BUCKET_PATTERN/resolveCategoryFromChain.
+    const headingCategory = resolveCategoryFromChain(fullChain);
     const list = findListAfterHeading(heading);
     if (!list) {
       return;

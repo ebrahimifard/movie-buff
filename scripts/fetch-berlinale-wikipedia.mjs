@@ -22,7 +22,17 @@ export const BERLINALE_CONFIG = {
       return "Unknown category";
     }
     return text;
-  }
+  },
+  // Confirmed live: these are Berlinale's non-competitive parallel/sidebar
+  // sections, each with its OWN real award(s) that stay (Panorama Audience
+  // Award, Crystal Bear for the Best Film in Generation Kplus, GWFF Best
+  // First Feature Award for Perspektive Deutsches Kino, ...) — a film merely
+  // *listed* under the bare section name with no more specific award
+  // wasn't actually given one. "In Competition"/"Main Competition" are
+  // deliberately NOT included here — being selected for the main
+  // competition (Golden Bear eligibility) is itself a real, if generically
+  // named, competitive designation, unlike a non-competitive sidebar.
+  nonCompetitiveSectionNames: ["Panorama", "Forum", "Encounters", "Generation", "Generation 14plus", "Generation Kplus", "Perspectives", "Perspektive Deutsches Kino"]
 };
 
 // Berlinale has run continuous, annually-numbered editions since 1951 (1st),

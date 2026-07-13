@@ -13,6 +13,14 @@ describe("BERLINALE_CONFIG", () => {
   it("passes through real category names unchanged", () => {
     expect(BERLINALE_CONFIG.normalizeCategory("Golden Bear")).toBe("Golden Bear");
   });
+
+  it("lists Berlinale's known non-competitive sidebar sections, and nothing that's a real award", () => {
+    expect(BERLINALE_CONFIG.nonCompetitiveSectionNames).toEqual(
+      expect.arrayContaining(["Panorama", "Forum", "Generation Kplus"])
+    );
+    expect(BERLINALE_CONFIG.nonCompetitiveSectionNames).not.toContain("Golden Bear");
+    expect(BERLINALE_CONFIG.nonCompetitiveSectionNames).not.toContain("In Competition");
+  });
 });
 
 describe("resolveTargetYears", () => {

@@ -8,6 +8,7 @@ import { pathToFileURL } from "node:url";
 import { JSDOM } from "jsdom";
 import { DEFAULT_SCRAPE_DELAY_MS, fetchWithRetry, sleep } from "./lib/http.mjs";
 import {
+  FORMAT_BUCKET_PATTERN,
   NON_AWARD_SECTION_PATTERN,
   classifyPersonRole,
   extractTitleAndPerson,
@@ -31,10 +32,10 @@ const NON_COMPETITIVE_SELECTION_PATTERN = /^(acid|critics'?\s+week|directors'?\s
 // Sub-headings that exist purely to group films by format/length/genre
 // within a strand (e.g. Critics' Week > "Features", 1946-49's "Awards" >
 // "Short films", 2020's COVID-cancelled "Official sections" > "Comedy
-// Films"/"The First Features"), not to name an award. Anchored on the whole
-// heading text so a real prize like "Short Film Palme d'Or" (which has
-// trailing content) never matches.
-const FORMAT_BUCKET_PATTERN = /^(the\s+)?(short|feature|documentary|animated|comedy)s?(\s+films?)?$/i;
+// Films"/"The First Features"), not to name an award. FORMAT_BUCKET_PATTERN
+// (shared with the other festivals' parser — see wikipedia-scrape.mjs) does
+// the generic short/feature/documentary/animated/comedy grouping;
+// FIRST_FEATURES_PATTERN below is Cannes-specific.
 const FIRST_FEATURES_PATTERN = /^(the\s+first\s+features?|parallel sections?\s*\(first features\))$/i;
 
 function isFormatBucketHeading(text) {

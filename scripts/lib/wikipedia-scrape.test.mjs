@@ -1,5 +1,13 @@
 import { describe, expect, it } from "vitest";
-import { classifyPersonRole, cleanText, createDeduper, detectColumnIndex, isHonoraryCategory, parseSimpleAwardsWikipedia } from "./wikipedia-scrape.mjs";
+import {
+  classifyPersonRole,
+  cleanText,
+  createDeduper,
+  detectColumnIndex,
+  isHonoraryCategory,
+  parseSimpleAwardsWikipedia,
+  resolveCategoryFromChain
+} from "./wikipedia-scrape.mjs";
 
 describe("cleanText", () => {
   it("strips footnote markers", () => {
@@ -633,6 +641,167 @@ describe("parseSimpleAwardsWikipedia: non-award section exclusion", () => {
     `);
     const records = parseSimpleAwardsWikipedia(html, 2009, config);
     expect(records.map((r) => r.film.title)).toEqual(["Parasite"]);
+  });
+
+  it("excludes a retrospective section whose own heading is a director/star's representative film title", () => {
+    // Mirrors the real 1977 Berlinale page: a Marlene Dietrich retrospective
+    // table sits under a heading that is itself one of her films
+    // ("Dishonored"), with other Dietrich films ("Knight Without Armour",
+    // "Morocco") listed as if they were that "category"'s nominees.
+    const html = wrapHtml(`
+      <h2>Official Sections</h2>
+      <h3>Retrospective and Homage</h3>
+      <h4>Dishonored</h4>
+      <table class="wikitable">
+        <tr><th>English title</th><th>Director</th></tr>
+        <tr><td>Knight Without Armour</td><td>Jacques Feyder</td></tr>
+        <tr><td>Morocco</td><td>Josef von Sternberg</td></tr>
+      </table>
+    `);
+    expect(parseSimpleAwardsWikipedia(html, 1977, config)).toEqual([]);
+  });
+
+  it("excludes a 'Retrospective - <title>' section even when it isn't nested under a Homages heading", () => {
+    // Mirrors the real 2006/2007 Venice pages: "Retrospective - Secret
+    // History of Italian Cinema 3/4" is its own top-level H3 sibling of
+    // "In Competition", not nested under any already-excluded ancestor.
+    const html = wrapHtml(`
+      <h2>Official Sections</h2>
+      <h3>Retrospective - Secret History of Italian Cinema 4</h3>
+      <ul>
+        <li><i><a href="/wiki/x">The Seven from Texas</a></i></li>
+      </ul>
+    `);
+    expect(parseSimpleAwardsWikipedia(html, 2007, config)).toEqual([]);
+  });
+
+  it("excludes a 'The Retrospective' / 'The Homage films' section with a leading 'The'", () => {
+    for (const heading of ["The Retrospective", "The Homage films"]) {
+      const html = wrapHtml(`
+        <h2>Official Sections</h2>
+        <h3>${heading}</h3>
+        <ul>
+          <li><i><a href="/wiki/x">Some Classic Film</a></i></li>
+        </ul>
+      `);
+      expect(parseSimpleAwardsWikipedia(html, 2006, config)).toEqual([]);
+    }
+  });
+
+  it("excludes a 'Tribute to <person>' / 'Homage to <person>' / 'Centennial of <person>' section", () => {
+    for (const heading of ["Tribute to Otto Preminger", "Homage to Otto Preminger", "Centennial of Rossellini, Soldati and Visconti"]) {
+      const html = wrapHtml(`
+        <h2>Official Sections</h2>
+        <h3>${heading}</h3>
+        <ul>
+          <li><i><a href="/wiki/x">Bunny Lake Is Missing</a></i></li>
+        </ul>
+      `);
+      expect(parseSimpleAwardsWikipedia(html, 2006, config)).toEqual([]);
+    }
+  });
+
+  it("does not exclude a real award whose name merely contains a similar substring elsewhere in the word", () => {
+    // "Homage"/"Tribute"/"Retrospective"/"Centennial" only match as a
+    // section-heading PREFIX (anchored at the start), not anywhere in a
+    // category string — a real award name never starts with these words in
+    // this dataset, confirmed by inspecting every festival's category list.
+    const html = wrapHtml(`
+      <h2>Official Awards</h2>
+      <ul>
+        <li><a href="/wiki/x">Golden Bear</a>: <i><a href="/wiki/y">A Real Winner</a></i></li>
+      </ul>
+    `);
+    const records = parseSimpleAwardsWikipedia(html, 2020, config);
+    expect(records).toHaveLength(1);
+    expect(records[0].film.title).toBe("A Real Winner");
+  });
+});
+
+describe("parseSimpleAwardsWikipedia: format-bucket walk-up and non-competitive sections", () => {
+  const config = {
+    festivalId: "berlinale",
+    festivalName: "Berlin International Film Festival",
+    normalizeCategory: (raw) => raw || "Unknown category",
+    nonCompetitiveSectionNames: ["Panorama", "Forum"]
+  };
+
+  it("walks up past a pure format-grouping heading to the enclosing real section", () => {
+    const html = wrapHtml(`
+      <h2>Official Sections</h2>
+      <h3>Critics' Week</h3>
+      <h4>Documentaries</h4>
+      <ul>
+        <li><i><a href="/wiki/x">A Selected Documentary</a></i></li>
+      </ul>
+    `);
+    const records = parseSimpleAwardsWikipedia(html, 2019, config);
+    expect(records).toHaveLength(1);
+    expect(records[0].category).toBe("Critics' Week");
+  });
+
+  it("drops a film listed under a bare non-competitive section supplied via config, with no more specific award", () => {
+    const html = wrapHtml(`
+      <h2>Official Sections</h2>
+      <h3>Panorama</h3>
+      <ul>
+        <li><i><a href="/wiki/x">A Panorama Selection</a></i></li>
+      </ul>
+    `);
+    expect(parseSimpleAwardsWikipedia(html, 2019, config)).toEqual([]);
+  });
+
+  it("drops a film reached via format-bucket walk-up when the walked-up section is itself non-competitive", () => {
+    const html = wrapHtml(`
+      <h2>Official Sections</h2>
+      <h3>Forum</h3>
+      <h4>Feature Films</h4>
+      <ul>
+        <li><i><a href="/wiki/x">A Forum Feature</a></i></li>
+      </ul>
+    `);
+    expect(parseSimpleAwardsWikipedia(html, 2019, config)).toEqual([]);
+  });
+
+  it("does not drop a real, specifically-named prize awarded within a non-competitive section", () => {
+    const html = wrapHtml(`
+      <h2>Official Sections</h2>
+      <h3>Panorama</h3>
+      <ul>
+        <li><a href="/wiki/x">Panorama Audience Award</a>: <i><a href="/wiki/y">A Real Winner</a></i></li>
+      </ul>
+    `);
+    const records = parseSimpleAwardsWikipedia(html, 2019, config);
+    expect(records).toHaveLength(1);
+    expect(records[0].category).toBe("Panorama Audience Award");
+  });
+
+  it("has no effect when nonCompetitiveSectionNames is omitted (default empty)", () => {
+    const configWithoutList = { ...config, nonCompetitiveSectionNames: undefined };
+    const html = wrapHtml(`
+      <h2>Official Sections</h2>
+      <h3>Panorama</h3>
+      <ul>
+        <li><i><a href="/wiki/x">A Panorama Selection</a></i></li>
+      </ul>
+    `);
+    const records = parseSimpleAwardsWikipedia(html, 2019, configWithoutList);
+    expect(records).toHaveLength(1);
+    expect(records[0].category).toBe("Panorama");
+  });
+});
+
+describe("resolveCategoryFromChain", () => {
+  it("returns the nearest non-format-bucket entry", () => {
+    expect(resolveCategoryFromChain(["Official Sections", "Critics' Week", "Documentaries"])).toBe("Critics' Week");
+  });
+
+  it("returns the chain's own value when nothing is a format bucket", () => {
+    expect(resolveCategoryFromChain(["Official Awards", "Best Director"])).toBe("Best Director");
+  });
+
+  it("falls back to the last entry when every level is a format bucket", () => {
+    expect(resolveCategoryFromChain(["Short Films", "Feature Films"])).toBe("Feature Films");
   });
 });
 

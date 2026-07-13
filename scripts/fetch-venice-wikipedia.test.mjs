@@ -13,6 +13,12 @@ describe("VENICE_CONFIG", () => {
   it("passes through real category names unchanged", () => {
     expect(VENICE_CONFIG.normalizeCategory("Golden Lion")).toBe("Golden Lion");
   });
+
+  it("lists Venice's known non-competitive independent sections, and nothing that's a real award", () => {
+    expect(VENICE_CONFIG.nonCompetitiveSectionNames).toEqual(expect.arrayContaining(["Orizzonti", "Venice Days", "Corto Cortissimo"]));
+    expect(VENICE_CONFIG.nonCompetitiveSectionNames).not.toContain("Golden Lion");
+    expect(VENICE_CONFIG.nonCompetitiveSectionNames).not.toContain("In Competition");
+  });
 });
 
 describe("resolveTargetYears", () => {

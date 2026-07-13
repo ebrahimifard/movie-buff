@@ -22,7 +22,29 @@ export const VENICE_CONFIG = {
       return "Unknown category";
     }
     return text;
-  }
+  },
+  // Confirmed present as bare categories in the current scraped data:
+  // Venice's non-competitive/independent parallel sections, each with its
+  // own real award(s) that stay (Orizzonti Award, a Venice Days-specific
+  // prize, ...) — a film merely *listed* under the bare section name with
+  // no more specific award wasn't actually given one. "In Competition"/
+  // "Main Competition" are deliberately NOT included — Golden Lion
+  // eligibility is itself a real, if generically named, designation.
+  nonCompetitiveSectionNames: [
+    "Orizzonti",
+    "Venice International Critics' Week",
+    "Venice International Film Critics' Week",
+    "Giornate degli Autori",
+    "Venice Days",
+    "Corto Cortissimo",
+    "Controcampo Italiano",
+    "Biennale College - Cinema",
+    "Parallel Section",
+    "Parallel Sections",
+    "Cinema del Presente",
+    "Dreams and Visions",
+    "New Territories"
+  ]
 };
 
 // Unlike BAFTA/Berlinale, Venice's edition numbering isn't `year - foundedYear`
