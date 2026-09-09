@@ -130,6 +130,57 @@ describe("parseSimpleAwardsWikipedia", () => {
     expect(records.find((r) => r.film.title === "Billy Wilder").category).toBe("Best Director");
   });
 
+  it("replaces a generic 'Other' governing category with each column's own award name from a mid-table multi-<th> row, instead of fabricating a bogus film from the label text (regression for the golden-globes 'Best Director' bug)", () => {
+    // Confirmed live (1970/28th Golden Globe Awards): several small awards
+    // ("Best Director", "Best Screenplay", ...) are grouped under one
+    // literal "Other" colspan heading, each then named via its own <th> in
+    // the very next row, each with real winner/nominee data (containing a
+    // <ul>) in the row after that. Previously, that <th> row's OWN label
+    // cells were read as if they were nominee data under the stale "Other"
+    // category, fabricating a bogus film literally titled "Best Director"
+    // — while the REAL data one row down stayed miscategorized as "Other".
+    const html = wrapHtml(`
+      <table class="wikitable">
+        <tr><th colspan="2">Other</th></tr>
+        <tr><th><a href="/wiki/x">Best Director</a></th><th><a href="/wiki/y">Best Screenplay</a></th></tr>
+        <tr>
+          <td><ul><li><b><a href="/wiki/z">Arthur Hiller</a></b> – <i><a href="/wiki/w">Love Story</a></i></li></ul></td>
+          <td><ul><li><b><i><a href="/wiki/w2">Love Story</a></i></b> – <a href="/wiki/z2">Erich Segal</a></li></ul></td>
+        </tr>
+      </table>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 1970, config);
+    expect(records.some((r) => r.film.title === "Best Director")).toBe(false);
+    const director = records.find((r) => r.category === "Best Director");
+    expect(director?.film.title).toBe("Love Story");
+    const screenplay = records.find((r) => r.category === "Best Screenplay");
+    expect(screenplay?.film.title).toBe("Love Story");
+  });
+
+  it("does not split a real award's own sub-columns (e.g. Drama/Comedy or Musical) into separate categories, and does not fabricate a bogus film from THEIR label text either", () => {
+    // Confirmed live (1970/28th Golden Globe Awards): "Best Motion Picture"
+    // (colspan) governs a "Drama" | "Comedy or Musical" sub-header row, both
+    // genuinely part of the SAME award — unlike the "Other" case above,
+    // this must keep using the shared governing category for the data row
+    // that follows, not replace it with the bare sub-column names.
+    const html = wrapHtml(`
+      <table class="wikitable">
+        <tr><th colspan="2">Best Motion Picture</th></tr>
+        <tr><th><a href="/wiki/d">Drama</a></th><th><a href="/wiki/c">Comedy or Musical</a></th></tr>
+        <tr>
+          <td><ul><li><i><b><a href="/wiki/ls">Love Story</a></b></i></li></ul></td>
+          <td><ul><li><i><b><a href="/wiki/mash">M*A*S*H</a></b></i></li></ul></td>
+        </tr>
+      </table>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 1970, config);
+    expect(records.some((r) => r.film.title === "Drama" || r.film.title === "Comedy or Musical")).toBe(false);
+    expect(records.every((r) => r.category === "Best Motion Picture")).toBe(true);
+    expect(records.map((r) => r.film.title).sort()).toEqual(["Love Story", "M*A*S*H"]);
+  });
+
   it("skips junk titles like bare header labels", () => {
     const html = wrapHtml(`
       <h2>Best Picture</h2>
@@ -233,6 +284,42 @@ describe("parseSimpleAwardsWikipedia", () => {
     expect(silverBear.film.title).toBe("Living the Land");
   });
 
+  it("recognizes a category label wrapped in a MediaWiki {{lang}} template's nested <span>s, not just a direct <a>/<b>", () => {
+    // Confirmed live (2019 Cannes Film Festival): "Palme d'Or"'s own list
+    // item wraps its link in {{lang|fr|...}}, which MediaWiki renders as
+    // <span title="..."><span lang="fr"><a>Palme d'Or</a></span></span> —
+    // getOwnLabel previously only recognized a direct <a>/<b> first child,
+    // rejecting this real label and falling back to garbled whole-text
+    // extraction.
+    const html = wrapHtml(`
+      <h3>Main Competition</h3>
+      <ul>
+        <li><span title="French-language text"><span lang="fr"><a href="/wiki/Palme_dOr">Palme d'Or</a></span></span>: <i><a href="/wiki/Parasite">Parasite</a></i> by <a href="/wiki/Bong">Bong Joon-ho</a></li>
+      </ul>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 2019, config);
+    expect(records).toHaveLength(1);
+    expect(records[0].category).toBe("Palme d'Or");
+    expect(records[0].film.title).toBe("Parasite");
+  });
+
+  it("recognizes an italicized category label, not just a plain link/bold or a {{lang}}-wrapped one", () => {
+    // Confirmed live (1980 Cannes Film Festival): that year's "Palme d'Or:"
+    // tier label is itself wrapped in <i>, not a plain link/bold.
+    const html = wrapHtml(`
+      <h3>Main Competition</h3>
+      <ul>
+        <li><i><a href="/wiki/Palme_dOr">Palme d'Or</a></i>: <i><a href="/wiki/Parasite">Parasite</a></i> by <a href="/wiki/Bong">Bong Joon-ho</a></li>
+      </ul>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 1980, config);
+    expect(records).toHaveLength(1);
+    expect(records[0].category).toBe("Palme d'Or");
+    expect(records[0].film.title).toBe("Parasite");
+  });
+
   it("does not misread a colon inside a plain (non-category-prefixed) title as a category separator", () => {
     const html = wrapHtml(`
       <h3>Best Picture</h3>
@@ -292,6 +379,30 @@ describe("parseSimpleAwardsWikipedia", () => {
     const silverDrama = records.find((r) => r.category === "Silver Bear – Best Drama Film");
     expect(silverDrama.film.title).toBe("Path of Hope");
     expect(records.some((r) => r.category === "Best Drama Film")).toBe(false);
+  });
+
+  it("does not mistake a genuine nominee film's own nested Special Mention for a tier label, fabricating a bogus category from the film's own title (regression for the Venice 'Jesus' Son – Special Award' bug)", () => {
+    // Confirmed live (Venice): a film's own <li> (italicized per MOS:TITLE,
+    // same as a genuine tier label like Cannes' 1980 "Palme d'Or:") can ALSO
+    // carry an unrelated Special/Honorable Mention one level inside it via
+    // Wikipedia's list markup — getOwnLabel alone can't tell these apart
+    // (both are italicized first children), so the nested-<ul> branch must
+    // additionally require the li's own text to be NOTHING but that label
+    // (i.e. ending in a bare colon) before trusting it as a real tier.
+    const html = wrapHtml(`
+      <h2>Official Awards</h2>
+      <ul>
+        <li><i><a href="/wiki/JesusSon">Jesus' Son</a></i>
+          <ul>
+            <li><b>Special Award</b></li>
+          </ul>
+        </li>
+      </ul>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 2000, config);
+    expect(records.some((r) => r.category.includes("Jesus' Son"))).toBe(false);
+    expect(records.some((r) => r.film.title === "Jesus' Son")).toBe(true);
   });
 
   it("treats a single spanning <td colspan> the same as <th colspan> for category-separator rows", () => {

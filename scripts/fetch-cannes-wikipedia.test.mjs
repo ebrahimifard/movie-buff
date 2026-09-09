@@ -265,4 +265,229 @@ describe("parseCannesWikipedia", () => {
       expect(parseCannesWikipedia(html, 1994)).toEqual([]);
     }
   });
+
+  it("keeps the Honorary Palme d'Or distinct from the main Palme d'Or instead of collapsing into it (regression for the duplicate-winners bug)", () => {
+    // Confirmed live (2019 Cannes Film Festival): "Official awards" has both
+    // an h3 "Main competition" (the real Palme d'Or) and a separate h3
+    // "Honorary Palme d'Or" — normalizeCategory previously stripped
+    // "Honorary" before matching "palme d'or", collapsing both into one
+    // category and defeating the isHonoraryCategory bare-name safety check.
+    const html = wrapHtml(`
+      <h2>Official awards</h2>
+      <h3>Main competition</h3>
+      <ul>
+        <li><a href="/wiki/Palme_dOr">Palme d'Or</a>: <i><a href="/wiki/Film1">Parasite</a></i> by <a href="/wiki/Director1">Bong Joon-ho</a></li>
+      </ul>
+      <h3>Honorary Palme d'Or</h3>
+      <ul>
+        <li><a href="/wiki/Alain_Delon">Alain Delon</a></li>
+      </ul>
+    `);
+    const records = parseCannesWikipedia(html, 2019);
+    expect(records).toHaveLength(1);
+    expect(records[0].category).toBe("Palme d'Or");
+    expect(records[0].film.title).toBe("Parasite");
+  });
+
+  it("keeps the Short Film Palme d'Or distinct from the main Palme d'Or", () => {
+    const html = wrapHtml(`
+      <h2>Official awards</h2>
+      <h3>Main competition</h3>
+      <ul>
+        <li><a href="/wiki/Palme_dOr">Palme d'Or</a>: <i><a href="/wiki/Film1">Parasite</a></i> by <a href="/wiki/Director1">Bong Joon-ho</a></li>
+      </ul>
+      <h3>Short Film Palme d'Or</h3>
+      <ul>
+        <li><i><a href="/wiki/Film2">The Distance Between Us and the Sky</a></i> by <a href="/wiki/Director2">Vasilis Kekatos</a></li>
+      </ul>
+    `);
+    const records = parseCannesWikipedia(html, 2019);
+    expect(records.find((r) => r.film.title === "Parasite").category).toBe("Palme d'Or");
+    expect(records.find((r) => r.film.title === "The Distance Between Us and the Sky").category).toBe("Short Film Palme d'Or");
+  });
+
+  it("does not mistake 'Main competition' for 'In Competition' via unanchored substring matching (regression: 'Ma[in competition]')", () => {
+    // The bare heading "Main competition" only ever serves as a fallback
+    // sectionCategory here (every item has its own trusted sub-label), so
+    // this asserts on the winner's own resolved category, not the heading
+    // text — a category of "Main competition" would indicate the substring
+    // bleed is back.
+    const html = wrapHtml(`
+      <h2>Official awards</h2>
+      <h3>Main competition</h3>
+      <ul>
+        <li><a href="/wiki/Grand_Prix">Grand Prix</a>: <i><a href="/wiki/Film1">Atlantics</a></i> by <a href="/wiki/Director1">Mati Diop</a></li>
+      </ul>
+    `);
+    const records = parseCannesWikipedia(html, 2019);
+    expect(records).toHaveLength(1);
+    expect(records[0].category).toBe("Grand Prix");
+  });
+
+  it("recognizes a French-template-wrapped ({{lang}}) category label instead of falling back to garbled whole-text extraction (regression for the 'Palme d'Or: Parasite' malformed-duplicate bug)", () => {
+    // Confirmed live (2019 Cannes Film Festival): the Palme d'Or list item's
+    // label is wrapped in a {{lang|fr|...}} template
+    // (<span title="..."><span lang="fr"><a>Palme d'Or</a></span></span>),
+    // which getOwnLabel previously didn't see through, rejecting the real
+    // label and falling back to whole-li text that produced a garbled
+    // "Palme d'Or: Parasite" title instead of a clean "Parasite".
+    const html = wrapHtml(`
+      <h2>Official awards</h2>
+      <h3>Main competition</h3>
+      <ul>
+        <li><span title="French-language text"><span lang="fr"><a href="/wiki/Palme_dOr">Palme d'Or</a></span></span>: <i><a href="/wiki/Film1">Parasite</a></i> by <a href="/wiki/Director1">Bong Joon-ho</a></li>
+      </ul>
+    `);
+    const records = parseCannesWikipedia(html, 2019);
+    expect(records).toHaveLength(1);
+    expect(records[0].category).toBe("Palme d'Or");
+    expect(records[0].film.title).toBe("Parasite");
+  });
+
+  it("splits a tied/shared prize's nested co-recipient list into separate records instead of double-processing it as an independent top-level list (regression for the duplicate-winners bug)", () => {
+    // Confirmed live (2019 Cannes Film Festival): "Jury Prize:" has no title
+    // of its own — its two co-winners (Bacurau, Les Misérables) live in a
+    // <ul> nested one level inside that same <li>. The page-wide
+    // querySelectorAll("ul, ol") list scan previously also matched that
+    // nested list as its own independent top-level list, producing a
+    // spurious duplicate (garbled by the outer li's whole-text fallback,
+    // which loses the second co-recipient, AND miscategorized via the
+    // Main-Competition sectionCategory fallback).
+    const html = wrapHtml(`
+      <h2>Official awards</h2>
+      <h3>Main competition</h3>
+      <ul>
+        <li><a href="/wiki/Jury_Prize">Jury Prize</a>:
+          <ul>
+            <li><i><a href="/wiki/Film1">Bacurau</a></i> by <a href="/wiki/Director1">Kleber Mendonça Filho</a></li>
+            <li><i><a href="/wiki/Film2">Les Misérables</a></i> by <a href="/wiki/Director2">Ladj Ly</a></li>
+          </ul>
+        </li>
+      </ul>
+    `);
+    const records = parseCannesWikipedia(html, 2019);
+    const juryPrize = records.filter((r) => r.category === "Jury Prize");
+    expect(juryPrize).toHaveLength(2);
+    expect(juryPrize.map((r) => r.film.title).sort()).toEqual(["Bacurau", "Les Misérables"]);
+  });
+
+  it("extracts an li's own award AND a nested unrelated sub-award, instead of only recursing and losing the outer award", () => {
+    // Confirmed live (2019 Cannes Film Festival): "Best Screenplay: Céline
+    // Sciamma for Portrait of a Lady on Fire" has a complete award of its
+    // own, but Wikipedia's list markup also nests an unrelated "Special
+    // Mention: Elia Suleiman for It Must Be Heaven" one level inside the
+    // SAME <li> — a naive "nested <ul> means this li is a tier label with
+    // no own content" rule (correct for Jury Prize's tied-prize shape)
+    // would silently drop Best Screenplay's own record here.
+    const html = wrapHtml(`
+      <h2>Official awards</h2>
+      <h3>Main competition</h3>
+      <ul>
+        <li><a href="/wiki/Best_Screenplay">Best Screenplay</a>: <a href="/wiki/Celine_Sciamma">Céline Sciamma</a> for <i><a href="/wiki/Film1">Portrait of a Lady on Fire</a></i>
+          <ul>
+            <li><b>Special Mention</b>: <a href="/wiki/Elia_Suleiman">Elia Suleiman</a> for <i><a href="/wiki/Film2">It Must Be Heaven</a></i></li>
+          </ul>
+        </li>
+      </ul>
+    `);
+    const records = parseCannesWikipedia(html, 2019);
+    const screenplay = records.find((r) => r.category === "Best Screenplay");
+    const specialMention = records.find((r) => r.category === "Special Mention");
+    expect(screenplay?.film.title).toBe("Portrait of a Lady on Fire");
+    expect(specialMention?.film.title).toBe("It Must Be Heaven");
+  });
+
+  it("qualifies a FIPRESCI-style selection-strand sub-label with its enclosing award instead of colliding with that strand's own real category", () => {
+    // Confirmed live (2019 Cannes Film Festival): FIPRESCI Prizes hands out
+    // one prize per strand, using the strand's own bare name as each
+    // sub-award's label ("In Competition: ...", "Un Certain Regard: ...",
+    // "Parallel section: ..."). Left unqualified, these previously (a)
+    // collapsed into the main "Palme d'Or" category via the Main
+    // Competition roster fallback, (b) collided with the real "Un Certain
+    // Regard" competition category, and (c) got silently dropped by
+    // NON_COMPETITIVE_SELECTION_PATTERN, respectively.
+    const html = wrapHtml(`
+      <h2>Independent awards</h2>
+      <h3>FIPRESCI Prizes</h3>
+      <ul>
+        <li><b>In Competition</b>: <i><a href="/wiki/Film1">It Must Be Heaven</a></i> by <a href="/wiki/Director1">Elia Suleiman</a></li>
+        <li><b>Un Certain Regard</b>: <i><a href="/wiki/Film2">Beanpole</a></i> by <a href="/wiki/Director2">Kantemir Balagov</a></li>
+        <li><b>Parallel section</b>: <i><a href="/wiki/Film3">The Lighthouse</a></i> by <a href="/wiki/Director3">Robert Eggers</a></li>
+      </ul>
+    `);
+    const records = parseCannesWikipedia(html, 2019);
+    expect(records).toHaveLength(3);
+    expect(records.find((r) => r.film.title === "It Must Be Heaven").category).toBe("FIPRESCI Prizes – In Competition");
+    expect(records.find((r) => r.film.title === "Beanpole").category).toBe("FIPRESCI Prizes – Un Certain Regard");
+    expect(records.find((r) => r.film.title === "The Lighthouse").category).toBe("FIPRESCI Prizes – Parallel section");
+  });
+
+  it("qualifies a strand's own Jury Prize/Grand Prix with its section so it doesn't collide with Main Competition's flagship prize of the same name", () => {
+    // Confirmed live (2019 Cannes Film Festival): Un Certain Regard hands
+    // out its own "Jury Prize" and "Special Jury Prize", distinct from Main
+    // Competition's Jury Prize (Bacurau/Les Misérables that year) — left
+    // unqualified these bare-collide into one "Jury Prize" bucket, which is
+    // exactly the "several winners per year" bug the category filter
+    // showed for Palme d'Or.
+    const html = wrapHtml(`
+      <h2>Official awards</h2>
+      <h3>Main competition</h3>
+      <ul>
+        <li><a href="/wiki/Jury_Prize">Jury Prize</a>: <i><a href="/wiki/Film1">Bacurau</a></i> by <a href="/wiki/Director1">Kleber Mendonça Filho</a></li>
+      </ul>
+      <h3>Un Certain Regard</h3>
+      <ul>
+        <li><a href="/wiki/Jury_Prize">Jury Prize</a>: <i><a href="/wiki/Film2">Fire Will Come</a></i> by <a href="/wiki/Director2">Oliver Laxe</a></li>
+        <li><a href="/wiki/Special_Jury_Prize">Special Jury Prize</a>: <i><a href="/wiki/Film3">Liberté</a></i> by <a href="/wiki/Director3">Albert Serra</a></li>
+      </ul>
+    `);
+    const records = parseCannesWikipedia(html, 2019);
+    expect(records.find((r) => r.film.title === "Bacurau").category).toBe("Jury Prize");
+    expect(records.find((r) => r.film.title === "Fire Will Come").category).toBe("Un Certain Regard – Jury Prize");
+    expect(records.find((r) => r.film.title === "Liberté").category).toBe("Un Certain Regard – Special Jury Prize");
+  });
+
+  it("recognizes an italicized tier label (not just a plain link/bold) as having no own content beyond itself, so it doesn't fabricate a bogus film from the label text (regression for the 1980 tied-Palme-d'Or bug)", () => {
+    // Confirmed live (1980 Cannes Film Festival): that year's tied Palme
+    // d'Or list item is <i><a>Palme d'Or</a></i>: <ul>...two co-winners...</ul>
+    // — the label itself is italicized (not a plain link/bold or a {{lang}}
+    // span), which getOwnLabel previously didn't recognize. That made the
+    // tied-prize detection think the outer li had "real content" of its
+    // own, and extractTitleAndPerson's italics-based title search then
+    // picked up the label's own italicized text as if it were a film,
+    // producing a bogus third "winner" literally titled "Palme d'Or".
+    const html = wrapHtml(`
+      <h2>Official awards</h2>
+      <h3>Main competition</h3>
+      <ul>
+        <li><i><a href="/wiki/Palme_dOr">Palme d'Or</a></i>:
+          <ul>
+            <li><i><a href="/wiki/Film1">All That Jazz</a></i> by <a href="/wiki/Director1">Bob Fosse</a></li>
+            <li><i><a href="/wiki/Film2">Kagemusha</a></i> by <a href="/wiki/Director2">Akira Kurosawa</a></li>
+          </ul>
+        </li>
+      </ul>
+    `);
+    const records = parseCannesWikipedia(html, 1980);
+    const palme = records.filter((r) => r.category === "Palme d'Or" && r.result === "winner");
+    expect(palme).toHaveLength(2);
+    expect(palme.map((r) => r.film.title).sort()).toEqual(["All That Jazz", "Kagemusha"]);
+  });
+
+  it("still resolves the flagship Main Competition section as such when its heading is spelled 'In Competition' rather than 'Main competition' (year-to-year heading drift)", () => {
+    // Confirmed live: the 2019 page's Official awards section is headed
+    // "Main competition", but the 2024 page's equivalent section is headed
+    // "In Competition" instead — a hardcoded string match against one exact
+    // spelling would misidentify 2024's flagship section as some other,
+    // non-flagship strand and incorrectly qualify its own Grand Prix.
+    const html = wrapHtml(`
+      <h2>Official awards</h2>
+      <h3>In Competition</h3>
+      <ul>
+        <li><a href="/wiki/Grand_Prix">Grand Prix</a>: <i><a href="/wiki/Film1">All We Imagine as Light</a></i> by <a href="/wiki/Director1">Payal Kapadia</a></li>
+      </ul>
+    `);
+    const records = parseCannesWikipedia(html, 2024);
+    expect(records.find((r) => r.film.title === "All We Imagine as Light").category).toBe("Grand Prix");
+  });
 });

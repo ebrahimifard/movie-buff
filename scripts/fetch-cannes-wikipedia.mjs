@@ -11,6 +11,7 @@ import {
   FORMAT_BUCKET_PATTERN,
   NON_AWARD_SECTION_PATTERN,
   classifyPersonRole,
+  directChild,
   extractTitleAndPerson,
   getOwnLabel,
   getSectionAncestors,
@@ -50,7 +51,36 @@ function isFormatBucketHeading(text) {
 // links, not bold text, so they pass the ownLabel guard below just like a
 // genuine sub-label does — qualifying them too would turn a clean "Best
 // Actor" into unwanted noise like "In Competition – Best Actor").
-const AMBIGUOUS_SUB_AWARD_PATTERN = /^(1st|2nd|3rd|4th|5th|first|second|third|fourth|fifth)\s+prize$|^(foreign|french)\s+film$/i;
+//
+// Also covers selection-strand names ("In Competition", "Un Certain
+// Regard", "Parallel section", "Out of Competition") — confirmed live on
+// the FIPRESCI Prizes section, which hands out one prize per strand using
+// the strand's own name as each sub-award's bare label (e.g. "In
+// Competition: It Must Be Heaven by Elia Suleiman"). Left unqualified,
+// "In Competition" collapses into the main "Palme d'Or" category
+// (normalizeCategory's Main Competition roster fallback), "Un Certain
+// Regard" collides with that section's own real top prize, and "Parallel
+// section" gets silently dropped by NON_COMPETITIVE_SELECTION_PATTERN —
+// three different ways the exact same FIPRESCI winner would otherwise be
+// mistaken for (or discarded instead of) a completely different award.
+const AMBIGUOUS_SUB_AWARD_PATTERN =
+  /^(1st|2nd|3rd|4th|5th|first|second|third|fourth|fifth)\s+prize$|^(foreign|french)\s+film$|^(in|out of)\s+competition$|^un certain regard$|^parallel sections?$/i;
+
+// "Jury Prize" and "Grand Prix" are Main Competition's own flagship prizes
+// by Wikipedia convention and should stay bare there — but other strands
+// (confirmed live: Un Certain Regard's own "Jury Prize"/"Special Jury
+// Prize") reuse the exact same label for a completely different award.
+// Unlike AMBIGUOUS_SUB_AWARD_PATTERN (always qualified when the enclosing
+// section differs), these are only qualified OUTSIDE the flagship Main
+// Competition section — qualifying them there too would turn the flagship
+// "Jury Prize" into unwanted noise like "Palme d'Or – Jury Prize". The
+// flagship section's own heading text isn't stable across years/pages
+// (confirmed live: "Main competition" in 2019, "In Competition" in 2024 —
+// the latter already resolves to "Palme d'Or" via normalizeCategory's own
+// fallback), so this matches on MEANING (any of the known heading spellings,
+// or the already-normalized "Palme d'Or") rather than one fixed string.
+const STRAND_SPECIFIC_AWARD_PATTERN = /^(grand prix|(special\s+)?jury prize)$/i;
+const FLAGSHIP_COMPETITION_SECTION_PATTERN = /^(main competition|in competition|palme d'?or)$/i;
 
 const root = process.cwd();
 const outputPath = path.join(root, "data", "source", "cannes-wikipedia.json");
@@ -85,6 +115,13 @@ export function parseCannesWikipedia(html, year) {
   const records = [];
   const dedupe = new Set();
   const headings = Array.from(contentRoot.querySelectorAll("h2, h3, h4"));
+  // A tied-prize <li> (e.g. "Jury Prize:" with no title of its own) nests its
+  // co-recipients in a <ul> one level inside that same <li>. parseAwardsListItem
+  // recurses into such a nested list directly and records it here so the
+  // page-wide `querySelectorAll("ul, ol")` list scan below (which would
+  // otherwise also match it as its own independent top-level list) skips it
+  // instead of processing — and mis-categorizing — it a second time.
+  const processedNestedLists = new Set();
 
   function cleanText(text) {
     return text
@@ -100,9 +137,30 @@ export function parseCannesWikipedia(html, year) {
   function normalizeCategory(raw) {
     const text = cleanText(raw);
     if (!text) return "Unknown category";
-    if (/palme d'?or|feature film competition|in competition/i.test(text)) return "Palme d'Or";
-    if (/grand prix/i.test(text)) return "Grand Prix";
-    if (/jury prize/i.test(text)) return "Jury Prize";
+    // Honorary/career-tribute variants (given directly to a person, no
+    // associated film) and the Short Film competition's own Palme d'Or are
+    // distinct awards from the main Palme d'Or and must NOT collapse into
+    // it — checked before the generic "palme d'or" match below, both so
+    // isHonoraryCategory (see addRecord) still sees the "Honorary" prefix
+    // and so the Short Film prize keeps its own identity.
+    if (/^honorary\b/i.test(text)) return text;
+    if (/short film/i.test(text) && /palme d'?or/i.test(text)) return "Short Film Palme d'Or";
+    if (/palme d'?or/i.test(text)) return "Palme d'Or";
+    // "in competition"/"feature film competition" name the Main Competition
+    // SECTION ITSELF (used as a fallback category for its top, unlabeled
+    // prize) — anchored to the WHOLE string, not just word-boundaries,
+    // since a substring match would (a) still catch "Main competition"
+    // (which contains "in competition" mid-word, "Ma[in competition]") and
+    // (b) still catch a qualified sub-label like "FIPRESCI Prizes – In
+    // Competition" (see AMBIGUOUS_SUB_AWARD_PATTERN above) even after
+    // qualification specifically rescued it from this exact collapse.
+    if (/^(the\s+)?(feature film competition|in competition)$/i.test(text)) return "Palme d'Or";
+    // Full-string anchored (not substring) so a differently-named prize that
+    // merely CONTAINS these words — e.g. Palm Dog's own "Grand Jury Prize",
+    // or Un Certain Regard's "Special Jury Prize" — keeps its own identity
+    // instead of bleeding into the bare "Grand Prix"/"Jury Prize" bucket.
+    if (/^grand prix$/i.test(text)) return "Grand Prix";
+    if (/^jury prize$/i.test(text)) return "Jury Prize";
     return text;
   }
 
@@ -219,40 +277,79 @@ export function parseCannesWikipedia(html, year) {
   // "Features"), and the fallback is the same: use the enclosing section
   // instead — but rhs still advances past the label, since it WAS a real,
   // recognized label, just not a category-worthy one.
+  // Own text of `li`, excluding any nested <ul>'s text — mirrors the same
+  // exclusion wikipedia-scrape.mjs's extractLiTitleAndPerson/extractTitleAndPerson
+  // use, needed here because a single <li> can carry BOTH its own complete
+  // award ("Best Screenplay: ... for Portrait of a Lady on Fire") AND an
+  // unrelated nested sub-award (a "Special Mention" tucked one level inside
+  // it by Wikipedia's list markup) — using li.textContent directly would
+  // blend the two into one garbled string.
+  function ownText(li, nestedUl) {
+    let text = "";
+    for (const node of li.childNodes) {
+      if (node === nestedUl) continue;
+      text += node.textContent ?? "";
+    }
+    return cleanText(text);
+  }
+
   function parseAwardsListItem(li, sectionCategory) {
-    const text = cleanText(li.textContent);
-    if (!text) return;
+    const nestedUl = directChild(li, "UL");
+    const label = nestedUl ? getOwnLabel(li) : null;
+    const text = nestedUl ? ownText(li, nestedUl) : cleanText(li.textContent);
 
-    const colonMatch = text.match(/^(.+?):\s+(.+)$/s);
-    const ownLabel = colonMatch ? getOwnLabel(li) : null;
-    const hasTrustedLabel = Boolean(colonMatch && ownLabel && cleanText(colonMatch[1]) === ownLabel);
-    const trustedSubLabel = hasTrustedLabel && !isFormatBucketHeading(colonMatch[1]) ? colonMatch[1] : null;
+    // A tied/shared-prize tier (e.g. "Jury Prize:") has no content of its
+    // own beyond its label — its real content is entirely the nested list
+    // of co-recipients, so no separate record is added for the tier itself.
+    // An li whose own text goes beyond just the bare label (the Best
+    // Screenplay/Special Mention case above) DOES get its own record below,
+    // in addition to recursing into the nested list.
+    const isTierOnly = Boolean(nestedUl && label && (text === label || text === `${label}:`));
 
-    const shouldQualify =
-      trustedSubLabel && AMBIGUOUS_SUB_AWARD_PATTERN.test(trustedSubLabel) && sectionCategory && sectionCategory !== trustedSubLabel;
-    const category = trustedSubLabel ? (shouldQualify ? `${sectionCategory} – ${trustedSubLabel}` : trustedSubLabel) : sectionCategory;
-    const rhs = hasTrustedLabel ? colonMatch[2] : text;
+    if (!isTierOnly && text) {
+      const colonMatch = text.match(/^(.+?):\s+(.+)$/s);
+      const ownLabel = colonMatch ? getOwnLabel(li) : null;
+      const hasTrustedLabel = Boolean(colonMatch && ownLabel && cleanText(colonMatch[1]) === ownLabel);
+      const trustedSubLabel = hasTrustedLabel && !isFormatBucketHeading(colonMatch[1]) ? colonMatch[1] : null;
 
-    const forMatch = rhs.match(/\bfor\b\s+(.+)$/i);
-    const byMatch = rhs.match(/^(.+?)\s+\bby\b\s+/i);
+      const shouldQualify =
+        trustedSubLabel &&
+        sectionCategory &&
+        sectionCategory !== trustedSubLabel &&
+        (AMBIGUOUS_SUB_AWARD_PATTERN.test(trustedSubLabel) ||
+          (STRAND_SPECIFIC_AWARD_PATTERN.test(trustedSubLabel) && !FLAGSHIP_COMPETITION_SECTION_PATTERN.test(sectionCategory)));
+      const category = trustedSubLabel ? (shouldQualify ? `${sectionCategory} – ${trustedSubLabel}` : trustedSubLabel) : sectionCategory;
+      const rhs = hasTrustedLabel ? colonMatch[2] : text;
 
-    let title = "";
-    let personName = null;
-    let hasFilmSignal = true;
-    if (forMatch) {
-      title = forMatch[1];
-      personName = rhs.slice(0, forMatch.index).trim();
-    } else if (byMatch) {
-      title = byMatch[1];
-      personName = rhs.slice(byMatch[0].length).trim();
-    } else {
-      const extracted = extractTitleAndPerson(li, null);
-      title = extracted.title ?? rhs;
-      personName = extracted.personName;
-      hasFilmSignal = extracted.hasFilmSignal;
+      const forMatch = rhs.match(/\bfor\b\s+(.+)$/i);
+      const byMatch = rhs.match(/^(.+?)\s+\bby\b\s+/i);
+
+      let title = "";
+      let personName = null;
+      let hasFilmSignal = true;
+      if (forMatch) {
+        title = forMatch[1];
+        personName = rhs.slice(0, forMatch.index).trim();
+      } else if (byMatch) {
+        title = byMatch[1];
+        personName = rhs.slice(byMatch[0].length).trim();
+      } else {
+        const extracted = extractTitleAndPerson(li, nestedUl);
+        title = extracted.title ?? rhs;
+        personName = extracted.personName;
+        hasFilmSignal = extracted.hasFilmSignal;
+      }
+
+      addRecord(category, "winner", title, personName, hasFilmSignal);
     }
 
-    addRecord(category, "winner", title, personName, hasFilmSignal);
+    if (nestedUl) {
+      processedNestedLists.add(nestedUl);
+      const childSectionCategory = label || sectionCategory;
+      Array.from(nestedUl.children)
+        .filter((child) => child.tagName === "LI")
+        .forEach((child) => parseAwardsListItem(child, childSectionCategory));
+    }
   }
 
   function parseNomineeListItem(li, sectionCategory) {
@@ -323,6 +420,7 @@ export function parseCannesWikipedia(html, year) {
   // Parse lists globally using nearest heading context.
   const lists = Array.from(contentRoot.querySelectorAll("ul, ol"));
   lists.forEach(list => {
+    if (processedNestedLists.has(list)) return;
     const ctx = getHeadingContext(list);
     if (shouldSkipSection(ctx.section) || shouldSkipSection(ctx.top)) return;
 

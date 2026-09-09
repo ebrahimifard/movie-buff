@@ -3,6 +3,14 @@ import { JSDOM } from "jsdom";
 const JUNK_TITLE_PATTERN =
   /^(title|film|category|award|prize|director\(s\)|directors|production country|country|winner|nominee|nominees|year|ref(erences)?)$/i;
 
+// A colspan category-separator row's own label falls back to this literal
+// text when the source itself uses it as a meaningless catch-all heading
+// (confirmed live: Golden Globes groups several small awards under one
+// "Other" colspan row) — see the mid-table multi-<th> handling below, which
+// only replaces the governing category with per-column names when it's
+// this generic, never when it's already a real, specific award name.
+const GENERIC_CATEGORY_PLACEHOLDER_PATTERN = /^(other|unknown category)$/i;
+
 // Sections that are structurally identical to real award data (a heading
 // followed by a <ul> or containing a table) but never contain it — matching
 // only by heading NAME would be a fragile blocklist on its own, so this is
@@ -176,7 +184,9 @@ function extractRowTitle(cells, headers) {
   return { title: title ?? cleanText(titleCell.textContent), personName, hasFilmSignal, titleCell };
 }
 
-function directChild(element, tagName) {
+// Exported so fetch-cannes-wikipedia.mjs's bespoke parser can reuse the same
+// direct-child lookup rather than duplicating it.
+export function directChild(element, tagName) {
   return Array.from(element.children).find((child) => child.tagName === tagName);
 }
 
@@ -300,9 +310,23 @@ function extractCategoryCellRecords(cell, fallbackCategory) {
 // one level deeper in nested tier->subcategory lists — see
 // parseCategoryPrefixedListItem).
 export function getOwnLabel(li) {
-  const first = li.children[0];
-  if (first && (first.tagName === "A" || first.tagName === "B")) {
-    return cleanText(first.textContent);
+  let node = li.children[0];
+  // MediaWiki's {{lang|fr|...}} template (used for French-origin award names
+  // like "Palme d'Or") wraps the actual link in one or two nested <span>s
+  // (<span title="French-language text"><span lang="fr"><a>...</a></span></span>),
+  // defeating a plain "is the first child itself A/B" check. Some pages
+  // instead italicize the label itself (confirmed live: 1980 Cannes'
+  // "Palme d'Or:" tier label is <i><a>Palme d'Or</a></i>, not a plain link
+  // or {{lang}} span) — without unwrapping that too, isTierOnly-style
+  // callers can't recognize the label, mistake the whole li for having
+  // "real content", and the label's own italicized text gets picked up by
+  // extractTitleAndPerson's title-signal search as if it were a film.
+  // Unwrap single-child <span>/<i> chains to find the real label underneath.
+  while (node && (node.tagName === "SPAN" || node.tagName === "I") && node.children.length === 1) {
+    node = node.children[0];
+  }
+  if (node && (node.tagName === "A" || node.tagName === "B")) {
+    return cleanText(node.textContent);
   }
   return null;
 }
@@ -329,7 +353,28 @@ function parseCategoryPrefixedListItem(li, groupPrefix = "") {
 
   if (nestedUl) {
     const label = getOwnLabel(li);
-    if (!label) {
+    // Confirmed live (Venice): a nested <ul> can ALSO mean "a real nominee
+    // film, with an unrelated Special/Honorable Mention tucked one level
+    // inside it by Wikipedia's list markup" — not every nested-<ul> li is a
+    // tier label with no content of its own. getOwnLabel unwraps italics
+    // (needed for tier labels like Cannes' 1980 "Palme d'Or:", which IS
+    // italicized) but a film's own title is ALSO italicized by convention,
+    // so getOwnLabel alone can't tell a genuine tier label apart from an
+    // italicized film title sitting in the same first-child position.
+    // Requiring the li's own text (excluding the nested list) to be
+    // NOTHING more than that label resolves the ambiguity: a real tier like
+    // "Golden Bear:" has no other own content, while a film li's own text
+    // ("Jesus' Son") is the whole point and never matches just its own
+    // link text plus nothing else being the special case here — it still
+    // WOULD equal the label text alone, so this check additionally requires
+    // a trailing colon, which only a genuine label carries.
+    let ownText = "";
+    for (const node of li.childNodes) {
+      if (node === nestedUl) continue;
+      ownText += node.textContent ?? "";
+    }
+    ownText = cleanText(ownText);
+    if (!label || ownText !== `${label}:`) {
       return [];
     }
     const results = [];
@@ -529,17 +574,41 @@ export function parseSimpleAwardsWikipedia(
     const rows = Array.from(table.querySelectorAll("tr"));
     let headers = [];
     let currentCategory = fallbackCategory;
+    // Per-column category names from a mid-table multi-<th> row (Golden
+    // Globes: "Best Director" | "Best Screenplay" as two side-by-side <th>s,
+    // each naming a DIFFERENT award, immediately followed by a data row with
+    // one <td> per award) — distinct from `headers`, which names generic
+    // column roles (Winner/Nominees, Film/Director) for detectColumnIndex.
+    let columnCategories = null;
 
     rows.forEach((row, index) => {
       const cells = Array.from(row.querySelectorAll("td,th"));
       if (cells.length === 0) {
         return;
       }
-      // A real column-header row always has more than one labeled column
-      // (e.g. Winner/Nominees, Film/Director); a lone spanning <th> — at any
-      // row index — is the category-separator convention instead.
-      if (index === 0 && cells.length > 1 && cells.every((cell) => cell.tagName === "TH")) {
-        headers = cells.map((cell) => cleanText(cell.textContent).toLowerCase());
+      if (cells.length > 1 && cells.every((cell) => cell.tagName === "TH")) {
+        // At the table's very first row, a multi-<th> row names generic
+        // column roles (confirmed live: "Winner"/"Nominees",
+        // "Film"/"Director") used later by detectColumnIndex.
+        if (index === 0) {
+          headers = cells.map((cell) => cleanText(cell.textContent).toLowerCase());
+        } else if (GENERIC_CATEGORY_PLACEHOLDER_PATTERN.test(currentCategory)) {
+          // Confirmed live: Golden Globes groups several small, otherwise
+          // uncategorized awards ("Best Director", "Best Screenplay", "Best
+          // Original Score", ...) under one literal "Other" colspan heading,
+          // then names each of THOSE awards via its own <th> in the very
+          // next row. Only fires when the governing category is itself this
+          // meaningless placeholder — a real governing category (e.g. "Best
+          // Motion Picture" splitting into "Drama"/"Comedy or Musical" via
+          // the exact same shape) is a genuine SUB-split of one award, not
+          // several independent ones, and must keep using that shared
+          // category for its data row, unchanged from before. Without this
+          // distinction, "Best Director"/"Best Screenplay" 's own label
+          // cells were being read as nominee DATA under the stale "Other"
+          // category, fabricating a bogus film literally titled "Best
+          // Director" instead of ever reaching the real winner/nominees.
+          columnCategories = cells.map((cell) => cleanText(cell.textContent));
+        }
         return;
       }
       if (cells.length === 1 && cells[0].hasAttribute("colspan")) {
@@ -551,6 +620,7 @@ export function parseSimpleAwardsWikipedia(
         const label = cleanText(cells[0].textContent);
         if (label) {
           currentCategory = label;
+          columnCategories = null;
         }
         return;
       }
@@ -558,7 +628,8 @@ export function parseSimpleAwardsWikipedia(
       const gridCells = cells.filter((cell) => cell.querySelector("ul"));
       if (gridCells.length > 0) {
         gridCells.forEach((cell) => {
-          const extracted = extractCategoryCellRecords(cell, currentCategory);
+          const columnCategory = columnCategories?.[cells.indexOf(cell)];
+          const extracted = extractCategoryCellRecords(cell, columnCategory ?? currentCategory);
           extracted?.records.forEach(({ title, result, personName, hasFilmSignal }) =>
             addRecord(extracted.category, result, title, personName, hasFilmSignal)
           );
