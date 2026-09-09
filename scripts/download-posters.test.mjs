@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   isLocalPosterPath,
   posterFileNameFor,
+  resolvePosterAction,
   resolvePosterExtension,
   sanitizeFileId,
   shouldDownload,
@@ -70,6 +71,28 @@ describe("shouldDownload", () => {
 
   it("downloads when there's a remote posterUrl and nothing local yet", () => {
     expect(shouldDownload({ posterUrl: "https://image.tmdb.org/x.jpg" }, false)).toBe(true);
+  });
+});
+
+describe("resolvePosterAction", () => {
+  it("reattaches an existing local poster even when posterUrl is empty", () => {
+    expect(resolvePosterAction({ posterUrl: "" }, "/posters/tt1.jpg")).toBe("reattach");
+  });
+
+  it("reattaches an existing local poster over a stale remote posterUrl", () => {
+    expect(resolvePosterAction({ posterUrl: "https://image.tmdb.org/x.jpg" }, "/posters/tt1.jpg")).toBe("reattach");
+  });
+
+  it("recognizes a posterUrl that's already a local path", () => {
+    expect(resolvePosterAction({ posterUrl: "/posters/tt1.jpg" }, null)).toBe("already-local");
+  });
+
+  it("skips when there's no posterUrl and nothing on disk", () => {
+    expect(resolvePosterAction({ posterUrl: "" }, null)).toBe("skip-no-poster-url");
+  });
+
+  it("downloads when there's a remote posterUrl and nothing local yet", () => {
+    expect(resolvePosterAction({ posterUrl: "https://image.tmdb.org/x.jpg" }, null)).toBe("download");
   });
 });
 

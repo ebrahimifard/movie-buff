@@ -3,6 +3,7 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { fetchWithRetry } from "./lib/http.mjs";
+import { logStep } from "./lib/log.mjs";
 
 const root = process.cwd();
 const filmsPath = path.join(root, "data", "normalized", "films.json");
@@ -59,6 +60,23 @@ export function shouldDownload(film, alreadyExistsLocally) {
   return true;
 }
 
+// The disk check must be evaluated (and win) before the posterUrl-empty
+// check: data:build regenerates films.json from source every run, which can
+// leave posterUrl empty for a film whose poster was already downloaded in a
+// prior run — that file must be reattached, not treated as "nothing to do".
+export function resolvePosterAction(film, existingLocalPath) {
+  if (isLocalPosterPath(film.posterUrl)) {
+    return "already-local";
+  }
+  if (existingLocalPath) {
+    return "reattach";
+  }
+  if (!shouldDownload(film, false)) {
+    return "skip-no-poster-url";
+  }
+  return "download";
+}
+
 export function validatePosterBytes(buffer, contentType) {
   if (!buffer || buffer.byteLength < 1000) {
     return false;
@@ -99,31 +117,42 @@ async function downloadPoster(film) {
   return `/posters/${fileName}`;
 }
 
+// Logged every PROGRESS_LOG_EVERY_N_BATCHES batches, not every batch — at
+// BATCH_SIZE=10 over ~22k films that's ~2,200 batches, so per-batch logging
+// would be pure noise. Still frequent enough to show whether the process is
+// making progress (and what memory looks like) before a kill, without
+// flooding CI/terminal output.
+const PROGRESS_LOG_EVERY_N_BATCHES = 50;
+
 async function run() {
   await mkdir(postersDir, { recursive: true });
   const films = JSON.parse(await readFile(filmsPath, "utf8"));
 
   const stats = { total: films.length, alreadyLocal: 0, downloaded: 0, skippedNoPosterUrl: 0, failed: 0 };
   const failures = [];
+  const totalBatches = Math.ceil(films.length / BATCH_SIZE);
+  logStep(`Starting poster download for ${films.length} films across ${totalBatches} batch(es)`);
 
   for (let index = 0; index < films.length; index += BATCH_SIZE) {
     const batch = films.slice(index, index + BATCH_SIZE);
+    const batchNumber = index / BATCH_SIZE + 1;
 
     await Promise.all(
       batch.map(async (film) => {
-        if (!film.posterUrl) {
-          stats.skippedNoPosterUrl += 1;
-          return;
-        }
-        if (isLocalPosterPath(film.posterUrl)) {
+        const existingLocalPath = findExistingLocalPoster(film.id);
+        const action = resolvePosterAction(film, existingLocalPath);
+
+        if (action === "already-local") {
           stats.alreadyLocal += 1;
           return;
         }
-
-        const existingLocalPath = findExistingLocalPoster(film.id);
-        if (!shouldDownload(film, Boolean(existingLocalPath))) {
+        if (action === "reattach") {
           film.posterUrl = existingLocalPath;
           stats.alreadyLocal += 1;
+          return;
+        }
+        if (action === "skip-no-poster-url") {
+          stats.skippedNoPosterUrl += 1;
           return;
         }
 
@@ -145,6 +174,12 @@ async function run() {
     // Persist after every batch so a late failure only risks the current
     // batch's progress, mirroring enrich-tmdb.mjs's incremental persistence.
     await writeFile(filmsPath, `${JSON.stringify(films, null, 2)}\n`, "utf8");
+
+    if (batchNumber % PROGRESS_LOG_EVERY_N_BATCHES === 0 || batchNumber === totalBatches) {
+      logStep(
+        `batch ${batchNumber}/${totalBatches} — alreadyLocal=${stats.alreadyLocal}, downloaded=${stats.downloaded}, skippedNoPosterUrl=${stats.skippedNoPosterUrl}, failed=${stats.failed}`
+      );
+    }
   }
 
   console.log(

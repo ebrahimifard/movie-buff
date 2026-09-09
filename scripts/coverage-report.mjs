@@ -1,6 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { logStep } from "./lib/log.mjs";
 
 const root = process.cwd();
 const festivalsPath = path.join(root, "data", "normalized", "festivals.json");
@@ -70,6 +71,9 @@ export function computeCatalogueStatsForFestival(festivalId, nominations, filmsB
   let missingPoster = 0;
   let missingRuntime = 0;
   let missingCountry = 0;
+  let missingImdb = 0;
+  let missingGenres = 0;
+  let missingSynopsis = 0;
 
   for (const nomination of festivalNominations) {
     const film = filmsById.get(nomination.filmId);
@@ -81,6 +85,15 @@ export function computeCatalogueStatsForFestival(festivalId, nominations, filmsB
     }
     if (!nomination.country || nomination.country === "XX") {
       missingCountry += 1;
+    }
+    if (!film?.imdbId) {
+      missingImdb += 1;
+    }
+    if (!film?.genres?.length) {
+      missingGenres += 1;
+    }
+    if (!film?.synopsis) {
+      missingSynopsis += 1;
     }
   }
 
@@ -94,13 +107,20 @@ export function computeCatalogueStatsForFestival(festivalId, nominations, filmsB
     missingPoster,
     missingRuntime,
     missingCountry,
+    missingImdb,
+    missingGenres,
+    missingSynopsis,
     posterCoveragePct: coveragePct(missingPoster),
     runtimeCoveragePct: coveragePct(missingRuntime),
-    countryCoveragePct: coveragePct(missingCountry)
+    countryCoveragePct: coveragePct(missingCountry),
+    imdbCoveragePct: coveragePct(missingImdb),
+    genresCoveragePct: coveragePct(missingGenres),
+    synopsisCoveragePct: coveragePct(missingSynopsis)
   };
 }
 
 async function run() {
+  logStep("Starting coverage-report");
   const festivals = JSON.parse(await readFile(festivalsPath, "utf8"));
   const nominations = JSON.parse(await readFile(nominationsPath, "utf8"));
   const films = JSON.parse(await readFile(filmsPath, "utf8"));
@@ -146,7 +166,7 @@ async function run() {
   };
 
   await writeFile(outputPath, `${JSON.stringify(report, null, 2)}\n`, "utf8");
-  console.log(`Coverage report generated. missingYears=${summary.totalMissingYears}, weakYears=${summary.totalWeakYears}`);
+  logStep(`Coverage report generated. missingYears=${summary.totalMissingYears}, weakYears=${summary.totalWeakYears}`);
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

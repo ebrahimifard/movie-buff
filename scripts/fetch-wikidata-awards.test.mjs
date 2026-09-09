@@ -12,6 +12,7 @@ import {
   createWinnersByFestivalQuery,
   dedupeRecords,
   extractImdb,
+  FESTIVAL_QIDS,
   isFestivalEditionLeak,
   isUnresolvedWikidataLabel,
   mapBindingToRecord,
@@ -50,6 +51,13 @@ describe.each(builders)("$name", ({ fn }) => {
 
   it("still aggregates directors via GROUP_CONCAT", () => {
     expect(fn()).toMatch(/GROUP_CONCAT\(DISTINCT \?directorLabel; separator="\|"\) AS \?directors/);
+  });
+});
+
+describe("FESTIVAL_QIDS.bafta", () => {
+  it("hardcodes real Wikidata QIDs so BAFTA ceremony ingestion never depends on a free-text search resolving", () => {
+    expect(FESTIVAL_QIDS.bafta.awards).toBe("Q732997");
+    expect(FESTIVAL_QIDS.bafta.ceremonyClass).toBe("Q4504495");
   });
 });
 

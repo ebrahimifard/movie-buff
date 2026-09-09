@@ -16,6 +16,7 @@
     "data:build": "node scripts/build-comprehensive-data.mjs",
     "data:posters": "node scripts/download-posters.mjs",
     "data:validate": "node scripts/validate-data.mjs",
+    "data:validate:strict": "node scripts/validate-data.mjs --strict",
     "data:coverage": "node scripts/coverage-report.mjs",
     "data:update": "node scripts/update-data.mjs",
     "data:fetch:cannes-wikipedia": "node scripts/fetch-cannes-wikipedia.mjs",

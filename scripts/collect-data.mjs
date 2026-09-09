@@ -1,4 +1,5 @@
 import { spawn } from "node:child_process";
+import { logStep } from "./lib/log.mjs";
 
 function runCommand(command, args, optional = false) {
   return new Promise((resolve, reject) => {
@@ -25,10 +26,14 @@ function runCommand(command, args, optional = false) {
 }
 
 async function run() {
+  logStep("collect-data: starting (fetch-wikidata-awards -> merge-sources -> enrich-tmdb)");
+  logStep("collect-data: step 1/3 — fetch-wikidata-awards");
   await runCommand("node", ["scripts/fetch-wikidata-awards.mjs"]);
+  logStep("collect-data: step 2/3 — merge-sources");
   await runCommand("node", ["scripts/merge-sources.mjs"]);
+  logStep("collect-data: step 3/3 — enrich-tmdb (optional)");
   await runCommand("node", ["scripts/enrich-tmdb.mjs"], true);
-  console.log("Data collection pipeline complete.");
+  logStep("Data collection pipeline complete.");
 }
 
 run().catch((error) => {

@@ -3,6 +3,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { IMDB_ID_PATTERN } from "../lib/schemas.mjs";
 import { fetchWithRetry } from "./lib/http.mjs";
+import { logStep } from "./lib/log.mjs";
 
 const root = process.cwd();
 const festivalsPath = path.join(root, "data", "normalized", "festivals.json");
@@ -11,6 +12,25 @@ const outputPath = path.join(root, "data", "source", "wikidata-awards.json");
 const wikidataSearchUrl = "https://www.wikidata.org/w/api.php";
 const sparqlEndpoint = "https://query.wikidata.org/sparql";
 const entityQidCache = new Map();
+
+// resolveEntityQid's free-text wbsearchentities search is unreliable for
+// specific known entities — confirmed directly against Wikidata: searching
+// "BAFTA Awards ceremony" returns zero results (Wikidata has no dedicated
+// "<Festival> Awards ceremony" class item for every festival). Individual
+// BAFTA ceremony instances (e.g. "77th British Academy Film Awards",
+// https://www.wikidata.org/wiki/Q120652448) are typed wdt:P31 wd:Q4504495
+// ("award ceremony", generic), not a BAFTA-specific subclass — unlike Oscars
+// ceremonies (e.g. "96th Academy Awards", Q85314819), which use the
+// dedicated wd:Q16913666 ("Academy Awards ceremony"). Without this, BAFTA
+// ceremony ingestion resolved ceremonyClassQid to null every run and was
+// permanently skipped (recorded as bafta_entities_not_found). "British
+// Academy Film Awards" is https://www.wikidata.org/wiki/Q732997.
+export const FESTIVAL_QIDS = {
+  bafta: {
+    awards: "Q732997",
+    ceremonyClass: "Q4504495"
+  }
+};
 
 function toYear(value) {
   if (!value) {
@@ -422,6 +442,15 @@ function getFestivalToken(festivalId) {
   return map[festivalId] ?? festivalId.toLowerCase();
 }
 
+// These queries can carry a LIMIT of up to 120000 rows (see
+// createOscarsCeremonyNomineesQuery) and legitimately take well over the
+// default fetchWithRetry timeout on Wikidata's shared public endpoint — a
+// generic 30s default previously aborted several of these mid-flight
+// (Oscars, BAFTA, Berlinale, TIFF), silently collapsing the collected
+// dataset from ~11k to ~3k records. SPARQL gets its own much longer budget;
+// the default stays tight for smaller, faster calls (TMDB, entity search).
+const SPARQL_TIMEOUT_MS = 180_000;
+
 async function runSparql(query) {
   const response = await fetchWithRetry(sparqlEndpoint, {
     method: "POST",
@@ -431,7 +460,7 @@ async function runSparql(query) {
       "User-Agent": "movie-buff-archive-bot/0.1 (https://example.com)"
     },
     body: new URLSearchParams({ query })
-  }, "SPARQL query");
+  }, "SPARQL query", undefined, SPARQL_TIMEOUT_MS);
 
   return response.json();
 }
@@ -560,6 +589,7 @@ export function dedupeRecords(records) {
 }
 
 async function run() {
+  logStep("Starting fetch-wikidata-awards");
   const festivalsRaw = await readFile(festivalsPath, "utf8");
   const festivals = JSON.parse(festivalsRaw);
   const providersRaw = await readFile(providersPath, "utf8");
@@ -628,11 +658,12 @@ async function run() {
       message: error instanceof Error ? error.message : String(error)
     });
   }
+  logStep(`Oscars ceremony ingestion done — results so far: ${results.length}, failures so far: ${failures.length}`);
 
   // BAFTA ceremony ingestion
   try {
-    const baftaQid = await resolveEntityQid("BAFTA Awards");
-    const baftaCeremonyClassQid = await resolveEntityQid("BAFTA Awards ceremony");
+    const baftaQid = FESTIVAL_QIDS.bafta.awards;
+    const baftaCeremonyClassQid = FESTIVAL_QIDS.bafta.ceremonyClass;
     if (baftaQid && baftaCeremonyClassQid) {
       const baftaWinnerPayload = await runSparql(
         createBaftaCeremonyWinnersQuery(baftaQid, baftaCeremonyClassQid)
@@ -685,8 +716,11 @@ async function run() {
       message: error instanceof Error ? error.message : String(error)
     });
   }
+  logStep(`BAFTA ceremony ingestion done — results so far: ${results.length}, failures so far: ${failures.length}`);
 
+  let providerIndex = 0;
   for (const provider of providers) {
+    providerIndex += 1;
     try {
       const awardQid = await resolveEntityQid(provider.awardLabel);
       if (!awardQid) {
@@ -730,9 +764,13 @@ async function run() {
         message: error instanceof Error ? error.message : String(error)
       });
     }
+    logStep(`Provider ${providerIndex}/${providers.length} (${provider.festivalId}: ${provider.category}) done — results so far: ${results.length}, failures so far: ${failures.length}`);
   }
 
+  let festivalIndex = 0;
   for (const festival of festivals) {
+    festivalIndex += 1;
+    logStep(`Festival ${festivalIndex}/${festivals.length} (${festival.id}): starting — 4 SPARQL queries, each can legitimately take minutes`);
     try {
       const festivalQid = await resolveEntityQid(festival.name);
       if (!festivalQid) {
@@ -749,16 +787,19 @@ async function run() {
       const winnersQuery = createWinnersByFestivalQuery(festivalQid);
       const winnerPayload = await runSparql(winnersQuery);
       const winnerBindings = winnerPayload?.results?.bindings ?? [];
+      logStep(`Festival ${festivalIndex}/${festivals.length} (${festival.id}): winners-by-festival query done — ${winnerBindings.length} binding(s)`);
 
       const nomineesQuery = createNomineesByFestivalQuery(festivalQid);
       const nomineePayload = await runSparql(nomineesQuery);
       const nomineeBindings = nomineePayload?.results?.bindings ?? [];
+      logStep(`Festival ${festivalIndex}/${festivals.length} (${festival.id}): nominees-by-festival query done — ${nomineeBindings.length} binding(s)`);
 
       const token = getFestivalToken(festival.id);
       const eventWinnerPayload = await runSparql(createEventWinnersQuery(token));
       const eventWinnerBindings = eventWinnerPayload?.results?.bindings ?? [];
       const eventNomineePayload = await runSparql(createEventNomineesQuery(token));
       const eventNomineeBindings = eventNomineePayload?.results?.bindings ?? [];
+      logStep(`Festival ${festivalIndex}/${festivals.length} (${festival.id}): event queries done — ${eventWinnerBindings.length + eventNomineeBindings.length} binding(s)`);
 
       const combinedBindings = [
         ...winnerBindings.map((binding) => ({ binding, inferredResult: "winner" })),
@@ -791,6 +832,7 @@ async function run() {
         message: error instanceof Error ? error.message : String(error)
       });
     }
+    logStep(`Festival ${festivalIndex}/${festivals.length} (${festival.id}): done — results so far: ${results.length}, failures so far: ${failures.length}`);
   }
 
   const deduped = dedupeRecords(results);
@@ -817,7 +859,7 @@ async function run() {
   await mkdir(path.dirname(outputPath), { recursive: true });
   await writeFile(outputPath, `${JSON.stringify(output, null, 2)}\n`, "utf8");
 
-  console.log(`Wikidata collection complete. deduped=${deduped.length}, failures=${failures.length}`);
+  logStep(`Wikidata collection complete. deduped=${deduped.length}, failures=${failures.length}`);
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

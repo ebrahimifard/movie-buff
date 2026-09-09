@@ -1,11 +1,17 @@
 import { describe, expect, it } from "vitest";
-import { checkCategoryClassificationCoverage, checkReferentialIntegrity, validateEntities } from "./validate-data.mjs";
+import {
+  checkCategoryClassificationCoverage,
+  checkQualityThresholds,
+  checkReferentialIntegrity,
+  computeOverallQualityStats,
+  validateEntities
+} from "./validate-data.mjs";
 
 function baseEntities() {
   return {
     festivals: [{ id: "cannes", name: "Cannes", country: "FR", city: "Cannes", foundedYear: 1946, type: "festival", website: null }],
     ceremonies: [{ id: "cannes-2020", festivalId: "cannes", year: 2020, edition: null, startDate: null, endDate: null }],
-    categories: [{ id: "cannes:palme-dor", festivalId: "cannes", name: "Palme d'Or", normalizedName: "palme-dor", scope: "film", isAward: true }],
+    categories: [{ id: "cannes:palme-dor", festivalId: "cannes", name: "Palme d'Or", normalizedName: "palme-dor", scope: "film", isAward: true, isHonoraryAward: false }],
     films: [{ id: "tt1", title: "T", releaseYear: 2020, imdbId: "tt1", posterUrl: "", runtimeMinutes: 0, countryCodes: [], languages: [], genres: [], synopsis: "" }],
     people: [{ id: "person:jane-doe", name: "Jane Doe", roles: ["director"], imdbId: null, tmdbId: null }],
     nominations: [
@@ -74,6 +80,47 @@ describe("checkReferentialIntegrity", () => {
     entities.ceremonies[0].festivalId = "unknown-festival";
     const issues = checkReferentialIntegrity(entities);
     expect(issues.some((issue) => issue.includes("[ceremonies]"))).toBe(true);
+  });
+});
+
+describe("computeOverallQualityStats", () => {
+  it("computes coverage percentages across all films", () => {
+    const films = [
+      { imdbId: "tt1", posterUrl: "/posters/tt1.jpg", runtimeMinutes: 100, genres: ["Drama"], synopsis: "A story." },
+      { imdbId: null, posterUrl: "", runtimeMinutes: 0, genres: [], synopsis: "" }
+    ];
+    const stats = computeOverallQualityStats(films);
+    expect(stats.total).toBe(2);
+    expect(stats.imdbCoveragePct).toBe(50);
+    expect(stats.posterCoveragePct).toBe(50);
+    expect(stats.runtimeCoveragePct).toBe(50);
+    expect(stats.genresCoveragePct).toBe(50);
+    expect(stats.synopsisCoveragePct).toBe(50);
+  });
+
+  it("returns zeroed stats for an empty catalogue rather than dividing by zero", () => {
+    const stats = computeOverallQualityStats([]);
+    expect(stats.total).toBe(0);
+    expect(stats.imdbCoveragePct).toBe(0);
+  });
+});
+
+describe("checkQualityThresholds", () => {
+  it("flags a metric below its threshold", () => {
+    const issues = checkQualityThresholds({ imdbCoveragePct: 5 }, { imdbCoveragePct: 20 });
+    expect(issues.some((issue) => issue.includes("imdbCoveragePct"))).toBe(true);
+  });
+
+  it("does not flag a metric at or above its threshold", () => {
+    expect(checkQualityThresholds({ imdbCoveragePct: 20 }, { imdbCoveragePct: 20 })).toEqual([]);
+    expect(checkQualityThresholds({ imdbCoveragePct: 50 }, { imdbCoveragePct: 20 })).toEqual([]);
+  });
+
+  it("checks every provided threshold independently", () => {
+    const stats = { imdbCoveragePct: 50, posterCoveragePct: 5 };
+    const issues = checkQualityThresholds(stats, { imdbCoveragePct: 20, posterCoveragePct: 20 });
+    expect(issues.length).toBe(1);
+    expect(issues[0]).toContain("posterCoveragePct");
   });
 });
 

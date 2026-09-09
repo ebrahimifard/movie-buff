@@ -52,8 +52,8 @@ describe("computeCatalogueStatsForFestival", () => {
   ];
 
   const filmsById = new Map([
-    ["tt1", { id: "tt1", posterUrl: "/posters/tt1.jpg", runtimeMinutes: 120 }],
-    ["tt2", { id: "tt2", posterUrl: "", runtimeMinutes: 0 }]
+    ["tt1", { id: "tt1", posterUrl: "/posters/tt1.jpg", runtimeMinutes: 120, imdbId: "tt1", genres: ["Drama"], synopsis: "A story." }],
+    ["tt2", { id: "tt2", posterUrl: "", runtimeMinutes: 0, imdbId: null, genres: [], synopsis: "" }]
   ]);
 
   it("scopes stats to the given festival only", () => {
@@ -68,6 +68,13 @@ describe("computeCatalogueStatsForFestival", () => {
     expect(stats.missingPoster).toBe(2); // tt2 (empty) + missing film
     expect(stats.missingRuntime).toBe(2); // tt2 (0) + missing film
     expect(stats.missingCountry).toBe(1); // the "XX" fallback code
+  });
+
+  it("counts missing imdbId/genres/synopsis, including when the film doesn't resolve", () => {
+    const stats = computeCatalogueStatsForFestival("venice", nominations, filmsById);
+    expect(stats.missingImdb).toBe(2); // tt2 (null) + missing film
+    expect(stats.missingGenres).toBe(2); // tt2 (empty array) + missing film
+    expect(stats.missingSynopsis).toBe(2); // tt2 (empty string) + missing film
   });
 
   it("computes coverage percentages", () => {

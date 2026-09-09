@@ -25,6 +25,13 @@ jobs:
       - name: Install
         run: npm ci
 
+      - name: Verify TMDB_API_KEY secret is set
+        run: |
+          if [ -z "${{ secrets.TMDB_API_KEY }}" ]; then
+            echo "::error::TMDB_API_KEY secret is not set. TMDB enrichment must run in CI so metadata isn't silently skipped."
+            exit 1
+          fi
+
       - name: Collect from APIs
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
@@ -55,4 +62,3 @@ jobs:
             Automated monthly update of normalized festival and awards datasets.
             - Sorted and refreshed nominations
             - Ready for curator review
-          labels: data-update

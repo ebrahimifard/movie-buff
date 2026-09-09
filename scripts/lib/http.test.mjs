@@ -66,12 +66,57 @@ describe("fetchWithRetry", () => {
     expect(fetchMock).toHaveBeenCalledTimes(3);
   });
 
+  it("retries when fetch() itself throws (a network error, not an HTTP error response), then succeeds", async () => {
+    const fetchMock = vi.fn().mockRejectedValueOnce(new TypeError("terminated")).mockResolvedValueOnce(makeResponse(200));
+    vi.stubGlobal("fetch", fetchMock);
+
+    const promise = fetchWithRetry("https://example.com", {}, "test");
+    await vi.advanceTimersByTimeAsync(10_000);
+    const response = await promise;
+
+    expect(response.ok).toBe(true);
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+  });
+
+  it("gives up after maxAttempts when fetch() keeps throwing, and includes the underlying error message", async () => {
+    const fetchMock = vi.fn().mockRejectedValue(new TypeError("terminated"));
+    vi.stubGlobal("fetch", fetchMock);
+
+    const promise = fetchWithRetry("https://example.com", {}, "test", 3);
+    const expectation = expect(promise).rejects.toThrow(/test failed: terminated/);
+    await vi.advanceTimersByTimeAsync(60_000);
+    await expectation;
+
+    expect(fetchMock).toHaveBeenCalledTimes(3);
+  });
+
   it("does not retry a non-retryable 404", async () => {
     const fetchMock = vi.fn().mockResolvedValue(makeResponse(404, { body: "not found" }));
     vi.stubGlobal("fetch", fetchMock);
 
     await expect(fetchWithRetry("https://example.com", {}, "test")).rejects.toThrow(/test failed: 404/);
     expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
+  it("attaches an AbortSignal timeout when the caller doesn't provide one", async () => {
+    const fetchMock = vi.fn().mockResolvedValue(makeResponse(200));
+    vi.stubGlobal("fetch", fetchMock);
+
+    await fetchWithRetry("https://example.com", {}, "test");
+
+    const [, calledOptions] = fetchMock.mock.calls[0];
+    expect(calledOptions.signal).toBeInstanceOf(AbortSignal);
+  });
+
+  it("preserves a caller-provided AbortSignal instead of overriding it", async () => {
+    const fetchMock = vi.fn().mockResolvedValue(makeResponse(200));
+    vi.stubGlobal("fetch", fetchMock);
+    const controller = new AbortController();
+
+    await fetchWithRetry("https://example.com", { signal: controller.signal }, "test");
+
+    const [, calledOptions] = fetchMock.mock.calls[0];
+    expect(calledOptions.signal).toBe(controller.signal);
   });
 
   it("honors the Retry-After header instead of exponential backoff", async () => {
