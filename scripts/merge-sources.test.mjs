@@ -1,12 +1,14 @@
 import { describe, expect, it } from "vitest";
 import {
   WIKIPEDIA_SOURCES,
+  buildCategoryCrosswalkLookup,
   buildRecordKey,
   buildSlugKey,
   chooseResult,
   dedupeCredits,
   mergeCandidatesInto,
   mergeFilm,
+  normalizeCategory,
   normalizeRecord,
   normalizeWikipediaPayload,
   slugify
@@ -131,6 +133,23 @@ describe("dedupeCredits", () => {
   });
 });
 
+describe("buildCategoryCrosswalkLookup / normalizeCategory", () => {
+  it("maps a known raw category to its canonical name, scoped by festivalId", () => {
+    const lookup = buildCategoryCrosswalkLookup([{ festivalId: "oscars", category: "Best Picture", canonicalCategory: "Academy Award for Best Picture" }]);
+    expect(normalizeCategory("oscars", "Best Picture", lookup)).toBe("Academy Award for Best Picture");
+    expect(normalizeCategory("cannes", "Best Picture", lookup)).toBe("Best Picture");
+  });
+
+  it("falls back to the raw category unchanged when there's no crosswalk entry", () => {
+    const lookup = buildCategoryCrosswalkLookup([]);
+    expect(normalizeCategory("oscars", "Some Category", lookup)).toBe("Some Category");
+  });
+
+  it("falls back to the raw category unchanged when no lookup is provided at all", () => {
+    expect(normalizeCategory("oscars", "Best Picture", undefined)).toBe("Best Picture");
+  });
+});
+
 describe("buildRecordKey", () => {
   it("keys on imdbId when present", () => {
     const record = { festivalId: "cannes", year: 2020, category: "Palme d'Or", film: { title: "T", imdbId: "tt1" } };
@@ -141,12 +160,26 @@ describe("buildRecordKey", () => {
     const record = { festivalId: "cannes", year: 2020, category: "Palme d'Or", film: { title: "Grand Bouquet", imdbId: null } };
     expect(buildRecordKey(record)).toBe("cannes|2020|Palme d'Or|grand-bouquet");
   });
+
+  it("normalizes the category through the crosswalk before building the key, so variants collide", () => {
+    const lookup = buildCategoryCrosswalkLookup([{ festivalId: "oscars", category: "Best Picture", canonicalCategory: "Academy Award for Best Picture" }]);
+    const seedRecord = { festivalId: "oscars", year: 1994, category: "Best Picture", film: { title: "Schindler's List", imdbId: "tt0108052" } };
+    const wikidataRecord = { festivalId: "oscars", year: 1994, category: "Academy Award for Best Picture", film: { title: "Schindler's List", imdbId: "tt0108052" } };
+    expect(buildRecordKey(seedRecord, lookup)).toBe(buildRecordKey(wikidataRecord, lookup));
+  });
 });
 
 describe("buildSlugKey", () => {
   it("always uses the slugified title, ignoring imdbId", () => {
     const record = { festivalId: "cannes", year: 2020, category: "Palme d'Or", film: { title: "Parasite", imdbId: "tt6751668" } };
     expect(buildSlugKey(record)).toBe("cannes|2020|Palme d'Or|parasite");
+  });
+
+  it("normalizes the category through the crosswalk before building the key", () => {
+    const lookup = buildCategoryCrosswalkLookup([{ festivalId: "oscars", category: "Best Picture", canonicalCategory: "Academy Award for Best Picture" }]);
+    const a = { festivalId: "oscars", year: 1994, category: "Best Picture", film: { title: "Schindler's List", imdbId: null } };
+    const b = { festivalId: "oscars", year: 1994, category: "Academy Award for Best Picture", film: { title: "Schindler's List", imdbId: null } };
+    expect(buildSlugKey(a, lookup)).toBe(buildSlugKey(b, lookup));
   });
 });
 
@@ -240,6 +273,40 @@ describe("mergeCandidatesInto", () => {
     expect(outputRecords).toHaveLength(1);
     expect(outputRecords[0].film.imdbId).toBe("tt6751668");
     expect(outputRecords[0].result).toBe("winner");
+  });
+
+  it("merges a candidate whose category is a crosswalked variant of an existing record's category, instead of duplicating it", () => {
+    const lookup = buildCategoryCrosswalkLookup([{ festivalId: "oscars", category: "Best Picture", canonicalCategory: "Academy Award for Best Picture" }]);
+
+    // Mirrors run()'s seeding loop, which must index the seed source's own
+    // records through the same crosswalk lookup used for later candidates —
+    // otherwise the seed record's key never normalizes and this test would
+    // just be checking mergeCandidatesInto against itself.
+    const seedRecord = normalizeRecord({
+      year: 1994,
+      festivalId: "oscars",
+      category: "Best Picture",
+      result: "winner",
+      film: { title: "Schindler's List", releaseYear: 1993, imdbId: "tt0108052" },
+      directors: []
+    });
+    const outputRecords = [seedRecord];
+    const primaryIndex = new Map([[buildRecordKey(seedRecord, lookup), 0]]);
+    const titleIndex = new Map([[buildSlugKey(seedRecord, lookup), 0]]);
+
+    const candidate = {
+      year: 1994,
+      festivalId: "oscars",
+      category: "Academy Award for Best Picture",
+      result: "winner",
+      film: { title: "Schindler's List", releaseYear: 1993, imdbId: "tt0108052" },
+      directors: ["Steven Spielberg"]
+    };
+
+    mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, [candidate], lookup);
+
+    expect(outputRecords).toHaveLength(1);
+    expect(outputRecords[0].directors).toEqual(["Steven Spielberg"]);
   });
 
   it("adds a genuinely new Wikipedia candidate as a new record", () => {

@@ -1,0 +1,10 @@
+{
+  "note": "Maps known cross-source category-name variants to one canonical name per festival, so merge-sources.mjs's dedupe key (buildRecordKey/buildSlugKey) treats them as the same real award instead of two separate nomination rows. Additive and incremental: a festivalId/category pair with no entry here is left completely unchanged. Add an entry here only once you've confirmed via the actual data (not guessed) that two raw category strings really do refer to the same award.",
+  "crosswalk": [
+    {
+      "festivalId": "oscars",
+      "category": "Best Picture",
+      "canonicalCategory": "Academy Award for Best Picture"
+    }
+  ]
+}

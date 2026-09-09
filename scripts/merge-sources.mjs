@@ -2,11 +2,13 @@ import { readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { logStep } from "./lib/log.mjs";
 
 const root = process.cwd();
 const masterPath = path.join(root, "data", "source", "master-data.json");
 const wikidataPath = path.join(root, "data", "source", "wikidata-awards.json");
 const mergedPath = path.join(root, "data", "source", "master-data.generated.json");
+const categoryCrosswalkPath = path.join(root, "data", "source", "category-crosswalk.json");
 
 // Each optional Wikipedia source is merged after Wikidata, in this order.
 // Adding a new festival's scraper output is a one-line addition here — no
@@ -93,11 +95,31 @@ export function chooseResult(left, right) {
   return left || right || "nominee";
 }
 
-export function buildRecordKey(record) {
+// A curated map of known cross-source category-name variants to one
+// canonical name per festival — e.g. the hand-curated seed's bare "Best
+// Picture" vs. Wikidata's "Academy Award for Best Picture" for the exact
+// same Oscars category, which otherwise dedupe into two separate nomination
+// rows for the same film/year (confirmed: Schindler's List, 1994). Additive
+// and incremental: a `festivalId|category` pair with no entry here falls
+// back to the raw category string unchanged (see normalizeCategory), so an
+// unlisted variant behaves exactly as it did before this lookup existed.
+export function buildCategoryCrosswalkLookup(entries) {
+  const map = new Map();
+  for (const entry of entries ?? []) {
+    map.set(`${entry.festivalId}|${entry.category}`, entry.canonicalCategory);
+  }
+  return map;
+}
+
+export function normalizeCategory(festivalId, category, crosswalkLookup) {
+  return crosswalkLookup?.get(`${festivalId}|${category}`) ?? category;
+}
+
+export function buildRecordKey(record, crosswalkLookup) {
   return [
     record.festivalId,
     record.year,
-    record.category,
+    normalizeCategory(record.festivalId, record.category, crosswalkLookup),
     record.film.imdbId ?? slugify(record.film.title)
   ].join("|");
 }
@@ -108,8 +130,13 @@ export function buildRecordKey(record) {
 // which won't match an existing seed/Wikidata record for the same film that
 // DOES have an imdbId. buildSlugKey ignores imdbId entirely so it can be used
 // as a secondary lookup for exactly that cross-source case.
-export function buildSlugKey(record) {
-  return [record.festivalId, record.year, record.category, slugify(record.film.title)].join("|");
+export function buildSlugKey(record, crosswalkLookup) {
+  return [
+    record.festivalId,
+    record.year,
+    normalizeCategory(record.festivalId, record.category, crosswalkLookup),
+    slugify(record.film.title)
+  ].join("|");
 }
 
 // Cannes/Golden Globes scrapers write a bare array; BAFTA's writes
@@ -126,21 +153,21 @@ export function normalizeWikipediaPayload(raw) {
 // silently merge two distinct films that happen to share a title (remakes,
 // same-title-different-year). imdbId identity always takes precedence when
 // present. Mutates outputRecords/primaryIndex/titleIndex in place.
-export function mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, candidates) {
+export function mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, candidates, crosswalkLookup) {
   for (const candidate of candidates) {
     const normalized = normalizeRecord(candidate);
-    const primaryKey = buildRecordKey(normalized);
+    const primaryKey = buildRecordKey(normalized, crosswalkLookup);
 
     let existingIndex = primaryIndex.get(primaryKey);
     if (existingIndex === undefined && !normalized.film.imdbId) {
-      existingIndex = titleIndex.get(buildSlugKey(normalized));
+      existingIndex = titleIndex.get(buildSlugKey(normalized, crosswalkLookup));
     }
 
     if (existingIndex === undefined) {
       existingIndex = outputRecords.length;
       outputRecords.push(normalized);
       primaryIndex.set(primaryKey, existingIndex);
-      titleIndex.set(buildSlugKey(normalized), existingIndex);
+      titleIndex.set(buildSlugKey(normalized, crosswalkLookup), existingIndex);
       continue;
     }
 
@@ -166,8 +193,13 @@ async function readOptionalWikipediaSource(filePath) {
 }
 
 async function run() {
+  logStep("Starting merge-sources");
   const masterRaw = await readFile(masterPath, "utf8");
   const master = JSON.parse(masterRaw);
+
+  const crosswalkLookup = existsSync(categoryCrosswalkPath)
+    ? buildCategoryCrosswalkLookup(JSON.parse(await readFile(categoryCrosswalkPath, "utf8")).crosswalk)
+    : new Map();
 
   let wikidataRecords = [];
   try {
@@ -189,14 +221,14 @@ async function run() {
 
   for (const base of master.records ?? []) {
     const normalized = normalizeRecord(base);
-    primaryIndex.set(buildRecordKey(normalized), outputRecords.length);
-    titleIndex.set(buildSlugKey(normalized), outputRecords.length);
+    primaryIndex.set(buildRecordKey(normalized, crosswalkLookup), outputRecords.length);
+    titleIndex.set(buildSlugKey(normalized, crosswalkLookup), outputRecords.length);
     outputRecords.push(normalized);
   }
 
-  mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, wikidataRecords);
+  mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, wikidataRecords, crosswalkLookup);
   for (const { records } of wikipediaSources) {
-    mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, records);
+    mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, records, crosswalkLookup);
   }
 
   outputRecords.sort((a, b) => {
@@ -225,7 +257,7 @@ async function run() {
   };
 
   await writeFile(mergedPath, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
-  console.log(`Merged sources. ${Object.entries(sourceCounts).map(([key, value]) => `${key}=${value}`).join(", ")}`);
+  logStep(`Merged sources. ${Object.entries(sourceCounts).map(([key, value]) => `${key}=${value}`).join(", ")}`);
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
