@@ -1,14 +1,5 @@
 [
   {
-    "id": "oscars",
-    "name": "Academy Awards",
-    "country": "US",
-    "city": "Los Angeles",
-    "foundedYear": 1929,
-    "type": "award",
-    "website": null
-  },
-  {
     "id": "bafta",
     "name": "BAFTA Awards",
     "country": "GB",
@@ -54,6 +45,15 @@
     "city": "Locarno",
     "foundedYear": 1946,
     "type": "festival",
+    "website": null
+  },
+  {
+    "id": "oscars",
+    "name": "Academy Awards",
+    "country": "US",
+    "city": "Los Angeles",
+    "foundedYear": 1929,
+    "type": "award",
     "website": null
   },
   {
