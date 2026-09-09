@@ -2,6 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { logStep } from "./lib/log.mjs";
 
 const root = process.cwd();
 const generatedSourcePath = path.join(root, "data", "source", "master-data.generated.json");
@@ -9,28 +10,56 @@ const seedSourcePath = path.join(root, "data", "source", "master-data.json");
 const categoryClassificationsPath = path.join(root, "data", "source", "category-classifications.json");
 const normalizedDir = path.join(root, "data", "normalized");
 
-// Builds a `${festivalId}|${category}` -> isAward lookup from
+// Builds a `${festivalId}|${category}` -> classification-entry lookup from
 // data/source/category-classifications.json — a curated record of a real
 // semantic review of every category value (see
 // scripts/lib/generate-category-classifications.mjs), not a keyword/regex
 // classifier. A pair with no entry (a brand-new category from a future
-// re-scrape nobody has reviewed yet) is intentionally NOT defaulted to true
-// here — resolveCategoryIsAward returns undefined for it, and the caller
-// treats that as "unclassified", conservatively excluding it from the
-// Category filter until a human/AI reviews it. See
-// scripts/validate-data.mjs's classification-coverage check, which is what
-// actually surfaces an unclassified pair instead of it staying silently
-// hidden forever.
+// re-scrape nobody has reviewed yet) is intentionally NOT defaulted here —
+// resolveCategoryIsAward/resolveCategoryIsHonoraryAward return undefined for
+// it, and the caller treats that as "unclassified", conservatively excluding
+// it from the Category filter / never dropping its records until a human/AI
+// reviews it. See scripts/validate-data.mjs's classification-coverage check,
+// which is what actually surfaces an unclassified pair instead of it staying
+// silently hidden forever.
 export function buildCategoryClassificationLookup(classifications) {
   const map = new Map();
   for (const entry of classifications ?? []) {
-    map.set(`${entry.festivalId}|${entry.category}`, entry.isAward);
+    map.set(`${entry.festivalId}|${entry.category}`, entry);
   }
   return map;
 }
 
 export function resolveCategoryIsAward(lookup, festivalId, category) {
-  return lookup.get(`${festivalId}|${category}`);
+  return lookup.get(`${festivalId}|${category}`)?.isAward;
+}
+
+// Whether this category is given directly to a person for their body of
+// work (an honorary/tribute/career award), with no film genuinely tied to
+// most winners — e.g. Cecil B. DeMille Award, Berlinale Camera, Pietro
+// Bianchi Award, Rising Star Award. isHonoraryCategory (scripts/lib/
+// wikipedia-scrape.mjs) is a generic keyword regex used at SCRAPE time and
+// only catches names containing words like "honorary"/"lifetime
+// achievement" — most real honorary awards are named awards that don't
+// (same lesson as isAward: keyword matching doesn't generalize to named
+// awards). This curated field is the authoritative signal used at BUILD
+// time (see the drop rule in run() below) to catch the rest.
+export function resolveCategoryIsHonoraryAward(lookup, festivalId, category) {
+  return lookup.get(`${festivalId}|${category}`)?.isHonoraryAward;
+}
+
+// A record in an isHonoraryAward category with NOTHING but a bare name (no
+// imdbId, no director, no credited person) is a fabricated "film" built
+// from the honoree's name, not a real nomination — see
+// resolveCategoryIsHonoraryAward's doc comment. A record that DOES carry
+// real film metadata (the documented carve-out for some older Academy
+// Honorary Awards genuinely tied to a specific film) is kept as-is, as is
+// any record in an unclassified or non-honorary category (isHonoraryAward
+// undefined/false never drops anything).
+export function isFabricatedHonoraryRecord(entry, isHonoraryAward) {
+  const hasRealFilmSignal =
+    Boolean(entry.film.imdbId) || (entry.directors?.length ?? 0) > 0 || (entry.credits?.length ?? 0) > 0;
+  return isHonoraryAward === true && !hasRealFilmSignal;
 }
 
 export function slugify(input) {
@@ -58,6 +87,26 @@ export function resolveFilmId(film) {
   return `film:${slugify(`${film.title}-${film.releaseYear}`)}`;
 }
 
+// The same film can appear across multiple source records (different
+// festivals/categories citing it), all resolving to the same filmId via
+// resolveFilmId. The first record seen still supplies the base film object,
+// but a later duplicate's metadata is backfilled into any field the first
+// one left empty, rather than discarded outright — otherwise an unenriched
+// duplicate seen first would permanently shadow a sibling record that TMDB
+// enrichment did reach.
+export function mergeFilmFields(existing, incoming) {
+  return {
+    ...existing,
+    imdbId: existing.imdbId || incoming.imdbId,
+    posterUrl: existing.posterUrl || incoming.posterUrl,
+    runtimeMinutes: existing.runtimeMinutes || incoming.runtimeMinutes,
+    countryCodes: existing.countryCodes?.length ? existing.countryCodes : incoming.countryCodes,
+    languages: existing.languages?.length ? existing.languages : incoming.languages,
+    genres: existing.genres?.length ? existing.genres : incoming.genres,
+    synopsis: existing.synopsis || incoming.synopsis
+  };
+}
+
 // Gets-or-creates a Person record, merging `role` into an existing person's
 // roles rather than skipping the update — a person can legitimately be
 // credited under different roles across different records (e.g. an
@@ -82,6 +131,7 @@ async function writeJson(relativePath, value) {
 }
 
 async function run() {
+  logStep("Starting build-comprehensive-data");
   const selectedSourcePath = existsSync(generatedSourcePath) ? generatedSourcePath : seedSourcePath;
   const sourceRaw = await readFile(selectedSourcePath, "utf8");
   const source = JSON.parse(sourceRaw);
@@ -104,6 +154,11 @@ async function run() {
   const nominations = [];
 
   for (const entry of source.records) {
+    const isHonoraryAward = resolveCategoryIsHonoraryAward(categoryLookup, entry.festivalId, entry.category);
+    if (isFabricatedHonoraryRecord(entry, isHonoraryAward)) {
+      continue;
+    }
+
     const filmId = resolveFilmId(entry.film);
     if (!filmMap.has(filmId)) {
       filmMap.set(filmId, {
@@ -118,6 +173,8 @@ async function run() {
         genres: entry.film.genres,
         synopsis: entry.film.synopsis
       });
+    } else {
+      filmMap.set(filmId, mergeFilmFields(filmMap.get(filmId), entry.film));
     }
 
     const ceremonyId = `${entry.festivalId}-${entry.year}`;
@@ -148,7 +205,11 @@ async function run() {
         // buildCategoryClassificationLookup's comment above. Never true by
         // accident: an unreviewed category simply doesn't show up as a
         // Category filter option until someone classifies it.
-        isAward: isAward ?? false
+        isAward: isAward ?? false,
+        // Same conservative-default treatment as isAward: an unclassified
+        // pair defaults to false (never drops records by accident) rather
+        // than being defaulted true.
+        isHonoraryAward: isHonoraryAward ?? false
       });
     }
 
@@ -212,7 +273,7 @@ async function run() {
     writeJson("manifest.json", manifest)
   ]);
 
-  console.log("Comprehensive normalized dataset generated.");
+  logStep("Comprehensive normalized dataset generated.");
   console.log(JSON.stringify(manifest.stats, null, 2));
 
   if (unclassifiedCategories.size > 0) {

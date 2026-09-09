@@ -82,7 +82,8 @@ function categoriesById(nominations: Nomination[], nonAwardCategoryIds: string[]
         name: entry.category,
         normalizedName: entry.category.toLowerCase(),
         scope: "film",
-        isAward: !nonAward.has(entry.categoryId)
+        isAward: !nonAward.has(entry.categoryId),
+        isHonoraryAward: false
       });
     }
   }
