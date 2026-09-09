@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildEnrichedPayload, chunk, findConfidentMatch, titleYearFallbackKey, toGenres, toIsoCountryCodes, toLanguages } from "./enrich-tmdb.mjs";
+import { buildEnrichedPayload, chunk, findConfidentMatch, serializeTmdbCache, titleYearFallbackKey, toGenres, toIsoCountryCodes, toLanguages } from "./enrich-tmdb.mjs";
 
 describe("chunk", () => {
   it("splits an array into groups of the given size", () => {
@@ -121,6 +121,25 @@ describe("findConfidentMatch", () => {
   it("falls back to original_title when title doesn't match", () => {
     const results = [{ title: "Foreign Release Title", original_title: "The Father", release_date: "2020-01-01" }];
     expect(findConfidentMatch(results, "The Father", 2021)).not.toBeNull();
+  });
+});
+
+describe("serializeTmdbCache", () => {
+  it("converts the imdbId and title/year lookup maps into a plain JSON-serializable object", () => {
+    const byImdbId = new Map([["tt1", { imdbId: "tt1", posterUrl: "https://example.com/p.jpg" }]]);
+    const byTitleYear = new Map([["cannes|2020|some film", { imdbId: "tt2" }]]);
+
+    const result = serializeTmdbCache(byImdbId, byTitleYear);
+
+    expect(result.byImdbId).toEqual({ tt1: { imdbId: "tt1", posterUrl: "https://example.com/p.jpg" } });
+    expect(result.byTitleYear).toEqual({ "cannes|2020|some film": { imdbId: "tt2" } });
+    expect(typeof result.updatedAt).toBe("string");
+  });
+
+  it("serializes empty maps to empty objects", () => {
+    const result = serializeTmdbCache(new Map(), new Map());
+    expect(result.byImdbId).toEqual({});
+    expect(result.byTitleYear).toEqual({});
   });
 });
 

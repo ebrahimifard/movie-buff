@@ -3,10 +3,43 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { fetchWithRetry } from "./lib/http.mjs";
 import { loadLocalEnv } from "./lib/env.mjs";
+import { logStep } from "./lib/log.mjs";
 import { IMDB_ID_PATTERN } from "../lib/schemas.mjs";
 
 const root = process.cwd();
 const generatedPath = path.join(root, "data", "source", "master-data.generated.json");
+const cachePath = path.join(root, "data", "source", "tmdb-cache.json");
+
+// TMDB enrichment lives in a standalone, additive cache keyed by imdbId (and,
+// for records with no imdbId, by titleYearFallbackKey) — never inside
+// master-data.generated.json. merge-sources.mjs rebuilds that generated file
+// from scratch from raw sources on every run, which would otherwise wipe any
+// enrichment written directly into it. Keeping the cache separate means a
+// re-run of merge can never lose previously fetched TMDB data: run() always
+// re-applies the full cache onto the freshly merged records (see below).
+export async function loadTmdbCache(filePath) {
+  try {
+    const raw = await readFile(filePath, "utf8");
+    const parsed = JSON.parse(raw);
+    return {
+      byImdbId: new Map(Object.entries(parsed.byImdbId ?? {})),
+      byTitleYear: new Map(Object.entries(parsed.byTitleYear ?? {}))
+    };
+  } catch (error) {
+    if (error?.code === "ENOENT") {
+      return { byImdbId: new Map(), byTitleYear: new Map() };
+    }
+    throw error;
+  }
+}
+
+export function serializeTmdbCache(byImdbId, byTitleYear) {
+  return {
+    updatedAt: new Date().toISOString(),
+    byImdbId: Object.fromEntries(byImdbId),
+    byTitleYear: Object.fromEntries(byTitleYear)
+  };
+}
 
 export function chunk(items, size) {
   const list = [];
@@ -131,7 +164,10 @@ async function enrichRecordByTitleYear(record, apiKey) {
   searchUrl.searchParams.set("api_key", apiKey);
   searchUrl.searchParams.set("query", title);
   if (year) {
-    searchUrl.searchParams.set("year", String(year));
+    // primary_release_year (rather than year) matches only the film's
+    // primary theatrical release, not any re-release/alternate regional
+    // release TMDB also has on file — tighter for festival-year matching.
+    searchUrl.searchParams.set("primary_release_year", String(year));
   }
 
   const searchPayload = await fetchJson(searchUrl, `TMDB search "${title}" (${year ?? "?"})`);
@@ -204,25 +240,61 @@ export function buildEnrichedPayload(payload, records, imdbLookup, failures, fal
 async function run() {
   loadLocalEnv();
   const apiKey = process.env.TMDB_API_KEY;
-  if (!apiKey) {
-    console.log("TMDB_API_KEY is not set; skipping TMDB enrichment.");
-    return;
-  }
 
+  logStep("Starting TMDB enrichment");
   const raw = await readFile(generatedPath, "utf8");
   const payload = JSON.parse(raw);
   const records = payload.records ?? [];
+  logStep(`Loaded ${records.length} records from ${path.relative(root, generatedPath)}`);
 
-  const imdbUnique = [...new Set(records.map((record) => record?.film?.imdbId).filter(Boolean))];
-  const imdbLookup = new Map();
-  const fallbackLookup = new Map();
+  const cache = await loadTmdbCache(cachePath);
+  logStep(`Loaded TMDB cache: ${cache.byImdbId.size} by imdbId, ${cache.byTitleYear.size} by title/year`);
+  // Seed the lookup maps from the cache so every run re-applies previously
+  // fetched enrichment onto the (possibly just rebuilt) generated file, then
+  // only fetch what isn't already cached.
+  const imdbLookup = new Map(cache.byImdbId);
+  const fallbackLookup = new Map(cache.byTitleYear);
   const failures = [];
   const titleYearFailures = [];
 
-  for (const group of chunk(imdbUnique, 5)) {
+  // Apply whatever is already cached before doing any fetching — merge-
+  // sources.mjs rebuilds this file from scratch on every run, so this is the
+  // only thing that guarantees previously fetched enrichment survives even
+  // when nothing new needs fetching this run (the loops below would
+  // otherwise never write if imdbUnique/uniqueFallbackTargets end up empty).
+  await writeFile(
+    generatedPath,
+    `${JSON.stringify(buildEnrichedPayload(payload, records, imdbLookup, failures, fallbackLookup), null, 2)}\n`,
+    "utf8"
+  );
+  logStep("Re-applied cached enrichment onto the generated file");
+
+  if (!apiKey) {
+    console.log("TMDB_API_KEY is not set; re-applied cached TMDB enrichment only, skipped new lookups.");
+    return;
+  }
+
+  // Built once up front (O(n)) rather than records.find() per lookup inside
+  // the chunk loop (which was O(n) per call, O(n*m) overall across every
+  // uncached imdbId) — cheaper on both CPU and the memory churn from
+  // repeatedly scanning the full records array under memory pressure.
+  const recordByImdbId = new Map();
+  for (const record of records) {
+    if (record?.film?.imdbId && !recordByImdbId.has(record.film.imdbId)) {
+      recordByImdbId.set(record.film.imdbId, record);
+    }
+  }
+
+  const imdbUnique = [...new Set(records.map((record) => record?.film?.imdbId).filter((imdbId) => imdbId && !imdbLookup.has(imdbId)))];
+  const imdbChunks = chunk(imdbUnique, 5);
+  logStep(`imdbId pass: ${imdbUnique.length} uncached film(s) to fetch across ${imdbChunks.length} chunk(s)`);
+
+  let imdbChunkIndex = 0;
+  for (const group of imdbChunks) {
+    imdbChunkIndex += 1;
     await Promise.all(
       group.map(async (imdbId) => {
-        const matching = records.find((record) => record?.film?.imdbId === imdbId);
+        const matching = recordByImdbId.get(imdbId);
         if (!matching) {
           return;
         }
@@ -238,8 +310,10 @@ async function run() {
 
     // Persist after every chunk so a later failure only risks the current
     // chunk's progress (at most 5 records), not the entire run's.
-    const enrichedPayload = buildEnrichedPayload(payload, records, imdbLookup, failures);
+    const enrichedPayload = buildEnrichedPayload(payload, records, imdbLookup, failures, fallbackLookup);
     await writeFile(generatedPath, `${JSON.stringify(enrichedPayload, null, 2)}\n`, "utf8");
+    await writeFile(cachePath, `${JSON.stringify(serializeTmdbCache(imdbLookup, fallbackLookup), null, 2)}\n`, "utf8");
+    logStep(`imdbId pass: chunk ${imdbChunkIndex}/${imdbChunks.length} done — enriched=${imdbLookup.size}, failures=${failures.length}`);
   }
 
   // Second pass: records with no imdbId at all (the majority of Cannes/
@@ -251,10 +325,18 @@ async function run() {
   const noImdbRecords = records.filter((record) => !record?.film?.imdbId);
   const uniqueFallbackTargets = new Map();
   for (const record of noImdbRecords) {
-    uniqueFallbackTargets.set(titleYearFallbackKey(record), record);
+    const key = titleYearFallbackKey(record);
+    if (!fallbackLookup.has(key)) {
+      uniqueFallbackTargets.set(key, record);
+    }
   }
 
-  for (const group of chunk([...uniqueFallbackTargets.values()], 5)) {
+  const fallbackChunks = chunk([...uniqueFallbackTargets.values()], 5);
+  logStep(`title/year pass: ${uniqueFallbackTargets.size} uncached film(s) to search across ${fallbackChunks.length} chunk(s)`);
+
+  let fallbackChunkIndex = 0;
+  for (const group of fallbackChunks) {
+    fallbackChunkIndex += 1;
     await Promise.all(
       group.map(async (record) => {
         const key = titleYearFallbackKey(record);
@@ -274,9 +356,11 @@ async function run() {
 
     const enrichedPayload = buildEnrichedPayload(payload, records, imdbLookup, failures, fallbackLookup);
     await writeFile(generatedPath, `${JSON.stringify(enrichedPayload, null, 2)}\n`, "utf8");
+    await writeFile(cachePath, `${JSON.stringify(serializeTmdbCache(imdbLookup, fallbackLookup), null, 2)}\n`, "utf8");
+    logStep(`title/year pass: chunk ${fallbackChunkIndex}/${fallbackChunks.length} done — matched=${fallbackLookup.size}, unmatched=${titleYearFailures.length}`);
   }
 
-  console.log(
+  logStep(
     `TMDB enrichment complete for ${imdbLookup.size} films by imdbId, ${fallbackLookup.size} more by title/year match. ` +
       `failures=${failures.length}, title/year unmatched=${titleYearFailures.length} (left as-is, not guessed)`
   );
