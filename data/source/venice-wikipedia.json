@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-12T22:43:43.464Z",
+  "generatedAt": "2026-07-13T23:57:36.102Z",
   "records": [
     {
       "year": 1932,
@@ -13574,10 +13574,10 @@
       "year": 1985,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Manoel de Oliveira – Special Mention",
+      "category": "Sergio Trasatti Awards",
       "result": "winner",
       "film": {
-        "title": "The Feather Fairy",
+        "title": "The Satin Slipper",
         "releaseYear": 1985,
         "imdbId": null,
         "countryCodes": [],
@@ -15804,10 +15804,10 @@
       "year": 1987,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best Actress – Special Golden Ciak",
+      "category": "Golden Ciak",
       "result": "winner",
       "film": {
-        "title": "Au revoir les enfants",
+        "title": "Made in Heaven",
         "releaseYear": 1987,
         "imdbId": null,
         "countryCodes": [],
@@ -15818,12 +15818,7 @@
         "runtimeMinutes": 0
       },
       "directors": [],
-      "credits": [
-        {
-          "name": "Louis Malle",
-          "role": "cast"
-        }
-      ]
+      "credits": []
     },
     {
       "year": 1987,
@@ -24373,10 +24368,10 @@
       "year": 1993,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Volpi Cup for Best Actor – Best Supporting Actor",
+      "category": "Main Competition",
       "result": "winner",
       "film": {
-        "title": "1, 2, 3, Sun",
+        "title": "Un'anima divisa in due",
         "releaseYear": 1993,
         "imdbId": null,
         "countryCodes": [],
@@ -24387,21 +24382,16 @@
         "runtimeMinutes": 0
       },
       "directors": [],
-      "credits": [
-        {
-          "name": "Marcello Mastroianni",
-          "role": "cast"
-        }
-      ]
+      "credits": []
     },
     {
       "year": 1993,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Volpi Cup for Best Actress – Best Supporting Actress",
+      "category": "Main Competition",
       "result": "winner",
       "film": {
-        "title": "Dove siete? Io sono qui",
+        "title": "Three Colors: Blue",
         "releaseYear": 1993,
         "imdbId": null,
         "countryCodes": [],
@@ -24412,12 +24402,7 @@
         "runtimeMinutes": 0
       },
       "directors": [],
-      "credits": [
-        {
-          "name": "Anna Bonaiuto",
-          "role": "cast"
-        }
-      ]
+      "credits": []
     },
     {
       "year": 1993,
@@ -26090,10 +26075,10 @@
       "year": 1994,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Volpi Cup for Best Actor – Best Supporting Actor",
+      "category": "Main Competition",
       "result": "winner",
       "film": {
-        "title": "The Bull",
+        "title": "In the Heat of the Sun",
         "releaseYear": 1994,
         "imdbId": null,
         "countryCodes": [],
@@ -26104,21 +26089,16 @@
         "runtimeMinutes": 0
       },
       "directors": [],
-      "credits": [
-        {
-          "name": "Roberto Citran",
-          "role": "cast"
-        }
-      ]
+      "credits": []
     },
     {
       "year": 1994,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Volpi Cup for Best Actress – Best Supporting Actress",
+      "category": "Main Competition",
       "result": "winner",
       "film": {
-        "title": "Little Odessa",
+        "title": "Três Irmãos",
         "releaseYear": 1994,
         "imdbId": null,
         "countryCodes": [],
@@ -26129,12 +26109,7 @@
         "runtimeMinutes": 0
       },
       "directors": [],
-      "credits": [
-        {
-          "name": "Vanessa Redgrave",
-          "role": "cast"
-        }
-      ]
+      "credits": []
     },
     {
       "year": 1994,
@@ -27627,10 +27602,10 @@
       "year": 1995,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Volpi Cup for Best Actor – Best Supporting Actor",
+      "category": "Main Competition",
       "result": "winner",
       "film": {
-        "title": "Nothing Personal",
+        "title": "The Deathmaker",
         "releaseYear": 1995,
         "imdbId": null,
         "countryCodes": [],
@@ -27641,21 +27616,16 @@
         "runtimeMinutes": 0
       },
       "directors": [],
-      "credits": [
-        {
-          "name": "Ian Hart",
-          "role": "cast"
-        }
-      ]
+      "credits": []
     },
     {
       "year": 1995,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Volpi Cup for Best Actress – Best Supporting Actress",
+      "category": "Main Competition",
       "result": "winner",
       "film": {
-        "title": "Romanzo di un giovane povero",
+        "title": "La Cérémonie",
         "releaseYear": 1995,
         "imdbId": null,
         "countryCodes": [],
@@ -27666,12 +27636,7 @@
         "runtimeMinutes": 0
       },
       "directors": [],
-      "credits": [
-        {
-          "name": "Isabella Ferrari",
-          "role": "cast"
-        }
-      ]
+      "credits": []
     },
     {
       "year": 1995,
@@ -29617,10 +29582,10 @@
       "year": 1996,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Volpi Cup for Best Actor – Volpi Cup for Best Supporting Actor",
+      "category": "Main Competition",
       "result": "winner",
       "film": {
-        "title": "The Funeral",
+        "title": "Michael Collins",
         "releaseYear": 1996,
         "imdbId": null,
         "countryCodes": [],
@@ -29631,12 +29596,7 @@
         "runtimeMinutes": 0
       },
       "directors": [],
-      "credits": [
-        {
-          "name": "Chris Penn",
-          "role": "cast"
-        }
-      ]
+      "credits": []
     },
     {
       "year": 1996,
@@ -34892,10 +34852,10 @@
       "year": 1999,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Volpi Cup for Best Actress – Special Mention",
+      "category": "Main Competition",
       "result": "winner",
       "film": {
-        "title": "Se-tong",
+        "title": "Une liaison pornographique",
         "releaseYear": 1999,
         "imdbId": null,
         "countryCodes": [],
@@ -34906,12 +34866,7 @@
         "runtimeMinutes": 0
       },
       "directors": [],
-      "credits": [
-        {
-          "name": "Heng Tang",
-          "role": "cast"
-        }
-      ]
+      "credits": []
     },
     {
       "year": 1999,
@@ -35122,10 +35077,10 @@
       "year": 1999,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best Actress – Special Mention",
+      "category": "Pasinetti Award",
       "result": "winner",
       "film": {
-        "title": "Guo nian hui jia",
+        "title": "Empty Days",
         "releaseYear": 1999,
         "imdbId": null,
         "countryCodes": [],
@@ -35136,12 +35091,7 @@
         "runtimeMinutes": 0
       },
       "directors": [],
-      "credits": [
-        {
-          "name": "Zhang Yuan",
-          "role": "cast"
-        }
-      ]
+      "credits": []
     },
     {
       "year": 1999,
@@ -39766,30 +39716,10 @@
       "year": 2002,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Special Jury Award – Special Mention",
+      "category": "San Marco Prize",
       "result": "winner",
       "film": {
-        "title": "The Virgin of Lust",
-        "releaseYear": 2002,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2002,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
-      "category": "Special Jury Award – Special Mention",
-      "result": "winner",
-      "film": {
-        "title": "Public Toilet",
+        "title": "A Snake of June",
         "releaseYear": 2002,
         "imdbId": null,
         "countryCodes": [],
@@ -40016,7 +39946,7 @@
       "year": 2002,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best Film – Special Mention",
+      "category": "Pasinetti Award",
       "result": "winner",
       "film": {
         "title": "Velocità massima",
@@ -41262,26 +41192,6 @@
       "result": "nominee",
       "film": {
         "title": "The Tulse Luper Suitcases: Antwerp",
-        "releaseYear": 2003,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2003,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
-      "category": "Feature films - Fiction",
-      "result": "nominee",
-      "film": {
-        "title": "English title",
         "releaseYear": 2003,
         "imdbId": null,
         "countryCodes": [],
@@ -42850,10 +42760,10 @@
       "year": 2003,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "UIP Award for Best European Short Film – Special mention",
+      "category": "Short Film Competition",
       "result": "winner",
       "film": {
-        "title": "Hochbetrieb",
+        "title": "UIP Award for Best European Short Film: The Trumouse Show",
         "releaseYear": 2003,
         "imdbId": null,
         "countryCodes": [],
@@ -45762,26 +45672,6 @@
       "year": 2004,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best Film – Special mention",
-      "result": "winner",
-      "film": {
-        "title": "Vento di terra",
-        "releaseYear": 2004,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2004,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
       "category": "Digital Cinema Award",
       "result": "winner",
       "film": {
@@ -45802,10 +45692,10 @@
       "year": 2004,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Citroen Short Super-Short Lion for Best Short Film – Special mention",
+      "category": "Short Film Competition (Corto Cortissimo)",
       "result": "winner",
       "film": {
-        "title": "The Carpenter and His Clumsy Wife",
+        "title": "Citroen Short Super-Short Lion for Best Short Film: Signe d'appartenence",
         "releaseYear": 2004,
         "imdbId": null,
         "countryCodes": [],
@@ -48691,10 +48581,10 @@
       "year": 2005,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Citroen Short Super-Short Lion for Best Short Film – Special Mention",
+      "category": "Short Film Competition (Corto Cortissimo Lion)",
       "result": "winner",
       "film": {
-        "title": "Layla Afel",
+        "title": "Citroen Short Super-Short Lion for Best Short Film: Small Station",
         "releaseYear": 2005,
         "imdbId": null,
         "countryCodes": [],
@@ -51188,10 +51078,10 @@
       "year": 2006,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "UIP Award for the Best European Short Film – Special Mention",
+      "category": "Short Film Competition (Corto Cortissimo)",
       "result": "winner",
       "film": {
-        "title": "Adults Only",
+        "title": "UIP Award for the Best European Short Film: The Making of Parts",
         "releaseYear": 2006,
         "imdbId": null,
         "countryCodes": [],
@@ -53975,10 +53865,10 @@
       "year": 2007,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best Documentary – Special Mention",
+      "category": "Horizons (Orizzonti)",
       "result": "winner",
       "film": {
-        "title": "Death in the Land of Encantos",
+        "title": "Useless",
         "releaseYear": 2007,
         "imdbId": null,
         "countryCodes": [],
@@ -54015,10 +53905,10 @@
       "year": 2007,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "UIP Award for the Best European Short Film – Special Mention",
+      "category": "Short Film Competition (Corto Cortissimo)",
       "result": "winner",
       "film": {
-        "title": "Stone People",
+        "title": "Eduardo Chapero-Jackson",
         "releaseYear": 2007,
         "imdbId": null,
         "countryCodes": [],
@@ -54155,10 +54045,10 @@
       "year": 2007,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best Film – Special Mention",
+      "category": "Francesco Pasinetti Awards",
       "result": "winner",
       "film": {
-        "title": "Valzer",
+        "title": "Don't Think About It",
         "releaseYear": 2007,
         "imdbId": null,
         "countryCodes": [],
@@ -57802,30 +57692,10 @@
       "year": 2008,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best Documentary – Special Mention",
+      "category": "Horizons (Orizzonti)",
       "result": "winner",
       "film": {
-        "title": "Un Lac",
-        "releaseYear": 2008,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2008,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
-      "category": "Lion for Best Short Film – Special Mention",
-      "result": "winner",
-      "film": {
-        "title": "Vacsora",
+        "title": "Gianfranco Rosi",
         "releaseYear": 2008,
         "imdbId": null,
         "countryCodes": [],
@@ -58122,10 +57992,10 @@
       "year": 2008,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best Film – Special Mention",
+      "category": "Francesco Pasinetti Award (SNGCI)",
       "result": "winner",
       "film": {
-        "title": "Pa-ra-da",
+        "title": "Marco Pontecorvo",
         "releaseYear": 2008,
         "imdbId": null,
         "countryCodes": [],
@@ -61949,10 +61819,10 @@
       "year": 2009,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best Documentary – Special mention",
+      "category": "Horizons (Orizzonti)",
       "result": "winner",
       "film": {
-        "title": "The Man's Woman and Other Stories",
+        "title": "Haibin Du",
         "releaseYear": 2009,
         "imdbId": null,
         "countryCodes": [],
@@ -62009,30 +61879,10 @@
       "year": 2009,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Venice Nomination to the European Film Awards 2009 – Special mention",
+      "category": "Short Film Competition (Corto Cortissimo)",
       "result": "winner",
       "film": {
-        "title": "Felicità",
-        "releaseYear": 2009,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2009,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
-      "category": "Best Feature Film – Special Mention",
-      "result": "winner",
-      "film": {
-        "title": "In the Eyes",
+        "title": "Venice Nomination to the European Film Awards 2009: Sinner",
         "releaseYear": 2009,
         "imdbId": null,
         "countryCodes": [],
@@ -62093,26 +61943,6 @@
       "result": "winner",
       "film": {
         "title": "Tehroun",
-        "releaseYear": 2009,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2009,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
-      "category": "Future Film Festival Digital Award – Special Mention",
-      "result": "winner",
-      "film": {
-        "title": "Up",
         "releaseYear": 2009,
         "imdbId": null,
         "countryCodes": [],
@@ -62296,10 +62126,10 @@
       "year": 2009,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best Actress – Special award",
+      "category": "Francesco Pasinetti Award (SNGCI)",
       "result": "winner",
       "film": {
-        "title": "The Big Dream",
+        "title": "The White Space",
         "releaseYear": 2009,
         "imdbId": null,
         "countryCodes": [],
@@ -62310,37 +62140,7 @@
         "runtimeMinutes": 0
       },
       "directors": [],
-      "credits": [
-        {
-          "name": "Riccardo Scamarcio",
-          "role": "cast"
-        }
-      ]
-    },
-    {
-      "year": 2009,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
-      "category": "Best Actress – Special award",
-      "result": "winner",
-      "film": {
-        "title": "Armando Testa – Povero ma moderno",
-        "releaseYear": 2009,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": [
-        {
-          "name": "Pappi Corsicato",
-          "role": "cast"
-        }
-      ]
+      "credits": []
     },
     {
       "year": 2009,
@@ -66721,10 +66521,10 @@
       "year": 2010,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Orizzonti Award for Short/Medium-length Films – Special Mention",
+      "category": "Horizons (Orizzonti)",
       "result": "winner",
       "film": {
-        "title": "Jean Gentil",
+        "title": "Laura Amelia Guzmán and Israel Cárdenas",
         "releaseYear": 2010,
         "imdbId": null,
         "countryCodes": [],
@@ -66745,26 +66545,6 @@
       "result": "winner",
       "film": {
         "title": "The External World",
-        "releaseYear": 2010,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2010,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
-      "category": "Best Film – Special Mention",
-      "result": "winner",
-      "film": {
-        "title": "his role in 20 Cigarettes",
         "releaseYear": 2010,
         "imdbId": null,
         "countryCodes": [],
@@ -66901,10 +66681,10 @@
       "year": 2010,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Label Europa Cinemas Award – Special Mention",
+      "category": "Venice Days (Giornati degli Autori)",
       "result": "winner",
       "film": {
-        "title": "Incendies",
+        "title": "The Clink of Ice",
         "releaseYear": 2010,
         "imdbId": null,
         "countryCodes": [],
@@ -66961,10 +66741,10 @@
       "year": 2010,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "FEDIC Award – Special Mention",
+      "category": "Venice Days (Giornati degli Autori)",
       "result": "winner",
       "film": {
-        "title": "Afraid of the Dark",
+        "title": "Dark Love",
         "releaseYear": 2010,
         "imdbId": null,
         "countryCodes": [],
@@ -80291,26 +80071,6 @@
       "year": 2013,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "FEDIC Award – Special mention",
-      "result": "winner",
-      "film": {
-        "title": "The Art of Happiness",
-        "releaseYear": 2013,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2013,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
       "category": "Venice Days Award",
       "result": "winner",
       "film": {
@@ -80331,10 +80091,10 @@
       "year": 2013,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Label Europa Cinemas Award – Special mention",
+      "category": "Venice Days (Giornati degli Autori)",
       "result": "winner",
       "film": {
-        "title": "Alienation",
+        "title": "Label Europa Cinemas Award: The Good Life",
         "releaseYear": 2013,
         "imdbId": null,
         "countryCodes": [],
@@ -80385,28 +80145,6 @@
         "runtimeMinutes": 0
       },
       "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2013,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
-      "category": "Best director of a debut film – Special mention",
-      "result": "winner",
-      "film": {
-        "title": "The Good Life",
-        "releaseYear": 2013,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [
-        "Jean Denizo"
-      ],
       "credits": []
     },
     {
@@ -80513,7 +80251,7 @@
       "year": 2013,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best Actors – Special mention",
+      "category": "Francesco Pasinetti (SNGCI) Award",
       "result": "winner",
       "film": {
         "title": "Walesa. Man of Hope",
@@ -80527,37 +80265,7 @@
         "runtimeMinutes": 0
       },
       "directors": [],
-      "credits": [
-        {
-          "name": "Maria Rosaria Omaggio",
-          "role": "cast"
-        }
-      ]
-    },
-    {
-      "year": 2013,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
-      "category": "Best Actors – Special mention",
-      "result": "winner",
-      "film": {
-        "title": "The Third Half",
-        "releaseYear": 2013,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": [
-        {
-          "name": "Enrico Maria Artale",
-          "role": "cast"
-        }
-      ]
+      "credits": []
     },
     {
       "year": 2013,
@@ -81023,10 +80731,10 @@
       "year": 2013,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best Soundtrack Award – Special mention for Best Contemporary Actor",
+      "category": "Soundtrack Stars Award",
       "result": "winner",
       "film": {
-        "title": "Ryuchi Sakamoto (Venezia 70 Jury member)",
+        "title": "Best Soundtrack Award: Via Castellana Bandiera",
         "releaseYear": 2013,
         "imdbId": null,
         "countryCodes": [],
@@ -84125,7 +83833,7 @@
       "year": 2014,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "FEDEORA awards – Best Film",
+      "category": "29th Venice International Critics' Week",
       "result": "winner",
       "film": {
         "title": "Flapping in The Middle of Nowhere",
@@ -84140,31 +83848,6 @@
       },
       "directors": [],
       "credits": []
-    },
-    {
-      "year": 2014,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
-      "category": "FEDEORA awards – Best Screenplay",
-      "result": "winner",
-      "film": {
-        "title": "No One's Child",
-        "releaseYear": 2014,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": [
-        {
-          "name": "Vuk Ršumović",
-          "role": "writer"
-        }
-      ]
     },
     {
       "year": 2014,
@@ -84244,48 +83927,6 @@
         "runtimeMinutes": 0
       },
       "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2014,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
-      "category": "FEDEORA Awards – Best Film",
-      "result": "winner",
-      "film": {
-        "title": "One on One",
-        "releaseYear": 2014,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2014,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
-      "category": "FEDEORA Awards – Best Director of a Debut Film",
-      "result": "winner",
-      "film": {
-        "title": "Labour of Love",
-        "releaseYear": 2014,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [
-        "Aditya Vikram Sengupta"
-      ],
       "credits": []
     },
     {
@@ -84962,7 +84603,7 @@
       "year": 2014,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best actor – Special mention",
+      "category": "Young Jury Members of the Vittorio Veneto Film Festival",
       "result": "winner",
       "film": {
         "title": "The Cut",
@@ -84976,12 +84617,7 @@
         "runtimeMinutes": 0
       },
       "directors": [],
-      "credits": [
-        {
-          "name": "Fatih Akin",
-          "role": "cast"
-        }
-      ]
+      "credits": []
     },
     {
       "year": 2014,
@@ -88731,46 +88367,6 @@
       "year": 2015,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Laguna Sud Award – Best Film",
-      "result": "winner",
-      "film": {
-        "title": "Lolo",
-        "releaseYear": 2015,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2015,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
-      "category": "Laguna Sud Award – Best Italian Discovery",
-      "result": "winner",
-      "film": {
-        "title": "Arianna",
-        "releaseYear": 2015,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2015,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
       "category": "Francesco Pasinetti (SNGCI) Award - Special mentions",
       "result": "nominee",
       "film": {
@@ -88831,10 +88427,10 @@
       "year": 2015,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best Film (Horizons) – Special mention",
+      "category": "FIPRESCI Awards",
       "result": "winner",
       "film": {
-        "title": "The Childhood of a Leader",
+        "title": "Wednesday, 9 May",
         "releaseYear": 2015,
         "imdbId": null,
         "countryCodes": [],
@@ -89101,10 +88697,10 @@
       "year": 2015,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Alexander Sokurov – Special Award",
+      "category": "Fondazione Mimmo Rotella Award",
       "result": "winner",
       "film": {
-        "title": "Johnny Depp",
+        "title": "Francofonia",
         "releaseYear": 2015,
         "imdbId": null,
         "countryCodes": [],
@@ -93600,10 +93196,10 @@
       "year": 2016,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best Actress – Special mention",
+      "category": "Francesco Pasinetti – SNGCI Award",
       "result": "winner",
       "film": {
-        "title": "their roles in Indivisible",
+        "title": "Sara Serraiocco",
         "releaseYear": 2016,
         "imdbId": null,
         "countryCodes": [],
@@ -93614,12 +93210,7 @@
         "runtimeMinutes": 0
       },
       "directors": [],
-      "credits": [
-        {
-          "name": "Angela and Marianna Fontana",
-          "role": "cast"
-        }
-      ]
+      "credits": []
     },
     {
       "year": 2016,
@@ -98620,73 +98211,6 @@
       "year": 2017,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Fedeora Awards – Best Film",
-      "result": "winner",
-      "film": {
-        "title": "Eye on Juliet",
-        "releaseYear": 2017,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2017,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
-      "category": "Fedeora Awards – Best Director of a Debut Film",
-      "result": "winner",
-      "film": {
-        "title": "M",
-        "releaseYear": 2017,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [
-        "Sara Forestier"
-      ],
-      "credits": []
-    },
-    {
-      "year": 2017,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
-      "category": "Fedeora Awards – Best Actor",
-      "result": "winner",
-      "film": {
-        "title": "M",
-        "releaseYear": 2017,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": [
-        {
-          "name": "Redouanne Harjane",
-          "role": "cast"
-        }
-      ]
-    },
-    {
-      "year": 2017,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
       "category": "Edipo Re Award",
       "result": "winner",
       "film": {
@@ -99367,10 +98891,10 @@
       "year": 2017,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best Cast – Special award",
+      "category": "Francesco Pasinetti Awards",
       "result": "winner",
       "film": {
-        "title": "Cinderella the Cat",
+        "title": "Giampaolo Morelli",
         "releaseYear": 2017,
         "imdbId": null,
         "countryCodes": [],
@@ -99381,37 +98905,7 @@
         "runtimeMinutes": 0
       },
       "directors": [],
-      "credits": [
-        {
-          "name": "Alessandro Rak, Ivan Cappiello, Marino Guarnieri, Dario Sansone",
-          "role": "cast"
-        }
-      ]
-    },
-    {
-      "year": 2017,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
-      "category": "Best Cast – Special award",
-      "result": "winner",
-      "film": {
-        "title": "Nico, 1988",
-        "releaseYear": 2017,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": [
-        {
-          "name": "Susanna Nicchiarelli",
-          "role": "cast"
-        }
-      ]
+      "credits": []
     },
     {
       "year": 2017,
@@ -99497,10 +98991,10 @@
       "year": 2017,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Alexandre Desplat – Special award",
+      "category": "Soundtrack Stars Award",
       "result": "winner",
       "film": {
-        "title": "Love and Bullets",
+        "title": "The Shape of Water",
         "releaseYear": 2017,
         "imdbId": null,
         "countryCodes": [],
@@ -112495,10 +111989,10 @@
       "year": 2021,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best Soundtrack – Special Mention",
+      "category": "Premio Soundtrack Stars Award",
       "result": "winner",
       "film": {
-        "title": "Mona Lisa and the Blood Moon",
+        "title": "Freaks Out",
         "releaseYear": 2021,
         "imdbId": null,
         "countryCodes": [],
@@ -115972,26 +115466,6 @@
       "year": 2022,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Grand Prize – Jury special mention",
-      "result": "winner",
-      "film": {
-        "title": "Anhell69",
-        "releaseYear": 2022,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2022,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
       "category": "The Film Club Audience award",
       "result": "winner",
       "film": {
@@ -116278,10 +115752,10 @@
       "year": 2022,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best Directing – Special Mention",
+      "category": "Authors under 40 Award",
       "result": "winner",
       "film": {
-        "title": "The Last Queen",
+        "title": "Ordinary Failures",
         "releaseYear": 2022,
         "imdbId": null,
         "countryCodes": [],
@@ -116291,53 +115765,7 @@
         "posterUrl": "",
         "runtimeMinutes": 0
       },
-      "directors": [
-        "Adila Bendimerad and Damien Ounouri"
-      ],
-      "credits": []
-    },
-    {
-      "year": 2022,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
-      "category": "Best Directing – Special Mention",
-      "result": "winner",
-      "film": {
-        "title": "Have You Seen This Woman?",
-        "releaseYear": 2022,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [
-        "Dušan Zorić and Matija Gluščević"
-      ],
-      "credits": []
-    },
-    {
-      "year": 2022,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
-      "category": "Best Directing – Special Mention",
-      "result": "winner",
-      "film": {
-        "title": "Blue Jean",
-        "releaseYear": 2022,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [
-        "Georgia Oakley"
-      ],
+      "directors": [],
       "credits": []
     },
     {
@@ -117001,10 +116429,10 @@
       "year": 2022,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Lifetime Achievement Award – Special Mention",
+      "category": "Premio Soundtrack Stars Award",
       "result": "winner",
       "film": {
-        "title": "Sergio Leone: The Italian Who Invented America, soundtrack",
+        "title": "Sergio Leone: The Italian Who Invented America",
         "releaseYear": 2022,
         "imdbId": null,
         "countryCodes": [],
@@ -121499,10 +120927,10 @@
       "year": 2023,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best Screenwriting – Special Mention",
+      "category": "Authors Under 40 Award",
       "result": "winner",
       "film": {
-        "title": "Humanist Vampire Seeking Consenting Suicidal Person",
+        "title": "Paradise Is Burning",
         "releaseYear": 2023,
         "imdbId": null,
         "countryCodes": [],
@@ -121513,37 +120941,7 @@
         "runtimeMinutes": 0
       },
       "directors": [],
-      "credits": [
-        {
-          "name": "Ariane Louis-Seize and Chrisine Doyon",
-          "role": "writer"
-        }
-      ]
-    },
-    {
-      "year": 2023,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
-      "category": "Best Screenwriting – Special Mention for Best Editing",
-      "result": "winner",
-      "film": {
-        "title": "Malqueridas",
-        "releaseYear": 2023,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": [
-        {
-          "name": "Javira Velozo and Tana Gilbert",
-          "role": "writer"
-        }
-      ]
+      "credits": []
     },
     {
       "year": 2023,
@@ -121789,10 +121187,10 @@
       "year": 2023,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "XR Fan Experience – XR Special Mention",
+      "category": "Fanheart3 Award",
       "result": "winner",
       "film": {
-        "title": "Pixel Ripped 1978",
+        "title": "Ethan Shaftel",
         "releaseYear": 2023,
         "imdbId": null,
         "countryCodes": [],
@@ -122181,30 +121579,10 @@
       "year": 2023,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best Soundtrack – Special Mention",
+      "category": "Premio Soundtrack Stars Award",
       "result": "winner",
       "film": {
-        "title": "The Killer, soundtrack",
-        "releaseYear": 2023,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2023,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
-      "category": "Best Soundtrack – Special Prize",
-      "result": "winner",
-      "film": {
-        "title": "Adagio, soundtrack",
+        "title": "Io capitano",
         "releaseYear": 2023,
         "imdbId": null,
         "countryCodes": [],
@@ -127133,26 +126511,6 @@
       "year": 2024,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "IWONDERFULL Grand Prize – IWONDERFULL Grand Prize - Jury Special Mention",
-      "result": "winner",
-      "film": {
-        "title": "No Sleep Till",
-        "releaseYear": 2024,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 2024,
-      "festivalId": "venice",
-      "festivalName": "Venice Film Festival",
       "category": "The Film Club Audience award",
       "result": "winner",
       "film": {
@@ -127699,10 +127057,10 @@
       "year": 2024,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "XR Fan Experience – XR Special Mention",
+      "category": "Fanheart3 Award",
       "result": "winner",
       "film": {
-        "title": "Nightmara: Episode 3",
+        "title": "XR Fan Experience: Uncanny Alley: A New Day",
         "releaseYear": 2024,
         "imdbId": null,
         "countryCodes": [],
@@ -127799,10 +127157,10 @@
       "year": 2024,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Romana Maggiora Vergano – Special Mention",
+      "category": "Francesco Pasinetti Award",
       "result": "winner",
       "film": {
-        "title": "Familia",
+        "title": "The Time It Takes",
         "releaseYear": 2024,
         "imdbId": null,
         "countryCodes": [],
@@ -133342,10 +132700,10 @@
       "year": 2025,
       "festivalId": "venice",
       "festivalName": "Venice Film Festival",
-      "category": "Best Actress – Special Mention",
+      "category": "Francesco Pasinetti Award",
       "result": "winner",
       "film": {
-        "title": "La grazia",
+        "title": "Duse",
         "releaseYear": 2025,
         "imdbId": null,
         "countryCodes": [],
@@ -133356,12 +132714,7 @@
         "runtimeMinutes": 0
       },
       "directors": [],
-      "credits": [
-        {
-          "name": "Anna Ferzetti",
-          "role": "cast"
-        }
-      ]
+      "credits": []
     },
     {
       "year": 2025,

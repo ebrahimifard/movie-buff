@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-12T22:44:19.995Z",
+  "generatedAt": "2026-07-13T23:47:41.515Z",
   "records": [
     {
       "year": 1949,
@@ -269,26 +269,6 @@
       "result": "nominee",
       "film": {
         "title": "Paisan",
-        "releaseYear": 1949,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 1949,
-      "festivalId": "bafta",
-      "festivalName": "BAFTA Awards",
-      "category": "Winners and nominees",
-      "result": "nominee",
-      "film": {
-        "title": "Special Award for Film",
         "releaseYear": 1949,
         "imdbId": null,
         "countryCodes": [],
@@ -849,26 +829,6 @@
       "result": "nominee",
       "film": {
         "title": "The Window",
-        "releaseYear": 1950,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 1950,
-      "festivalId": "bafta",
-      "festivalName": "BAFTA Awards",
-      "category": "Winners and nominees",
-      "result": "nominee",
-      "film": {
-        "title": "Best Documentary",
         "releaseYear": 1950,
         "imdbId": null,
         "countryCodes": [],
@@ -1509,26 +1469,6 @@
       "result": "nominee",
       "film": {
         "title": "Édouard et Caroline",
-        "releaseYear": 1952,
-        "imdbId": null,
-        "countryCodes": [],
-        "languages": [],
-        "genres": [],
-        "synopsis": "",
-        "posterUrl": "",
-        "runtimeMinutes": 0
-      },
-      "directors": [],
-      "credits": []
-    },
-    {
-      "year": 1952,
-      "festivalId": "bafta",
-      "festivalName": "BAFTA Awards",
-      "category": "Winners and nominees",
-      "result": "nominee",
-      "film": {
-        "title": "Best Documentary",
         "releaseYear": 1952,
         "imdbId": null,
         "countryCodes": [],
