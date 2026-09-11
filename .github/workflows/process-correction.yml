@@ -21,10 +21,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 20
           cache: npm
@@ -104,7 +104,7 @@ jobs:
       - name: Create pull request
         id: create_pr
         if: steps.import.outcome == 'success' && steps.pipeline.outcome == 'success' && steps.scope_guard.outcome == 'success' && steps.checks.outcome == 'success'
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           branch: data-correction/issue-${{ github.event.issue.number }}
           commit-message: "data: apply correction from #${{ github.event.issue.number }}"
