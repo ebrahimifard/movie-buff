@@ -160,15 +160,18 @@ async function enrichRecordByTitleYear(record, apiKey) {
   }
   const year = record.film.releaseYear || record.year;
 
+  // No primary_release_year/year param here deliberately: TMDB filters
+  // search results to that exact year server-side, which silently drops the
+  // real film whenever `year` (the nomination's ceremony year) differs from
+  // its actual release year — the norm, not the exception, for an awards
+  // ceremony that honors the *prior* year's films (confirmed live: searching
+  // "One Battle After Another" — released 2025 — with primary_release_year
+  // 2026 returned zero real matches, just an unrelated 2026 documentary).
+  // findConfidentMatch already tolerates a ±1-year gap client-side, so an
+  // unfiltered search lets it do the job it was written for.
   const searchUrl = new URL("https://api.themoviedb.org/3/search/movie");
   searchUrl.searchParams.set("api_key", apiKey);
   searchUrl.searchParams.set("query", title);
-  if (year) {
-    // primary_release_year (rather than year) matches only the film's
-    // primary theatrical release, not any re-release/alternate regional
-    // release TMDB also has on file — tighter for festival-year matching.
-    searchUrl.searchParams.set("primary_release_year", String(year));
-  }
 
   const searchPayload = await fetchJson(searchUrl, `TMDB search "${title}" (${year ?? "?"})`);
   const match = findConfidentMatch(searchPayload?.results, title, year);
