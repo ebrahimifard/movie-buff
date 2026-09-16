@@ -299,6 +299,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:adriano-giannini",
+    "name": "Adriano Giannini",
+    "roles": [
+      "cast"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:adrien-brody",
     "name": "Adrien Brody",
     "roles": [
@@ -7651,6 +7660,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:coralie-amedeo-st-phane-briz-and-olivier-gorce",
+    "name": "Coralie Amedeo, Stéphane Brizé and Olivier Gorce",
+    "roles": [
+      "writer"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:coralie-fargeat",
     "name": "Coralie Fargeat",
     "roles": [
@@ -13104,6 +13122,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:gaia-merlonghi",
+    "name": "Gaia Merlonghi",
+    "roles": [
+      "cast"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:gail-dolgin",
     "name": "Gail Dolgin",
     "roles": [
@@ -17288,6 +17315,15 @@
     "name": "Jacqueline Bisset",
     "roles": [
       "cast"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:jacqueline-lentzou",
+    "name": "Jacqueline Lentzou",
+    "roles": [
+      "director"
     ],
     "imdbId": null,
     "tmdbId": null
@@ -21988,15 +22024,6 @@
     "tmdbId": null
   },
   {
-    "id": "person:k-ji-yakusho",
-    "name": "Kōji Yakusho",
-    "roles": [
-      "cast"
-    ],
-    "imdbId": null,
-    "tmdbId": null
-  },
-  {
     "id": "person:k-ji-yamamura",
     "name": "Kōji Yamamura",
     "roles": [
@@ -23019,6 +23046,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:koji-yakusho",
+    "name": "Koji Yakusho",
+    "roles": [
+      "cast"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:kon-ichikawa",
     "name": "Kon Ichikawa",
     "roles": [
@@ -23273,6 +23309,15 @@
   {
     "id": "person:lainie-kazan",
     "name": "Lainie Kazan",
+    "roles": [
+      "cast"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:laleh-marzban",
+    "name": "Laleh Marzban",
     "roles": [
       "cast"
     ],
@@ -25360,6 +25405,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:mar-a-aparicio",
+    "name": "María Aparicio",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:mar-a-luisa-bemberg",
     "name": "María Luisa Bemberg",
     "roles": [
@@ -26539,6 +26593,15 @@
     "name": "Mathieu Kassovitz",
     "roles": [
       "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:mathilde-arcel",
+    "name": "Mathilde Arcel",
+    "roles": [
+      "cast"
     ],
     "imdbId": null,
     "tmdbId": null
@@ -30223,6 +30286,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:paoli-de-luca",
+    "name": "Paoli De Luca",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:paolo-sorrentino",
     "name": "Paolo Sorrentino",
     "roles": [
@@ -31840,6 +31912,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:piero-usberti",
+    "name": "Piero Usberti",
+    "roles": [
+      "cast"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:pierre-coffin",
     "name": "Pierre Coffin",
     "roles": [
@@ -33127,6 +33208,7 @@
     "id": "person:riccardo-scamarcio",
     "name": "Riccardo Scamarcio",
     "roles": [
+      "cast",
       "producer"
     ],
     "imdbId": null,
@@ -36554,6 +36636,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:shalini-adnani",
+    "name": "Shalini Adnani",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:shamus-culhane",
     "name": "Shamus Culhane",
     "roles": [
@@ -39704,6 +39795,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:tommaso-landucci-and-damiano-femfert",
+    "name": "Tommaso Landucci and Damiano Femfert",
+    "roles": [
+      "writer"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:tommy-lee-jones",
     "name": "Tommy Lee Jones",
     "roles": [
@@ -40381,6 +40481,15 @@
   {
     "id": "person:vanessa-redgrave",
     "name": "Vanessa Redgrave",
+    "roles": [
+      "cast"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:vanessa-scalera",
+    "name": "Vanessa Scalera",
     "roles": [
       "cast"
     ],
@@ -42033,6 +42142,15 @@
   {
     "id": "person:yuval-abraham",
     "name": "Yuval Abraham",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:yuval-abraham-and-rachel-szor",
+    "name": "Yuval Abraham and Rachel Szor",
     "roles": [
       "director"
     ],

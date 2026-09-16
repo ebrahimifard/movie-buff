@@ -1,9 +1,9 @@
 {
   "summary": {
-    "generatedAt": "2026-09-11T01:50:34.128Z",
+    "generatedAt": "2026-09-16T21:55:08.526Z",
     "festivals": 9,
     "totalMissingYears": 45,
-    "totalWeakYears": 200
+    "totalWeakYears": 199
   },
   "festivals": [
     {
@@ -1482,7 +1482,7 @@
         "nominees": 2123,
         "missingPoster": 539,
         "missingRuntime": 505,
-        "missingCountry": 544,
+        "missingCountry": 546,
         "missingImdb": 487,
         "missingGenres": 500,
         "missingSynopsis": 490,
@@ -2118,18 +2118,18 @@
         "totalRecords": 3517,
         "winners": 650,
         "nominees": 2867,
-        "missingPoster": 825,
-        "missingRuntime": 727,
-        "missingCountry": 801,
-        "missingImdb": 701,
-        "missingGenres": 795,
-        "missingSynopsis": 709,
-        "posterCoveragePct": 76.5,
-        "runtimeCoveragePct": 79.3,
-        "countryCoveragePct": 77.2,
+        "missingPoster": 824,
+        "missingRuntime": 726,
+        "missingCountry": 800,
+        "missingImdb": 700,
+        "missingGenres": 794,
+        "missingSynopsis": 708,
+        "posterCoveragePct": 76.6,
+        "runtimeCoveragePct": 79.4,
+        "countryCoveragePct": 77.3,
         "imdbCoveragePct": 80.1,
         "genresCoveragePct": 77.4,
-        "synopsisCoveragePct": 79.8
+        "synopsisCoveragePct": 79.9
       }
     },
     {
@@ -2796,18 +2796,18 @@
         "totalRecords": 7195,
         "winners": 2118,
         "nominees": 5077,
-        "missingPoster": 2479,
-        "missingRuntime": 2243,
-        "missingCountry": 2448,
-        "missingImdb": 2167,
-        "missingGenres": 2421,
-        "missingSynopsis": 2212,
-        "posterCoveragePct": 65.5,
-        "runtimeCoveragePct": 68.8,
-        "countryCoveragePct": 66,
-        "imdbCoveragePct": 69.9,
-        "genresCoveragePct": 66.4,
-        "synopsisCoveragePct": 69.3
+        "missingPoster": 2027,
+        "missingRuntime": 1791,
+        "missingCountry": 1997,
+        "missingImdb": 1714,
+        "missingGenres": 1970,
+        "missingSynopsis": 1759,
+        "posterCoveragePct": 71.8,
+        "runtimeCoveragePct": 75.1,
+        "countryCoveragePct": 72.2,
+        "imdbCoveragePct": 76.2,
+        "genresCoveragePct": 72.6,
+        "synopsisCoveragePct": 75.6
       }
     },
     {
@@ -3511,18 +3511,18 @@
         "totalRecords": 4749,
         "winners": 795,
         "nominees": 3954,
-        "missingPoster": 236,
-        "missingRuntime": 229,
-        "missingCountry": 257,
-        "missingImdb": 213,
-        "missingGenres": 232,
-        "missingSynopsis": 217,
-        "posterCoveragePct": 95,
+        "missingPoster": 233,
+        "missingRuntime": 226,
+        "missingCountry": 254,
+        "missingImdb": 210,
+        "missingGenres": 229,
+        "missingSynopsis": 214,
+        "posterCoveragePct": 95.1,
         "runtimeCoveragePct": 95.2,
-        "countryCoveragePct": 94.6,
-        "imdbCoveragePct": 95.5,
-        "genresCoveragePct": 95.1,
-        "synopsisCoveragePct": 95.4
+        "countryCoveragePct": 94.7,
+        "imdbCoveragePct": 95.6,
+        "genresCoveragePct": 95.2,
+        "synopsisCoveragePct": 95.5
       }
     },
     {
@@ -5270,8 +5270,7 @@
         1964,
         1965,
         1967,
-        1968,
-        2026
+        1968
       ],
       "coverageYears": [
         {
@@ -5799,7 +5798,7 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 15,
-          "nomineeCount": 78,
+          "nomineeCount": 79,
           "categoryCount": 35
         },
         {
@@ -5823,7 +5822,7 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 21,
-          "nomineeCount": 43,
+          "nomineeCount": 44,
           "categoryCount": 37
         },
         {
@@ -6023,35 +6022,35 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 67,
-          "nomineeCount": 207,
-          "categoryCount": 88
+          "nomineeCount": 216,
+          "categoryCount": 90
         },
         {
           "year": 2026,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 0,
-          "nomineeCount": 34,
-          "categoryCount": 3
+          "winnerCount": 70,
+          "nomineeCount": 228,
+          "categoryCount": 87
         }
       ],
       "catalogue": {
         "festivalId": "venice",
-        "totalRecords": 6639,
-        "winners": 1301,
-        "nominees": 5338,
-        "missingPoster": 1881,
-        "missingRuntime": 1832,
-        "missingCountry": 1970,
-        "missingImdb": 1706,
-        "missingGenres": 1907,
-        "missingSynopsis": 1771,
-        "posterCoveragePct": 71.7,
-        "runtimeCoveragePct": 72.4,
-        "countryCoveragePct": 70.3,
-        "imdbCoveragePct": 74.3,
-        "genresCoveragePct": 71.3,
-        "synopsisCoveragePct": 73.3
+        "totalRecords": 6914,
+        "winners": 1371,
+        "nominees": 5543,
+        "missingPoster": 1682,
+        "missingRuntime": 1642,
+        "missingCountry": 1773,
+        "missingImdb": 1490,
+        "missingGenres": 1727,
+        "missingSynopsis": 1561,
+        "posterCoveragePct": 75.7,
+        "runtimeCoveragePct": 76.3,
+        "countryCoveragePct": 74.4,
+        "imdbCoveragePct": 78.4,
+        "genresCoveragePct": 75,
+        "synopsisCoveragePct": 77.4
       }
     }
   ]
