@@ -180,8 +180,8 @@ function isTrustedAwardSection(ancestors) {
 function extractRowTitle(cells, headers) {
   const titleIndex = headers.length === cells.length ? detectColumnIndex(headers, /title|film/) : -1;
   const titleCell = titleIndex >= 0 ? cells[titleIndex] : cells[0];
-  const { title, personName, hasFilmSignal } = extractTitleAndPerson(titleCell, null);
-  return { title: title ?? cleanText(titleCell.textContent), personName, hasFilmSignal, titleCell };
+  const { title, personName, hasFilmSignal, originalReleaseYear } = extractTitleAndPerson(titleCell, null);
+  return { title: title ?? cleanText(titleCell.textContent), personName, hasFilmSignal, originalReleaseYear, titleCell };
 }
 
 // Exported so fetch-cannes-wikipedia.mjs's bespoke parser can reuse the same
@@ -203,10 +203,41 @@ export function directChild(element, tagName) {
 // elsewhere in this file (isLiWinner, extractCategoryLabel). Exported so
 // fetch-cannes-wikipedia.mjs's bespoke parser can reuse the same signal
 // rather than duplicating it.
+// A retrospective/classics table cell (Cannes Classics, Venice's "Restored
+// films"/"Restored Prints", ...) writes a film's REAL original release year
+// directly after its italicized title as plain sibling text — e.g.
+// "<i><a>Blowup</a></i> (1966)" — confirmed live on both festivals' pages.
+// Every record otherwise defaults film.releaseYear to `year` (the current
+// festival edition), which is simply wrong for a decades-old film being
+// re-screened: TMDB's year-matching then silently fails even though the
+// film is genuinely on TMDB (confirmed live: searching "One Battle After
+// Another" — a real 2025 release — with the wrong year returns nothing).
+// Scoped tightly to the text immediately following the title's own
+// italic element, not the whole cell/li, so an unrelated 4-digit number
+// elsewhere in a longer nominee line is never mistaken for this.
+function extractOriginalReleaseYear(titleNode) {
+  if (!titleNode) {
+    return undefined;
+  }
+  let trailing = "";
+  let node = titleNode.nextSibling;
+  while (node && trailing.length < 20) {
+    trailing += node.textContent ?? "";
+    node = node.nextSibling;
+  }
+  const match = trailing.match(/^\s*\((\d{4})\)/);
+  if (!match) {
+    return undefined;
+  }
+  const year = Number(match[1]);
+  return year >= 1888 && year <= new Date().getFullYear() ? year : undefined;
+}
+
 export function extractTitleAndPerson(container, nestedUl) {
   const ownItalics = Array.from(container.querySelectorAll("i")).filter((i) => !nestedUl || !nestedUl.contains(i));
   const italicLinks = new Set();
   let title = null;
+  let titleNode = null;
   for (const italic of ownItalics) {
     const link = italic.querySelector("a");
     if (link) {
@@ -216,6 +247,7 @@ export function extractTitleAndPerson(container, nestedUl) {
       const text = link ? cleanText(link.textContent) : cleanText(italic.textContent);
       if (text) {
         title = text;
+        titleNode = italic;
       }
     }
   }
@@ -231,15 +263,15 @@ export function extractTitleAndPerson(container, nestedUl) {
   // has no associated film at all — just the honoree's bare name) should be
   // dropped rather than fabricating a movie from whatever text was found.
   if (title) {
-    return { title, personName, hasFilmSignal: true };
+    return { title, personName, hasFilmSignal: true, originalReleaseYear: extractOriginalReleaseYear(titleNode) };
   }
 
   const ownLink = ownLinks[0];
   if (ownLink) {
-    return { title: cleanText(ownLink.textContent), personName: null, hasFilmSignal: false };
+    return { title: cleanText(ownLink.textContent), personName: null, hasFilmSignal: false, originalReleaseYear: undefined };
   }
 
-  return { title: null, personName: null, hasFilmSignal: false };
+  return { title: null, personName: null, hasFilmSignal: false, originalReleaseYear: undefined };
 }
 
 // A modern Wikipedia "{{Award category}}" cell nests its nominee list inside
@@ -248,9 +280,9 @@ export function extractTitleAndPerson(container, nestedUl) {
 // <li>. Recurse so nominees at any nesting depth are still captured.
 function extractLiTitleAndPerson(li) {
   const nestedUl = directChild(li, "UL");
-  const { title, personName, hasFilmSignal } = extractTitleAndPerson(li, nestedUl);
+  const { title, personName, hasFilmSignal, originalReleaseYear } = extractTitleAndPerson(li, nestedUl);
   if (title) {
-    return { title, personName, hasFilmSignal };
+    return { title, personName, hasFilmSignal, originalReleaseYear };
   }
 
   let text = "";
@@ -260,7 +292,7 @@ function extractLiTitleAndPerson(li) {
     }
     text += node.textContent ?? "";
   }
-  return { title: cleanText(text), personName: null, hasFilmSignal: false };
+  return { title: cleanText(text), personName: null, hasFilmSignal: false, originalReleaseYear: undefined };
 }
 
 function isLiWinner(li) {
@@ -281,9 +313,9 @@ function extractCategoryLabel(cell) {
 function collectListRecords(list, results) {
   const items = Array.from(list.children).filter((child) => child.tagName === "LI");
   items.forEach((li) => {
-    const { title, personName, hasFilmSignal } = extractLiTitleAndPerson(li);
+    const { title, personName, hasFilmSignal, originalReleaseYear } = extractLiTitleAndPerson(li);
     if (title) {
-      results.push({ title, result: isLiWinner(li) ? "winner" : "nominee", personName, hasFilmSignal });
+      results.push({ title, result: isLiWinner(li) ? "winner" : "nominee", personName, hasFilmSignal, originalReleaseYear });
     }
     const nested = directChild(li, "UL");
     if (nested) {
@@ -494,7 +526,7 @@ export function parseSimpleAwardsWikipedia(
   const headings = Array.from(contentRoot.querySelectorAll("h2, h3, h4"));
   const nonCompetitiveNameSet = new Set(nonCompetitiveSectionNames.map((name) => name.toLowerCase()));
 
-  function addRecord(rawCategory, result, rawTitle, personName, hasFilmSignal = true) {
+  function addRecord(rawCategory, result, rawTitle, personName, hasFilmSignal = true, originalReleaseYear) {
     const title = cleanText(rawTitle);
     if (!title || JUNK_TITLE_PATTERN.test(title)) {
       return;
@@ -551,7 +583,7 @@ export function parseSimpleAwardsWikipedia(
       result,
       film: {
         title,
-        releaseYear: year,
+        releaseYear: originalReleaseYear ?? year,
         imdbId: null,
         countryCodes: [],
         languages: [],
@@ -630,19 +662,19 @@ export function parseSimpleAwardsWikipedia(
         gridCells.forEach((cell) => {
           const columnCategory = columnCategories?.[cells.indexOf(cell)];
           const extracted = extractCategoryCellRecords(cell, columnCategory ?? currentCategory);
-          extracted?.records.forEach(({ title, result, personName, hasFilmSignal }) =>
-            addRecord(extracted.category, result, title, personName, hasFilmSignal)
+          extracted?.records.forEach(({ title, result, personName, hasFilmSignal, originalReleaseYear }) =>
+            addRecord(extracted.category, result, title, personName, hasFilmSignal, originalReleaseYear)
           );
         });
         return;
       }
 
-      const { title, personName, hasFilmSignal, titleCell } = extractRowTitle(cells, headers);
+      const { title, personName, hasFilmSignal, originalReleaseYear, titleCell } = extractRowTitle(cells, headers);
       if (!title) {
         return;
       }
       const result = titleCell.querySelector("b") ? "winner" : "nominee";
-      addRecord(currentCategory, result, title, personName, hasFilmSignal);
+      addRecord(currentCategory, result, title, personName, hasFilmSignal, originalReleaseYear);
     });
   });
 

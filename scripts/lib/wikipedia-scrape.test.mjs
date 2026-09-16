@@ -113,6 +113,54 @@ describe("parseSimpleAwardsWikipedia", () => {
     expect(records[1].result).toBe("nominee");
   });
 
+  it("uses a film's real release year from a trailing '(YYYY)' after its italicized title, instead of the festival year (Venice 'Restored films'/Cannes Classics regression)", () => {
+    // Confirmed live: Venice's 2019 "Restored films" table and Cannes'
+    // Classics tables write each film's true original release year right
+    // after its title exactly this way — "<i><a>Crash</a></i> (1996)" — a
+    // decades-old film screened at a much later festival edition. Without
+    // this, every such record was stamped with the current festival year,
+    // which then made TMDB's year-matching fail even for a film TMDB
+    // genuinely has.
+    const html = wrapHtml(`
+      <h3>Restored films</h3>
+      <table class="wikitable">
+        <tr><th>Title</th><th>Director</th><th>Country</th></tr>
+        <tr><td><i><a href="/wiki/Crash">Crash</a></i> (1996)</td><td>David Cronenberg</td><td>Canada</td></tr>
+      </table>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 2019, config);
+    expect(records).toHaveLength(1);
+    expect(records[0].film.title).toBe("Crash");
+    expect(records[0].film.releaseYear).toBe(1996);
+  });
+
+  it("falls back to the festival year when no trailing '(YYYY)' follows the title", () => {
+    const html = wrapHtml(`
+      <h2>Best Picture</h2>
+      <table class="wikitable">
+        <tr><th>Film</th></tr>
+        <tr><td><i><a href="/wiki/Parasite">Parasite</a></i></td></tr>
+      </table>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 2020, config);
+    expect(records[0].film.releaseYear).toBe(2020);
+  });
+
+  it("does not mistake an unrelated trailing parenthetical for a release year", () => {
+    const html = wrapHtml(`
+      <h2>Best Picture</h2>
+      <table class="wikitable">
+        <tr><th>Film</th></tr>
+        <tr><td><i><a href="/wiki/Parasite">Parasite</a></i> (South Korea)</td></tr>
+      </table>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 2020, config);
+    expect(records[0].film.releaseYear).toBe(2020);
+  });
+
   it("uses an in-table category-separator row (colspan TH) as the running category for subsequent rows", () => {
     const html = wrapHtml(`
       <table class="wikitable">

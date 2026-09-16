@@ -490,4 +490,23 @@ describe("parseCannesWikipedia", () => {
     const records = parseCannesWikipedia(html, 2024);
     expect(records.find((r) => r.film.title === "All We Imagine as Light").category).toBe("Grand Prix");
   });
+
+  it("uses a Cannes Classics film's real release year from a trailing '(YYYY)' after its title, instead of the current festival year", () => {
+    // Confirmed live (2004 Cannes Film Festival's Cannes Classics table):
+    // "<i><a>Blowup</a></i> (1966)" — Blowup is a real 1966 Antonioni film
+    // re-screened decades later. Without this, the record was stamped with
+    // releaseYear: 2004, which then made TMDB's year-matching fail even
+    // though the film is genuinely on TMDB.
+    const html = wrapHtml(`
+      <h2>Cannes Classics</h2>
+      <table class="wikitable">
+        <tr><th>Title</th><th>Director</th><th>Country</th></tr>
+        <tr><td><i><a href="/wiki/Blowup">Blowup</a></i> (1966)</td><td><a href="/wiki/Michelangelo_Antonioni">Michelangelo Antonioni</a></td><td>United Kingdom, Italy</td></tr>
+      </table>
+    `);
+    const records = parseCannesWikipedia(html, 2004);
+    expect(records).toHaveLength(1);
+    expect(records[0].film.title).toBe("Blowup");
+    expect(records[0].film.releaseYear).toBe(1966);
+  });
 });

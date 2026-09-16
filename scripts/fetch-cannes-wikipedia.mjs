@@ -192,7 +192,7 @@ export function parseCannesWikipedia(html, year) {
     };
   }
 
-  function addRecord(category, result, title, personName, hasFilmSignal = true) {
+  function addRecord(category, result, title, personName, hasFilmSignal = true, originalReleaseYear) {
     const cleanTitle = cleanText(title)
       .replace(/^[-:*\s]+/, "")
       .replace(/\s*\([^)]*\)\s*$/, "")
@@ -232,7 +232,7 @@ export function parseCannesWikipedia(html, year) {
       result,
       film: {
         title: cleanTitle,
-        releaseYear: year,
+        releaseYear: originalReleaseYear ?? year,
         imdbId: null,
         countryCodes: [],
         languages: [],
@@ -327,6 +327,7 @@ export function parseCannesWikipedia(html, year) {
       let title = "";
       let personName = null;
       let hasFilmSignal = true;
+      let originalReleaseYear;
       if (forMatch) {
         title = forMatch[1];
         personName = rhs.slice(0, forMatch.index).trim();
@@ -338,9 +339,10 @@ export function parseCannesWikipedia(html, year) {
         title = extracted.title ?? rhs;
         personName = extracted.personName;
         hasFilmSignal = extracted.hasFilmSignal;
+        originalReleaseYear = extracted.originalReleaseYear;
       }
 
-      addRecord(category, "winner", title, personName, hasFilmSignal);
+      addRecord(category, "winner", title, personName, hasFilmSignal, originalReleaseYear);
     }
 
     if (nestedUl) {
@@ -364,7 +366,7 @@ export function parseCannesWikipedia(html, year) {
       .trim();
 
     const title = extracted.title ?? fallback;
-    addRecord(sectionCategory, "nominee", title, extracted.personName, extracted.hasFilmSignal);
+    addRecord(sectionCategory, "nominee", title, extracted.personName, extracted.hasFilmSignal, extracted.originalReleaseYear);
   }
 
   function parseTable(table, sectionCategory, isAwardsSection) {
@@ -385,6 +387,7 @@ export function parseCannesWikipedia(html, year) {
       let title = "";
       let personName = null;
       let hasFilmSignal = false;
+      let originalReleaseYear;
       if (headers.length && headers.length === cells.length) {
         const filmIdx = headers.findIndex(h => /title|film|winner/.test(h));
         if (filmIdx >= 0) {
@@ -392,6 +395,7 @@ export function parseCannesWikipedia(html, year) {
           title = extracted.title ?? cleanText(cells[filmIdx].textContent);
           personName = extracted.personName;
           hasFilmSignal = extracted.hasFilmSignal;
+          originalReleaseYear = extracted.originalReleaseYear;
         }
       }
       if (!title) {
@@ -399,6 +403,7 @@ export function parseCannesWikipedia(html, year) {
         title = extracted.title ?? cleanText(cells[0].textContent);
         personName = personName ?? extracted.personName;
         hasFilmSignal = extracted.hasFilmSignal;
+        originalReleaseYear = originalReleaseYear ?? extracted.originalReleaseYear;
       }
       if (!title) return;
 
@@ -410,9 +415,9 @@ export function parseCannesWikipedia(html, year) {
             category = cleanText(cells[awardIdx].textContent) || sectionCategory;
           }
         }
-        addRecord(category, "winner", title, personName, hasFilmSignal);
+        addRecord(category, "winner", title, personName, hasFilmSignal, originalReleaseYear);
       } else {
-        addRecord(sectionCategory, "nominee", title, personName, hasFilmSignal);
+        addRecord(sectionCategory, "nominee", title, personName, hasFilmSignal, originalReleaseYear);
       }
     });
   }
