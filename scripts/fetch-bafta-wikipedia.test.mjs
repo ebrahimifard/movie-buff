@@ -1,5 +1,24 @@
 import { describe, expect, it } from "vitest";
-import { BAFTA_CONFIG, resolveTargetYears } from "./fetch-bafta-wikipedia.mjs";
+import { BAFTA_CONFIG, getWikipediaUrls, resolveTargetYears } from "./fetch-bafta-wikipedia.mjs";
+
+describe("getWikipediaUrls", () => {
+  it("includes the ordinal-titled URL as a fallback (regression: 'ordinal > 0' on a string like '78th' is always false, silently dropping this fallback for every year)", () => {
+    // Confirmed live: BAFTA's Wikipedia articles are titled by ordinal
+    // ("78th British Academy Film Awards"), not by year — the plain-year
+    // URL 404s for most years, so losing this fallback meant those years
+    // were never actually fetched at all.
+    expect(getWikipediaUrls(2025)).toContain("https://en.wikipedia.org/wiki/78th_British_Academy_Film_Awards");
+    expect(getWikipediaUrls(2026)).toContain("https://en.wikipedia.org/wiki/79th_British_Academy_Film_Awards");
+  });
+
+  it("still puts the plain-year URL first", () => {
+    expect(getWikipediaUrls(2025)[0]).toBe("https://en.wikipedia.org/wiki/2025_British_Academy_Film_Awards");
+  });
+
+  it("omits the ordinal URL for a year before BAFTA's first ceremony", () => {
+    expect(getWikipediaUrls(1947)).toEqual(["https://en.wikipedia.org/wiki/1947_British_Academy_Film_Awards"]);
+  });
+});
 
 describe("BAFTA_CONFIG", () => {
   it("uses the festivalId consistent with the rest of the codebase", () => {

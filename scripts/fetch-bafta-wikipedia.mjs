@@ -31,10 +31,18 @@ export const BAFTA_CONFIG = {
   }
 };
 
-function getWikipediaUrls(year) {
+export function getWikipediaUrls(year) {
   const urls = [`https://en.wikipedia.org/wiki/${year}_British_Academy_Film_Awards`];
   const ordinal = getOrdinal(year - 1947);
-  if (ordinal > 0) {
+  // getOrdinal returns a STRING ("78th") or null — `ordinal > 0` coerces any
+  // non-empty string to NaN, which is never > 0, so this fallback URL was
+  // never actually added for any year (confirmed live: BAFTA's Wikipedia
+  // articles are titled by ordinal, e.g. "78th British Academy Film
+  // Awards", not by year — 2025/2026 have real, substantial pages at their
+  // ordinal titles, but the plain-year URL 404s and this dead branch never
+  // tried the real one). Every year without an explicit override in
+  // bafta-wikipedia-url-map.js silently lost this fallback as a result.
+  if (ordinal) {
     urls.push(`https://en.wikipedia.org/wiki/${ordinal}_British_Academy_Film_Awards`);
   }
   return urls;
