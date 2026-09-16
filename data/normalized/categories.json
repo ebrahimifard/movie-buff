@@ -243,6 +243,15 @@
     "isHonoraryAward": false
   },
   {
+    "id": "bafta:best-british-art-direction",
+    "festivalId": "bafta",
+    "name": "Best British Art Direction",
+    "normalizedName": "best-british-art-direction",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "bafta:best-british-art-direction-black-and-white",
     "festivalId": "bafta",
     "name": "Best British Art Direction, Black and White",
@@ -288,6 +297,24 @@
     "isHonoraryAward": false
   },
   {
+    "id": "bafta:best-british-costume-design-black-and-white",
+    "festivalId": "bafta",
+    "name": "Best British Costume Design, Black and White",
+    "normalizedName": "best-british-costume-design-black-and-white",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "bafta:best-british-costume-design-colour",
+    "festivalId": "bafta",
+    "name": "Best British Costume Design, Colour",
+    "normalizedName": "best-british-costume-design-colour",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "bafta:best-british-film",
     "festivalId": "bafta",
     "name": "Best British Film",
@@ -306,12 +333,39 @@
     "isHonoraryAward": false
   },
   {
+    "id": "bafta:best-british-short-animation",
+    "festivalId": "bafta",
+    "name": "Best British Short Animation",
+    "normalizedName": "best-british-short-animation",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "bafta:best-british-short-film",
+    "festivalId": "bafta",
+    "name": "Best British Short Film",
+    "normalizedName": "best-british-short-film",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "bafta:best-casting",
     "festivalId": "bafta",
     "name": "Best Casting",
     "normalizedName": "best-casting",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "bafta:best-children-s-family-film",
+    "festivalId": "bafta",
+    "name": "Best Children's & Family Film",
+    "normalizedName": "best-children-s-family-film",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -459,6 +513,15 @@
     "isHonoraryAward": false
   },
   {
+    "id": "bafta:best-make-up-hair",
+    "festivalId": "bafta",
+    "name": "Best Make Up & Hair",
+    "normalizedName": "best-make-up-hair",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "bafta:best-makeup-and-hair",
     "festivalId": "bafta",
     "name": "Best Makeup and Hair",
@@ -474,6 +537,15 @@
     "normalizedName": "best-original-music",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "bafta:best-original-score",
+    "festivalId": "bafta",
+    "name": "Best Original Score",
+    "normalizedName": "best-original-score",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -591,6 +663,33 @@
     "normalizedName": "best-specialised-film",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "bafta:best-supporting-artist",
+    "festivalId": "bafta",
+    "name": "Best Supporting Artist",
+    "normalizedName": "best-supporting-artist",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "bafta:direction",
+    "festivalId": "bafta",
+    "name": "Direction",
+    "normalizedName": "direction",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "bafta:ee-rising-star-award",
+    "festivalId": "bafta",
+    "name": "EE Rising Star Award",
+    "normalizedName": "ee-rising-star-award",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {

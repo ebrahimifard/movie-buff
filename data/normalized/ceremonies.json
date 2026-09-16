@@ -56,6 +56,14 @@
     "endDate": null
   },
   {
+    "id": "bafta-2025",
+    "festivalId": "bafta",
+    "year": 2025,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "berlinale-2025",
     "festivalId": "berlinale",
     "year": 2025,
@@ -1952,6 +1960,14 @@
     "endDate": null
   },
   {
+    "id": "bafta-1998",
+    "festivalId": "bafta",
+    "year": 1998,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "berlinale-1998",
     "festivalId": "berlinale",
     "year": 1998,
@@ -2448,6 +2464,14 @@
     "endDate": null
   },
   {
+    "id": "bafta-1991",
+    "festivalId": "bafta",
+    "year": 1991,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "berlinale-1991",
     "festivalId": "berlinale",
     "year": 1991,
@@ -2579,6 +2603,14 @@
     "id": "venice-1990",
     "festivalId": "venice",
     "year": 1990,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "bafta-1989",
+    "festivalId": "bafta",
+    "year": 1989,
     "edition": null,
     "startDate": null,
     "endDate": null
@@ -2779,6 +2811,14 @@
     "id": "venice-1987",
     "festivalId": "venice",
     "year": 1987,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "bafta-1986",
+    "festivalId": "bafta",
+    "year": 1986,
     "edition": null,
     "startDate": null,
     "endDate": null
@@ -3091,6 +3131,14 @@
     "id": "venice-1982",
     "festivalId": "venice",
     "year": 1982,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "bafta-1981",
+    "festivalId": "bafta",
+    "year": 1981,
     "edition": null,
     "startDate": null,
     "endDate": null
@@ -3488,6 +3536,14 @@
     "endDate": null
   },
   {
+    "id": "bafta-1974",
+    "festivalId": "bafta",
+    "year": 1974,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "berlinale-1974",
     "festivalId": "berlinale",
     "year": 1974,
@@ -3768,6 +3824,14 @@
     "endDate": null
   },
   {
+    "id": "bafta-1968",
+    "festivalId": "bafta",
+    "year": 1968,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "berlinale-1968",
     "festivalId": "berlinale",
     "year": 1968,
@@ -3859,6 +3923,14 @@
     "id": "venice-1967",
     "festivalId": "venice",
     "year": 1967,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "bafta-1966",
+    "festivalId": "bafta",
+    "year": 1966,
     "edition": null,
     "startDate": null,
     "endDate": null
