@@ -450,6 +450,15 @@
     "isHonoraryAward": false
   },
   {
+    "id": "bafta:best-documentary-film",
+    "festivalId": "bafta",
+    "name": "Best Documentary Film",
+    "normalizedName": "best-documentary-film",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "bafta:best-editing",
     "festivalId": "bafta",
     "name": "Best Editing",
@@ -702,6 +711,15 @@
     "isHonoraryAward": false
   },
   {
+    "id": "bafta:most-promising-newcomer-to-film",
+    "festivalId": "bafta",
+    "name": "Most Promising Newcomer to Film",
+    "normalizedName": "most-promising-newcomer-to-film",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "bafta:most-promising-newcomer-to-leading-film-roles",
     "festivalId": "bafta",
     "name": "Most Promising Newcomer to Leading Film Roles",
@@ -726,6 +744,15 @@
     "normalizedName": "outstanding-debut-by-a-british-writer-director-or-producer",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "bafta:special-award",
+    "festivalId": "bafta",
+    "name": "Special Award",
+    "normalizedName": "special-award",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -6075,6 +6102,24 @@
     "isHonoraryAward": false
   },
   {
+    "id": "golden-globes:best-actor-comedy-or-musical",
+    "festivalId": "golden-globes",
+    "name": "Best Actor - Comedy or Musical",
+    "normalizedName": "best-actor-comedy-or-musical",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:best-actor-drama",
+    "festivalId": "golden-globes",
+    "name": "Best Actor - Drama",
+    "normalizedName": "best-actor-drama",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "golden-globes:best-actor-in-a-leading-role",
     "festivalId": "golden-globes",
     "name": "Best Actor in a Leading Role",
@@ -6099,6 +6144,33 @@
     "normalizedName": "best-actor-in-a-motion-picture-musical-or-comedy",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:best-actor-musical-or-comedy",
+    "festivalId": "golden-globes",
+    "name": "Best Actor - Musical or Comedy",
+    "normalizedName": "best-actor-musical-or-comedy",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:best-actress-comedy-or-musical",
+    "festivalId": "golden-globes",
+    "name": "Best Actress - Comedy or Musical",
+    "normalizedName": "best-actress-comedy-or-musical",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:best-actress-drama",
+    "festivalId": "golden-globes",
+    "name": "Best Actress - Drama",
+    "normalizedName": "best-actress-drama",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -6129,6 +6201,15 @@
     "isHonoraryAward": false
   },
   {
+    "id": "golden-globes:best-actress-musical-or-comedy",
+    "festivalId": "golden-globes",
+    "name": "Best Actress - Musical or Comedy",
+    "normalizedName": "best-actress-musical-or-comedy",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "golden-globes:best-animated-feature",
     "festivalId": "golden-globes",
     "name": "Best Animated Feature",
@@ -6147,6 +6228,15 @@
     "isHonoraryAward": false
   },
   {
+    "id": "golden-globes:best-cinematography-black-and-white",
+    "festivalId": "golden-globes",
+    "name": "Best Cinematography - Black and White",
+    "normalizedName": "best-cinematography-black-and-white",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "golden-globes:best-cinematography-black-white",
     "festivalId": "golden-globes",
     "name": "Best Cinematography (Black & White)",
@@ -6156,10 +6246,28 @@
     "isHonoraryAward": false
   },
   {
+    "id": "golden-globes:best-cinematography-color",
+    "festivalId": "golden-globes",
+    "name": "Best Cinematography - Color",
+    "normalizedName": "best-cinematography-color",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "golden-globes:best-cinematography-colour",
     "festivalId": "golden-globes",
     "name": "Best Cinematography (Colour)",
     "normalizedName": "best-cinematography-colour",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:best-direction-motion-picture",
+    "festivalId": "golden-globes",
+    "name": "Best Direction – Motion Picture",
+    "normalizedName": "best-direction-motion-picture",
     "scope": "film",
     "isAward": false,
     "isHonoraryAward": false
@@ -6176,7 +6284,7 @@
   {
     "id": "golden-globes:best-director-motion-picture",
     "festivalId": "golden-globes",
-    "name": "Best Director – Motion Picture",
+    "name": "Best Director-Motion Picture",
     "normalizedName": "best-director-motion-picture",
     "scope": "film",
     "isAward": true,
@@ -6207,6 +6315,33 @@
     "normalizedName": "best-female-actor-in-a-motion-picture-musical-or-comedy",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:best-film-comedy",
+    "festivalId": "golden-globes",
+    "name": "Best Film - Comedy",
+    "normalizedName": "best-film-comedy",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:best-film-comedy-or-musical",
+    "festivalId": "golden-globes",
+    "name": "Best Film - Comedy or Musical",
+    "normalizedName": "best-film-comedy-or-musical",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:best-film-drama",
+    "festivalId": "golden-globes",
+    "name": "Best Film - Drama",
+    "normalizedName": "best-film-drama",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -6354,12 +6489,84 @@
     "isHonoraryAward": false
   },
   {
+    "id": "golden-globes:best-performance-by-an-actor-in-a-leading-role-comedy-or-musical",
+    "festivalId": "golden-globes",
+    "name": "Best Performance by an Actor in a Leading Role - Comedy or Musical",
+    "normalizedName": "best-performance-by-an-actor-in-a-leading-role-comedy-or-musical",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:best-performance-by-an-actor-in-a-leading-role-drama",
+    "festivalId": "golden-globes",
+    "name": "Best Performance by an Actor in a Leading Role - Drama",
+    "normalizedName": "best-performance-by-an-actor-in-a-leading-role-drama",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:best-performance-by-an-actor-in-a-motion-picture-comedy-or-music",
+    "festivalId": "golden-globes",
+    "name": "Best Performance by an Actor in a Motion Picture – Comedy or Musical",
+    "normalizedName": "best-performance-by-an-actor-in-a-motion-picture-comedy-or-music",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:best-performance-by-an-actor-in-a-motion-picture-drama",
+    "festivalId": "golden-globes",
+    "name": "Best Performance by an Actor in a Motion Picture – Drama",
+    "normalizedName": "best-performance-by-an-actor-in-a-motion-picture-drama",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "golden-globes:best-performance-by-an-actor-in-a-supporting-role-in-a-motion-pi",
     "festivalId": "golden-globes",
     "name": "Best Performance by an Actor in a Supporting Role in a Motion Picture",
     "normalizedName": "best-performance-by-an-actor-in-a-supporting-role-in-a-motion-pi",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:best-performance-by-an-actress-in-a-leading-role-comedy-or-music",
+    "festivalId": "golden-globes",
+    "name": "Best Performance by an Actress in a Leading Role - Comedy or Musical",
+    "normalizedName": "best-performance-by-an-actress-in-a-leading-role-comedy-or-music",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:best-performance-by-an-actress-in-a-leading-role-drama",
+    "festivalId": "golden-globes",
+    "name": "Best Performance by an Actress in a Leading Role - Drama",
+    "normalizedName": "best-performance-by-an-actress-in-a-leading-role-drama",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:best-performance-by-an-actress-in-a-motion-picture-comedy-or-mus",
+    "festivalId": "golden-globes",
+    "name": "Best Performance by an Actress in a Motion Picture – Comedy or Musical",
+    "normalizedName": "best-performance-by-an-actress-in-a-motion-picture-comedy-or-mus",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:best-performance-by-an-actress-in-a-motion-picture-drama",
+    "festivalId": "golden-globes",
+    "name": "Best Performance by an Actress in a Motion Picture – Drama",
+    "normalizedName": "best-performance-by-an-actress-in-a-motion-picture-drama",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -6408,6 +6615,15 @@
     "isHonoraryAward": false
   },
   {
+    "id": "golden-globes:best-picture-drama",
+    "festivalId": "golden-globes",
+    "name": "Best Picture — Drama",
+    "normalizedName": "best-picture-drama",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "golden-globes:best-picture-tie",
     "festivalId": "golden-globes",
     "name": "Best Picture (tie)",
@@ -6435,12 +6651,30 @@
     "isHonoraryAward": false
   },
   {
+    "id": "golden-globes:best-supporting-actor",
+    "festivalId": "golden-globes",
+    "name": "Best Supporting Actor",
+    "normalizedName": "best-supporting-actor",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "golden-globes:best-supporting-actor-in-a-motion-picture",
     "festivalId": "golden-globes",
     "name": "Best Supporting Actor in a Motion Picture",
     "normalizedName": "best-supporting-actor-in-a-motion-picture",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:best-supporting-actress",
+    "festivalId": "golden-globes",
+    "name": "Best Supporting Actress",
+    "normalizedName": "best-supporting-actress",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -6498,6 +6732,15 @@
     "isHonoraryAward": false
   },
   {
+    "id": "golden-globes:carol-burnett-award",
+    "festivalId": "golden-globes",
+    "name": "Carol Burnett Award",
+    "normalizedName": "carol-burnett-award",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "golden-globes:cinematic-and-box-office-achievement",
     "festivalId": "golden-globes",
     "name": "Cinematic and Box Office Achievement",
@@ -6516,6 +6759,24 @@
     "isHonoraryAward": false
   },
   {
+    "id": "golden-globes:cinematography-black-and-white",
+    "festivalId": "golden-globes",
+    "name": "Cinematography – Black and White",
+    "normalizedName": "cinematography-black-and-white",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:cinematography-color",
+    "festivalId": "golden-globes",
+    "name": "Cinematography - Color",
+    "normalizedName": "cinematography-color",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "golden-globes:film",
     "festivalId": "golden-globes",
     "name": "Film",
@@ -6529,6 +6790,15 @@
     "festivalId": "golden-globes",
     "name": "Gandhi (United Kingdom/India) Fitzcarraldo (West Germany) La Traviata (Italy) The Man from Snowy River (Australia) Quest for Fire (Canada/France) Yol (Switzerland/Turkey)",
     "normalizedName": "gandhi-united-kingdom-india-fitzcarraldo-west-germany-la-traviat",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:golden-globe-ambassador",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Ambassador",
+    "normalizedName": "golden-globe-ambassador",
     "scope": "film",
     "isAward": false,
     "isHonoraryAward": false
@@ -6669,6 +6939,15 @@
     "isHonoraryAward": false
   },
   {
+    "id": "golden-globes:juvenile-performance",
+    "festivalId": "golden-globes",
+    "name": "Juvenile Performance",
+    "normalizedName": "juvenile-performance",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "golden-globes:most-promising-newcomer-female",
     "festivalId": "golden-globes",
     "name": "Most Promising Newcomer – Female",
@@ -6684,6 +6963,15 @@
     "normalizedName": "most-promising-newcomer-male",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:new-star-of-the-year",
+    "festivalId": "golden-globes",
+    "name": "New Star of the Year",
+    "normalizedName": "new-star-of-the-year",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -6756,6 +7044,15 @@
     "normalizedName": "special-award-best-juvenile-actor",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:special-awards",
+    "festivalId": "golden-globes",
+    "name": "Special awards",
+    "normalizedName": "special-awards",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {

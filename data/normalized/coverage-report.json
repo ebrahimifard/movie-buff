@@ -1,9 +1,9 @@
 {
   "summary": {
-    "generatedAt": "2026-09-16T22:57:56.816Z",
+    "generatedAt": "2026-09-17T21:32:50.548Z",
     "festivals": 9,
-    "totalMissingYears": 36,
-    "totalWeakYears": 199
+    "totalMissingYears": 31,
+    "totalWeakYears": 189
   },
   "festivals": [
     {
@@ -825,17 +825,8 @@
       "festivalName": "BAFTA Awards",
       "foundedYear": 1949,
       "totalYears": 78,
-      "missingYears": [
-        1964
-      ],
+      "missingYears": [],
       "weakYears": [
-        1953,
-        1955,
-        1959,
-        1960,
-        1961,
-        1962,
-        1963,
         1966,
         1968,
         1969
@@ -846,8 +837,8 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 6,
-          "nomineeCount": 22,
-          "categoryCount": 3
+          "nomineeCount": 25,
+          "categoryCount": 4
         },
         {
           "year": 1950,
@@ -877,97 +868,97 @@
           "year": 1953,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 1,
-          "nomineeCount": 0,
-          "categoryCount": 1
+          "winnerCount": 10,
+          "nomineeCount": 61,
+          "categoryCount": 10
         },
         {
           "year": 1954,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 2,
-          "nomineeCount": 4,
-          "categoryCount": 2
+          "winnerCount": 10,
+          "nomineeCount": 55,
+          "categoryCount": 9
         },
         {
           "year": 1955,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 4,
-          "nomineeCount": 0,
-          "categoryCount": 4
+          "winnerCount": 13,
+          "nomineeCount": 59,
+          "categoryCount": 13
         },
         {
           "year": 1956,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 2,
-          "nomineeCount": 4,
-          "categoryCount": 2
+          "winnerCount": 12,
+          "nomineeCount": 53,
+          "categoryCount": 12
         },
         {
           "year": 1957,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 1,
-          "nomineeCount": 3,
-          "categoryCount": 4
+          "winnerCount": 13,
+          "nomineeCount": 73,
+          "categoryCount": 15
         },
         {
           "year": 1958,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 3,
-          "nomineeCount": 4,
-          "categoryCount": 3
+          "winnerCount": 9,
+          "nomineeCount": 39,
+          "categoryCount": 8
         },
         {
           "year": 1959,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 0,
-          "nomineeCount": 2,
-          "categoryCount": 2
+          "winnerCount": 6,
+          "nomineeCount": 40,
+          "categoryCount": 7
         },
         {
           "year": 1960,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 0,
-          "nomineeCount": 1,
-          "categoryCount": 1
+          "winnerCount": 6,
+          "nomineeCount": 35,
+          "categoryCount": 7
         },
         {
           "year": 1961,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 0,
-          "nomineeCount": 2,
-          "categoryCount": 2
+          "winnerCount": 6,
+          "nomineeCount": 35,
+          "categoryCount": 7
         },
         {
           "year": 1962,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 3,
-          "nomineeCount": 0,
-          "categoryCount": 3
+          "winnerCount": 14,
+          "nomineeCount": 36,
+          "categoryCount": 13
         },
         {
           "year": 1963,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 0,
-          "nomineeCount": 4,
-          "categoryCount": 2
+          "winnerCount": 7,
+          "nomineeCount": 46,
+          "categoryCount": 8
         },
         {
           "year": 1964,
-          "hasData": false,
+          "hasData": true,
           "isInactive": false,
-          "winnerCount": 0,
-          "nomineeCount": 0,
-          "categoryCount": 0
+          "winnerCount": 6,
+          "nomineeCount": 30,
+          "categoryCount": 6
         },
         {
           "year": 1965,
@@ -1468,21 +1459,21 @@
       ],
       "catalogue": {
         "festivalId": "bafta",
-        "totalRecords": 6758,
-        "winners": 1288,
-        "nominees": 5470,
-        "missingPoster": 1276,
-        "missingRuntime": 1201,
-        "missingCountry": 1248,
-        "missingImdb": 1160,
-        "missingGenres": 1188,
-        "missingSynopsis": 1170,
-        "posterCoveragePct": 81.1,
-        "runtimeCoveragePct": 82.2,
-        "countryCoveragePct": 81.5,
-        "imdbCoveragePct": 82.8,
-        "genresCoveragePct": 82.4,
-        "synopsisCoveragePct": 82.7
+        "totalRecords": 7395,
+        "winners": 1384,
+        "nominees": 6011,
+        "missingPoster": 1513,
+        "missingRuntime": 1431,
+        "missingCountry": 1477,
+        "missingImdb": 1382,
+        "missingGenres": 1413,
+        "missingSynopsis": 1393,
+        "posterCoveragePct": 79.5,
+        "runtimeCoveragePct": 80.6,
+        "countryCoveragePct": 80,
+        "imdbCoveragePct": 81.3,
+        "genresCoveragePct": 80.9,
+        "synopsisCoveragePct": 81.2
       }
     },
     {
@@ -2109,17 +2100,17 @@
         "totalRecords": 3517,
         "winners": 650,
         "nominees": 2867,
-        "missingPoster": 824,
-        "missingRuntime": 726,
-        "missingCountry": 800,
-        "missingImdb": 700,
-        "missingGenres": 794,
-        "missingSynopsis": 708,
+        "missingPoster": 823,
+        "missingRuntime": 725,
+        "missingCountry": 799,
+        "missingImdb": 699,
+        "missingGenres": 793,
+        "missingSynopsis": 707,
         "posterCoveragePct": 76.6,
         "runtimeCoveragePct": 79.4,
         "countryCoveragePct": 77.3,
         "imdbCoveragePct": 80.1,
-        "genresCoveragePct": 77.4,
+        "genresCoveragePct": 77.5,
         "synopsisCoveragePct": 79.9
       }
     },
@@ -2806,12 +2797,7 @@
       "festivalName": "Golden Globes",
       "foundedYear": 1944,
       "totalYears": 83,
-      "missingYears": [
-        1950,
-        1951,
-        1952,
-        1959
-      ],
+      "missingYears": [],
       "weakYears": [
         1944,
         1945,
@@ -2819,12 +2805,9 @@
         1947,
         1948,
         1949,
-        1953,
         1954,
         1955,
         1956,
-        1957,
-        1958,
         1992,
         1993,
         1995,
@@ -2882,35 +2865,35 @@
         },
         {
           "year": 1950,
-          "hasData": false,
+          "hasData": true,
           "isInactive": false,
-          "winnerCount": 0,
-          "nomineeCount": 0,
-          "categoryCount": 0
+          "winnerCount": 14,
+          "nomineeCount": 14,
+          "categoryCount": 14
         },
         {
           "year": 1951,
-          "hasData": false,
+          "hasData": true,
           "isInactive": false,
-          "winnerCount": 0,
-          "nomineeCount": 0,
-          "categoryCount": 0
+          "winnerCount": 14,
+          "nomineeCount": 31,
+          "categoryCount": 14
         },
         {
           "year": 1952,
-          "hasData": false,
+          "hasData": true,
           "isInactive": false,
-          "winnerCount": 0,
-          "nomineeCount": 0,
-          "categoryCount": 0
+          "winnerCount": 8,
+          "nomineeCount": 18,
+          "categoryCount": 8
         },
         {
           "year": 1953,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 0,
-          "nomineeCount": 1,
-          "categoryCount": 1
+          "winnerCount": 15,
+          "nomineeCount": 33,
+          "categoryCount": 16
         },
         {
           "year": 1954,
@@ -2940,33 +2923,33 @@
           "year": 1957,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 0,
-          "nomineeCount": 5,
-          "categoryCount": 5
+          "winnerCount": 10,
+          "nomineeCount": 41,
+          "categoryCount": 14
         },
         {
           "year": 1958,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 1,
-          "nomineeCount": 0,
-          "categoryCount": 1
+          "winnerCount": 10,
+          "nomineeCount": 35,
+          "categoryCount": 10
         },
         {
           "year": 1959,
-          "hasData": false,
+          "hasData": true,
           "isInactive": false,
-          "winnerCount": 0,
-          "nomineeCount": 0,
-          "categoryCount": 0
+          "winnerCount": 11,
+          "nomineeCount": 40,
+          "categoryCount": 11
         },
         {
           "year": 1960,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 1,
-          "nomineeCount": 5,
-          "categoryCount": 2
+          "winnerCount": 12,
+          "nomineeCount": 47,
+          "categoryCount": 13
         },
         {
           "year": 1961,
@@ -2980,9 +2963,9 @@
           "year": 1962,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 17,
+          "winnerCount": 19,
           "nomineeCount": 47,
-          "categoryCount": 15
+          "categoryCount": 16
         },
         {
           "year": 1963,
@@ -3012,9 +2995,9 @@
           "year": 1966,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 14,
+          "winnerCount": 21,
           "nomineeCount": 51,
-          "categoryCount": 10
+          "categoryCount": 11
         },
         {
           "year": 1967,
@@ -3436,25 +3419,25 @@
           "year": 2019,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 17,
-          "nomineeCount": 52,
-          "categoryCount": 13
+          "winnerCount": 19,
+          "nomineeCount": 54,
+          "categoryCount": 15
         },
         {
           "year": 2020,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 16,
-          "nomineeCount": 55,
-          "categoryCount": 14
+          "winnerCount": 17,
+          "nomineeCount": 56,
+          "categoryCount": 15
         },
         {
           "year": 2021,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 14,
-          "nomineeCount": 56,
-          "categoryCount": 12
+          "winnerCount": 15,
+          "nomineeCount": 57,
+          "categoryCount": 13
         },
         {
           "year": 2022,
@@ -3468,9 +3451,9 @@
           "year": 2023,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 20,
-          "nomineeCount": 69,
-          "categoryCount": 14
+          "winnerCount": 21,
+          "nomineeCount": 70,
+          "categoryCount": 15
         },
         {
           "year": 2024,
@@ -3499,21 +3482,21 @@
       ],
       "catalogue": {
         "festivalId": "golden-globes",
-        "totalRecords": 4749,
-        "winners": 795,
-        "nominees": 3954,
-        "missingPoster": 233,
-        "missingRuntime": 226,
-        "missingCountry": 254,
-        "missingImdb": 210,
-        "missingGenres": 229,
-        "missingSynopsis": 214,
-        "posterCoveragePct": 95.1,
-        "runtimeCoveragePct": 95.2,
-        "countryCoveragePct": 94.7,
-        "imdbCoveragePct": 95.6,
-        "genresCoveragePct": 95.2,
-        "synopsisCoveragePct": 95.5
+        "totalRecords": 5108,
+        "winners": 901,
+        "nominees": 4207,
+        "missingPoster": 294,
+        "missingRuntime": 287,
+        "missingCountry": 312,
+        "missingImdb": 268,
+        "missingGenres": 287,
+        "missingSynopsis": 272,
+        "posterCoveragePct": 94.2,
+        "runtimeCoveragePct": 94.4,
+        "countryCoveragePct": 93.9,
+        "imdbCoveragePct": 94.8,
+        "genresCoveragePct": 94.4,
+        "synopsisCoveragePct": 94.7
       }
     },
     {

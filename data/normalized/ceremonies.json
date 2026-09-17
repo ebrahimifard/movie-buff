@@ -4032,6 +4032,14 @@
     "endDate": null
   },
   {
+    "id": "bafta-1964",
+    "festivalId": "bafta",
+    "year": 1964,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "berlinale-1964",
     "festivalId": "berlinale",
     "year": 1964,
@@ -4322,6 +4330,14 @@
   {
     "id": "cannes-1959",
     "festivalId": "cannes",
+    "year": 1959,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "golden-globes-1959",
+    "festivalId": "golden-globes",
     "year": 1959,
     "edition": null,
     "startDate": null,
@@ -4688,6 +4704,14 @@
     "endDate": null
   },
   {
+    "id": "golden-globes-1952",
+    "festivalId": "golden-globes",
+    "year": 1952,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "locarno-1952",
     "festivalId": "locarno",
     "year": 1952,
@@ -4736,6 +4760,14 @@
     "endDate": null
   },
   {
+    "id": "golden-globes-1951",
+    "festivalId": "golden-globes",
+    "year": 1951,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "oscars-1951",
     "festivalId": "oscars",
     "year": 1951,
@@ -4762,6 +4794,14 @@
   {
     "id": "cannes-1950",
     "festivalId": "cannes",
+    "year": 1950,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "golden-globes-1950",
+    "festivalId": "golden-globes",
     "year": 1950,
     "edition": null,
     "startDate": null,
