@@ -216,6 +216,56 @@ describe("parseSimpleAwardsWikipedia", () => {
     expect(records.find((r) => r.film.title === "Billy Wilder").category).toBe("Best Director");
   });
 
+  it("extracts a grid cell's winner from a direct child sitting before the nominees <ul>, when it isn't the <ul>'s own first <li> (regression: 56th Golden Globe Awards had zero winners for several categories)", () => {
+    // Confirmed live (56th Golden Globe Awards, "Best Motion Picture –
+    // Drama"): the winner ("Saving Private Ryan") sits directly in the
+    // <td>, italicized, BEFORE the nominees <ul> — whose own four <li>s are
+    // all OTHER, losing films. Previously the winner was silently dropped
+    // entirely, since extractCategoryCellRecords only ever looked inside
+    // the <ul>.
+    const html = wrapHtml(`
+      <table class="wikitable">
+        <tr><th colspan="2">Best Motion Picture</th></tr>
+        <tr><th><a href="/wiki/d">Drama</a></th><th><a href="/wiki/c">Musical or Comedy</a></th></tr>
+        <tr>
+          <td>
+            <i><b><a href="/wiki/spr">Saving Private Ryan</a></b></i>
+            <ul>
+              <li><i><a href="/wiki/e">Elizabeth</a></i></li>
+              <li><i><a href="/wiki/g">Gods and Monsters</a></i></li>
+            </ul>
+          </td>
+          <td><ul><li><i><b><a href="/wiki/sil">Shakespeare in Love</a></b></i></li></ul></td>
+        </tr>
+      </table>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 1999, config);
+    const dramaCell = records.filter((r) => r.film.title !== "Shakespeare in Love");
+    expect(dramaCell).toHaveLength(3);
+    expect(dramaCell.find((r) => r.result === "winner")?.film.title).toBe("Saving Private Ryan");
+    expect(dramaCell.filter((r) => r.result === "nominee").map((r) => r.film.title).sort()).toEqual(["Elizabeth", "Gods and Monsters"]);
+  });
+
+  it("does not mistake a category-label <div> sitting before the <ul> for a winner", () => {
+    const html = wrapHtml(`
+      <table class="wikitable">
+        <tr>
+          <td>
+            <div><b><a href="/wiki/x">Best Actor</a></b></div>
+            <ul>
+              <li><b><a href="/wiki/Anthony_Hopkins">Anthony Hopkins</a></b> – <i><a href="/wiki/The_Father">The Father</a></i></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 2021, config);
+    expect(records).toHaveLength(1);
+    expect(records[0].film.title).toBe("The Father");
+  });
+
   it("replaces a generic 'Other' governing category with each column's own award name from a mid-table multi-<th> row, instead of fabricating a bogus film from the label text (regression for the golden-globes 'Best Director' bug)", () => {
     // Confirmed live (1970/28th Golden Globe Awards): several small awards
     // ("Best Director", "Best Screenplay", ...) are grouped under one

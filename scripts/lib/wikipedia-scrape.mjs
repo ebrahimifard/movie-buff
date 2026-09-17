@@ -331,6 +331,27 @@ function extractCategoryCellRecords(cell, fallbackCategory) {
   }
   const category = extractCategoryLabel(cell) ?? fallbackCategory;
   const records = [];
+
+  // Some years render the winner as a direct child of the cell — e.g.
+  // "<i><b><a>Saving Private Ryan</a></b></i>" — sitting BEFORE the
+  // nominees <ul> entirely, rather than as that <ul>'s own first <li> (the
+  // shape collectListRecords expects). Confirmed live (56th Golden Globe
+  // Awards, "Best Motion Picture – Drama": Saving Private Ryan is the
+  // winner, outside the <ul>, whose own <li>s are all four OTHER, losing
+  // nominees).
+  //
+  // Requires hasFilmSignal (an italic title actually found) — NOT the
+  // low-confidence "grab any link outside the list" fallback, which would
+  // otherwise mistake a category-label <div> sitting before the <ul>
+  // (e.g. "<div><b><a>Best Actor</a></b></div>", its own plain non-italic
+  // link) for a winner. The OTHER, more common shape (winner as the <ul>'s
+  // own first <li>) never reaches this path at all, since every italic in
+  // the cell is then inside topList and gets filtered out.
+  const extracted = extractTitleAndPerson(cell, topList);
+  if (extracted.title && extracted.hasFilmSignal) {
+    records.push({ title: extracted.title, result: "winner", personName: extracted.personName, hasFilmSignal: extracted.hasFilmSignal, originalReleaseYear: extracted.originalReleaseYear });
+  }
+
   collectListRecords(topList, records);
   return { category, records };
 }
