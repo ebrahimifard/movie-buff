@@ -1,5 +1,16 @@
 import { describe, expect, it } from "vitest";
-import { VENICE_CONFIG, resolveTargetYears } from "./fetch-venice-wikipedia.mjs";
+import { VENICE_CONFIG, getWikipediaUrl, resolveTargetYears } from "./fetch-venice-wikipedia.mjs";
+
+describe("getWikipediaUrl", () => {
+  it("uses the override map's ordinal-titled URL for a year with no year-titled article (regression: the plain-year URL 404s for many pre-2000s editions with no redirect ever created)", () => {
+    expect(getWikipediaUrl(1966)).toBe("https://en.wikipedia.org/wiki/27th_Venice_International_Film_Festival");
+    expect(getWikipediaUrl(1946)).toBe("https://en.wikipedia.org/wiki/7th_Venice_International_Film_Festival_(1946)");
+  });
+
+  it("falls back to the plain year-titled URL for a year not in the override map", () => {
+    expect(getWikipediaUrl(2024)).toBe("https://en.wikipedia.org/wiki/2024_Venice_International_Film_Festival");
+  });
+});
 
 describe("VENICE_CONFIG", () => {
   it("uses the festivalId consistent with the rest of the codebase", () => {

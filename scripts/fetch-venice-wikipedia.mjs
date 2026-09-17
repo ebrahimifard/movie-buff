@@ -8,6 +8,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { DEFAULT_SCRAPE_DELAY_MS, fetchWithRetry, sleep } from "./lib/http.mjs";
 import { cleanText, parseSimpleAwardsWikipedia } from "./lib/wikipedia-scrape.mjs";
+import { veniceWikipediaUrlMap } from "./venice-wikipedia-url-map.js";
 
 const root = process.cwd();
 const coveragePath = path.join(root, "data", "normalized", "coverage-report.json");
@@ -50,10 +51,15 @@ export const VENICE_CONFIG = {
 // Unlike BAFTA/Berlinale, Venice's edition numbering isn't `year - foundedYear`
 // — WWII (1943-1945) and the 1969-1979 non-competitive years mean the
 // ordinal count runs well behind the calendar year (e.g. 2025 was the 82nd
-// edition, not the 94th), so a computed ordinal guess would usually be
-// wrong. The year-based article title is the only URL attempted here.
-function getWikipediaUrl(year) {
-  return `https://en.wikipedia.org/wiki/${year}_Venice_International_Film_Festival`;
+// edition, not the 94th), so a COMPUTED ordinal guess would usually be
+// wrong. Confirmed live (one request per year, 1932-2026): the plain
+// year-titled article exists with no redirect for most years, but 26
+// pre-2000s years only exist at their ordinal title, with no year-based
+// redirect ever created — veniceWikipediaUrlMap supplies the real URL for
+// exactly those, taken from Wikipedia's own authoritative {{Venice Film
+// Festival}} navbox rather than a computed guess.
+export function getWikipediaUrl(year) {
+  return veniceWikipediaUrlMap[year] ?? `https://en.wikipedia.org/wiki/${year}_Venice_International_Film_Festival`;
 }
 
 // WWII (1943-1945) and the 1969-1979 non-competitive suspension — see
