@@ -113,6 +113,44 @@ describe("parseSimpleAwardsWikipedia", () => {
     expect(records[1].result).toBe("nominee");
   });
 
+  it("extracts a category's winner from its own <p> before the nominees <ul>, even when the winner isn't repeated in that list at all (1950s Golden Globes page-format regression)", () => {
+    // Confirmed live (8th Golden Globe Awards, 1950): the winner ("Sunset
+    // Boulevard") has no <ul> of its own and is NOT among the four other
+    // films in the following nominees <ul>. Previously the whole category
+    // — winner included — was silently dropped, because the immediate-
+    // next-sibling check found neither a <ul> at the <p> nor past it.
+    const html = wrapHtml(`
+      <h3>Best Picture</h3>
+      <p><i><b><a href="/wiki/Sunset_Boulevard">Sunset Boulevard</a></b></i></p>
+      <ul>
+        <li><i><a href="/wiki/All_About_Eve">All About Eve</a></i></li>
+        <li><i><a href="/wiki/Harvey">Harvey</a></i></li>
+      </ul>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 1950, config);
+    expect(records).toHaveLength(3);
+    expect(records[0].result).toBe("winner");
+    expect(records[0].film.title).toBe("Sunset Boulevard");
+    expect(records.slice(1).map((r) => r.film.title)).toEqual(["All About Eve", "Harvey"]);
+    expect(records.slice(1).every((r) => r.result === "nominee")).toBe(true);
+  });
+
+  it("extracts both the film and the person from a person-led category's winner <p> (Best Actor-style, no <ul> of its own)", () => {
+    const html = wrapHtml(`
+      <h3>Best Actor</h3>
+      <p><b><a href="/wiki/Jose_Ferrer">José Ferrer</a> – <i><a href="/wiki/Cyrano">Cyrano de Bergerac</a></i></b></p>
+      <ul>
+        <li><a href="/wiki/Other_Actor">Some Other Actor</a> – <i><a href="/wiki/Other_Film">Some Other Film</a></i></li>
+      </ul>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 1950, config);
+    const winner = records.find((r) => r.result === "winner");
+    expect(winner.film.title).toBe("Cyrano de Bergerac");
+    expect(winner.credits).toEqual([{ name: "José Ferrer", role: "cast" }]);
+  });
+
   it("uses a film's real release year from a trailing '(YYYY)' after its italicized title, instead of the festival year (Venice 'Restored films'/Cannes Classics regression)", () => {
     // Confirmed live: Venice's 2019 "Restored films" table and Cannes'
     // Classics tables write each film's true original release year right

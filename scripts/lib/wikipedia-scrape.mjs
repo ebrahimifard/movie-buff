@@ -484,9 +484,29 @@ function parseCategoryPrefixedListItem(li, groupPrefix = "") {
 // (see findPrecedingHeadingText), so the <ul> that follows a heading is a
 // sibling of that wrapper div, not of the <h2-4> tag itself. Checks both to
 // support older/simpler markup too.
-function findListAfterHeading(heading) {
+// On older pages (confirmed live: 1950s Golden Globes, e.g. "8th Golden
+// Globe Awards"), a category's WINNER sits in its own <p> — with no <ul> of
+// its own — immediately before the real nominees <ul>, and often isn't
+// even repeated in that list at all ("Best Picture"'s <p> names Sunset
+// Boulevard; the following <ul> lists four OTHER, losing films). Without
+// accounting for that <p>, the immediate-next-sibling check below finds
+// neither a <ul> there nor, past it, anywhere — the whole category (winner
+// included) was silently dropped. Returns the winner paragraph (or null)
+// alongside the nominees list, so the caller can extract both.
+function findAwardContentAfterHeading(heading) {
   const candidates = [heading.nextElementSibling, heading.parentElement?.nextElementSibling];
-  return candidates.find((el) => el && el.tagName === "UL") ?? null;
+  for (const candidate of candidates) {
+    if (!candidate) {
+      continue;
+    }
+    if (candidate.tagName === "UL") {
+      return { winnerParagraph: null, list: candidate };
+    }
+    if (candidate.tagName === "P" && candidate.nextElementSibling?.tagName === "UL") {
+      return { winnerParagraph: candidate, list: candidate.nextElementSibling };
+    }
+  }
+  return { winnerParagraph: null, list: null };
 }
 
 // Shared parser for Wikipedia award pages whose structure is a series of
@@ -688,7 +708,13 @@ export function parseSimpleAwardsWikipedia(
     // actually names something more specific, mirroring the equivalent
     // Cannes fix — see FORMAT_BUCKET_PATTERN/resolveCategoryFromChain.
     const headingCategory = resolveCategoryFromChain(fullChain);
-    const list = findListAfterHeading(heading);
+    const { winnerParagraph, list } = findAwardContentAfterHeading(heading);
+    if (winnerParagraph) {
+      const extracted = extractTitleAndPerson(winnerParagraph, null);
+      if (extracted.title) {
+        addRecord(headingCategory, "winner", extracted.title, extracted.personName, extracted.hasFilmSignal, extracted.originalReleaseYear);
+      }
+    }
     if (!list) {
       return;
     }
