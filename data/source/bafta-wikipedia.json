@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T21:01:56.727Z",
+  "generatedAt": "2026-09-17T22:36:26.451Z",
   "records": [
     {
       "year": 1949,
@@ -16771,6 +16771,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Documentary",
+      "result": "winner",
+      "film": {
+        "title": "Nobody Waved Good-bye",
+        "releaseYear": 1965,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1965,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Documentary",
       "result": "nominee",
       "film": {
         "title": "The Human Dutch",
@@ -16814,6 +16834,26 @@
       "result": "nominee",
       "film": {
         "title": "Portrait of Queenie",
+        "releaseYear": 1965,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1965,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Short Film",
+      "result": "winner",
+      "film": {
+        "title": "Eskimo Artist: Kenojuak",
         "releaseYear": 1965,
         "imdbId": null,
         "countryCodes": [],
@@ -16891,6 +16931,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Specialised Film",
+      "result": "winner",
+      "film": {
+        "title": "Driving Technique Passenger Trains",
+        "releaseYear": 1965,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1965,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Specialised Film",
       "result": "nominee",
       "film": {
         "title": "And Glaadly Would He Learn",
@@ -16945,6 +17005,31 @@
       },
       "directors": [],
       "credits": []
+    },
+    {
+      "year": 1965,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Foreign Actor",
+      "result": "winner",
+      "film": {
+        "title": "Yesterday, Today and Tomorrow",
+        "releaseYear": 1965,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Foreign Actor",
+          "role": "cast"
+        }
+      ]
     },
     {
       "year": 1965,
@@ -17017,6 +17102,31 @@
       "credits": [
         {
           "name": "Sterling Hayden",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1965,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Foreign Actress",
+      "result": "winner",
+      "film": {
+        "title": "The Pumpkin Eater",
+        "releaseYear": 1965,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Foreign Actress",
           "role": "cast"
         }
       ]
@@ -17126,6 +17236,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best British Actor",
+      "result": "winner",
+      "film": {
+        "title": "Guns at Batasi",
+        "releaseYear": 1965,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best British Actor",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1965,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Actor",
       "result": "nominee",
       "film": {
         "title": "Becket",
@@ -17226,6 +17361,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best British Actress",
+      "result": "winner",
+      "film": {
+        "title": "Charade",
+        "releaseYear": 1965,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best British Actress",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1965,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Actress",
       "result": "nominee",
       "film": {
         "title": "The Chalk Garden",
@@ -17270,6 +17430,26 @@
           "role": "cast"
         }
       ]
+    },
+    {
+      "year": 1965,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Film",
+      "result": "winner",
+      "film": {
+        "title": "Dr. Strangelove",
+        "releaseYear": 1965,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
     },
     {
       "year": 1965,
@@ -17330,6 +17510,31 @@
       },
       "directors": [],
       "credits": []
+    },
+    {
+      "year": 1965,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Screenplay",
+      "result": "winner",
+      "film": {
+        "title": "The Pumpkin Eater",
+        "releaseYear": 1965,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best British Screenplay",
+          "role": "writer"
+        }
+      ]
     },
     {
       "year": 1965,
@@ -17411,6 +17616,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Production Design, Black and White",
+      "result": "winner",
+      "film": {
+        "title": "Dr. Strangelove",
+        "releaseYear": 1965,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Production Design, Black and White",
+          "role": "producer"
+        }
+      ]
+    },
+    {
+      "year": 1965,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Production Design, Black and White",
       "result": "nominee",
       "film": {
         "title": "Guns at Batasi",
@@ -17477,6 +17707,31 @@
       "credits": [
         {
           "name": "Ted Marshall",
+          "role": "producer"
+        }
+      ]
+    },
+    {
+      "year": 1965,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Production Design, Colour",
+      "result": "winner",
+      "film": {
+        "title": "Becket",
+        "releaseYear": 1965,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Production Design, Colour",
           "role": "producer"
         }
       ]
@@ -17561,6 +17816,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Cinematography, Black and White",
+      "result": "winner",
+      "film": {
+        "title": "The Pumpkin Eater",
+        "releaseYear": 1965,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1965,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Cinematography, Black and White",
       "result": "nominee",
       "film": {
         "title": "Guns at Batasi",
@@ -17604,6 +17879,26 @@
       "result": "nominee",
       "film": {
         "title": "Séance on a Wet Afternoon",
+        "releaseYear": 1965,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1965,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Cinematography, Colour",
+      "result": "winner",
+      "film": {
+        "title": "Becket",
         "releaseYear": 1965,
         "imdbId": null,
         "countryCodes": [],
@@ -17701,6 +17996,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Costume Design, Black and White",
+      "result": "winner",
+      "film": {
+        "title": "The Pumpkin Eater",
+        "releaseYear": 1965,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1965,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Costume Design, Black and White",
       "result": "nominee",
       "film": {
         "title": "Of Human Bondage",
@@ -17724,6 +18039,26 @@
       "result": "nominee",
       "film": {
         "title": "Psyche 59",
+        "releaseYear": 1965,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1965,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Costume Design, Colour",
+      "result": "winner",
+      "film": {
+        "title": "Becket",
         "releaseYear": 1965,
         "imdbId": null,
         "countryCodes": [],
@@ -17801,6 +18136,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Most Promising Newcomer to Leading Film Roles",
+      "result": "winner",
+      "film": {
+        "title": "Mary Poppins",
+        "releaseYear": 1965,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1965,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Most Promising Newcomer to Leading Film Roles",
       "result": "nominee",
       "film": {
         "title": "A Hard Day's Night",
@@ -17844,6 +18199,26 @@
       "result": "nominee",
       "film": {
         "title": "Girl with Green Eyes",
+        "releaseYear": 1965,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1965,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "United Nations Award",
+      "result": "winner",
+      "film": {
+        "title": "Dr. Strangelove",
         "releaseYear": 1965,
         "imdbId": null,
         "countryCodes": [],
@@ -18161,6 +18536,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Film",
+      "result": "winner",
+      "film": {
+        "title": "My Fair Lady",
+        "releaseYear": 1966,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1966,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Film",
       "result": "nominee",
       "film": {
         "title": "Hamlet",
@@ -18241,6 +18636,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Documentary",
+      "result": "winner",
+      "film": {
+        "title": "Tokyo Olympiad",
+        "releaseYear": 1966,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1966,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Documentary",
       "result": "nominee",
       "film": {
         "title": "Brute Force and Finesse",
@@ -18295,6 +18710,31 @@
       },
       "directors": [],
       "credits": []
+    },
+    {
+      "year": 1966,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Foreign Actor",
+      "result": "winner",
+      "film": {
+        "title": "Cat Ballou",
+        "releaseYear": 1966,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Foreign Actor",
+          "role": "cast"
+        }
+      ]
     },
     {
       "year": 1966,
@@ -18426,6 +18866,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Foreign Actress",
+      "result": "winner",
+      "film": {
+        "title": "In Harm's Way",
+        "releaseYear": 1966,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Foreign Actress",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1966,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Foreign Actress",
       "result": "nominee",
       "film": {
         "title": "Cat Ballou",
@@ -18501,6 +18966,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best British Actor",
+      "result": "winner",
+      "film": {
+        "title": "Darling",
+        "releaseYear": 1966,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best British Actor",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1966,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Actor",
       "result": "nominee",
       "film": {
         "title": "The Hill",
@@ -18567,6 +19057,31 @@
       "credits": [
         {
           "name": "Rex Harrison",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1966,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Actress",
+      "result": "winner",
+      "film": {
+        "title": "Darling",
+        "releaseYear": 1966,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best British Actress",
           "role": "cast"
         }
       ]
@@ -18676,6 +19191,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best British Film",
+      "result": "winner",
+      "film": {
+        "title": "The Ipcress File",
+        "releaseYear": 1966,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1966,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Film",
       "result": "nominee",
       "film": {
         "title": "Darling",
@@ -18730,6 +19265,31 @@
       },
       "directors": [],
       "credits": []
+    },
+    {
+      "year": 1966,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Screenplay",
+      "result": "winner",
+      "film": {
+        "title": "Darling",
+        "releaseYear": 1966,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best British Screenplay",
+          "role": "writer"
+        }
+      ]
     },
     {
       "year": 1966,
@@ -18811,6 +19371,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Production Design, Black and White",
+      "result": "winner",
+      "film": {
+        "title": "Darling",
+        "releaseYear": 1966,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Production Design, Black and White",
+          "role": "producer"
+        }
+      ]
+    },
+    {
+      "year": 1966,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Production Design, Black and White",
       "result": "nominee",
       "film": {
         "title": "The Bedford Incident",
@@ -18877,6 +19462,31 @@
       "credits": [
         {
           "name": "Alex Vetchinsky",
+          "role": "producer"
+        }
+      ]
+    },
+    {
+      "year": 1966,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Production Design, Colour",
+      "result": "winner",
+      "film": {
+        "title": "The Ipcress File",
+        "releaseYear": 1966,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Production Design, Colour",
           "role": "producer"
         }
       ]
@@ -18961,6 +19571,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Cinematography, Black and White",
+      "result": "winner",
+      "film": {
+        "title": "The Hill",
+        "releaseYear": 1966,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1966,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Cinematography, Black and White",
       "result": "nominee",
       "film": {
         "title": "Darling",
@@ -19021,6 +19651,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Cinematography, Colour",
+      "result": "winner",
+      "film": {
+        "title": "The Ipcress File",
+        "releaseYear": 1966,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1966,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Cinematography, Colour",
       "result": "nominee",
       "film": {
         "title": "Help!",
@@ -19062,6 +19712,26 @@
       "festivalName": "BAFTA Awards",
       "category": "Best Cinematography, Colour",
       "result": "nominee",
+      "film": {
+        "title": "Those Magnificent Men in Their Flying Machines",
+        "releaseYear": 1966,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1966,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Costume Design",
+      "result": "winner",
       "film": {
         "title": "Those Magnificent Men in Their Flying Machines",
         "releaseYear": 1966,
@@ -19161,6 +19831,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Animated Film",
+      "result": "winner",
+      "film": {
+        "title": "Be Careful Boys",
+        "releaseYear": 1966,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1966,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Animated Film",
       "result": "nominee",
       "film": {
         "title": "The Bargain",
@@ -19221,6 +19911,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Short Film",
+      "result": "winner",
+      "film": {
+        "title": "Rig Move",
+        "releaseYear": 1966,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1966,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Short Film",
       "result": "nominee",
       "film": {
         "title": "60 Cycles",
@@ -19261,9 +19971,49 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Specialised Film",
+      "result": "winner",
+      "film": {
+        "title": "I Do: And I Understand",
+        "releaseYear": 1966,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1966,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Specialised Film",
       "result": "nominee",
       "film": {
         "title": "Town Nurse, Country Nurse",
+        "releaseYear": 1966,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1966,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Most Promising Newcomer to Leading Film Roles",
+      "result": "winner",
+      "film": {
+        "title": "Four in the Morning",
         "releaseYear": 1966,
         "imdbId": null,
         "countryCodes": [],
@@ -19324,6 +20074,26 @@
       "result": "nominee",
       "film": {
         "title": "Cat Ballou",
+        "releaseYear": 1966,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1966,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "United Nations Award",
+      "result": "winner",
+      "film": {
+        "title": "Tokyo Olympiad",
         "releaseYear": 1966,
         "imdbId": null,
         "countryCodes": [],
@@ -19661,6 +20431,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Film",
+      "result": "winner",
+      "film": {
+        "title": "Who's Afraid of Virginia Woolf?",
+        "releaseYear": 1967,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1967,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Film",
       "result": "nominee",
       "film": {
         "title": "Doctor Zhivago",
@@ -19704,6 +20494,26 @@
       "result": "nominee",
       "film": {
         "title": "The Spy Who Came In from the Cold",
+        "releaseYear": 1967,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1967,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Documentary",
+      "result": "winner",
+      "film": {
+        "title": "Goal! The World Cup",
         "releaseYear": 1967,
         "imdbId": null,
         "countryCodes": [],
@@ -19781,6 +20591,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Short Film",
+      "result": "winner",
+      "film": {
+        "title": "The War Game",
+        "releaseYear": 1967,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1967,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Short Film",
       "result": "nominee",
       "film": {
         "title": "A River Must Live",
@@ -19841,6 +20671,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Specialised Film",
+      "result": "winner",
+      "film": {
+        "title": "Exploring Chemistry",
+        "releaseYear": 1967,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1967,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Specialised Film",
       "result": "nominee",
       "film": {
         "title": "The Radio Sky",
@@ -19875,6 +20725,31 @@
       },
       "directors": [],
       "credits": []
+    },
+    {
+      "year": 1967,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Foreign Actor",
+      "result": "winner",
+      "film": {
+        "title": "The Pawnbroker",
+        "releaseYear": 1967,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Rod Steiger",
+          "role": "cast"
+        }
+      ]
     },
     {
       "year": 1967,
@@ -19956,6 +20831,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Foreign Actress",
+      "result": "winner",
+      "film": {
+        "title": "Viva Maria!",
+        "releaseYear": 1967,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Jeanne Moreau",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1967,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Foreign Actress",
       "result": "nominee",
       "film": {
         "title": "Viva Maria!",
@@ -20022,6 +20922,31 @@
       "credits": [
         {
           "name": "Simone Signoret",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1967,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Actor",
+      "result": "winner",
+      "film": {
+        "title": "The Spy Who Came In from the Cold",
+        "releaseYear": 1967,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Richard Burton",
           "role": "cast"
         }
       ]
@@ -20156,6 +21081,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best British Actress",
+      "result": "winner",
+      "film": {
+        "title": "Who's Afraid of Virginia Woolf?",
+        "releaseYear": 1967,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Elizabeth Taylor",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1967,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Actress",
       "result": "nominee",
       "film": {
         "title": "Doctor Zhivago",
@@ -20256,6 +21206,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best British Film",
+      "result": "winner",
+      "film": {
+        "title": "The Spy Who Came In from the Cold",
+        "releaseYear": 1967,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1967,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Film",
       "result": "nominee",
       "film": {
         "title": "Alfie",
@@ -20310,6 +21280,31 @@
       },
       "directors": [],
       "credits": []
+    },
+    {
+      "year": 1967,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Screenplay",
+      "result": "winner",
+      "film": {
+        "title": "Morgan – A Suitable Case for Treatment",
+        "releaseYear": 1967,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "David Mercer",
+          "role": "writer"
+        }
+      ]
     },
     {
       "year": 1967,
@@ -20391,6 +21386,28 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best British Art Direction, Black and White",
+      "result": "winner",
+      "film": {
+        "title": "The Spy Who Came In from the Cold",
+        "releaseYear": 1967,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [
+        "Tambi Larsen"
+      ],
+      "credits": []
+    },
+    {
+      "year": 1967,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Art Direction, Black and White",
       "result": "nominee",
       "film": {
         "title": "Bunny Lake Is Missing",
@@ -20447,6 +21464,28 @@
       },
       "directors": [
         "Ted Marshall"
+      ],
+      "credits": []
+    },
+    {
+      "year": 1967,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Art Direction, Colour",
+      "result": "winner",
+      "film": {
+        "title": "The Blue Max",
+        "releaseYear": 1967,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [
+        "Wilfred Shingleton"
       ],
       "credits": []
     },
@@ -20519,6 +21558,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best British Cinematography, Black and White",
+      "result": "winner",
+      "film": {
+        "title": "The Spy Who Came In from the Cold",
+        "releaseYear": 1967,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1967,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Cinematography, Black and White",
       "result": "nominee",
       "film": {
         "title": "Bunny Lake Is Missing",
@@ -20562,6 +21621,26 @@
       "result": "nominee",
       "film": {
         "title": "Georgy Girl",
+        "releaseYear": 1967,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1967,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Cinematography, Colour",
+      "result": "winner",
+      "film": {
+        "title": "Arabesque",
         "releaseYear": 1967,
         "imdbId": null,
         "countryCodes": [],
@@ -20639,6 +21718,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best British Costume Design",
+      "result": "winner",
+      "film": {
+        "title": "The Wrong Box",
+        "releaseYear": 1967,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1967,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Costume Design",
       "result": "nominee",
       "film": {
         "title": "Arabesque",
@@ -20682,6 +21781,26 @@
       "result": "nominee",
       "film": {
         "title": "Romeo and Juliet",
+        "releaseYear": 1967,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1967,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Editing",
+      "result": "winner",
+      "film": {
+        "title": "Morgan – A Suitable Case for Treatment",
         "releaseYear": 1967,
         "imdbId": null,
         "countryCodes": [],
@@ -20759,6 +21878,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Most Promising Newcomer to Leading Film Roles",
+      "result": "winner",
+      "film": {
+        "title": "Alfie",
+        "releaseYear": 1967,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1967,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Most Promising Newcomer to Leading Film Roles",
       "result": "nominee",
       "film": {
         "title": "The Russians Are Coming the Russians Are Coming",
@@ -20802,6 +21941,26 @@
       "result": "nominee",
       "film": {
         "title": "The Blue Max",
+        "releaseYear": 1967,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1967,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "United Nations Award",
+      "result": "winner",
+      "film": {
+        "title": "The War Game",
         "releaseYear": 1967,
         "imdbId": null,
         "countryCodes": [],
@@ -21199,6 +22358,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Foreign Actor",
+      "result": "winner",
+      "film": {
+        "title": "In the Heat of the Night",
+        "releaseYear": 1968,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Rod Steiger",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1968,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Foreign Actor",
       "result": "nominee",
       "film": {
         "title": "Chimes at Midnight",
@@ -21265,6 +22449,31 @@
       "credits": [
         {
           "name": "Warren Beatty",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1968,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Foreign Actress",
+      "result": "winner",
+      "film": {
+        "title": "A Man and a Woman",
+        "releaseYear": 1968,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Anouk Aimée",
           "role": "cast"
         }
       ]
@@ -21374,6 +22583,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best British Actor",
+      "result": "winner",
+      "film": {
+        "title": "A Man for All Seasons",
+        "releaseYear": 1968,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Paul Scofield",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1968,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Actor",
       "result": "nominee",
       "film": {
         "title": "Accident",
@@ -21474,6 +22708,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best British Actress",
+      "result": "winner",
+      "film": {
+        "title": "The Whisperers",
+        "releaseYear": 1968,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Edith Evans",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1968,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Actress",
       "result": "nominee",
       "film": {
         "title": "Ulysses",
@@ -21518,6 +22777,26 @@
           "role": "cast"
         }
       ]
+    },
+    {
+      "year": 1968,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Film",
+      "result": "winner",
+      "film": {
+        "title": "A Man for All Seasons",
+        "releaseYear": 1968,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
     },
     {
       "year": 1968,
@@ -21578,6 +22857,31 @@
       },
       "directors": [],
       "credits": []
+    },
+    {
+      "year": 1968,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Screenplay",
+      "result": "winner",
+      "film": {
+        "title": "A Man for All Seasons",
+        "releaseYear": 1968,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Robert Bolt",
+          "role": "writer"
+        }
+      ]
     },
     {
       "year": 1968,
@@ -21659,6 +22963,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Animated Film",
+      "result": "winner",
+      "film": {
+        "title": "Notes on a Triangle",
+        "releaseYear": 1968,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1968,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Animated Film",
       "result": "nominee",
       "film": {
         "title": "Tidy Why",
@@ -21699,6 +23023,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Documentary",
+      "result": "winner",
+      "film": {
+        "title": "To Die in Madrid",
+        "releaseYear": 1968,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1968,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Documentary",
       "result": "nominee",
       "film": {
         "title": "Famine",
@@ -21722,6 +23066,26 @@
       "result": "nominee",
       "film": {
         "title": "The Things I Cannot Change",
+        "releaseYear": 1968,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1968,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Short Film",
+      "result": "winner",
+      "film": {
+        "title": "Indus Waters",
         "releaseYear": 1968,
         "imdbId": null,
         "countryCodes": [],
@@ -21799,6 +23163,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Specialised Film",
+      "result": "winner",
+      "film": {
+        "title": "Energy and Matter",
+        "releaseYear": 1968,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1968,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Specialised Film",
       "result": "nominee",
       "film": {
         "title": "How the Motor Car Works",
@@ -21842,6 +23226,26 @@
       "result": "nominee",
       "film": {
         "title": "Revolutions for All",
+        "releaseYear": 1968,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1968,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Film",
+      "result": "winner",
+      "film": {
+        "title": "A Man for All Seasons",
         "releaseYear": 1968,
         "imdbId": null,
         "countryCodes": [],
@@ -21919,6 +23323,28 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best British Art Direction",
+      "result": "winner",
+      "film": {
+        "title": "A Man for All Seasons",
+        "releaseYear": 1968,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [
+        "John Box"
+      ],
+      "credits": []
+    },
+    {
+      "year": 1968,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Art Direction",
       "result": "nominee",
       "film": {
         "title": "Accident",
@@ -21985,6 +23411,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best British Cinematography, Black and White",
+      "result": "winner",
+      "film": {
+        "title": "The Whisperers",
+        "releaseYear": 1968,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1968,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Cinematography, Black and White",
       "result": "nominee",
       "film": {
         "title": "Mademoiselle",
@@ -22028,6 +23474,26 @@
       "result": "nominee",
       "film": {
         "title": "Ulysses",
+        "releaseYear": 1968,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1968,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Cinematography, Colour",
+      "result": "winner",
+      "film": {
+        "title": "A Man for All Seasons",
         "releaseYear": 1968,
         "imdbId": null,
         "countryCodes": [],
@@ -22105,9 +23571,49 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best British Costume Design, Black and White",
+      "result": "winner",
+      "film": {
+        "title": "Mademoiselle",
+        "releaseYear": 1968,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1968,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Costume Design, Black and White",
       "result": "nominee",
       "film": {
         "title": "The Sailor from Gibraltar",
+        "releaseYear": 1968,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1968,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best British Costume Design, Colour",
+      "result": "winner",
+      "film": {
+        "title": "A Man for All Seasons",
         "releaseYear": 1968,
         "imdbId": null,
         "countryCodes": [],
@@ -22185,6 +23691,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Most Promising Newcomer to Leading Film Roles",
+      "result": "winner",
+      "film": {
+        "title": "Bonnie and Clyde",
+        "releaseYear": 1968,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1968,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Most Promising Newcomer to Leading Film Roles",
       "result": "nominee",
       "film": {
         "title": "Bonnie and Clyde",
@@ -22228,6 +23754,26 @@
       "result": "nominee",
       "film": {
         "title": "You're a Big Boy Now",
+        "releaseYear": 1968,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1968,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "United Nations Award",
+      "result": "winner",
+      "film": {
+        "title": "In the Heat of the Night",
         "releaseYear": 1968,
         "imdbId": null,
         "countryCodes": [],
@@ -22525,6 +24071,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Film",
+      "result": "winner",
+      "film": {
+        "title": "The Graduate",
+        "releaseYear": 1969,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1969,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Film",
       "result": "nominee",
       "film": {
         "title": "2001: A Space Odyssey",
@@ -22578,6 +24144,28 @@
         "runtimeMinutes": 0
       },
       "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1969,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Direction",
+      "result": "winner",
+      "film": {
+        "title": "The Graduate",
+        "releaseYear": 1969,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [
+        "Best Direction"
+      ],
       "credits": []
     },
     {
@@ -22651,6 +24239,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Actor in a Leading Role",
+      "result": "winner",
+      "film": {
+        "title": "Guess Who's Coming to Dinner",
+        "releaseYear": 1969,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Actor in a Leading Role",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1969,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Actor in a Leading Role",
       "result": "nominee",
       "film": {
         "title": "The Bofors Gun",
@@ -22717,6 +24330,31 @@
       "credits": [
         {
           "name": "Trevor Howard",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1969,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Actress in a Leading Role",
+      "result": "winner",
+      "film": {
+        "title": "Guess Who's Coming to Dinner",
+        "releaseYear": 1969,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Actress in a Leading Role",
           "role": "cast"
         }
       ]
@@ -22801,6 +24439,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Actor in a Supporting Role",
+      "result": "winner",
+      "film": {
+        "title": "The Bofors Gun",
+        "releaseYear": 1969,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Actor in a Supporting Role",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1969,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Actor in a Supporting Role",
       "result": "nominee",
       "film": {
         "title": "The Lion in Winter",
@@ -22867,6 +24530,31 @@
       "credits": [
         {
           "name": "John McEnery",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1969,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Actress in a Supporting Role",
+      "result": "winner",
+      "film": {
+        "title": "Charlie Bubbles",
+        "releaseYear": 1969,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Actress in a Supporting Role",
           "role": "cast"
         }
       ]
@@ -22951,6 +24639,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Screenplay",
+      "result": "winner",
+      "film": {
+        "title": "The Graduate",
+        "releaseYear": 1969,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Screenplay",
+          "role": "writer"
+        }
+      ]
+    },
+    {
+      "year": 1969,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Screenplay",
       "result": "nominee",
       "film": {
         "title": "Guess Who's Coming to Dinner",
@@ -23026,6 +24739,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Cinematography",
+      "result": "winner",
+      "film": {
+        "title": "2001: A Space Odyssey",
+        "releaseYear": 1969,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1969,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Cinematography",
       "result": "nominee",
       "film": {
         "title": "The Charge of the Light Brigade",
@@ -23086,6 +24819,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Costume Design",
+      "result": "winner",
+      "film": {
+        "title": "Romeo and Juliet",
+        "releaseYear": 1969,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1969,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Costume Design",
       "result": "nominee",
       "film": {
         "title": "The Charge of the Light Brigade",
@@ -23146,6 +24899,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Editing",
+      "result": "winner",
+      "film": {
+        "title": "The Graduate",
+        "releaseYear": 1969,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1969,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Editing",
       "result": "nominee",
       "film": {
         "title": "The Charge of the Light Brigade",
@@ -23189,6 +24962,26 @@
       "result": "nominee",
       "film": {
         "title": "Romeo and Juliet",
+        "releaseYear": 1969,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1969,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Original Music",
+      "result": "winner",
+      "film": {
+        "title": "The Lion in Winter",
         "releaseYear": 1969,
         "imdbId": null,
         "countryCodes": [],
@@ -23266,6 +25059,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Production Design",
+      "result": "winner",
+      "film": {
+        "title": "2001: A Space Odyssey",
+        "releaseYear": 1969,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Production Design",
+          "role": "producer"
+        }
+      ]
+    },
+    {
+      "year": 1969,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Production Design",
       "result": "nominee",
       "film": {
         "title": "The Charge of the Light Brigade",
@@ -23335,6 +25153,26 @@
           "role": "producer"
         }
       ]
+    },
+    {
+      "year": 1969,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Sound",
+      "result": "winner",
+      "film": {
+        "title": "2001: A Space Odyssey",
+        "releaseYear": 1969,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
     },
     {
       "year": 1969,
@@ -23421,6 +25259,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Short Animation",
+      "result": "winner",
+      "film": {
+        "title": "Pas de deux",
+        "releaseYear": 1969,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1969,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Short Animation",
       "result": "nominee",
       "film": {
         "title": "The Hand",
@@ -23464,6 +25322,26 @@
       "result": "nominee",
       "film": {
         "title": "The Question",
+        "releaseYear": 1969,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1969,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Documentary",
+      "result": "winner",
+      "film": {
+        "title": "In Need of Special Care",
         "releaseYear": 1969,
         "imdbId": null,
         "countryCodes": [],
@@ -23541,6 +25419,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Specialised Film",
+      "result": "winner",
+      "film": {
+        "title": "The Threat in the Water",
+        "releaseYear": 1969,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1969,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Specialised Film",
       "result": "nominee",
       "film": {
         "title": "Carbon",
@@ -23601,6 +25499,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Most Promising Newcomer to Leading Film Roles",
+      "result": "winner",
+      "film": {
+        "title": "The Graduate",
+        "releaseYear": 1969,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1969,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Most Promising Newcomer to Leading Film Roles",
       "result": "nominee",
       "film": {
         "title": "Oliver!",
@@ -23644,6 +25562,26 @@
       "result": "nominee",
       "film": {
         "title": "Elvira Madigan",
+        "releaseYear": 1969,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1969,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "United Nations Award",
+      "result": "winner",
+      "film": {
+        "title": "Guess Who's Coming to Dinner",
         "releaseYear": 1969,
         "imdbId": null,
         "countryCodes": [],
@@ -23961,6 +25899,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Film",
+      "result": "winner",
+      "film": {
+        "title": "Midnight Cowboy",
+        "releaseYear": 1970,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1970,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Film",
       "result": "nominee",
       "film": {
         "title": "Oh! What a Lovely War",
@@ -24014,6 +25972,28 @@
         "runtimeMinutes": 0
       },
       "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1970,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Direction",
+      "result": "winner",
+      "film": {
+        "title": "Midnight Cowboy",
+        "releaseYear": 1970,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [
+        "Best Direction"
+      ],
       "credits": []
     },
     {
@@ -24081,6 +26061,31 @@
         "Richard Attenborough"
       ],
       "credits": []
+    },
+    {
+      "year": 1970,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Actor in a Leading Role",
+      "result": "winner",
+      "film": {
+        "title": "John and Mary",
+        "releaseYear": 1970,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Actor in a Leading Role",
+          "role": "cast"
+        }
+      ]
     },
     {
       "year": 1970,
@@ -24178,6 +26183,31 @@
       "credits": [
         {
           "name": "Walter Matthau",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1970,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Actress in a Leading Role",
+      "result": "winner",
+      "film": {
+        "title": "The Prime of Miss Jean Brodie",
+        "releaseYear": 1970,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Actress in a Leading Role",
           "role": "cast"
         }
       ]
@@ -24337,6 +26367,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Actor in a Supporting Role",
+      "result": "winner",
+      "film": {
+        "title": "Oh! What a Lovely War",
+        "releaseYear": 1970,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Actor in a Supporting Role",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1970,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Actor in a Supporting Role",
       "result": "nominee",
       "film": {
         "title": "Goodbye, Columbus",
@@ -24403,6 +26458,31 @@
       "credits": [
         {
           "name": "Robert Vaughn",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1970,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Actress in a Supporting Role",
+      "result": "winner",
+      "film": {
+        "title": "The Prime of Miss Jean Brodie",
+        "releaseYear": 1970,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Actress in a Supporting Role",
           "role": "cast"
         }
       ]
@@ -24487,6 +26567,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Screenplay",
+      "result": "winner",
+      "film": {
+        "title": "Midnight Cowboy",
+        "releaseYear": 1970,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Screenplay",
+          "role": "writer"
+        }
+      ]
+    },
+    {
+      "year": 1970,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Screenplay",
       "result": "nominee",
       "film": {
         "title": "Goodbye, Columbus",
@@ -24556,6 +26661,26 @@
           "role": "writer"
         }
       ]
+    },
+    {
+      "year": 1970,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Cinematography",
+      "result": "winner",
+      "film": {
+        "title": "Oh! What a Lovely War",
+        "releaseYear": 1970,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
     },
     {
       "year": 1970,
@@ -24662,6 +26787,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Costume Design",
+      "result": "winner",
+      "film": {
+        "title": "Oh! What a Lovely War",
+        "releaseYear": 1970,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1970,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Costume Design",
       "result": "nominee",
       "film": {
         "title": "Funny Girl",
@@ -24722,6 +26867,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Editing",
+      "result": "winner",
+      "film": {
+        "title": "Midnight Cowboy",
+        "releaseYear": 1970,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1970,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Editing",
       "result": "nominee",
       "film": {
         "title": "Bullitt",
@@ -24763,6 +26928,26 @@
       "festivalName": "BAFTA Awards",
       "category": "Best Editing",
       "result": "nominee",
+      "film": {
+        "title": "Z",
+        "releaseYear": 1970,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1970,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Original Music",
+      "result": "winner",
       "film": {
         "title": "Z",
         "releaseYear": 1970,
@@ -24842,6 +27027,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Production Design",
+      "result": "winner",
+      "film": {
+        "title": "Oh! What a Lovely War",
+        "releaseYear": 1970,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Production Design",
+          "role": "producer"
+        }
+      ]
+    },
+    {
+      "year": 1970,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Production Design",
       "result": "nominee",
       "film": {
         "title": "Hello, Dolly!",
@@ -24911,6 +27121,26 @@
           "role": "producer"
         }
       ]
+    },
+    {
+      "year": 1970,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Sound",
+      "result": "winner",
+      "film": {
+        "title": "Oh! What a Lovely War",
+        "releaseYear": 1970,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
     },
     {
       "year": 1970,
@@ -24997,6 +27227,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Short Film",
+      "result": "winner",
+      "film": {
+        "title": "Picture to Post",
+        "releaseYear": 1970,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1970,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Short Film",
       "result": "nominee",
       "film": {
         "title": "Barbican",
@@ -25040,6 +27290,26 @@
       "result": "nominee",
       "film": {
         "title": "A Test of Violence",
+        "releaseYear": 1970,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1970,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Specialised Film",
+      "result": "winner",
+      "film": {
+        "title": "Let There Be Light",
         "releaseYear": 1970,
         "imdbId": null,
         "countryCodes": [],
@@ -25117,6 +27387,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Most Promising Newcomer to Leading Film Roles",
+      "result": "winner",
+      "film": {
+        "title": "Midnight Cowboy",
+        "releaseYear": 1970,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1970,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Most Promising Newcomer to Leading Film Roles",
       "result": "nominee",
       "film": {
         "title": "Goodbye, Columbus",
@@ -25160,6 +27450,26 @@
       "result": "nominee",
       "film": {
         "title": "True Grit",
+        "releaseYear": 1970,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1970,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "United Nations Award",
+      "result": "winner",
+      "film": {
+        "title": "Oh! What a Lovely War",
         "releaseYear": 1970,
         "imdbId": null,
         "countryCodes": [],
@@ -25477,6 +27787,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Film",
+      "result": "winner",
+      "film": {
+        "title": "Butch Cassidy and the Sundance Kid",
+        "releaseYear": 1971,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1971,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Film",
       "result": "nominee",
       "film": {
         "title": "Kes",
@@ -25530,6 +27860,28 @@
         "runtimeMinutes": 0
       },
       "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1971,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Direction",
+      "result": "winner",
+      "film": {
+        "title": "Butch Cassidy and the Sundance Kid",
+        "releaseYear": 1971,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [
+        "Best Direction"
+      ],
       "credits": []
     },
     {
@@ -25597,6 +27949,31 @@
         "Robert Altman"
       ],
       "credits": []
+    },
+    {
+      "year": 1971,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Actor in a Leading Role",
+      "result": "winner",
+      "film": {
+        "title": "Butch Cassidy and the Sundance Kid",
+        "releaseYear": 1971,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Actor in a Leading Role",
+          "role": "cast"
+        }
+      ]
     },
     {
       "year": 1971,
@@ -25694,6 +28071,31 @@
       "credits": [
         {
           "name": "Paul Newman",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1971,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Actress in a Leading Role",
+      "result": "winner",
+      "film": {
+        "title": "Butch Cassidy and the Sundance Kid",
+        "releaseYear": 1971,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Actress in a Leading Role",
           "role": "cast"
         }
       ]
@@ -25803,6 +28205,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Actor in a Supporting Role",
+      "result": "winner",
+      "film": {
+        "title": "Kes",
+        "releaseYear": 1971,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Actor in a Supporting Role",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1971,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Actor in a Supporting Role",
       "result": "nominee",
       "film": {
         "title": "The Railway Children",
@@ -25869,6 +28296,31 @@
       "credits": [
         {
           "name": "John Mills",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1971,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Actress in a Supporting Role",
+      "result": "winner",
+      "film": {
+        "title": "They Shoot Horses, Don't They?",
+        "releaseYear": 1971,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Actress in a Supporting Role",
           "role": "cast"
         }
       ]
@@ -25953,6 +28405,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Screenplay",
+      "result": "winner",
+      "film": {
+        "title": "Butch Cassidy and the Sundance Kid",
+        "releaseYear": 1971,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Screenplay",
+          "role": "writer"
+        }
+      ]
+    },
+    {
+      "year": 1971,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Screenplay",
       "result": "nominee",
       "film": {
         "title": "Bob & Carol & Ted & Alice",
@@ -26028,6 +28505,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Cinematography",
+      "result": "winner",
+      "film": {
+        "title": "Butch Cassidy and the Sundance Kid",
+        "releaseYear": 1971,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1971,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Cinematography",
       "result": "nominee",
       "film": {
         "title": "Catch-22",
@@ -26069,6 +28566,26 @@
       "festivalName": "BAFTA Awards",
       "category": "Best Cinematography",
       "result": "nominee",
+      "film": {
+        "title": "Waterloo",
+        "releaseYear": 1971,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1971,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Costume Design",
+      "result": "winner",
       "film": {
         "title": "Waterloo",
         "releaseYear": 1971,
@@ -26148,6 +28665,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Editing",
+      "result": "winner",
+      "film": {
+        "title": "Butch Cassidy and the Sundance Kid",
+        "releaseYear": 1971,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1971,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Editing",
       "result": "nominee",
       "film": {
         "title": "M*A*S*H",
@@ -26191,6 +28728,26 @@
       "result": "nominee",
       "film": {
         "title": "They Shoot Horses, Don't They?",
+        "releaseYear": 1971,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1971,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Original Music",
+      "result": "winner",
+      "film": {
+        "title": "Butch Cassidy and the Sundance Kid",
         "releaseYear": 1971,
         "imdbId": null,
         "countryCodes": [],
@@ -26262,6 +28819,31 @@
       },
       "directors": [],
       "credits": []
+    },
+    {
+      "year": 1971,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Production Design",
+      "result": "winner",
+      "film": {
+        "title": "Waterloo",
+        "releaseYear": 1971,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Production Design",
+          "role": "producer"
+        }
+      ]
     },
     {
       "year": 1971,
@@ -26343,6 +28925,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Sound",
+      "result": "winner",
+      "film": {
+        "title": "Butch Cassidy and the Sundance Kid",
+        "releaseYear": 1971,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1971,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Sound",
       "result": "nominee",
       "film": {
         "title": "M*A*S*H",
@@ -26386,6 +28988,26 @@
       "result": "nominee",
       "film": {
         "title": "Ryan's Daughter",
+        "releaseYear": 1971,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1971,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Most Promising Newcomer to Leading Film Roles",
+      "result": "winner",
+      "film": {
+        "title": "Kes",
         "releaseYear": 1971,
         "imdbId": null,
         "countryCodes": [],
@@ -26463,6 +29085,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Short Animation",
+      "result": "winner",
+      "film": {
+        "title": "Henry Nine ' Til Five",
+        "releaseYear": 1971,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1971,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Short Animation",
       "result": "nominee",
       "film": {
         "title": "Children and Cars",
@@ -26506,6 +29148,26 @@
       "result": "nominee",
       "film": {
         "title": "It's Tough to Be a Bird",
+        "releaseYear": 1971,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1971,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Short Film",
+      "result": "winner",
+      "film": {
+        "title": "The Shadow of Progress",
         "releaseYear": 1971,
         "imdbId": null,
         "countryCodes": [],
@@ -26583,6 +29245,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Specialised Film",
+      "result": "winner",
+      "film": {
+        "title": "The Rise and Fall of the Great Lakes",
+        "releaseYear": 1971,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1971,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Specialised Film",
       "result": "nominee",
       "film": {
         "title": "Continental Drift",
@@ -26626,6 +29308,26 @@
       "result": "nominee",
       "film": {
         "title": "A Study in Change",
+        "releaseYear": 1971,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1971,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "United Nations Award",
+      "result": "winner",
+      "film": {
+        "title": "M*A*S*H",
         "releaseYear": 1971,
         "imdbId": null,
         "countryCodes": [],
@@ -26943,6 +29645,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Film",
+      "result": "winner",
+      "film": {
+        "title": "Sunday Bloody Sunday",
+        "releaseYear": 1972,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1972,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Film",
       "result": "nominee",
       "film": {
         "title": "Death in Venice",
@@ -26996,6 +29718,28 @@
         "runtimeMinutes": 0
       },
       "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1972,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Direction",
+      "result": "winner",
+      "film": {
+        "title": "Sunday Bloody Sunday",
+        "releaseYear": 1972,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [
+        "Best Direction"
+      ],
       "credits": []
     },
     {
@@ -27069,6 +29813,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Actor in a Leading Role",
+      "result": "winner",
+      "film": {
+        "title": "Sunday Bloody Sunday",
+        "releaseYear": 1972,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Actor in a Leading Role",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1972,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Actor in a Leading Role",
       "result": "nominee",
       "film": {
         "title": "Gumshoe",
@@ -27135,6 +29904,31 @@
       "credits": [
         {
           "name": "Dustin Hoffman",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1972,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Actress in a Leading Role",
+      "result": "winner",
+      "film": {
+        "title": "Sunday Bloody Sunday",
+        "releaseYear": 1972,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Actress in a Leading Role",
           "role": "cast"
         }
       ]
@@ -27244,6 +30038,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Actor in a Supporting Role",
+      "result": "winner",
+      "film": {
+        "title": "The Go-Between",
+        "releaseYear": 1972,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Actor in a Supporting Role",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1972,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Actor in a Supporting Role",
       "result": "nominee",
       "film": {
         "title": "Get Carter",
@@ -27310,6 +30129,31 @@
       "credits": [
         {
           "name": "Michael Gough",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1972,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Actress in a Supporting Role",
+      "result": "winner",
+      "film": {
+        "title": "The Go-Between",
+        "releaseYear": 1972,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Actress in a Supporting Role",
           "role": "cast"
         }
       ]
@@ -27394,6 +30238,31 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Screenplay",
+      "result": "winner",
+      "film": {
+        "title": "The Go-Between",
+        "releaseYear": 1972,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Screenplay",
+          "role": "writer"
+        }
+      ]
+    },
+    {
+      "year": 1972,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Screenplay",
       "result": "nominee",
       "film": {
         "title": "Gumshoe",
@@ -27469,6 +30338,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Cinematography",
+      "result": "winner",
+      "film": {
+        "title": "Death in Venice",
+        "releaseYear": 1972,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1972,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Cinematography",
       "result": "nominee",
       "film": {
         "title": "Fiddler on the Roof",
@@ -27512,6 +30401,26 @@
       "result": "nominee",
       "film": {
         "title": "Sunday Bloody Sunday",
+        "releaseYear": 1972,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1972,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Costume Design",
+      "result": "winner",
+      "film": {
+        "title": "Death in Venice",
         "releaseYear": 1972,
         "imdbId": null,
         "countryCodes": [],
@@ -27589,6 +30498,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Editing",
+      "result": "winner",
+      "film": {
+        "title": "Sunday Bloody Sunday",
+        "releaseYear": 1972,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1972,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Editing",
       "result": "nominee",
       "film": {
         "title": "Fiddler on the Roof",
@@ -27632,6 +30561,26 @@
       "result": "nominee",
       "film": {
         "title": "Taking Off",
+        "releaseYear": 1972,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1972,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Original Music",
+      "result": "winner",
+      "film": {
+        "title": "Summer of '42",
         "releaseYear": 1972,
         "imdbId": null,
         "countryCodes": [],
@@ -27703,6 +30652,31 @@
       },
       "directors": [],
       "credits": []
+    },
+    {
+      "year": 1972,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Production Design",
+      "result": "winner",
+      "film": {
+        "title": "Death in Venice",
+        "releaseYear": 1972,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Best Production Design",
+          "role": "producer"
+        }
+      ]
     },
     {
       "year": 1972,
@@ -27784,6 +30758,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Sound",
+      "result": "winner",
+      "film": {
+        "title": "Death in Venice",
+        "releaseYear": 1972,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1972,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Sound",
       "result": "nominee",
       "film": {
         "title": "Fiddler on the Roof",
@@ -27844,9 +30838,49 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Documentary",
+      "result": "winner",
+      "film": {
+        "title": "The Hellstrom Chronicle",
+        "releaseYear": 1972,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1972,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Documentary",
       "result": "nominee",
       "film": {
         "title": "Death of a Legend",
+        "releaseYear": 1972,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1972,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Short Film",
+      "result": "winner",
+      "film": {
+        "title": "Alaska: The Great Land",
         "releaseYear": 1972,
         "imdbId": null,
         "countryCodes": [],
@@ -27904,6 +30938,26 @@
       "festivalId": "bafta",
       "festivalName": "BAFTA Awards",
       "category": "Best Specialised Film",
+      "result": "winner",
+      "film": {
+        "title": "The Savage Voyage",
+        "releaseYear": 1972,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1972,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Best Specialised Film",
       "result": "nominee",
       "film": {
         "title": "Don't Go Down The...",
@@ -27927,6 +30981,26 @@
       "result": "nominee",
       "film": {
         "title": "A Future for the Past",
+        "releaseYear": 1972,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1972,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "Most Promising Newcomer to Leading Film Roles",
+      "result": "winner",
+      "film": {
+        "title": "The Go-Between",
         "releaseYear": 1972,
         "imdbId": null,
         "countryCodes": [],
@@ -27987,6 +31061,26 @@
       "result": "nominee",
       "film": {
         "title": "Nicholas and Alexandra",
+        "releaseYear": 1972,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1972,
+      "festivalId": "bafta",
+      "festivalName": "BAFTA Awards",
+      "category": "United Nations Award",
+      "result": "winner",
+      "film": {
+        "title": "The Battle of Algiers",
         "releaseYear": 1972,
         "imdbId": null,
         "countryCodes": [],

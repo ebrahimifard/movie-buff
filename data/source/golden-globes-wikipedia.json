@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T20:58:51.259Z",
+  "generatedAt": "2026-09-17T22:33:48.368Z",
   "records": [
     {
       "year": 1944,
@@ -64909,6 +64909,26 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Motion Picture",
+      "result": "winner",
+      "film": {
+        "title": "Bugsy",
+        "releaseYear": 1992,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1992,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Motion Picture",
       "result": "nominee",
       "film": {
         "title": "JFK",
@@ -64972,6 +64992,26 @@
       "result": "nominee",
       "film": {
         "title": "Thelma & Louise",
+        "releaseYear": 1992,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1992,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Motion Picture",
+      "result": "winner",
+      "film": {
+        "title": "Beauty and the Beast",
         "releaseYear": 1992,
         "imdbId": null,
         "countryCodes": [],
@@ -65063,6 +65103,31 @@
       },
       "directors": [],
       "credits": []
+    },
+    {
+      "year": 1992,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Drama",
+      "result": "winner",
+      "film": {
+        "title": "The Prince of Tides",
+        "releaseYear": 1992,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Nick Nolte",
+          "role": "cast"
+        }
+      ]
     },
     {
       "year": 1992,
@@ -65169,6 +65234,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Drama",
+      "result": "winner",
+      "film": {
+        "title": "The Silence of the Lambs",
+        "releaseYear": 1992,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Jodie Foster",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1992,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Drama",
       "result": "nominee",
       "film": {
         "title": "Thelma & Louise",
@@ -65210,6 +65300,31 @@
       "credits": [
         {
           "name": "Laura Dern",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1992,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "The Fisher King",
+        "releaseYear": 1992,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Robin Williams",
           "role": "cast"
         }
       ]
@@ -65319,6 +65434,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "For the Boys",
+        "releaseYear": 1992,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Bette Midler",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1992,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "Switch",
@@ -65419,6 +65559,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "City Slickers",
+        "releaseYear": 1992,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Jack Palance",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1992,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "Hear My Song",
@@ -65485,6 +65650,31 @@
       "credits": [
         {
           "name": "Harvey Keitel",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1992,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "The Fisher King",
+        "releaseYear": 1992,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Mercedes Ruehl",
           "role": "cast"
         }
       ]
@@ -65594,6 +65784,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "JFK",
+        "releaseYear": 1992,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Oliver Stone",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1992,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "The Silence of the Lambs",
@@ -65669,6 +65884,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Thelma & Louise",
+        "releaseYear": 1992,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Callie Khouri",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1992,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "Grand Canyon",
@@ -65710,6 +65950,31 @@
       "credits": [
         {
           "name": "Zachary Sklar",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1992,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Beauty and the Beast",
+        "releaseYear": 1992,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Alan Menken",
           "role": "cast"
         }
       ]
@@ -65885,6 +66150,31 @@
       "credits": [
         {
           "name": "Tears in Heaven",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1992,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Europa, Europa",
+        "releaseYear": 1992,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Germany",
           "role": "cast"
         }
       ]
@@ -66269,6 +66559,26 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Motion Picture",
+      "result": "winner",
+      "film": {
+        "title": "Scent of a Woman",
+        "releaseYear": 1993,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1993,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Motion Picture",
       "result": "nominee",
       "film": {
         "title": "The Crying Game",
@@ -66332,6 +66642,26 @@
       "result": "nominee",
       "film": {
         "title": "Unforgiven",
+        "releaseYear": 1993,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1993,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Motion Picture",
+      "result": "winner",
+      "film": {
+        "title": "The Player",
         "releaseYear": 1993,
         "imdbId": null,
         "countryCodes": [],
@@ -66429,6 +66759,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Drama",
+      "result": "winner",
+      "film": {
+        "title": "Scent of a Woman",
+        "releaseYear": 1993,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Al Pacino",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1993,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Drama",
       "result": "nominee",
       "film": {
         "title": "A Few Good Men",
@@ -66520,6 +66875,31 @@
       "credits": [
         {
           "name": "Denzel Washington",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1993,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Drama",
+      "result": "winner",
+      "film": {
+        "title": "Howards End",
+        "releaseYear": 1993,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Emma Thompson",
           "role": "cast"
         }
       ]
@@ -66629,6 +67009,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "The Player",
+        "releaseYear": 1993,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Tim Robbins",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1993,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "Honeymoon in Vegas",
@@ -66729,6 +67134,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Enchanted April",
+        "releaseYear": 1993,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Miranda Richardson",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1993,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "A League of Their Own",
@@ -66795,6 +67225,31 @@
       "credits": [
         {
           "name": "Meryl Streep",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1993,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Unforgiven",
+        "releaseYear": 1993,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Gene Hackman",
           "role": "cast"
         }
       ]
@@ -66895,6 +67350,31 @@
       "credits": [
         {
           "name": "David Paymer",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1993,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Enchanted April",
+        "releaseYear": 1993,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Joan Plowright",
           "role": "cast"
         }
       ]
@@ -67079,6 +67559,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Scent of a Woman",
+        "releaseYear": 1993,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Bo Goldman",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1993,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "Unforgiven",
@@ -67095,6 +67600,31 @@
       "credits": [
         {
           "name": "David Webb Peoples",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1993,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Aladdin",
+        "releaseYear": 1993,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Alan Menken",
           "role": "cast"
         }
       ]
@@ -67245,6 +67775,31 @@
       "credits": [
         {
           "name": "This Used to Be My Playground",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1993,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Indochine",
+        "releaseYear": 1993,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "France",
           "role": "cast"
         }
       ]
@@ -67654,6 +68209,26 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Motion Picture",
+      "result": "winner",
+      "film": {
+        "title": "Schindler's List",
+        "releaseYear": 1994,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1994,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Motion Picture",
       "result": "nominee",
       "film": {
         "title": "The Age of Innocence",
@@ -67717,6 +68292,26 @@
       "result": "nominee",
       "film": {
         "title": "The Remains of the Day",
+        "releaseYear": 1994,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1994,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Motion Picture",
+      "result": "winner",
+      "film": {
+        "title": "Mrs. Doubtfire",
         "releaseYear": 1994,
         "imdbId": null,
         "countryCodes": [],
@@ -67808,6 +68403,31 @@
       },
       "directors": [],
       "credits": []
+    },
+    {
+      "year": 1994,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Drama",
+      "result": "winner",
+      "film": {
+        "title": "Philadelphia",
+        "releaseYear": 1994,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Tom Hanks",
+          "role": "cast"
+        }
+      ]
     },
     {
       "year": 1994,
@@ -67914,6 +68534,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Drama",
+      "result": "winner",
+      "film": {
+        "title": "The Piano",
+        "releaseYear": 1994,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Holly Hunter",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1994,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Drama",
       "result": "nominee",
       "film": {
         "title": "Three Colors: Blue (Trois Couleurs: Bleu)",
@@ -67980,6 +68625,31 @@
       "credits": [
         {
           "name": "Debra Winger",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1994,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Mrs. Doubtfire",
+        "releaseYear": 1994,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Robin Williams",
           "role": "cast"
         }
       ]
@@ -68089,6 +68759,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "What's Love Got to Do with It",
+        "releaseYear": 1994,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Angela Bassett",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1994,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "Six Degrees of Separation",
@@ -68155,6 +68850,31 @@
       "credits": [
         {
           "name": "Diane Keaton",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1994,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "The Fugitive",
+        "releaseYear": 1994,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Tommy Lee Jones",
           "role": "cast"
         }
       ]
@@ -68264,6 +68984,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "The Age of Innocence",
+        "releaseYear": 1994,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Winona Ryder",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1994,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "Fearless",
@@ -68330,6 +69075,31 @@
       "credits": [
         {
           "name": "Emma Thompson",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1994,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Schindler's List",
+        "releaseYear": 1994,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Steven Spielberg",
           "role": "cast"
         }
       ]
@@ -68464,6 +69234,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Heaven & Earth",
+        "releaseYear": 1994,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Kitaro",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1994,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "Three Colors: Blue",
@@ -68505,6 +69300,31 @@
       "credits": [
         {
           "name": "Danny Elfman",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1994,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Philadelphia",
+        "releaseYear": 1994,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Streets of Philadelphia",
           "role": "cast"
         }
       ]
@@ -68580,6 +69400,31 @@
       "credits": [
         {
           "name": "Stay (Faraway, So Close!)",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1994,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Farewell My Concubine (Ba wang bie ji)",
+        "releaseYear": 1994,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Hong Kong",
           "role": "cast"
         }
       ]
@@ -68929,6 +69774,26 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Motion Picture",
+      "result": "winner",
+      "film": {
+        "title": "Forrest Gump",
+        "releaseYear": 1995,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1995,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Motion Picture",
       "result": "nominee",
       "film": {
         "title": "Legends of the Fall",
@@ -68992,6 +69857,26 @@
       "result": "nominee",
       "film": {
         "title": "Quiz Show",
+        "releaseYear": 1995,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1995,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Motion Picture",
+      "result": "winner",
+      "film": {
+        "title": "The Lion King",
         "releaseYear": 1995,
         "imdbId": null,
         "countryCodes": [],
@@ -69089,6 +69974,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Drama",
+      "result": "winner",
+      "film": {
+        "title": "Forrest Gump",
+        "releaseYear": 1995,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Tom Hanks",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1995,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Drama",
       "result": "nominee",
       "film": {
         "title": "The Shawshank Redemption",
@@ -69180,6 +70090,31 @@
       "credits": [
         {
           "name": "John Travolta",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1995,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Drama",
+      "result": "winner",
+      "film": {
+        "title": "Blue Sky",
+        "releaseYear": 1995,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Jessica Lange",
           "role": "cast"
         }
       ]
@@ -69289,6 +70224,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Four Weddings and a Funeral",
+        "releaseYear": 1995,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Hugh Grant",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1995,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "The Mask",
@@ -69389,6 +70349,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "True Lies",
+        "releaseYear": 1995,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Jamie Lee Curtis",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1995,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "Speechless",
@@ -69455,6 +70440,31 @@
       "credits": [
         {
           "name": "Shirley MacLaine",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1995,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Ed Wood",
+        "releaseYear": 1995,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Martin Landau",
           "role": "cast"
         }
       ]
@@ -69564,6 +70574,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Bullets over Broadway",
+        "releaseYear": 1995,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Dianne Wiest",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1995,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "Interview with the Vampire",
@@ -69605,6 +70640,31 @@
       "credits": [
         {
           "name": "Sophia Loren",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1995,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Forrest Gump",
+        "releaseYear": 1995,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Robert Zemeckis",
           "role": "cast"
         }
       ]
@@ -69664,6 +70724,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Pulp Fiction",
+        "releaseYear": 1995,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Quentin Tarantino",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1995,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "Four Weddings and a Funeral",
@@ -69705,6 +70790,31 @@
       "credits": [
         {
           "name": "Frank Darabont",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1995,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "The Lion King",
+        "releaseYear": 1995,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Hans Zimmer",
           "role": "cast"
         }
       ]
@@ -69850,6 +70960,31 @@
       "credits": [
         {
           "name": "Look What Love Has Done",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1995,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Farinelli",
+        "releaseYear": 1995,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Belgium",
           "role": "cast"
         }
       ]
@@ -70219,6 +71354,26 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Motion Picture",
+      "result": "winner",
+      "film": {
+        "title": "Sense and Sensibility",
+        "releaseYear": 1996,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1996,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Motion Picture",
       "result": "nominee",
       "film": {
         "title": "Apollo 13",
@@ -70282,6 +71437,26 @@
       "result": "nominee",
       "film": {
         "title": "Leaving Las Vegas",
+        "releaseYear": 1996,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1996,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Motion Picture",
+      "result": "winner",
+      "film": {
+        "title": "Babe",
         "releaseYear": 1996,
         "imdbId": null,
         "countryCodes": [],
@@ -70373,6 +71548,31 @@
       },
       "directors": [],
       "credits": []
+    },
+    {
+      "year": 1996,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Drama",
+      "result": "winner",
+      "film": {
+        "title": "Leaving Las Vegas",
+        "releaseYear": 1996,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Nicolas Cage",
+          "role": "cast"
+        }
+      ]
     },
     {
       "year": 1996,
@@ -70479,6 +71679,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Drama",
+      "result": "winner",
+      "film": {
+        "title": "Casino",
+        "releaseYear": 1996,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Sharon Stone",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1996,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Drama",
       "result": "nominee",
       "film": {
         "title": "Leaving Las Vegas",
@@ -70545,6 +71770,31 @@
       "credits": [
         {
           "name": "Emma Thompson",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1996,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Get Shorty",
+        "releaseYear": 1996,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "John Travolta",
           "role": "cast"
         }
       ]
@@ -70654,6 +71904,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "To Die For",
+        "releaseYear": 1996,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Nicole Kidman",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1996,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "While You Were Sleeping",
@@ -70720,6 +71995,31 @@
       "credits": [
         {
           "name": "Vanessa Redgrave",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1996,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "12 Monkeys",
+        "releaseYear": 1996,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Brad Pitt",
           "role": "cast"
         }
       ]
@@ -70829,6 +72129,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Mighty Aphrodite",
+        "releaseYear": 1996,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Mira Sorvino",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1996,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "The Crossing Guard",
@@ -70904,6 +72229,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Braveheart",
+        "releaseYear": 1996,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Mel Gibson",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1996,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "Leaving Las Vegas",
@@ -70970,6 +72320,31 @@
       "credits": [
         {
           "name": "Martin Scorsese",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1996,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Sense and Sensibility",
+        "releaseYear": 1996,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Emma Thompson",
           "role": "cast"
         }
       ]
@@ -71079,6 +72454,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "A Walk in the Clouds",
+        "releaseYear": 1996,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Maurice Jarre",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1996,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "Don Juan DeMarco",
@@ -71120,6 +72520,31 @@
       "credits": [
         {
           "name": "Alan Menken",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1996,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Pocahontas",
+        "releaseYear": 1996,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Colors of the Wind",
           "role": "cast"
         }
       ]
@@ -71195,6 +72620,31 @@
       "credits": [
         {
           "name": "You've Got a Friend in Me",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1996,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Les Misérables",
+        "releaseYear": 1996,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "France",
           "role": "cast"
         }
       ]
@@ -71604,6 +73054,26 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Motion Picture",
+      "result": "winner",
+      "film": {
+        "title": "The English Patient",
+        "releaseYear": 1997,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1997,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Motion Picture",
       "result": "nominee",
       "film": {
         "title": "Breaking the Waves",
@@ -71667,6 +73137,26 @@
       "result": "nominee",
       "film": {
         "title": "Shine",
+        "releaseYear": 1997,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1997,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Motion Picture",
+      "result": "winner",
+      "film": {
+        "title": "Evita",
         "releaseYear": 1997,
         "imdbId": null,
         "countryCodes": [],
@@ -71758,6 +73248,31 @@
       },
       "directors": [],
       "credits": []
+    },
+    {
+      "year": 1997,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Drama",
+      "result": "winner",
+      "film": {
+        "title": "Shine",
+        "releaseYear": 1997,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Geoffrey Rush",
+          "role": "cast"
+        }
+      ]
     },
     {
       "year": 1997,
@@ -71864,6 +73379,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Drama",
+      "result": "winner",
+      "film": {
+        "title": "Secrets & Lies",
+        "releaseYear": 1997,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Brenda Blethyn",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1997,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Drama",
       "result": "nominee",
       "film": {
         "title": "Marvin's Room",
@@ -71905,6 +73445,31 @@
       "credits": [
         {
           "name": "Emily Watson",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1997,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Jerry Maguire",
+        "releaseYear": 1997,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Tom Cruise",
           "role": "cast"
         }
       ]
@@ -72014,6 +73579,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Evita",
+        "releaseYear": 1997,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Madonna",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1997,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "101 Dalmatians",
@@ -72105,6 +73695,31 @@
       "credits": [
         {
           "name": "Barbra Streisand",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1997,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Primal Fear",
+        "releaseYear": 1997,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Edward Norton",
           "role": "cast"
         }
       ]
@@ -72214,6 +73829,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "The Mirror Has Two Faces",
+        "releaseYear": 1997,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Lauren Bacall",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1997,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "The English Patient",
@@ -72305,6 +73945,31 @@
       "credits": [
         {
           "name": "Marion Ross",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1997,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "The People vs. Larry Flynt",
+        "releaseYear": 1997,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Miloš Forman",
           "role": "cast"
         }
       ]
@@ -72414,6 +74079,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "The English Patient",
+        "releaseYear": 1997,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Gabriel Yared",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1997,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "Michael Collins",
@@ -72489,6 +74179,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Evita",
+        "releaseYear": 1997,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "You Must Love Me",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1997,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "Up Close and Personal",
@@ -72555,6 +74270,31 @@
       "credits": [
         {
           "name": "That Thing You Do!",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1997,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Kolya (Kolja)",
+        "releaseYear": 1997,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Czech Republic",
           "role": "cast"
         }
       ]
@@ -72904,6 +74644,26 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Motion Picture",
+      "result": "winner",
+      "film": {
+        "title": "Titanic",
+        "releaseYear": 1998,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1998,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Motion Picture",
       "result": "nominee",
       "film": {
         "title": "Amistad",
@@ -72967,6 +74727,26 @@
       "result": "nominee",
       "film": {
         "title": "L.A. Confidential",
+        "releaseYear": 1998,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1998,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Motion Picture",
+      "result": "winner",
+      "film": {
+        "title": "As Good as It Gets",
         "releaseYear": 1998,
         "imdbId": null,
         "countryCodes": [],
@@ -73058,6 +74838,31 @@
       },
       "directors": [],
       "credits": []
+    },
+    {
+      "year": 1998,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Drama",
+      "result": "winner",
+      "film": {
+        "title": "Ulee's Gold",
+        "releaseYear": 1998,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Peter Fonda",
+          "role": "cast"
+        }
+      ]
     },
     {
       "year": 1998,
@@ -73164,6 +74969,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Drama",
+      "result": "winner",
+      "film": {
+        "title": "Mrs Brown",
+        "releaseYear": 1998,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Judi Dench",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1998,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Drama",
       "result": "nominee",
       "film": {
         "title": "The Wings of the Dove",
@@ -73230,6 +75060,31 @@
       "credits": [
         {
           "name": "Jessica Lange",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1998,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "As Good as It Gets",
+        "releaseYear": 1998,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Jack Nicholson",
           "role": "cast"
         }
       ]
@@ -73414,6 +75269,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Boogie Nights",
+        "releaseYear": 1998,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Burt Reynolds",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1998,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "My Best Friend's Wedding",
@@ -73539,6 +75419,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "L.A. Confidential",
+        "releaseYear": 1998,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Kim Basinger",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1998,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "In & Out",
@@ -73639,6 +75544,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Titanic",
+        "releaseYear": 1998,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "James Cameron",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1998,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "L.A. Confidential",
@@ -73680,6 +75610,31 @@
       "credits": [
         {
           "name": "Jim Sheridan",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1998,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Good Will Hunting",
+        "releaseYear": 1998,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Ben Affleck",
           "role": "cast"
         }
       ]
@@ -73855,6 +75810,31 @@
       "credits": [
         {
           "name": "Tomorrow Never Dies",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1998,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "My Life in Pink (Ma vie en rose)",
+        "releaseYear": 1998,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Belgium",
           "role": "cast"
         }
       ]
@@ -74184,6 +76164,26 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Motion Picture",
+      "result": "winner",
+      "film": {
+        "title": "Saving Private Ryan",
+        "releaseYear": 1999,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1999,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Motion Picture",
       "result": "nominee",
       "film": {
         "title": "Elizabeth",
@@ -74247,6 +76247,26 @@
       "result": "nominee",
       "film": {
         "title": "The Truman Show",
+        "releaseYear": 1999,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 1999,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Motion Picture",
+      "result": "winner",
+      "film": {
+        "title": "Shakespeare in Love",
         "releaseYear": 1999,
         "imdbId": null,
         "countryCodes": [],
@@ -74364,6 +76384,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Drama",
+      "result": "winner",
+      "film": {
+        "title": "The Truman Show",
+        "releaseYear": 1999,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Jim Carrey",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1999,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Drama",
       "result": "nominee",
       "film": {
         "title": "Wilde",
@@ -74455,6 +76500,31 @@
       "credits": [
         {
           "name": "Nick Nolte",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1999,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Drama",
+      "result": "winner",
+      "film": {
+        "title": "Elizabeth",
+        "releaseYear": 1999,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Cate Blanchett",
           "role": "cast"
         }
       ]
@@ -74564,6 +76634,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Little Voice",
+        "releaseYear": 1999,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Michael Caine",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1999,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "The Mask of Zorro",
@@ -74664,6 +76759,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Shakespeare in Love",
+        "releaseYear": 1999,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Gwyneth Paltrow",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1999,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "There's Something About Mary",
@@ -74755,6 +76875,31 @@
       "credits": [
         {
           "name": "Meg Ryan",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1999,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "The Truman Show",
+        "releaseYear": 1999,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Ed Harris",
           "role": "cast"
         }
       ]
@@ -74889,6 +77034,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Gods and Monsters",
+        "releaseYear": 1999,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Lynn Redgrave",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1999,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "Primary Colors",
@@ -74964,6 +77134,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Saving Private Ryan",
+        "releaseYear": 1999,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Steven Spielberg",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1999,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "Elizabeth",
@@ -75030,6 +77225,31 @@
       "credits": [
         {
           "name": "Peter Weir",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1999,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Shakespeare in Love",
+        "releaseYear": 1999,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Marc Norman",
           "role": "cast"
         }
       ]
@@ -75189,6 +77409,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Quest for Camelot",
+        "releaseYear": 1999,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "The Prayer",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1999,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "City of Angels",
@@ -75230,6 +77475,31 @@
       "credits": [
         {
           "name": "Chris Difford",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 1999,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Central Station (Central do Brasil)",
+        "releaseYear": 1999,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Brazil",
           "role": "cast"
         }
       ]
@@ -75659,6 +77929,26 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Motion Picture",
+      "result": "winner",
+      "film": {
+        "title": "American Beauty",
+        "releaseYear": 2000,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 2000,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Motion Picture",
       "result": "nominee",
       "film": {
         "title": "The End of the Affair",
@@ -75722,6 +78012,26 @@
       "result": "nominee",
       "film": {
         "title": "The Talented Mr. Ripley",
+        "releaseYear": 2000,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 2000,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Motion Picture",
+      "result": "winner",
+      "film": {
+        "title": "Toy Story 2",
         "releaseYear": 2000,
         "imdbId": null,
         "countryCodes": [],
@@ -75813,6 +78123,31 @@
       },
       "directors": [],
       "credits": []
+    },
+    {
+      "year": 2000,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Drama",
+      "result": "winner",
+      "film": {
+        "title": "The Hurricane",
+        "releaseYear": 2000,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Denzel Washington",
+          "role": "cast"
+        }
+      ]
     },
     {
       "year": 2000,
@@ -75919,6 +78254,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Drama",
+      "result": "winner",
+      "film": {
+        "title": "Boys Don't Cry",
+        "releaseYear": 2000,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Hilary Swank",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 2000,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Drama",
       "result": "nominee",
       "film": {
         "title": "The End of the Affair",
@@ -75985,6 +78345,31 @@
       "credits": [
         {
           "name": "Sigourney Weaver",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 2000,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Man on the Moon",
+        "releaseYear": 2000,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Jim Carrey",
           "role": "cast"
         }
       ]
@@ -76094,6 +78479,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Tumbleweeds",
+        "releaseYear": 2000,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Janet McTeer",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 2000,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "The Muse",
@@ -76135,6 +78545,31 @@
       "credits": [
         {
           "name": "Reese Witherspoon",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 2000,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Magnolia",
+        "releaseYear": 2000,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Tom Cruise",
           "role": "cast"
         }
       ]
@@ -76244,6 +78679,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Girl, Interrupted",
+        "releaseYear": 2000,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Angelina Jolie",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 2000,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "Being John Malkovich",
@@ -76344,6 +78804,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "American Beauty",
+        "releaseYear": 2000,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Sam Mendes",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 2000,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "The Hurricane",
@@ -76410,6 +78895,31 @@
       "credits": [
         {
           "name": "Michael Mann",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 2000,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "The Legend of 1900",
+        "releaseYear": 2000,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Ennio Morricone",
           "role": "cast"
         }
       ]
@@ -76544,6 +79054,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Tarzan",
+        "releaseYear": 2000,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "You'll Be in My Heart",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 2000,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "Austin Powers: The Spy Who Shagged Me",
@@ -76610,6 +79145,31 @@
       "credits": [
         {
           "name": "When She Loved Me",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 2000,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "All About My Mother (Todo sobre mi madre)",
+        "releaseYear": 2000,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Spain",
           "role": "cast"
         }
       ]
@@ -77079,6 +79639,26 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Motion Picture",
+      "result": "winner",
+      "film": {
+        "title": "Gladiator",
+        "releaseYear": 2001,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 2001,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Motion Picture",
       "result": "nominee",
       "film": {
         "title": "Billy Elliot",
@@ -77179,6 +79759,26 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Motion Picture",
+      "result": "winner",
+      "film": {
+        "title": "Almost Famous",
+        "releaseYear": 2001,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 2001,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Motion Picture",
       "result": "nominee",
       "film": {
         "title": "Best in Show",
@@ -77253,6 +79853,31 @@
       },
       "directors": [],
       "credits": []
+    },
+    {
+      "year": 2001,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Drama",
+      "result": "winner",
+      "film": {
+        "title": "Cast Away",
+        "releaseYear": 2001,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Tom Hanks",
+          "role": "cast"
+        }
+      ]
     },
     {
       "year": 2001,
@@ -77350,6 +79975,31 @@
       "credits": [
         {
           "name": "Geoffrey Rush",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 2001,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Drama",
+      "result": "winner",
+      "film": {
+        "title": "Erin Brockovich",
+        "releaseYear": 2001,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Julia Roberts",
           "role": "cast"
         }
       ]
@@ -77459,6 +80109,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Performance in a Motion Picture – Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "O Brother, Where Art Thou?",
+        "releaseYear": 2001,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "George Clooney",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 2001,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "How the Grinch Stole Christmas",
@@ -77550,6 +80225,31 @@
       "credits": [
         {
           "name": "Mel Gibson",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 2001,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Performance in a Motion Picture – Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Nurse Betty",
+        "releaseYear": 2001,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Renée Zellweger",
           "role": "cast"
         }
       ]
@@ -77659,6 +80359,31 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Traffic",
+        "releaseYear": 2001,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Benicio del Toro",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 2001,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
       "result": "nominee",
       "film": {
         "title": "The Contender",
@@ -77750,6 +80475,31 @@
       "credits": [
         {
           "name": "Joaquin Phoenix",
+          "role": "cast"
+        }
+      ]
+    },
+    {
+      "year": 2001,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Supporting Performance in a Motion Picture – Drama, Musical or Comedy",
+      "result": "winner",
+      "film": {
+        "title": "Almost Famous",
+        "releaseYear": 2001,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Kate Hudson",
           "role": "cast"
         }
       ]
@@ -77859,6 +80609,28 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Director",
+      "result": "winner",
+      "film": {
+        "title": "Crouching Tiger, Hidden Dragon (Wo hu cang long)",
+        "releaseYear": 2001,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [
+        "Ang Lee"
+      ],
+      "credits": []
+    },
+    {
+      "year": 2001,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Director",
       "result": "nominee",
       "film": {
         "title": "Gladiator",
@@ -77941,6 +80713,31 @@
         "Istvan Szabo"
       ],
       "credits": []
+    },
+    {
+      "year": 2001,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Screenplay",
+      "result": "winner",
+      "film": {
+        "title": "Traffic",
+        "releaseYear": 2001,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": [
+        {
+          "name": "Stephen Gaghan",
+          "role": "writer"
+        }
+      ]
     },
     {
       "year": 2001,
@@ -78047,6 +80844,26 @@
       "festivalId": "golden-globes",
       "festivalName": "Golden Globes",
       "category": "Best Original Score",
+      "result": "winner",
+      "film": {
+        "title": "Gladiator",
+        "releaseYear": 2001,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 2001,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Original Score",
       "result": "nominee",
       "film": {
         "title": "All the Pretty Horses",
@@ -78130,6 +80947,26 @@
       "result": "nominee",
       "film": {
         "title": "Sunshine",
+        "releaseYear": 2001,
+        "imdbId": null,
+        "countryCodes": [],
+        "languages": [],
+        "genres": [],
+        "synopsis": "",
+        "posterUrl": "",
+        "runtimeMinutes": 0
+      },
+      "directors": [],
+      "credits": []
+    },
+    {
+      "year": 2001,
+      "festivalId": "golden-globes",
+      "festivalName": "Golden Globes",
+      "category": "Best Original Song",
+      "result": "winner",
+      "film": {
+        "title": "Wonder Boys",
         "releaseYear": 2001,
         "imdbId": null,
         "countryCodes": [],

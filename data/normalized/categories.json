@@ -7857,6 +7857,15 @@
     "isHonoraryAward": false
   },
   {
+    "id": "venice:afternoon-screenings",
+    "festivalId": "venice",
+    "name": "Afternoon Screenings",
+    "normalizedName": "afternoon-screenings",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "venice:aiaca-award",
     "festivalId": "venice",
     "name": "AIACA Award",
@@ -8100,12 +8109,30 @@
     "isHonoraryAward": false
   },
   {
+    "id": "venice:award-of-the-city-of-imola",
+    "festivalId": "venice",
+    "name": "Award of the City of Imola",
+    "normalizedName": "award-of-the-city-of-imola",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "venice:award-of-the-city-of-rome",
     "festivalId": "venice",
     "name": "Award of the City of Rome",
     "normalizedName": "award-of-the-city-of-rome",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "venice:award-of-the-city-of-venice",
+    "festivalId": "venice",
+    "name": "Award of the City of Venice",
+    "normalizedName": "award-of-the-city-of-venice",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -8190,6 +8217,15 @@
     "isHonoraryAward": false
   },
   {
+    "id": "venice:best-animated-film",
+    "festivalId": "venice",
+    "name": "Best Animated Film",
+    "normalizedName": "best-animated-film",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "venice:best-artistic-collaboration",
     "festivalId": "venice",
     "name": "Best Artistic Collaboration",
@@ -8248,6 +8284,24 @@
     "festivalId": "venice",
     "name": "Best Chief Engineer",
     "normalizedName": "best-chief-engineer",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "venice:best-children-s-film",
+    "festivalId": "venice",
+    "name": "Best Children's Film",
+    "normalizedName": "best-children-s-film",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "venice:best-children-s-film-television",
+    "festivalId": "venice",
+    "name": "Best Children's Film - Television",
+    "normalizedName": "best-children-s-film-television",
     "scope": "film",
     "isAward": false,
     "isHonoraryAward": false
@@ -8379,12 +8433,30 @@
     "isHonoraryAward": false
   },
   {
+    "id": "venice:best-documentary-television",
+    "festivalId": "venice",
+    "name": "Best Documentary - Television",
+    "normalizedName": "best-documentary-television",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "venice:best-experience",
     "festivalId": "venice",
     "name": "Best Experience",
     "normalizedName": "best-experience",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "venice:best-experimental-film",
+    "festivalId": "venice",
+    "name": "Best Experimental Film",
+    "normalizedName": "best-experimental-film",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -8421,6 +8493,15 @@
     "normalizedName": "best-film",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "venice:best-film-about-adolescence",
+    "festivalId": "venice",
+    "name": "Best Film about Adolescence",
+    "normalizedName": "best-film-about-adolescence",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -8811,6 +8892,15 @@
     "isHonoraryAward": false
   },
   {
+    "id": "venice:best-production-design",
+    "festivalId": "venice",
+    "name": "Best Production Design",
+    "normalizedName": "best-production-design",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "venice:best-production-director",
     "festivalId": "venice",
     "name": "Best Production Director",
@@ -8943,6 +9033,15 @@
     "normalizedName": "best-soundtrack-award",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "venice:best-sport-film",
+    "festivalId": "venice",
+    "name": "Best Sport Film",
+    "normalizedName": "best-sport-film",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -9234,6 +9333,15 @@
     "isHonoraryAward": false
   },
   {
+    "id": "venice:catholic-cinema-clubs-award",
+    "festivalId": "venice",
+    "name": "Catholic Cinema Clubs Award",
+    "normalizedName": "catholic-cinema-clubs-award",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "venice:children-and-cinema-award",
     "festivalId": "venice",
     "name": "Children and Cinema Award",
@@ -9339,6 +9447,15 @@
     "normalizedName": "cinecritica-award",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "venice:cinema-60-award",
+    "festivalId": "venice",
+    "name": "Cinema 60 Award",
+    "normalizedName": "cinema-60-award",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -9591,6 +9708,15 @@
     "normalizedName": "cult-network-italia-prize",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "venice:cultural-and-educational-film",
+    "festivalId": "venice",
+    "name": "Cultural and Educational Film",
+    "normalizedName": "cultural-and-educational-film",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -10044,6 +10170,15 @@
     "isHonoraryAward": false
   },
   {
+    "id": "venice:film-about-architecture",
+    "festivalId": "venice",
+    "name": "Film about Architecture",
+    "normalizedName": "film-about-architecture",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "venice:film-award",
     "festivalId": "venice",
     "name": "film award",
@@ -10332,6 +10467,15 @@
     "isHonoraryAward": false
   },
   {
+    "id": "venice:golden-crown",
+    "festivalId": "venice",
+    "name": "Golden Crown",
+    "normalizedName": "golden-crown",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "venice:golden-globe-impact-prize-for-documentary",
     "festivalId": "venice",
     "name": "Golden Globe Impact Prize for Documentary",
@@ -10347,6 +10491,24 @@
     "normalizedName": "golden-lion",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "venice:golden-lion-for-lifetime-achievement",
+    "festivalId": "venice",
+    "name": "Golden Lion for Lifetime Achievement",
+    "normalizedName": "golden-lion-for-lifetime-achievement",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "venice:golden-lion-of-saint-mark",
+    "festivalId": "venice",
+    "name": "Golden Lion of Saint Mark",
+    "normalizedName": "golden-lion-of-saint-mark",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -10509,6 +10671,15 @@
     "normalizedName": "golden-osella-honorable-mention",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "venice:golden-rudder",
+    "festivalId": "venice",
+    "name": "Golden Rudder",
+    "normalizedName": "golden-rudder",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -10800,6 +10971,15 @@
     "isHonoraryAward": false
   },
   {
+    "id": "venice:in-competition-first-work",
+    "festivalId": "venice",
+    "name": "In Competition - First Work",
+    "normalizedName": "in-competition-first-work",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "venice:in-competition-venezia-63",
     "festivalId": "venice",
     "name": "In Competition (Venezia 63)",
@@ -10876,6 +11056,15 @@
     "festivalId": "venice",
     "name": "In Competition (Venezia 83)",
     "normalizedName": "in-competition-venezia-83",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "venice:in-search-of-kim-novak",
+    "festivalId": "venice",
+    "name": "In Search of Kim Novak",
+    "normalizedName": "in-search-of-kim-novak",
     "scope": "film",
     "isAward": false,
     "isHonoraryAward": false
@@ -11031,6 +11220,15 @@
     "normalizedName": "italian-critics-prize",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "venice:italian-film-critics-award",
+    "festivalId": "venice",
+    "name": "Italian Film Critics Award",
+    "normalizedName": "italian-film-critics-award",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -11274,6 +11472,15 @@
     "normalizedName": "lion-of-san-marco",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "venice:lion-of-san-marco-grand-prize",
+    "festivalId": "venice",
+    "name": "Lion of San Marco - Grand Prize",
+    "normalizedName": "lion-of-san-marco-grand-prize",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -11583,6 +11790,24 @@
     "isHonoraryAward": false
   },
   {
+    "id": "venice:mussolini-cup-best-foreign-film",
+    "festivalId": "venice",
+    "name": "Mussolini Cup – Best Foreign Film",
+    "normalizedName": "mussolini-cup-best-foreign-film",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "venice:mussolini-cup-best-italian-film",
+    "festivalId": "venice",
+    "name": "Mussolini Cup – Best Italian Film",
+    "normalizedName": "mussolini-cup-best-italian-film",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "venice:nave-d-argento-for-best-otp",
     "festivalId": "venice",
     "name": "Nave d'Argento for Best OTP",
@@ -11677,6 +11902,15 @@
     "festivalId": "venice",
     "name": "Officina Veneziana",
     "normalizedName": "officina-veneziana",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "venice:oici-award",
+    "festivalId": "venice",
+    "name": "OICI Award",
+    "normalizedName": "oici-award",
     "scope": "film",
     "isAward": false,
     "isHonoraryAward": false
@@ -11967,6 +12201,15 @@
     "normalizedName": "pietro-bianco-award",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "venice:plate-lion-of-san-marco",
+    "festivalId": "venice",
+    "name": "Plate 'Lion of San Marco'",
+    "normalizedName": "plate-lion-of-san-marco",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -12327,6 +12570,15 @@
     "normalizedName": "san-marco-prize",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "venice:san-michele-award",
+    "festivalId": "venice",
+    "name": "San Michele Award",
+    "normalizedName": "san-michele-award",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -13308,6 +13560,15 @@
     "normalizedName": "unicef-award",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "venice:unicrit-award",
+    "festivalId": "venice",
+    "name": "UNICRIT Award",
+    "normalizedName": "unicrit-award",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {

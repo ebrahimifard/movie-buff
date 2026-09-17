@@ -3976,6 +3976,14 @@
     "endDate": null
   },
   {
+    "id": "venice-1966",
+    "festivalId": "venice",
+    "year": 1966,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "bafta-1965",
     "festivalId": "bafta",
     "year": 1965,
@@ -4512,6 +4520,14 @@
     "endDate": null
   },
   {
+    "id": "venice-1956",
+    "festivalId": "venice",
+    "year": 1956,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "bafta-1955",
     "festivalId": "bafta",
     "year": 1955,
@@ -4992,6 +5008,14 @@
     "endDate": null
   },
   {
+    "id": "venice-1946",
+    "festivalId": "venice",
+    "year": 1946,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "golden-globes-1945",
     "festivalId": "golden-globes",
     "year": 1945,
@@ -5040,8 +5064,24 @@
     "endDate": null
   },
   {
+    "id": "venice-1942",
+    "festivalId": "venice",
+    "year": 1942,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "oscars-1941",
     "festivalId": "oscars",
+    "year": 1941,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "venice-1941",
+    "festivalId": "venice",
     "year": 1941,
     "edition": null,
     "startDate": null,
@@ -5056,8 +5096,24 @@
     "endDate": null
   },
   {
+    "id": "venice-1940",
+    "festivalId": "venice",
+    "year": 1940,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "oscars-1939",
     "festivalId": "oscars",
+    "year": 1939,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "venice-1939",
+    "festivalId": "venice",
     "year": 1939,
     "edition": null,
     "startDate": null,
