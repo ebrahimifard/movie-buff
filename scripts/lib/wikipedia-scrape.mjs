@@ -35,7 +35,7 @@ const GENERIC_CATEGORY_PLACEHOLDER_PATTERN = /^(other|unknown category)$/i;
 // festival's data starts with these words, confirmed by inspecting every
 // festival's current category list before adding this.
 export const NON_AWARD_SECTION_PATTERN =
-  /^(contents|references|external links|see also|notes|media|further reading|bibliography|sources|trivia|cerem(ony|onies)|presenters|jur(y|ies)|special events and homages|awards breakdown|multiple nominations|multiple wins|films? with multiple nominations|films? with multiple wins|series with multiple nominations|series with multiple wins|digital audio|in memoriam|miss golden globe|expansion|reduction|television|(the\s+)?retrospective.*|(the\s+)?homage.*|(the\s+)?tribute.*|(the\s+)?centennial.*)$/i;
+  /^(contents|references|external links|see also|notes|media|further reading|bibliography|sources|trivia|cerem(ony|onies)|presenters|jur(y|ies)|special events and homages|awards breakdown|statistics|multiple nominations|multiple wins|films? with multiple nominations|films? with multiple wins|series with multiple nominations|series with multiple wins|digital audio|in memoriam|miss golden globe|expansion|reduction|television|(the\s+)?retrospective.*|(the\s+)?homage.*|(the\s+)?tribute.*|(the\s+)?centennial.*)$/i;
 
 export function cleanText(text) {
   return String(text ?? "")

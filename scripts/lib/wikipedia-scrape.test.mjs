@@ -838,6 +838,25 @@ describe("parseSimpleAwardsWikipedia: non-award section exclusion", () => {
     expect(parseSimpleAwardsWikipedia(html, 2026, config)).toEqual([]);
   });
 
+  it("excludes a Statistics section's nomination-count tables from being read as award category data (regression: 39th British Academy Film Awards misread 'Films that received multiple awards' as a real category)", () => {
+    // Confirmed live: a "Statistics" H2 wraps two wikitables captioned
+    // "Nominations" and "Films that received multiple awards" — plain
+    // film-name + count listings, not award category data — but no
+    // enclosing heading previously excluded "Statistics", so every film
+    // in them was misread as a nominee of a fabricated "Unknown category"
+    // (duplicating films that already had their own correct categories
+    // elsewhere on the page).
+    const html = wrapHtml(`
+      <h2>Statistics</h2>
+      <table class="wikitable">
+        <caption>Films that received multiple awards</caption>
+        <tr><th>Awards</th><th>Film</th></tr>
+        <tr><td>4</td><td><i><a href="/wiki/x">Amadeus</a></i></td></tr>
+      </table>
+    `);
+    expect(parseSimpleAwardsWikipedia(html, 1986, config)).toEqual([]);
+  });
+
   it("excludes a Trivia section", () => {
     const html = wrapHtml(`
       <h2>Trivia</h2>
