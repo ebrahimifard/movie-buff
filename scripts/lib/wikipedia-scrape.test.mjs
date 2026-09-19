@@ -216,6 +216,34 @@ describe("parseSimpleAwardsWikipedia", () => {
     expect(records.find((r) => r.film.title === "Billy Wilder").category).toBe("Best Director");
   });
 
+  it("extracts a single colspan cell's OWN content (label + winner/nominees <ul>) instead of discarding it as a bare category-separator row (regression: 39th British Academy Film Awards' whole Best Film category was dumped into 'Unknown category')", () => {
+    // Confirmed live: unlike the plain "<th colspan=\"2\">Best Motion
+    // Picture</th>" separator case above (which has no content of its own,
+    // just announcing the category for rows below), this page's "Best
+    // Film" row is a single <td colspan="2"> holding an entire category's
+    // real content directly — a label <div> plus the winner/nominees <ul> —
+    // not merely a heading for a separate data row beneath it.
+    const html = wrapHtml(`
+      <table class="wikitable">
+        <tr>
+          <td colspan="2">
+            <div><b><a href="/wiki/x">Best Film</a></b></div>
+            <ul>
+              <li><b><i><a href="/wiki/prc">The Purple Rose of Cairo</a></i></b></li>
+              <li><i><a href="/wiki/am">Amadeus</a></i></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 1986, config);
+    expect(records).toHaveLength(2);
+    expect(records.every((r) => r.category === "Best Film")).toBe(true);
+    expect(records.find((r) => r.result === "winner")?.film.title).toBe("The Purple Rose of Cairo");
+    expect(records.find((r) => r.result === "nominee")?.film.title).toBe("Amadeus");
+  });
+
   it("extracts a grid cell's winner from a direct child sitting before the nominees <ul>, when it isn't the <ul>'s own first <li> (regression: 56th Golden Globe Awards had zero winners for several categories)", () => {
     // Confirmed live (56th Golden Globe Awards, "Best Motion Picture –
     // Drama"): the winner ("Saving Private Ryan") sits directly in the

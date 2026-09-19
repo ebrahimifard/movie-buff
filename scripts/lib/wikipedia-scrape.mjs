@@ -684,12 +684,19 @@ export function parseSimpleAwardsWikipedia(
         }
         return;
       }
-      if (cells.length === 1 && cells[0].hasAttribute("colspan")) {
-        // An in-table category-separator row — a single cell explicitly
-        // spanning multiple columns (`<th colspan="2">Best Motion
-        // Picture</th>` for Golden Globes/BAFTA, `<td colspan="4">Drama</td>`
-        // for older Berlinale pages) rather than real per-nominee data —
-        // update the running category for subsequent data rows.
+      // A single cell explicitly spanning multiple columns is USUALLY a bare
+      // in-table category-separator row (`<th colspan="2">Best Motion
+      // Picture</th>` for Golden Globes/BAFTA, `<td colspan="4">Drama</td>`
+      // for older Berlinale pages) that just announces the category for
+      // rows below, with no data of its own — but confirmed live (39th
+      // British Academy Film Awards' "Best Film" row) it can ALSO be one
+      // single wide cell holding an entire category's own full content
+      // (a label <div> plus the winner/nominees <ul>) rather than merely
+      // announcing it. Only treat it as a bare separator — discarding its
+      // content — when it truly has none; otherwise fall through to the
+      // normal gridCells handling below instead of losing that content
+      // entirely.
+      if (cells.length === 1 && cells[0].hasAttribute("colspan") && !cells[0].querySelector("ul")) {
         const label = cleanText(cells[0].textContent);
         if (label) {
           currentCategory = label;
