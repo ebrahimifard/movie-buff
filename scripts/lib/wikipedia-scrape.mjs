@@ -722,7 +722,16 @@ export function parseSimpleAwardsWikipedia(
         return;
       }
       const result = titleCell.querySelector("b") ? "winner" : "nominee";
-      addRecord(currentCategory, result, title, personName, hasFilmSignal, originalReleaseYear);
+      // The classic tabular layout sometimes names the award PER ROW via its
+      // own column (confirmed live: TIFF's "Award | Film | Director" table —
+      // one row per award, e.g. "People's Choice Award" / "Platform Prize"),
+      // rather than governing a whole block of rows via a colspan separator
+      // (the shape `currentCategory` is built for). Only used when headers
+      // actually line up with this row's cells, so a row from a differently-
+      // shaped table never picks up a stale column index.
+      const awardColumnIndex = headers.length === cells.length ? detectColumnIndex(headers, /award|category|prize/) : -1;
+      const rowCategory = awardColumnIndex >= 0 ? cleanText(cells[awardColumnIndex].textContent) : null;
+      addRecord(rowCategory || currentCategory, result, title, personName, hasFilmSignal, originalReleaseYear);
     });
   });
 

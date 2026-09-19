@@ -345,6 +345,25 @@ describe("parseSimpleAwardsWikipedia", () => {
     expect(records.map((r) => r.film.title).sort()).toEqual(["Love Story", "M*A*S*H"]);
   });
 
+  it("uses a per-row Award column as each row's own category, in a classic one-row-per-award table (TIFF's 'Award | Film | Director' layout)", () => {
+    // Confirmed live (2024 Toronto International Film Festival): unlike a
+    // colspan separator governing a BLOCK of rows, this table names a
+    // DIFFERENT award on every single row via its own "Award" column.
+    const html = wrapHtml(`
+      <h2>Regular awards</h2>
+      <table class="wikitable">
+        <tr><th>Award</th><th>Film</th><th>Director</th></tr>
+        <tr><td>People's Choice Award</td><td><i><a href="/wiki/loc">The Life of Chuck</a></i></td><td><a href="/wiki/mf">Mike Flanagan</a></td></tr>
+        <tr><td>Platform Prize</td><td><i><a href="/wiki/pl">Another Film</a></i></td><td><a href="/wiki/x">Some Director</a></td></tr>
+      </table>
+    `);
+
+    const records = parseSimpleAwardsWikipedia(html, 2024, config);
+    expect(records).toHaveLength(2);
+    expect(records.find((r) => r.film.title === "The Life of Chuck")?.category).toBe("People's Choice Award");
+    expect(records.find((r) => r.film.title === "Another Film")?.category).toBe("Platform Prize");
+  });
+
   it("skips junk titles like bare header labels", () => {
     const html = wrapHtml(`
       <h2>Best Picture</h2>
