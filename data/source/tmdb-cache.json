@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17T22:57:51.476Z",
+  "updatedAt": "2026-09-19T12:50:38.403Z",
   "byImdbId": {
     "tt21188986": {
       "title": "The Dreamed Adventure",
@@ -525731,6 +525731,435 @@
       ],
       "synopsis": "Set in Paris (which looks more like Budapest), the story concerns a murder investigation conducted by one Judge Henri Tessier. The audience is led to believe that Robert Petrovich, estranged husband of Tessier's sweetheart Marion, is responsible for the murder.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/51MYynCZNNl1WfTTHiK5cCYqbmu.jpg"
+    },
+    "venice|2024|ghatashraddha": {
+      "title": "Ghatashraddha",
+      "releaseYear": 1977,
+      "imdbId": "tt0076080",
+      "runtimeMinutes": 108,
+      "countryCodes": [
+        "IN"
+      ],
+      "languages": [
+        "Kannada"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A young brahmin boy studying in a village away from home and a young widow isolated by her condition form a bond.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/aDvvuDeaZGRG2y4sQFN3wx5pzjO.jpg"
+    },
+    "bafta|2005|bad education": {
+      "title": "Bad Education",
+      "releaseYear": 2005,
+      "imdbId": "tt0275491",
+      "runtimeMinutes": 105,
+      "countryCodes": [
+        "ES"
+      ],
+      "languages": [
+        "Latin",
+        "Spanish"
+      ],
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "synopsis": "When an old friend brings filmmaker Enrique Goded a semi-autobiographical script chronicling their adolescence, Enrique is forced to relive his youth spent at a Catholic boarding school. Weaving through past and present, the script follows a transvestite performer who reconnects with a grade school sweetheart. Spurred on by this chance encounter, the character reflects on her childhood sexual victimization and the trauma of closeting her sexual orientation.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ir4lkaAMJQrlLFMW1QM3BD9Jeb0.jpg"
+    },
+    "bafta|2005|a very long engagement": {
+      "title": "A Very Long Engagement",
+      "releaseYear": 2005,
+      "imdbId": "tt0344510",
+      "runtimeMinutes": 133,
+      "countryCodes": [
+        "FR",
+        "US"
+      ],
+      "languages": [
+        "French"
+      ],
+      "genres": [
+        "Drama",
+        "Romance",
+        "War"
+      ],
+      "synopsis": "Young Frenchwoman Mathilde searches for the truth about her missing fiancé, lost during World War I, and learns many unexpected things along the way. The love of her life is gone. But she refuses to believe he's gone forever — and she needs to know for sure.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/jZ3Ir3d69dsyxif8dTVh3DjKzKH.jpg"
+    },
+    "bafta|2004|the triplets of belleville": {
+      "title": "The Triplets of Belleville",
+      "releaseYear": 2004,
+      "imdbId": "tt0286244",
+      "runtimeMinutes": 80,
+      "countryCodes": [
+        "FR",
+        "BE",
+        "CA",
+        "GB"
+      ],
+      "languages": [
+        "French"
+      ],
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Drama",
+        "Adventure"
+      ],
+      "synopsis": "When her grandson is kidnapped during the Tour de France, Madame Souza and her beloved pooch Bruno team up with the Belleville Sisters—an aged song-and-dance team from the days of Fred Astaire—to rescue him.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/enw6C4fDw88g0nOQgIJXjgH3NHi.jpg"
+    },
+    "bafta|2004|good bye lenin": {
+      "title": "Good Bye, Lenin!",
+      "releaseYear": 2004,
+      "imdbId": "tt0301357",
+      "runtimeMinutes": 121,
+      "countryCodes": [
+        "DE"
+      ],
+      "languages": [
+        "German"
+      ],
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "synopsis": "Alex Kerner's mother was in a coma while the Berlin wall fell. When she wakes up he must try to keep her from learning what happened (as she was an avid communist supporter) to avoid shocking her which could lead to another heart attack.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/uHk1oGEbnvQGLnyiiYxTslZLoog.jpg"
+    },
+    "bafta|2003|devdas": {
+      "title": "Devdas",
+      "releaseYear": 2003,
+      "imdbId": "tt0238936",
+      "runtimeMinutes": 185,
+      "countryCodes": [
+        "IN"
+      ],
+      "languages": [
+        "Hindi",
+        "English"
+      ],
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "synopsis": "In 1900s India, Calcuttan zamindar Devdas Mukherjee — unable to marry his lover — takes up alcohol and the company of a courtesan to alleviate the pain.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/dUBFi7bnLRfm4WaTh4ZoF2tbBJj.jpg"
+    },
+    "bafta|2002|monsoon wedding": {
+      "title": "Monsoon Wedding",
+      "releaseYear": 2002,
+      "imdbId": "tt0265343",
+      "runtimeMinutes": 114,
+      "countryCodes": [
+        "US",
+        "FR",
+        "DE",
+        "IT"
+      ],
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "synopsis": "A stressed father, a bride-to-be with a secret, a smitten event planner, and relatives from around the world create much ado about the preparations for an arranged marriage in India.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/vCwkv7tYFem0tQ9Duoq2MX7T7Zd.jpg"
+    },
+    "bafta|2002|the piano teacher": {
+      "title": "The Piano Teacher",
+      "releaseYear": 2002,
+      "imdbId": "tt0254686",
+      "runtimeMinutes": 131,
+      "countryCodes": [
+        "FR",
+        "AT",
+        "DE"
+      ],
+      "languages": [
+        "French",
+        "German"
+      ],
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "synopsis": "Erika Kohut, a sexually repressed piano teacher living with her domineering mother, meets a young man who starts romantically pursuing her.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/gNHKYQnP1RnqEhkivHJzBPb4MOP.jpg"
+    },
+    "bafta|2002|behind the sun": {
+      "title": "Behind the Sun",
+      "releaseYear": 2002,
+      "imdbId": "tt0291003",
+      "runtimeMinutes": 95,
+      "countryCodes": [
+        "FR",
+        "CH",
+        "BR"
+      ],
+      "languages": [
+        "Portuguese"
+      ],
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Romance"
+      ],
+      "synopsis": "Brazilian badlands, April 1910. Tonho is ordered by his father to avenge the death of his older brother. The young man knows that if he commits this crime, his life will be divided in two: the twenty years he has already lived and the few days he has left to live, before the other family avenges their son's death. He is torn between fulfilling his ancestral duty and rebelling against it, urged by his younger brother Pacu. That's when a tiny travelling circus passes through the vast badlands where Tonho's family lives.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/zkNQBhT8op04I1JYwRqNhjX4quD.jpg"
+    },
+    "bafta|2001|in the mood for love": {
+      "title": "In the Mood for Love",
+      "releaseYear": 2001,
+      "imdbId": "tt0118694",
+      "runtimeMinutes": 99,
+      "countryCodes": [
+        "HK",
+        "FR"
+      ],
+      "languages": [
+        "Cantonese",
+        "French",
+        "Spanish"
+      ],
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "synopsis": "In 1960s Hong Kong, two neighbors form an intimate bond after making a discovery about their spouses in this visually stunning tale of unrequited love.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/iYypPT4bhqXfq1b6EnmxvRt6b2Y.jpg"
+    },
+    "bafta|2001|mal na": {
+      "title": "Malèna",
+      "releaseYear": 2001,
+      "imdbId": "tt0213847",
+      "runtimeMinutes": 108,
+      "countryCodes": [
+        "IT",
+        "US"
+      ],
+      "languages": [
+        "English",
+        "Italian",
+        "Latin"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "12-year-old Renato experiences three significant events on the same day: the beginning of the Second World War, getting a bike, and witnessing the arrival of the gorgeous Malèna. Through his eyes, we see the curse of beauty and loneliness of Malena, whose husband is presumed dead, and, through his soul, we see his love for her.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/3OyQTl0IGkbnjDxd3MhztfPE34g.jpg"
+    },
+    "bafta|1999|central station": {
+      "title": "Central Station",
+      "releaseYear": 1999,
+      "imdbId": "tt0140888",
+      "runtimeMinutes": 111,
+      "countryCodes": [
+        "BR",
+        "FR"
+      ],
+      "languages": [
+        "Portuguese"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "An emotional journey of a former school teacher, who writes letters for illiterate people, and a young boy, whose mother has just died, as they search for the father he never knew.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/zJvp7XjQ2LhPbDVYhFXyucs40vR.jpg"
+    },
+    "bafta|1992|toto the hero": {
+      "title": "Toto the Hero",
+      "releaseYear": 1992,
+      "imdbId": "tt0103105",
+      "runtimeMinutes": 91,
+      "countryCodes": [
+        "BE",
+        "FR",
+        "DE"
+      ],
+      "languages": [
+        "French"
+      ],
+      "genres": [
+        "Drama",
+        "Comedy",
+        "Fantasy"
+      ],
+      "synopsis": "80-year-old Thomas recounts his childhood and middle age through a series of flashbacks and dream sequences. Thomas believes he’s been taken away from a better life at birth; following a hospital fire, he vividly recalls being swapped with another new-born, and subsequently grows up in a poorer neighbouring household.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/fxIzSyOMrOFxwCIWIW4bwtgMpds.jpg"
+    },
+    "bafta|1978|padre padrone": {
+      "title": "Padre Padrone",
+      "releaseYear": 1978,
+      "imdbId": "tt0076517",
+      "runtimeMinutes": 114,
+      "countryCodes": [
+        "IT"
+      ],
+      "languages": [
+        "German",
+        "Italian",
+        "Latin",
+        "Sardinian"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "The true story of the life of Gavino Ledda, the son of a Sardinian shepherd, and how he managed to escape his harsh, almost barbaric existence by slowly educating himself, despite violent opposition from his brutal father.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/6kGarhZIsbpFNcEHftRzNeuz6Sb.jpg"
+    },
+    "bafta|1978|the lacemaker": {
+      "title": "The Lacemaker",
+      "releaseYear": 1978,
+      "imdbId": "tt0075932",
+      "runtimeMinutes": 107,
+      "countryCodes": [
+        "DE",
+        "FR",
+        "CH"
+      ],
+      "languages": [
+        "French"
+      ],
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "synopsis": "Pomme is a meek and mild French beautician whose life takes a fateful turn during a vacation to Normandy. She becomes the lover of middle-class literature-student François. The relationship sours when François takes her home to meet his parents, thanks in no small part to their differing social backgrounds.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/aW7jaQr0TtijQfRauxXcG9wG4aS.jpg"
+    },
+    "bafta|1975|mahler": {
+      "title": "Mahler",
+      "releaseYear": 1975,
+      "imdbId": "tt0071797",
+      "runtimeMinutes": 115,
+      "countryCodes": [
+        "GB"
+      ],
+      "languages": [
+        "English",
+        "Italian"
+      ],
+      "genres": [
+        "Drama",
+        "Music"
+      ],
+      "synopsis": "Famed composer Gustav Mahler reflects on the tragedies of his life and failing marriage while traveling by train.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/qtKHqPr8llaSk4BSFczsopmsIP.jpg"
+    },
+    "bafta|1974|adolf hitler my part in his downfall": {
+      "title": "Adolf Hitler: My Part in His Downfall",
+      "releaseYear": 1974,
+      "imdbId": "tt0068171",
+      "runtimeMinutes": 102,
+      "countryCodes": [
+        "GB"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Comedy"
+      ],
+      "synopsis": "London, 1940. Aspiring jazz musician and future comedy legend Terence 'Spike' Milligan reluctantly obeys his call-up and joins the Royal Artillery regiment at Bexhill, where he begins training to take part in the War. But along the way Spike and his friends get involved in many amusing — and some not-so amusing — scrapes.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/3eEqS241pl3dM1azl2K0ep4doIT.jpg"
+    },
+    "venice|1967|mexico mexico": {
+      "title": "Mexico-Mexico",
+      "releaseYear": 1967,
+      "imdbId": "tt0290764",
+      "runtimeMinutes": 90,
+      "countryCodes": [
+        "FR",
+        "MX"
+      ],
+      "languages": [
+        "Spanish",
+        "French"
+      ],
+      "genres": [
+        "Documentary"
+      ],
+      "synopsis": "\"Mexico begins where the roads end ”. Mexican writer Carlos Fuentes tells us about the history of Mexico: its invasions, its revolutions, its sacred lands, its forgotten legends, its religious rituals and this frightening misery. François Reichenbach and his camera sink into the dust, on this sacred land, where \"the land never ends.\"",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/wBQaJNDjHVodFvKFdnMruY8GcIl.jpg"
+    },
+    "bafta|1965|the train": {
+      "title": "The Train",
+      "releaseYear": 1965,
+      "imdbId": "tt0059825",
+      "runtimeMinutes": 133,
+      "countryCodes": [
+        "FR",
+        "IT",
+        "US"
+      ],
+      "languages": [
+        "German",
+        "English"
+      ],
+      "genres": [
+        "War",
+        "Thriller"
+      ],
+      "synopsis": "As the Allied forces approach Paris in August 1944, German Colonel Von Waldheim is desperate to take all of France's greatest paintings to Germany. He manages to secure a train to transport the valuable art works even as the chaos of retreat descends upon them. The French resistance however wants to stop them from stealing their national treasures but have received orders from London that they are not to be destroyed. The station master, Labiche, is tasked with scheduling the train and making it all happen smoothly but he is also part of a dwindling group of resistance fighters tasked with preventing the theft. He and others stage an elaborate ruse to keep the train from ever leaving French territory.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/bzgPLB7efMohled42PIn6CcOTnO.jpg"
+    },
+    "venice|1959|stars": {
+      "title": "Stars",
+      "releaseYear": 1959,
+      "imdbId": "tt0053306",
+      "runtimeMinutes": 92,
+      "countryCodes": [
+        "BG",
+        "XG"
+      ],
+      "languages": [
+        "Bulgarian",
+        "Greek",
+        "Spanish",
+        "German"
+      ],
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "synopsis": "Stationed in a secluded Bulgarian village in 1943, Walter – a German Wehrmacht sergeant and artist – lives in almost idyllic distance from the war. Then a transit camp is set up for Jews arriving from Greece. When Ruth, one of the internees, asks Walter to help a pregnant woman, the two form an unlikely bond.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/pvwhPgPg88d8GT0QYzUUHSpDP4y.jpg"
+    },
+    "bafta|1952|four in a jeep": {
+      "title": "Four in a Jeep",
+      "releaseYear": 1952,
+      "imdbId": "tt0044192",
+      "runtimeMinutes": 95,
+      "countryCodes": [
+        "CH"
+      ],
+      "languages": [
+        "English",
+        "German",
+        "French"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Soviet, British, French and American allies patrol post-war Vienna.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/iAcPAvaciAsb3Bw4wiTDG7dJyX9.jpg"
+    },
+    "bafta|1952|the good life": {
+      "title": "The Good Life",
+      "releaseYear": 1952,
+      "imdbId": "tt34104976",
+      "runtimeMinutes": 0,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "Australian rock band Qurious think about what it means to \"live the good life\".",
+      "posterUrl": ""
     }
   }
 }

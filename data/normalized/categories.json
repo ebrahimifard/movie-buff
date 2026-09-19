@@ -117,6 +117,15 @@
     "isHonoraryAward": false
   },
   {
+    "id": "bafta:bafta-rising-star-award",
+    "festivalId": "bafta",
+    "name": "BAFTA Rising Star Award",
+    "normalizedName": "bafta-rising-star-award",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "bafta:bafta-s-children-young-people-award-animation",
     "festivalId": "bafta",
     "name": "BAFTA's Children & Young People Award - Animation",
@@ -756,30 +765,12 @@
     "isHonoraryAward": false
   },
   {
-    "id": "bafta:statistics",
-    "festivalId": "bafta",
-    "name": "Statistics",
-    "normalizedName": "statistics",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
     "id": "bafta:united-nations-award",
     "festivalId": "bafta",
     "name": "United Nations Award",
     "normalizedName": "united-nations-award",
     "scope": "film",
     "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "bafta:unknown-category",
-    "festivalId": "bafta",
-    "name": "Unknown category",
-    "normalizedName": "unknown-category",
-    "scope": "film",
-    "isAward": false,
     "isHonoraryAward": false
   },
   {
