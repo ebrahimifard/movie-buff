@@ -173,8 +173,22 @@ export function getSectionAncestors(element, headings) {
   return stack.map((entry) => entry.text);
 }
 
-function isTrustedAwardSection(ancestors) {
-  return !ancestors.some((heading) => NON_AWARD_SECTION_PATTERN.test(heading));
+// `extraExcludedNames` (per-festival, via parseSimpleAwardsWikipedia's
+// `nonAwardAncestorNames` config) excludes a WHOLE top-level heading's
+// entire subtree by exact name — unlike `nonCompetitiveSectionNames`,
+// which only matches a record's own NEAREST heading and so can't safely
+// exclude a strand whose name is reused for a real award elsewhere on the
+// same page (see fetch-locarno-wikipedia.mjs's LOCARNO_CONFIG comment).
+// Confirmed live (TIFF, Locarno): decades of renamed sidebar/selection
+// strands ("Contemporary World Cinema", "Perspective Canada", "Filmmakers
+// of the Present", ...) make a fixed list of every strand name
+// impractical — but they all still sit under the SAME one or two
+// consistently-named top-level headings ("Programme", "Official
+// sections") across every year, which this excludes by ancestor instead.
+const EMPTY_SET = new Set();
+
+function isTrustedAwardSection(ancestors, extraExcludedNames = EMPTY_SET) {
+  return !ancestors.some((heading) => NON_AWARD_SECTION_PATTERN.test(heading) || extraExcludedNames.has(heading.toLowerCase()));
 }
 
 function extractRowTitle(cells, headers) {
@@ -379,7 +393,15 @@ export function getOwnLabel(li) {
     node = node.children[0];
   }
   if (node && (node.tagName === "A" || node.tagName === "B")) {
-    return cleanText(node.textContent);
+    // Both callers below compare this against label text with the colon
+    // stripped (or manually re-append exactly one ":" themselves), on the
+    // assumption the label itself never carries one — true when the colon
+    // is a separate sibling text node after the link/bold element (e.g.
+    // Berlinale's "<a>Golden Bear</a>: "), but confirmed live (Locarno)
+    // some pages instead put it INSIDE that same element
+    // ("<b><a>Golden Leopard</a>:</b>"), which without this strip would
+    // return "Golden Leopard:" and silently fail every trust comparison.
+    return cleanText(node.textContent).replace(/:\s*$/, "");
   }
   return null;
 }
@@ -557,7 +579,7 @@ function findAwardContentAfterHeading(heading) {
 export function parseSimpleAwardsWikipedia(
   html,
   year,
-  { festivalId, festivalName, normalizeCategory, scanTables = true, nonCompetitiveSectionNames = [] }
+  { festivalId, festivalName, normalizeCategory, scanTables = true, nonCompetitiveSectionNames = [], nonAwardAncestorNames = [] }
 ) {
   const dom = new JSDOM(html);
   const doc = dom.window.document;
@@ -566,6 +588,7 @@ export function parseSimpleAwardsWikipedia(
   const isFirstSeen = createDeduper();
   const headings = Array.from(contentRoot.querySelectorAll("h2, h3, h4"));
   const nonCompetitiveNameSet = new Set(nonCompetitiveSectionNames.map((name) => name.toLowerCase()));
+  const nonAwardAncestorNameSet = new Set(nonAwardAncestorNames.map((name) => name.toLowerCase()));
 
   function addRecord(rawCategory, result, rawTitle, personName, hasFilmSignal = true, originalReleaseYear) {
     const title = cleanText(rawTitle);
@@ -640,7 +663,7 @@ export function parseSimpleAwardsWikipedia(
 
   const tables = scanTables ? Array.from(contentRoot.querySelectorAll("table.wikitable")) : [];
   tables.forEach((table) => {
-    if (!isTrustedAwardSection(getSectionAncestors(table, headings))) {
+    if (!isTrustedAwardSection(getSectionAncestors(table, headings), nonAwardAncestorNameSet)) {
       return;
     }
     const fallbackCategory = findPrecedingHeadingText(table) ?? "Unknown category";
@@ -737,7 +760,7 @@ export function parseSimpleAwardsWikipedia(
 
   headings.forEach((heading) => {
     const fullChain = [...getSectionAncestors(heading, headings), cleanText(heading.textContent)];
-    if (!isTrustedAwardSection(fullChain)) {
+    if (!isTrustedAwardSection(fullChain, nonAwardAncestorNameSet)) {
       return;
     }
     // Walk up past a pure format-grouping heading (e.g. Berlinale's

@@ -20,7 +20,10 @@ export const WIKIPEDIA_SOURCES = [
   { sourceId: "goldenGlobesWikipedia", filePath: path.join(root, "data", "source", "golden-globes-wikipedia.json") },
   { sourceId: "baftaWikipedia", filePath: path.join(root, "data", "source", "bafta-wikipedia.json") },
   { sourceId: "berlinaleWikipedia", filePath: path.join(root, "data", "source", "berlinale-wikipedia.json") },
-  { sourceId: "veniceWikipedia", filePath: path.join(root, "data", "source", "venice-wikipedia.json") }
+  { sourceId: "veniceWikipedia", filePath: path.join(root, "data", "source", "venice-wikipedia.json") },
+  { sourceId: "locarnoWikipedia", filePath: path.join(root, "data", "source", "locarno-wikipedia.json") },
+  { sourceId: "sundanceWikipedia", filePath: path.join(root, "data", "source", "sundance-wikipedia.json") },
+  { sourceId: "tiffWikipedia", filePath: path.join(root, "data", "source", "tiff-wikipedia.json") }
 ];
 
 export function slugify(input) {

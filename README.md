@@ -133,11 +133,13 @@ npm run data:update
 
 ## Occasional: Wikipedia Data-Completeness Pass
 
-Beyond the routine monthly pipeline, five additional sources — Cannes, Golden Globes, BAFTA, Berlinale, and Venice Wikipedia scrapers — can fill in festival-years the Wikidata/TMDB pipeline is missing or weak on. These are **not** part of `npm run data:collect` and do **not** run automatically: historical years rarely change once filled, so re-scraping Wikipedia every month would add load for little benefit. Run this manually, occasionally:
+Beyond the routine monthly pipeline, eight additional sources — Cannes, Golden Globes, BAFTA, Berlinale, Venice, Locarno, Sundance, and TIFF Wikipedia scrapers — can fill in festival-years the Wikidata/TMDB pipeline is missing or weak on. These are **not** part of `npm run data:collect` and do **not** run automatically: historical years rarely change once filled, so re-scraping Wikipedia every month would add load for little benefit. Run this manually, occasionally:
 
 ```bash
 # 1. Ensure normalized data + coverage report are current
-#    (BAFTA/Berlinale/Venice scrapers read coverage-report.json to pick which years to target)
+#    (BAFTA/Berlinale/Venice/Locarno/TIFF scrapers read coverage-report.json
+#    to pick which years to target; Sundance's single source page has no
+#    per-year request to target, so it's unaffected by this step)
 npm run data:build
 npm run data:coverage
 
@@ -147,6 +149,9 @@ npm run data:fetch:golden-globes-wikipedia
 npm run data:fetch:bafta-wikipedia
 npm run data:fetch:berlinale-wikipedia
 npm run data:fetch:venice-wikipedia
+npm run data:fetch:locarno-wikipedia
+npm run data:fetch:sundance-wikipedia
+npm run data:fetch:tiff-wikipedia
 
 # 3. Re-merge (⚠️ always re-run TMDB enrichment right after any data:merge —
 #    merge-sources.mjs rebuilds master-data.generated.json from raw sources
@@ -162,11 +167,11 @@ npm run data:coverage
 npm run data:update
 ```
 
-Why two passes: BAFTA/Berlinale/Venice's scrapers only target years flagged `missingYears`/`weakYears` in `coverage-report.json`, so that report must be current *before* running them (step 1); afterward, coverage is regenerated again (step 3) to reflect the newly-added data. Step 3 uses `data:merge`, not `data:collect` — there's no need to re-hit the live Wikidata endpoint just to pick up the Wikipedia JSON already sitting on disk (TMDB enrichment is still re-run directly, since it's cheap to skip already-enriched records and `data:merge` always resets the enrichment state). `merge-sources.mjs` reads these five source files only if present (each is optional, driven by the `WIKIPEDIA_SOURCES` list — adding a sixth festival is a one-line addition there), matching them against existing seed/Wikidata records by IMDb ID when available and falling back to a title match otherwise — see `ARCHITECTURE.md` for the merge precedence.
+Why two passes: BAFTA/Berlinale/Venice/Locarno/TIFF's scrapers only target years flagged `missingYears`/`weakYears` in `coverage-report.json`, so that report must be current *before* running them (step 1); afterward, coverage is regenerated again (step 3) to reflect the newly-added data. Sundance is the exception — it scrapes one single page covering every year in one request, so there's no per-year target list to keep current, though the coverage report is still what step 3 refreshes to reflect what it added. Step 3 uses `data:merge`, not `data:collect` — there's no need to re-hit the live Wikidata endpoint just to pick up the Wikipedia JSON already sitting on disk (TMDB enrichment is still re-run directly, since it's cheap to skip already-enriched records and `data:merge` always resets the enrichment state). `merge-sources.mjs` reads these eight source files only if present (each is optional, driven by the `WIKIPEDIA_SOURCES` list — adding a ninth festival is a one-line addition there), matching them against existing seed/Wikidata records by IMDb ID when available and falling back to a title match otherwise — see `ARCHITECTURE.md` for the merge precedence.
 
-**⚠️ Coverage-gap targeting can only ever *add* years, never retroactively fix one that already parsed "successfully" but wrong.** If you're re-scraping BAFTA/Berlinale/Venice after a parser bug fix (not just to fill new gaps), pass `--full` (or set `FULL_RESCRAPE=1`) to `data:fetch:bafta-wikipedia`/`data:fetch:berlinale-wikipedia`/`data:fetch:venice-wikipedia` to force every year to be re-scraped — otherwise a year with full category depth is scored complete by `coverage-report.mjs` and the gap-driven default will never revisit it, silently leaving the old, wrong data in place. Running these normally (without `--full`) after such a fix also **overwrites the output file with only the gap years**, shrinking it — always check the resulting `data/source/*-wikipedia.json` record count looks right before committing.
+**⚠️ Coverage-gap targeting can only ever *add* years, never retroactively fix one that already parsed "successfully" but wrong.** If you're re-scraping BAFTA/Berlinale/Venice/Locarno/TIFF after a parser bug fix (not just to fill new gaps), pass `--full` (or set `FULL_RESCRAPE=1`) to that scraper to force every year to be re-scraped — otherwise a year with full category depth is scored complete by `coverage-report.mjs` and the gap-driven default will never revisit it, silently leaving the old, wrong data in place. Running these normally (without `--full`) after such a fix also **overwrites the output file with only the gap years**, shrinking it — always check the resulting `data/source/*-wikipedia.json` record count looks right before committing. Sundance's single-page scraper always parses every year on every run regardless of `--full` (there's no per-year request to skip), so this concern doesn't apply to it.
 
-Cannes, BAFTA, and Golden Globes share a parser (`scripts/lib/wikipedia-scrape.mjs`) that handles both the modern Wikipedia "category grid" template and a flat "Category: Title by Director" award-list format (Berlinale and Venice's "Official Awards" sections use the latter). Golden Globes and BAFTA's Wikipedia pages don't have Cannes' proliferation of named sub-sections, so they use the shared parser directly; Cannes keeps its own bespoke parser for that reason.
+Cannes, BAFTA, Golden Globes, Berlinale, Venice, Locarno, and TIFF share a parser (`scripts/lib/wikipedia-scrape.mjs`) that handles both the modern Wikipedia "category grid" template, a flat "Category: Title by Director" award-list format, and a per-row Award column in a classic table (TIFF); Berlinale, Venice, and Locarno's "Official Awards"/"Official sections" pages use the flat format, alongside a `nonCompetitiveSectionNames` list per festival for sidebar/selection strands that were never actually awards. Cannes keeps its own bespoke parser for its proliferation of named sub-sections; Sundance keeps its own bespoke parser too, but for a different reason — it has no reliable per-year articles at all, only one comprehensive "List of Sundance Film Festival award winners" page (sliced into per-year sections instead of fetched per year).
 
 ## Next Data Upgrades
 

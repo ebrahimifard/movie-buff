@@ -23,7 +23,10 @@
     "data:fetch:golden-globes-wikipedia": "node scripts/fetch-golden-globes-wikipedia.mjs",
     "data:fetch:bafta-wikipedia": "node scripts/fetch-bafta-wikipedia.mjs",
     "data:fetch:berlinale-wikipedia": "node scripts/fetch-berlinale-wikipedia.mjs",
-    "data:fetch:venice-wikipedia": "node scripts/fetch-venice-wikipedia.mjs"
+    "data:fetch:venice-wikipedia": "node scripts/fetch-venice-wikipedia.mjs",
+    "data:fetch:locarno-wikipedia": "node scripts/fetch-locarno-wikipedia.mjs",
+    "data:fetch:sundance-wikipedia": "node scripts/fetch-sundance-wikipedia.mjs",
+    "data:fetch:tiff-wikipedia": "node scripts/fetch-tiff-wikipedia.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.2.12",
