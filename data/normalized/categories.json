@@ -36,6 +36,24 @@
     "isHonoraryAward": false
   },
   {
+    "id": "bafta:bafta-award-for-best-casting",
+    "festivalId": "bafta",
+    "name": "BAFTA Award for Best Casting",
+    "normalizedName": "bafta-award-for-best-casting",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "bafta:bafta-award-for-best-children-s-family-film",
+    "festivalId": "bafta",
+    "name": "BAFTA Award for Best Children's & Family Film",
+    "normalizedName": "bafta-award-for-best-children-s-family-film",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "bafta:bafta-award-for-best-direction",
     "festivalId": "bafta",
     "name": "BAFTA Award for Best Direction",

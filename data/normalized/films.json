@@ -936,18 +936,6 @@
     "synopsis": ""
   },
   {
-    "id": "film:a-family-2010",
-    "title": "A Family",
-    "releaseYear": 2010,
-    "imdbId": null,
-    "posterUrl": "",
-    "runtimeMinutes": 0,
-    "countryCodes": [],
-    "languages": [],
-    "genres": [],
-    "synopsis": ""
-  },
-  {
     "id": "film:a-family-affair-1952",
     "title": "A Family Affair",
     "releaseYear": 1952,
@@ -14700,18 +14688,6 @@
     "synopsis": ""
   },
   {
-    "id": "film:even-if-hell-came-2026",
-    "title": "Even If Hell Came",
-    "releaseYear": 2026,
-    "imdbId": null,
-    "posterUrl": "",
-    "runtimeMinutes": 0,
-    "countryCodes": [],
-    "languages": [],
-    "genres": [],
-    "synopsis": ""
-  },
-  {
     "id": "film:evening-dress-1986",
     "title": "Evening Dress",
     "releaseYear": 1986,
@@ -18744,18 +18720,6 @@
     "synopsis": ""
   },
   {
-    "id": "film:havana-blues-2005",
-    "title": "Havana Blues",
-    "releaseYear": 2005,
-    "imdbId": null,
-    "posterUrl": "",
-    "runtimeMinutes": 0,
-    "countryCodes": [],
-    "languages": [],
-    "genres": [],
-    "synopsis": ""
-  },
-  {
     "id": "film:havoc-in-heaven-1961",
     "title": "Havoc in Heaven",
     "releaseYear": 1961,
@@ -18891,18 +18855,6 @@
     "id": "film:heaven-without-earth-2010",
     "title": "Heaven Without Earth",
     "releaseYear": 2010,
-    "imdbId": null,
-    "posterUrl": "",
-    "runtimeMinutes": 0,
-    "countryCodes": [],
-    "languages": [],
-    "genres": [],
-    "synopsis": ""
-  },
-  {
-    "id": "film:heavy-pockets-2005",
-    "title": "Heavy Pockets",
-    "releaseYear": 2005,
     "imdbId": null,
     "posterUrl": "",
     "runtimeMinutes": 0,
@@ -21507,18 +21459,6 @@
     "id": "film:indus-waters-1968",
     "title": "Indus Waters",
     "releaseYear": 1968,
-    "imdbId": null,
-    "posterUrl": "",
-    "runtimeMinutes": 0,
-    "countryCodes": [],
-    "languages": [],
-    "genres": [],
-    "synopsis": ""
-  },
-  {
-    "id": "film:inferno-2002",
-    "title": "Inferno",
-    "releaseYear": 2002,
     "imdbId": null,
     "posterUrl": "",
     "runtimeMinutes": 0,
@@ -25968,18 +25908,6 @@
     "synopsis": ""
   },
   {
-    "id": "film:laser-cat-2026",
-    "title": "Laser-Cat",
-    "releaseYear": 2026,
-    "imdbId": null,
-    "posterUrl": "",
-    "runtimeMinutes": 0,
-    "countryCodes": [],
-    "languages": [],
-    "genres": [],
-    "synopsis": ""
-  },
-  {
     "id": "film:last-tango-in-paris-1974",
     "title": "Last Tango in Paris",
     "releaseYear": 1974,
@@ -27624,18 +27552,6 @@
     "synopsis": ""
   },
   {
-    "id": "film:les-mis-rables-2020",
-    "title": "Les Misérables",
-    "releaseYear": 2020,
-    "imdbId": null,
-    "posterUrl": "",
-    "runtimeMinutes": 0,
-    "countryCodes": [],
-    "languages": [],
-    "genres": [],
-    "synopsis": ""
-  },
-  {
     "id": "film:les-mis-rables-2021",
     "title": "Les Misérables",
     "releaseYear": 2021,
@@ -28383,18 +28299,6 @@
     "id": "film:little-presents-1962",
     "title": "Little Presents",
     "releaseYear": 1962,
-    "imdbId": null,
-    "posterUrl": "",
-    "runtimeMinutes": 0,
-    "countryCodes": [],
-    "languages": [],
-    "genres": [],
-    "synopsis": ""
-  },
-  {
-    "id": "film:little-shop-of-horrors-1988",
-    "title": "Little Shop of Horrors",
-    "releaseYear": 1988,
     "imdbId": null,
     "posterUrl": "",
     "runtimeMinutes": 0,
@@ -32700,18 +32604,6 @@
     "synopsis": ""
   },
   {
-    "id": "film:my-sunshine-2024",
-    "title": "My Sunshine",
-    "releaseYear": 2024,
-    "imdbId": null,
-    "posterUrl": "",
-    "runtimeMinutes": 0,
-    "countryCodes": [],
-    "languages": [],
-    "genres": [],
-    "synopsis": ""
-  },
-  {
     "id": "film:my-voyage-to-italy-2001",
     "title": "My Voyage to Italy",
     "releaseYear": 2001,
@@ -35355,18 +35247,6 @@
     "id": "film:outcast-of-the-islands-1953",
     "title": "Outcast of the Islands",
     "releaseYear": 1953,
-    "imdbId": null,
-    "posterUrl": "",
-    "runtimeMinutes": 0,
-    "countryCodes": [],
-    "languages": [],
-    "genres": [],
-    "synopsis": ""
-  },
-  {
-    "id": "film:over-2016",
-    "title": "Over",
-    "releaseYear": 2016,
     "imdbId": null,
     "posterUrl": "",
     "runtimeMinutes": 0,
@@ -47100,18 +46980,6 @@
     "synopsis": ""
   },
   {
-    "id": "film:the-first-day-1971",
-    "title": "The First Day",
-    "releaseYear": 1971,
-    "imdbId": null,
-    "posterUrl": "",
-    "runtimeMinutes": 0,
-    "countryCodes": [],
-    "languages": [],
-    "genres": [],
-    "synopsis": ""
-  },
-  {
     "id": "film:the-first-ingredient-tales-from-soda-island-ch-7-2023",
     "title": "The First Ingredient: Tales From Soda Island – CH. 7",
     "releaseYear": 2023,
@@ -50463,18 +50331,6 @@
     "id": "film:the-power-of-nightmares-the-rise-of-the-politics-of-fear-2005",
     "title": "The Power of Nightmares: The Rise of the Politics of Fear",
     "releaseYear": 2005,
-    "imdbId": null,
-    "posterUrl": "",
-    "runtimeMinutes": 0,
-    "countryCodes": [],
-    "languages": [],
-    "genres": [],
-    "synopsis": ""
-  },
-  {
-    "id": "film:the-present-2021",
-    "title": "The Present",
-    "releaseYear": 2021,
     "imdbId": null,
     "posterUrl": "",
     "runtimeMinutes": 0,
@@ -104941,14 +104797,14 @@
   },
   {
     "id": "tt0053856",
-    "title": "General della Rovere",
+    "title": "General Della Rovere",
     "releaseYear": 1959,
     "imdbId": "tt0053856",
     "posterUrl": "/posters/tt0053856.jpg",
     "runtimeMinutes": 132,
     "countryCodes": [
-      "FR",
-      "IT"
+      "IT",
+      "FR"
     ],
     "languages": [
       "German",
@@ -226732,6 +226588,25 @@
     "synopsis": "The life and work of Félix Tournachon, aka Nadar, the famed French illustrator and photographer."
   },
   {
+    "id": "tt0282613",
+    "title": "Inferno",
+    "releaseYear": 2002,
+    "imdbId": "tt0282613",
+    "posterUrl": "/posters/tt0282613.jpg",
+    "runtimeMinutes": 91,
+    "countryCodes": [
+      "US"
+    ],
+    "languages": [
+      "English"
+    ],
+    "genres": [
+      "Drama",
+      "Action"
+    ],
+    "synopsis": "A fire chief is investigating the cause of a string of blazes that threaten to destroy her small town, while at the same time dealing with her teen daughter's rebelliousness."
+  },
+  {
     "id": "tt0282675",
     "title": "Larghetto",
     "releaseYear": 1967,
@@ -246366,6 +246241,27 @@
     "synopsis": "Something is missing in Betty's married life so Mother Nature lends a hand to tickle their fancy."
   },
   {
+    "id": "tt0441297",
+    "title": "Havana Blues",
+    "releaseYear": 2005,
+    "imdbId": "tt0441297",
+    "posterUrl": "/posters/tt0441297.jpg",
+    "runtimeMinutes": 115,
+    "countryCodes": [
+      "FR",
+      "ES",
+      "CU"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "genres": [
+      "Drama",
+      "Music"
+    ],
+    "synopsis": "When Spanish record producers express interest in Cuban musicians Ruy and Tito, the longtime friends are faced with the prospect of leaving their loved ones behind. After years of hoping and dreaming, they've finally earned the opportunity to bring their music to the rest of the world. But are the emotional trade-offs worth it in the end?"
+  },
+  {
     "id": "tt0441674",
     "title": "Princess Raccoon",
     "releaseYear": 2005,
@@ -246575,6 +246471,22 @@
       "Drama"
     ],
     "synopsis": "The story of two girls and their strange relationship with the cold. Ana has a phobia of cold and, especially, of snow. Her mother has moved her to live in the south, near the beach. But her fears don't go away; on the contrary, they get worse."
+  },
+  {
+    "id": "tt0443029",
+    "title": "Heavy Pockets",
+    "releaseYear": 2005,
+    "imdbId": "tt0443029",
+    "posterUrl": "",
+    "runtimeMinutes": 6,
+    "countryCodes": [],
+    "languages": [
+      "Welsh"
+    ],
+    "genres": [
+      "Animation"
+    ],
+    "synopsis": "Awel Jones unexpectedly loses her gravity. At first she is embarrassed by her amazing gift and becomes isolated at school - until one day, she has to confront the bullies."
   },
   {
     "id": "tt0443036",
@@ -260357,7 +260269,7 @@
   {
     "id": "tt10199590",
     "title": "Les Misérables",
-    "releaseYear": 2019,
+    "releaseYear": 2020,
     "imdbId": "tt10199590",
     "posterUrl": "/posters/tt10199590.jpg",
     "runtimeMinutes": 104,
@@ -264399,6 +264311,24 @@
       "Thriller"
     ],
     "synopsis": "Michael manages to free himself from Laurie Strode's trap to resume his ritual bloodbath. As she fights for her life from injuries from their last encounter, she inspires her daughter Karen, her granddaughter Allyson, and all of Haddonfield to rise up against the unstoppable monster."
+  },
+  {
+    "id": "tt10673846",
+    "title": "The Mafia Is No Longer What It Used to Be",
+    "releaseYear": 2021,
+    "imdbId": "tt10673846",
+    "posterUrl": "/posters/tt10673846.jpg",
+    "runtimeMinutes": 111,
+    "countryCodes": [
+      "IT"
+    ],
+    "languages": [
+      "Italian"
+    ],
+    "genres": [
+      "Documentary"
+    ],
+    "synopsis": "Palermo, Sicily, Italy, 2017. Twenty-five years after the murders of anti-mafia judges Giovanni Falcone, on May 23, 1992, and Paolo Borsellino, on July 19, 1992; and on the occasion of the tributes held in memory of both heroes, skeptical photographer Letizia Battaglia, chronicler of their titanic combat, criticizes the opportunism of shady characters who, like businessman Ciccio Mira, profit from the commemoration of both tragedies."
   },
   {
     "id": "tt10676042",
@@ -268768,6 +268698,26 @@
       "Drama"
     ],
     "synopsis": "This documentary-drama hybrid explores the dangerous human impact of social networking, with tech experts sounding the alarm on their own creations."
+  },
+  {
+    "id": "tt11474480",
+    "title": "The Present",
+    "releaseYear": 2021,
+    "imdbId": "tt11474480",
+    "posterUrl": "/posters/tt11474480.jpg",
+    "runtimeMinutes": 24,
+    "countryCodes": [
+      "GB",
+      "PS"
+    ],
+    "languages": [
+      "Arabic",
+      "English"
+    ],
+    "genres": [
+      "Drama"
+    ],
+    "synopsis": "On his wedding anniversary, Yusef and his young daughter set out in the West Bank to buy his wife a gift. Between soldiers, segregated roads and checkpoints, how easy would it be to go shopping?"
   },
   {
     "id": "tt11488252",
@@ -290665,6 +290615,24 @@
     "synopsis": "In the early fifties Ingmar Bergman got himself a cine-camera, a 9.5 mm Bell & Howell, which he often used both privately and in his work. \"Bilder från lekstugan\" (\"Images from the Playground\") embark on these films, giving a diverse representation of one of the greatest artists in cinema."
   },
   {
+    "id": "tt1568815",
+    "title": "A Family",
+    "releaseYear": 2010,
+    "imdbId": "tt1568815",
+    "posterUrl": "/posters/tt1568815.jpg",
+    "runtimeMinutes": 102,
+    "countryCodes": [
+      "DK"
+    ],
+    "languages": [
+      "Danish"
+    ],
+    "genres": [
+      "Drama"
+    ],
+    "synopsis": "Ditte owns a gallery, has a loving boyfriend and her dream job in New York is within reach. But Ditte is also the youngest generation of the famous bakery dynasty, Rheinwald, and when her beloved, but dominating father comes down with a serious illness, Ditte is faced with the grueling decision: To pursue her own dreams, or to continue the legacy of her family."
+  },
+  {
     "id": "tt1568866",
     "title": "Montparnasse",
     "releaseYear": 2009,
@@ -310199,6 +310167,25 @@
     "synopsis": "Growing up on the grounds of one of Germany's largest psychiatric hospitals is somehow - different. For Joachim, the director's youngest son, the patients are like family. They are also much nicer to him than his two older brothers, who drive him into fits of rage. His mother, painting watercolors, longs for Italian summer nights instead of constant German rain, while his father secretly, but not discreetly enough, goes his own way. But while Joachim slowly grows up, his world, not only through the loss of his first love, gets more and more cracks..."
   },
   {
+    "id": "tt22694908",
+    "title": "My Sunshine",
+    "releaseYear": 2024,
+    "imdbId": "tt22694908",
+    "posterUrl": "/posters/tt22694908.jpg",
+    "runtimeMinutes": 90,
+    "countryCodes": [
+      "FR",
+      "JP"
+    ],
+    "languages": [
+      "Japanese"
+    ],
+    "genres": [
+      "Drama"
+    ],
+    "synopsis": "Two young skaters, polar opposites in personality, team up to train for an ice-dancing competition, their growing bond blurring the lines between partners and more as winter unfolds."
+  },
+  {
     "id": "tt2271243",
     "title": "It's Not a Cowboy Movie",
     "releaseYear": 2012,
@@ -324477,7 +324464,7 @@
   {
     "id": "tt29763408",
     "title": "Little Shop of Horrors",
-    "releaseYear": 1987,
+    "releaseYear": 1988,
     "imdbId": "tt29763408",
     "posterUrl": "/posters/tt29763408.jpg",
     "runtimeMinutes": 96,
@@ -345831,6 +345818,23 @@
     "synopsis": "Pregnant Amal lives together with her family in Al Baraneya, a village outside Cairo, surrounded by jasmine fields. Their chaotic yet loving way of life is upset when a landowner offers to buy their land. The pressure to sell divides the family and doubts begin to grow. When Amal’s cousin Rania visits from Cairo, she captivates Amal and her younger sisters with her modern lifestyle: jeans, TikTok videos, and lively city stories. Amal starts to question the life that seems to have been laid out for her and dreams of moving to Cairo. Now that the potential sale of the land offers the prospect of a future in the city, the family’s unshakable faith in their own life in the village starts to waver."
   },
   {
+    "id": "tt38689714",
+    "title": "Even If Hell Came",
+    "releaseYear": 2026,
+    "imdbId": "tt38689714",
+    "posterUrl": "/posters/tt38689714.jpg",
+    "runtimeMinutes": 90,
+    "countryCodes": [
+      "IT"
+    ],
+    "languages": [],
+    "genres": [
+      "Drama",
+      "History"
+    ],
+    "synopsis": "During the harsh winter of 1944, a young partisan survives an ambush in the Alps and holds out in a mountain hut, whilst encountering lives cut short and awaiting the end of the war."
+  },
+  {
     "id": "tt38691210",
     "title": "Dom",
     "releaseYear": 2025,
@@ -346574,6 +346578,26 @@
       "Drama"
     ],
     "synopsis": "Davide’s life is turned upside down by a tragic event for which he bears an unwitting responsibility. Devastated by guilt, he is driven to a series of seemingly irrational choices that gradually lead him toward profound consequences. Yet, through his deep emotional bond with Elsa, Davide may still find an unexpected path to peace."
+  },
+  {
+    "id": "tt39123381",
+    "title": "The First Day",
+    "releaseYear": 1971,
+    "imdbId": "tt39123381",
+    "posterUrl": "",
+    "runtimeMinutes": 0,
+    "countryCodes": [
+      "ES"
+    ],
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "synopsis": "A normal Saturday becomes a nightmare when an unknown outbreak reaches a family in a quiet suburban neighborhood."
   },
   {
     "id": "tt39141247",
@@ -350770,6 +350794,23 @@
     "synopsis": "A group of teenagers floats down the river, pretending to be dead for social media. One of them drifts away."
   },
   {
+    "id": "tt42006686",
+    "title": "Laser-Cat",
+    "releaseYear": 2026,
+    "imdbId": "tt42006686",
+    "posterUrl": "/posters/tt42006686.jpg",
+    "runtimeMinutes": 22,
+    "countryCodes": [],
+    "languages": [
+      "Portuguese"
+    ],
+    "genres": [
+      "Thriller",
+      "Comedy"
+    ],
+    "synopsis": "When a laser pointer prank goes wrong, an anxious teenager crosses São Paulo in a single night to save his crush’s severely injured cat, as guilt and paranoia drive him toward collapse."
+  },
+  {
     "id": "tt42006872",
     "title": "Growing Stones, Flying Papers",
     "releaseYear": 2026,
@@ -353478,6 +353519,24 @@
       "Comedy"
     ],
     "synopsis": "The silent routine of 5 Nuns living in the West Bank wilderness is disturbed when an Israeli settler family breaks down right outside the convent just as the Sabbath comes into effect."
+  },
+  {
+    "id": "tt4421754",
+    "title": "Over",
+    "releaseYear": 2016,
+    "imdbId": "tt4421754",
+    "posterUrl": "/posters/tt4421754.jpg",
+    "runtimeMinutes": 14,
+    "countryCodes": [
+      "GB"
+    ],
+    "languages": [
+      "English"
+    ],
+    "genres": [
+      "Drama"
+    ],
+    "synopsis": "Over presents a crime scene. During the course of 9 wide shots, we watch an intriguing story unfold. What's happened in this quiet neighbourhood? A murder, hit-and-run, an accident? The reality is profound, and deeply unexpected."
   },
   {
     "id": "tt4425258",
