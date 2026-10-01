@@ -6759,7 +6759,7 @@
     "filmId": "tt37118301"
   },
   {
-    "id": "2026-cannes-cin-fondation-first-prize-film:laser-cat-2026",
+    "id": "2026-cannes-cin-fondation-first-prize-tt42006686",
     "year": 2026,
     "festivalId": "cannes",
     "festivalName": "Cannes Film Festival",
@@ -6771,8 +6771,8 @@
     "directorIds": [],
     "country": "XX",
     "result": "winner",
-    "imdbId": null,
-    "filmId": "film:laser-cat-2026"
+    "imdbId": "tt42006686",
+    "filmId": "tt42006686"
   },
   {
     "id": "2026-cannes-cin-fondation-second-prize-tt42029134",
@@ -15410,22 +15410,6 @@
     "filmId": "film:daniel-blumberg-2026"
   },
   {
-    "id": "2026-venice-special-events-film:even-if-hell-came-2026",
-    "year": 2026,
-    "festivalId": "venice",
-    "festivalName": "Venice Film Festival",
-    "ceremonyId": "venice-2026",
-    "categoryId": "venice:special-events",
-    "category": "Special Events",
-    "title": "Even If Hell Came",
-    "director": "",
-    "directorIds": [],
-    "country": "XX",
-    "result": "nominee",
-    "imdbId": null,
-    "filmId": "film:even-if-hell-came-2026"
-  },
-  {
     "id": "2026-venice-special-events-film:hugo-in-venice-2026",
     "year": 2026,
     "festivalId": "venice",
@@ -15520,6 +15504,22 @@
     "result": "nominee",
     "imdbId": "tt38687928",
     "filmId": "tt38687928"
+  },
+  {
+    "id": "2026-venice-special-events-tt38689714",
+    "year": 2026,
+    "festivalId": "venice",
+    "festivalName": "Venice Film Festival",
+    "ceremonyId": "venice-2026",
+    "categoryId": "venice:special-events",
+    "category": "Special Events",
+    "title": "Even If Hell Came",
+    "director": "",
+    "directorIds": [],
+    "country": "IT",
+    "result": "nominee",
+    "imdbId": "tt38689714",
+    "filmId": "tt38689714"
   },
   {
     "id": "2026-venice-special-events-tt39307494",
@@ -16334,6 +16334,61 @@
     "result": "nominee",
     "imdbId": "tt43701760",
     "filmId": "tt43701760"
+  },
+  {
+    "id": "2025-bafta-bafta-award-for-best-children-s-family-film-tt11655566",
+    "year": 2025,
+    "festivalId": "bafta",
+    "festivalName": "BAFTA Awards",
+    "ceremonyId": "bafta-2025",
+    "categoryId": "bafta:bafta-award-for-best-children-s-family-film",
+    "category": "BAFTA Award for Best Children's & Family Film",
+    "title": "Lilo & Stitch",
+    "director": "Dean Fleischer Camp",
+    "directorIds": [
+      "person:dean-fleischer-camp"
+    ],
+    "country": "US",
+    "result": "nominee",
+    "imdbId": "tt11655566",
+    "filmId": "tt11655566"
+  },
+  {
+    "id": "2025-bafta-bafta-award-for-best-children-s-family-film-tt14883538",
+    "year": 2025,
+    "festivalId": "bafta",
+    "festivalName": "BAFTA Awards",
+    "ceremonyId": "bafta-2025",
+    "categoryId": "bafta:bafta-award-for-best-children-s-family-film",
+    "category": "BAFTA Award for Best Children's & Family Film",
+    "title": "Arco",
+    "director": "Ugo Bienvenu",
+    "directorIds": [
+      "person:ugo-bienvenu"
+    ],
+    "country": "FR",
+    "result": "nominee",
+    "imdbId": "tt14883538",
+    "filmId": "tt14883538"
+  },
+  {
+    "id": "2025-bafta-bafta-award-for-best-children-s-family-film-tt26443597",
+    "year": 2025,
+    "festivalId": "bafta",
+    "festivalName": "BAFTA Awards",
+    "ceremonyId": "bafta-2025",
+    "categoryId": "bafta:bafta-award-for-best-children-s-family-film",
+    "category": "BAFTA Award for Best Children's & Family Film",
+    "title": "Zootopia 2",
+    "director": "Byron Howard, Jared Bush",
+    "directorIds": [
+      "person:byron-howard",
+      "person:jared-bush"
+    ],
+    "country": "US",
+    "result": "nominee",
+    "imdbId": "tt26443597",
+    "filmId": "tt26443597"
   },
   {
     "id": "2025-bafta-best-actor-in-a-leading-role-tt11563598",
@@ -31718,6 +31773,80 @@
     "filmId": "tt37673296"
   },
   {
+    "id": "2024-bafta-bafta-award-for-best-children-s-family-film-tt17163970",
+    "year": 2024,
+    "festivalId": "bafta",
+    "festivalName": "BAFTA Awards",
+    "ceremonyId": "bafta-2024",
+    "categoryId": "bafta:bafta-award-for-best-children-s-family-film",
+    "category": "BAFTA Award for Best Children's & Family Film",
+    "title": "Wallace and Gromit: Vengeance Most Fowl",
+    "director": "Merlin Crossingham, Nick Park",
+    "directorIds": [
+      "person:merlin-crossingham",
+      "person:nick-park"
+    ],
+    "country": "GB",
+    "result": "winner",
+    "imdbId": "tt17163970",
+    "filmId": "tt17163970"
+  },
+  {
+    "id": "2024-bafta-bafta-award-for-best-children-s-family-film-tt29623480",
+    "year": 2024,
+    "festivalId": "bafta",
+    "festivalName": "BAFTA Awards",
+    "ceremonyId": "bafta-2024",
+    "categoryId": "bafta:bafta-award-for-best-children-s-family-film",
+    "category": "BAFTA Award for Best Children's & Family Film",
+    "title": "The Wild Robot",
+    "director": "Chris Sanders",
+    "directorIds": [
+      "person:chris-sanders"
+    ],
+    "country": "US",
+    "result": "nominee",
+    "imdbId": "tt29623480",
+    "filmId": "tt29623480"
+  },
+  {
+    "id": "2024-bafta-bafta-award-for-best-children-s-family-film-tt4772188",
+    "year": 2024,
+    "festivalId": "bafta",
+    "festivalName": "BAFTA Awards",
+    "ceremonyId": "bafta-2024",
+    "categoryId": "bafta:bafta-award-for-best-children-s-family-film",
+    "category": "BAFTA Award for Best Children's & Family Film",
+    "title": "Flow",
+    "director": "Gints Zilbalodis",
+    "directorIds": [
+      "person:gints-zilbalodis"
+    ],
+    "country": "BE",
+    "result": "nominee",
+    "imdbId": "tt4772188",
+    "filmId": "tt4772188"
+  },
+  {
+    "id": "2024-bafta-bafta-award-for-best-children-s-family-film-tt5674658",
+    "year": 2024,
+    "festivalId": "bafta",
+    "festivalName": "BAFTA Awards",
+    "ceremonyId": "bafta-2024",
+    "categoryId": "bafta:bafta-award-for-best-children-s-family-film",
+    "category": "BAFTA Award for Best Children's & Family Film",
+    "title": "Kensuke's Kingdom",
+    "director": "Kirk Hendry, Neil Boyle",
+    "directorIds": [
+      "person:kirk-hendry",
+      "person:neil-boyle"
+    ],
+    "country": "GB",
+    "result": "nominee",
+    "imdbId": "tt5674658",
+    "filmId": "tt5674658"
+  },
+  {
     "id": "2024-bafta-bafta-award-for-best-documentary-tt24082438",
     "year": 2024,
     "festivalId": "bafta",
@@ -31762,9 +31891,9 @@
     "categoryId": "bafta:bafta-award-for-best-film",
     "category": "BAFTA Award for Best Film",
     "title": "Oppenheimer",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "winner",
@@ -33280,10 +33409,9 @@
     "categoryId": "bafta:best-film",
     "category": "Best Film",
     "title": "Oppenheimer",
-    "director": "Christopher Nolan, Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:christopher-nolan",
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "winner",
@@ -39044,22 +39172,6 @@
     "filmId": "tt32083311"
   },
   {
-    "id": "2024-cannes-un-certain-regard-film:my-sunshine-2024",
-    "year": 2024,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "ceremonyId": "cannes-2024",
-    "categoryId": "cannes:un-certain-regard",
-    "category": "Un Certain Regard",
-    "title": "My Sunshine",
-    "director": "",
-    "directorIds": [],
-    "country": "XX",
-    "result": "nominee",
-    "imdbId": null,
-    "filmId": "film:my-sunshine-2024"
-  },
-  {
     "id": "2024-cannes-un-certain-regard-film:un-certain-regard-youth-prize-holy-cow-2024",
     "year": 2024,
     "festivalId": "cannes",
@@ -39182,6 +39294,22 @@
     "result": "nominee",
     "imdbId": "tt15437986",
     "filmId": "tt15437986"
+  },
+  {
+    "id": "2024-cannes-un-certain-regard-tt22694908",
+    "year": 2024,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "ceremonyId": "cannes-2024",
+    "categoryId": "cannes:un-certain-regard",
+    "category": "Un Certain Regard",
+    "title": "My Sunshine",
+    "director": "",
+    "directorIds": [],
+    "country": "FR",
+    "result": "nominee",
+    "imdbId": "tt22694908",
+    "filmId": "tt22694908"
   },
   {
     "id": "2024-cannes-un-certain-regard-tt26656556",
@@ -40068,10 +40196,9 @@
     "categoryId": "golden-globes:best-motion-picture-drama",
     "category": "Best Motion Picture - Drama",
     "title": "Oppenheimer",
-    "director": "Christopher Nolan, Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:christopher-nolan",
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "winner",
@@ -41147,9 +41274,9 @@
     "categoryId": "oscars:academy-award-for-best-actor",
     "category": "Academy Award for Best Actor",
     "title": "Oppenheimer",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "winner",
@@ -41219,9 +41346,9 @@
     "categoryId": "oscars:academy-award-for-best-director",
     "category": "Academy Award for Best Director",
     "title": "Oppenheimer",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "winner",
@@ -41489,9 +41616,9 @@
     "categoryId": "oscars:academy-award-for-best-supporting-actor",
     "category": "Academy Award for Best Supporting Actor",
     "title": "Oppenheimer",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "winner",
@@ -41597,10 +41724,9 @@
     "categoryId": "oscars:best-picture",
     "category": "Best Picture",
     "title": "Oppenheimer",
-    "director": "Christopher Nolan, Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:christopher-nolan",
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "winner",
@@ -46655,6 +46781,24 @@
     "result": "winner",
     "imdbId": "tt6587046",
     "filmId": "tt6587046"
+  },
+  {
+    "id": "2023-bafta-bafta-award-for-best-casting-tt19770238",
+    "year": 2023,
+    "festivalId": "bafta",
+    "festivalName": "BAFTA Awards",
+    "ceremonyId": "bafta-2023",
+    "categoryId": "bafta:bafta-award-for-best-casting",
+    "category": "BAFTA Award for Best Casting",
+    "title": "Aftersun",
+    "director": "Charlotte Wells",
+    "directorIds": [
+      "person:charlotte-wells"
+    ],
+    "country": "US",
+    "result": "nominee",
+    "imdbId": "tt19770238",
+    "filmId": "tt19770238"
   },
   {
     "id": "2023-bafta-bafta-award-for-best-film-tt1016150",
@@ -75815,7 +75959,7 @@
     "filmId": "film:eyelash-2021"
   },
   {
-    "id": "2021-bafta-best-short-film-film:the-present-2021",
+    "id": "2021-bafta-best-short-film-tt11474480",
     "year": 2021,
     "festivalId": "bafta",
     "festivalName": "BAFTA Awards",
@@ -75825,10 +75969,10 @@
     "title": "The Present",
     "director": "",
     "directorIds": [],
-    "country": "XX",
+    "country": "GB",
     "result": "winner",
-    "imdbId": null,
-    "filmId": "film:the-present-2021"
+    "imdbId": "tt11474480",
+    "filmId": "tt11474480"
   },
   {
     "id": "2021-bafta-best-short-film-tt11612058",
@@ -89975,7 +90119,7 @@
     "filmId": "tt8579674"
   },
   {
-    "id": "2020-golden-globes-best-foreign-language-film-film:les-mis-rables-2020",
+    "id": "2020-golden-globes-best-foreign-language-film-tt10199590",
     "year": 2020,
     "festivalId": "golden-globes",
     "festivalName": "Golden Globes",
@@ -89985,10 +90129,10 @@
     "title": "Les Misérables",
     "director": "",
     "directorIds": [],
-    "country": "XX",
+    "country": "FR",
     "result": "nominee",
-    "imdbId": null,
-    "filmId": "film:les-mis-rables-2020"
+    "imdbId": "tt10199590",
+    "filmId": "tt10199590"
   },
   {
     "id": "2020-golden-globes-best-foreign-language-film-tt6751668",
@@ -104057,6 +104201,24 @@
     "filmId": "tt10767168"
   },
   {
+    "id": "2019-venice-golden-lion-tt10673846",
+    "year": 2019,
+    "festivalId": "venice",
+    "festivalName": "Venice Film Festival",
+    "ceremonyId": "venice-2019",
+    "categoryId": "venice:golden-lion",
+    "category": "Golden Lion",
+    "title": "The Mafia Is No Longer What It Used to Be",
+    "director": "Franco Maresco",
+    "directorIds": [
+      "person:franco-maresco"
+    ],
+    "country": "IT",
+    "result": "nominee",
+    "imdbId": "tt10673846",
+    "filmId": "tt10673846"
+  },
+  {
     "id": "2019-venice-golden-lion-tt1667354",
     "year": 2019,
     "festivalId": "venice",
@@ -113244,9 +113406,9 @@
     "categoryId": "oscars:academy-award-for-best-cinematography",
     "category": "Academy Award for Best Cinematography",
     "title": "Dunkirk",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -113388,9 +113550,9 @@
     "categoryId": "oscars:academy-award-for-best-director",
     "category": "Academy Award for Best Director",
     "title": "Dunkirk",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -113660,9 +113822,9 @@
     "categoryId": "oscars:academy-award-for-best-film-editing",
     "category": "Academy Award for Best Film Editing",
     "title": "Dunkirk",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "winner",
@@ -114002,9 +114164,9 @@
     "categoryId": "oscars:academy-award-for-best-original-score",
     "category": "Academy Award for Best Original Score",
     "title": "Dunkirk",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -114201,9 +114363,9 @@
     "categoryId": "oscars:academy-award-for-best-picture",
     "category": "Academy Award for Best Picture",
     "title": "Dunkirk",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -114381,9 +114543,9 @@
     "categoryId": "oscars:academy-award-for-best-production-design",
     "category": "Academy Award for Best Production Design",
     "title": "Dunkirk",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -114471,9 +114633,9 @@
     "categoryId": "oscars:academy-award-for-best-sound-editing",
     "category": "Academy Award for Best Sound Editing",
     "title": "Dunkirk",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "winner",
@@ -114561,9 +114723,9 @@
     "categoryId": "oscars:academy-award-for-best-sound",
     "category": "Academy Award for Best Sound",
     "title": "Dunkirk",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "winner",
@@ -132983,22 +133145,6 @@
     "filmId": "film:elephant-2016"
   },
   {
-    "id": "2016-bafta-best-short-film-film:over-2016",
-    "year": 2016,
-    "festivalId": "bafta",
-    "festivalName": "BAFTA Awards",
-    "ceremonyId": "bafta-2016",
-    "categoryId": "bafta:best-short-film",
-    "category": "Best Short Film",
-    "title": "Over",
-    "director": "",
-    "directorIds": [],
-    "country": "XX",
-    "result": "nominee",
-    "imdbId": null,
-    "filmId": "film:over-2016"
-  },
-  {
     "id": "2016-bafta-best-short-film-tt4331620",
     "year": 2016,
     "festivalId": "bafta",
@@ -133013,6 +133159,22 @@
     "result": "nominee",
     "imdbId": "tt4331620",
     "filmId": "tt4331620"
+  },
+  {
+    "id": "2016-bafta-best-short-film-tt4421754",
+    "year": 2016,
+    "festivalId": "bafta",
+    "festivalName": "BAFTA Awards",
+    "ceremonyId": "bafta-2016",
+    "categoryId": "bafta:best-short-film",
+    "category": "Best Short Film",
+    "title": "Over",
+    "director": "",
+    "directorIds": [],
+    "country": "GB",
+    "result": "nominee",
+    "imdbId": "tt4421754",
+    "filmId": "tt4421754"
   },
   {
     "id": "2016-bafta-best-short-film-tt5020232",
@@ -145150,24 +145312,6 @@
     "filmId": "tt3612232"
   },
   {
-    "id": "2015-bafta-bafta-s-children-young-people-award-feature-film-tt1109624",
-    "year": 2015,
-    "festivalId": "bafta",
-    "festivalName": "BAFTA Awards",
-    "ceremonyId": "bafta-2015",
-    "categoryId": "bafta:bafta-s-children-young-people-award-feature-film",
-    "category": "BAFTA's Children & Young People Award - Feature Film",
-    "title": "Paddington",
-    "director": "Paul King",
-    "directorIds": [
-      "person:paul-king"
-    ],
-    "country": "FR",
-    "result": "winner",
-    "imdbId": "tt1109624",
-    "filmId": "tt1109624"
-  },
-  {
     "id": "2015-bafta-bafta-s-children-young-people-award-feature-film-tt2096673",
     "year": 2015,
     "festivalId": "bafta",
@@ -152840,9 +152984,9 @@
     "categoryId": "oscars:academy-award-for-best-original-score",
     "category": "Academy Award for Best Original Score",
     "title": "Interstellar",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -153074,9 +153218,9 @@
     "categoryId": "oscars:academy-award-for-best-production-design",
     "category": "Academy Award for Best Production Design",
     "title": "Interstellar",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -153164,9 +153308,9 @@
     "categoryId": "oscars:academy-award-for-best-sound-editing",
     "category": "Academy Award for Best Sound Editing",
     "title": "Interstellar",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -153254,9 +153398,9 @@
     "categoryId": "oscars:academy-award-for-best-sound",
     "category": "Academy Award for Best Sound",
     "title": "Interstellar",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -153524,9 +153668,9 @@
     "categoryId": "oscars:academy-award-for-best-visual-effects",
     "category": "Academy Award for Best Visual Effects",
     "title": "Interstellar",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "winner",
@@ -198152,9 +198296,9 @@
     "categoryId": "oscars:academy-award-for-best-cinematography",
     "category": "Academy Award for Best Cinematography",
     "title": "Inception",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "winner",
@@ -198932,9 +199076,9 @@
     "categoryId": "oscars:academy-award-for-best-original-score",
     "category": "Academy Award for Best Original Score",
     "title": "Inception",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -199076,9 +199220,9 @@
     "categoryId": "oscars:academy-award-for-best-picture",
     "category": "Academy Award for Best Picture",
     "title": "Inception",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -199203,9 +199347,9 @@
     "categoryId": "oscars:academy-award-for-best-production-design",
     "category": "Academy Award for Best Production Design",
     "title": "Inception",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -199312,9 +199456,9 @@
     "categoryId": "oscars:academy-award-for-best-sound-editing",
     "category": "Academy Award for Best Sound Editing",
     "title": "Inception",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "winner",
@@ -199385,9 +199529,9 @@
     "categoryId": "oscars:academy-award-for-best-sound",
     "category": "Academy Award for Best Sound",
     "title": "Inception",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "winner",
@@ -199675,9 +199819,9 @@
     "categoryId": "oscars:academy-award-for-best-visual-effects",
     "category": "Academy Award for Best Visual Effects",
     "title": "Inception",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "winner",
@@ -199820,9 +199964,9 @@
     "categoryId": "oscars:academy-award-for-best-writing-original-screenplay",
     "category": "Academy Award for Best Writing, Original Screenplay",
     "title": "Inception",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -205753,22 +205897,6 @@
     "filmId": "tt1437235"
   },
   {
-    "id": "2010-berlinale-main-competition-film:a-family-2010",
-    "year": 2010,
-    "festivalId": "berlinale",
-    "festivalName": "Berlin International Film Festival",
-    "ceremonyId": "berlinale-2010",
-    "categoryId": "berlinale:main-competition",
-    "category": "Main Competition",
-    "title": "A Family",
-    "director": "",
-    "directorIds": [],
-    "country": "XX",
-    "result": "nominee",
-    "imdbId": null,
-    "filmId": "film:a-family-2010"
-  },
-  {
     "id": "2010-berlinale-main-competition-film:a-simple-noodle-story-2010",
     "year": 2010,
     "festivalId": "berlinale",
@@ -205991,6 +206119,22 @@
     "result": "nominee",
     "imdbId": "tt1508290",
     "filmId": "tt1508290"
+  },
+  {
+    "id": "2010-berlinale-main-competition-tt1568815",
+    "year": 2010,
+    "festivalId": "berlinale",
+    "festivalName": "Berlin International Film Festival",
+    "ceremonyId": "berlinale-2010",
+    "categoryId": "berlinale:main-competition",
+    "category": "Main Competition",
+    "title": "A Family",
+    "director": "",
+    "directorIds": [],
+    "country": "DK",
+    "result": "nominee",
+    "imdbId": "tt1568815",
+    "filmId": "tt1568815"
   },
   {
     "id": "2010-berlinale-main-competition-tt1571724",
@@ -221512,9 +221656,9 @@
     "categoryId": "oscars:academy-award-for-best-cinematography",
     "category": "Academy Award for Best Cinematography",
     "title": "The Dark Knight",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -221929,9 +222073,9 @@
     "categoryId": "oscars:academy-award-for-best-film-editing",
     "category": "Academy Award for Best Film Editing",
     "title": "The Dark Knight",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -222218,9 +222362,9 @@
     "categoryId": "oscars:academy-award-for-best-makeup-and-hairstyling",
     "category": "Academy Award for Best Makeup and Hairstyling",
     "title": "The Dark Knight",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -222436,9 +222580,9 @@
     "categoryId": "oscars:academy-award-for-best-production-design",
     "category": "Academy Award for Best Production Design",
     "title": "The Dark Knight",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -222508,9 +222652,9 @@
     "categoryId": "oscars:academy-award-for-best-sound-editing",
     "category": "Academy Award for Best Sound Editing",
     "title": "The Dark Knight",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "winner",
@@ -222599,9 +222743,9 @@
     "categoryId": "oscars:academy-award-for-best-sound",
     "category": "Academy Award for Best Sound",
     "title": "The Dark Knight",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -222672,9 +222816,9 @@
     "categoryId": "oscars:academy-award-for-best-supporting-actor",
     "category": "Academy Award for Best Supporting Actor",
     "title": "The Dark Knight",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "winner",
@@ -222852,9 +222996,9 @@
     "categoryId": "oscars:academy-award-for-best-visual-effects",
     "category": "Academy Award for Best Visual Effects",
     "title": "The Dark Knight",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -242600,9 +242744,9 @@
     "categoryId": "oscars:academy-award-for-best-cinematography",
     "category": "Academy Award for Best Cinematography",
     "title": "The Prestige",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -243519,9 +243663,9 @@
     "categoryId": "oscars:academy-award-for-best-production-design",
     "category": "Academy Award for Best Production Design",
     "title": "The Prestige",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -253381,9 +253525,9 @@
     "categoryId": "oscars:academy-award-for-best-cinematography",
     "category": "Academy Award for Best Cinematography",
     "title": "Batman Begins",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -258594,22 +258738,6 @@
     "filmId": "tt0385004"
   },
   {
-    "id": "2005-bafta-best-short-animation-film:heavy-pockets-2005",
-    "year": 2005,
-    "festivalId": "bafta",
-    "festivalName": "BAFTA Awards",
-    "ceremonyId": "bafta-2005",
-    "categoryId": "bafta:best-short-animation",
-    "category": "Best Short Animation",
-    "title": "Heavy Pockets",
-    "director": "",
-    "directorIds": [],
-    "country": "XX",
-    "result": "nominee",
-    "imdbId": null,
-    "filmId": "film:heavy-pockets-2005"
-  },
-  {
     "id": "2005-bafta-best-short-animation-tt0433936",
     "year": 2005,
     "festivalId": "bafta",
@@ -258656,6 +258784,22 @@
     "result": "winner",
     "imdbId": "tt0435933",
     "filmId": "tt0435933"
+  },
+  {
+    "id": "2005-bafta-best-short-animation-tt0443029",
+    "year": 2005,
+    "festivalId": "bafta",
+    "festivalName": "BAFTA Awards",
+    "ceremonyId": "bafta-2005",
+    "categoryId": "bafta:best-short-animation",
+    "category": "Best Short Animation",
+    "title": "Heavy Pockets",
+    "director": "",
+    "directorIds": [],
+    "country": "XX",
+    "result": "nominee",
+    "imdbId": "tt0443029",
+    "filmId": "tt0443029"
   },
   {
     "id": "2005-bafta-best-short-animation-tt0443099",
@@ -261351,22 +261495,6 @@
     "filmId": "film:tiens-toi-tranquille-2005"
   },
   {
-    "id": "2005-cannes-un-certain-regard-film:havana-blues-2005",
-    "year": 2005,
-    "festivalId": "cannes",
-    "festivalName": "Cannes Film Festival",
-    "ceremonyId": "cannes-2005",
-    "categoryId": "cannes:un-certain-regard",
-    "category": "Un Certain Regard",
-    "title": "Havana Blues",
-    "director": "",
-    "directorIds": [],
-    "country": "XX",
-    "result": "nominee",
-    "imdbId": null,
-    "filmId": "film:havana-blues-2005"
-  },
-  {
     "id": "2005-cannes-un-certain-regard-film:sangre-2005",
     "year": 2005,
     "festivalId": "cannes",
@@ -261573,6 +261701,22 @@
     "result": "nominee",
     "imdbId": "tt0439646",
     "filmId": "tt0439646"
+  },
+  {
+    "id": "2005-cannes-un-certain-regard-tt0441297",
+    "year": 2005,
+    "festivalId": "cannes",
+    "festivalName": "Cannes Film Festival",
+    "ceremonyId": "cannes-2005",
+    "categoryId": "cannes:un-certain-regard",
+    "category": "Un Certain Regard",
+    "title": "Havana Blues",
+    "director": "",
+    "directorIds": [],
+    "country": "FR",
+    "result": "nominee",
+    "imdbId": "tt0441297",
+    "filmId": "tt0441297"
   },
   {
     "id": "2005-cannes-un-certain-regard-tt0444627",
@@ -289996,22 +290140,6 @@
     "filmId": "tt0309079"
   },
   {
-    "id": "2002-bafta-best-short-film-film:inferno-2002",
-    "year": 2002,
-    "festivalId": "bafta",
-    "festivalName": "BAFTA Awards",
-    "ceremonyId": "bafta-2002",
-    "categoryId": "bafta:best-short-film",
-    "category": "Best Short Film",
-    "title": "Inferno",
-    "director": "",
-    "directorIds": [],
-    "country": "XX",
-    "result": "nominee",
-    "imdbId": null,
-    "filmId": "film:inferno-2002"
-  },
-  {
     "id": "2002-bafta-best-short-film-film:the-red-peppers-2002",
     "year": 2002,
     "festivalId": "bafta",
@@ -290026,6 +290154,22 @@
     "result": "nominee",
     "imdbId": null,
     "filmId": "film:the-red-peppers-2002"
+  },
+  {
+    "id": "2002-bafta-best-short-film-tt0282613",
+    "year": 2002,
+    "festivalId": "bafta",
+    "festivalName": "BAFTA Awards",
+    "ceremonyId": "bafta-2002",
+    "categoryId": "bafta:best-short-film",
+    "category": "Best Short Film",
+    "title": "Inferno",
+    "director": "",
+    "directorIds": [],
+    "country": "US",
+    "result": "nominee",
+    "imdbId": "tt0282613",
+    "filmId": "tt0282613"
   },
   {
     "id": "2002-bafta-best-short-film-tt0286204",
@@ -294928,9 +295072,9 @@
     "categoryId": "oscars:academy-award-for-best-film-editing",
     "category": "Academy Award for Best Film Editing",
     "title": "Memento",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -295943,9 +296087,9 @@
     "categoryId": "oscars:academy-award-for-best-writing-original-screenplay",
     "category": "Academy Award for Best Writing, Original Screenplay",
     "title": "Memento",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "nominee",
@@ -304748,9 +304892,9 @@
     "categoryId": "sundance:the-waldo-salt-screenwriting-award",
     "category": "The Waldo Salt Screenwriting Award",
     "title": "Memento",
-    "director": "Q25191",
+    "director": "Christopher Nolan",
     "directorIds": [
-      "person:q25191"
+      "person:christopher-nolan"
     ],
     "country": "US",
     "result": "winner",
@@ -402554,22 +402698,6 @@
     "filmId": "tt0093818"
   },
   {
-    "id": "1988-bafta-best-special-visual-effects-film:little-shop-of-horrors-1988",
-    "year": 1988,
-    "festivalId": "bafta",
-    "festivalName": "BAFTA Awards",
-    "ceremonyId": "bafta-1988",
-    "categoryId": "bafta:best-special-visual-effects",
-    "category": "Best Special Visual Effects",
-    "title": "Little Shop of Horrors",
-    "director": "",
-    "directorIds": [],
-    "country": "XX",
-    "result": "nominee",
-    "imdbId": null,
-    "filmId": "film:little-shop-of-horrors-1988"
-  },
-  {
     "id": "1988-bafta-best-special-visual-effects-film:the-fly-1988",
     "year": 1988,
     "festivalId": "bafta",
@@ -402616,6 +402744,22 @@
     "result": "winner",
     "imdbId": "tt0094332",
     "filmId": "tt0094332"
+  },
+  {
+    "id": "1988-bafta-best-special-visual-effects-tt29763408",
+    "year": 1988,
+    "festivalId": "bafta",
+    "festivalName": "BAFTA Awards",
+    "ceremonyId": "bafta-1988",
+    "categoryId": "bafta:best-special-visual-effects",
+    "category": "Best Special Visual Effects",
+    "title": "Little Shop of Horrors",
+    "director": "",
+    "directorIds": [],
+    "country": "JP",
+    "result": "nominee",
+    "imdbId": "tt29763408",
+    "filmId": "tt29763408"
   },
   {
     "id": "1988-berlinale-fipresci-award-film:comissar-1988",
@@ -516180,22 +516324,6 @@
     "filmId": "film:rendezvous-at-bray-1971"
   },
   {
-    "id": "1971-berlinale-main-competition-film:the-first-day-1971",
-    "year": 1971,
-    "festivalId": "berlinale",
-    "festivalName": "Berlin International Film Festival",
-    "ceremonyId": "berlinale-1971",
-    "categoryId": "berlinale:main-competition",
-    "category": "Main Competition",
-    "title": "The First Day",
-    "director": "",
-    "directorIds": [],
-    "country": "XX",
-    "result": "nominee",
-    "imdbId": null,
-    "filmId": "film:the-first-day-1971"
-  },
-  {
     "id": "1971-berlinale-main-competition-tt0065622",
     "year": 1971,
     "festivalId": "berlinale",
@@ -516546,6 +516674,22 @@
     "result": "nominee",
     "imdbId": "tt0223859",
     "filmId": "tt0223859"
+  },
+  {
+    "id": "1971-berlinale-main-competition-tt39123381",
+    "year": 1971,
+    "festivalId": "berlinale",
+    "festivalName": "Berlin International Film Festival",
+    "ceremonyId": "berlinale-1971",
+    "categoryId": "berlinale:main-competition",
+    "category": "Main Competition",
+    "title": "The First Day",
+    "director": "",
+    "directorIds": [],
+    "country": "ES",
+    "result": "nominee",
+    "imdbId": "tt39123381",
+    "filmId": "tt39123381"
   },
   {
     "id": "1971-berlinale-young-filmmakers-forum-film:a-sixth-part-of-the-world-1971",
@@ -578567,6 +578711,24 @@
     "filmId": "tt0053779"
   },
   {
+    "id": "1962-oscars-academy-award-for-best-writing-original-screenplay-tt0053856",
+    "year": 1962,
+    "festivalId": "oscars",
+    "festivalName": "Academy Awards",
+    "ceremonyId": "oscars-1962",
+    "categoryId": "oscars:academy-award-for-best-writing-original-screenplay",
+    "category": "Academy Award for Best Writing, Original Screenplay",
+    "title": "General Della Rovere",
+    "director": "Roberto Rossellini",
+    "directorIds": [
+      "person:roberto-rossellini"
+    ],
+    "country": "IT",
+    "result": "nominee",
+    "imdbId": "tt0053856",
+    "filmId": "tt0053856"
+  },
+  {
     "id": "1962-oscars-academy-award-for-best-writing-original-screenplay-tt0055100",
     "year": 1962,
     "festivalId": "oscars",
@@ -598377,6 +598539,24 @@
     "result": "winner",
     "imdbId": "tt0052861",
     "filmId": "tt0052861"
+  },
+  {
+    "id": "1959-venice-golden-lion-tt0053856",
+    "year": 1959,
+    "festivalId": "venice",
+    "festivalName": "Venice Film Festival",
+    "ceremonyId": "venice-1959",
+    "categoryId": "venice:golden-lion",
+    "category": "Golden Lion",
+    "title": "General Della Rovere",
+    "director": "Roberto Rossellini",
+    "directorIds": [
+      "person:roberto-rossellini"
+    ],
+    "country": "IT",
+    "result": "winner",
+    "imdbId": "tt0053856",
+    "filmId": "tt0053856"
   },
   {
     "id": "1959-venice-informativa-film:a-hero-of-our-times-1959",

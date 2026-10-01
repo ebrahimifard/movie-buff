@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T12:50:38.403Z",
+  "updatedAt": "2026-10-01T11:31:58.571Z",
   "byImdbId": {
     "tt21188986": {
       "title": "The Dreamed Adventure",
@@ -232918,6 +232918,127 @@
       "genres": [],
       "synopsis": "Dr. Henry Jekyll experiments with scientific means of revealing the hidden, dark side of man and releases a murderer from within himself.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/zUmdcrkqFBpQ8Gc1HsXS3wPjikv.jpg"
+    },
+    "tt29623480": {
+      "title": "The Wild Robot",
+      "releaseYear": 2024,
+      "imdbId": "tt29623480",
+      "runtimeMinutes": 102,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Family",
+        "Animation",
+        "Science Fiction",
+        "Adventure"
+      ],
+      "synopsis": "After a shipwreck, an intelligent robot called Roz is stranded on an uninhabited island. To survive the harsh environment, Roz bonds with the island's animals and cares for an orphaned baby goose.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/wTnV3PCVW5O92JMrFvvrRcV39RU.jpg"
+    },
+    "tt26443597": {
+      "title": "Zootopia 2",
+      "releaseYear": 2025,
+      "imdbId": "tt26443597",
+      "runtimeMinutes": 108,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Comedy",
+        "Mystery",
+        "Family"
+      ],
+      "synopsis": "After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De'Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts of town, where their growing partnership is tested like never before.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg"
+    },
+    "tt11655566": {
+      "title": "Lilo & Stitch",
+      "releaseYear": 2025,
+      "imdbId": "tt11655566",
+      "runtimeMinutes": 108,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Family",
+        "Science Fiction",
+        "Comedy"
+      ],
+      "synopsis": "The wildly funny and touching story of a lonely Hawaiian girl and the fugitive alien who helps to mend her broken family.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ckQzKpQJO4ZQDCN5evdpKcfm7Ys.jpg"
+    },
+    "tt10673846": {
+      "title": "The Mafia Is No Longer What It Used to Be",
+      "releaseYear": 2021,
+      "imdbId": "tt10673846",
+      "runtimeMinutes": 111,
+      "countryCodes": [
+        "IT"
+      ],
+      "languages": [
+        "Italian"
+      ],
+      "genres": [
+        "Documentary"
+      ],
+      "synopsis": "Palermo, Sicily, Italy, 2017. Twenty-five years after the murders of anti-mafia judges Giovanni Falcone, on May 23, 1992, and Paolo Borsellino, on July 19, 1992; and on the occasion of the tributes held in memory of both heroes, skeptical photographer Letizia Battaglia, chronicler of their titanic combat, criticizes the opportunism of shady characters who, like businessman Ciccio Mira, profit from the commemoration of both tragedies.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/5MTBUSLpQFXuV0udVOTXE0aQeGx.jpg"
+    },
+    "tt5674658": {
+      "title": "Kensuke's Kingdom",
+      "releaseYear": 2026,
+      "imdbId": "tt5674658",
+      "runtimeMinutes": 84,
+      "countryCodes": [
+        "GB"
+      ],
+      "languages": [
+        "English",
+        "Japanese"
+      ],
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Drama",
+        "Family"
+      ],
+      "synopsis": "A young boy and his family set off on a sailing trip of a lifetime until a violent storm erupts, sweeping Michael and his dog overboard. After washing up on a remote island, terrified, they struggle to survive and adjust to life alone, One day, Michael discovers he is not alone when he is confronted by a mysterious Japanese man who has lived there secretly since World War II, angry that Michael has arrived. However, as dangerous invaders threaten their fragile island paradise, Michael and the old man, Kensuke, join forces to save their secret world.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/9M8tTHbYFrGxCXxNMvAkvRbhtER.jpg"
+    },
+    "tt0053856": {
+      "title": "General Della Rovere",
+      "releaseYear": 1959,
+      "imdbId": "tt0053856",
+      "runtimeMinutes": 132,
+      "countryCodes": [
+        "IT",
+        "FR"
+      ],
+      "languages": [
+        "German",
+        "Italian",
+        "French",
+        "English",
+        "Hebrew"
+      ],
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "synopsis": "In WWII-Italy, the Gestapo blackmails a con man to impersonate a dead partisan commander in order to extract information from his fellow inmates.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/dTynqWaUm92ecwxCuMkTdHCoOfx.jpg"
     }
   },
   "byTitleYear": {
@@ -526159,6 +526280,221 @@
       "languages": [],
       "genres": [],
       "synopsis": "Australian rock band Qurious think about what it means to \"live the good life\".",
+      "posterUrl": ""
+    },
+    "cannes|2026|laser cat": {
+      "title": "Laser-Cat",
+      "releaseYear": 2026,
+      "imdbId": "tt42006686",
+      "runtimeMinutes": 22,
+      "countryCodes": [],
+      "languages": [
+        "Portuguese"
+      ],
+      "genres": [
+        "Thriller",
+        "Comedy"
+      ],
+      "synopsis": "When a laser pointer prank goes wrong, an anxious teenager crosses São Paulo in a single night to save his crush’s severely injured cat, as guilt and paranoia drive him toward collapse.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/iD1kb7tPklwdatXDd9ZVmCAknT5.jpg"
+    },
+    "venice|2026|even if hell came": {
+      "title": "Even If Hell Came",
+      "releaseYear": 2026,
+      "imdbId": "tt38689714",
+      "runtimeMinutes": 90,
+      "countryCodes": [
+        "IT"
+      ],
+      "languages": [],
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "synopsis": "During the harsh winter of 1944, a young partisan survives an ambush in the Alps and holds out in a mountain hut, whilst encountering lives cut short and awaiting the end of the war.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/rkJj1IXyr82h93C1uy0Kf7gYEv3.jpg"
+    },
+    "cannes|2024|my sunshine": {
+      "title": "My Sunshine",
+      "releaseYear": 2024,
+      "imdbId": "tt22694908",
+      "runtimeMinutes": 90,
+      "countryCodes": [
+        "FR",
+        "JP"
+      ],
+      "languages": [
+        "Japanese"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Two young skaters, polar opposites in personality, team up to train for an ice-dancing competition, their growing bond blurring the lines between partners and more as winter unfolds.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/qdBfHxQnaXifIatOpwX7IZvhsiK.jpg"
+    },
+    "bafta|2021|the present": {
+      "title": "The Present",
+      "releaseYear": 2021,
+      "imdbId": "tt11474480",
+      "runtimeMinutes": 24,
+      "countryCodes": [
+        "GB",
+        "PS"
+      ],
+      "languages": [
+        "Arabic",
+        "English"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "On his wedding anniversary, Yusef and his young daughter set out in the West Bank to buy his wife a gift. Between soldiers, segregated roads and checkpoints, how easy would it be to go shopping?",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/kPou4N6kfuzmatjTLpMYofubIXq.jpg"
+    },
+    "golden-globes|2020|les mis rables": {
+      "title": "Les Misérables",
+      "releaseYear": 2020,
+      "imdbId": "tt10199590",
+      "runtimeMinutes": 104,
+      "countryCodes": [
+        "FR"
+      ],
+      "languages": [
+        "French",
+        "Bambara"
+      ],
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "synopsis": "Stéphane has recently joined the Anti-Crime Squad in Montfermeil, in the suburbs of Paris, France, where Victor Hugo set his famed novel “Les Miserables”. Alongside his new colleagues Chris and Gwada – both experienced members of the team – he quickly discovers tensions running high between local gangs. When the trio finds themselves overrun during the course of an arrest, a drone captures the encounter, threatening to expose the reality of everyday life.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/2ZQV9rPFXF0iFfKbsAvVIweQ1yM.jpg"
+    },
+    "bafta|2016|over": {
+      "title": "Over",
+      "releaseYear": 2016,
+      "imdbId": "tt4421754",
+      "runtimeMinutes": 14,
+      "countryCodes": [
+        "GB"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Over presents a crime scene. During the course of 9 wide shots, we watch an intriguing story unfold. What's happened in this quiet neighbourhood? A murder, hit-and-run, an accident? The reality is profound, and deeply unexpected.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/tAzbYC9ZILyuiXKdDrhiyN9v9vF.jpg"
+    },
+    "berlinale|2010|a family": {
+      "title": "A Family",
+      "releaseYear": 2010,
+      "imdbId": "tt1568815",
+      "runtimeMinutes": 102,
+      "countryCodes": [
+        "DK"
+      ],
+      "languages": [
+        "Danish"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Ditte owns a gallery, has a loving boyfriend and her dream job in New York is within reach. But Ditte is also the youngest generation of the famous bakery dynasty, Rheinwald, and when her beloved, but dominating father comes down with a serious illness, Ditte is faced with the grueling decision: To pursue her own dreams, or to continue the legacy of her family.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/u9oXCU4rzZWZpHqZ5zjFoYB57WE.jpg"
+    },
+    "bafta|2005|heavy pockets": {
+      "title": "Heavy Pockets",
+      "releaseYear": 2005,
+      "imdbId": "tt0443029",
+      "runtimeMinutes": 6,
+      "countryCodes": [],
+      "languages": [
+        "Welsh"
+      ],
+      "genres": [
+        "Animation"
+      ],
+      "synopsis": "Awel Jones unexpectedly loses her gravity. At first she is embarrassed by her amazing gift and becomes isolated at school - until one day, she has to confront the bullies.",
+      "posterUrl": ""
+    },
+    "cannes|2005|havana blues": {
+      "title": "Havana Blues",
+      "releaseYear": 2005,
+      "imdbId": "tt0441297",
+      "runtimeMinutes": 115,
+      "countryCodes": [
+        "FR",
+        "ES",
+        "CU"
+      ],
+      "languages": [
+        "Spanish"
+      ],
+      "genres": [
+        "Drama",
+        "Music"
+      ],
+      "synopsis": "When Spanish record producers express interest in Cuban musicians Ruy and Tito, the longtime friends are faced with the prospect of leaving their loved ones behind. After years of hoping and dreaming, they've finally earned the opportunity to bring their music to the rest of the world. But are the emotional trade-offs worth it in the end?",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/u3a2CBZmWgIMsDBh1scJ19PPKbB.jpg"
+    },
+    "bafta|2002|inferno": {
+      "title": "Inferno",
+      "releaseYear": 2002,
+      "imdbId": "tt0282613",
+      "runtimeMinutes": 91,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Drama",
+        "Action"
+      ],
+      "synopsis": "A fire chief is investigating the cause of a string of blazes that threaten to destroy her small town, while at the same time dealing with her teen daughter's rebelliousness.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/oHK6yeTuHjQ0Np6SArrAvhb6jP0.jpg"
+    },
+    "bafta|1988|little shop of horrors": {
+      "title": "Little Shop of Horrors",
+      "releaseYear": 1988,
+      "imdbId": "tt29763408",
+      "runtimeMinutes": 96,
+      "countryCodes": [
+        "JP"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Music",
+        "Comedy",
+        "Horror",
+        "TV Movie"
+      ],
+      "synopsis": "The 1987 Japan English Touring cast of Little Shop of Horrors, filmed at Theatre Apple (シアターアプル) in Tokyo during its October 1 - October 28, 1987 run at the theater. The meek floral assistant Seymour Krelborn stumbles across a new breed of plant he names \"Audrey II\" - after his coworker crush. This foul-mouthed, R&B-singing carnivore promises unending fame and fortune to the down and out Krelborn as long as he keeps feeding it, BLOOD.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/eip2OjcxYpStWxmp3HoEjqlOlAD.jpg"
+    },
+    "berlinale|1971|the first day": {
+      "title": "The First Day",
+      "releaseYear": 1971,
+      "imdbId": "tt39123381",
+      "runtimeMinutes": 0,
+      "countryCodes": [
+        "ES"
+      ],
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "synopsis": "A normal Saturday becomes a nightmare when an unknown outbreak reaches a family in a quiet suburban neighborhood.",
       "posterUrl": ""
     }
   }

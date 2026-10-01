@@ -14262,6 +14262,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:franco-maresco",
+    "name": "Franco Maresco",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:franco-nero",
     "name": "Franco Nero",
     "roles": [
@@ -26038,6 +26047,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:kirk-hendry",
+    "name": "Kirk Hendry",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:kirk-jones",
     "name": "Kirk Jones",
     "roles": [
@@ -32850,6 +32868,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:neil-boyle",
+    "name": "Neil Boyle",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:neil-burger",
     "name": "Neil Burger",
     "roles": [
@@ -36285,15 +36312,6 @@
   {
     "id": "person:q22107595",
     "name": "Q22107595",
-    "roles": [
-      "director"
-    ],
-    "imdbId": null,
-    "tmdbId": null
-  },
-  {
-    "id": "person:q25191",
-    "name": "Q25191",
     "roles": [
       "director"
     ],
@@ -45333,6 +45351,15 @@
   {
     "id": "person:uberto-pasolini",
     "name": "Uberto Pasolini",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:ugo-bienvenu",
+    "name": "Ugo Bienvenu",
     "roles": [
       "director"
     ],
