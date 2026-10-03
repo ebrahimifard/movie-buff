@@ -48,6 +48,14 @@
     "endDate": null
   },
   {
+    "id": "sundance-2026",
+    "festivalId": "sundance",
+    "year": 2026,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "venice-2026",
     "festivalId": "venice",
     "year": 2026,
@@ -98,6 +106,14 @@
   {
     "id": "oscars-2025",
     "festivalId": "oscars",
+    "year": 2025,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "sundance-2025",
+    "festivalId": "sundance",
     "year": 2025,
     "edition": null,
     "startDate": null,
@@ -368,6 +384,14 @@
     "endDate": null
   },
   {
+    "id": "locarno-2021",
+    "festivalId": "locarno",
+    "year": 2021,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "oscars-2021",
     "festivalId": "oscars",
     "year": 2021,
@@ -426,6 +450,14 @@
   {
     "id": "golden-globes-2020",
     "festivalId": "golden-globes",
+    "year": 2020,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "locarno-2020",
+    "festivalId": "locarno",
     "year": 2020,
     "edition": null,
     "startDate": null,
@@ -634,6 +666,14 @@
   {
     "id": "golden-globes-2017",
     "festivalId": "golden-globes",
+    "year": 2017,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "locarno-2017",
+    "festivalId": "locarno",
     "year": 2017,
     "edition": null,
     "startDate": null,
@@ -1346,6 +1386,14 @@
   {
     "id": "golden-globes-2007",
     "festivalId": "golden-globes",
+    "year": 2007,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "locarno-2007",
+    "festivalId": "locarno",
     "year": 2007,
     "edition": null,
     "startDate": null,
@@ -2784,6 +2832,14 @@
     "endDate": null
   },
   {
+    "id": "locarno-1987",
+    "festivalId": "locarno",
+    "year": 1987,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "oscars-1987",
     "festivalId": "oscars",
     "year": 1987,
@@ -3008,6 +3064,14 @@
     "endDate": null
   },
   {
+    "id": "sundance-1984",
+    "festivalId": "sundance",
+    "year": 1984,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "tiff-1984",
     "festivalId": "tiff",
     "year": 1984,
@@ -3072,6 +3136,14 @@
     "endDate": null
   },
   {
+    "id": "tiff-1983",
+    "festivalId": "tiff",
+    "year": 1983,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "venice-1983",
     "festivalId": "venice",
     "year": 1983,
@@ -3106,6 +3178,14 @@
   {
     "id": "golden-globes-1982",
     "festivalId": "golden-globes",
+    "year": 1982,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "locarno-1982",
+    "festivalId": "locarno",
     "year": 1982,
     "edition": null,
     "startDate": null,
@@ -3856,6 +3936,14 @@
     "endDate": null
   },
   {
+    "id": "locarno-1968",
+    "festivalId": "locarno",
+    "year": 1968,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
     "id": "oscars-1968",
     "festivalId": "oscars",
     "year": 1968,
@@ -4458,6 +4546,14 @@
   {
     "id": "golden-globes-1957",
     "festivalId": "golden-globes",
+    "year": 1957,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "locarno-1957",
+    "festivalId": "locarno",
     "year": 1957,
     "edition": null,
     "startDate": null,
