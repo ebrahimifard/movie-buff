@@ -44,8 +44,13 @@ export const OSCARS_CONFIG = {
   // "Presenters and performers" (confirmed live) lists ceremony presenters
   // and musical performers — people, not films — and isn't caught by the
   // shared pattern's standalone "presenters" match since this combined
-  // heading text is different from that.
-  nonAwardAncestorNames: ["Governors Awards", "Presenters and performers"]
+  // heading text is different from that. "Ceremony information" wraps
+  // purely informational sub-sections (rule changes, critical reviews,
+  // ratings) including a "Box office performance of Best Picture nominees"
+  // table whose dollar-amount column was being misread as a per-row
+  // category name via the shared parser's Award-column detection
+  // (confirmed live: fabricated "categories" like "$1.6 million").
+  nonAwardAncestorNames: ["Governors Awards", "Presenters and performers", "Ceremony information"]
 };
 
 // Oscars has been held every single year since 1929 with no interruptions

@@ -15,8 +15,10 @@ describe("OSCARS_CONFIG", () => {
     expect(OSCARS_CONFIG.normalizeCategory("Best Picture")).toBe("Best Picture");
   });
 
-  it("excludes the whole 'Governors Awards' and 'Presenters and performers' ancestors (people, not competitive award content)", () => {
-    expect(OSCARS_CONFIG.nonAwardAncestorNames).toEqual(expect.arrayContaining(["Governors Awards", "Presenters and performers"]));
+  it("excludes 'Governors Awards'/'Presenters and performers'/'Ceremony information' ancestors (people or purely informational content, not competitive award content)", () => {
+    expect(OSCARS_CONFIG.nonAwardAncestorNames).toEqual(
+      expect.arrayContaining(["Governors Awards", "Presenters and performers", "Ceremony information"])
+    );
   });
 });
 
