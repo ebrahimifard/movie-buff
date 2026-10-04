@@ -26,7 +26,8 @@
     "data:fetch:venice-wikipedia": "node scripts/fetch-venice-wikipedia.mjs",
     "data:fetch:locarno-wikipedia": "node scripts/fetch-locarno-wikipedia.mjs",
     "data:fetch:sundance-wikipedia": "node scripts/fetch-sundance-wikipedia.mjs",
-    "data:fetch:tiff-wikipedia": "node scripts/fetch-tiff-wikipedia.mjs"
+    "data:fetch:tiff-wikipedia": "node scripts/fetch-tiff-wikipedia.mjs",
+    "data:fetch:oscars-wikipedia": "node scripts/fetch-oscars-wikipedia.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.2.12",
