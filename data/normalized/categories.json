@@ -36,6 +36,24 @@
     "isHonoraryAward": false
   },
   {
+    "id": "bafta:bafta-award-for-best-casting",
+    "festivalId": "bafta",
+    "name": "BAFTA Award for Best Casting",
+    "normalizedName": "bafta-award-for-best-casting",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "bafta:bafta-award-for-best-children-s-family-film",
+    "festivalId": "bafta",
+    "name": "BAFTA Award for Best Children's & Family Film",
+    "normalizedName": "bafta-award-for-best-children-s-family-film",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "bafta:bafta-award-for-best-direction",
     "festivalId": "bafta",
     "name": "BAFTA Award for Best Direction",
@@ -6813,12 +6831,39 @@
     "isHonoraryAward": false
   },
   {
+    "id": "golden-globes:golden-globe-award-for-best-actress-in-a-motion-picture-musical-",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for Best Actress in a Motion Picture – Musical or Comedy",
+    "normalizedName": "golden-globe-award-for-best-actress-in-a-motion-picture-musical-",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:golden-globe-award-for-best-actress-miniseries-or-television-fil",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for Best Actress – Miniseries or Television Film",
+    "normalizedName": "golden-globe-award-for-best-actress-miniseries-or-television-fil",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "golden-globes:golden-globe-award-for-best-actress-motion-picture-drama",
     "festivalId": "golden-globes",
     "name": "Golden Globe Award for Best Actress – Motion Picture Drama",
     "normalizedName": "golden-globe-award-for-best-actress-motion-picture-drama",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:golden-globe-award-for-best-actress-television-series-musical-or",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for Best Actress – Television Series Musical or Comedy",
+    "normalizedName": "golden-globe-award-for-best-actress-television-series-musical-or",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -6849,10 +6894,28 @@
     "isHonoraryAward": false
   },
   {
+    "id": "golden-globes:golden-globe-award-for-best-film-promoting-international-underst",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for Best Film Promoting International Understanding",
+    "normalizedName": "golden-globe-award-for-best-film-promoting-international-underst",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "golden-globes:golden-globe-award-for-best-limited-or-anthology-series-or-telev",
     "festivalId": "golden-globes",
     "name": "Golden Globe Award for Best Limited or Anthology Series or Television Film",
     "normalizedName": "golden-globe-award-for-best-limited-or-anthology-series-or-telev",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:golden-globe-award-for-best-motion-picture",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for Best Motion Picture",
+    "normalizedName": "golden-globe-award-for-best-motion-picture",
     "scope": "film",
     "isAward": false,
     "isHonoraryAward": false
@@ -6894,6 +6957,15 @@
     "isHonoraryAward": false
   },
   {
+    "id": "golden-globes:golden-globe-award-for-best-original-song",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for Best Original Song",
+    "normalizedName": "golden-globe-award-for-best-original-song",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "golden-globes:golden-globe-award-for-best-screenplay",
     "festivalId": "golden-globes",
     "name": "Golden Globe Award for Best Screenplay",
@@ -6918,6 +6990,24 @@
     "normalizedName": "golden-globe-award-for-best-supporting-actress-motion-picture",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:golden-globe-award-for-new-star-of-the-year-actor",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for New Star of the Year – Actor",
+    "normalizedName": "golden-globe-award-for-new-star-of-the-year-actor",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "golden-globes:golden-globe-award-for-new-star-of-the-year-actress",
+    "festivalId": "golden-globes",
+    "name": "Golden Globe Award for New Star of the Year – Actress",
+    "normalizedName": "golden-globe-award-for-new-star-of-the-year-actress",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -13329,114 +13419,6 @@
     "isHonoraryAward": false
   },
   {
-    "id": "oscars:academy-award-for-best-actor",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Actor",
-    "normalizedName": "academy-award-for-best-actor",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-actress",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Actress",
-    "normalizedName": "academy-award-for-best-actress",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-animated-feature",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Animated Feature",
-    "normalizedName": "academy-award-for-best-animated-feature",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-animated-short-film",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Animated Short Film",
-    "normalizedName": "academy-award-for-best-animated-short-film",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-art-direction-black-and-white",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Art Direction, Black and White",
-    "normalizedName": "academy-award-for-best-art-direction-black-and-white",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-art-direction-color",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Art Direction, Color",
-    "normalizedName": "academy-award-for-best-art-direction-color",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-cinematography",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Cinematography",
-    "normalizedName": "academy-award-for-best-cinematography",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-cinematography-black-and-white",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Cinematography, Black-and-White",
-    "normalizedName": "academy-award-for-best-cinematography-black-and-white",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-cinematography-color",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Cinematography, Color",
-    "normalizedName": "academy-award-for-best-cinematography-color",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-costume-design",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Costume Design",
-    "normalizedName": "academy-award-for-best-costume-design",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-costume-design-black-and-white",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Costume Design, Black-and-White",
-    "normalizedName": "academy-award-for-best-costume-design-black-and-white",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-costume-design-color",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Costume Design, Color",
-    "normalizedName": "academy-award-for-best-costume-design-color",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "oscars:academy-award-for-best-director",
     "festivalId": "oscars",
     "name": "Academy Award for Best Director",
@@ -13446,64 +13428,10 @@
     "isHonoraryAward": false
   },
   {
-    "id": "oscars:academy-award-for-best-director-comedy-picture",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Director (Comedy Picture)",
-    "normalizedName": "academy-award-for-best-director-comedy-picture",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-director-dramatic-picture",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Director (Dramatic Picture)",
-    "normalizedName": "academy-award-for-best-director-dramatic-picture",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-documentary-feature-film",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Documentary Feature Film",
-    "normalizedName": "academy-award-for-best-documentary-feature-film",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "oscars:academy-award-for-best-documentary-short-subject",
     "festivalId": "oscars",
     "name": "Academy Award for Best Documentary (Short Subject)",
     "normalizedName": "academy-award-for-best-documentary-short-subject",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-engineering-effects",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Engineering Effects",
-    "normalizedName": "academy-award-for-best-engineering-effects",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-film-editing",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Film Editing",
-    "normalizedName": "academy-award-for-best-film-editing",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-international-feature-film",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best International Feature Film",
-    "normalizedName": "academy-award-for-best-international-feature-film",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -13527,15 +13455,6 @@
     "isHonoraryAward": false
   },
   {
-    "id": "oscars:academy-award-for-best-live-action-short-film-comedy",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Live Action Short Film, Comedy",
-    "normalizedName": "academy-award-for-best-live-action-short-film-comedy",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "oscars:academy-award-for-best-live-action-short-film-one-reel",
     "festivalId": "oscars",
     "name": "Academy Award for Best Live Action Short Film, One-Reel",
@@ -13545,109 +13464,10 @@
     "isHonoraryAward": false
   },
   {
-    "id": "oscars:academy-award-for-best-makeup-and-hairstyling",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Makeup and Hairstyling",
-    "normalizedName": "academy-award-for-best-makeup-and-hairstyling",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-original-dramatic-or-comedy-score",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Original Dramatic or Comedy Score",
-    "normalizedName": "academy-award-for-best-original-dramatic-or-comedy-score",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-original-dramatic-score",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Original Dramatic Score",
-    "normalizedName": "academy-award-for-best-original-dramatic-score",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-original-musical-or-comedy-score",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Original Musical or Comedy Score",
-    "normalizedName": "academy-award-for-best-original-musical-or-comedy-score",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-original-musical-score",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Original Musical Score",
-    "normalizedName": "academy-award-for-best-original-musical-score",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-original-score",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Original Score",
-    "normalizedName": "academy-award-for-best-original-score",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-original-score-no-musical",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Original Score, no Musical",
-    "normalizedName": "academy-award-for-best-original-score-no-musical",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-original-song",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Original Song",
-    "normalizedName": "academy-award-for-best-original-song",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-original-song-score",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Original Song Score",
-    "normalizedName": "academy-award-for-best-original-song-score",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "oscars:academy-award-for-best-picture",
     "festivalId": "oscars",
     "name": "Academy Award for Best Picture",
     "normalizedName": "academy-award-for-best-picture",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-production-design",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Production Design",
-    "normalizedName": "academy-award-for-best-production-design",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-score-adaptation-or-treatment",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Score, Adaptation or Treatment",
-    "normalizedName": "academy-award-for-best-score-adaptation-or-treatment",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -13671,28 +13491,10 @@
     "isHonoraryAward": false
   },
   {
-    "id": "oscars:academy-award-for-best-sound",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Sound",
-    "normalizedName": "academy-award-for-best-sound",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "oscars:academy-award-for-best-sound-editing",
     "festivalId": "oscars",
     "name": "Academy Award for Best Sound Editing",
     "normalizedName": "academy-award-for-best-sound-editing",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-special-effects",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Special Effects",
-    "normalizedName": "academy-award-for-best-special-effects",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -13707,82 +13509,10 @@
     "isHonoraryAward": false
   },
   {
-    "id": "oscars:academy-award-for-best-supporting-actor",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Supporting Actor",
-    "normalizedName": "academy-award-for-best-supporting-actor",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-supporting-actress",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Supporting Actress",
-    "normalizedName": "academy-award-for-best-supporting-actress",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-visual-effects",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Visual Effects",
-    "normalizedName": "academy-award-for-best-visual-effects",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-writing",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Writing",
-    "normalizedName": "academy-award-for-best-writing",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-writing-adapted-screenplay",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Writing, Adapted Screenplay",
-    "normalizedName": "academy-award-for-best-writing-adapted-screenplay",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-award-for-best-writing-original-screenplay",
-    "festivalId": "oscars",
-    "name": "Academy Award for Best Writing, Original Screenplay",
-    "normalizedName": "academy-award-for-best-writing-original-screenplay",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:academy-honorary-award",
-    "festivalId": "oscars",
-    "name": "Academy Honorary Award",
-    "normalizedName": "academy-honorary-award",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "oscars:best-picture",
     "festivalId": "oscars",
     "name": "Best Picture",
     "normalizedName": "best-picture",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "oscars:c-sar-award-for-best-foreign-film",
-    "festivalId": "oscars",
-    "name": "César Award for Best Foreign Film",
-    "normalizedName": "c-sar-award-for-best-foreign-film",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false

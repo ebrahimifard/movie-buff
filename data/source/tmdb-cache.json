@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-20T18:57:15.368Z",
+  "updatedAt": "2026-11-01T12:20:26.161Z",
   "byImdbId": {
     "tt21188986": {
       "title": "The Dreamed Adventure",
@@ -345095,6 +345095,265 @@
       ],
       "synopsis": "Ex-con turned private investigator Bradford Galt suspects someone is following him and maybe even trying to kill him. With the assistance of his spunky secretary, Kathleen Stewart, he dives deep into a mystery in search of answers.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/l3DNBjWxeZZAGrv2jCks5PyyZ22.jpg"
+    },
+    "tt36671467": {
+      "title": "Lili",
+      "releaseYear": 2024,
+      "imdbId": "tt36671467",
+      "runtimeMinutes": 0,
+      "countryCodes": [
+        "CN"
+      ],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": ""
+    },
+    "tt10673846": {
+      "title": "The Mafia Is No Longer What It Used to Be",
+      "releaseYear": 2021,
+      "imdbId": "tt10673846",
+      "runtimeMinutes": 111,
+      "countryCodes": [
+        "IT"
+      ],
+      "languages": [
+        "Italian"
+      ],
+      "genres": [
+        "Documentary"
+      ],
+      "synopsis": "Palermo, Sicily, Italy, 2017. Twenty-five years after the murders of anti-mafia judges Giovanni Falcone, on May 23, 1992, and Paolo Borsellino, on July 19, 1992; and on the occasion of the tributes held in memory of both heroes, skeptical photographer Letizia Battaglia, chronicler of their titanic combat, criticizes the opportunism of shady characters who, like businessman Ciccio Mira, profit from the commemoration of both tragedies.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/5MTBUSLpQFXuV0udVOTXE0aQeGx.jpg"
+    },
+    "tt0101765": {
+      "title": "The Double Life of Véronique",
+      "releaseYear": 1991,
+      "imdbId": "tt0101765",
+      "runtimeMinutes": 98,
+      "countryCodes": [
+        "NO",
+        "PL",
+        "FR"
+      ],
+      "languages": [
+        "French",
+        "Italian",
+        "Polish"
+      ],
+      "genres": [
+        "Drama",
+        "Fantasy"
+      ],
+      "synopsis": "Véronique is a beautiful young French woman who aspires to be a renowned singer; Weronika lives in Poland, has a similar career goal and looks identical to Véronique, though the two are not related. The film follows both women as they contend with the ups and downs of their individual lives, with Véronique embarking on an unusual romance with Alexandre Fabbri, a puppeteer who may be able to help her with her existential issues.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/oqRyO9xrNBRaxqF9pCHHgLuaATx.jpg"
+    },
+    "tt1320082": {
+      "title": "Le Concert",
+      "releaseYear": 2010,
+      "imdbId": "tt1320082",
+      "runtimeMinutes": 119,
+      "countryCodes": [
+        "BE",
+        "IT",
+        "FR",
+        "RU",
+        "RO"
+      ],
+      "languages": [
+        "Russian",
+        "Italian",
+        "French"
+      ],
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "synopsis": "A former world-famous conductor of the Bolshoï orchestra, known as \"The Maëstro\", Andreï Filipov had seen his career publicly broken by Leonid Brezhnev for hiring Jewish musicians and now works cleaning the concert hall where he once directed. One day, he intercepts an official invitation from the prestigious Théâtre du Châtelet. Through a series of mad antics, he reunites his old orchestra, now composed of old alcoholic musicians, and flies to perform in Paris and complete the Tchaikovsky concerto interrupted 30 years earlier. For the concerto, he engages a young violin soloist with whom he has an unexpected connection.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/nMIDVIq7p2mcvolG93FH4Ku3aYJ.jpg"
+    },
+    "tt1800302": {
+      "title": "Gold",
+      "releaseYear": 2017,
+      "imdbId": "tt1800302",
+      "runtimeMinutes": 120,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English",
+        "Indonesian"
+      ],
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Thriller"
+      ],
+      "synopsis": "Kenny Wells, a modern-day prospector, hustler, and dreamer, is desperate for a lucky break. Left with few options, Wells teams up with an equally luckless geologist to execute a grandiose, last-ditch effort: to find gold deep in the uncharted jungle of Indonesia.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ukMXAdr325Tn1mLGkxdG8Lab16l.jpg"
+    },
+    "tt0078131": {
+      "title": "A Question of Love",
+      "releaseYear": 1978,
+      "imdbId": "tt0078131",
+      "runtimeMinutes": 92,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Drama",
+        "TV Movie"
+      ],
+      "synopsis": "A lesbian mother fights to keep her son when a custody suit is brought by her ex-husband.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/i5bYOfmh8cfnuLCYCZc0j1DeFzc.jpg"
+    },
+    "tt0077473": {
+      "title": "A Dream of Passion",
+      "releaseYear": 1978,
+      "imdbId": "tt0077473",
+      "runtimeMinutes": 110,
+      "countryCodes": [
+        "GR"
+      ],
+      "languages": [
+        "English",
+        "German",
+        "Greek"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Maya is a jet-setting Greek actress who returns to her homeland to undertake the role of Medea. Searching for inspiration and clues as to how a mother could kill the children she loves, Maya discovers Brenda, a Bible-spouting American woman serving time in an Athens prison for that very crime.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/s4CO7odQ3cPg9pCDWxzToQH7kS8.jpg"
+    },
+    "tt0052722": {
+      "title": "Darby O'Gill and the Little People",
+      "releaseYear": 1959,
+      "imdbId": "tt0052722",
+      "runtimeMinutes": 91,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English",
+        "Irish"
+      ],
+      "genres": [
+        "Adventure",
+        "Family",
+        "Fantasy",
+        "Romance"
+      ],
+      "synopsis": "A wily old codger matches wits with the King of the Leprechauns and helps play matchmaker for his daughter and the strapping lad who has replaced him as caretaker.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/fvdCK9sIgbKHQJjpjhtF9Ev8ysj.jpg"
+    },
+    "tt0065772": {
+      "title": "Claire's Knee",
+      "releaseYear": 1970,
+      "imdbId": "tt0065772",
+      "runtimeMinutes": 105,
+      "countryCodes": [
+        "FR"
+      ],
+      "languages": [
+        "French"
+      ],
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "synopsis": "On the eve of his wedding, on holiday on the Lake Annecy shore, career diplomat Jérôme visits an old acquaintance, perhaps a former girlfriend. Through her, he meets an intense teenager, Laura, and then lusts after her sister, Claire. Whilst Laura attempts to flirt with him, Jérôme's fantasy becomes focused on wanting to caress Claire's knee.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/wekWNf0Nj6fkfR6pOjPojMAqz69.jpg"
+    },
+    "tt0093688": {
+      "title": "Out on a Limb",
+      "releaseYear": 1987,
+      "imdbId": "tt0093688",
+      "runtimeMinutes": 0,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": ""
+    },
+    "tt0053221": {
+      "title": "Rio Bravo",
+      "releaseYear": 1959,
+      "imdbId": "tt0053221",
+      "runtimeMinutes": 141,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "Spanish",
+        "English"
+      ],
+      "genres": [
+        "Western",
+        "Drama"
+      ],
+      "synopsis": "A small-town sheriff in the American West enlists the help of a disabled man, a drunk, and a young gunfighter in his efforts to hold in jail the brother of the local bad guy.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/4gI4KKmoi0d3yfsF71YU3S0I5t8.jpg"
+    },
+    "tt0049473": {
+      "title": "Man in Space",
+      "releaseYear": 1955,
+      "imdbId": "tt0049473",
+      "runtimeMinutes": 51,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Science Fiction",
+        "Documentary",
+        "TV Movie"
+      ],
+      "synopsis": "With a combination of documentary footage and animation, the science and history of rockets, and the effects of space travel on man are illustrated.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/5GfOdI67JiqgqVzF3nvQB9UfcwA.jpg"
+    },
+    "tt0050483": {
+      "title": "The Happy Road",
+      "releaseYear": 1957,
+      "imdbId": "tt0050483",
+      "runtimeMinutes": 100,
+      "countryCodes": [
+        "US",
+        "FR"
+      ],
+      "languages": [
+        "English",
+        "French"
+      ],
+      "genres": [
+        "Comedy"
+      ],
+      "synopsis": "Two children run away from a Swiss boarding school and set out for Paris, with their frantic parents in hot pursuit.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/9HWUrTPipLjQoeNRUdVV5G8QQaT.jpg"
+    },
+    "tt0046035": {
+      "title": "The Man from the Alamo",
+      "releaseYear": 1953,
+      "imdbId": "tt0046035",
+      "runtimeMinutes": 79,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Western"
+      ],
+      "synopsis": "During the war for Texas independence, one man leaves the Alamo before the end (chosen to help others' families) but is too late to accomplish his mission, and is branded a coward. Unable to expose a gang of turncoats, he infiltrates them instead.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/hfbzo1t4hCbK28aXeeGfGSv5aLB.jpg"
     }
   },
   "byTitleYear": {
@@ -688551,6 +688810,2356 @@
       ],
       "synopsis": "A Canadian officer, David Anson, who falls for French dancer Nicolette Bonnett during wartime, has a child with her, and returns heartbroken after her death from a weak heart, only for his wife to adopt the son, linking their lives across continents and tragedy, exploring themes of love, duty, and lost time.",
       "posterUrl": "https://image.tmdb.org/t/p/w500/8FsWpY1T14PlkIzXyDPT53paLfO.jpg"
+    },
+    "bafta|2026|solstice": {
+      "title": "Solstice",
+      "releaseYear": 2026,
+      "imdbId": "tt37275113",
+      "runtimeMinutes": 15,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "A man visits his aging mother at her Malibu estate to ask her to get checked for dementia, only to be met by a disturbing realization.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/onrCsAnS94ZL7RHJUiT2iqL6uvS.jpg"
+    },
+    "berlinale|2026|when i get home": {
+      "title": "When I Get Home",
+      "releaseYear": 2026,
+      "imdbId": "tt39371335",
+      "runtimeMinutes": 20,
+      "countryCodes": [
+        "MX"
+      ],
+      "languages": [
+        "Spanish"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A Guadalajara teen explores his identity between friendship and desire. During the local church festivities, this search puts his relationship with his grandmother at risk.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/7HN3UsphuywFLoxoTfbxS2gNxZb.jpg"
+    },
+    "berlinale|2026|mint": {
+      "title": "Mint",
+      "releaseYear": 2026,
+      "imdbId": "tt45500011",
+      "runtimeMinutes": 10,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [
+        "Romance",
+        "Comedy",
+        "Drama"
+      ],
+      "synopsis": "When a reserved Leah gets literally choked up in front of a cute stranger, she initiates conversation against her usual tendencies, resulting in her being invited to a party full of anticipation.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ekycdzWOuTOhn0RkXVEUfuXp66d.jpg"
+    },
+    "berlinale|2026|tomboy": {
+      "title": "Tomboy",
+      "releaseYear": 2026,
+      "imdbId": "tt0423387",
+      "runtimeMinutes": 26,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "Explores the pleasures and possibilities of being a tomboy through the personal experiences of four people who refuse to conform to traditional gender categories.",
+      "posterUrl": ""
+    },
+    "cannes|2026|the golden age": {
+      "title": "The Golden Age",
+      "releaseYear": 2026,
+      "imdbId": "tt42191881",
+      "runtimeMinutes": 112,
+      "countryCodes": [
+        "FR",
+        "IT"
+      ],
+      "languages": [
+        "French"
+      ],
+      "genres": [
+        "History",
+        "Drama"
+      ],
+      "synopsis": "Born at the turn of the century in a village's butcher shop, Jeanne Lavaur dreams of becoming a countess. Inspired by the fearless Céleste and guided by her love for Guillaume de Barante, Jeanne’s journey carries her from the vibrant Paris of the Golden Twenties through the turmoil of two world wars. As her life intertwines with the great upheavals of the 20th century, she rises as a fiercely free woman, determined to never let anyone else define who she is meant to be.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/sHy6hsrdvBH5wnLVjo6JyJhTgXQ.jpg"
+    },
+    "cannes|2026|laser cat": {
+      "title": "Laser-Cat",
+      "releaseYear": 2026,
+      "imdbId": "tt42006686",
+      "runtimeMinutes": 22,
+      "countryCodes": [],
+      "languages": [
+        "Portuguese"
+      ],
+      "genres": [
+        "Thriller",
+        "Comedy"
+      ],
+      "synopsis": "When a laser pointer prank goes wrong, an anxious teenager crosses São Paulo in a single night to save his crush’s severely injured cat, as guilt and paranoia drive him toward collapse.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/iD1kb7tPklwdatXDd9ZVmCAknT5.jpg"
+    },
+    "cannes|2026|viva carmen": {
+      "title": "Viva Carmen",
+      "releaseYear": 2026,
+      "imdbId": "tt29034109",
+      "runtimeMinutes": 91,
+      "countryCodes": [
+        "FI",
+        "FR",
+        "ES"
+      ],
+      "languages": [
+        "French"
+      ],
+      "genres": [
+        "Animation",
+        "Music",
+        "Drama",
+        "Adventure"
+      ],
+      "synopsis": "1845, Seville, a pulsating town of sailors and small-time crooks. Teenage Salvador, assistant to the gifted knife grinder Antonio, encounters a captivating young gypsy woman, Carmen. Her stunning beauty and independent spirit set the town abuzz, but Antonio's mystical ability to glimpse the future in sharpened blades foretells a tragic fate for Carmen at the hands of a soldier, José. With unwavering resolve, Salvador musters an eclectic band of misfit street kids, led by the spirited Belén, to challenge the unyielding threads of destiny and protect Carmen from inevitable doom.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/iQi9sswCkXsaY30eG3eMZj93hqC.jpg"
+    },
+    "cannes|2026|nothing happens after your absence": {
+      "title": "Nothing Happens After Your Absence",
+      "releaseYear": 2026,
+      "imdbId": "tt42823518",
+      "runtimeMinutes": 16,
+      "countryCodes": [
+        "SD"
+      ],
+      "languages": [
+        "Arabic"
+      ],
+      "genres": [],
+      "synopsis": "Ibrahim goes back to the village he once left, hoping to screen films. But as he wrestles with custom and bureaucracy, war ignites across Sudan, turning his search for a screen into a battle to stay alive.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/enGXmbeNJlgG1PMzy4vXFpGa9sH.jpg"
+    },
+    "cannes|2026|the dream is a snail": {
+      "title": "The Dream is a Snail",
+      "releaseYear": 2026,
+      "imdbId": "tt31156587",
+      "runtimeMinutes": 15,
+      "countryCodes": [
+        "VN"
+      ],
+      "languages": [
+        "Vietnamese"
+      ],
+      "genres": [
+        "Comedy"
+      ],
+      "synopsis": "A struggling young artist takes an odd job as a human racetrack in a senior rejuvenation workshop, only to develop an obsession with the hypnotic sensation of snails gliding across his skin.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/wGsS392nCNOjJNPBzaWj9Jl8MK6.jpg"
+    },
+    "venice|2026|joie de vivre": {
+      "title": "Joie de vivre",
+      "releaseYear": 2026,
+      "imdbId": "tt43704232",
+      "runtimeMinutes": 435,
+      "countryCodes": [
+        "IT"
+      ],
+      "languages": [
+        "Italian",
+        "English",
+        "French"
+      ],
+      "genres": [
+        "Documentary"
+      ],
+      "synopsis": "A tribute to legendary 20th-century filmmaker Bernardo Bertolucci, examining his cinema, art, and life.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/mnREgC1EASwQ8miggWwK4nZvDd2.jpg"
+    },
+    "venice|2026|sunset motel": {
+      "title": "Sunset Motel",
+      "releaseYear": 2026,
+      "imdbId": "tt43680869",
+      "runtimeMinutes": 20,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "Welcome to Sunset Motel. Your room isn't ready yet. Wait in the lobby or poolside until it's your turn. Pay no mind to the other guests—they're just passing through, like everyone else. They'll be gone soon enough.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/8y89lozFGac6uHl444WKxffi6nF.jpg"
+    },
+    "venice|2026|solwata": {
+      "title": "Solwata",
+      "releaseYear": 2026,
+      "imdbId": "tt43680849",
+      "runtimeMinutes": 25,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "Narrated by Mark Ruffalo, Solwata is a mixed reality installation exploring rising seas in the Solomon Islands due to climate change. Interacting with water and artifacts, audiences enter the vibrant world of the Solwata, or saltwater, people. Using 360° video, Gaussian splats, and 3D animations, participants join Martha, Francis, and Lawrence as they protect their homes and heritage amidst displacement and planned relocation to the mainland. Solwata transforms an abstract threat into a visceral experience of cultural resilience and the loss of home.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/agzcqzdgmwW9O41XWT3P8d3aYm0.jpg"
+    },
+    "venice|2026|eggshells": {
+      "title": "Eggshells",
+      "releaseYear": 2026,
+      "imdbId": "tt37230890",
+      "runtimeMinutes": 17,
+      "countryCodes": [
+        "CH"
+      ],
+      "languages": [
+        "English",
+        "French",
+        "German"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "On a young waitress’s birthday, the perplexing appearance of one of her deceased mother’s homemade cakes deeply troubles her. Over her shift that evening, surrounded by happy families in the little restaurant where she works, memories of her mother crowd in, and her attempts to repress her emotions grow ever more difficult.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/hU8lNBkXBrKmo4OiKB2T1d7Wut8.jpg"
+    },
+    "venice|2026|even if hell came": {
+      "title": "Even If Hell Came",
+      "releaseYear": 2026,
+      "imdbId": "tt38689714",
+      "runtimeMinutes": 90,
+      "countryCodes": [
+        "IT"
+      ],
+      "languages": [
+        "Italian"
+      ],
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "synopsis": "During the harsh winter of 1944, a young partisan survives an ambush in the Alps and holds out in a mountain hut, whilst encountering lives cut short and awaiting the end of the war.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/rkJj1IXyr82h93C1uy0Kf7gYEv3.jpg"
+    },
+    "venice|2025|marina": {
+      "title": "Marina",
+      "releaseYear": 2025,
+      "imdbId": "tt37672363",
+      "runtimeMinutes": 19,
+      "countryCodes": [
+        "IT"
+      ],
+      "languages": [
+        "Italian"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "One year after she started her gender transition, Marina spends a summer weekend at the house of her best friend, Camilla. Everyone tells Marina how beautiful she has become, but she doesn’t feel like that. Instead, she constantly compares her body to Camilla’s, that she observes and portrays on her notebook. The arrival at the house of an impetuous male presence, with Lorenzo and his friends, will put to hard test Marina, Camilla and the friendship between them.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/s2XgaUhhCm6GzsN2AV08YCvrvId.jpg"
+    },
+    "venice|2025|remains": {
+      "title": "Remains",
+      "releaseYear": 2025,
+      "imdbId": "tt44772912",
+      "runtimeMinutes": 14,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A man struggles to mourn his late partner after discovering secrets she kept from him.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/pE8nZZOSVmDLNZdLoRCkcK2ozcK.jpg"
+    },
+    "cannes|2024|my sunshine": {
+      "title": "My Sunshine",
+      "releaseYear": 2024,
+      "imdbId": "tt22694908",
+      "runtimeMinutes": 90,
+      "countryCodes": [
+        "FR",
+        "JP"
+      ],
+      "languages": [
+        "Japanese"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Two young skaters, polar opposites in personality, team up to train for an ice-dancing competition, their growing bond blurring the lines between partners and more as winter unfolds.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/qdBfHxQnaXifIatOpwX7IZvhsiK.jpg"
+    },
+    "locarno|2024|freak": {
+      "title": "Freak",
+      "releaseYear": 2024,
+      "imdbId": "tt38225449",
+      "runtimeMinutes": 0,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "2006, South Central LA. High school sophomore Angel faces a party predicament: freak dance with his crush or miss his chance?",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/6PekyFSp3UbH1ds8tSNHJ3PKCpt.jpg"
+    },
+    "venice|2024|your daughter": {
+      "title": "Your Daughter",
+      "releaseYear": 2024,
+      "imdbId": "tt33093442",
+      "runtimeMinutes": 0,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "An Egyptian filmmaker confronts her mother, a famous producer, about her emotional absence during childhood while preparing to become a mother herself.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/aY1GiqWrVWknzSXxOKDKuuFZoea.jpg"
+    },
+    "berlinale|2023|the waiting": {
+      "title": "The Waiting",
+      "releaseYear": 2023,
+      "imdbId": "tt26420692",
+      "runtimeMinutes": 15,
+      "countryCodes": [
+        "DE"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Animation",
+        "Documentary"
+      ],
+      "synopsis": "A biologist describes her research into various species of frogs in the rainforest of Central America and their mysterious disappearance as if it were a criminal case. Brilliantly animated drawings accompany her vivid scientific analysis.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/AuD2DRTP54EuSaLmMtVADoZ0FzL.jpg"
+    },
+    "berlinale|2023|mirror mirror": {
+      "title": "Mirror Mirror",
+      "releaseYear": 2023,
+      "imdbId": "tt32151907",
+      "runtimeMinutes": 25,
+      "countryCodes": [
+        "AU"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "synopsis": "A curator at a high-profile art gallery finds herself drawn to a young, polyamorous artist who introduces her to a lifestyle that reflects a part of herself she had once abandoned.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/d3GgxcoW4HxzLeFJ1qxfMYD3O9V.jpg"
+    },
+    "sundance|2023|rest stop": {
+      "title": "Rest Stop",
+      "releaseYear": 2023,
+      "imdbId": "tt22005940",
+      "runtimeMinutes": 12,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English",
+        "Swahili"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A young Ugandan-American girl gains a new understanding of her family and her place in the world as she travels with her mother and brother from New York to Oklahoma, in this richly textured drama by Crystal Kayiza.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/eT2ZuLMqrVmPqOOiUFMmLoH0u3U.jpg"
+    },
+    "sundance|2023|mami wata": {
+      "title": "Mami Wata",
+      "releaseYear": 2023,
+      "imdbId": "tt6315898",
+      "runtimeMinutes": 107,
+      "countryCodes": [
+        "FR",
+        "NG",
+        "GB"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "Thriller"
+      ],
+      "synopsis": "In the oceanside village of Iyi, the revered Mama Efe acts as an intermediary between the people and the all-powerful water deity Mami Wata. But when a young boy is lost to a virus, Efe’s devoted but rebellious daughter Zinwe and skeptical protégé Prisca warn Efe about unrest among the villagers. With the sudden arrival of a mysterious rebel deserter named Jasper, a conflict erupts, leading to a violent clash of ideologies and a crisis of faith for the people of Iyi.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/uiYCfBmoY7c5m19Jhtbjxu5l1Ed.jpg"
+    },
+    "bafta|2022|stuffed": {
+      "title": "Stuffed",
+      "releaseYear": 2022,
+      "imdbId": "tt13918214",
+      "runtimeMinutes": 19,
+      "countryCodes": [
+        "GB"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Music",
+        "Horror",
+        "Drama"
+      ],
+      "synopsis": "Stuffed is a short musical about a taxidermist who dreams of stuffing a human and the man she meets online, so afraid of aging he volunteers to be her specimen. An unexpected romantic spark between them complicates their plans.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/2SS350I8FoPcCloloNUhadpcL43.jpg"
+    },
+    "cannes|2022|nostalgia": {
+      "title": "Nostalgia",
+      "releaseYear": 2022,
+      "imdbId": "tt14034614",
+      "runtimeMinutes": 117,
+      "countryCodes": [
+        "FR",
+        "IT"
+      ],
+      "languages": [
+        "Arabic",
+        "Italian"
+      ],
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "synopsis": "Felice returns to his native Rione Sanità in Naples to look after his dying mother, having lived abroad for the last forty years. Here he discovers that his old friend Oreste has become a notorious crimeboss.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/t0xCqVcXlq1rPpsF6M4kzpzKypR.jpg"
+    },
+    "venice|2022|sapling": {
+      "title": "Sapling",
+      "releaseYear": 2022,
+      "imdbId": "tt28703467",
+      "runtimeMinutes": 0,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "A writing session quickly goes from creative to uncomfortable as a young writer is asked to participate in an uncomfortably edgy game of 'Truth Or Dare' by her mentor.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/2yYd8N96DE4TjVqhOiQHKbSKA9Q.jpg"
+    },
+    "venice|2022|fight back": {
+      "title": "Fight Back",
+      "releaseYear": 2022,
+      "imdbId": "tt38744608",
+      "runtimeMinutes": 0,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "synopsis": "It’s not the hit… it’s how you rise.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/r8fhskVde4FqpLSynbJsctKHXiy.jpg"
+    },
+    "bafta|2021|the present": {
+      "title": "The Present",
+      "releaseYear": 2021,
+      "imdbId": "tt35131348",
+      "runtimeMinutes": 9,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Time is the ultimate thief...",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/eIoUetYkPfRpfr7JE8Rpg2Xdho1.jpg"
+    },
+    "locarno|2021|creature": {
+      "title": "Creature",
+      "releaseYear": 2021,
+      "imdbId": "tt15027200",
+      "runtimeMinutes": 15,
+      "countryCodes": [
+        "AR",
+        "CH"
+      ],
+      "languages": [
+        "Spanish"
+      ],
+      "genres": [
+        "Horror",
+        "Drama",
+        "Romance"
+      ],
+      "synopsis": "In the depths of her mind, pain takes the form of a creature. A love relationship unleashes the obscurity within, to evoke in the real world, a world of shadows.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/8yAeJKtiWAZU9qc6evnfhP84xvT.jpg"
+    },
+    "locarno|2021|dick": {
+      "title": "Dick",
+      "releaseYear": 2021,
+      "imdbId": "tt27350027",
+      "runtimeMinutes": 34,
+      "countryCodes": [],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Fresh out of a bad relationship, Jen seeks her cousin Courtney's comfort and a much-needed girls' weekend outside the city; as it turns out, they have very different ideas about how to get over a breakup.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/laOtO5GMOviitQhf1WcgEL7PHyD.jpg"
+    },
+    "locarno|2021|strangers": {
+      "title": "Strangers",
+      "releaseYear": 2021,
+      "imdbId": "tt16978504",
+      "runtimeMinutes": 13,
+      "countryCodes": [],
+      "languages": [
+        "English"
+      ],
+      "genres": [],
+      "synopsis": "Back in his hometown for the first time since high school, Neal encounters his bully, Jackson, on a gay hookup app.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/q6QmcyQF4PLXC7r1s0S7ibtRCiK.jpg"
+    },
+    "locarno|2021|yaya e lennie the walking liberty": {
+      "title": "Yaya e Lennie – The Walking Liberty",
+      "releaseYear": 2021,
+      "imdbId": "tt10540146",
+      "runtimeMinutes": 99,
+      "countryCodes": [
+        "IT"
+      ],
+      "languages": [
+        "Italian"
+      ],
+      "genres": [
+        "Animation",
+        "Science Fiction",
+        "Adventure"
+      ],
+      "synopsis": "Immersed in the jungle, among relics of a \"forgotten future\", two kids, Yaya and Lennie, meander. The two live freely in their Eden until armed men, who carry with them an \"ancient\" concept of civilization, force them to leave their territory. It is the beginning of a journey in search of their place in a world that no longer belongs to man.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/hZP1oC1guPd1reEN2YUJYyERUE5.jpg"
+    },
+    "sundance|2021|one for the road": {
+      "title": "One for the Road",
+      "releaseYear": 2021,
+      "imdbId": "tt6849784",
+      "runtimeMinutes": 43,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Horror"
+      ],
+      "synopsis": "Gerard Lumley and his family are on their way to visit relatives in Maine. Lost on the back highways of New England, the Lumley's end up stranded on the outskirts of the abandoned town of Jerusalem's Lot where almost forty years early the town was overrun by vampires. Leaving his wife and daughter behind, Gerard Lumley goes for help and finds it from two unlikely hero...",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/iG9SDFAQv9t3fRSIHFFYceTEa8L.jpg"
+    },
+    "golden-globes|2020|les mis rables": {
+      "title": "Les Misérables",
+      "releaseYear": 2020,
+      "imdbId": "tt10199590",
+      "runtimeMinutes": 104,
+      "countryCodes": [
+        "FR"
+      ],
+      "languages": [
+        "French",
+        "Bambara"
+      ],
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "synopsis": "Stéphane has recently joined the Anti-Crime Squad in Montfermeil, in the suburbs of Paris, France, where Victor Hugo set his famed novel “Les Miserables”. Alongside his new colleagues Chris and Gwada – both experienced members of the team – he quickly discovers tensions running high between local gangs. When the trio finds themselves overrun during the course of an arrest, a drone captures the encounter, threatening to expose the reality of everyday life.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/2ZQV9rPFXF0iFfKbsAvVIweQ1yM.jpg"
+    },
+    "locarno|2020|listen": {
+      "title": "Listen",
+      "releaseYear": 2020,
+      "imdbId": "tt6627168",
+      "runtimeMinutes": 73,
+      "countryCodes": [
+        "PT",
+        "GB"
+      ],
+      "languages": [
+        "English",
+        "Portuguese"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "In the outskirts of London, Portuguese couple and parents of three, Bela and Jota, struggle to make ends meet. When a misunderstanding arises at school with their deaf daughter, the British social services grow concerned for the safety of their children. The film portrays the tireless battle of these immigrant parents against the law to keep their family together.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/AqWqVxAxLPEmV90URLjvMTviLsn.jpg"
+    },
+    "cannes|2019|the climb": {
+      "title": "The Climb",
+      "releaseYear": 2019,
+      "imdbId": "tt8637440",
+      "runtimeMinutes": 94,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English",
+        "French"
+      ],
+      "genres": [
+        "Comedy"
+      ],
+      "synopsis": "Kyle and Mike are best friends who share a close bond — until Mike sleeps with Kyle’s fiancée. A stormy but enduring relationship ensues between Kyle, with limitless patience, and Mike, who only lives his life by sowing discord in that of others, across many years of laughter, heartbreak, and rage.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/x6f60UzIXfkFNofg7GTzMygegFc.jpg"
+    },
+    "golden-globes|2019|girl": {
+      "title": "Girl",
+      "releaseYear": 2019,
+      "imdbId": "tt9392374",
+      "runtimeMinutes": 90,
+      "countryCodes": [
+        "CA",
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Thriller"
+      ],
+      "synopsis": "A young woman returns to her small hometown intent on killing her abusive father only to discover someone murdered him the day before. As the girl searches for answers, she uncovers a family legacy more dangerous than she'd imagined.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/xsi8n1TVWwCq5XmID3ia0lIfTUG.jpg"
+    },
+    "locarno|2019|echo": {
+      "title": "Echo",
+      "releaseYear": 2019,
+      "imdbId": "tt7078536",
+      "runtimeMinutes": 8,
+      "countryCodes": [
+        "RS"
+      ],
+      "languages": [
+        "Serbian"
+      ],
+      "genres": [
+        "Animation",
+        "Adventure"
+      ],
+      "synopsis": "A five-year-old boy spends a day with his father, whom he only occasionally sees, in nature, with the game of calling Echo. After a great emotional charge that the play and the presence of his father create in him, he returns to his mother's house, where there is no place for such outbursts of 'irrational' attitude towards the world.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/4WL8DHl9kVz9AqLiEtIijtp1GDD.jpg"
+    },
+    "locarno|2019|leave of absence": {
+      "title": "Leave of Absence",
+      "releaseYear": 2019,
+      "imdbId": "tt10477034",
+      "runtimeMinutes": 12,
+      "countryCodes": [
+        "RU"
+      ],
+      "languages": [
+        "Russian"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Artyom, a regular butchery worker, gets confused with his life circumstances. Suddenly he comes up with an unusual way out of his crisis.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/sytDvt2eixHIoRJUanCSBXeKadU.jpg"
+    },
+    "locarno|2019|lore": {
+      "title": "Lore",
+      "releaseYear": 2019,
+      "imdbId": "tt13468674",
+      "runtimeMinutes": 10,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [],
+      "synopsis": "Images of landscapes are cut and fragmented, as a hand guides their shape and construction. The voice tells a story about a not too distant past, and elements of nostalgia are assembled in terms of lore.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/flFcsxTOOuwm1jZAU2rsGFh0ocq.jpg"
+    },
+    "locarno|2018|chaos": {
+      "title": "Chaos",
+      "releaseYear": 2018,
+      "imdbId": "tt8828278",
+      "runtimeMinutes": 95,
+      "countryCodes": [
+        "QA",
+        "LB",
+        "AT",
+        "SY"
+      ],
+      "languages": [
+        "Arabic",
+        "German"
+      ],
+      "genres": [
+        "Documentary"
+      ],
+      "synopsis": "'Chaos' narrates the story of three women in three different cities. They have given up on life. One lives in Damascus. She has stopped speaking to others entirely, isolating herself in her flat. The other has left Damascus as a result of the war and went to Sweden, where she imprisons herself in her paintings, hoping through them to rid herself of the torments of the past. The third ended up in Vienna and faces an unknown future, like the ghost of a woman who fled Austria after the Second World War.  It is a discussion between a woman stuck in Damascus, a second stuck in exile, and a third who has recently left. It is a conversation between the interior and exterior – an impossible conversation.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/mv88LoVClvWlID9dwDKhfn7o9V3.jpg"
+    },
+    "bafta|2017|tough": {
+      "title": "Tough",
+      "releaseYear": 2017,
+      "imdbId": "tt5791324",
+      "runtimeMinutes": 5,
+      "countryCodes": [
+        "GB"
+      ],
+      "languages": [
+        "Mandarin",
+        "English"
+      ],
+      "genres": [
+        "Documentary",
+        "Animation"
+      ],
+      "synopsis": "Some things can only be understood with maturity. New light is shed on childhood cultural misunderstandings when a Chinese mother and her British born daughter speak as adults for the first time.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/5cdsmDkMxnNeBH1wDBvC1sPfPkc.jpg"
+    },
+    "cannes|2017|they": {
+      "title": "They",
+      "releaseYear": 2017,
+      "imdbId": "tt5873216",
+      "runtimeMinutes": 80,
+      "countryCodes": [
+        "QA",
+        "US"
+      ],
+      "languages": [
+        "English",
+        "Persian"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "J is in their early teens and lives in the countryside. J has been diagnosed with Gender Identity Disorder, goes by the selected pronoun “they”, and takes hormone blockers to suspend puberty. While J’s parents are away, their older sister and her Iranian boyfriend are assigned the duties of house-sitting and looking after J.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/qiRbYjz37VqNUOC9snh1l7aPuoO.jpg"
+    },
+    "tiff|2017|the burden": {
+      "title": "The Burden",
+      "releaseYear": 2017,
+      "imdbId": "tt6531506",
+      "runtimeMinutes": 15,
+      "countryCodes": [
+        "SE"
+      ],
+      "languages": [
+        "Swedish"
+      ],
+      "genres": [
+        "Music",
+        "Animation"
+      ],
+      "synopsis": "A shopping center along a large highway is the scene of an apocalyptic musical. Animation with a strong sense of form set to auto-tuned music by Klungan. About liberation through great catastrophy.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/2LBHrcsRms6Nm5VzxDnY7qaqoT7.jpg"
+    },
+    "venice|2017|by the pool": {
+      "title": "By the Pool",
+      "releaseYear": 2017,
+      "imdbId": "tt8294670",
+      "runtimeMinutes": 16,
+      "countryCodes": [
+        "LT"
+      ],
+      "languages": [
+        "Lithuanian"
+      ],
+      "genres": [],
+      "synopsis": "A group of teenagers rent a house with a sauna for a party. Everybody is having a good time: dancing, singing, drinking, talking. The party ends and everybody leaves, but in the morning the housekeepers come to clean the place and in the dressing room they find a girl who is trying to find the button of her ripped up trousers.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/mTvPcujEyQmMNpsv6Eire39vLEf.jpg"
+    },
+    "bafta|2016|elephant": {
+      "title": "Elephant",
+      "releaseYear": 2016,
+      "imdbId": "tt4464282",
+      "runtimeMinutes": 10,
+      "countryCodes": [
+        "GB"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [],
+      "synopsis": "Two people who are seemingly ‘just good friends’ spend the day together.",
+      "posterUrl": ""
+    },
+    "cannes|2016|time to die": {
+      "title": "Time to Die",
+      "releaseYear": 1966,
+      "imdbId": "tt0059803",
+      "runtimeMinutes": 90,
+      "countryCodes": [
+        "MX"
+      ],
+      "languages": [
+        "Spanish"
+      ],
+      "genres": [
+        "Drama",
+        "Western"
+      ],
+      "synopsis": "A man comes home after serving 18 years in jail for murder in this routine western. Although the man killed in self defense, rumors in town circulated that he murdered the victim in cold blood. The ex-con wants to get his life together, but the two sons of the slain man are gunning for the man who killed their father.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/vMkkTupKVhvULv4H9wolk4JqBl5.jpg"
+    },
+    "golden-globes|2016|the club": {
+      "title": "The Club",
+      "releaseYear": 2016,
+      "imdbId": "tt4375438",
+      "runtimeMinutes": 97,
+      "countryCodes": [
+        "CL"
+      ],
+      "languages": [
+        "Italian",
+        "Spanish"
+      ],
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "synopsis": "In a secluded house in a small seaside town live four unrelated men and the woman who tends to the house and their needs. All former priests, they have been sent to this quiet exile to purge the sins of their pasts, the separation from their communities the worst form of punishment by the Church. They keep to a strict daily schedule devoid of all temptation and spontaneity, each moment a deliberate effort to atone for their wrongdoings.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/cSLJxkNyKLnfNtyR16bzlHKBQW7.jpg"
+    },
+    "locarno|2016|the nest": {
+      "title": "The Nest",
+      "releaseYear": 2016,
+      "imdbId": "tt0018198",
+      "runtimeMinutes": 80,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "No Language"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A mother discovers her daughter Susan is marrying an insufferable social-climber. Already horrified by the idea, she also finds out her son Martin has gone into a life of crime. She decides to head to Paris to forget about her domestic troubles. She marries Richard Elliot, the executor of her late husband's estate.",
+      "posterUrl": ""
+    },
+    "locarno|2016|the intruder": {
+      "title": "The Intruder",
+      "releaseYear": 2016,
+      "imdbId": "tt39223546",
+      "runtimeMinutes": 0,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [],
+      "genres": [
+        "Thriller"
+      ],
+      "synopsis": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/kJcwDHGb3xN6IMp56r31FRz05BA.jpg"
+    },
+    "locarno|2016|non castus": {
+      "title": "NON CASTUS",
+      "releaseYear": 2016,
+      "imdbId": "tt5687484",
+      "runtimeMinutes": 22,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "An intimate relationship develops between a middle-aged mother and her young son, who share a room at the beach after being abandoned by her husband. In the confines of this small room, their relationship will change.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/7TJNKO3T4H9drMmuSviE2DF7dO5.jpg"
+    },
+    "venice|2016|good news": {
+      "title": "Good News",
+      "releaseYear": 2016,
+      "imdbId": "tt43721059",
+      "runtimeMinutes": 0,
+      "countryCodes": [
+        "IN"
+      ],
+      "languages": [
+        "Tamil"
+      ],
+      "genres": [
+        "Romance",
+        "Comedy",
+        "Family",
+        "Drama"
+      ],
+      "synopsis": "",
+      "posterUrl": ""
+    },
+    "cannes|2015|trap": {
+      "title": "Trap",
+      "releaseYear": 2015,
+      "imdbId": "tt5756806",
+      "runtimeMinutes": 107,
+      "countryCodes": [
+        "KR"
+      ],
+      "languages": [
+        "Korean"
+      ],
+      "genres": [
+        "Thriller",
+        "Drama"
+      ],
+      "synopsis": "Jeong-min, a scenario writer, was recently dumped by his girlfriend who left for another man. No matter how much he begs she never seems to return to him. To forget everything and concentrate on his scenario, Jeong-min stays in a small inn in a remote country town. There he meets an attractive teenage girl, Yoo-mi who lives with the mysterious landlord.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/9RcPQi0oMnmLbEaS54m7K6AvyNS.jpg"
+    },
+    "venice|2015|heaven can wait": {
+      "title": "Heaven Can Wait",
+      "releaseYear": 1943,
+      "imdbId": "tt0035979",
+      "runtimeMinutes": 112,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English",
+        "French"
+      ],
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Fantasy",
+        "Drama"
+      ],
+      "synopsis": "Spoiled playboy Henry van Cleve dies and arrives at the entrance to Hell, a final destination he is sure he deserves after living a life of profligacy. The devil, however, isn't so sure Henry meets Hell's standards. Convinced he is where he belongs, Henry recounts his life's deeds, both good and bad, including an act of indiscretion during his 25-year marriage to his wife, Martha, with the hope that \"His Excellency\" will arrive at the proper judgment.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/m4kM8PSYhUbZAsfmFu5WrSgGDUg.jpg"
+    },
+    "venice|2015|monkey": {
+      "title": "Monkey",
+      "releaseYear": 2015,
+      "imdbId": "tt4063572",
+      "runtimeMinutes": 30,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Science Fiction",
+        "Thriller"
+      ],
+      "synopsis": "Awarded best Colorado Short Film, at Intendence film Festival, it is the psychological - science fiction story about two men trapped in a mysterious bomb shelter, no idea of how they got in, and if they should get out. Their minds start to collapse as they start to see strange and mysterious hallucinations.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/2mnqmoPLdxJHOfNMrV8Xrxvmfea.jpg"
+    },
+    "sundance|2014|happiness": {
+      "title": "Happiness",
+      "releaseYear": 2014,
+      "imdbId": "tt3458776",
+      "runtimeMinutes": 80,
+      "countryCodes": [
+        "FI",
+        "FR",
+        "BT"
+      ],
+      "languages": [
+        "Dzongkha"
+      ],
+      "genres": [
+        "Documentary"
+      ],
+      "synopsis": "Peyangki is a dreamy and solitary eight-year-old monk living in Laya, a Bhutanese village perched high in the Himalayas. Soon the world will come to him: the village is about to be connected to electricity, and the first television will flicker on before Peyangki's eyes.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/jnNoa0XybNsGcmJ8KdWnFk6PXfv.jpg"
+    },
+    "bafta|2012|chalk": {
+      "title": "Chalk",
+      "releaseYear": 2012,
+      "imdbId": "tt33372907",
+      "runtimeMinutes": 8,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "It was year 2014, the destiny called out in chaos for the end of humanity. Fleeing crowds hovered the land as did the ships in sky, bombs took over the last lives and the only survival was to escape. Amidst the cries, she stood alone, a chalk in her hand and her parents looking down at her as they bid their last cold goodbyes. She was lonely in a chaos she couldn't understand, all she knew was to wait and count for a promise that was only a distracting lie.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/iuQOUj4fFjwihaeUqaoQZSrPa1H.jpg"
+    },
+    "sundance|2012|the invisible war": {
+      "title": "The Invisible War",
+      "releaseYear": 2012,
+      "imdbId": "tt2120152",
+      "runtimeMinutes": 93,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Documentary",
+        "War",
+        "Crime"
+      ],
+      "synopsis": "An investigative and powerfully emotional documentary about the epidemic of rape of soldiers within the US military, the institutions that perpetuate and cover up its existence, and its profound personal and social consequences.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ph9Lo3pMNmTXFQa9wZVdCKL2tRe.jpg"
+    },
+    "venice|2012|the ideal city": {
+      "title": "The Ideal City",
+      "releaseYear": 2012,
+      "imdbId": "tt2290918",
+      "runtimeMinutes": 105,
+      "countryCodes": [
+        "IT"
+      ],
+      "languages": [
+        "Italian"
+      ],
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "synopsis": "Actor turned director Luigi Lo Cascio stars as the talented architect and fervent environmentalist Michele who has moved from Palermo to his ideal city, Siena. He holds a successful job and is living out a dream experiment of functioning one year without running water or electricity. Not surprisingly, he also displays a passionate opposition to cars and driving. One evening, after being forced to borrow his boss’ car in order to collect a colleague for a work function, Michele’s life takes an unexpected turn.  In the blinding rain Michele hits something he cannot identify. After leaving a note on a parked car he believes he damaged, he continues down the road only to come across a dead body a few miles down which he later discovers belongs to one of Siena’s most important luminaries. Michele immediately calls the police, but in doing so, he unwittingly brings intense suspicion on himself as his uncertainty raises more questions than he has answers for.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/mIW8KQ4OXNjreZJpXQx44qz4y5U.jpg"
+    },
+    "cannes|2011|the assassin": {
+      "title": "The Assassin",
+      "releaseYear": 1961,
+      "imdbId": "tt28284319",
+      "runtimeMinutes": 13,
+      "countryCodes": [],
+      "languages": [
+        "Telugu"
+      ],
+      "genres": [
+        "Action",
+        "Thriller"
+      ],
+      "synopsis": "The most dangerous assassin in the world has fled from his own clan \"The Order of Assassins\". Will the Order be able to eliminate this man known as Death before he wreaks havoc in the real world ?",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/w5W2ZxN73GH6EFCz9xpBRRUjtqB.jpg"
+    },
+    "cannes|2011|no man s land": {
+      "title": "No Man's Land",
+      "releaseYear": 1931,
+      "imdbId": "tt38876276",
+      "runtimeMinutes": 0,
+      "countryCodes": [
+        "ES",
+        "GB"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "synopsis": "Magda is the enigmatic and resilient leader of an entirely female-led community she built in the wake of a devastating civil war. When her son returns from the front to this world without men, his arrival stirs a growing unease amongst the group. As the women’s hostility mounts and unimaginable violence begins to unfold, he comes to fear that the truth about what they’ve built — and what they’ve done to protect it — may cost him his life.",
+      "posterUrl": ""
+    },
+    "venice|2011|the bird": {
+      "title": "The Bird",
+      "releaseYear": 2011,
+      "imdbId": "tt1964853",
+      "runtimeMinutes": 93,
+      "countryCodes": [
+        "FR"
+      ],
+      "languages": [
+        "French"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Bordeaux. Anne has no friends, no children, no lovers; she is alone and seems disconnected from the world. She pretends to live, going through life and her encounters like a disembodied being, without passion. Something drives her to seek human contact, and something also holds her back. Recently, she has been hearing strange noises in the walls of her apartment. A bird appears...",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ngmvKQEiqsaLDOuQ1oqpFPwTst9.jpg"
+    },
+    "venice|2009|the marriage": {
+      "title": "The Marriage",
+      "releaseYear": 2009,
+      "imdbId": "tt3831210",
+      "runtimeMinutes": 74,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "synopsis": "After being fired from his job, Theo gets involved in a car accident. He is experiencing much stress due ti his upcoming wedding. On top of all that, an ex-girlfriend finds out about his wedding and tries to meet him, she is prepared to do anything to get him back.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/pcD9TcfL3P0mTsXdtpVN8Uzc3dl.jpg"
+    },
+    "locarno|2008|perfect day": {
+      "title": "Perfect Day",
+      "releaseYear": 2008,
+      "imdbId": "tt1360812",
+      "runtimeMinutes": 64,
+      "countryCodes": [
+        "FR"
+      ],
+      "languages": [
+        "French"
+      ],
+      "genres": [
+        "Documentary"
+      ],
+      "synopsis": "A recollection of almost 40 years of career. A giant image-jukebox, from early 70s autoportrait to films for Alain Bashung / Elli Medeiros, private karaokes to “video sculptures” applied to John Travolta or Maria Callas, and much much more…",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/qd1rer7PARhrTbN5vDubZIupxM8.jpg"
+    },
+    "locarno|2008|the birthday": {
+      "title": "The Birthday",
+      "releaseYear": 2008,
+      "imdbId": "tt2871132",
+      "runtimeMinutes": 12,
+      "countryCodes": [
+        "BF",
+        "KR"
+      ],
+      "languages": [
+        "French"
+      ],
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "synopsis": "The beautiful Awa, from a poor background, decides to marry for money rather than love and ends up with the much older Karim. While married, she continues to love the much younger Bouba. On the happy occasion of Awa’s birthday, a macabre plan is to be set in motion.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/djLJZVSmpe2uqWP1ftHhBVeEu7X.jpg"
+    },
+    "locarno|2008|racines": {
+      "title": "Racines",
+      "releaseYear": 2008,
+      "imdbId": "tt1436449",
+      "runtimeMinutes": 18,
+      "countryCodes": [
+        "CH"
+      ],
+      "languages": [
+        "Turkish"
+      ],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": ""
+    },
+    "locarno|2008|together": {
+      "title": "Together",
+      "releaseYear": 2008,
+      "imdbId": "tt29607418",
+      "runtimeMinutes": 11,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "Disillusioned by the concept of monogamy, Ben and Sophie arrange to have a threesome with a mysterious mutual acquaintance. In Ben's half-furnished Brooklyn apartment they wait impatiently for the third to arrive. However, as day turns to night, it becomes clear that this acquaintance of theirs may never show up.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/AbNQZ74B1RLV114gzelUvixPf3t.jpg"
+    },
+    "venice|2008|mine": {
+      "title": "Mine",
+      "releaseYear": 2008,
+      "imdbId": "tt43932598",
+      "runtimeMinutes": 0,
+      "countryCodes": [
+        "AU"
+      ],
+      "languages": [],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "MINE is a story about the devastating impact violence has on two young football players, their friends, families, club, and wider community. The film is about two young football players. Life-long friends Dom and Coby are young men on the verge of football stardom. Gifted boys with golden futures. But a simple decision changes it all. MINE focuses on providing a safe space to discuss the complexities of gender-based violence, exploring issues around sexual consent.",
+      "posterUrl": ""
+    },
+    "locarno|2007|i promessi sposi": {
+      "title": "I Promessi Sposi",
+      "releaseYear": 2007,
+      "imdbId": "tt4337186",
+      "runtimeMinutes": 71,
+      "countryCodes": [
+        "IT"
+      ],
+      "languages": [
+        "Italian"
+      ],
+      "genres": [
+        "Documentary"
+      ],
+      "synopsis": "In Italy, couples prepare for their imminent weddings. The bureaucratic State and the dogmatic Church oversee the nuptials. Municipal employees listen to couples' statements and intentions. A provincial priest delivers a matrimonial lesson: speaking of faith and science, spirituality, and sexuality.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/17m4SqVJAnc2crI6v6xu8cOBZTF.jpg"
+    },
+    "locarno|2007|l arm e des fourmis": {
+      "title": "L'Armée Des Fourmis",
+      "releaseYear": 2007,
+      "imdbId": "tt1754038",
+      "runtimeMinutes": 0,
+      "countryCodes": [],
+      "languages": [
+        "Arabic"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/769L66gKqfM526x6CskcXavUWPU.jpg"
+    },
+    "locarno|2007|outono": {
+      "title": "Outono",
+      "releaseYear": 2007,
+      "imdbId": "tt42576255",
+      "runtimeMinutes": 0,
+      "countryCodes": [
+        "ES",
+        "BE"
+      ],
+      "languages": [
+        "Galician"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "",
+      "posterUrl": ""
+    },
+    "locarno|2007|viril": {
+      "title": "Viril",
+      "releaseYear": 2007,
+      "imdbId": "tt5194728",
+      "runtimeMinutes": 9,
+      "countryCodes": [
+        "FR"
+      ],
+      "languages": [
+        "No Language"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Danced role-play for men, without words and without music. Here, the choreography says everything about male behaviour and mutual relationships. In e.g. dressing room and kitchen, seven men move between shame, modesty and the lust for power.",
+      "posterUrl": ""
+    },
+    "locarno|2007|twist": {
+      "title": "Twist",
+      "releaseYear": 2007,
+      "imdbId": "tt0922647",
+      "runtimeMinutes": 11,
+      "countryCodes": [
+        "FR",
+        "CH"
+      ],
+      "languages": [
+        "French"
+      ],
+      "genres": [],
+      "synopsis": "Four men dance in the set of a beach bar off season. This film puts in parallel an episode of Julius Caesar's Gallic Wars and a choreographed digest of the history of the Twist.",
+      "posterUrl": ""
+    },
+    "venice|2007|tony zoreil": {
+      "title": "Tony Zoreil",
+      "releaseYear": 2007,
+      "imdbId": "tt1095444",
+      "runtimeMinutes": 20,
+      "countryCodes": [
+        "FR"
+      ],
+      "languages": [
+        "French"
+      ],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": ""
+    },
+    "bafta|2006|everything": {
+      "title": "Everything",
+      "releaseYear": 2006,
+      "imdbId": "tt43986146",
+      "runtimeMinutes": 11,
+      "countryCodes": [],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Horror"
+      ],
+      "synopsis": "Lucas is a sophisticated, exciting, and wildly interesting person. As such, acquiring home decor to match such a \"spectacular\" personality is of the utmost importance. What could possibly go wrong?",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/uWJoCl92P4yjaM1UolXLZrzVwld.jpg"
+    },
+    "bafta|2006|kamiya s correspondence": {
+      "title": "Kamiya's Correspondence",
+      "releaseYear": 2006,
+      "imdbId": "tt0499509",
+      "runtimeMinutes": 7,
+      "countryCodes": [
+        "GB"
+      ],
+      "languages": [
+        "Japanese"
+      ],
+      "genres": [
+        "Animation"
+      ],
+      "synopsis": "A sensitive animated short depicting a daughter penning a letter to her deceased mother, detailing the day-to-day events and personalities of her life.",
+      "posterUrl": ""
+    },
+    "cannes|2006|dans le rang": {
+      "title": "Dans le rang",
+      "releaseYear": 2006,
+      "imdbId": "tt0814673",
+      "runtimeMinutes": 15,
+      "countryCodes": [
+        "FR"
+      ],
+      "languages": [
+        "French"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A story of a strange encounter between a young foreign apprentice and a cop.",
+      "posterUrl": ""
+    },
+    "locarno|2006|the new year": {
+      "title": "The New Year",
+      "releaseYear": 2006,
+      "imdbId": "tt42782683",
+      "runtimeMinutes": 11,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "Haunted by grief in the form of a sheet ghost, a depressed young man stumbles into a coffee shop and meets the old owner. Together, they reflect on change and find comfort in their new worlds.",
+      "posterUrl": ""
+    },
+    "locarno|2006|bir damla su": {
+      "title": "Bir Damla Su",
+      "releaseYear": 2006,
+      "imdbId": "tt0913358",
+      "runtimeMinutes": 19,
+      "countryCodes": [
+        "FR"
+      ],
+      "languages": [
+        "Turkish",
+        "French"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A woman disappears after a tumultuous evening with her father and boyfriend at a family party.",
+      "posterUrl": ""
+    },
+    "locarno|2006|once upon a time": {
+      "title": "Once Upon A Time",
+      "releaseYear": 2006,
+      "imdbId": "tt6486142",
+      "runtimeMinutes": 10,
+      "countryCodes": [
+        "BE"
+      ],
+      "languages": [
+        "German"
+      ],
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "synopsis": "When David decides to bring a laughter on the sorrowful face of a young girl he has just crossed in a park, he happily ignores the amount of obstacles it will take him to succeed eventually in his goal.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/w8L5BxgO3GZ2W1wCyMhqxXOZfTX.jpg"
+    },
+    "locarno|2006|untitled": {
+      "title": "Untitled",
+      "releaseYear": 2006,
+      "imdbId": "tt0493461",
+      "runtimeMinutes": 14,
+      "countryCodes": [
+        "NO"
+      ],
+      "languages": [
+        "Norwegian"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A poetic film about a cruel theme, told in a way that doesn't make the spectators close their eyes.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/wh7IiwRBiVbC0wVxQw3fclrD451.jpg"
+    },
+    "bafta|2005|heavy pockets": {
+      "title": "Heavy Pockets",
+      "releaseYear": 2005,
+      "imdbId": "tt0443029",
+      "runtimeMinutes": 6,
+      "countryCodes": [],
+      "languages": [
+        "Welsh"
+      ],
+      "genres": [
+        "Animation"
+      ],
+      "synopsis": "Awel Jones unexpectedly loses her gravity. At first she is embarrassed by her amazing gift and becomes isolated at school - until one day, she has to confront the bullies.",
+      "posterUrl": ""
+    },
+    "bafta|2005|knitting a love song": {
+      "title": "Knitting a Love Song",
+      "releaseYear": 2005,
+      "imdbId": "tt0443084",
+      "runtimeMinutes": 14,
+      "countryCodes": [
+        "GB"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Comedy"
+      ],
+      "synopsis": "A young girl tries to use her skills at knitting to ensnare her man!",
+      "posterUrl": ""
+    },
+    "cannes|2005|havana blues": {
+      "title": "Havana Blues",
+      "releaseYear": 2005,
+      "imdbId": "tt0441297",
+      "runtimeMinutes": 115,
+      "countryCodes": [
+        "FR",
+        "ES",
+        "CU"
+      ],
+      "languages": [
+        "Spanish"
+      ],
+      "genres": [
+        "Drama",
+        "Music"
+      ],
+      "synopsis": "When Spanish record producers express interest in Cuban musicians Ruy and Tito, the longtime friends are faced with the prospect of leaving their loved ones behind. After years of hoping and dreaming, they've finally earned the opportunity to bring their music to the rest of the world. But are the emotional trade-offs worth it in the end?",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/u3a2CBZmWgIMsDBh1scJ19PPKbB.jpg"
+    },
+    "locarno|2005|the passenger": {
+      "title": "The Passenger",
+      "releaseYear": 2005,
+      "imdbId": "tt0479259",
+      "runtimeMinutes": 88,
+      "countryCodes": [
+        "CA",
+        "FR",
+        "JP"
+      ],
+      "languages": [
+        "English",
+        "French",
+        "Japanese"
+      ],
+      "genres": [
+        "Drama",
+        "Crime",
+        "Thriller"
+      ],
+      "synopsis": "Yakuza Naoki Sando discovers his daughter Hiroko in bed with his adopted son Kohji. Three years later, Kohji is working the streets as a hustler, still yearning for a way to earn his estranged father's approval to continue his borderline incestuous relationship. Hiroko sees a way back to her brother's arms when Sando's shady colleague Marc Tanner absconds to Canada with gambling funds destined for the big boss. Presumably with her father's permission, she calls Kohji and tells him to hurry to Montréal, recover the money and kill Tanner.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/d0di84zzD6n2B3TrDkOGoWpbxrQ.jpg"
+    },
+    "locarno|2005|wall": {
+      "title": "Wall",
+      "releaseYear": 2005,
+      "imdbId": "tt6589468",
+      "runtimeMinutes": 16,
+      "countryCodes": [
+        "MY"
+      ],
+      "languages": [
+        "No Language"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Between a man and his lover lies a wall, between the man and the country he loves lies another wall. Can a one-sided dialouge breaks the walls and expresses the man’s feelings and sentiments? Or does the lover or the country wants the wall to be broken in the first place?  This short was inspired by Amy Len’s dance choreography “Wall” and colloborated with Loh Bok Lai. The dance was originally choreographed for a performance in Japan Dance Wave Fukuoka ‘06 - Asian Contemporary Dance Now and later made into an experimental video combining elements of an actor and monologue. The video footages were also used for the dance piece itself in KL.",
+      "posterUrl": ""
+    },
+    "locarno|2005|king lear": {
+      "title": "King Lear",
+      "releaseYear": 2005,
+      "imdbId": "tt3476548",
+      "runtimeMinutes": 232,
+      "countryCodes": [],
+      "languages": [
+        "English"
+      ],
+      "genres": [],
+      "synopsis": "King Lear is an in-depth study of love, power and death. Through this film Shakespeare is saying, \"Don't blame the gods or the heaven's for the horrors committed on earth. No. Blame hellish inhumanity on those who inhabit the earth.\"",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/33txXxO58X8rpidNeB0xS6GfKBv.jpg"
+    },
+    "sundance|2005|brothers": {
+      "title": "Brothers",
+      "releaseYear": 2005,
+      "imdbId": "tt29420763",
+      "runtimeMinutes": 12,
+      "countryCodes": [
+        "GB"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [],
+      "synopsis": "When two grandsons confront their grandfather with a life-altering dilemma, he must make a profound choice that will shape their futures.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/1Emk9n12KvKcCYL9yQ8lJeDUrb1.jpg"
+    },
+    "sundance|2005|wall": {
+      "title": "Wall",
+      "releaseYear": 2005,
+      "imdbId": "tt6589468",
+      "runtimeMinutes": 16,
+      "countryCodes": [
+        "MY"
+      ],
+      "languages": [
+        "No Language"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Between a man and his lover lies a wall, between the man and the country he loves lies another wall. Can a one-sided dialouge breaks the walls and expresses the man’s feelings and sentiments? Or does the lover or the country wants the wall to be broken in the first place?  This short was inspired by Amy Len’s dance choreography “Wall” and colloborated with Loh Bok Lai. The dance was originally choreographed for a performance in Japan Dance Wave Fukuoka ‘06 - Asian Contemporary Dance Now and later made into an experimental video combining elements of an actor and monologue. The video footages were also used for the dance piece itself in KL.",
+      "posterUrl": ""
+    },
+    "venice|2005|diaspora": {
+      "title": "Diaspora",
+      "releaseYear": 2005,
+      "imdbId": "tt48418549",
+      "runtimeMinutes": 0,
+      "countryCodes": [
+        "DE",
+        "TR"
+      ],
+      "languages": [
+        "German",
+        "Turkish",
+        "English"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Turkish widow Merve, rebuilding her life in Berlin with her young son, faces harassment from a teenage boy in the family employing her. When she reports it, they refuse to believe her and Merve must fight prejudice to prove her innocence.",
+      "posterUrl": ""
+    },
+    "berlinale|2004|little man": {
+      "title": "Little Man",
+      "releaseYear": 2004,
+      "imdbId": "tt0436516",
+      "runtimeMinutes": 15,
+      "countryCodes": [
+        "AU"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A young boy fighting for his mother's love.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/yZWaC2L6RukZJLp6YYJhWhtBWew.jpg"
+    },
+    "locarno|2004|l o": {
+      "title": "Léo",
+      "releaseYear": 2004,
+      "imdbId": "tt0424233",
+      "runtimeMinutes": 0,
+      "countryCodes": [
+        "CA"
+      ],
+      "languages": [
+        "No Language"
+      ],
+      "genres": [],
+      "synopsis": "Ever since his mother died, twelve-year-old Léo has lived alone with his father and his dog in a tumbledown little house in the middle of nowhere…a sad, isolated spot. Starting today, Léo will never be the same.",
+      "posterUrl": ""
+    },
+    "locarno|2004|burn": {
+      "title": "Burn!",
+      "releaseYear": 2004,
+      "imdbId": "tt2091249",
+      "runtimeMinutes": 5,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "A self-contained high-energy short film, about four young skateboarders and the fuel that feeds their drive to \"chase it, feed it and make it stronger\".",
+      "posterUrl": ""
+    },
+    "locarno|2004|border": {
+      "title": "Border",
+      "releaseYear": 2004,
+      "imdbId": "tt37246068",
+      "runtimeMinutes": 0,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "When a woman wakes in the early morning, she is haunted by a mysterious presence.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/iYrxYdwvPx7t7XRTRQkTcpa9q20.jpg"
+    },
+    "sundance|2004|strangers": {
+      "title": "Strangers",
+      "releaseYear": 2004,
+      "imdbId": "tt32249870",
+      "runtimeMinutes": 11,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "Two dead bodies in a morgue. The younger woman's corpse recounts the events leading to her death. Her memories only linger on her ex-girlfriend Miranda.",
+      "posterUrl": ""
+    },
+    "venice|2004|streets": {
+      "title": "Streets",
+      "releaseYear": 2004,
+      "imdbId": "tt12077130",
+      "runtimeMinutes": 0,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "synopsis": "An East LA street racing crew are thrust into a dangerous, high-stakes hunt across Southern California, where every turn presents a new clue and a potential disaster.",
+      "posterUrl": ""
+    },
+    "bafta|2003|wedding espresso": {
+      "title": "Wedding Espresso",
+      "releaseYear": 2003,
+      "imdbId": "tt0396935",
+      "runtimeMinutes": 6,
+      "countryCodes": [
+        "GB"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Drama",
+        "Animation"
+      ],
+      "synopsis": "A caffine fuelled woman dreams about her wedding.",
+      "posterUrl": ""
+    },
+    "bafta|2003|sap": {
+      "title": "Sap",
+      "releaseYear": 2003,
+      "imdbId": "tt0376157",
+      "runtimeMinutes": 8,
+      "countryCodes": [
+        "GB"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Animation"
+      ],
+      "synopsis": "Two travelling monks meet and part on more than one occasion.",
+      "posterUrl": ""
+    },
+    "locarno|2003|big shoes to fill": {
+      "title": "Big Shoes To Fill",
+      "releaseYear": 2003,
+      "imdbId": "tt46000528",
+      "runtimeMinutes": 8,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [
+        "Comedy"
+      ],
+      "synopsis": "Recently divorced Franklin arrives empty-handed at his daughter's birthday, only to watch Tango the Clown steal the spotlight. As jealousy consumes him, Franklin's insecurity erupts into violence.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/uhvx6qzZf3ltSfJoWzR4lJKycCA.jpg"
+    },
+    "locarno|2003|oscar": {
+      "title": "Oscar",
+      "releaseYear": 2003,
+      "imdbId": "tt2718514",
+      "runtimeMinutes": 0,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "An Austrian Jewish teenager exiled with his family to a village in the Vicentine Alps wins over the locals, and even the podestà’s sons, by sharing his forbidden love of jazz and joining the town band. After the German occupation following September 8, they flee with the community’s help, linking up with partisans who guide them safely across the Swiss border. Loosely based on jazzman Oscar Klein’s 1944 escape.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/bSTVgKqZMsuv8j9d6V53yX2sb1m.jpg"
+    },
+    "sundance|2003|the planets": {
+      "title": "The Planets",
+      "releaseYear": 2003,
+      "imdbId": "tt33478526",
+      "runtimeMinutes": 10,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "A young girl tells the story of her neighbors, a family with a father who believed the planets were disappearing. His fear grew worse, their house got stranger, and in the end, they all died.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/cNSKxM9kzYuHkx8UDTtagpupsqZ.jpg"
+    },
+    "bafta|2002|inferno": {
+      "title": "Inferno",
+      "releaseYear": 2002,
+      "imdbId": "tt0308407",
+      "runtimeMinutes": 28,
+      "countryCodes": [
+        "GB"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Science Fiction"
+      ],
+      "synopsis": "Set inside a \"Quake\" like video game, one of the game's cannon-fodder grunts falls for the Lara Croft-inspired heroine and, in a constantly looping game level, tries time and again to catch her attention before she can \"chain gun\" him.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/ynbaLjWbAjRSkaCzKWvUAPNrdoi.jpg"
+    },
+    "bafta|2002|the red peppers": {
+      "title": "The Red Peppers",
+      "releaseYear": 2002,
+      "imdbId": "tt0308801",
+      "runtimeMinutes": 17,
+      "countryCodes": [
+        "GB"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Set in 1936 during the dying days of music hall, \"The Red Peppers' is the poignant story of George and Lily Pepper, a husband and wife comedy double act whose failing marriage is all but over. When a backstage row develops one night it unearths painful truths, which prove to have disastrous consequences",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/83ttNCfCkrSm3OJ1HHZXYKaUs8O.jpg"
+    },
+    "cannes|2001|true love waits": {
+      "title": "True Love Waits",
+      "releaseYear": 2001,
+      "imdbId": "tt0244246",
+      "runtimeMinutes": 34,
+      "countryCodes": [
+        "FI"
+      ],
+      "languages": [
+        "Finnish"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "For the past years, 62-year-old Helmi has been taking care of her demanding mother. When her mother dies, she is suddenly able to do a lot of things she has not been able to do for a very long time and she is courted by the much younger leader of her church choir.",
+      "posterUrl": ""
+    },
+    "locarno|2001|arthur": {
+      "title": "Arthur",
+      "releaseYear": 2001,
+      "imdbId": "tt0175451",
+      "runtimeMinutes": 4,
+      "countryCodes": [
+        "BE"
+      ],
+      "languages": [
+        "No Language"
+      ],
+      "genres": [
+        "Animation",
+        "Music",
+        "Comedy"
+      ],
+      "synopsis": "Clay animation film by Guionne Leroy, based on the music of Henry Purcell's opera \"King Arthur\"",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/AumnOaU6vlofr5o64UJdrEderz0.jpg"
+    },
+    "locarno|2001|echo": {
+      "title": "Echo",
+      "releaseYear": 2001,
+      "imdbId": "tt3078528",
+      "runtimeMinutes": 0,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Thriller",
+        "Science Fiction"
+      ],
+      "synopsis": "A C.I.A. Drone coordinator battles his psychological health while trying to decipher if his wife has been replaced.",
+      "posterUrl": ""
+    },
+    "bafta|2000|perdie": {
+      "title": "Perdie",
+      "releaseYear": 2000,
+      "imdbId": "tt0247614",
+      "runtimeMinutes": 9,
+      "countryCodes": [
+        "GB"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A teenager struggles to  come to terms with the death of her mother.",
+      "posterUrl": ""
+    },
+    "venice|1998|liv": {
+      "title": "Liv",
+      "releaseYear": 1998,
+      "imdbId": "tt6074096",
+      "runtimeMinutes": 10,
+      "countryCodes": [],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Drama",
+        "Fantasy"
+      ],
+      "synopsis": "In a nightclub, a confident young woman encounters a stranger who awakens memories of occult traumas. When her night turns into a nightmare, she has a choice: run away from her past or finally confront him.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/dDSua90ZhMmGGGGuTnQcHB1hIvy.jpg"
+    },
+    "sundance|1997|hurricane": {
+      "title": "Hurricane",
+      "releaseYear": 1997,
+      "imdbId": "tt13309690",
+      "runtimeMinutes": 19,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "Young Ari struggles to cope with the absence of her mother, leading to a friendship with a neighbor who is grieving.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/wMyC8vCTfUnAFXhduehEHuhU6bC.jpg"
+    },
+    "locarno|1996|grandir": {
+      "title": "Grandir",
+      "releaseYear": 1996,
+      "imdbId": "tt48918932",
+      "runtimeMinutes": 0,
+      "countryCodes": [],
+      "languages": [
+        "French"
+      ],
+      "genres": [
+        "Documentary"
+      ],
+      "synopsis": "",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/b8a77Sh6lIpaN7SW7HrsHT4jbYP.jpg"
+    },
+    "bafta|1995|lost mojave": {
+      "title": "Lost Mojave",
+      "releaseYear": 1995,
+      "imdbId": "tt0206102",
+      "runtimeMinutes": 0,
+      "countryCodes": [
+        "GB"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [],
+      "synopsis": "A BAFTA award nominated short feature.",
+      "posterUrl": ""
+    },
+    "sundance|1995|angela": {
+      "title": "Angela",
+      "releaseYear": 1995,
+      "imdbId": "tt0112364",
+      "runtimeMinutes": 102,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A ten year old girl named Angela leads her six year old sister, Ellie, through various regimens of 'purification' in an attempt to rid themselves of their evil, which she believes to be the cause of their mother's mental illness. Precocious, to say the least, Angela has visions of Lucifer coming to take her and her sister away, and one of her remedies for this is for them to remain within a circle of their dolls and toys until they see a vision of the virgin Mary come to them. But such thinking can only lead to an ending befitting of her own mental state.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/fhxU3jFzC2tlBgqFhB7NqO4qAFe.jpg"
+    },
+    "venice|1995|ecce homo": {
+      "title": "Ecce Homo",
+      "releaseYear": 1995,
+      "imdbId": "tt6578052",
+      "runtimeMinutes": 0,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "",
+      "posterUrl": ""
+    },
+    "bafta|1994|a small deposit": {
+      "title": "A Small Deposit",
+      "releaseYear": 1994,
+      "imdbId": "tt0206306",
+      "runtimeMinutes": 0,
+      "countryCodes": [
+        "GB"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A tenement community swindle a door-to-door salesman who offers exorbitant credit on the hire purchase of luxury items.",
+      "posterUrl": ""
+    },
+    "cannes|1994|wet": {
+      "title": "Wet",
+      "releaseYear": 1994,
+      "imdbId": "tt48298690",
+      "runtimeMinutes": 0,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Plot TBA. Described to be set on a superyacht and \"in the vein of Succession and Triangle of Sadness\".",
+      "posterUrl": ""
+    },
+    "locarno|1994|the cage": {
+      "title": "The Cage",
+      "releaseYear": 1994,
+      "imdbId": "tt39365261",
+      "runtimeMinutes": 0,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "synopsis": "Plot details are under wraps, though sources say it's a cop film.",
+      "posterUrl": ""
+    },
+    "locarno|1994|aria": {
+      "title": "Aria",
+      "releaseYear": 1994,
+      "imdbId": "tt36294742",
+      "runtimeMinutes": 0,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Horror",
+        "Drama"
+      ],
+      "synopsis": "A grieving woman enters a dance studio, drawn to an elderly instructor with secrets of his own. Their fragile connection takes a sinister turn as her quiet obsession unravels-along with his past.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/mVcHutz4m1WMDVqDg53giipW8LG.jpg"
+    },
+    "locarno|1994|regarde moi": {
+      "title": "Regarde-Moi",
+      "releaseYear": 1994,
+      "imdbId": "tt0379468",
+      "runtimeMinutes": 7,
+      "countryCodes": [
+        "FR"
+      ],
+      "languages": [
+        "French"
+      ],
+      "genres": [],
+      "synopsis": "This atmospheric mini-seduction drama follows two beautiful French women who meet at a sidewalk café. What are they going to do together in that cheap Parisian hotel room?",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/o1xaHr9ZETSakkLqxtuPEYocsIf.jpg"
+    },
+    "sundance|1994|fun": {
+      "title": "Fun",
+      "releaseYear": 1994,
+      "imdbId": "tt0109855",
+      "runtimeMinutes": 105,
+      "countryCodes": [
+        "CA"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Romance"
+      ],
+      "synopsis": "Hillary and Bonnie meet one morning by the side of the road. They become fast friends, share their secrets, and, on a rising wave of frenzy, later that afternoon, murder an old woman. They did it, they say later, for fun.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/aUjxc8vFItbrBLPgYh0NPNOfCfv.jpg"
+    },
+    "bafta|1992|touch": {
+      "title": "Touch",
+      "releaseYear": 1992,
+      "imdbId": "tt0206353",
+      "runtimeMinutes": 6,
+      "countryCodes": [
+        "GB"
+      ],
+      "languages": [
+        "No Language"
+      ],
+      "genres": [
+        "Animation"
+      ],
+      "synopsis": "Made when the director was at the Royal College of Art, an animated film illustrating that life is made up of a succession of meeting and partings.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/gtnx2jch27YuUzwza7dfIzqRtyE.jpg"
+    },
+    "cannes|1992|and life goes on": {
+      "title": "And Life Goes On",
+      "releaseYear": 1992,
+      "imdbId": "tt0105888",
+      "runtimeMinutes": 95,
+      "countryCodes": [
+        "IR"
+      ],
+      "languages": [
+        "Persian"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "After the earthquake of Guilan, a film director and his son travel to the devastated area to search for the actors from the movie the director made there a few years previously. In their search, they see how people who have lost everything in the earthquake still have hope and try to live life to the fullest.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/gACM5Mdj4EDXppy5WcVt1DINGnp.jpg"
+    },
+    "berlinale|1991|lovers": {
+      "title": "Lovers",
+      "releaseYear": 1991,
+      "imdbId": "tt37532886",
+      "runtimeMinutes": 6,
+      "countryCodes": [],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "synopsis": "A couple goes to therapy in order to save their stagnate relationship.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/A4WOHYSCCnyhAybXieCqrlileJR.jpg"
+    },
+    "bafta|1988|little shop of horrors": {
+      "title": "Little Shop of Horrors",
+      "releaseYear": 1988,
+      "imdbId": "tt29763408",
+      "runtimeMinutes": 96,
+      "countryCodes": [
+        "JP"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Music",
+        "Comedy",
+        "Horror",
+        "TV Movie"
+      ],
+      "synopsis": "The 1987 Japan English Touring cast of Little Shop of Horrors, filmed at Theatre Apple (シアターアプル) in Tokyo during its October 1 - October 28, 1987 run at the theater. The meek floral assistant Seymour Krelborn stumbles across a new breed of plant he names \"Audrey II\" - after his coworker crush. This foul-mouthed, R&B-singing carnivore promises unending fame and fortune to the down and out Krelborn as long as he keeps feeding it, BLOOD.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/eip2OjcxYpStWxmp3HoEjqlOlAD.jpg"
+    },
+    "golden-globes|1988|house of games": {
+      "title": "House of Games",
+      "releaseYear": 1988,
+      "imdbId": "tt0093223",
+      "runtimeMinutes": 102,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Crime",
+        "Thriller",
+        "Drama"
+      ],
+      "synopsis": "A psychiatrist comes to the aid of a compulsive gambler and is led by a smooth-talking grifter into the shadowy but compelling world of stings, scams, and con men.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/4i27Ut4cIoLbcNpW7aeuUQErEPE.jpg"
+    },
+    "locarno|1988|till": {
+      "title": "Till",
+      "releaseYear": 1988,
+      "imdbId": "tt0219356",
+      "runtimeMinutes": 87,
+      "countryCodes": [
+        "CH"
+      ],
+      "languages": [],
+      "genres": [],
+      "synopsis": "Suddenly he is standing there: Till, 18 months old and 2 ft. 5 in. tall. He looks up at Philipp, full of wonder. Philipp returns the look, because from now on and without preparation he has to take care of his son. His first reaction is to get rid of the child. There must be a kind soul in the park, or UNICEF or even a few nuns who would „do the needful“.",
+      "posterUrl": ""
+    },
+    "cannes|1987|sofia": {
+      "title": "Sofia",
+      "releaseYear": 1987,
+      "imdbId": "tt28116320",
+      "runtimeMinutes": 76,
+      "countryCodes": [],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "Trapped in a cycle of crime and homelessness, Sofia longs for a better life. When faced with a life-altering decision, she must find the strength to break free and protect the friend who needs her most.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/l3hsLKJ6faE78KB5Ju8yY2auHzq.jpg"
+    },
+    "golden-globes|1986|cocoon": {
+      "title": "Cocoon",
+      "releaseYear": 1986,
+      "imdbId": "tt0088933",
+      "runtimeMinutes": 117,
+      "countryCodes": [
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Comedy",
+        "Science Fiction",
+        "Mystery",
+        "Drama"
+      ],
+      "synopsis": "When a group of trespassing seniors swim in a pool containing alien cocoons, they find themselves energized with youthful vigor.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/1rMrT8GW90as9kd4oVGhYQgGCLM.jpg"
+    },
+    "venice|1986|the american way": {
+      "title": "The American Way",
+      "releaseYear": 1986,
+      "imdbId": "tt0091853",
+      "runtimeMinutes": 92,
+      "countryCodes": [
+        "GB",
+        "US"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Comedy"
+      ],
+      "synopsis": "A group of Vietnam vets disturbs television programs from a B-29 airplane. They want to sabotage Mrs Westinghouse's political campaign who is running for the Senate in support of US military involvement in South America. Mrs Westinghouse orders some nuclear missiles to be launched against the saboteurs, but they manage to avoid the impact and even succeed in exposing a big secret of hers.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/d4aeTP6iCh3pgQHL8LbTXoOg2kR.jpg"
+    },
+    "cannes|1982|meow": {
+      "title": "Meow",
+      "releaseYear": 1982,
+      "imdbId": "tt0263735",
+      "runtimeMinutes": 8,
+      "countryCodes": [
+        "BR"
+      ],
+      "languages": [
+        "No Language"
+      ],
+      "genres": [
+        "Animation"
+      ],
+      "synopsis": "A stray cat runs out of milk and suffers effects after being persuaded to take a certain soft drink, making it an unlikely victim of globalization.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/cnfsNTLpr4DI62lO6y8gj6z7Ycv.jpg"
+    },
+    "cannes|1982|elsa": {
+      "title": "Elsa",
+      "releaseYear": 1982,
+      "imdbId": "tt0263312",
+      "runtimeMinutes": 5,
+      "countryCodes": [
+        "FI"
+      ],
+      "languages": [
+        "Finnish"
+      ],
+      "genres": [
+        "Comedy"
+      ],
+      "synopsis": "A short satire that parodies a passionate and fashionable return to nature, a green self-sufficient life.",
+      "posterUrl": ""
+    },
+    "bafta|1975|the exorcist": {
+      "title": "The Exorcist",
+      "releaseYear": 1975,
+      "imdbId": "tt0072148",
+      "runtimeMinutes": 100,
+      "countryCodes": [
+        "TR"
+      ],
+      "languages": [
+        "Turkish"
+      ],
+      "genres": [
+        "Horror"
+      ],
+      "synopsis": "12 year-old Gul becomes possessed by Satan after experimenting with a Ouija board. A troubled psychiatrist and an experienced exorcist become the girl’s only hope for salvation.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/paZggGOsYzPt8CzdqXUKmZqAC5G.jpg"
+    },
+    "bafta|1974|roma": {
+      "title": "Roma",
+      "releaseYear": 1974,
+      "imdbId": "tt32992563",
+      "runtimeMinutes": 22,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "Roma Gutman (16), is an immigrant from Ukraine, following the war there. While his father dreams of returning to their home country, Roma will do anything in order to fit in his new home.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/m9bWA7a4cTrBBXF9cE4hERVYxz3.jpg"
+    },
+    "cannes|1974|once": {
+      "title": "Once",
+      "releaseYear": 1974,
+      "imdbId": "tt43622972",
+      "runtimeMinutes": 0,
+      "countryCodes": [
+        "CL"
+      ],
+      "languages": [
+        "Spanish"
+      ],
+      "genres": [
+        "Thriller"
+      ],
+      "synopsis": "Through eleven intertwined stories, “Once” follows the 18 consecutive hours following the military coup, ending in the bombing of the official government headquarters, La Moneda Palace, and the demise of then president Salvador Allende.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/qXXlt6dPgQguJAriux6LBk7XgQX.jpg"
+    },
+    "berlinale|1971|the first day": {
+      "title": "The First Day",
+      "releaseYear": 1971,
+      "imdbId": "tt39123381",
+      "runtimeMinutes": 0,
+      "countryCodes": [
+        "ES"
+      ],
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "synopsis": "A normal Saturday becomes a nightmare when an unknown outbreak reaches a family in a quiet suburban neighborhood.",
+      "posterUrl": ""
+    },
+    "cannes|1970|the siege": {
+      "title": "The Siege",
+      "releaseYear": 1970,
+      "imdbId": "tt0065429",
+      "runtimeMinutes": 90,
+      "countryCodes": [
+        "RO"
+      ],
+      "languages": [
+        "Moldavian"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A communist prefect saves the day, saves the night, saves the building and the people. A communist prefect saves the day, saves the night, saves the building and the people.",
+      "posterUrl": ""
+    },
+    "venice|1963|nothing ever happens": {
+      "title": "Nothing Ever Happens",
+      "releaseYear": 1963,
+      "imdbId": "tt0057370",
+      "runtimeMinutes": 97,
+      "countryCodes": [
+        "FR",
+        "ES"
+      ],
+      "languages": [
+        "French",
+        "Spanish"
+      ],
+      "genres": [
+        "Drama"
+      ],
+      "synopsis": "A French vedette is forced to leave her touring company behind after she suffers a medical emergency in a village near Burgos, Spain. Her arrival causes a commotion amongst the small-minded inhabitants, most notably her doctor and his wife.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/aKTYkKQgdSS2JkcEHqn38phQETR.jpg"
+    },
+    "venice|1961|the promise": {
+      "title": "The Promise",
+      "releaseYear": 1961,
+      "imdbId": "tt5609150",
+      "runtimeMinutes": 74,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [],
+      "synopsis": "A century ago Rogljevo was incredibly prosperous for a remote village in far eastern corners of Serbia. The wines of Rogljevo were to be found at exhibitions in Bordeaux and Paris. But today this region is poor and deserted. Suddenly a French family moved in to grow grapes and produce wine. They believe they have discovered a promised land, one of the top five wine regions in Europe. Their arrival sparked high hopes with some villagers - and great resistance and mistrust with others. Can Rogljevo yet again live out of its wine?",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/bK5qFK2cjtowUkHzcS8SxKxuZGe.jpg"
+    },
+    "cannes|1959|a midsummer night s dream": {
+      "title": "A Midsummer Night's Dream",
+      "releaseYear": 1959,
+      "imdbId": "tt0051929",
+      "runtimeMinutes": 105,
+      "countryCodes": [
+        "GB"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "TV Movie"
+      ],
+      "synopsis": "Mistaken identity, unrequited love, and the supernatural are combined in Shakespeare's classic set in the woods of Greece on a moonlit night.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/cwIO2PoWD8DfrNgtPXcIVVIrHgv.jpg"
+    },
+    "venice|1959|a midsummer night s dream": {
+      "title": "A Midsummer Night's Dream",
+      "releaseYear": 1959,
+      "imdbId": "tt0051929",
+      "runtimeMinutes": 105,
+      "countryCodes": [
+        "GB"
+      ],
+      "languages": [
+        "English"
+      ],
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "TV Movie"
+      ],
+      "synopsis": "Mistaken identity, unrequited love, and the supernatural are combined in Shakespeare's classic set in the woods of Greece on a moonlit night.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/cwIO2PoWD8DfrNgtPXcIVVIrHgv.jpg"
+    },
+    "cannes|1955|host": {
+      "title": "Host",
+      "releaseYear": 1955,
+      "imdbId": "tt16463406",
+      "runtimeMinutes": 25,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [
+        "Horror"
+      ],
+      "synopsis": "A couple takes a needed vacation to escape from the distraction of work and to mend their marriage. But as Jeff can't find a break from work, Annie loses herself in the history of the home and the inhabitants that may still reside there.",
+      "posterUrl": ""
+    },
+    "bafta|1953|the moon": {
+      "title": "The Moon",
+      "releaseYear": 1953,
+      "imdbId": "tt7950282",
+      "runtimeMinutes": 16,
+      "countryCodes": [],
+      "languages": [],
+      "genres": [
+        "Comedy"
+      ],
+      "synopsis": "After a ruthless dictator's improbable escape to the moon, a room full of politicians and generals must devise a plan to once again end the war.",
+      "posterUrl": ""
+    },
+    "venice|1950|la ronde": {
+      "title": "La Ronde",
+      "releaseYear": 1950,
+      "imdbId": "tt0042906",
+      "runtimeMinutes": 95,
+      "countryCodes": [
+        "FR"
+      ],
+      "languages": [
+        "French"
+      ],
+      "genres": [
+        "Romance",
+        "Comedy",
+        "Drama"
+      ],
+      "synopsis": "An all-knowing interlocutor guides us through a series of affairs in Vienna, 1900. A soldier meets an eager young lady of the evening. Later he has an affair with a young lady, who becomes a maid and does similarly with the young man of the house. The young man seduces a married woman. On and on, spinning on the gay carousel of life.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/jMcF0XAD66n1abW1ZZhtrD0AsKN.jpg"
+    },
+    "venice|1932|m dchen in uniform": {
+      "title": "Mädchen in Uniform",
+      "releaseYear": 1932,
+      "imdbId": "tt0022183",
+      "runtimeMinutes": 88,
+      "countryCodes": [
+        "DE"
+      ],
+      "languages": [
+        "German"
+      ],
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "synopsis": "A sensitive girl is sent to an all-girls boarding school and develops a romantic attachment to one of her teachers.",
+      "posterUrl": "https://image.tmdb.org/t/p/w500/xCyjsv32kZ3F1BgZqJOEIKCDFiv.jpg"
     }
   }
 }
