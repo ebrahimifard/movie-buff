@@ -45,7 +45,10 @@ export function mergeFilm(primary, secondary) {
     languages: primary.languages?.length ? primary.languages : secondary.languages || [],
     genres: primary.genres?.length ? primary.genres : secondary.genres || [],
     synopsis: primary.synopsis || secondary.synopsis || "",
-    posterUrl: primary.posterUrl || secondary.posterUrl || ""
+    posterUrl: primary.posterUrl || secondary.posterUrl || "",
+    // Matching-only hint (selection tables' native-language title) — read
+    // by enrich-tmdb.mjs, never written into data/normalized.
+    ...(primary.originalTitle || secondary.originalTitle ? { originalTitle: primary.originalTitle || secondary.originalTitle } : {})
   };
 }
 
@@ -85,7 +88,8 @@ export function normalizeRecord(input) {
       languages: input.film.languages ?? [],
       genres: input.film.genres ?? [],
       synopsis: input.film.synopsis ?? "",
-      posterUrl: input.film.posterUrl ?? ""
+      posterUrl: input.film.posterUrl ?? "",
+      ...(input.film.originalTitle ? { originalTitle: input.film.originalTitle } : {})
     },
     directors: [...new Set((input.directors ?? []).filter(Boolean))],
     credits: dedupeCredits(input.credits)

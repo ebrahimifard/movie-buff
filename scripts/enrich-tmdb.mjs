@@ -9,6 +9,7 @@ import { IMDB_ID_PATTERN } from "../lib/schemas.mjs";
 const root = process.cwd();
 const generatedPath = path.join(root, "data", "source", "master-data.generated.json");
 const cachePath = path.join(root, "data", "source", "tmdb-cache.json");
+const manualMatchesPath = path.join(root, "data", "source", "tmdb-manual-matches.json");
 
 // TMDB enrichment lives in a standalone, additive cache keyed by imdbId (and,
 // for records with no imdbId, by titleYearFallbackKey) — never inside
@@ -82,32 +83,116 @@ function normalizeTitleForMatch(value) {
     .trim();
 }
 
+// Unicode-aware title comparison key: diacritics folded ("Amélie" ->
+// "amelie"), any script's letters kept (so a Cyrillic/CJK original title
+// still compares instead of collapsing to "" the way the ASCII-only
+// normalizeTitleForMatch does — that one stays as-is because it also forms
+// the persisted cache key, see titleYearFallbackKey).
+export function normalizeTitleForComparison(value) {
+  return String(value ?? "")
+    .normalize("NFKD")
+    .replace(/\p{M}+/gu, "")
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^\p{L}\p{N}]+/gu, " ")
+    .trim();
+}
+
+function stripLeadingArticle(normalized) {
+  return normalized.replace(/^(the|a|an) /, "");
+}
+
+export function titlesMatch(left, right) {
+  const a = normalizeTitleForComparison(left);
+  const b = normalizeTitleForComparison(right);
+  return Boolean(a && b) && (a === b || stripLeadingArticle(a) === stripLeadingArticle(b));
+}
+
+// Every title a record can be matched under: its (English) title, plus the
+// selection table's Original title and each part of it — that cell often
+// holds a native-script title and a romanization together, or alternates
+// separated by "/".
+export function titleCandidates(film) {
+  const out = [];
+  const add = (value) => {
+    const text = String(value ?? "").trim();
+    if (!normalizeTitleForComparison(text)) return;
+    if (out.some((existing) => normalizeTitleForComparison(existing) === normalizeTitleForComparison(text))) return;
+    out.push(text);
+  };
+  add(film?.title);
+  if (film?.originalTitle) {
+    add(film.originalTitle);
+    for (const part of String(film.originalTitle).split(/\s*(?:\/|;|,|\s[–-]\s|[()])\s*/)) {
+      add(part);
+    }
+  }
+  return out;
+}
+
+// Whether a TMDB crew list's directors agree with the source's director
+// names: true/false when both sides are known, null when either is missing
+// (unknown — neither confirms nor vetoes). Compared by shared name tokens
+// of 4+ letters, so transliteration noise in a given name ("Andrei
+// Konchalovsky" vs "Andrey Konchalovsky") or a missing middle name still
+// agrees, while two genuinely different people don't.
+export function directorsMatch(expectedNames, crew) {
+  const tokens = (name) => normalizeTitleForComparison(name).split(" ").filter((t) => t.length >= 4);
+  const expected = (expectedNames ?? []).map(tokens).filter((t) => t.length);
+  const actual = (crew ?? []).filter((member) => member?.job === "Director").map((member) => tokens(member.name)).filter((t) => t.length);
+  if (!expected.length || !actual.length) return null;
+  return expected.some((e) => actual.some((a) => e.some((token) => a.includes(token))));
+}
+
 // Wikipedia-sourced records (the majority of Cannes/BAFTA/Golden Globes/
 // Berlinale/Venice) never carry an imdbId, so the primary /find/{imdbId}
-// enrichment path (enrichRecord) always skips them — see enrichmentTargets
-// in run(). This provides a fallback: search TMDB by title/year instead.
-// Only accepted when the top matching result's title is a near-exact match
-// AND its release year is within 1 of the expected year — a looser match is
-// rejected outright rather than guessed, per the requirement to never
-// silently attach the wrong film to a record. Returns null (no match) far
-// more often than a fuzzy "best effort" matcher would, by design.
-export function findConfidentMatch(results, title, year) {
-  const targetTitle = normalizeTitleForMatch(title);
-  if (!targetTitle) {
-    return null;
-  }
+// path (enrichRecord) skips them; they're matched by title search instead.
+// A match is only accepted on a near-exact title (any candidate title vs.
+// the result's title or original_title) within the year tolerance — a
+// looser match is rejected outright rather than guessed, per the
+// requirement to never silently attach the wrong film to a record.
+//
+// Search results whose title/original_title matches any candidate title and
+// whose release year is within `maxYearGap`, closest year first. A result
+// with no release date at all is kept only at the end of the list (it then
+// needs a director confirmation, see enrichRecordByTitleYear).
+export function rankTitleMatches(results, titles, year, maxYearGap = 1) {
+  const ranked = [];
   for (const result of results ?? []) {
-    const titleMatches = normalizeTitleForMatch(result?.title) === targetTitle;
-    const originalTitleMatches = normalizeTitleForMatch(result?.original_title) === targetTitle;
-    if (!titleMatches && !originalTitleMatches) {
-      continue;
-    }
+    if (!titles.some((title) => titlesMatch(result?.title, title) || titlesMatch(result?.original_title, title))) continue;
     const resultYear = Number(String(result?.release_date ?? "").slice(0, 4));
-    if (!year || !resultYear || Math.abs(resultYear - year) <= 1) {
-      return result;
-    }
+    const gap = year && resultYear ? Math.abs(resultYear - year) : Number.POSITIVE_INFINITY;
+    if (year && resultYear && gap > maxYearGap) continue;
+    ranked.push({ result, gap });
   }
-  return null;
+  return ranked.sort((a, b) => a.gap - b.gap).map((entry) => entry.result);
+}
+
+// Curated, hand-verified matches for films the automatic search can't
+// resolve confidently (data/source/tmdb-manual-matches.json), keyed by
+// titleYearFallbackKey -> imdbId. Only ever consulted for records that have
+// no imdbId of their own.
+export async function loadManualMatches(filePath) {
+  try {
+    const parsed = JSON.parse(await readFile(filePath, "utf8"));
+    const entries = Object.entries(parsed.matches ?? {}).filter(([, imdbId]) => IMDB_ID_PATTERN.test(String(imdbId)));
+    return new Map(entries);
+  } catch (error) {
+    if (error?.code === "ENOENT") return new Map();
+    throw error;
+  }
+}
+
+// `--festival=cannes` (repeatable / comma-separated) limits the title/year
+// search pass to those festivals — the pass otherwise re-searches every
+// still-unmatched record across ALL festivals on each run.
+export function parseFestivalFilter(argv) {
+  const ids = argv
+    .filter((arg) => arg.startsWith("--festival="))
+    .flatMap((arg) => arg.slice("--festival=".length).split(","))
+    .map((id) => id.trim())
+    .filter(Boolean);
+  return ids.length ? new Set(ids) : null;
 }
 
 async function enrichRecord(record, apiKey) {
@@ -154,11 +239,17 @@ export function titleYearFallbackKey(record) {
 }
 
 async function enrichRecordByTitleYear(record, apiKey) {
-  const title = record?.film?.title;
-  if (!title) {
+  const titles = titleCandidates(record?.film);
+  if (titles.length === 0) {
     return null;
   }
   const year = record.film.releaseYear || record.year;
+  const directors = record.directors ?? [];
+  // A known director lets an older film match a TMDB entry dated a couple
+  // of years off (festival premiere vs. TMDB's domestic release date) — but
+  // only with the director confirmed; without one, the strict ±1 stands.
+  const maxYearGap = directors.length ? 3 : 1;
+  const tried = new Set();
 
   // No primary_release_year/year param here deliberately: TMDB filters
   // search results to that exact year server-side, which silently drops the
@@ -166,35 +257,46 @@ async function enrichRecordByTitleYear(record, apiKey) {
   // its actual release year — the norm, not the exception, for an awards
   // ceremony that honors the *prior* year's films (confirmed live: searching
   // "One Battle After Another" — released 2025 — with primary_release_year
-  // 2026 returned zero real matches, just an unrelated 2026 documentary).
-  // findConfidentMatch already tolerates a ±1-year gap client-side, so an
-  // unfiltered search lets it do the job it was written for.
-  const searchUrl = new URL("https://api.themoviedb.org/3/search/movie");
-  searchUrl.searchParams.set("api_key", apiKey);
-  searchUrl.searchParams.set("query", title);
+  // 2026 returned zero real matches). rankTitleMatches applies the year
+  // tolerance client-side instead.
+  for (const query of titles) {
+    const searchUrl = new URL("https://api.themoviedb.org/3/search/movie");
+    searchUrl.searchParams.set("api_key", apiKey);
+    searchUrl.searchParams.set("query", query);
+    const searchPayload = await fetchJson(searchUrl, `TMDB search "${query}" (${year ?? "?"})`);
 
-  const searchPayload = await fetchJson(searchUrl, `TMDB search "${title}" (${year ?? "?"})`);
-  const match = findConfidentMatch(searchPayload?.results, title, year);
-  if (!match?.id) {
-    return null;
+    for (const candidate of rankTitleMatches(searchPayload?.results, titles, year, maxYearGap).slice(0, 3)) {
+      if (!candidate?.id || tried.has(candidate.id)) continue;
+      tried.add(candidate.id);
+
+      const detailsUrl = new URL(`https://api.themoviedb.org/3/movie/${candidate.id}`);
+      detailsUrl.searchParams.set("api_key", apiKey);
+      detailsUrl.searchParams.set("append_to_response", "external_ids,credits");
+      const details = await fetchJson(detailsUrl, `TMDB movie ${candidate.id}`);
+
+      const candidateYear = Number(String(candidate.release_date ?? "").slice(0, 4));
+      const strictYear = Boolean(year && candidateYear && Math.abs(candidateYear - year) <= 1);
+      const director = directorsMatch(directors, details?.credits?.crew);
+      // Director disagreement always vetoes (same-title remakes); a looser
+      // year, or no year at all, needs a positive director confirmation.
+      if (director === false) continue;
+      if (!strictYear && director !== true) continue;
+
+      const film = toEnrichedFilm(record, details);
+      if (film) return film;
+    }
   }
+  return null;
+}
 
-  const detailsUrl = new URL(`https://api.themoviedb.org/3/movie/${match.id}`);
-  detailsUrl.searchParams.set("api_key", apiKey);
-  detailsUrl.searchParams.set("append_to_response", "external_ids");
-
-  const details = await fetchJson(detailsUrl, `TMDB movie ${match.id}`);
+// Shared tail of the title/year and manual-match paths: refuses a TMDB
+// movie with no valid IMDb id (see the comment inside).
+function toEnrichedFilm(record, details) {
   const imdbId = details?.external_ids?.imdb_id;
   if (!imdbId || !IMDB_ID_PATTERN.test(imdbId)) {
-    // Refuse to backfill a film record with no valid IMDb id — every
-    // downstream feature (film detail page, poster download, "Details"
-    // link) is keyed by imdbId, so a match without one isn't useful and
-    // isn't confident enough to invent an id for.
     return null;
   }
-
   const posterPath = details?.poster_path ? `https://image.tmdb.org/t/p/w500${details.poster_path}` : "";
-
   return {
     ...record.film,
     imdbId,
@@ -205,6 +307,23 @@ async function enrichRecordByTitleYear(record, apiKey) {
     genres: record.film.genres?.length ? record.film.genres : toGenres(details.genres),
     synopsis: record.film.synopsis || details.overview || ""
   };
+}
+
+async function enrichRecordByManualMatch(record, imdbId, apiKey) {
+  const findUrl = new URL(`https://api.themoviedb.org/3/find/${imdbId}`);
+  findUrl.searchParams.set("api_key", apiKey);
+  findUrl.searchParams.set("external_source", "imdb_id");
+  const findPayload = await fetchJson(findUrl, `TMDB find ${imdbId}`);
+  const movie = findPayload?.movie_results?.[0];
+  if (!movie?.id) {
+    // Not on TMDB at all: still attach the hand-verified imdbId.
+    return { ...record.film, imdbId };
+  }
+  const detailsUrl = new URL(`https://api.themoviedb.org/3/movie/${movie.id}`);
+  detailsUrl.searchParams.set("api_key", apiKey);
+  detailsUrl.searchParams.set("append_to_response", "external_ids");
+  const details = await fetchJson(detailsUrl, `TMDB movie ${movie.id}`);
+  return toEnrichedFilm(record, { ...details, external_ids: { imdb_id: imdbId } }) ?? { ...record.film, imdbId };
 }
 
 // Pure re-assembly of the output payload from the current enrichment state,
@@ -325,12 +444,23 @@ async function run() {
   // /find endpoint. Deduped by title+year+festival first — many nomination
   // records point at the same film across different categories, and this
   // avoids searching TMDB once per nomination instead of once per film.
-  const noImdbRecords = records.filter((record) => !record?.film?.imdbId);
+  const festivalFilter = parseFestivalFilter(process.argv.slice(2));
+  if (festivalFilter) {
+    logStep(`title/year pass limited to festival(s): ${[...festivalFilter].join(", ")}`);
+  }
+  const manualMatches = await loadManualMatches(manualMatchesPath);
+  const noImdbRecords = records.filter((record) => !record?.film?.imdbId && (!festivalFilter || festivalFilter.has(record.festivalId)));
   const uniqueFallbackTargets = new Map();
   for (const record of noImdbRecords) {
     const key = titleYearFallbackKey(record);
     if (!fallbackLookup.has(key)) {
-      uniqueFallbackTargets.set(key, record);
+      // Prefer the record that carries the most matching signal (director,
+      // original title) when several nominations share one key.
+      const existing = uniqueFallbackTargets.get(key);
+      const score = (r) => (r?.directors?.length ? 2 : 0) + (r?.film?.originalTitle ? 1 : 0);
+      if (!existing || score(record) > score(existing)) {
+        uniqueFallbackTargets.set(key, record);
+      }
     }
   }
 
@@ -344,7 +474,10 @@ async function run() {
       group.map(async (record) => {
         const key = titleYearFallbackKey(record);
         try {
-          const enrichedFilm = await enrichRecordByTitleYear(record, apiKey);
+          const manualImdbId = manualMatches.get(key);
+          const enrichedFilm = manualImdbId
+            ? await enrichRecordByManualMatch(record, manualImdbId, apiKey)
+            : await enrichRecordByTitleYear(record, apiKey);
           if (enrichedFilm) {
             fallbackLookup.set(key, enrichedFilm);
           } else {

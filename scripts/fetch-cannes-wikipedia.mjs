@@ -7,6 +7,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { JSDOM } from "jsdom";
 import { DEFAULT_SCRAPE_DELAY_MS, fetchWithRetry, sleep } from "./lib/http.mjs";
+import { parseCountryList } from "./lib/country-codes.mjs";
 import {
   FORMAT_BUCKET_PATTERN,
   NON_AWARD_SECTION_PATTERN,
@@ -82,6 +83,134 @@ const AMBIGUOUS_SUB_AWARD_PATTERN =
 const STRAND_SPECIFIC_AWARD_PATTERN = /^(grand prix|(special\s+)?jury prize)$/i;
 const FLAGSHIP_COMPETITION_SECTION_PATTERN = /^(main competition|in competition|palme d'?or)$/i;
 
+// The main competition's own selection list/table. Its heading text varies
+// by era — "Competition" (1946), "Films in competition" (1947), "Feature
+// film competition" (1949), "In Competition"/"Main Competition" (1951+) —
+// and "In Competition" in particular is ALSO what normalizeCategory
+// collapses to "Palme d'Or" (for the awards list's unlabeled top prize), so
+// this has to be checked against the RAW heading text: after normalization,
+// "Palme d'Or" no longer reads as a film-selection section at all, which is
+// how nearly every year's competition lineup was silently skipped.
+const MAIN_COMPETITION_HEADING_PATTERN =
+  /^(?:the\s+)?(?:competition|(?:main|feature films?)\s+competition|(?:films\s+)?in\s+competition|films\s+in\s+competition)$/i;
+
+// Competition entries are recorded as nominees for the festival's top
+// prize, the same convention as every other festival's competition slate.
+export const MAIN_COMPETITION_CATEGORY = "Palme d'Or";
+
+export function isMainCompetitionSelection(rawHeading, topHeading) {
+  // Juries ("Juries > Main competition") and the awards half of the page
+  // ("Official Awards > In Competition") reuse the very same sub-heading.
+  if (/\bjur(y|ies)\b|\bawards?\b/i.test(String(topHeading ?? ""))) return false;
+  return MAIN_COMPETITION_HEADING_PATTERN.test(String(rawHeading ?? "").trim());
+}
+
+// Trailing footnote/annotation markers Wikipedia's selection tables attach
+// to a title — "‡" (opening film), "*" / "†" (debut, closing film, ...).
+const FOOTNOTE_MARKER_PATTERN = /\s*[‡†*§¤#^]+\s*$/u;
+
+// A table's rows as cell arrays with rowspan/colspan expanded, so every row
+// has one entry per logical column (a rowspan-shared cell appears, as the
+// same element, in each row it spans).
+export function expandTableRows(table) {
+  const carried = [];
+  const out = [];
+  for (const row of Array.from(table.rows ?? table.querySelectorAll("tr"))) {
+    const own = Array.from(row.cells ?? row.querySelectorAll("td,th"));
+    const cells = [];
+    let col = 0;
+    let i = 0;
+    while (i < own.length || carried.slice(col).some((c) => c?.remaining > 0)) {
+      if (carried[col]?.remaining > 0) {
+        cells.push(carried[col].cell);
+        carried[col].remaining -= 1;
+        col += 1;
+        continue;
+      }
+      if (i >= own.length) {
+        col += 1;
+        continue;
+      }
+      const cell = own[i++];
+      const colspan = Math.max(1, Number(cell.getAttribute("colspan")) || 1);
+      const rowspan = Math.max(1, Number(cell.getAttribute("rowspan")) || 1);
+      for (let k = 0; k < colspan; k += 1) {
+        cells.push(cell);
+        if (rowspan > 1) carried[col] = { cell, remaining: rowspan - 1 };
+        col += 1;
+      }
+    }
+    out.push(cells);
+  }
+  return out;
+}
+
+// A cell's text with <br> line breaks kept as separators (textContent alone
+// glues "France<br>Italy" into "FranceItaly"), and footnote refs removed.
+function cellTextWithBreaks(cell) {
+  const clone = cell.cloneNode(true);
+  clone.querySelectorAll("sup.reference, .reference, style").forEach((el) => el.remove());
+  clone.querySelectorAll("br").forEach((br) => br.replaceWith(", "));
+  return clone.textContent.replace(/\[[^\]]*\]/g, "").replace(/\s+/g, " ").trim();
+}
+
+// "Jean-Marie Straub and Danièle Huillet", "A, B & C" -> individual names.
+export function splitNameList(cell) {
+  return cellTextWithBreaks(cell)
+    .split(/\s*(?:,|;|&|\/|\s+and\s+)\s*/i)
+    .map((name) => name.replace(FOOTNOTE_MARKER_PATTERN, "").trim())
+    .filter((name) => name.length > 1 && !/^[-–—]+$/.test(name));
+}
+
+// The Original title cell often holds the native-script title AND a
+// romanization ("万引き家族 Manbiki kazoku"), or just a dash when it equals
+// the English title. Kept whole (TMDB matching tries each variant — see
+// enrich-tmdb.mjs's titleCandidates); a bare dash means "same as English".
+function readOriginalTitle(cell) {
+  const text = cellTextWithBreaks(cell).replace(FOOTNOTE_MARKER_PATTERN, "").trim();
+  if (!text || /^[-–—]+$/.test(text)) return null;
+  return text;
+}
+
+// The awards list sometimes names the top-prize winner differently from
+// its own competition-lineup entry on the same page (1946: "Hets" vs
+// "Torment"; 1962: "O Pagador de Promessas" vs "Keeper of Promises"). Left
+// alone, merge-sources would treat them as two different films — a winner
+// with no lineup entry plus a lineup entry that never won. Both spellings
+// link to the same article (or the lineup's Original title column carries
+// the winner's spelling), so the winner record is renamed to the lineup's
+// title, letting merge collapse the pair into one winner row.
+function reconcileTopPrizeWinnerTitles(records, contentRoot) {
+  const key = (t) => String(t ?? "").trim().toLowerCase().replace(/^(the|a|an|la|le|les|il|der|die|das|el)\s+/, "");
+  const nominees = records.filter((r) => r.category === MAIN_COMPETITION_CATEGORY && r.result === "nominee");
+  if (nominees.length === 0) return;
+  const nomineeTitles = new Set(nominees.map((r) => key(r.film.title)));
+
+  const hrefsByText = new Map();
+  for (const a of contentRoot.querySelectorAll("a[href]")) {
+    const href = decodeURIComponent(a.getAttribute("href").split("#")[0]).replace(/^.*\/wiki\//, "");
+    if (!href || href.startsWith("#")) continue;
+    const text = key(a.textContent);
+    if (!hrefsByText.has(text)) hrefsByText.set(text, new Set());
+    hrefsByText.get(text).add(href);
+  }
+
+  for (const winner of records) {
+    if (winner.category !== MAIN_COMPETITION_CATEGORY || winner.result !== "winner") continue;
+    const title = key(winner.film.title);
+    if (nomineeTitles.has(title)) continue;
+    const winnerHrefs = hrefsByText.get(title) ?? new Set();
+    const match = nominees.find((n) => {
+      if (key(n.film.originalTitle) === title) return true;
+      const nomineeHrefs = hrefsByText.get(key(n.film.title));
+      return nomineeHrefs ? [...nomineeHrefs].some((h) => winnerHrefs.has(h)) : false;
+    });
+    if (match) {
+      winner.film.title = match.film.title;
+    }
+  }
+}
+
 const root = process.cwd();
 const outputPath = path.join(root, "data", "source", "cannes-wikipedia.json");
 
@@ -89,22 +218,16 @@ const outputPath = path.join(root, "data", "source", "cannes-wikipedia.json");
 const START_YEAR = 1946;
 const END_YEAR = new Date().getFullYear();
 
-function getWikipediaUrls(year) {
-  // Try standard and ordinal URLs for Cannes ceremonies
-  const urls = [
-    `https://en.wikipedia.org/wiki/${year}_Cannes_Film_Festival`,
-    `https://en.wikipedia.org/wiki/${getOrdinal(year - 1945)}_Cannes_Film_Festival`
-  ];
-  return urls;
-}
+// Every edition has a year-titled article. There used to be an ordinal
+// fallback (`${year - 1945}th_Cannes_Film_Festival`), but no festival was
+// held in 1948 or 1950, so the ordinal drifts from the year: the fallback
+// fetched the 3rd (1949) and 4th (1951) editions' pages for the
+// non-existent 1948 and 1950 and recorded them as phantom duplicate years.
+// A 404 now correctly means "no festival that year".
+export const YEARS_WITHOUT_FESTIVAL = new Set([1948, 1950]);
 
-function getOrdinal(n) {
-  if (n <= 0) return null;
-  const suffix = (n % 10 === 1 && n % 100 !== 11) ? 'st'
-    : (n % 10 === 2 && n % 100 !== 12) ? 'nd'
-    : (n % 10 === 3 && n % 100 !== 13) ? 'rd'
-    : 'th';
-  return `${n}${suffix}`;
+function getWikipediaUrls(year) {
+  return [`https://en.wikipedia.org/wiki/${year}_Cannes_Film_Festival`];
 }
 
 export function parseCannesWikipedia(html, year) {
@@ -146,6 +269,17 @@ export function parseCannesWikipedia(html, year) {
     if (/^honorary\b/i.test(text)) return text;
     if (/short film/i.test(text) && /palme d'?or/i.test(text)) return "Short Film Palme d'Or";
     if (/palme d'?or/i.test(text)) return "Palme d'Or";
+    // The same top prize under its historical names: "Grand Prix du
+    // Festival International du Film" (1946, and again 1964–1974 when the
+    // Palme was suspended) and, before the Palme d'Or existed (pre-1955),
+    // a bare "Grand Prix"/"Grand Prize of the Festival". Without this the
+    // competition winner and its competition-nominee row land in two
+    // different categories. Anchored so the 1951 scientific-film prize
+    // ("... pour le Meilleur Film Scientifique") and the short-film Grand
+    // Prix keep their own identity; post-1955 "Grand Prix" is the
+    // second-place prize and is untouched.
+    if (/^grand prix du festival international du film$/i.test(text)) return "Palme d'Or";
+    if (year < 1955 && /^(official awards\s*[–-]\s*)?(grand prix|grand prize of the festival)$/i.test(text)) return "Palme d'Or";
     // "in competition"/"feature film competition" name the Main Competition
     // SECTION ITSELF (used as a fallback category for its top, unlabeled
     // prize) — anchored to the WHOLE string, not just word-boundaries,
@@ -178,7 +312,7 @@ export function parseCannesWikipedia(html, year) {
   function getHeadingContext(element) {
     const ancestors = getSectionAncestors(element, headings);
     if (ancestors.length === 0) {
-      return { section: normalizeCategory("Unknown category"), top: "" };
+      return { section: normalizeCategory("Unknown category"), rawSection: "", top: "" };
     }
 
     let nearestIndex = ancestors.length - 1;
@@ -188,13 +322,19 @@ export function parseCannesWikipedia(html, year) {
 
     return {
       section: normalizeCategory(ancestors[nearestIndex]),
+      rawSection: cleanText(ancestors[nearestIndex]),
       top: cleanText(ancestors[0])
     };
   }
 
-  function addRecord(category, result, title, personName, hasFilmSignal = true, originalReleaseYear) {
+  // `extra` carries the per-film columns a selection table provides beyond
+  // the title (Director(s), Original title, Production country) — see
+  // parseTable. When `extra.directors` is given it wins over the
+  // category-role-derived director below.
+  function addRecord(category, result, title, personName, hasFilmSignal = true, originalReleaseYear, extra = {}) {
     const cleanTitle = cleanText(title)
       .replace(/^[-:*\s]+/, "")
+      .replace(FOOTNOTE_MARKER_PATTERN, "")
       .replace(/\s*\([^)]*\)\s*$/, "")
       .trim();
 
@@ -221,7 +361,7 @@ export function parseCannesWikipedia(html, year) {
     dedupe.add(key);
 
     const role = personName ? classifyPersonRole(normalizedCategory) : null;
-    const directors = role === "director" && personName ? [personName] : [];
+    const directors = extra.directors?.length ? extra.directors : role === "director" && personName ? [personName] : [];
     const credits = role && role !== "director" && personName ? [{ name: personName, role }] : [];
 
     records.push({
@@ -233,8 +373,9 @@ export function parseCannesWikipedia(html, year) {
       film: {
         title: cleanTitle,
         releaseYear: originalReleaseYear ?? year,
+        ...(extra.originalTitle && extra.originalTitle.toLowerCase() !== cleanTitle.toLowerCase() ? { originalTitle: extra.originalTitle } : {}),
         imdbId: null,
-        countryCodes: [],
+        countryCodes: extra.countryCodes ?? [],
         languages: [],
         genres: [],
         synopsis: "",
@@ -354,7 +495,7 @@ export function parseCannesWikipedia(html, year) {
     }
   }
 
-  function parseNomineeListItem(li, sectionCategory) {
+  function parseNomineeListItem(li, sectionCategory, isMainCompetition = false) {
     const text = cleanText(li.textContent);
     if (!text) return;
 
@@ -366,16 +507,24 @@ export function parseCannesWikipedia(html, year) {
       .trim();
 
     const title = extracted.title ?? fallback;
-    addRecord(sectionCategory, "nominee", title, extracted.personName, extracted.hasFilmSignal, extracted.originalReleaseYear);
+    // A main-competition list item ("Title by Director", 1946–49) names the
+    // film's director — Palme d'Or isn't a director-role category, so it has
+    // to be passed explicitly.
+    const extra = isMainCompetition && extracted.personName ? { directors: [extracted.personName] } : {};
+    addRecord(sectionCategory, "nominee", title, extracted.personName, extracted.hasFilmSignal, extracted.originalReleaseYear, extra);
   }
 
   function parseTable(table, sectionCategory, isAwardsSection) {
-    const rows = Array.from(table.querySelectorAll("tr"));
+    // Rowspan/colspan-expanded rows, so a Director(s) or Production country
+    // cell shared by two consecutive films (rowspan="2") still lines up with
+    // the header for BOTH rows — previously the second row came up one cell
+    // short, failed the headers.length check, and lost every column but its
+    // first.
+    const rows = expandTableRows(table);
     if (rows.length === 0) return;
 
     let headers = [];
-    rows.forEach((row, idx) => {
-      const cells = Array.from(row.querySelectorAll("td,th"));
+    rows.forEach((cells, idx) => {
       if (cells.length === 0) return;
 
       if (idx === 0 && cells.every(c => c.tagName === "TH")) {
@@ -388,6 +537,7 @@ export function parseCannesWikipedia(html, year) {
       let personName = null;
       let hasFilmSignal = false;
       let originalReleaseYear;
+      const extra = {};
       if (headers.length && headers.length === cells.length) {
         const filmIdx = headers.findIndex(h => /title|film|winner/.test(h));
         if (filmIdx >= 0) {
@@ -396,6 +546,25 @@ export function parseCannesWikipedia(html, year) {
           personName = extracted.personName;
           hasFilmSignal = extracted.hasFilmSignal;
           originalReleaseYear = extracted.originalReleaseYear;
+        }
+        // Selection tables' extra columns (English title | Original title |
+        // Director(s) | Production country) — the signals TMDB matching and
+        // the film page need, previously discarded. A rowspan-shared cell
+        // is the same element in two rows, so it's simply re-read.
+        const originalIdx = headers.findIndex(h => /original title/.test(h));
+        const directorIdx = headers.findIndex(h => /director/.test(h));
+        const countryIdx = headers.findIndex(h => /country/.test(h));
+        if (originalIdx >= 0 && originalIdx !== filmIdx) {
+          const originalTitle = readOriginalTitle(cells[originalIdx]);
+          if (originalTitle) extra.originalTitle = originalTitle;
+        }
+        if (directorIdx >= 0 && directorIdx !== filmIdx) {
+          const directors = splitNameList(cells[directorIdx]);
+          if (directors.length) extra.directors = directors;
+        }
+        if (countryIdx >= 0 && countryIdx !== filmIdx) {
+          const countryCodes = parseCountryList(cellTextWithBreaks(cells[countryIdx]));
+          if (countryCodes.length) extra.countryCodes = countryCodes;
         }
       }
       if (!title) {
@@ -417,7 +586,7 @@ export function parseCannesWikipedia(html, year) {
         }
         addRecord(category, "winner", title, personName, hasFilmSignal, originalReleaseYear);
       } else {
-        addRecord(sectionCategory, "nominee", title, personName, hasFilmSignal, originalReleaseYear);
+        addRecord(sectionCategory, "nominee", title, personName, hasFilmSignal, originalReleaseYear, extra);
       }
     });
   }
@@ -430,14 +599,16 @@ export function parseCannesWikipedia(html, year) {
     if (shouldSkipSection(ctx.section) || shouldSkipSection(ctx.top)) return;
 
     const isAwards = /awards/i.test(ctx.top) || /official awards|independent awards/i.test(ctx.section);
-    const isFilmSection = isFilmSelectionSection(ctx.section, ctx.top);
+    const isMainCompetition = !isAwards && isMainCompetitionSelection(ctx.rawSection, ctx.top);
+    const isFilmSection = isMainCompetition || isFilmSelectionSection(ctx.section, ctx.top);
+    const sectionCategory = isMainCompetition ? MAIN_COMPETITION_CATEGORY : ctx.section;
 
     const items = list.querySelectorAll(":scope > li");
     items.forEach(li => {
       if (isAwards) {
         parseAwardsListItem(li, ctx.section);
       } else if (isFilmSection) {
-        parseNomineeListItem(li, ctx.section);
+        parseNomineeListItem(li, sectionCategory, isMainCompetition);
       }
     });
   });
@@ -449,18 +620,21 @@ export function parseCannesWikipedia(html, year) {
     if (shouldSkipSection(ctx.section) || shouldSkipSection(ctx.top)) return;
 
     const isAwards = /awards/i.test(ctx.top) || /official awards|independent awards/i.test(ctx.section);
-    const isFilmSection = isFilmSelectionSection(ctx.section, ctx.top);
+    const isMainCompetition = !isAwards && isMainCompetitionSelection(ctx.rawSection, ctx.top);
+    const isFilmSection = isMainCompetition || isFilmSelectionSection(ctx.section, ctx.top);
     if (!isAwards && !isFilmSection) return;
 
-    parseTable(table, ctx.section, isAwards);
+    parseTable(table, isMainCompetition ? MAIN_COMPETITION_CATEGORY : ctx.section, isAwards);
   });
 
+  reconcileTopPrizeWinnerTitles(records, contentRoot);
   return records;
 }
 
 async function run() {
   const records = [];
   for (let year = START_YEAR; year <= END_YEAR; year++) {
+    if (YEARS_WITHOUT_FESTIVAL.has(year)) continue;
     const urls = getWikipediaUrls(year);
     let found = false;
     for (const url of urls) {

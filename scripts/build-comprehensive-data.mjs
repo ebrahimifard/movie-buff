@@ -107,6 +107,31 @@ export function mergeFilmFields(existing, incoming) {
   };
 }
 
+// Folds a second source record for the SAME nomination id (same film, year,
+// festival and category) into the first, in place: a winner result always
+// wins over nominee, and any director/country/credits the first record
+// lacked are backfilled from the second rather than discarded.
+export function mergeNomination(existing, incoming) {
+  if (incoming.result === "winner") {
+    existing.result = "winner";
+  }
+  if (!existing.directorIds.length && incoming.directorIds?.length) {
+    existing.director = incoming.directorNames.join(", ");
+    existing.directorIds = incoming.directorIds;
+  }
+  if ((!existing.country || existing.country === "XX") && incoming.country) {
+    existing.country = incoming.country;
+  }
+  if (incoming.credits?.length) {
+    const seen = new Set((existing.credits ?? []).map((c) => `${c.personId}|${c.role}`));
+    const added = incoming.credits.filter((c) => !seen.has(`${c.personId}|${c.role}`));
+    if (added.length) {
+      existing.credits = [...(existing.credits ?? []), ...added];
+    }
+  }
+  return existing;
+}
+
 // Gets-or-creates a Person record, merging `role` into an existing person's
 // roles rather than skipping the update — a person can legitimately be
 // credited under different roles across different records (e.g. an
@@ -152,6 +177,7 @@ async function run() {
   const categoryMap = new Map();
   const ceremonyMap = new Map();
   const nominations = [];
+  const nominationsById = new Map();
 
   for (const entry of source.records) {
     const isHonoraryAward = resolveCategoryIsHonoraryAward(categoryLookup, entry.festivalId, entry.category);
@@ -225,8 +251,19 @@ async function run() {
       .filter((credit) => credit?.name && credit?.role)
       .map(({ name, role }) => ({ personId: resolvePersonId(personMap, name, role), role }));
 
-    nominations.push({
-      id: `${entry.year}-${entry.festivalId}-${slugify(entry.category)}-${filmId}`,
+    const nominationId = `${entry.year}-${entry.festivalId}-${slugify(entry.category)}-${filmId}`;
+    // Two source records can still resolve to the same film for the same
+    // category/year after TMDB matching gives both one imdbId — e.g. a
+    // festival's awards list and its competition lineup naming the same
+    // film under two different titles. One nomination per film, winner wins.
+    const existingNomination = nominationsById.get(nominationId);
+    if (existingNomination) {
+      mergeNomination(existingNomination, { result: entry.result, directorNames, directorIds, credits, country: entry.film.countryCodes[0] });
+      continue;
+    }
+
+    const nomination = {
+      id: nominationId,
       year: entry.year,
       festivalId: entry.festivalId,
       festivalName: festivals.find((festival) => festival.id === entry.festivalId)?.name ?? entry.festivalId,
@@ -241,7 +278,9 @@ async function run() {
       imdbId: entry.film.imdbId,
       filmId,
       ...(credits.length > 0 ? { credits } : {})
-    });
+    };
+    nominationsById.set(nominationId, nomination);
+    nominations.push(nomination);
   }
 
   const films = [...filmMap.values()].sort((a, b) => b.releaseYear - a.releaseYear || a.title.localeCompare(b.title));

@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   buildCategoryClassificationLookup,
+  mergeNomination,
   isFabricatedHonoraryRecord,
   mergeFilmFields,
   resolveCategoryIsAward,
@@ -193,5 +194,31 @@ describe("isFabricatedHonoraryRecord", () => {
         true
       )
     ).toBe(false);
+  });
+});
+
+describe("mergeNomination", () => {
+  it("promotes to winner and backfills a missing director/country/credits from a duplicate record of the same nomination", () => {
+    const existing = { result: "nominee", director: "", directorIds: [], country: "XX", credits: [{ personId: "person:a", role: "cast" }] };
+    mergeNomination(existing, {
+      result: "winner",
+      directorNames: ["Jane Doe"],
+      directorIds: ["person:jane-doe"],
+      country: "FR",
+      credits: [{ personId: "person:a", role: "cast" }, { personId: "person:b", role: "writer" }]
+    });
+    expect(existing).toEqual({
+      result: "winner",
+      director: "Jane Doe",
+      directorIds: ["person:jane-doe"],
+      country: "FR",
+      credits: [{ personId: "person:a", role: "cast" }, { personId: "person:b", role: "writer" }]
+    });
+  });
+
+  it("never demotes a winner or overwrites fields that are already set", () => {
+    const existing = { result: "winner", director: "A", directorIds: ["person:a"], country: "US" };
+    mergeNomination(existing, { result: "nominee", directorNames: ["B"], directorIds: ["person:b"], country: "FR", credits: [] });
+    expect(existing).toEqual({ result: "winner", director: "A", directorIds: ["person:a"], country: "US" });
   });
 });

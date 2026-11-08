@@ -1,5 +1,14 @@
 import { describe, expect, it } from "vitest";
-import { buildEnrichedPayload, chunk, findConfidentMatch, serializeTmdbCache, titleYearFallbackKey, toGenres, toIsoCountryCodes, toLanguages } from "./enrich-tmdb.mjs";
+import {
+  buildEnrichedPayload,
+  chunk,
+  directorsMatch,
+  parseFestivalFilter,
+  rankTitleMatches,
+  serializeTmdbCache,
+  titleCandidates,
+  titlesMatch,
+  titleYearFallbackKey, toGenres, toIsoCountryCodes, toLanguages } from "./enrich-tmdb.mjs";
 
 describe("chunk", () => {
   it("splits an array into groups of the given size", () => {
@@ -93,34 +102,99 @@ describe("buildEnrichedPayload", () => {
   });
 });
 
-describe("findConfidentMatch", () => {
+describe("rankTitleMatches", () => {
+  const first = (results, title, year, gap) => rankTitleMatches(results, [title], year, gap)[0] ?? null;
+
   it("accepts a near-exact title match with a release year within 1 of the expected year", () => {
     const results = [{ title: "The Father", release_date: "2020-12-01" }];
-    expect(findConfidentMatch(results, "The Father", 2021)?.title).toBe("The Father");
+    expect(first(results, "The Father", 2021)?.title).toBe("The Father");
   });
 
   it("is case- and punctuation-insensitive", () => {
     const results = [{ title: "Kill Bill: Vol. 2", release_date: "2004-04-16" }];
-    expect(findConfidentMatch(results, "kill bill vol 2", 2004)).not.toBeNull();
+    expect(first(results, "kill bill vol 2", 2004)).not.toBeNull();
   });
 
-  it("rejects a title match whose year is more than 1 off", () => {
+  it("rejects a title match whose year is more than the allowed gap off", () => {
     const results = [{ title: "The Father", release_date: "2015-01-01" }];
-    expect(findConfidentMatch(results, "The Father", 2021)).toBeNull();
+    expect(first(results, "The Father", 2021)).toBeNull();
+    expect(first(results, "The Father", 2019, 3)).toBeNull();
+    expect(first(results, "The Father", 2017, 2)?.title).toBe("The Father");
   });
 
   it("rejects when no result's title matches at all", () => {
     const results = [{ title: "A Completely Different Film", release_date: "2021-01-01" }];
-    expect(findConfidentMatch(results, "The Father", 2021)).toBeNull();
+    expect(first(results, "The Father", 2021)).toBeNull();
   });
 
   it("returns null for empty results", () => {
-    expect(findConfidentMatch([], "The Father", 2021)).toBeNull();
+    expect(first([], "The Father", 2021)).toBeNull();
   });
 
   it("falls back to original_title when title doesn't match", () => {
     const results = [{ title: "Foreign Release Title", original_title: "The Father", release_date: "2020-01-01" }];
-    expect(findConfidentMatch(results, "The Father", 2021)).not.toBeNull();
+    expect(first(results, "The Father", 2021)).not.toBeNull();
+  });
+
+  it("matches a non-Latin original title against any candidate title", () => {
+    const results = [{ title: "Asako I & II", original_title: "寝ても覚めても", release_date: "2018-09-01" }];
+    expect(rankTitleMatches(results, ["Asako 1 and 2", "寝ても覚めても"], 2018)).toHaveLength(1);
+  });
+
+  it("orders matches by closeness of release year (same-title remakes)", () => {
+    const results = [
+      { id: 1, title: "The Browning Version", release_date: "1951-03-01" },
+      { id: 2, title: "The Browning Version", release_date: "1994-10-12" }
+    ];
+    expect(rankTitleMatches(results, ["The Browning Version"], 1994, 3).map((r) => r.id)).toEqual([2]);
+  });
+});
+
+describe("titlesMatch", () => {
+  it("folds diacritics and ignores a leading English article", () => {
+    expect(titlesMatch("Amélie", "Amelie")).toBe(true);
+    expect(titlesMatch("The Red Meadows", "Red Meadows")).toBe(true);
+    expect(titlesMatch("Red Meadows", "Blue Meadows")).toBe(false);
+  });
+});
+
+describe("titleCandidates", () => {
+  it("adds the original title and each of its parts after the English title, de-duplicated", () => {
+    expect(titleCandidates({ title: "Shoplifters", originalTitle: "万引き家族 / Manbiki kazoku" })).toEqual([
+      "Shoplifters",
+      "万引き家族 / Manbiki kazoku",
+      "万引き家族",
+      "Manbiki kazoku"
+    ]);
+    expect(titleCandidates({ title: "Amour", originalTitle: "Amour" })).toEqual(["Amour"]);
+  });
+});
+
+describe("directorsMatch", () => {
+  const crew = [{ job: "Director", name: "Andrey Konchalovskiy" }, { job: "Writer", name: "Someone Else" }];
+
+  it("returns null when either side is unknown", () => {
+    expect(directorsMatch([], crew)).toBeNull();
+    expect(directorsMatch(["Andrei Konchalovsky"], [])).toBeNull();
+  });
+
+  it("agrees on a shared name token despite transliteration differences", () => {
+    expect(directorsMatch(["Konchalovskiy"], crew)).toBe(true);
+  });
+
+  it("disagrees when no director shares a name token", () => {
+    expect(directorsMatch(["Mike Figgis"], [{ job: "Director", name: "Anthony Asquith" }])).toBe(false);
+  });
+
+  it("only considers crew whose job is Director", () => {
+    expect(directorsMatch(["Someone Else"], crew)).toBe(false);
+  });
+});
+
+describe("parseFestivalFilter", () => {
+  it("collects --festival= values (comma-separated or repeated), or null when absent", () => {
+    expect(parseFestivalFilter(["--festival=cannes,venice", "--festival=tiff"])).toEqual(new Set(["cannes", "venice", "tiff"]));
+    expect(parseFestivalFilter(["--other"])).toBeNull();
   });
 });
 

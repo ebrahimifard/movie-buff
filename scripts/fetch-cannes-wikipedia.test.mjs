@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { parseCannesWikipedia } from "./fetch-cannes-wikipedia.mjs";
+import { expandTableRows, isMainCompetitionSelection, parseCannesWikipedia } from "./fetch-cannes-wikipedia.mjs";
 
 function wrapHtml(body) {
   return `<!doctype html><html><body><div id="mw-content-text"><div class="mw-parser-output">${body}</div></div></body></html>`;
@@ -508,5 +508,102 @@ describe("parseCannesWikipedia", () => {
     expect(records).toHaveLength(1);
     expect(records[0].film.title).toBe("Blowup");
     expect(records[0].film.releaseYear).toBe(1966);
+  });
+});
+
+describe("parseCannesWikipedia — main competition lineup", () => {
+  const competitionTable = `
+    <table class="wikitable">
+      <tr><th>English Title</th><th>Original Title</th><th>Director(s)</th><th>Production Country</th></tr>
+      <tr><td><i><a href="/wiki/Shoplifters">Shoplifters</a></i></td><td>万引き家族</td><td><a href="/wiki/Hirokazu_Kore-eda">Hirokazu Kore-eda</a></td><td>Japan</td></tr>
+      <tr><td><i><a href="/wiki/Cold_War">Cold War</a></i> ‡</td><td>Zimna wojna</td><td rowspan="2"><a href="/wiki/PP">Paweł Pawlikowski</a></td><td>Poland, France<br>United Kingdom</td></tr>
+      <tr><td colspan="2"><i><a href="/wiki/Other">Another Film</a></i></td><td>West Germany and Soviet Union</td></tr>
+    </table>`;
+
+  it("records every 'In Competition' table row as a Palme d'Or nominee with directors, countries and original title (regression: the heading normalized to 'Palme d'Or' and the table was skipped)", () => {
+    const html = wrapHtml(`<h2>Official Selection</h2><h3>In Competition</h3>${competitionTable}`);
+    const records = parseCannesWikipedia(html, 2018);
+    expect(records).toHaveLength(3);
+    expect(records.every((r) => r.category === "Palme d'Or" && r.result === "nominee")).toBe(true);
+
+    const [shoplifters, coldWar, another] = records;
+    expect(shoplifters.film.title).toBe("Shoplifters");
+    expect(shoplifters.film.originalTitle).toBe("万引き家族");
+    expect(shoplifters.directors).toEqual(["Hirokazu Kore-eda"]);
+    expect(shoplifters.film.countryCodes).toEqual(["JP"]);
+
+    // Footnote marker stripped; <br>-separated countries split.
+    expect(coldWar.film.title).toBe("Cold War");
+    expect(coldWar.film.countryCodes).toEqual(["PL", "FR", "GB"]);
+
+    // rowspan-shared Director cell carried down; a colspan title cell means
+    // no separate original title; historical country names mapped.
+    expect(another.directors).toEqual(["Paweł Pawlikowski"]);
+    expect(another.film.originalTitle).toBeUndefined();
+    expect(another.film.countryCodes).toEqual(["DE", "SU"]);
+  });
+
+  it("still recognises the 'Main Competition' heading spelling", () => {
+    const html = wrapHtml(`<h2>Official Selection</h2><h3>Main Competition</h3>${competitionTable}`);
+    expect(parseCannesWikipedia(html, 2016).filter((r) => r.category === "Palme d'Or")).toHaveLength(3);
+  });
+
+  it("parses an early-years 'Competition' list (Title by Director) as nominees with the director", () => {
+    const html = wrapHtml(`
+      <h2>Competition</h2>
+      <ul><li><i><a href="/wiki/Gilda">Gilda</a></i> by <a href="/wiki/Charles_Vidor">Charles Vidor</a></li></ul>
+    `);
+    const records = parseCannesWikipedia(html, 1946);
+    expect(records).toHaveLength(1);
+    expect(records[0]).toMatchObject({ category: "Palme d'Or", result: "nominee", directors: ["Charles Vidor"] });
+    expect(records[0].film.title).toBe("Gilda");
+  });
+
+  it("does not treat the jury's 'Main competition' sub-heading as a film selection", () => {
+    const html = wrapHtml(`
+      <h2>Juries</h2><h3>Main competition</h3>
+      <ul><li><a href="/wiki/Juror">Some Juror</a>, actress (France)</li></ul>
+    `);
+    expect(parseCannesWikipedia(html, 2018)).toHaveLength(0);
+  });
+
+  it("renames the top-prize winner to its lineup title when the awards list spells it differently but links the same article", () => {
+    const html = wrapHtml(`
+      <h2>Competition</h2>
+      <ul><li><i><a href="/wiki/Torment_(1944_film)">Torment</a></i> by <a href="/wiki/Alf_Sjoberg">Alf Sjöberg</a></li></ul>
+      <h2>Awards</h2><h3>Official awards</h3>
+      <ul><li><a href="/wiki/Grand_Prix_(Cannes)">Grand Prix du Festival International du Film</a>: <i><a href="/wiki/Torment_(1944_film)">Hets</a></i> by Alf Sjöberg</li></ul>
+    `);
+    const records = parseCannesWikipedia(html, 1946);
+    const winner = records.find((r) => r.result === "winner");
+    expect(winner.category).toBe("Palme d'Or");
+    expect(winner.film.title).toBe("Torment");
+  });
+
+  it("maps the pre-1955 bare 'Grand Prix' to Palme d'Or, but leaves the post-1955 second prize alone", () => {
+    const awards = `<h2>Official Awards</h2><h3>In Competition</h3><ul><li><a href="/wiki/GP">Grand Prix</a>: <i><a href="/wiki/F">Some Film</a></i> by <a href="/wiki/D">Some Director</a></li></ul>`;
+    expect(parseCannesWikipedia(wrapHtml(awards), 1953)[0].category).toBe("Palme d'Or");
+    expect(parseCannesWikipedia(wrapHtml(awards), 1990)[0].category).toBe("Grand Prix");
+  });
+});
+
+describe("expandTableRows", () => {
+  it("expands rowspan and colspan so every row has one cell per column", async () => {
+    const { JSDOM } = await import("jsdom");
+    const doc = new JSDOM(`<table><tr><td rowspan="2">A</td><td colspan="2">B</td></tr><tr><td>C</td><td>D</td></tr></table>`).window.document;
+    const rows = expandTableRows(doc.querySelector("table"));
+    expect(rows.map((cells) => cells.map((c) => c.textContent))).toEqual([["A", "B", "B"], ["A", "C", "D"]]);
+  });
+});
+
+describe("isMainCompetitionSelection", () => {
+  it("matches every era's competition heading under a selection section, but not under juries/awards", () => {
+    for (const heading of ["Competition", "Films in competition", "Feature film competition", "In Competition", "Main competition"]) {
+      expect(isMainCompetitionSelection(heading, "Official Selection")).toBe(true);
+    }
+    expect(isMainCompetitionSelection("Out of Competition", "Official Selection")).toBe(false);
+    expect(isMainCompetitionSelection("Short Films Competition", "Official Selection")).toBe(false);
+    expect(isMainCompetitionSelection("Main competition", "Juries")).toBe(false);
+    expect(isMainCompetitionSelection("In Competition", "Official Awards")).toBe(false);
   });
 });
