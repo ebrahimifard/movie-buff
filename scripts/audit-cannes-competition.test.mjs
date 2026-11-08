@@ -1,5 +1,33 @@
 import { describe, expect, it } from "vitest";
-import { buildCompetitionAudit, missingMetadata } from "./audit-cannes-competition.mjs";
+import { buildCannesAudit, buildCompetitionAudit, missingMetadata } from "./audit-cannes-competition.mjs";
+
+describe("buildCannesAudit", () => {
+  it("compares every selection section per year, reports per-film coverage and flags suspect entries", () => {
+    const record = (year, category, title) => ({ year, festivalId: "cannes", category, result: "nominee", film: { title } });
+    const nomination = (year, category, filmId, extra = {}) => ({ festivalId: "cannes", year, category, filmId, title: filmId, result: "nominee", director: "", ...extra });
+    const audit = buildCannesAudit({
+      sourceRecords: [record(2026, "Cannes Classics", "The Stranger"), record(2026, "Cannes Classics", "Two Women"), record(2026, "Directors' Fortnight", "A")],
+      nominations: [
+        nomination(2026, "Cannes Classics", "tt1", { director: "Orson Welles" }),
+        nomination(2026, "Cannes Classics", "film:two-women-2026"),
+        nomination(2026, "Best Actor", "tt1")
+      ],
+      films: [
+        { id: "tt1", title: "The Stranger", releaseYear: 1946, imdbId: "tt1", posterUrl: "/posters/tt1.jpg", runtimeMinutes: 95, genres: ["Drama"], synopsis: "s" },
+        { id: "film:two-women-2026", title: "Two Women", releaseYear: 2026, imdbId: null, posterUrl: "", runtimeMinutes: 0, genres: [], synopsis: "" }
+      ]
+    });
+    expect(audit.sections).toEqual([
+      { year: 2026, section: "Cannes Classics", expected: 2, inCatalogue: 2 },
+      { year: 2026, section: "Directors' Fortnight", expected: 1, inCatalogue: 0 }
+    ]);
+    expect(audit.films).toBe(2);
+    expect(audit.coverage).toMatchObject({ imdbId: 1, director: 1, posterUrl: 1 });
+    expect(audit.suspects).toEqual([
+      { year: 2026, title: "Two Women", filmId: "film:two-women-2026", section: "Cannes Classics", reason: "restoration with unidentified release year" }
+    ]);
+  });
+});
 
 const lineupRecord = (year, title, extra = {}) => ({
   year,

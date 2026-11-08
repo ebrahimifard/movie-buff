@@ -32,7 +32,10 @@ export type FestivalFilterState = {
   genres?: string[];
 };
 
-export type FestivalCategoryEntry = { category: string; result: "winner" | "nominee" };
+// isAward: whether the category is a competitive one (see
+// FestivalFilterRow.categoryIsAward) — a "nominee" in a non-competitive
+// section reads "Selected" on the card (lib/result-label.ts).
+export type FestivalCategoryEntry = { category: string; result: "winner" | "nominee"; isAward: boolean };
 
 // One card per movie: every FestivalFilterRow for a given filmId (a movie can
 // have several nominations at the same festival) collapses into a single
@@ -52,7 +55,11 @@ export type FestivalMovieGroup = {
   posterUrl: string;
   genres: string[];
   winCount: number;
+  // Nominee rows split by category kind: a competitive category counts as a
+  // nomination, a non-competitive section (Cannes Classics, Out of
+  // Competition, Directors' Fortnight, ...) as a selection.
   nomineeCount: number;
+  selectedCount: number;
   categories: FestivalCategoryEntry[];
 };
 
@@ -131,6 +138,7 @@ export function groupRowsByFilm(rows: FestivalFilterRow[]): FestivalMovieGroup[]
         genres: row.genres,
         winCount: 0,
         nomineeCount: 0,
+        selectedCount: 0,
         categories: []
       };
       groups.set(row.filmId, group);
@@ -144,11 +152,13 @@ export function groupRowsByFilm(rows: FestivalFilterRow[]): FestivalMovieGroup[]
     }
     if (row.result === "winner") {
       group.winCount += 1;
-    } else {
+    } else if (row.categoryIsAward) {
       group.nomineeCount += 1;
+    } else {
+      group.selectedCount += 1;
     }
     if (!group.categories.some((entry) => entry.category === row.category && entry.result === row.result)) {
-      group.categories.push({ category: row.category, result: row.result });
+      group.categories.push({ category: row.category, result: row.result, isAward: row.categoryIsAward });
     }
   }
 

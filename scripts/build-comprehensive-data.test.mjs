@@ -4,6 +4,7 @@ import {
   mergeNomination,
   isFabricatedHonoraryRecord,
   mergeFilmFields,
+  resolveDirectorNames,
   resolveCategoryIsAward,
   resolveCategoryIsHonoraryAward,
   resolveFilmId,
@@ -220,5 +221,13 @@ describe("mergeNomination", () => {
     const existing = { result: "winner", director: "A", directorIds: ["person:a"], country: "US" };
     mergeNomination(existing, { result: "nominee", directorNames: ["B"], directorIds: ["person:b"], country: "FR", credits: [] });
     expect(existing).toEqual({ result: "winner", director: "A", directorIds: ["person:a"], country: "US" });
+  });
+});
+
+describe("resolveDirectorNames", () => {
+  it("prefers the source's directors and falls back to TMDB's", () => {
+    expect(resolveDirectorNames({ directors: ["A"], film: { tmdbDirectors: ["B"] } })).toEqual(["A"]);
+    expect(resolveDirectorNames({ directors: [], film: { tmdbDirectors: ["B"] } })).toEqual(["B"]);
+    expect(resolveDirectorNames({ directors: [], film: {} })).toEqual([]);
   });
 });

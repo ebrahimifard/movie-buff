@@ -10,6 +10,7 @@ const root = process.cwd();
 const generatedPath = path.join(root, "data", "source", "master-data.generated.json");
 const cachePath = path.join(root, "data", "source", "tmdb-cache.json");
 const manualMatchesPath = path.join(root, "data", "source", "tmdb-manual-matches.json");
+const wikidataCachePath = path.join(root, "data", "source", "wikidata-cache.json");
 
 // TMDB enrichment lives in a standalone, additive cache keyed by imdbId (and,
 // for records with no imdbId, by titleYearFallbackKey) — never inside
@@ -144,6 +145,83 @@ export function directorsMatch(expectedNames, crew) {
   return expected.some((e) => actual.some((a) => e.some((token) => a.includes(token))));
 }
 
+// The directors TMDB credits for a movie (crew job "Director").
+export function tmdbDirectorNames(crew) {
+  return [...new Set((crew ?? []).filter((member) => member?.job === "Director" && member?.name).map((member) => member.name))];
+}
+
+export function tmdbYear(details) {
+  return Number(String(details?.release_date ?? "").slice(0, 4)) || 0;
+}
+
+// Stored on every cached film so a later run can re-check a match without
+// re-fetching it, and so build-comprehensive-data.mjs can fill a missing
+// director (see film.tmdbDirectors there).
+function tmdbProvenance(details) {
+  return { tmdbDirectors: tmdbDirectorNames(details?.credits?.crew), tmdbReleaseYear: tmdbYear(details) };
+}
+
+// Sections that re-screen old films (restorations, beach screenings): when
+// the source gave no "(YYYY)" of its own, record.film.releaseYear is just
+// the festival year, which says nothing about the film. Those records are
+// matched with no year constraint, but only on a confirmed director.
+const RETROSPECTIVE_SECTION_PATTERN = /^(cannes classics|cin[ée]ma de la plage)$/i;
+export function hasUnknownReleaseYear(record) {
+  return (
+    RETROSPECTIVE_SECTION_PATTERN.test(String(record?.category ?? "")) &&
+    (!record?.film?.releaseYear || record.film.releaseYear === record.year)
+  );
+}
+
+// Whether a cached TMDB match for this record is demonstrably wrong:
+//  - TMDB's directors disagree with the source's directors (a same-title
+//    remake or unrelated film), or
+//  - TMDB dates the film well after the festival edition it screened at, or
+//  - the source names the film's own year ("The Stranger (1946)") and TMDB's
+//    is far from it.
+// Unknown on either side never flags (no evidence either way).
+export function isSuspectMatch(record, film) {
+  const crew = (film?.tmdbDirectors ?? []).map((name) => ({ job: "Director", name }));
+  if (directorsMatch(record?.directors ?? [], crew) === false) return "director";
+  const matchedYear = film?.tmdbReleaseYear;
+  if (!matchedYear) return null;
+  if (record?.year && matchedYear > record.year + 1) return "after-festival";
+  const sourceYear = record?.film?.releaseYear;
+  if (sourceYear && sourceYear !== record?.year && Math.abs(matchedYear - sourceYear) > 3) return "release-year";
+  return null;
+}
+
+// Director-filmography fallback: from a director's TMDB movie credits
+// (crew job "Director"), the films whose title or original title matches
+// one of the record's titles within the year tolerance, closest first.
+// Also accepts one title extending the other ("Maverick" vs "Maverick:
+// The Epic Adventures of David Lean") when the year is within 1 — the
+// director is already confirmed by construction, so that's safe.
+export function pickFromFilmography(crewCredits, titles, year, maxYearGap = 3) {
+  const extends_ = (left, right) => {
+    const a = normalizeTitleForComparison(left);
+    const b = normalizeTitleForComparison(right);
+    return a.length >= 4 && b.length >= 4 && (a.startsWith(`${b} `) || b.startsWith(`${a} `));
+  };
+  const picks = [];
+  const seen = new Set();
+  for (const credit of crewCredits ?? []) {
+    if (credit?.job !== "Director" || !credit?.id || seen.has(credit.id)) continue;
+    const creditYear = Number(String(credit.release_date ?? "").slice(0, 4)) || 0;
+    const gap = year && creditYear ? Math.abs(creditYear - year) : year ? Number.POSITIVE_INFINITY : 0;
+    const exact = titles.some((title) => titlesMatch(credit.title, title) || titlesMatch(credit.original_title, title));
+    const loose = !exact && titles.some((title) => extends_(credit.title, title) || extends_(credit.original_title, title));
+    if (exact && (!year || gap <= maxYearGap)) {
+      picks.push({ credit, gap });
+      seen.add(credit.id);
+    } else if (loose && year && gap <= 1) {
+      picks.push({ credit, gap: gap + 0.5 });
+      seen.add(credit.id);
+    }
+  }
+  return picks.sort((a, b) => a.gap - b.gap).map((pick) => pick.credit);
+}
+
 // Wikipedia-sourced records (the majority of Cannes/BAFTA/Golden Globes/
 // Berlinale/Venice) never carry an imdbId, so the primary /find/{imdbId}
 // path (enrichRecord) skips them; they're matched by title search instead.
@@ -183,6 +261,31 @@ export async function loadManualMatches(filePath) {
   }
 }
 
+// IMDb ids resolved from each film's own Wikipedia article by
+// enrich-wikidata.mjs --phase=ids (data/source/wikidata-cache.json), keyed
+// by article title. Read directly rather than imported, to keep the two
+// scripts free of a circular import.
+export async function loadWikidataImdbIds(filePath) {
+  try {
+    const parsed = JSON.parse(await readFile(filePath, "utf8"));
+    const ids = new Map();
+    for (const [title, entry] of Object.entries(parsed.byWikipediaTitle ?? {})) {
+      if (entry?.imdbId && IMDB_ID_PATTERN.test(entry.imdbId)) ids.set(title, entry.imdbId);
+    }
+    return ids;
+  } catch (error) {
+    if (error?.code === "ENOENT") return new Map();
+    throw error;
+  }
+}
+
+// The exact IMDb id a record is known to be, when it has one without
+// searching: a hand-verified manual match first, then its own Wikipedia
+// article's Wikidata IMDb id.
+export function knownImdbIdFor(record, manualMatches, wikidataIds) {
+  return manualMatches.get(titleYearFallbackKey(record)) ?? (record?.film?.wikipediaTitle ? wikidataIds.get(record.film.wikipediaTitle) : undefined) ?? null;
+}
+
 // `--festival=cannes` (repeatable / comma-separated) limits the title/year
 // search pass to those festivals — the pass otherwise re-searches every
 // still-unmatched record across ALL festivals on each run.
@@ -213,6 +316,7 @@ async function enrichRecord(record, apiKey) {
 
   const detailsUrl = new URL(`https://api.themoviedb.org/3/movie/${movie.id}`);
   detailsUrl.searchParams.set("api_key", apiKey);
+  detailsUrl.searchParams.set("append_to_response", "credits");
 
   const details = await fetchJson(detailsUrl, `TMDB movie ${movie.id}`);
   const posterPath = details?.poster_path ? `https://image.tmdb.org/t/p/w500${details.poster_path}` : "";
@@ -221,6 +325,7 @@ async function enrichRecord(record, apiKey) {
     ...record,
     film: {
       ...record.film,
+      ...tmdbProvenance(details),
       posterUrl: record.film.posterUrl || posterPath,
       runtimeMinutes: record.film.runtimeMinutes || details.runtime || 0,
       releaseYear: record.film.releaseYear || Number(String(details.release_date || "").slice(0, 4)) || record.year,
@@ -243,8 +348,10 @@ async function enrichRecordByTitleYear(record, apiKey) {
   if (titles.length === 0) {
     return null;
   }
-  const year = record.film.releaseYear || record.year;
+  const unknownYear = hasUnknownReleaseYear(record);
+  const year = unknownYear ? 0 : record.film.releaseYear || record.year;
   const directors = record.directors ?? [];
+  if (unknownYear && !directors.length) return null;
   // A known director lets an older film match a TMDB entry dated a couple
   // of years off (festival premiere vs. TMDB's domestic release date) — but
   // only with the director confirmed; without one, the strict ±1 stands.
@@ -296,9 +403,40 @@ async function enrichRecordByTitleYear(record, apiKey) {
       // year, or no year at all, needs a positive director confirmation.
       if (director === false) continue;
       if (!strictYear && director !== true) continue;
+      if (candidateYear && candidateYear > record.year + 1) continue;
 
       const film = toEnrichedFilm(record, details);
       if (film) return film;
+    }
+  }
+  return enrichRecordByFilmography(record, apiKey, titles, year);
+}
+
+// Last resort for a record with a known director: look the director up on
+// TMDB and match the title against their own directing credits — recovers
+// shorts and films whose common title buries them in a plain title search.
+async function enrichRecordByFilmography(record, apiKey, titles, year) {
+  for (const name of (record.directors ?? []).slice(0, 2)) {
+    const personUrl = new URL("https://api.themoviedb.org/3/search/person");
+    personUrl.searchParams.set("api_key", apiKey);
+    personUrl.searchParams.set("query", name);
+    const people = await fetchJson(personUrl, `TMDB person "${name}"`);
+    const matchingPeople = (people?.results ?? [])
+      .filter((person) => directorsMatch([name], [{ job: "Director", name: person?.name }]) === true)
+      .slice(0, 2);
+    for (const person of matchingPeople) {
+      const creditsUrl = new URL(`https://api.themoviedb.org/3/person/${person.id}/movie_credits`);
+      creditsUrl.searchParams.set("api_key", apiKey);
+      const credits = await fetchJson(creditsUrl, `TMDB credits ${person.id}`);
+      for (const pick of pickFromFilmography(credits?.crew, titles, year).slice(0, 2)) {
+        if (pick.release_date && Number(pick.release_date.slice(0, 4)) > record.year + 1) continue;
+        const detailsUrl = new URL(`https://api.themoviedb.org/3/movie/${pick.id}`);
+        detailsUrl.searchParams.set("api_key", apiKey);
+        detailsUrl.searchParams.set("append_to_response", "external_ids,credits");
+        const details = await fetchJson(detailsUrl, `TMDB movie ${pick.id}`);
+        const film = toEnrichedFilm(record, details);
+        if (film) return film;
+      }
     }
   }
   return null;
@@ -314,7 +452,11 @@ function toEnrichedFilm(record, details) {
   const posterPath = details?.poster_path ? `https://image.tmdb.org/t/p/w500${details.poster_path}` : "";
   return {
     ...record.film,
+    ...tmdbProvenance(details),
     imdbId,
+    // TMDB's date over the source's: a source without its own "(YYYY)"
+    // only carries the festival year as a placeholder.
+    releaseYear: tmdbYear(details) || record.film.releaseYear,
     posterUrl: record.film.posterUrl || posterPath,
     runtimeMinutes: record.film.runtimeMinutes || details.runtime || 0,
     countryCodes: record.film.countryCodes?.length ? record.film.countryCodes : toIsoCountryCodes(details.production_countries),
@@ -322,6 +464,22 @@ function toEnrichedFilm(record, details) {
     genres: record.film.genres?.length ? record.film.genres : toGenres(details.genres),
     synopsis: record.film.synopsis || details.overview || ""
   };
+}
+
+// Re-reads a cached title/year match's TMDB details by its imdbId, adding
+// tmdbDirectors/tmdbReleaseYear and filling any field still empty.
+async function refreshCachedFilm(film, apiKey) {
+  if (!film?.imdbId) return null;
+  const findUrl = new URL(`https://api.themoviedb.org/3/find/${film.imdbId}`);
+  findUrl.searchParams.set("api_key", apiKey);
+  findUrl.searchParams.set("external_source", "imdb_id");
+  const movie = (await fetchJson(findUrl, `TMDB find ${film.imdbId}`))?.movie_results?.[0];
+  if (!movie?.id) return { ...film, tmdbDirectors: [], tmdbReleaseYear: 0 };
+  const detailsUrl = new URL(`https://api.themoviedb.org/3/movie/${movie.id}`);
+  detailsUrl.searchParams.set("api_key", apiKey);
+  detailsUrl.searchParams.set("append_to_response", "external_ids,credits");
+  const details = await fetchJson(detailsUrl, `TMDB movie ${movie.id}`);
+  return toEnrichedFilm({ film }, { ...details, external_ids: { imdb_id: film.imdbId } });
 }
 
 async function enrichRecordByManualMatch(record, imdbId, apiKey) {
@@ -336,7 +494,7 @@ async function enrichRecordByManualMatch(record, imdbId, apiKey) {
   }
   const detailsUrl = new URL(`https://api.themoviedb.org/3/movie/${movie.id}`);
   detailsUrl.searchParams.set("api_key", apiKey);
-  detailsUrl.searchParams.set("append_to_response", "external_ids");
+  detailsUrl.searchParams.set("append_to_response", "external_ids,credits");
   const details = await fetchJson(detailsUrl, `TMDB movie ${movie.id}`);
   return toEnrichedFilm(record, { ...details, external_ids: { imdb_id: imdbId } }) ?? { ...record.film, imdbId };
 }
@@ -422,6 +580,74 @@ async function run() {
     }
   }
 
+  const festivalFilter = parseFestivalFilter(process.argv.slice(2));
+  const manualMatches = await loadManualMatches(manualMatchesPath);
+  const wikidataIds = await loadWikidataImdbIds(wikidataCachePath);
+  logStep(`known ids: ${manualMatches.size} manual match(es), ${wikidataIds.size} from Wikipedia/Wikidata links`);
+
+  // Revalidation pass (only with --festival=..., scoped to those festivals):
+  // older cache entries predate tmdbDirectors/tmdbReleaseYear, so (1) imdbId
+  // entries without them are dropped and re-fetched by the imdbId pass
+  // below, and (2) title/year matches get their TMDB details re-read, then
+  // every match is re-checked with isSuspectMatch — a demonstrably wrong one
+  // (director disagrees, TMDB year after the festival, far from the source's
+  // own year) is removed so the title/year pass searches it again.
+  if (festivalFilter) {
+    for (const record of records) {
+      const imdbId = record?.film?.imdbId;
+      if (!imdbId || !festivalFilter.has(record.festivalId)) continue;
+      if (imdbLookup.has(imdbId) && !Array.isArray(imdbLookup.get(imdbId)?.tmdbDirectors)) imdbLookup.delete(imdbId);
+    }
+
+    const signal = (r) => (r?.film?.wikipediaTitle ? 4 : 0) + (r?.directors?.length ? 2 : 0) + (r?.film?.originalTitle ? 1 : 0);
+    const cachedTargets = new Map();
+    for (const record of records) {
+      if (record?.film?.imdbId || !festivalFilter.has(record.festivalId)) continue;
+      const key = titleYearFallbackKey(record);
+      if (!fallbackLookup.has(key)) continue;
+      const existing = cachedTargets.get(key);
+      if (!existing || signal(record) > signal(existing)) cachedTargets.set(key, record);
+    }
+
+    const stale = [...cachedTargets.keys()].filter((key) => !Array.isArray(fallbackLookup.get(key)?.tmdbDirectors));
+    const staleChunks = chunk(stale, 5);
+    logStep(`revalidation: re-reading TMDB details for ${stale.length} cached title/year match(es)`);
+    let staleIndex = 0;
+    for (const group of staleChunks) {
+      staleIndex += 1;
+      await Promise.all(
+        group.map(async (key) => {
+          const film = fallbackLookup.get(key);
+          try {
+            const refreshed = await refreshCachedFilm(film, apiKey);
+            if (refreshed) fallbackLookup.set(key, refreshed);
+          } catch (error) {
+            console.warn(`[WARN] TMDB revalidation failed for ${key}:`, error);
+          }
+        })
+      );
+      if (staleIndex % 40 === 0 || staleIndex === staleChunks.length) {
+        await writeFile(cachePath, `${JSON.stringify(serializeTmdbCache(imdbLookup, fallbackLookup), null, 2)}\n`, "utf8");
+        logStep(`revalidation: chunk ${staleIndex}/${staleChunks.length}`);
+      }
+    }
+
+    const suspects = [];
+    for (const [key, record] of cachedTargets) {
+      const known = knownImdbIdFor(record, manualMatches, wikidataIds);
+      const cachedImdbId = fallbackLookup.get(key)?.imdbId;
+      // A known id (manual or the film's own Wikipedia article) settles it.
+      const reason = known ? (known === cachedImdbId ? null : "known-id") : isSuspectMatch(record, fallbackLookup.get(key));
+      if (reason) {
+        suspects.push({ key, reason, imdbId: fallbackLookup.get(key)?.imdbId });
+        fallbackLookup.delete(key);
+      }
+    }
+    await writeFile(cachePath, `${JSON.stringify(serializeTmdbCache(imdbLookup, fallbackLookup), null, 2)}\n`, "utf8");
+    logStep(`revalidation: dropped ${suspects.length} suspect match(es), to be searched again`);
+    for (const suspect of suspects) console.log(`  [suspect:${suspect.reason}] ${suspect.key} -> ${suspect.imdbId}`);
+  }
+
   const imdbUnique = [...new Set(records.map((record) => record?.film?.imdbId).filter((imdbId) => imdbId && !imdbLookup.has(imdbId)))];
   const imdbChunks = chunk(imdbUnique, 5);
   logStep(`imdbId pass: ${imdbUnique.length} uncached film(s) to fetch across ${imdbChunks.length} chunk(s)`);
@@ -459,11 +685,9 @@ async function run() {
   // /find endpoint. Deduped by title+year+festival first — many nomination
   // records point at the same film across different categories, and this
   // avoids searching TMDB once per nomination instead of once per film.
-  const festivalFilter = parseFestivalFilter(process.argv.slice(2));
   if (festivalFilter) {
     logStep(`title/year pass limited to festival(s): ${[...festivalFilter].join(", ")}`);
   }
-  const manualMatches = await loadManualMatches(manualMatchesPath);
   const noImdbRecords = records.filter((record) => !record?.film?.imdbId && (!festivalFilter || festivalFilter.has(record.festivalId)));
   const uniqueFallbackTargets = new Map();
   for (const record of noImdbRecords) {
@@ -472,7 +696,7 @@ async function run() {
       // Prefer the record that carries the most matching signal (director,
       // original title) when several nominations share one key.
       const existing = uniqueFallbackTargets.get(key);
-      const score = (r) => (r?.directors?.length ? 2 : 0) + (r?.film?.originalTitle ? 1 : 0);
+      const score = (r) => (r?.film?.wikipediaTitle ? 4 : 0) + (r?.directors?.length ? 2 : 0) + (r?.film?.originalTitle ? 1 : 0);
       if (!existing || score(record) > score(existing)) {
         uniqueFallbackTargets.set(key, record);
       }
@@ -489,9 +713,9 @@ async function run() {
       group.map(async (record) => {
         const key = titleYearFallbackKey(record);
         try {
-          const manualImdbId = manualMatches.get(key);
-          const enrichedFilm = manualImdbId
-            ? await enrichRecordByManualMatch(record, manualImdbId, apiKey)
+          const knownImdbId = knownImdbIdFor(record, manualMatches, wikidataIds);
+          const enrichedFilm = knownImdbId
+            ? await enrichRecordByManualMatch(record, knownImdbId, apiKey)
             : await enrichRecordByTitleYear(record, apiKey);
           if (enrichedFilm) {
             fallbackLookup.set(key, enrichedFilm);

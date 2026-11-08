@@ -111,6 +111,68 @@ export function buildCompetitionAudit({ sourceRecords, nominations, films }) {
   };
 }
 
+// Whole-festival view: every selection section (not only the competition).
+//   sections  — per year × section, scraped lineup count vs catalogue count
+//   coverage  — per field, how many Cannes films have it (director is per
+//               film: any of its Cannes nominations names one)
+//   suspects  — films whose data contradicts the festival: dated after the
+//               edition they screened at, or a restoration whose release
+//               year is still just the festival year (never identified)
+export const FILM_FIELDS = ["imdbId", "posterUrl", "runtimeMinutes", "genres", "synopsis", "director"];
+
+export function buildCannesAudit({ sourceRecords, nominations, films }) {
+  const filmsById = new Map(films.map((film) => [film.id, film]));
+  const cannes = nominations.filter((nomination) => nomination.festivalId === "cannes");
+
+  const sourceCounts = new Map(); // "year|section" -> count
+  for (const record of sourceRecords) {
+    if (record.festivalId !== "cannes" || record.result !== "nominee") continue;
+    const key = `${record.year}|${record.category}`;
+    sourceCounts.set(key, (sourceCounts.get(key) ?? 0) + 1);
+  }
+  const catalogueCounts = new Map();
+  for (const nomination of cannes) {
+    const key = `${nomination.year}|${nomination.category}`;
+    if (!sourceCounts.has(key)) continue; // awards, not selection sections
+    catalogueCounts.set(key, (catalogueCounts.get(key) ?? 0) + 1);
+  }
+  const sections = [...sourceCounts]
+    .map(([key, expected]) => {
+      const [year, section] = key.split(/\|(.*)/s);
+      return { year: Number(year), section, expected, inCatalogue: catalogueCounts.get(key) ?? 0 };
+    })
+    .sort((a, b) => a.year - b.year || a.section.localeCompare(b.section));
+
+  const directorByFilm = new Map();
+  for (const nomination of cannes) {
+    if (nomination.director) directorByFilm.set(nomination.filmId, nomination.director);
+  }
+  const filmIds = [...new Set(cannes.map((nomination) => nomination.filmId))];
+  const coverage = Object.fromEntries(FILM_FIELDS.map((field) => [field, 0]));
+  const gaps = [];
+  for (const filmId of filmIds) {
+    const film = filmsById.get(filmId);
+    const missing = FILM_FIELDS.filter((field) => (field === "director" ? !directorByFilm.has(filmId) : !hasValue(film?.[field])));
+    for (const field of FILM_FIELDS) if (!missing.includes(field)) coverage[field] += 1;
+    if (missing.length) gaps.push({ filmId, title: film?.title ?? filmId, missing });
+  }
+
+  const suspects = [];
+  const seen = new Set();
+  for (const nomination of cannes) {
+    const film = filmsById.get(nomination.filmId);
+    if (!film || seen.has(`${film.id}|${nomination.year}`)) continue;
+    seen.add(`${film.id}|${nomination.year}`);
+    if (film.releaseYear > nomination.year + 1) {
+      suspects.push({ year: nomination.year, title: film.title, filmId: film.id, section: nomination.category, reason: `released ${film.releaseYear}, after the festival` });
+    } else if (nomination.category === "Cannes Classics" && film.releaseYear === nomination.year) {
+      suspects.push({ year: nomination.year, title: film.title, filmId: film.id, section: nomination.category, reason: "restoration with unidentified release year" });
+    }
+  }
+
+  return { films: filmIds.length, coverage, gaps, sections, suspects };
+}
+
 async function readJson(relativePath) {
   return JSON.parse(await readFile(path.join(process.cwd(), relativePath), "utf8"));
 }
@@ -147,9 +209,29 @@ async function run() {
     for (const gap of audit.metadataGaps) console.log(`  ${gap.year}  ${gap.title}  [${gap.missing.join(", ")}]`);
   }
 
+  const whole = buildCannesAudit({
+    sourceRecords,
+    nominations: await readJson("data/normalized/nominations.json"),
+    films: await readJson("data/normalized/films.json")
+  });
+  const filmPct = (n) => (whole.films ? ((100 * n) / whole.films).toFixed(1) : "0.0");
+  console.log(`\nAll Cannes films: ${whole.films}`);
+  for (const [field, count] of Object.entries(whole.coverage)) {
+    console.log(`  ${field.padEnd(15)} ${count} (${filmPct(count)}%)`);
+  }
+  const shortSections = whole.sections.filter((row) => row.inCatalogue < row.expected);
+  console.log(`\nSelection sections (year × section): ${whole.sections.length}; below the scraped lineup: ${shortSections.length}`);
+  for (const row of shortSections) console.log(`  ${row.year}  ${row.section}: ${row.inCatalogue}/${row.expected}`);
+  console.log(`\nSuspect entries: ${whole.suspects.length}`);
+  for (const suspect of whole.suspects) console.log(`  ${suspect.year}  ${suspect.section}  ${suspect.title} (${suspect.filmId}) — ${suspect.reason}`);
+  if (args.includes("--list")) {
+    console.log("\nCannes films missing metadata:");
+    for (const gap of whole.gaps) console.log(`  ${gap.title} (${gap.filmId})  [${gap.missing.join(", ")}]`);
+  }
+
   const jsonArg = args.find((arg) => arg.startsWith("--json="));
   if (jsonArg) {
-    await writeFile(jsonArg.slice("--json=".length), `${JSON.stringify(audit, null, 2)}\n`, "utf8");
+    await writeFile(jsonArg.slice("--json=".length), `${JSON.stringify({ competition: audit, festival: whole }, null, 2)}\n`, "utf8");
   }
 }
 

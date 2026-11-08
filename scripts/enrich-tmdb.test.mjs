@@ -3,6 +3,11 @@ import {
   buildEnrichedPayload,
   chunk,
   directorsMatch,
+  hasUnknownReleaseYear,
+  isSuspectMatch,
+  knownImdbIdFor,
+  pickFromFilmography,
+  tmdbDirectorNames,
   parseFestivalFilter,
   rankTitleMatches,
   serializeTmdbCache,
@@ -228,5 +233,76 @@ describe("titleYearFallbackKey", () => {
     const a = { festivalId: "cannes", year: 2020, film: { title: "Film A" } };
     const b = { festivalId: "cannes", year: 2020, film: { title: "Film B" } };
     expect(titleYearFallbackKey(a)).not.toBe(titleYearFallbackKey(b));
+  });
+});
+
+describe("tmdbDirectorNames", () => {
+  it("keeps only crew credited as Director, deduped", () => {
+    const crew = [
+      { job: "Director", name: "Orson Welles" },
+      { job: "Writer", name: "Anthony Veiller" },
+      { job: "Director", name: "Orson Welles" }
+    ];
+    expect(tmdbDirectorNames(crew)).toEqual(["Orson Welles"]);
+    expect(tmdbDirectorNames(undefined)).toEqual([]);
+  });
+});
+
+describe("hasUnknownReleaseYear", () => {
+  const record = (category, releaseYear) => ({ category, year: 2026, film: { title: "x", releaseYear } });
+  it("is true only for a retrospective section whose release year is just the festival year", () => {
+    expect(hasUnknownReleaseYear(record("Cannes Classics", 2026))).toBe(true);
+    expect(hasUnknownReleaseYear(record("Cinéma de la Plage", 2026))).toBe(true);
+    expect(hasUnknownReleaseYear(record("Cannes Classics", 1946))).toBe(false);
+    expect(hasUnknownReleaseYear(record("Cannes Classics – Documentaries about Cinema", 2026))).toBe(false);
+    expect(hasUnknownReleaseYear(record("Palme d'Or", 2026))).toBe(false);
+  });
+});
+
+describe("isSuspectMatch", () => {
+  const record = { year: 2026, category: "Cannes Classics", directors: ["Vittorio De Sica"], film: { title: "Two Women", releaseYear: 1960 } };
+  it("flags a match whose TMDB director disagrees with the source", () => {
+    expect(isSuspectMatch(record, { tmdbDirectors: ["Someone Else"], tmdbReleaseYear: 1960 })).toBe("director");
+  });
+  it("flags a match far from the source's own (YYYY) release year", () => {
+    expect(isSuspectMatch({ ...record, directors: [] }, { tmdbDirectors: [], tmdbReleaseYear: 2024 })).toBe("release-year");
+  });
+  it("flags a match TMDB dates after the festival edition", () => {
+    expect(isSuspectMatch({ year: 2010, directors: [], film: { releaseYear: 2010 } }, { tmdbReleaseYear: 2015 })).toBe("after-festival");
+  });
+  it("accepts a consistent match and never flags on missing evidence", () => {
+    expect(isSuspectMatch(record, { tmdbDirectors: ["Vittorio De Sica"], tmdbReleaseYear: 1960 })).toBeNull();
+    expect(isSuspectMatch(record, {})).toBeNull();
+  });
+});
+
+describe("pickFromFilmography", () => {
+  const crew = [
+    { id: 1, job: "Director", title: "Torino Shadow", original_title: "都灵之影", release_date: "2026-05-01" },
+    { id: 2, job: "Director", title: "Still Life", original_title: "三峡好人", release_date: "2006-09-05" },
+    { id: 3, job: "Producer", title: "Torino Shadow", release_date: "2026-05-01" },
+    { id: 4, job: "Director", title: "Maverick", release_date: "2026-01-01" }
+  ];
+  it("matches a directing credit by title or original title within the year gap", () => {
+    expect(pickFromFilmography(crew, ["都灵之影"], 2026).map((c) => c.id)).toEqual([1]);
+    expect(pickFromFilmography(crew, ["Still Life"], 2006).map((c) => c.id)).toEqual([2]);
+    expect(pickFromFilmography(crew, ["Still Life"], 2015)).toEqual([]);
+  });
+  it("matches any year when the year is unknown (0)", () => {
+    expect(pickFromFilmography(crew, ["Still Life"], 0).map((c) => c.id)).toEqual([2]);
+  });
+  it("accepts a title that extends the credit's title only within one year", () => {
+    expect(pickFromFilmography(crew, ["Maverick: The Epic Adventures of David Lean"], 2026).map((c) => c.id)).toEqual([4]);
+    expect(pickFromFilmography(crew, ["Maverick: The Epic Adventures of David Lean"], 2020)).toEqual([]);
+  });
+});
+
+describe("knownImdbIdFor", () => {
+  const record = { festivalId: "cannes", year: 2026, film: { title: "The Stranger", wikipediaTitle: "The Stranger (1946 film)" } };
+  it("prefers a manual match, then the film's own Wikipedia article id, else null", () => {
+    const wikidata = new Map([["The Stranger (1946 film)", "tt0038991"]]);
+    expect(knownImdbIdFor(record, new Map(), wikidata)).toBe("tt0038991");
+    expect(knownImdbIdFor(record, new Map([["cannes|2026|the stranger", "tt9999999"]]), wikidata)).toBe("tt9999999");
+    expect(knownImdbIdFor({ ...record, film: { title: "The Stranger" } }, new Map(), wikidata)).toBeNull();
   });
 });

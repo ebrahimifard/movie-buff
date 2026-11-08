@@ -270,8 +270,23 @@ describe("groupRowsByFilm", () => {
     expect(tt1.winCount).toBe(1);
     expect(tt1.nomineeCount).toBe(1);
     expect(tt1.categories).toEqual([
-      { category: "Best Picture", result: "winner" },
-      { category: "Best Director", result: "nominee" }
+      { category: "Best Picture", result: "winner", isAward: true },
+      { category: "Best Director", result: "nominee", isAward: true }
+    ]);
+  });
+
+  it("counts a nominee in a non-competitive section as a selection, not a nomination", () => {
+    const nominations = [
+      nomination({ id: "n1", filmId: "tt1", category: "Palme d'Or", categoryId: "c:palme", result: "nominee" }),
+      nomination({ id: "n2", filmId: "tt1", category: "Cannes Classics", categoryId: "c:classics", result: "nominee" })
+    ];
+    const rows = buildFestivalFilterRows(nominations, new Map([["tt1", film({ id: "tt1" })]]), categoriesById(nominations, ["c:classics"]));
+    const [group] = groupRowsByFilm(rows);
+    expect(group.nomineeCount).toBe(1);
+    expect(group.selectedCount).toBe(1);
+    expect(group.categories).toEqual([
+      { category: "Palme d'Or", result: "nominee", isAward: true },
+      { category: "Cannes Classics", result: "nominee", isAward: false }
     ]);
   });
 
@@ -312,7 +327,7 @@ describe("groupRowsByFilm", () => {
     const rows = buildFestivalFilterRows(nominations, new Map([["tt1", film({ id: "tt1" })]]), categoriesById(nominations));
 
     const groups = groupRowsByFilm(rows);
-    expect(groups[0].categories).toEqual([{ category: "Best Picture", result: "nominee" }]);
+    expect(groups[0].categories).toEqual([{ category: "Best Picture", result: "nominee", isAward: true }]);
     expect(groups[0].nomineeCount).toBe(2);
   });
 

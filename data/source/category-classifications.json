@@ -2308,6 +2308,12 @@
     },
     {
       "festivalId": "cannes",
+      "category": "ACID",
+      "isAward": false,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
       "category": "ACID Award",
       "isAward": true,
       "isHonoraryAward": false
@@ -2698,6 +2704,18 @@
     },
     {
       "festivalId": "cannes",
+      "category": "Cannes Classics – Documentaries about Cinema",
+      "isAward": false,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Cannes Classics – Special Screenings",
+      "isAward": false,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
       "category": "Cannes Film Festival Award for Best Actor",
       "isAward": true,
       "isHonoraryAward": false
@@ -2848,6 +2866,12 @@
     },
     {
       "festivalId": "cannes",
+      "category": "Critics' Week",
+      "isAward": false,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
       "category": "Critics' Week (Semaine de la critique)",
       "isAward": false,
       "isHonoraryAward": false
@@ -2873,7 +2897,7 @@
     {
       "festivalId": "cannes",
       "category": "Directors' Fortnight",
-      "isAward": true,
+      "isAward": false,
       "isHonoraryAward": false
     },
     {

@@ -105,6 +105,73 @@ export function isMainCompetitionSelection(rawHeading, topHeading) {
   return MAIN_COMPETITION_HEADING_PATTERN.test(String(rawHeading ?? "").trim());
 }
 
+function foldHeading(text) {
+  return String(text ?? "")
+    .normalize("NFKD")
+    .replace(/\p{M}+/gu, "")
+    .replace(/[’‘`]/g, "'")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+}
+
+// One canonical name per Cannes selection section. Wikipedia spells the same
+// section many ways across years ("Short film competition" / "Short Films
+// Competition" / "Short films"; "International Critics' Week" / "Critics'
+// Week (Semaine de la critique)"; "Directors' Fortnight (Quinzaine des
+// Réalisateurs)"; "Cinéma de la plage"), which otherwise splits one section
+// into several categories. Only applied to SELECTION (nominee) records —
+// award names are left alone. Returns null for a bare umbrella heading
+// ("Parallel sections", "Independent sections") that names no section.
+//
+// 2020 (COVID): no festival was held; the films announced with the
+// "Cannes 2020" label under "Official sections" (The Faithful, The
+// Newcomers, First Features, Documentary/Comedy/Animated, Omnibus) are
+// that year's main selection and are recorded as its competition.
+export function canonicalCannesSection(raw, year) {
+  const text = foldHeading(raw);
+  if (!text) return raw;
+  if (/^palme d'?or$/.test(text)) return MAIN_COMPETITION_CATEGORY;
+  if (year === 2020 && /^(official (sections?|selection)|the faithful|the newcomers|omnibus films?|(the )?first features?)/.test(text)) {
+    return MAIN_COMPETITION_CATEGORY;
+  }
+  if (/^un certain regard/.test(text)) return "Un Certain Regard";
+  if (/^out of competition/.test(text)) return "Out of Competition";
+  if (/^cannes premiere/.test(text)) return "Cannes Premiere";
+  if (/^special screenings?|^three films for ukraine/.test(text)) return "Special Screenings";
+  if (/^cannes classics/.test(text)) {
+    const sub = text.match(/^cannes classics\s*[–-]\s*(.+)$/);
+    return sub ? cannesClassicsSubSection(sub[1]) : "Cannes Classics";
+  }
+  if (/^cinema de la plage/.test(text)) return "Cinéma de la Plage";
+  if (/^(la )?cine(f|ph)onda?tion|^cinefoundation|^la cinef/.test(text)) return "Cinéfondation";
+  if (/critics'? week|semaine de la critique/.test(text)) return "Critics' Week";
+  if (/directors'? fortnight|quinzaine des/.test(text)) return "Directors' Fortnight";
+  if (/^acid\b/.test(text)) return "ACID";
+  if (/^short (and medium-length )?films?( competition)?$/.test(text)) return "Short Films Competition";
+  if (/^(parallel|independent) sections?$/.test(text)) return null;
+  return cleanHeading(raw);
+}
+
+function cleanHeading(text) {
+  return String(text ?? "")
+    .replace(/\[[^\]]*\]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+// Cannes Classics tables group rows under full-width sub-heading rows.
+// "Restored prints"/"World Cinema Foundation"/"Federico 100" are still
+// restorations, but "Special Screenings" (often new shorts) and
+// "Documentaries about Cinema" are new films — kept as their own sections
+// so they don't read as restored classics.
+export function cannesClassicsSubSection(subHeading) {
+  const text = foldHeading(subHeading);
+  if (/documentar/.test(text)) return "Cannes Classics – Documentaries about Cinema";
+  if (/special screening|short films?/.test(text)) return "Cannes Classics – Special Screenings";
+  return "Cannes Classics";
+}
+
 // Trailing footnote/annotation markers Wikipedia's selection tables attach
 // to a title — "‡" (opening film), "*" / "†" (debut, closing film, ...).
 const FOOTNOTE_MARKER_PATTERN = /\s*[‡†*§¤#^]+\s*$/u;
@@ -170,6 +237,31 @@ function readOriginalTitle(cell) {
   const text = cellTextWithBreaks(cell).replace(FOOTNOTE_MARKER_PATTERN, "").trim();
   if (!text || /^[-–—]+$/.test(text)) return null;
   return text;
+}
+
+// The film's own English Wikipedia article, from its italicized title link
+// ("<i><a href="/wiki/The_Stranger_(1946_film)">The Stranger</a></i>") —
+// an exact identifier enrich-wikidata.mjs resolves to Wikidata and IMDb.
+// Red links (no article yet) and links outside the title's italics are
+// ignored: only the title's own link names the film.
+export function readWikipediaTitle(container, nestedUl = null) {
+  // Both nestings occur: <i><a>Title</a></i> and <a><i>Title</i></a>.
+  for (const link of container?.querySelectorAll?.("a[href]") ?? []) {
+    if (nestedUl && nestedUl.contains(link)) continue;
+    if (!link.closest("i") && !link.querySelector("i")) continue;
+    // Relative ("/wiki/X") or absolute ("https://en.wikipedia.org/wiki/X")
+    // — Wikipedia serves both depending on the renderer.
+    const href = (link.getAttribute("href") ?? "").replace(/^(?:https?:)?\/\/en\.wikipedia\.org(?=\/wiki\/)/, "");
+    if (link.classList.contains("new") || !href.startsWith("/wiki/") || /redlink=1/.test(href)) continue;
+    const page = href.slice("/wiki/".length).split(/[#?]/)[0];
+    if (!page || /^[A-Za-z]+:/.test(page)) continue;
+    try {
+      return decodeURIComponent(page).replace(/_/g, " ");
+    } catch {
+      return page.replace(/_/g, " ");
+    }
+  }
+  return null;
 }
 
 // The awards list sometimes names the top-prize winner differently from
@@ -341,14 +433,19 @@ export function parseCannesWikipedia(html, year) {
     if (!cleanTitle) return;
     if (/^(english title|original title|director\(s\)|directors|production country|country|school|year|main page|current events|random article|about wikipedia)$/i.test(cleanTitle)) return;
 
-    const normalizedCategory = normalizeCategory(category);
+    let normalizedCategory = normalizeCategory(category);
 
-    // A film merely selected for a non-competitive parallel section, with
-    // no more specific award name anywhere in the heading chain, was never
-    // actually given an award — see NON_COMPETITIVE_SELECTION_PATTERN.
-    // Anchored match only, so a qualified real prize within one of these
-    // strands is unaffected.
-    if (NON_COMPETITIVE_SELECTION_PATTERN.test(normalizedCategory)) return;
+    if (result === "nominee") {
+      // A selection entry: every section (Critics' Week, Directors'
+      // Fortnight and ACID included) is kept, under its canonical name.
+      normalizedCategory = canonicalCannesSection(normalizedCategory, year);
+      if (!normalizedCategory) return;
+    } else if (NON_COMPETITIVE_SELECTION_PATTERN.test(normalizedCategory)) {
+      // An AWARD whose only name is a bare strand ("Critics' Week") is not
+      // a prize — see NON_COMPETITIVE_SELECTION_PATTERN. A qualified real
+      // prize within one of these strands is unaffected.
+      return;
+    }
 
     // Career/honorary categories (Honorary Palm d'Or, Lifetime Achievement
     // Award, ...) are given directly to a person, often with no associated
@@ -374,6 +471,7 @@ export function parseCannesWikipedia(html, year) {
         title: cleanTitle,
         releaseYear: originalReleaseYear ?? year,
         ...(extra.originalTitle && extra.originalTitle.toLowerCase() !== cleanTitle.toLowerCase() ? { originalTitle: extra.originalTitle } : {}),
+        ...(extra.wikipediaTitle ? { wikipediaTitle: extra.wikipediaTitle } : {}),
         imdbId: null,
         countryCodes: extra.countryCodes ?? [],
         languages: [],
@@ -495,7 +593,7 @@ export function parseCannesWikipedia(html, year) {
     }
   }
 
-  function parseNomineeListItem(li, sectionCategory, isMainCompetition = false) {
+  function parseNomineeListItem(li, sectionCategory) {
     const text = cleanText(li.textContent);
     if (!text) return;
 
@@ -507,10 +605,14 @@ export function parseCannesWikipedia(html, year) {
       .trim();
 
     const title = extracted.title ?? fallback;
-    // A main-competition list item ("Title by Director", 1946–49) names the
-    // film's director — Palme d'Or isn't a director-role category, so it has
-    // to be passed explicitly.
-    const extra = isMainCompetition && extracted.personName ? { directors: [extracted.personName] } : {};
+    // A selection list item ("Title by Director", "Title – Director") names
+    // the film's director in every section — a section name isn't a
+    // director-role category, so it has to be passed explicitly. Only
+    // trusted when the title came from Wikipedia's italics convention, so
+    // the person link really is a separate credit and not the title itself.
+    const extra = extracted.hasFilmSignal && extracted.personName ? { directors: [extracted.personName] } : {};
+    const wikipediaTitle = readWikipediaTitle(li, directChild(li, "UL"));
+    if (wikipediaTitle) extra.wikipediaTitle = wikipediaTitle;
     addRecord(sectionCategory, "nominee", title, extracted.personName, extracted.hasFilmSignal, extracted.originalReleaseYear, extra);
   }
 
@@ -524,11 +626,20 @@ export function parseCannesWikipedia(html, year) {
     if (rows.length === 0) return;
 
     let headers = [];
+    // Cannes Classics groups its rows under full-width sub-heading rows (one
+    // cell spanning every column — expandTableRows repeats that same element
+    // across the row); see cannesClassicsSubSection.
+    let rowCategory = sectionCategory;
     rows.forEach((cells, idx) => {
       if (cells.length === 0) return;
 
       if (idx === 0 && cells.every(c => c.tagName === "TH")) {
         headers = cells.map(c => cleanText(c.textContent).toLowerCase());
+        return;
+      }
+      const isFullWidthSubHeading = idx > 0 && cells.length > 1 && cells.every((c) => c === cells[0]);
+      if (isFullWidthSubHeading && !isAwardsSection && canonicalCannesSection(sectionCategory, year) === "Cannes Classics") {
+        rowCategory = cannesClassicsSubSection(cleanText(cells[0].textContent));
         return;
       }
       if (cells.every(c => c.tagName === "TH")) return;
@@ -546,6 +657,8 @@ export function parseCannesWikipedia(html, year) {
           personName = extracted.personName;
           hasFilmSignal = extracted.hasFilmSignal;
           originalReleaseYear = extracted.originalReleaseYear;
+          const wikipediaTitle = readWikipediaTitle(cells[filmIdx]);
+          if (wikipediaTitle) extra.wikipediaTitle = wikipediaTitle;
         }
         // Selection tables' extra columns (English title | Original title |
         // Director(s) | Production country) — the signals TMDB matching and
@@ -573,6 +686,8 @@ export function parseCannesWikipedia(html, year) {
         personName = personName ?? extracted.personName;
         hasFilmSignal = extracted.hasFilmSignal;
         originalReleaseYear = originalReleaseYear ?? extracted.originalReleaseYear;
+        const wikipediaTitle = readWikipediaTitle(cells[0]);
+        if (wikipediaTitle && !extra.wikipediaTitle) extra.wikipediaTitle = wikipediaTitle;
       }
       if (!title) return;
 
@@ -586,7 +701,7 @@ export function parseCannesWikipedia(html, year) {
         }
         addRecord(category, "winner", title, personName, hasFilmSignal, originalReleaseYear);
       } else {
-        addRecord(sectionCategory, "nominee", title, personName, hasFilmSignal, originalReleaseYear, extra);
+        addRecord(rowCategory, "nominee", title, personName, hasFilmSignal, originalReleaseYear, extra);
       }
     });
   }
@@ -608,7 +723,7 @@ export function parseCannesWikipedia(html, year) {
       if (isAwards) {
         parseAwardsListItem(li, ctx.section);
       } else if (isFilmSection) {
-        parseNomineeListItem(li, sectionCategory, isMainCompetition);
+        parseNomineeListItem(li, sectionCategory);
       }
     });
   });

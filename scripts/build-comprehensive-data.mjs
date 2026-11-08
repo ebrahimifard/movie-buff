@@ -62,6 +62,15 @@ export function isFabricatedHonoraryRecord(entry, isHonoraryAward) {
   return isHonoraryAward === true && !hasRealFilmSignal;
 }
 
+// The source's own director credit wins; when it names none (award rows
+// like Best Actor carry the honoree instead, and many selection lists omit
+// the director), fall back to the directors TMDB credits for the matched
+// film (film.tmdbDirectors, set by enrich-tmdb.mjs).
+export function resolveDirectorNames(entry) {
+  if (entry?.directors?.length) return entry.directors;
+  return entry?.film?.tmdbDirectors ?? [];
+}
+
 export function slugify(input) {
   return input
     .toLowerCase()
@@ -239,7 +248,7 @@ async function run() {
       });
     }
 
-    const directorNames = uniqueSorted(entry.directors);
+    const directorNames = uniqueSorted(resolveDirectorNames(entry));
     const directorIds = directorNames.map((name) => resolvePersonId(personMap, name, "director"));
 
     // entry.credits (populated by the Wikipedia scrapers for individual-award

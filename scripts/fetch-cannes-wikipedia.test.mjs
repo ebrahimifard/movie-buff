@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { expandTableRows, isMainCompetitionSelection, parseCannesWikipedia } from "./fetch-cannes-wikipedia.mjs";
+import { canonicalCannesSection, expandTableRows, readWikipediaTitle, isMainCompetitionSelection, parseCannesWikipedia } from "./fetch-cannes-wikipedia.mjs";
+import { JSDOM } from "jsdom";
 
 function wrapHtml(body) {
   return `<!doctype html><html><body><div id="mw-content-text"><div class="mw-parser-output">${body}</div></div></body></html>`;
@@ -158,7 +159,7 @@ describe("parseCannesWikipedia", () => {
     expect(parseCannesWikipedia(html, 2009)).toEqual([]);
   });
 
-  it("drops a film merely listed under a non-competitive parallel section with no more specific award (ACID)", () => {
+  it("keeps a film listed under a parallel section (ACID) as a selection entry", () => {
     const html = wrapHtml(`
       <h2>Parallel Sections</h2>
       <h3>ACID</h3>
@@ -166,10 +167,12 @@ describe("parseCannesWikipedia", () => {
         <li><i><a href="/wiki/Film5">Another Film</a></i></li>
       </ul>
     `);
-    expect(parseCannesWikipedia(html, 2019)).toEqual([]);
+    const records = parseCannesWikipedia(html, 2019);
+    expect(records).toHaveLength(1);
+    expect(records[0]).toMatchObject({ category: "ACID", result: "nominee" });
   });
 
-  it("walks up past a pure format-grouping sub-heading (Features) to the enclosing strand, then drops the bare strand name", () => {
+  it("walks up past a pure format-grouping sub-heading (Features) to the enclosing strand and keeps the film under it", () => {
     // Confirmed live (2019 Cannes Film Festival): Critics' Week > "Features"
     // is a format-grouping h4 with no award name of its own.
     const html = wrapHtml(`
@@ -180,7 +183,9 @@ describe("parseCannesWikipedia", () => {
         <li><i><a href="/wiki/Film6">Yet Another Film</a></i></li>
       </ul>
     `);
-    expect(parseCannesWikipedia(html, 2019)).toEqual([]);
+    const records = parseCannesWikipedia(html, 2019);
+    expect(records).toHaveLength(1);
+    expect(records[0]).toMatchObject({ category: "Critics' Week", result: "nominee" });
   });
 
   it("does not drop a real, specifically-named prize awarded within a parallel section", () => {
@@ -212,7 +217,7 @@ describe("parseCannesWikipedia", () => {
     expect(records[0].category).toBe("Awards");
   });
 
-  it("walks up past 2020's genre-grouping headings ('Comedy Films', 'The First Features') to 'Official sections'", () => {
+  it("records 2020's 'Official sections' selection (incl. genre-grouping headings) as that year's competition", () => {
     // Confirmed live (2020 Cannes Film Festival, COVID-cancelled — only a
     // curated "Official sections" selection was announced, no competitive
     // awards): "Official sections" (h2) > "Comedy Films" (h3) and
@@ -231,7 +236,7 @@ describe("parseCannesWikipedia", () => {
     `);
     const records = parseCannesWikipedia(html, 2020);
     expect(records).toHaveLength(2);
-    expect(records.every((record) => record.category === "Official sections")).toBe(true);
+    expect(records.every((record) => record.category === "Palme d'Or" && record.result === "nominee")).toBe(true);
   });
 
   it("falls back to the enclosing section when a per-item bold label is itself a format/eligibility annotation, not an award", () => {
@@ -605,5 +610,100 @@ describe("isMainCompetitionSelection", () => {
     expect(isMainCompetitionSelection("Short Films Competition", "Official Selection")).toBe(false);
     expect(isMainCompetitionSelection("Main competition", "Juries")).toBe(false);
     expect(isMainCompetitionSelection("In Competition", "Official Awards")).toBe(false);
+  });
+});
+
+describe("canonicalCannesSection", () => {
+  it("collapses every spelling of a section to one name", () => {
+    const cases = {
+      "Short film competition": "Short Films Competition",
+      "Short films Competition": "Short Films Competition",
+      "Short and medium-length films": "Short Films Competition",
+      "International Critics' Week": "Critics' Week",
+      "Critics’ Week (Semaine de la critique)": "Critics' Week",
+      "Directors' Fortnight (Quinzaine des Réalizateurs)": "Directors' Fortnight",
+      "Directors' Fortnight (Quinzaine des cinéastes)": "Directors' Fortnight",
+      "ACID Trip #1 – Serbia": "ACID",
+      "Cinéma de la plage": "Cinéma de la Plage",
+      "Out of competition": "Out of Competition",
+      "Three films for Ukraine": "Special Screenings",
+      "Cinéfoundation and short films": "Cinéfondation"
+    };
+    for (const [raw, expected] of Object.entries(cases)) expect(canonicalCannesSection(raw, 2012)).toBe(expected);
+  });
+
+  it("maps 2020's label selection to the competition only in 2020", () => {
+    for (const raw of ["Official sections", "The Faithful (or at least selected once before)", "The Newcomers", "Omnibus Film"]) {
+      expect(canonicalCannesSection(raw, 2020)).toBe("Palme d'Or");
+    }
+    expect(canonicalCannesSection("Official sections", 2019)).toBe("Official sections");
+  });
+
+  it("returns null for a bare umbrella heading", () => {
+    expect(canonicalCannesSection("Parallel sections", 2010)).toBeNull();
+    expect(canonicalCannesSection("Independent sections", 2020)).toBeNull();
+  });
+});
+
+describe("parseCannesWikipedia — Cannes Classics sub-headings", () => {
+  it("splits new films under a full-width sub-heading row into their own section, and keeps restorations' real release year", () => {
+    const html = wrapHtml(`
+      <h2>Official Selection</h2>
+      <h3>Cannes Classics</h3>
+      <table class="wikitable">
+        <tr><th>English title</th><th>Original title</th><th>Director(s)</th><th>Production country</th></tr>
+        <tr><td colspan="2"><i><a href="/wiki/The_Stranger_(1946_film)">The Stranger</a></i> (1946)</td><td><a href="/wiki/Orson_Welles">Orson Welles</a></td><td>United States</td></tr>
+        <tr><th colspan="4">Special Screenings - Short Films</th></tr>
+        <tr><td><i>Torino Shadow</i></td><td>都灵之影</td><td><a href="/wiki/Jia_Zhangke">Jia Zhangke</a></td><td>Italy, China</td></tr>
+        <tr><th colspan="4">Documentaries about Cinema</th></tr>
+        <tr><td colspan="2"><i>My Coluche</i></td><td>Michel Denisot</td><td>France</td></tr>
+      </table>
+    `);
+    const records = parseCannesWikipedia(html, 2026);
+    expect(records.map((r) => [r.film.title, r.category, r.film.releaseYear, r.directors])).toEqual([
+      ["The Stranger", "Cannes Classics", 1946, ["Orson Welles"]],
+      ["Torino Shadow", "Cannes Classics – Special Screenings", 2026, ["Jia Zhangke"]],
+      ["My Coluche", "Cannes Classics – Documentaries about Cinema", 2026, ["Michel Denisot"]]
+    ]);
+  });
+
+  it("keeps a parallel section's table (Directors' Fortnight) with directors", () => {
+    const html = wrapHtml(`
+      <h2>Parallel sections</h2>
+      <h3>Directors' Fortnight</h3>
+      <table class="wikitable">
+        <tr><th>English title</th><th>Director(s)</th><th>Production country</th></tr>
+        <tr><td><i>Beasts of the Southern Wild</i></td><td>Benh Zeitlin</td><td>United States</td></tr>
+      </table>
+    `);
+    const [record] = parseCannesWikipedia(html, 2012);
+    expect(record).toMatchObject({ category: "Directors' Fortnight", result: "nominee", directors: ["Benh Zeitlin"] });
+    expect(record.film.countryCodes).toEqual(["US"]);
+  });
+
+  it("passes a list item's director for every section, not just the competition", () => {
+    const html = wrapHtml(`
+      <h2>Official selection</h2>
+      <h3>Un Certain Regard</h3>
+      <ul><li><i><a href="/wiki/F">Some Film</a></i> by <a href="/wiki/D">Some Director</a></li></ul>
+    `);
+    const [record] = parseCannesWikipedia(html, 1985);
+    expect(record).toMatchObject({ category: "Un Certain Regard", directors: ["Some Director"] });
+  });
+});
+
+describe("readWikipediaTitle", () => {
+  const cell = (html) => {
+    const { window } = new JSDOM(`<table><tr><td>${html}</td></tr></table>`);
+    return window.document.querySelector("td");
+  };
+  it("reads the italic title's own article, relative or absolute, either nesting", () => {
+    expect(readWikipediaTitle(cell('<i><a href="/wiki/The_Stranger_(1946_film)">The Stranger</a></i> (1946)'))).toBe("The Stranger (1946 film)");
+    expect(readWikipediaTitle(cell('<i><a href="https://en.wikipedia.org/wiki/The_Angels%27_Share">The Angels&#39; Share</a></i>'))).toBe("The Angels' Share");
+    expect(readWikipediaTitle(cell('<a href="/wiki/Amour_(2012_film)"><i>Amour</i></a>'))).toBe("Amour (2012 film)");
+  });
+  it("ignores red links and non-title links", () => {
+    expect(readWikipediaTitle(cell('<i><a class="new" href="/w/index.php?title=X&amp;redlink=1">X</a></i>'))).toBeNull();
+    expect(readWikipediaTitle(cell('<i>Plain</i> by <a href="/wiki/Some_Director">Some Director</a>'))).toBeNull();
   });
 });

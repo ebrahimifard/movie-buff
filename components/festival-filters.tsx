@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Poster } from "./poster";
 import { simplifyCategoryLabel } from "@/lib/category-labels";
 import { buildMissingInfoIssueUrl } from "@/lib/missing-info";
+import { resultLabel } from "@/lib/result-label";
 import {
   filterNominations,
   getCategoryOptions,
@@ -13,6 +14,7 @@ import {
   getGenreOptions,
   groupRowsByFilm,
   type FestivalFilterRow,
+  type FestivalCategoryEntry,
   type FestivalFilterState,
   type FestivalMovieGroup,
   type RuntimeBucket
@@ -119,7 +121,7 @@ export function FestivalFilters({
                 Winners only
               </Pill>
               <Pill active={filters.result === "nominee"} onClick={() => updateFilters({ ...filters, result: "nominee" })}>
-                Nominations only
+                Nominated or selected
               </Pill>
             </FilterGroup>
 
@@ -317,10 +319,10 @@ function Pill({ active, onClick, children, title }: { active: boolean; onClick: 
 
 const MAX_VISIBLE_CATEGORY_CHIPS = 3;
 
-function CategoryChip({ entry, festivalId }: { entry: { category: string; result: "winner" | "nominee" }; festivalId: string }) {
+function CategoryChip({ entry, festivalId }: { entry: FestivalCategoryEntry; festivalId: string }) {
   return (
     <span
-      title={entry.category}
+      title={`${entry.category} · ${resultLabel(entry.result, entry.isAward)}`}
       className={`meta rounded-full border px-2 py-0.5 text-[11px] ${
         entry.result === "winner" ? "border-gold/50 text-gold" : "border-bone/20 text-bone/70"
       }`}
@@ -370,6 +372,11 @@ function FestivalMovieCard({
         {group.nomineeCount > 0 ? (
           <span className="meta rounded-full bg-bone/10 px-3 py-1 text-xs text-bone/80">
             {group.nomineeCount} nomination{group.nomineeCount === 1 ? "" : "s"}
+          </span>
+        ) : null}
+        {group.selectedCount > 0 ? (
+          <span className="meta rounded-full border border-bone/20 px-3 py-1 text-xs text-bone/70">
+            {group.selectedCount} selection{group.selectedCount === 1 ? "" : "s"}
           </span>
         ) : null}
       </div>

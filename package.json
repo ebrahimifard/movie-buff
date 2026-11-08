@@ -13,6 +13,8 @@
     "data:fetch:wikidata": "node scripts/fetch-wikidata-awards.mjs",
     "data:merge": "node scripts/merge-sources.mjs",
     "data:enrich:tmdb": "node scripts/enrich-tmdb.mjs",
+    "data:enrich:wikidata-ids": "node scripts/enrich-wikidata.mjs --phase=ids",
+    "data:enrich:wikidata-fill": "node scripts/enrich-wikidata.mjs --phase=fill",
     "data:build": "node scripts/build-comprehensive-data.mjs",
     "data:posters": "node scripts/download-posters.mjs",
     "data:validate": "node scripts/validate-data.mjs",

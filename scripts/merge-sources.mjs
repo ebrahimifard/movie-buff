@@ -46,9 +46,11 @@ export function mergeFilm(primary, secondary) {
     genres: primary.genres?.length ? primary.genres : secondary.genres || [],
     synopsis: primary.synopsis || secondary.synopsis || "",
     posterUrl: primary.posterUrl || secondary.posterUrl || "",
-    // Matching-only hint (selection tables' native-language title) — read
-    // by enrich-tmdb.mjs, never written into data/normalized.
-    ...(primary.originalTitle || secondary.originalTitle ? { originalTitle: primary.originalTitle || secondary.originalTitle } : {})
+    // Matching-only hints (selection tables' native-language title, and the
+    // film's own Wikipedia article) — read by enrich-tmdb.mjs and
+    // enrich-wikidata.mjs, never written into data/normalized.
+    ...(primary.originalTitle || secondary.originalTitle ? { originalTitle: primary.originalTitle || secondary.originalTitle } : {}),
+    ...(primary.wikipediaTitle || secondary.wikipediaTitle ? { wikipediaTitle: primary.wikipediaTitle || secondary.wikipediaTitle } : {})
   };
 }
 
@@ -89,7 +91,8 @@ export function normalizeRecord(input) {
       genres: input.film.genres ?? [],
       synopsis: input.film.synopsis ?? "",
       posterUrl: input.film.posterUrl ?? "",
-      ...(input.film.originalTitle ? { originalTitle: input.film.originalTitle } : {})
+      ...(input.film.originalTitle ? { originalTitle: input.film.originalTitle } : {}),
+      ...(input.film.wikipediaTitle ? { wikipediaTitle: input.film.wikipediaTitle } : {})
     },
     directors: [...new Set((input.directors ?? []).filter(Boolean))],
     credits: dedupeCredits(input.credits)
