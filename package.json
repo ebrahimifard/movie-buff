@@ -18,6 +18,7 @@
     "data:validate": "node scripts/validate-data.mjs",
     "data:validate:strict": "node scripts/validate-data.mjs --strict",
     "data:coverage": "node scripts/coverage-report.mjs",
+    "data:audit:cannes": "node scripts/audit-cannes-competition.mjs",
     "data:update": "node scripts/update-data.mjs",
     "data:fetch:cannes-wikipedia": "node scripts/fetch-cannes-wikipedia.mjs",
     "data:fetch:golden-globes-wikipedia": "node scripts/fetch-golden-globes-wikipedia.mjs",

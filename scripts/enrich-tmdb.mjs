@@ -259,11 +259,26 @@ async function enrichRecordByTitleYear(record, apiKey) {
   // "One Battle After Another" — released 2025 — with primary_release_year
   // 2026 returned zero real matches). rankTitleMatches applies the year
   // tolerance client-side instead.
-  for (const query of titles) {
+  //
+  // ...but a common one-word title ("Michael", "Crush", "Victoria") can push
+  // the real film off the unfiltered first page entirely (confirmed live for
+  // all three Cannes competition entries). So when every unfiltered search
+  // comes up empty, the same titles are retried with TMDB's `year` filter
+  // for year-1..year+1 — only for records still unmatched, so it costs extra
+  // requests only where the first pass already failed.
+  const searches = titles.map((query) => ({ query, filterYear: null }));
+  if (year) {
+    for (const filterYear of [year, year - 1, year + 1]) {
+      for (const query of titles) searches.push({ query, filterYear });
+    }
+  }
+
+  for (const { query, filterYear } of searches) {
     const searchUrl = new URL("https://api.themoviedb.org/3/search/movie");
     searchUrl.searchParams.set("api_key", apiKey);
     searchUrl.searchParams.set("query", query);
-    const searchPayload = await fetchJson(searchUrl, `TMDB search "${query}" (${year ?? "?"})`);
+    if (filterYear) searchUrl.searchParams.set("year", String(filterYear));
+    const searchPayload = await fetchJson(searchUrl, `TMDB search "${query}" (${filterYear ?? year ?? "?"})`);
 
     for (const candidate of rankTitleMatches(searchPayload?.results, titles, year, maxYearGap).slice(0, 3)) {
       if (!candidate?.id || tried.has(candidate.id)) continue;
