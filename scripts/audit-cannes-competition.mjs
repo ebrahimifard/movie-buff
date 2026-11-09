@@ -165,8 +165,10 @@ export function buildCannesAudit({ sourceRecords, nominations, films }) {
     seen.add(`${film.id}|${nomination.year}`);
     if (film.releaseYear > nomination.year + 1) {
       suspects.push({ year: nomination.year, title: film.title, filmId: film.id, section: nomination.category, reason: `released ${film.releaseYear}, after the festival` });
-    } else if (nomination.category === "Cannes Classics" && film.releaseYear === nomination.year) {
-      suspects.push({ year: nomination.year, title: film.title, filmId: film.id, section: nomination.category, reason: "restoration with unidentified release year" });
+    } else if (nomination.category === "Cannes Classics" && film.releaseYear === nomination.year && !film.imdbId) {
+      // A matched film dated its Classics year is a new documentary, which
+      // is fine; an unmatched one may be a restoration with no known year.
+      suspects.push({ year: nomination.year, title: film.title, filmId: film.id, section: nomination.category, reason: "unidentified (no IMDb match), year unknown" });
     }
   }
 

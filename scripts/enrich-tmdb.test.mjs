@@ -6,6 +6,7 @@ import {
   hasUnknownReleaseYear,
   isSuspectMatch,
   knownImdbIdFor,
+  articleMatchesFilm,
   pickFromFilmography,
   tmdbDirectorNames,
   parseFestivalFilter,
@@ -304,5 +305,22 @@ describe("knownImdbIdFor", () => {
     expect(knownImdbIdFor(record, new Map(), wikidata)).toBe("tt0038991");
     expect(knownImdbIdFor(record, new Map([["cannes|2026|the stranger", "tt9999999"]]), wikidata)).toBe("tt9999999");
     expect(knownImdbIdFor({ ...record, film: { title: "The Stranger" } }, new Map(), wikidata)).toBeNull();
+  });
+});
+
+describe("articleMatchesFilm", () => {
+  it("accepts an article about the film itself, ignoring the disambiguation", () => {
+    expect(articleMatchesFilm("The Stranger (1946 film)", { title: "The Stranger" })).toBe(true);
+    expect(articleMatchesFilm("La Symphonie pastorale (film)", { title: "Pastoral Symphony", originalTitle: "La Symphonie pastorale" })).toBe(true);
+  });
+  it("rejects an anthology, series or person article", () => {
+    expect(articleMatchesFilm("8 (2008 film)", { title: "SIDA" })).toBe(false);
+    expect(articleMatchesFilm("Beckett on Film", { title: "Not I" })).toBe(false);
+    expect(articleMatchesFilm("Miwa Nishikawa", { title: "Sway" })).toBe(false);
+  });
+  it("makes knownImdbIdFor ignore a link to something other than the film", () => {
+    const wikidata = new Map([["8 (2008 film)", "tt0493101"]]);
+    const record = { festivalId: "cannes", year: 2006, film: { title: "SIDA", wikipediaTitle: "8 (2008 film)" } };
+    expect(knownImdbIdFor(record, new Map(), wikidata)).toBeNull();
   });
 });

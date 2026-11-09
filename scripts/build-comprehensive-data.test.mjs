@@ -5,6 +5,7 @@ import {
   isFabricatedHonoraryRecord,
   mergeFilmFields,
   resolveDirectorNames,
+  earliestReleaseYear,
   resolveCategoryIsAward,
   resolveCategoryIsHonoraryAward,
   resolveFilmId,
@@ -229,5 +230,14 @@ describe("resolveDirectorNames", () => {
     expect(resolveDirectorNames({ directors: ["A"], film: { tmdbDirectors: ["B"] } })).toEqual(["A"]);
     expect(resolveDirectorNames({ directors: [], film: { tmdbDirectors: ["B"] } })).toEqual(["B"]);
     expect(resolveDirectorNames({ directors: [], film: {} })).toEqual([]);
+  });
+});
+
+describe("earliestReleaseYear", () => {
+  it("takes the earliest of the current, record, TMDB and edition years", () => {
+    expect(earliestReleaseYear({ year: 2025, film: { releaseYear: 2025, tmdbReleaseYear: 2005 } }, 2025)).toBe(2005);
+    expect(earliestReleaseYear({ year: 2016, film: { releaseYear: 2016 } }, 1997)).toBe(1997);
+    expect(earliestReleaseYear({ year: 2019, film: { releaseYear: 2019, tmdbReleaseYear: 2020 } }, 2019)).toBe(2019);
+    expect(earliestReleaseYear({ year: 2019, film: {} }, undefined)).toBe(2019);
   });
 });

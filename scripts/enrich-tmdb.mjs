@@ -279,11 +279,26 @@ export async function loadWikidataImdbIds(filePath) {
   }
 }
 
+// Whether a linked Wikipedia article is about the listed film itself: its
+// title (without the "(2008 film)" disambiguation) matches one of the
+// record's titles. Wikipedia links a segment to its anthology ("SIDA" ->
+// "8 (2008 film)"), a short to the series it belongs to ("Not I" ->
+// "Beckett on Film"), and occasionally to a person — none of which is an
+// exact identification of the listed film.
+export function articleMatchesFilm(wikipediaTitle, film) {
+  const article = String(wikipediaTitle ?? "").replace(/\s*\([^)]*\)\s*$/, "");
+  return Boolean(article) && titleCandidates(film).some((title) => titlesMatch(title, article));
+}
+
 // The exact IMDb id a record is known to be, when it has one without
 // searching: a hand-verified manual match first, then its own Wikipedia
-// article's Wikidata IMDb id.
+// article's Wikidata IMDb id (only when the article is about this film).
 export function knownImdbIdFor(record, manualMatches, wikidataIds) {
-  return manualMatches.get(titleYearFallbackKey(record)) ?? (record?.film?.wikipediaTitle ? wikidataIds.get(record.film.wikipediaTitle) : undefined) ?? null;
+  const manual = manualMatches.get(titleYearFallbackKey(record));
+  if (manual) return manual;
+  const wikipediaTitle = record?.film?.wikipediaTitle;
+  if (wikipediaTitle && articleMatchesFilm(wikipediaTitle, record.film)) return wikidataIds.get(wikipediaTitle) ?? null;
+  return null;
 }
 
 // `--festival=cannes` (repeatable / comma-separated) limits the title/year
@@ -637,7 +652,18 @@ async function run() {
       const known = knownImdbIdFor(record, manualMatches, wikidataIds);
       const cachedImdbId = fallbackLookup.get(key)?.imdbId;
       // A known id (manual or the film's own Wikipedia article) settles it.
-      const reason = known ? (known === cachedImdbId ? null : "known-id") : isSuspectMatch(record, fallbackLookup.get(key));
+      // A match that came from a Wikipedia link to something other than the
+      // film itself (an anthology, a series) is searched again.
+      const wikipediaTitle = record?.film?.wikipediaTitle;
+      const unverifiedLink =
+        !known && wikipediaTitle && wikidataIds.get(wikipediaTitle) === cachedImdbId && !articleMatchesFilm(wikipediaTitle, record.film);
+      const reason = known
+        ? known === cachedImdbId
+          ? null
+          : "known-id"
+        : unverifiedLink
+          ? "unverified-link"
+          : isSuspectMatch(record, fallbackLookup.get(key));
       if (reason) {
         suspects.push({ key, reason, imdbId: fallbackLookup.get(key)?.imdbId });
         fallbackLookup.delete(key);

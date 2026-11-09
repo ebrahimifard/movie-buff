@@ -71,6 +71,21 @@ export function resolveDirectorNames(entry) {
   return entry?.film?.tmdbDirectors ?? [];
 }
 
+// A film can't be released after any festival edition or ceremony it took
+// part in, and a source record without its own year only carries that
+// edition's year as a placeholder — so a film's release year is the
+// earliest of every record's releaseYear, TMDB's own date
+// (film.tmdbReleaseYear) and every edition year it appeared at. Without
+// this, whichever record was seen first won: a 2025 re-screening made
+// Star Wars: Episode III "2025", a 2016 Classics slot made Taste of Cherry
+// "2016".
+export function earliestReleaseYear(entry, currentYear) {
+  const years = [currentYear, entry?.film?.releaseYear, entry?.film?.tmdbReleaseYear, entry?.year].filter(
+    (year) => Number.isInteger(year) && year > 1870
+  );
+  return years.length ? Math.min(...years) : currentYear;
+}
+
 export function slugify(input) {
   return input
     .toLowerCase()
@@ -199,7 +214,7 @@ async function run() {
       filmMap.set(filmId, {
         id: filmId,
         title: entry.film.title,
-        releaseYear: entry.film.releaseYear,
+        releaseYear: earliestReleaseYear(entry, entry.film.releaseYear),
         imdbId: entry.film.imdbId,
         posterUrl: entry.film.posterUrl,
         runtimeMinutes: entry.film.runtimeMinutes,
@@ -209,7 +224,8 @@ async function run() {
         synopsis: entry.film.synopsis
       });
     } else {
-      filmMap.set(filmId, mergeFilmFields(filmMap.get(filmId), entry.film));
+      const existingFilm = filmMap.get(filmId);
+      filmMap.set(filmId, { ...mergeFilmFields(existingFilm, entry.film), releaseYear: earliestReleaseYear(entry, existingFilm.releaseYear) });
     }
 
     const ceremonyId = `${entry.festivalId}-${entry.year}`;

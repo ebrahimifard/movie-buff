@@ -24,7 +24,7 @@ describe("buildCannesAudit", () => {
     expect(audit.films).toBe(2);
     expect(audit.coverage).toMatchObject({ imdbId: 1, director: 1, posterUrl: 1 });
     expect(audit.suspects).toEqual([
-      { year: 2026, title: "Two Women", filmId: "film:two-women-2026", section: "Cannes Classics", reason: "restoration with unidentified release year" }
+      { year: 2026, title: "Two Women", filmId: "film:two-women-2026", section: "Cannes Classics", reason: "unidentified (no IMDb match), year unknown" }
     ]);
   });
 });
