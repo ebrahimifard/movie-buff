@@ -424,6 +424,8 @@ export function parseCannesWikipedia(html, year) {
   // parseTable. When `extra.directors` is given it wins over the
   // category-role-derived director below.
   function addRecord(category, result, title, personName, hasFilmSignal = true, originalReleaseYear, extra = {}) {
+    const labelled = cleanText(title).match(/^(special (?:distinction|mention)|best [^:]{3,40}|prix [^:]{3,40}):s+(.+)$/i);
+    if (labelled) title = labelled[2];
     const cleanTitle = cleanText(title)
       .replace(/^[-:*\s]+/, "")
       .replace(FOOTNOTE_MARKER_PATTERN, "")
@@ -431,6 +433,11 @@ export function parseCannesWikipedia(html, year) {
       .trim();
 
     if (!cleanTitle) return;
+    // An award label read as a title ("Special Mention:", "Jury Prize:",
+    // "Grand Prix du cinéma de création") or a photo caption ("The Jury
+    // President and the winners of the 1974 Grand Prix") is not a film.
+    if (/:$/.test(cleanTitle) || /jury president/i.test(cleanTitle)) return;
+    if (/^(grand prix|prix|special mention|special distinction|international prize|jury prize)[^:]*$/i.test(cleanTitle) && !hasFilmSignal) return;
     if (/^(english title|original title|director\(s\)|directors|production country|country|school|year|main page|current events|random article|about wikipedia)$/i.test(cleanTitle)) return;
 
     let normalizedCategory = normalizeCategory(category);
@@ -534,7 +541,15 @@ export function parseCannesWikipedia(html, year) {
 
   function parseAwardsListItem(li, sectionCategory) {
     const nestedUl = directChild(li, "UL");
-    const label = nestedUl ? getOwnLabel(li) : null;
+    // A tier label is usually a link/bold/italic span, but can also be plain
+    // text with no link or title of its own (1954: "<li>International Prize
+    // <ul>…films…</ul></li>") — then the whole own text is the label.
+    const plainTierLabel = () => {
+      const own = ownText(li, nestedUl).replace(/:$/, "").trim();
+      const extracted = extractTitleAndPerson(li, nestedUl);
+      return own && own.length <= 80 && !extracted.title ? own : null;
+    };
+    const label = nestedUl ? getOwnLabel(li) ?? plainTierLabel() : null;
     const text = nestedUl ? ownText(li, nestedUl) : cleanText(li.textContent);
 
     // A tied/shared-prize tier (e.g. "Jury Prize:") has no content of its
@@ -568,7 +583,8 @@ export function parseCannesWikipedia(html, year) {
       let hasFilmSignal = true;
       let originalReleaseYear;
       if (forMatch) {
-        title = forMatch[1];
+        // "Maria Schell for her performance in The Last Bridge"
+        title = forMatch[1].replace(/^(?:his|her|their)\s+(?:roles?|performances?)\s+in\s+/i, "");
         personName = rhs.slice(0, forMatch.index).trim();
       } else if (byMatch) {
         title = byMatch[1];
@@ -586,10 +602,34 @@ export function parseCannesWikipedia(html, year) {
 
     if (nestedUl) {
       processedNestedLists.add(nestedUl);
-      const childSectionCategory = label || sectionCategory;
-      Array.from(nestedUl.children)
-        .filter((child) => child.tagName === "LI")
-        .forEach((child) => parseAwardsListItem(child, childSectionCategory));
+      // When the outer item is itself a FILM ("<i>This Must Be the Place</i>
+      // by Paolo Sorrentino", with its special mentions nested inside), its
+      // italic title is not a category for the nested items — they stay in
+      // the enclosing section.
+      const labelIsFilm = Boolean(label) && !isTierOnly && extractTitleAndPerson(li, nestedUl).title === label;
+      const childSectionCategory = (!labelIsFilm && label) || sectionCategory;
+      parseAwardsItems(Array.from(nestedUl.children).filter((child) => child.tagName === "LI"), childSectionCategory);
+    }
+  }
+
+  // A list item that is nothing but a label ("Special Mention:",
+  // "International Prize:") names the award of the items AFTER it, not a
+  // film of its own.
+  function bareLabelOf(li) {
+    if (directChild(li, "UL")) return null;
+    const match = cleanText(li.textContent).match(/^([^:]{2,80}):$/);
+    return match ? match[1].trim() : null;
+  }
+
+  function parseAwardsItems(items, sectionCategory) {
+    let category = sectionCategory;
+    for (const li of items) {
+      const label = bareLabelOf(li);
+      if (label) {
+        category = label;
+        continue;
+      }
+      parseAwardsListItem(li, category);
     }
   }
 
@@ -710,6 +750,9 @@ export function parseCannesWikipedia(html, year) {
   const lists = Array.from(contentRoot.querySelectorAll("ul, ol"));
   lists.forEach(list => {
     if (processedNestedLists.has(list)) return;
+    // Image galleries (captions like "The Jury President and the winners of
+    // the 1974 Grand Prix") are not award or selection lists.
+    if (list.classList.contains("gallery") || list.closest(".gallery, .thumb, figure")) return;
     const ctx = getHeadingContext(list);
     if (shouldSkipSection(ctx.section) || shouldSkipSection(ctx.top)) return;
 
@@ -718,14 +761,12 @@ export function parseCannesWikipedia(html, year) {
     const isFilmSection = isMainCompetition || isFilmSelectionSection(ctx.section, ctx.top);
     const sectionCategory = isMainCompetition ? MAIN_COMPETITION_CATEGORY : ctx.section;
 
-    const items = list.querySelectorAll(":scope > li");
-    items.forEach(li => {
-      if (isAwards) {
-        parseAwardsListItem(li, ctx.section);
-      } else if (isFilmSection) {
-        parseNomineeListItem(li, sectionCategory);
-      }
-    });
+    const items = Array.from(list.querySelectorAll(":scope > li"));
+    if (isAwards) {
+      parseAwardsItems(items, ctx.section);
+    } else if (isFilmSection) {
+      items.forEach((li) => parseNomineeListItem(li, sectionCategory));
+    }
   });
 
   // Parse wikitables globally using nearest heading context.

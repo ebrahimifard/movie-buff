@@ -707,3 +707,48 @@ describe("readWikipediaTitle", () => {
     expect(readWikipediaTitle(cell('<i>Plain</i> by <a href="/wiki/Some_Director">Some Director</a>'))).toBeNull();
   });
 });
+
+describe("parseCannesWikipedia — award-list labels are never films", () => {
+  it("applies a bare 'Label:' item to the items after it instead of recording it as a film", () => {
+    const html = wrapHtml(`
+      <h2>Independent Awards</h2>
+      <h3>Prize of the Ecumenical Jury</h3>
+      <ul>
+        <li><i><a href="/wiki/TMBTP">This Must Be the Place</a></i> by <a href="/wiki/PS">Paolo Sorrentino</a>
+          <ul>
+            <li>Special Mention:</li>
+            <li><i><a href="/wiki/Le_Havre">Le Havre</a></i> by <a href="/wiki/AK">Aki Kaurismäki</a></li>
+          </ul>
+        </li>
+      </ul>
+    `);
+    const records = parseCannesWikipedia(html, 2011);
+    expect(records.map((r) => [r.category, r.film.title])).toEqual([
+      ["Prize of the Ecumenical Jury", "This Must Be the Place"],
+      ["Special Mention", "Le Havre"]
+    ]);
+  });
+
+  it("treats a plain-text item over a nested list as the award tier (1954 'International Prize')", () => {
+    const html = wrapHtml(`
+      <h2>Official Awards</h2>
+      <ul>
+        <li>International Prize
+          <ul><li><i><a href="/wiki/BtD">Before the Deluge</a></i> by <a href="/wiki/AC">André Cayatte</a></li></ul>
+        </li>
+      </ul>
+    `);
+    const records = parseCannesWikipedia(html, 1954);
+    expect(records.map((r) => [r.category, r.film.title])).toEqual([["International Prize", "Before the Deluge"]]);
+  });
+
+  it("ignores image-gallery captions and strips 'her performance in' from a credited title", () => {
+    const html = wrapHtml(`
+      <h2>Official Awards</h2>
+      <ul><li><a href="/wiki/SM">Special Mention</a>: <a href="/wiki/MS">Maria Schell</a> for her performance in <i><a href="/wiki/TLB">The Last Bridge</a></i></li></ul>
+      <ul class="gallery"><li class="gallerycaption">The Jury President and the winners of the 1974 Grand Prix</li></ul>
+    `);
+    const records = parseCannesWikipedia(html, 1954);
+    expect(records.map((r) => r.film.title)).toEqual(["The Last Bridge"]);
+  });
+});
