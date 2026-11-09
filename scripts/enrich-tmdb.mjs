@@ -421,7 +421,7 @@ async function enrichRecordByTitleYear(record, apiKey) {
       if (candidateYear && candidateYear > record.year + 1) continue;
 
       const film = toEnrichedFilm(record, details);
-      if (film) return film;
+      if (film) return { ...film, matchedBy: "search" };
     }
   }
   return enrichRecordByFilmography(record, apiKey, titles, year);
@@ -450,7 +450,7 @@ async function enrichRecordByFilmography(record, apiKey, titles, year) {
         detailsUrl.searchParams.set("append_to_response", "external_ids,credits");
         const details = await fetchJson(detailsUrl, `TMDB movie ${pick.id}`);
         const film = toEnrichedFilm(record, details);
-        if (film) return film;
+        if (film) return { ...film, matchedBy: "search" };
       }
     }
   }
@@ -655,8 +655,13 @@ async function run() {
       // A match that came from a Wikipedia link to something other than the
       // film itself (an anthology, a series) is searched again.
       const wikipediaTitle = record?.film?.wikipediaTitle;
+      // A match title search found on its own (matchedBy "search") stands.
       const unverifiedLink =
-        !known && wikipediaTitle && wikidataIds.get(wikipediaTitle) === cachedImdbId && !articleMatchesFilm(wikipediaTitle, record.film);
+        !known &&
+        fallbackLookup.get(key)?.matchedBy !== "search" &&
+        wikipediaTitle &&
+        wikidataIds.get(wikipediaTitle) === cachedImdbId &&
+        !articleMatchesFilm(wikipediaTitle, record.film);
       const reason = known
         ? known === cachedImdbId
           ? null

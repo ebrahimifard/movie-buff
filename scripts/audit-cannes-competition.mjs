@@ -21,7 +21,8 @@ function titleKey(title) {
     .replace(/\p{M}+/gu, "")
     .toLowerCase()
     .replace(/[^\p{L}\p{N}]+/gu, " ")
-    .trim();
+    .trim()
+    .replace(/^(the|a|an) /, "");
 }
 
 function hasValue(value) {
