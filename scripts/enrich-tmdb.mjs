@@ -11,6 +11,7 @@ const generatedPath = path.join(root, "data", "source", "master-data.generated.j
 const cachePath = path.join(root, "data", "source", "tmdb-cache.json");
 const manualMatchesPath = path.join(root, "data", "source", "tmdb-manual-matches.json");
 const wikidataCachePath = path.join(root, "data", "source", "wikidata-cache.json");
+const imdbCachePath = path.join(root, "data", "source", "imdb-cache.json");
 
 // TMDB enrichment lives in a standalone, additive cache keyed by imdbId (and,
 // for records with no imdbId, by titleYearFallbackKey) — never inside
@@ -293,12 +294,32 @@ export function articleMatchesFilm(wikipediaTitle, film) {
 // The exact IMDb id a record is known to be, when it has one without
 // searching: a hand-verified manual match first, then its own Wikipedia
 // article's Wikidata IMDb id (only when the article is about this film).
-export function knownImdbIdFor(record, manualMatches, wikidataIds) {
+export function knownImdbIdFor(record, manualMatches, wikidataIds, imdbIds = new Map()) {
   const manual = manualMatches.get(titleYearFallbackKey(record));
   if (manual) return manual;
   const wikipediaTitle = record?.film?.wikipediaTitle;
-  if (wikipediaTitle && articleMatchesFilm(wikipediaTitle, record.film)) return wikidataIds.get(wikipediaTitle) ?? null;
-  return null;
+  if (wikipediaTitle && articleMatchesFilm(wikipediaTitle, record.film)) {
+    const linked = wikidataIds.get(wikipediaTitle);
+    if (linked) return linked;
+  }
+  return imdbIds.get(titleYearFallbackKey(record)) ?? null;
+}
+
+// IMDb ids enrich-imdb.mjs --phase=ids identified for films TMDB search
+// couldn't (data/source/imdb-cache.json byTitleYear, keyed by
+// titleYearFallbackKey). Read directly, like loadWikidataImdbIds.
+export async function loadImdbSuggestIds(filePath) {
+  try {
+    const parsed = JSON.parse(await readFile(filePath, "utf8"));
+    const ids = new Map();
+    for (const [key, imdbId] of Object.entries(parsed.byTitleYear ?? {})) {
+      if (imdbId && IMDB_ID_PATTERN.test(imdbId)) ids.set(key, imdbId);
+    }
+    return ids;
+  } catch (error) {
+    if (error?.code === "ENOENT") return new Map();
+    throw error;
+  }
 }
 
 // `--festival=cannes` (repeatable / comma-separated) limits the title/year
@@ -598,6 +619,7 @@ async function run() {
   const festivalFilter = parseFestivalFilter(process.argv.slice(2));
   const manualMatches = await loadManualMatches(manualMatchesPath);
   const wikidataIds = await loadWikidataImdbIds(wikidataCachePath);
+  const imdbIds = await loadImdbSuggestIds(imdbCachePath);
   logStep(`known ids: ${manualMatches.size} manual match(es), ${wikidataIds.size} from Wikipedia/Wikidata links`);
 
   // Revalidation pass (only with --festival=..., scoped to those festivals):
@@ -649,7 +671,7 @@ async function run() {
 
     const suspects = [];
     for (const [key, record] of cachedTargets) {
-      const known = knownImdbIdFor(record, manualMatches, wikidataIds);
+      const known = knownImdbIdFor(record, manualMatches, wikidataIds, imdbIds);
       const cachedImdbId = fallbackLookup.get(key)?.imdbId;
       // A known id (manual or the film's own Wikipedia article) settles it.
       // A match that came from a Wikipedia link to something other than the
@@ -744,7 +766,7 @@ async function run() {
       group.map(async (record) => {
         const key = titleYearFallbackKey(record);
         try {
-          const knownImdbId = knownImdbIdFor(record, manualMatches, wikidataIds);
+          const knownImdbId = knownImdbIdFor(record, manualMatches, wikidataIds, imdbIds);
           const enrichedFilm = knownImdbId
             ? await enrichRecordByManualMatch(record, knownImdbId, apiKey)
             : await enrichRecordByTitleYear(record, apiKey);

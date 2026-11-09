@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { canonicalCannesSection, expandTableRows, readWikipediaTitle, isMainCompetitionSelection, parseCannesWikipedia } from "./fetch-cannes-wikipedia.mjs";
+import { canonicalCannesAward, cannesAwardFromHref, parseCannesAwardListPage, supplementFromAwardLists, titlesLooselyMatch, canonicalCannesSection, expandTableRows, looksLikeAwardLabel, readWikipediaTitle, isMainCompetitionSelection, parseCannesWikipedia } from "./fetch-cannes-wikipedia.mjs";
 import { JSDOM } from "jsdom";
 
 function wrapHtml(body) {
@@ -198,7 +198,7 @@ describe("parseCannesWikipedia", () => {
     `);
     const records = parseCannesWikipedia(html, 2019);
     expect(records).toHaveLength(1);
-    expect(records[0].category).toBe("Grand Prize");
+    expect(records[0].category).toBe("Critics' Week Grand Prize");
     expect(records[0].film.title).toBe("A Prized Film");
   });
 
@@ -422,9 +422,9 @@ describe("parseCannesWikipedia", () => {
     `);
     const records = parseCannesWikipedia(html, 2019);
     expect(records).toHaveLength(3);
-    expect(records.find((r) => r.film.title === "It Must Be Heaven").category).toBe("FIPRESCI Prizes – In Competition");
-    expect(records.find((r) => r.film.title === "Beanpole").category).toBe("FIPRESCI Prizes – Un Certain Regard");
-    expect(records.find((r) => r.film.title === "The Lighthouse").category).toBe("FIPRESCI Prizes – Parallel section");
+    expect(records.find((r) => r.film.title === "It Must Be Heaven").category).toBe("FIPRESCI Prize – In Competition");
+    expect(records.find((r) => r.film.title === "Beanpole").category).toBe("FIPRESCI Prize – Un Certain Regard");
+    expect(records.find((r) => r.film.title === "The Lighthouse").category).toBe("FIPRESCI Prize – Parallel Sections");
   });
 
   it("qualifies a strand's own Jury Prize/Grand Prix with its section so it doesn't collide with Main Competition's flagship prize of the same name", () => {
@@ -750,5 +750,140 @@ describe("parseCannesWikipedia — award-list labels are never films", () => {
     `);
     const records = parseCannesWikipedia(html, 1954);
     expect(records.map((r) => r.film.title)).toEqual(["The Last Bridge"]);
+  });
+});
+
+describe("canonicalCannesAward", () => {
+  it("collapses the spellings of one award into a single name", () => {
+    expect(canonicalCannesAward("Un certain regard Award", 2018)).toBe("Un Certain Regard Prize");
+    expect(canonicalCannesAward("Prix Un Certain Regard", 2005)).toBe("Un Certain Regard Prize");
+    expect(canonicalCannesAward("Un Certain Regard Award for Best Director", 2016)).toBe("Un Certain Regard – Best Director");
+    expect(canonicalCannesAward("Un Certain Regard Best Director Award", 2011)).toBe("Un Certain Regard – Best Director");
+    expect(canonicalCannesAward("Cinéfondation – 1st Prize", 2012)).toBe("Cinéfondation – First Prize");
+    expect(canonicalCannesAward("Third Prize", 2009)).toBe("Cinéfondation – Third Prize");
+    expect(canonicalCannesAward("Small Golden Rail", 2002)).toBe("Petit Rail d'Or");
+    expect(canonicalCannesAward("Prix Petit Rail d'Or", 2001)).toBe("Petit Rail d'Or");
+    expect(canonicalCannesAward("Critics Week Nespresso Grand Prize", 2011)).toBe("Critics' Week Grand Prize");
+    expect(canonicalCannesAward("FIPRESCI Prizes", 1990)).toBe("FIPRESCI Prize");
+    expect(canonicalCannesAward("Grand Prize of the Jury", 1994)).toBe("Grand Prix");
+    expect(canonicalCannesAward("Short Films Competition – Prix spécial du Jury", 1967)).toBe("Short Film Special Jury Prize");
+    expect(canonicalCannesAward("Best Actor", 2000)).toBe("Best Actor");
+  });
+});
+
+describe("cannesAwardFromHref", () => {
+  it("names an award by the article its label links to", () => {
+    expect(cannesAwardFromHref("/wiki/Palme_d%27Or")).toBe("Palme d'Or");
+    expect(cannesAwardFromHref("/wiki/Short_Film_Palme_d%27Or")).toBe("Short Film Palme d'Or");
+    expect(cannesAwardFromHref("/wiki/Best_Actress_Award_(Cannes_Film_Festival)")).toBe("Best Actress");
+    expect(cannesAwardFromHref("/wiki/Grand_Prix_(Cannes_Film_Festival)")).toBe("Grand Prix");
+    expect(cannesAwardFromHref("/wiki/Vulcan_Award")).toBeNull();
+  });
+});
+
+describe("looksLikeAwardLabel", () => {
+  it("accepts award names and rejects film titles", () => {
+    expect(looksLikeAwardLabel("Best Cinematography")).toBe(true);
+    expect(looksLikeAwardLabel("Prize for Best Subject")).toBe(true);
+    expect(looksLikeAwardLabel("ACID/CCAS Award")).toBe(true);
+    expect(looksLikeAwardLabel("Swan Lake")).toBe(false);
+  });
+});
+
+describe("parseCannesWikipedia — award names and people", () => {
+  it("uses the linked award for an italic label and keeps the film whole", () => {
+    const html = wrapHtml(`
+      <h2>Official Awards</h2>
+      <h3>Main Competition</h3>
+      <ul>
+        <li><a href="/wiki/Palme_d%27Or"><i>Grand Prix International du Festival</i></a>: <i><a href="/wiki/Blowup">Blowup</a></i> by <a href="/wiki/MA">Michelangelo Antonioni</a></li>
+      </ul>
+      <h3>Short Films Competition</h3>
+      <ul>
+        <li><a href="/wiki/Short_Film_Palme_d%27Or"><i>Grand Prix International du Festival</i></a>: <i>Sky Over Holland</i> by John Fernhout</li>
+      </ul>
+      <h2>Independent Awards</h2>
+      <h3>Special awards</h3>
+      <ul>
+        <li><a href="/wiki/X">55th Anniversary Prize</a>: <i><a href="/wiki/BfC">Bowling for Columbine</a></i> by <a href="/wiki/MM">Michael Moore</a></li>
+      </ul>
+    `);
+    const records = parseCannesWikipedia(html, 1967);
+    expect(records.map((r) => [r.category, r.film.title])).toEqual([
+      ["Palme d'Or", "Blowup"],
+      ["Short Film Palme d'Or", "Sky Over Holland"],
+      ["55th Anniversary Prize", "Bowling for Columbine"]
+    ]);
+  });
+
+  it("reads plain-text labels, shared prizes and bold paragraph labels, and drops prizes given to people", () => {
+    const html = wrapHtml(`
+      <h2>Awards</h2>
+      <h3>Official awards</h3>
+      <ul>
+        <li>Best Cinematography: <a href="/wiki/GF">Gabriel Figueroa</a> for <i><a href="/wiki/MC">María Candelaria</a></i> and <i><a href="/wiki/LTM">Los tres mosqueteros</a></i></li>
+        <li><a href="/wiki/Carrosse">Carrosse d'Or</a>: <a href="/wiki/WH">Werner Herzog</a></li>
+        <li><a href="/wiki/Chopard">Trophée Chopard</a>: <a href="/wiki/JA">Joe Alwyn</a></li>
+      </ul>
+      <p><b>Short Films</b></p>
+      <ul>
+        <li><i><a href="/wiki/VS">Vánoční sen</a></i> by <a href="/wiki/KZ">Karel Zeman</a></li>
+      </ul>
+      <h3>Independent awards</h3>
+      <p><b><a href="/wiki/FIPRESCI">FIPRESCI Prize</a></b></p>
+      <ul>
+        <li><i>Farrebique</i> by <a href="/wiki/GR">Georges Rouquier</a></li>
+      </ul>
+    `);
+    const records = parseCannesWikipedia(html, 1946);
+    expect(records.map((r) => [r.category, r.film.title])).toEqual([
+      ["Best Cinematography", "María Candelaria"],
+      ["Best Cinematography", "Los tres mosqueteros"],
+      ["Short Film Grand Prix", "Vánoční sen"],
+      ["FIPRESCI Prize", "Farrebique"]
+    ]);
+  });
+});
+
+describe("award list articles", () => {
+  const listHtml = wrapHtml(`
+    <table class="wikitable">
+      <tr><th>Year</th><th>English Title</th><th>Original Title</th><th>Director</th></tr>
+      <tr><th>2018</th><td><i>All These Creatures</i></td><td><i>All These Creatures</i></td><td>Charles Williams</td></tr>
+      <tr><th>2017</th><td><i>A Gentle Night</i></td><td><i>小城二月</i></td><td>Qiu Yang</td></tr>
+      <tr><th>2020</th><td colspan="3">Festival cancelled due to the COVID-19 pandemic.</td></tr>
+    </table>
+    <table class="wikitable">
+      <tr><th>Year</th><th>Award</th><th>Film</th><th>Director</th></tr>
+      <tr><th>1954</th><td>Prix du Film de Marionettes</td><td>A Drop Too Much (O sklenicku víc)</td><td>Břetislav Pojar</td></tr>
+    </table>
+  `);
+
+  it("reads winners, original titles and the other-awards table, skipping note rows", () => {
+    expect(parseCannesAwardListPage(listHtml, "Short Film Palme d'Or")).toEqual([
+      { year: 2018, category: "Short Film Palme d'Or", title: "All These Creatures", originalTitle: "", directors: ["Charles Williams"] },
+      { year: 2017, category: "Short Film Palme d'Or", title: "A Gentle Night", originalTitle: "小城二月", directors: ["Qiu Yang"] },
+      { year: 1954, category: "Short Films Competition – Prix du Film de Marionettes", title: "A Drop Too Much", originalTitle: "O sklenicku víc", directors: ["Břetislav Pojar"] }
+    ]);
+  });
+
+  it("adds only winners the yearly pages are missing, on the selection's own title", () => {
+    const winner = (year, category, title) => ({ year, category, result: "winner", film: { title }, directors: [] });
+    const records = [
+      winner(2017, "Short Film Palme d'Or", "Xiao Cheng Er Yue"),
+      { year: 2018, category: "Short Films Competition", result: "nominee", film: { title: "All these Creatures", releaseYear: 2018 }, directors: ["Charles Williams"] }
+    ];
+    const added = supplementFromAwardLists(records, parseCannesAwardListPage(listHtml, "Short Film Palme d'Or"), new Set([1954, 2017, 2018]));
+    expect(added.map((record) => [record.year, record.category, record.film.title])).toEqual([
+      [2018, "Short Film Palme d'Or", "All these Creatures"],
+      [1954, "Short Films Competition – Prix du Film de Marionettes", "A Drop Too Much"]
+    ]);
+  });
+
+  it("matches titles across spellings but not different films", () => {
+    expect(titlesLooselyMatch("Zolotaia Antilopa", "Zolotaya Antilopa")).toBe(true);
+    expect(titlesLooselyMatch("Coffee and Cigarettes (Somewhere in California)", "Coffee and Cigarettes")).toBe(true);
+    expect(titlesLooselyMatch("Mulholland Dr.", "Mulholland Drive")).toBe(true);
+    expect(titlesLooselyMatch("The Mother", "The Brother")).toBe(false);
   });
 });

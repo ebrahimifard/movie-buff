@@ -68,7 +68,8 @@ export function isFabricatedHonoraryRecord(entry, isHonoraryAward) {
 // film (film.tmdbDirectors, set by enrich-tmdb.mjs).
 export function resolveDirectorNames(entry) {
   if (entry?.directors?.length) return entry.directors;
-  return entry?.film?.tmdbDirectors ?? [];
+  if (entry?.film?.tmdbDirectors?.length) return entry.film.tmdbDirectors;
+  return entry?.film?.wikidataDirectors ?? [];
 }
 
 // A film can't be released after any festival edition or ceremony it took

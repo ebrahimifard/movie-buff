@@ -137,11 +137,12 @@ export function aggregateFillRows(bindings) {
   for (const row of bindings ?? []) {
     const imdbId = row.imdb?.value;
     if (!imdbId) continue;
-    if (!byImdb.has(imdbId)) byImdb.set(imdbId, { runtimeMinutes: 0, genreLabels: new Set(), poster: "", enwiki: "", frwiki: "" });
+    if (!byImdb.has(imdbId)) byImdb.set(imdbId, { runtimeMinutes: 0, genreLabels: new Set(), directorNames: new Set(), poster: "", enwiki: "", frwiki: "" });
     const entry = byImdb.get(imdbId);
     const minutes = durationToMinutes(row.amount?.value, row.unit?.value);
     if (minutes && !entry.runtimeMinutes) entry.runtimeMinutes = minutes;
     if (row.genreLabel?.value) entry.genreLabels.add(row.genreLabel.value);
+    if (row.directorLabel?.value && !/^Qd+$/.test(row.directorLabel.value)) entry.directorNames.add(row.directorLabel.value);
     if (row.poster?.value && !entry.poster) entry.poster = row.poster.value;
     if (row.enwiki?.value && !entry.enwiki) entry.enwiki = decodeURIComponent(row.enwiki.value.replace(/^.*\/wiki\//, "")).replace(/_/g, " ");
     if (row.frwiki?.value && !entry.frwiki) entry.frwiki = decodeURIComponent(row.frwiki.value.replace(/^.*\/wiki\//, "")).replace(/_/g, " ");
@@ -156,12 +157,17 @@ export function applyFill(film, fill) {
     ...film,
     runtimeMinutes: film.runtimeMinutes || fill.runtimeMinutes || 0,
     genres: film.genres?.length ? film.genres : fill.genres ?? [],
-    posterUrl: film.posterUrl || fill.posterUrl || ""
+    posterUrl: film.posterUrl || fill.posterUrl || "",
+    wikidataDirectors: film.wikidataDirectors?.length ? film.wikidataDirectors : fill.directors ?? []
   };
 }
 
-function needsFill(film) {
-  return Boolean(film?.imdbId) && (!film.posterUrl || !film.runtimeMinutes || !film.genres?.length);
+// A record whose film still lacks a poster, runtime or genres, or whose
+// director is known neither from the source nor from TMDB.
+function needsFill(record) {
+  const film = record?.film;
+  const hasDirector = record?.directors?.length || film?.tmdbDirectors?.length || film?.wikidataDirectors?.length;
+  return Boolean(film?.imdbId) && (!film.posterUrl || !film.runtimeMinutes || !film.genres?.length || !hasDirector);
 }
 
 // --- network --------------------------------------------------------------
@@ -239,11 +245,12 @@ async function fetchFillRows(imdbIds) {
   const rows = [];
   for (const group of chunk(imdbIds, 80)) {
     rows.push(
-      ...(await runSparql(`SELECT ?imdb ?amount ?unit ?genreLabel ?poster ?enwiki ?frwiki WHERE {
+      ...(await runSparql(`SELECT ?imdb ?amount ?unit ?genreLabel ?directorLabel ?poster ?enwiki ?frwiki WHERE {
   VALUES ?imdb { ${group.map((id) => `"${id}"`).join(" ")} }
   ?item wdt:P345 ?imdb .
   OPTIONAL { ?item p:P2047/psv:P2047 [ wikibase:quantityAmount ?amount ; wikibase:quantityUnit ?unit ] }
   OPTIONAL { ?item wdt:P136 ?genre . ?genre rdfs:label ?genreLabel . FILTER(LANG(?genreLabel) = "en") }
+  OPTIONAL { ?item wdt:P57 ?director . ?director rdfs:label ?directorLabel . FILTER(LANG(?directorLabel) IN ("en", "mul")) }
   OPTIONAL { ?item wdt:P3383 ?poster }
   OPTIONAL { ?enwiki schema:about ?item ; schema:isPartOf <https://en.wikipedia.org/> }
   OPTIONAL { ?frwiki schema:about ?item ; schema:isPartOf <https://fr.wikipedia.org/> }
@@ -304,13 +311,14 @@ async function runFillPhase(payload, records, festivalFilter, cache) {
   const targets = new Map(); // imdbId -> film titles
   for (const record of records) {
     if (festivalFilter && !festivalFilter.has(record.festivalId)) continue;
-    if (!needsFill(record.film)) continue;
+    if (!needsFill(record)) continue;
     const titles = targets.get(record.film.imdbId) ?? new Set();
     titles.add(record.film.title);
     if (record.film.originalTitle) titles.add(record.film.originalTitle);
     targets.set(record.film.imdbId, titles);
   }
-  const uncached = [...targets.keys()].filter((imdbId) => !cache.byImdbId.has(imdbId));
+  // Entries cached before directors were read are looked up again.
+  const uncached = [...targets.keys()].filter((imdbId) => !Array.isArray(cache.byImdbId.get(imdbId)?.directors));
   logStep(`fill: ${targets.size} film(s) still missing poster/runtime/genres, ${uncached.length} not yet looked up on Wikidata`);
 
   if (uncached.length) {
@@ -331,6 +339,7 @@ async function runFillPhase(payload, records, festivalFilter, cache) {
       cache.byImdbId.set(imdbId, {
         runtimeMinutes: entry?.runtimeMinutes ?? 0,
         genres: mapGenreLabels([...(entry?.genreLabels ?? [])]),
+        directors: [...(entry?.directorNames ?? [])],
         posterUrl
       });
     }
@@ -340,9 +349,9 @@ async function runFillPhase(payload, records, festivalFilter, cache) {
   let filled = 0;
   const enrichedRecords = records.map((record) => {
     const fill = record?.film?.imdbId ? cache.byImdbId.get(record.film.imdbId) : null;
-    if (!fill || !needsFill(record.film)) return record;
+    if (!fill || !needsFill(record)) return record;
     const film = applyFill(record.film, fill);
-    if (film.posterUrl !== record.film.posterUrl || film.runtimeMinutes !== record.film.runtimeMinutes || film.genres !== record.film.genres) filled += 1;
+    if (film.posterUrl !== record.film.posterUrl || film.runtimeMinutes !== record.film.runtimeMinutes || film.genres !== record.film.genres || film.wikidataDirectors !== record.film.wikidataDirectors) filled += 1;
     return { ...record, film };
   });
   await writeFile(generatedPath, `${JSON.stringify({ ...payload, records: enrichedRecords }, null, 2)}\n`, "utf8");

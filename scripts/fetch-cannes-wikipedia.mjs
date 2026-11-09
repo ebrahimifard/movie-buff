@@ -80,7 +80,8 @@ const AMBIGUOUS_SUB_AWARD_PATTERN =
 // the latter already resolves to "Palme d'Or" via normalizeCategory's own
 // fallback), so this matches on MEANING (any of the known heading spellings,
 // or the already-normalized "Palme d'Or") rather than one fixed string.
-const STRAND_SPECIFIC_AWARD_PATTERN = /^(grand prix|(special\s+)?jury prize)$/i;
+const STRAND_SPECIFIC_AWARD_PATTERN =
+  /^(grand (prix|prize)|grand jury prize|(special\s+)?jury prize|special prize|special distinction|jury'?s? special award|best (short )?film|best short|audience award|discovery prize)$/i;
 const FLAGSHIP_COMPETITION_SECTION_PATTERN = /^(main competition|in competition|palme d'?or)$/i;
 
 // The main competition's own selection list/table. Its heading text varies
@@ -170,6 +171,186 @@ export function cannesClassicsSubSection(subHeading) {
   if (/documentar/.test(text)) return "Cannes Classics – Documentaries about Cinema";
   if (/special screening|short films?/.test(text)) return "Cannes Classics – Special Screenings";
   return "Cannes Classics";
+}
+
+// Prizes given to a person for their career or as a "revelation", never to
+// a film (Carrosse d'Or, Chopard Trophy, Palm Dog Manitarian, ...). The
+// catalogue lists films, so these are not recorded.
+export const PERSON_ONLY_AWARD_PATTERN =
+  /^(carrosse d'or|golden coach|chopard trophy|trophee chopard|(female|male) revelation of the year|palm ?dog ?manitarian award|palm of the palms|special prize of the festival)$/;
+// Prizes that go to a film OR to a person: kept only with a film title.
+const PERSON_OR_FILM_AWARD_PATTERN = /anniversary prize|^special award$|^homm?age$|^tribute$|special award$|legion of honour/;
+
+// One canonical name per Cannes AWARD. Wikipedia names the same prize many
+// ways across years ("Un certain regard Award", "Prix Un Certain Regard";
+// "Cinéfondation – 1st Prize" / "– First Prize"; "Small Golden Rail" /
+// "Prix Petit Rail d'Or"), which otherwise splits one award into several
+// categories. Unknown names come back cleaned but otherwise unchanged.
+export function canonicalCannesAward(raw, year) {
+  const clean = cleanHeading(raw).replace(/\s+-\s+/g, " – ");
+  const text = foldHeading(clean);
+  if (!text) return clean;
+  // 1947 gave its Grand Prix per genre; Wikipedia's Palme d'Or list counts
+  // these five as that year's top prize.
+  if (year === 1947 && /^best (musical comedy|psychological and love film|animation design|social film|adventure and crime film)$/.test(text)) {
+    return MAIN_COMPETITION_CATEGORY;
+  }
+  if (/^short film grand prix\s*–\s*best short film$/.test(text)) return "Short Film Grand Prix";
+  const ordinal = (word) => ({ "1st": "First", first: "First", "2nd": "Second", second: "Second", "3rd": "Third", third: "Third" })[word];
+
+  // Cinéfondation / La Cinef prizes (bare "Second Prize"/"Third Prize" in
+  // the 1998+ awards lists are always that section's).
+  let match = text.match(/^(?:cinefondation\s*–\s*)?(1st|2nd|3rd|first|second|third) prize$/);
+  if (match && (year >= 1998 || /^cinefondation/.test(text))) return `Cinéfondation – ${ordinal(match[1])} Prize`;
+
+  if (/^un certain regard( award| prize)?$|^prix un certain regard$/.test(text)) return "Un Certain Regard Prize";
+  match = text.match(/^(?:prix (?:du )?)?un certain regard\s*(?:–\s*)?(?:award for |jury award for )?(.+)$/);
+  if (match) {
+    const full = match[1].replace(/^« ?coup de c(oe|œ)ur ?»( prize)?$/, "coup de coeur").trim();
+    const rest = full
+      .replace(/\s+(award|prize)$/, "")
+      .replace(/^(award|prize) (for |of )?/, "")
+      .trim();
+    const names = {
+      "jury prize": "Jury Prize",
+      "special jury prize": "Special Jury Prize",
+      "best director": "Best Director",
+      "best actor": "Best Actor",
+      "best actress": "Best Actress",
+      "best screenplay": "Best Screenplay",
+      "best performance": "Best Performance",
+      performance: "Best Performance",
+      "best first film": "Best First Film",
+      "special prize": "Special Prize",
+      "special distinction": "Special Distinction",
+      "special prize for promising future": "Promising Future Prize",
+      "prix avenir prometteur": "Promising Future Prize",
+      "a certain talent": "Un Certain Talent Prize",
+      "prix un talent certain pour l'ensemble des comediens": "Un Certain Talent Prize",
+      ensemble: "Ensemble Prize",
+      "coup de coeur": "Coup de Cœur Prize",
+      "prix d'interpretation feminine": "Best Actress",
+      "prix d'interpretation masculine": "Best Actor"
+    };
+    const named = names[full] ?? names[rest];
+    if (named) return `Un Certain Regard – ${named}`;
+  }
+  if (/^prix du president du jury un certain regard$/.test(text)) return "Un Certain Regard – Jury President's Prize";
+  if (/^(a |un )certain talent$|^prix un certain talent$/.test(text)) return "Un Certain Regard – Un Certain Talent Prize";
+
+  if (/^(grand prix|grand prize|grand prix du jury|grand prize of the jury|grand prix special du jury)$/.test(text) && year >= 1967) return "Grand Prix";
+  if (/^(prix du jury|jury prize)$/.test(text)) return "Jury Prize";
+  if (/^(prix special du jury|jury special prize|special jury prize)$/.test(text)) return "Special Jury Prize";
+  if (text === "best actress") return "Best Actress";
+  if (text === "best actor") return "Best Actor";
+
+  if (/^(short films? competition\s*–\s*)?(short films? )?jury prize$|^jury prize\s*–\s*(best )?short film$/.test(text)) return "Short Film Jury Prize";
+  if (/^short films? (competition\s*–\s*)?gran[d]? prix$|^short films competition\s*–\s*grand prix$/.test(text)) return "Short Film Grand Prix";
+  if (/^short film technical prize( – special mention)?$/.test(text)) return text.includes("mention") ? "Short Film Technical Prize – Special Mention" : "Short Film Technical Prize";
+
+  if (/^fipresci prizes?$/.test(text)) return "FIPRESCI Prize";
+  match = text.match(/^fipresci prizes?\s*–\s*(in competition|un certain regard|parallel sections?)$/);
+  if (match) return `FIPRESCI Prize – ${{ "in competition": "In Competition", "un certain regard": "Un Certain Regard" }[match[1]] ?? "Parallel Sections"}`;
+
+  if (/^(prize of the ecumenical jury|prix du jury (oe|œ)cumenique)$/.test(text)) return "Prize of the Ecumenical Jury";
+  if (/^ecumenical jury\s*–\s*special award$/.test(text)) return "Prize of the Ecumenical Jury – Special Award";
+  if (/^vulcan award( of the technical artist)?$/.test(text)) return "Vulcan Award of the Technical Artist";
+
+  if (/^(international )?critics'? week\s*(–\s*)?(nespresso )?grand pri(x|ze)$|^grand prix de la semaine de la critique$|^(grand prix )?nespresso( grand prize)?$|^nespresso grand prize$|^grand prix nespresso$/.test(text)) return "Critics' Week Grand Prize";
+  if (/^(prix )?francois chalais (award|prize)?$|^prix francois chalais$/.test(text)) return "François Chalais Prize";
+  if (/^(prix )?sacd( award| prize)?$/.test(text)) return "SACD Prize";
+  if (/^(sacd special mention|special mention prix sacd)$/.test(text)) return "SACD Prize – Special Mention";
+  if (/^(illy prize for short film|illy short film award|premier prix illy for short filmmaking)$/.test(text)) return "Illy Prize for Short Film";
+  if (/^(illy special mention|special mention prix illy)$/.test(text)) return "Illy Prize for Short Film – Special Mention";
+  if (/^(3eme )?label europa cinema|^europa cinemas label/.test(text)) return "Europa Cinemas Label";
+  if (/^canal\+ (award for short film|short film award|gran[d]? prix for short film)$|^grand prix canal\+ \(short film\)$/.test(text)) return "Canal+ Award for Short Film";
+  if (/^(grand golden rail|grand rail d'or|prix grand rail d'or)$/.test(text)) return "Grand Rail d'Or";
+  if (/^(little golden rail|small golden rail|prix petit rail d'or|petit rail d'or.*)$/.test(text)) return "Petit Rail d'Or";
+  if (/^(gras savoye award|prix gras savoye)$/.test(text)) return "Gras Savoye Award";
+  if (/^(acid award|acid\/ccas (award|prize)|prix acid)$/.test(text)) return "ACID Prize";
+  if (/^(c\.?i\.?c\.?a\.?e\.? (award|jury cannes)|prix art (& |and )essai cicae|prix art and essay|international confederation of art cinemas|art cinema award)$/.test(text)) return "Art Cinema Award";
+  if (/^(3eme prix regards jeunes|prix regards? jeunes?|regards jeunes prize)$/.test(text)) return "Regards Jeunes Prize";
+  if (/^gan foundation (award for distribution|support for distribution award)$/.test(text)) return "Gan Foundation Award for Distribution";
+  if (/^(louis roederer foundation )?rising star award$/.test(text)) return "Louis Roederer Foundation Rising Star Award";
+  match = text.match(/^young critics award\s*–\s*best (feature|short)$/);
+  if (match) return `Young Critics Award – Best ${match[1] === "feature" ? "Feature" : "Short"}`;
+  if (/^kodak short film award\s*–\s*special mention$/.test(text)) return "Kodak Short Film Award – Special Mention";
+  if (/^(leica|leitz) cine discovery prize for short film$/.test(text)) return "Leitz Cine Discovery Prize for Short Film";
+  if (/^palm dog( award)?$|^palm hound dog$/.test(text)) return "Palm Dog";
+  if (/^palm dog\s*–\s*special jury prize$/.test(text)) return "Palm Dog – Special Jury Prize";
+  if (/^special mentions?$/.test(text)) return "Special Mention";
+  if (/^carrosse d'or$|^golden coach$/.test(text)) return "Carrosse d'Or";
+  if (/^best short( film)?$/.test(text)) return "Best Short Film";
+  if (/^short films? competition\s*–\s*(prix special du jury|special jury prize|jury special prize)$/.test(text)) return "Short Film Special Jury Prize";
+  if (/^short films? competition\s*–\s*special mentions?$|^short film\s*–\s*special mention$/.test(text)) return "Short Film – Special Mention";
+  if (/^short films? competition\s*–\s*(short film )?technical prize$/.test(text)) return "Short Film Technical Prize";
+  return clean;
+}
+
+// The award a label LINKS to is the most reliable name for it: Wikipedia
+// writes "Grand Prix International du Festival" (1964–1974) or "Grand
+// Prix" (pre-1955) but links both to the Palme d'Or article, and the short
+// film competition's top prize to the Short Film Palme d'Or article.
+export function cannesAwardFromHref(href) {
+  if (!href) return null;
+  let page;
+  try {
+    page = decodeURIComponent(String(href).replace(/^https?:\/\/en\.wikipedia\.org/, "").replace(/^\/wiki\//, "").split("#")[0]).replace(/_/g, " ");
+  } catch {
+    return null;
+  }
+  if (/^Palme d'Or$/i.test(page)) return MAIN_COMPETITION_CATEGORY;
+  if (/^(Short Film Palme d'Or|Palme d'Or du court m[ée]trage)$/i.test(page)) return "Short Film Palme d'Or";
+  if (/^Grand Prix \(Cannes Film Festival\)$/i.test(page)) return "Grand Prix";
+  if (/^Jury Prize \(Cannes Film Festival\)$/i.test(page)) return "Jury Prize";
+  const best = page.match(/^Best (Director|Actor|Actress|Screenplay) Award \(Cannes Film Festival\)$/i);
+  if (best) return `Best ${best[1][0].toUpperCase()}${best[1].slice(1).toLowerCase()}`;
+  if (/^Cam[ée]ra d'Or$/i.test(page)) return "Caméra d'Or";
+  if (/^Prix Un Certain Regard$/i.test(page)) return "Un Certain Regard Prize";
+  return null;
+}
+
+// The element getOwnLabel reads its label from (a link or bold span, after
+// unwrapping single-child <span>/<i> wrappers), or null.
+function ownLabelElement(li) {
+  let node = li.children[0];
+  while (node && (node.tagName === "SPAN" || node.tagName === "I") && node.children.length === 1) node = node.children[0];
+  if (!node || (node.tagName !== "A" && node.tagName !== "B")) return null;
+  // Only a label when the item starts with it ("Best Musical Comedy:
+  // <i>Ziegfeld Follies</i>" starts with plain text, so its first element is
+  // the film, not a label).
+  const squash = (text) => String(text ?? "").replace(/\s+/g, " ").trim();
+  return squash(li.textContent).startsWith(squash(node.textContent)) ? node : null;
+}
+
+// A bold paragraph directly above an awards list names the prize for every
+// item in it ("'''FIPRESCI Prize'''", "'''International Peace Award'''",
+// 1946's "'''Short Films'''" grand-prize list). Returns its text and the
+// href it links to, or null.
+export function precedingBoldLabel(list) {
+  const prev = list.previousElementSibling;
+  if (!prev) return null;
+  const strip = (text) => String(text ?? "").replace(/\[[^\]]*\]/g, "").replace(/\s+/g, " ").trim().replace(/:$/, "").trim();
+  let bold = null;
+  if (prev.tagName === "P") {
+    const bolds = prev.querySelectorAll("b");
+    if (bolds.length === 1 && strip(prev.textContent) === strip(bolds[0].textContent)) bold = bolds[0];
+  } else if (prev.tagName === "DL" && prev.children.length === 1 && prev.children[0].tagName === "DT") {
+    bold = prev.children[0];
+  }
+  if (!bold) return null;
+  const text = strip(bold.textContent);
+  if (!text) return null;
+  return { text, href: bold.querySelector("a")?.getAttribute("href") ?? null };
+}
+
+// A plain-text label before a colon ("Best Cinematography: Gabriel
+// Figueroa for …", "Prize for Best Subject: …") names the award even when
+// it isn't a link or bold.
+export function looksLikeAwardLabel(text) {
+  const label = String(text ?? "").trim();
+  if (!label || label.length > 70) return false;
+  return /^(prize for |prix )?(best|special|grand|jury|international|technical|homm?age|tribute|distinction|award|prize|prix|premier|golden)\b|\b(award|prize|prix|mentions?|distinction|palm|trophy)$/i.test(label) || /\b(prix|prize|award)\b/i.test(label);
 }
 
 // Trailing footnote/annotation markers Wikipedia's selection tables attach
@@ -322,6 +503,173 @@ function getWikipediaUrls(year) {
   return [`https://en.wikipedia.org/wiki/${year}_Cannes_Film_Festival`];
 }
 
+// Wikipedia's per-award list articles, a second source for the main
+// awards. Some yearly pages leave a prize out entirely (2018 and 2020 list
+// no Short Film Palme d'Or, 1954 none of the short-film prizes); the list
+// articles have them.
+export const AWARD_LIST_PAGES = [
+  { category: "Palme d'Or", page: "Palme_d'Or" },
+  { category: "Grand Prix", page: "Grand_Prix_(Cannes_Film_Festival)" },
+  { category: "Jury Prize", page: "Jury_Prize_(Cannes_Film_Festival)" },
+  { category: "Best Director", page: "Best_Director_Award_(Cannes_Film_Festival)" },
+  { category: "Best Screenplay", page: "Best_Screenplay_Award_(Cannes_Film_Festival)" },
+  { category: "Caméra d'Or", page: "Caméra_d'Or" },
+  { category: "Short Film Palme d'Or", page: "Short_Film_Palme_d'Or" },
+  { category: "Un Certain Regard Prize", page: "Prix_Un_Certain_Regard" }
+];
+
+function plainCellText(cell) {
+  return String(cell?.textContent ?? "")
+    .replace(/\[[^\]]*\]/g, "")
+    .replace(/[§‡†*]+/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+// Winner rows of one award list article: tables with Year and (English)
+// Title columns, plus an Award column on the "other awards" table (whose
+// rows become "<award> – <prize>" categories, e.g. the short films'
+// 1954 "Prix du Film de Divertissement").
+export function parseCannesAwardListPage(html, category) {
+  const doc = new JSDOM(html).window.document;
+  const winners = [];
+  for (const table of doc.querySelectorAll("table.wikitable")) {
+    const rows = expandTableRows(table);
+    if (!rows.length) continue;
+    const headers = rows[0].map((cell) => plainCellText(cell).toLowerCase());
+    const yearIdx = headers.findIndex((h) => h === "year");
+    const titleIdx = headers.findIndex((h) => /^(english title|title|film)$/.test(h));
+    if (yearIdx < 0 || titleIdx < 0) continue;
+    const originalIdx = headers.findIndex((h) => h === "original title");
+    const directorIdx = headers.findIndex((h) => /^director|^recipient/.test(h));
+    const awardIdx = headers.findIndex((h) => /^(award|prize)$/.test(h));
+    for (const cells of rows.slice(1)) {
+      if (cells.length !== headers.length || cells.every((cell) => cell === cells[0])) continue;
+      // A note spanning the row ("The festival was cancelled …") is one
+      // cell repeated across the title and director columns.
+      if (directorIdx >= 0 && cells[titleIdx] === cells[directorIdx]) continue;
+      const year = Number(plainCellText(cells[yearIdx]).match(/^(19[4-9]\d|20\d\d)/)?.[1]);
+      // "Crossfire (Best Social Film)" — the parenthetical is a note.
+      const fullTitle = plainCellText(cells[titleIdx]).replace(/\s*\((best|grand prix)[^)]*\)\s*$/i, "");
+      // "A Drop Too Much (O sklenicku víc)": the parenthetical is the
+      // original title.
+      const paren = fullTitle.match(/^(.+?)\s*\(([^)]+)\)$/);
+      const title = paren ? paren[1].trim() : fullTitle;
+      if (!year || !title) continue;
+      const originalTitle = (originalIdx >= 0 ? plainCellText(cells[originalIdx]) : "") || (paren ? paren[2].replace(/^french version:\s*/i, "").trim() : "");
+      const directors = directorIdx >= 0 ? splitNameList(cells[directorIdx]) : [];
+      const award = awardIdx >= 0 ? plainCellText(cells[awardIdx]) : "";
+      winners.push({
+        year,
+        category: award
+          ? canonicalCannesAward(`${{ "Short Film Palme d'Or": "Short Films Competition", "Un Certain Regard Prize": "Un Certain Regard" }[category] ?? category} – ${award}`, year)
+          : category,
+        title,
+        originalTitle: originalTitle && originalTitle !== title ? originalTitle : "",
+        directors
+      });
+    }
+  }
+  return winners;
+}
+
+function foldTitle(title) {
+  return String(title ?? "")
+    .normalize("NFKD")
+    .replace(/\p{M}+/gu, "")
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, " ")
+    .trim()
+    .replace(/^(the|a|an|le|la|les|l) /, "");
+}
+
+function editDistance(a, b) {
+  let previous = Array.from({ length: b.length + 1 }, (_, index) => index);
+  for (let i = 1; i <= a.length; i++) {
+    const current = [i];
+    for (let j = 1; j <= b.length; j++) {
+      current[j] = Math.min(previous[j] + 1, current[j - 1] + 1, previous[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    }
+    previous = current;
+  }
+  return previous[b.length];
+}
+
+// Whether two titles name the same film despite different spellings or
+// translations: equal once folded, one containing the other ("Coffee and
+// Cigarettes (Somewhere in California)"), or mostly the same words.
+export function titlesLooselyMatch(left, right) {
+  const a = foldTitle(String(left ?? "").replace(/\s*\([^)]*\)\s*$/, "")) || foldTitle(left);
+  const b = foldTitle(String(right ?? "").replace(/\s*\([^)]*\)\s*$/, "")) || foldTitle(right);
+  if (!a || !b) return false;
+  if (a === b) return true;
+  // Transliteration variants ("Zolotaia" / "Zolotaya Antilopa").
+  if (Math.min(a.length, b.length) >= 8 && editDistance(a, b) <= Math.floor(Math.max(a.length, b.length) * 0.15)) return true;
+  if (Math.min(a.length, b.length) >= 5 && (a.includes(b) || b.includes(a))) return true;
+  const wordsA = new Set(a.split(" "));
+  const wordsB = new Set(b.split(" "));
+  const shared = [...wordsA].filter((word) => wordsB.has(word)).length;
+  return shared >= 2 && shared / Math.max(wordsA.size, wordsB.size) >= 0.6;
+}
+
+// Adds the list articles' winners that the yearly pages missed.
+//   - For an award the yearly page already has as many winners of that
+//     year as the list, nothing is added (titles often differ only by
+//     translation: "Keeper of Promises" / "O Pagador de Promessas").
+//   - Otherwise a winner is added unless that year already names the film
+//     (English or original title, loosely) as a winner of anything.
+// A film found among that year's selections takes the selection's title,
+// so both rows land on the same film.
+export function supplementFromAwardLists(records, listWinners, festivalYears) {
+  const winners = records.filter((record) => record.result === "winner");
+  const selections = records.filter((record) => record.result !== "winner");
+  const countByAward = new Map();
+  for (const record of winners) {
+    const key = `${record.year}|${record.category}`;
+    countByAward.set(key, (countByAward.get(key) ?? 0) + 1);
+  }
+  const listCountByAward = new Map();
+  for (const winner of listWinners) {
+    const key = `${winner.year}|${winner.category}`;
+    listCountByAward.set(key, (listCountByAward.get(key) ?? 0) + 1);
+  }
+  const titlesOf = (record) => [record.film?.title ?? record.title, record.film?.originalTitle ?? record.originalTitle].filter(Boolean);
+  const names = (record, list) => titlesOf(record).some((title) => list.some((other) => titlesLooselyMatch(title, other)));
+
+  const added = [];
+  for (const winner of listWinners) {
+    if (festivalYears && !festivalYears.has(winner.year)) continue;
+    const awardKey = `${winner.year}|${winner.category}`;
+    if ((countByAward.get(awardKey) ?? 0) >= listCountByAward.get(awardKey)) continue;
+    const listTitles = titlesOf(winner);
+    if ([...winners, ...added].some((record) => record.year === winner.year && names(record, listTitles))) continue;
+    const selection = selections.find((record) => record.year === winner.year && names(record, listTitles));
+    const record = {
+      year: winner.year,
+      festivalId: "cannes",
+      festivalName: "Cannes Film Festival",
+      category: winner.category,
+      result: "winner",
+      film: {
+        title: selection?.film.title ?? winner.title,
+        releaseYear: selection?.film.releaseYear ?? winner.year,
+        ...(winner.originalTitle || selection?.film.originalTitle ? { originalTitle: selection?.film.originalTitle ?? winner.originalTitle } : {}),
+        imdbId: null,
+        countryCodes: selection?.film.countryCodes ?? [],
+        languages: [],
+        genres: [],
+        synopsis: "",
+        posterUrl: "",
+        runtimeMinutes: 0
+      },
+      directors: selection?.directors?.length ? selection.directors : winner.directors,
+      credits: []
+    };
+    added.push(record);
+  }
+  return added;
+}
+
 export function parseCannesWikipedia(html, year) {
   // Robust parser for Cannes Wikipedia pages (tables and lists)
   const dom = new JSDOM(html);
@@ -424,12 +772,18 @@ export function parseCannesWikipedia(html, year) {
   // parseTable. When `extra.directors` is given it wins over the
   // category-role-derived director below.
   function addRecord(category, result, title, personName, hasFilmSignal = true, originalReleaseYear, extra = {}) {
-    const labelled = cleanText(title).match(/^(special (?:distinction|mention)|best [^:]{3,40}|prix [^:]{3,40}):s+(.+)$/i);
-    if (labelled) title = labelled[2];
+    // "Best Musical Comedy: Ziegfeld Follies" — an award label read along
+    // with the title. For a prize it names the award itself.
+    const labelled = cleanText(title).match(/^([^:]{3,70}):\s+(.+)$/);
+    if (labelled && looksLikeAwardLabel(labelled[1])) {
+      title = labelled[2];
+      if (result === "winner") category = labelled[1].replace(/^prize for /i, "");
+    }
     const cleanTitle = cleanText(title)
       .replace(/^[-:*\s]+/, "")
       .replace(FOOTNOTE_MARKER_PATTERN, "")
       .replace(/\s*\([^)]*\)\s*$/, "")
+      .replace(/[\s,;]+$/, "")
       .trim();
 
     if (!cleanTitle) return;
@@ -452,6 +806,16 @@ export function parseCannesWikipedia(html, year) {
       // a prize — see NON_COMPETITIVE_SELECTION_PATTERN. A qualified real
       // prize within one of these strands is unaffected.
       return;
+    } else {
+      const rawFolded = foldHeading(normalizedCategory);
+      normalizedCategory = canonicalCannesAward(normalizedCategory, year);
+      const folded = foldHeading(normalizedCategory);
+      // Career/revelation prizes go to people, not films; a label read as
+      // its own winner ("Carrosse d'Or: Carrosse d'Or") is not a film.
+      if (PERSON_ONLY_AWARD_PATTERN.test(rawFolded) || PERSON_ONLY_AWARD_PATTERN.test(folded)) return;
+      if (!hasFilmSignal && (PERSON_OR_FILM_AWARD_PATTERN.test(rawFolded) || PERSON_OR_FILM_AWARD_PATTERN.test(folded))) return;
+      const titleFolded = foldHeading(cleanTitle);
+      if (titleFolded === rawFolded || titleFolded === folded) return;
     }
 
     // Career/honorary categories (Honorary Palm d'Or, Lifetime Achievement
@@ -560,24 +924,68 @@ export function parseCannesWikipedia(html, year) {
     // in addition to recursing into the nested list.
     const isTierOnly = Boolean(nestedUl && label && (text === label || text === `${label}:`));
 
+    const labelElement = ownLabelElement(li);
+    const labelLink = labelElement ? (labelElement.tagName === "A" ? labelElement : labelElement.querySelector("a")) : null;
+    const ownLabelText = labelElement ? cleanText(labelElement.textContent).replace(/:\s*$/, "") : null;
+    const linkedAward = labelLink && cleanText(labelLink.textContent).replace(/:\s*$/, "") === ownLabelText ? cannesAwardFromHref(labelLink.getAttribute("href")) : null;
+
     if (!isTierOnly && text) {
       const colonMatch = text.match(/^(.+?):\s+(.+)$/s);
       const ownLabel = colonMatch ? getOwnLabel(li) : null;
-      const hasTrustedLabel = Boolean(colonMatch && ownLabel && cleanText(colonMatch[1]) === ownLabel);
-      const trustedSubLabel = hasTrustedLabel && !isFormatBucketHeading(colonMatch[1]) ? colonMatch[1] : null;
+      const hasLinkedLabel = Boolean(colonMatch && ownLabel && cleanText(colonMatch[1]) === ownLabel);
+      // A plain-text label ("Best Cinematography: …") is trusted too when it
+      // reads as an award name.
+      const hasTrustedLabel = hasLinkedLabel || Boolean(colonMatch && looksLikeAwardLabel(cleanText(colonMatch[1])));
+      const trustedSubLabel = hasTrustedLabel && !isFormatBucketHeading(colonMatch[1]) ? cleanText(colonMatch[1]).replace(/^prize for /i, "") : null;
 
       const shouldQualify =
         trustedSubLabel &&
         sectionCategory &&
         sectionCategory !== trustedSubLabel &&
         (AMBIGUOUS_SUB_AWARD_PATTERN.test(trustedSubLabel) ||
-          (STRAND_SPECIFIC_AWARD_PATTERN.test(trustedSubLabel) && !FLAGSHIP_COMPETITION_SECTION_PATTERN.test(sectionCategory)));
-      const category = trustedSubLabel ? (shouldQualify ? `${sectionCategory} – ${trustedSubLabel}` : trustedSubLabel) : sectionCategory;
+          (/short films?( competition)?$/i.test(sectionCategory) && !/short|court|palme|kodak|canal|illy|discovery/i.test(trustedSubLabel)) ||
+          (/^un certain regard$/i.test(sectionCategory) && !/un certain regard|fipresci|ecumenical|queer|palm dog|cam[eé]ra/i.test(trustedSubLabel)) ||
+          (STRAND_SPECIFIC_AWARD_PATTERN.test(trustedSubLabel) && !FLAGSHIP_COMPETITION_SECTION_PATTERN.test(sectionCategory) && !/awards?$/i.test(sectionCategory)));
+      const category =
+        (hasLinkedLabel && linkedAward) ||
+        (trustedSubLabel ? (shouldQualify ? `${sectionCategory} – ${trustedSubLabel}` : trustedSubLabel) : sectionCategory);
       const rhs = hasTrustedLabel ? colonMatch[2] : text;
 
       const forMatch = rhs.match(/\bfor\b\s+(.+)$/i);
       const byMatch = rhs.match(/^(.+?)\s+\bby\b\s+/i);
 
+      // Film titles are Wikipedia's italics — excluding an italicized label
+      // and anything inside the nested list. Read first, so a title that
+      // itself contains "for"/"by" ("Bowling for Columbine") stays whole,
+      // and a prize shared by two films ("… for María Candelaria and Los
+      // tres mosqueteros") records both.
+      // The first element is only a label when a colon follows it; "<i>Things
+      // You Can Tell…</i> by Rodrigo García" is a film.
+      const labelIsColonLabel = Boolean(ownLabelText) && /^\s*:/.test(text.slice(text.indexOf(ownLabelText) + ownLabelText.length));
+      const italicTitles = [];
+      for (const italic of li.querySelectorAll("i")) {
+        if (nestedUl?.contains(italic)) continue;
+        if (labelIsColonLabel && (labelElement.contains(italic) || italic.contains(labelElement))) continue;
+        const italicText = cleanText((italic.querySelector("a") ?? italic).textContent);
+        if (!italicText || italicTitles.includes(italicText)) continue;
+        if (labelIsColonLabel && italicText === ownLabelText) continue;
+        if (!rhs.includes(italicText)) continue;
+        italicTitles.push(italicText);
+      }
+      if (italicTitles.length) {
+        const personBefore = forMatch ? rhs.slice(0, forMatch.index).trim() : null;
+        const personAfter = !forMatch && byMatch && byMatch[1].includes(italicTitles[0]) ? rhs.slice(byMatch[0].length).trim() : null;
+        const extracted = extractTitleAndPerson(li, nestedUl);
+        const linkedPerson = extracted.personName && extracted.personName !== ownLabelText && !italicTitles.includes(extracted.personName) ? extracted.personName : null;
+        const personName = (personBefore && !italicTitles.some((t) => personBefore.includes(t)) ? personBefore : null) ?? personAfter ?? linkedPerson;
+        // Shared only when the titles are joined by "and"/","/"&" — not an
+        // original title or French award name in parentheses after the film.
+        const between = italicTitles.length > 1 ? rhs.slice(rhs.indexOf(italicTitles[0]) + italicTitles[0].length, rhs.indexOf(italicTitles[1])) : "";
+        const shared = italicTitles.length > 1 && !between.includes("(") && /\band\b|,|&/.test(between);
+        for (const film of shared ? italicTitles : italicTitles.slice(0, 1)) {
+          addRecord(category, "winner", film, personName, true, shared ? undefined : extracted.originalReleaseYear);
+        }
+      } else {
       let title = "";
       let personName = null;
       let hasFilmSignal = true;
@@ -598,6 +1006,7 @@ export function parseCannesWikipedia(html, year) {
       }
 
       addRecord(category, "winner", title, personName, hasFilmSignal, originalReleaseYear);
+      }
     }
 
     if (nestedUl) {
@@ -607,7 +1016,11 @@ export function parseCannesWikipedia(html, year) {
       // italic title is not a category for the nested items — they stay in
       // the enclosing section.
       const labelIsFilm = Boolean(label) && !isTierOnly && extractTitleAndPerson(li, nestedUl).title === label;
-      const childSectionCategory = (!labelIsFilm && label) || sectionCategory;
+      const qualifiedTier =
+        label && /short films?( competition)?$/i.test(sectionCategory ?? "") && !/short|court|palme|kodak|canal|illy|discovery/i.test(label)
+          ? `${sectionCategory} – ${label}`
+          : label;
+      const childSectionCategory = (!labelIsFilm && label && (linkedAward || qualifiedTier)) || sectionCategory;
       parseAwardsItems(Array.from(nestedUl.children).filter((child) => child.tagName === "LI"), childSectionCategory);
     }
   }
@@ -763,7 +1176,18 @@ export function parseCannesWikipedia(html, year) {
 
     const items = Array.from(list.querySelectorAll(":scope > li"));
     if (isAwards) {
-      parseAwardsItems(items, ctx.section);
+      let awardSection = ctx.section;
+      const bold = precedingBoldLabel(list);
+      if (bold) {
+        if (/^short films?( awards?)?$/i.test(bold.text)) {
+          // Before the Short Film Palme d'Or (1955) the short films' top
+          // prize was a plain list under "Short Films".
+          awardSection = year < 1955 ? "Short Film Grand Prix" : "Short Films Competition";
+        } else if (!isFormatBucketHeading(bold.text) && !/^feature films?( awards?)?$/i.test(bold.text)) {
+          awardSection = cannesAwardFromHref(bold.href) ?? bold.text;
+        }
+      }
+      parseAwardsItems(items, awardSection);
     } else if (isFilmSection) {
       items.forEach((li) => parseNomineeListItem(li, sectionCategory));
     }
@@ -824,6 +1248,24 @@ async function run() {
       console.warn(`[FAIL] No data found for year ${year}`);
     }
   }
+
+  const festivalYears = new Set(records.map((record) => record.year));
+  const listWinners = [];
+  for (const { category, page } of AWARD_LIST_PAGES) {
+    const url = `https://en.wikipedia.org/wiki/${encodeURI(page)}`;
+    try {
+      const res = await fetchWithRetry(url, { headers: { "User-Agent": "movie-buff-archive-bot/0.2 (https://example.com)" } }, `Cannes ${url}`);
+      listWinners.push(...parseCannesAwardListPage(await res.text(), category));
+    } catch (err) {
+      console.warn(`[ERROR] Error fetching/parsing ${url}:`, err);
+    }
+    await sleep(DEFAULT_SCRAPE_DELAY_MS);
+  }
+  const supplemented = supplementFromAwardLists(records, listWinners, festivalYears);
+  records.push(...supplemented);
+  console.log(`[INFO] Award list articles: ${listWinners.length} winners read, ${supplemented.length} missing from the yearly pages added`);
+  for (const record of supplemented) console.log(`  + ${record.year} ${record.category}: ${record.film.title}`);
+
   try {
     await writeFile(outputPath, JSON.stringify(records, null, 2), "utf8");
     console.log(`[DONE] Wrote ${records.length} records to ${outputPath}`);

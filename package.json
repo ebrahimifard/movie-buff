@@ -15,6 +15,8 @@
     "data:enrich:tmdb": "node scripts/enrich-tmdb.mjs",
     "data:enrich:wikidata-ids": "node scripts/enrich-wikidata.mjs --phase=ids",
     "data:enrich:wikidata-fill": "node scripts/enrich-wikidata.mjs --phase=fill",
+    "data:enrich:imdb-ids": "node scripts/enrich-imdb.mjs --phase=ids",
+    "data:enrich:imdb-posters": "node scripts/enrich-imdb.mjs --phase=posters",
     "data:build": "node scripts/build-comprehensive-data.mjs",
     "data:posters": "node scripts/download-posters.mjs",
     "data:validate": "node scripts/validate-data.mjs",
