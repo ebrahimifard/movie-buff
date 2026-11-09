@@ -4904,14 +4904,6 @@
     "endDate": null
   },
   {
-    "id": "cannes-1950",
-    "festivalId": "cannes",
-    "year": 1950,
-    "edition": null,
-    "startDate": null,
-    "endDate": null
-  },
-  {
     "id": "golden-globes-1950",
     "festivalId": "golden-globes",
     "year": 1950,
@@ -4987,14 +4979,6 @@
     "id": "venice-1949",
     "festivalId": "venice",
     "year": 1949,
-    "edition": null,
-    "startDate": null,
-    "endDate": null
-  },
-  {
-    "id": "cannes-1948",
-    "festivalId": "cannes",
-    "year": 1948,
     "edition": null,
     "startDate": null,
     "endDate": null
@@ -5291,6 +5275,14 @@
     "id": "venice-1934",
     "festivalId": "venice",
     "year": 1934,
+    "edition": null,
+    "startDate": null,
+    "endDate": null
+  },
+  {
+    "id": "oscars-1933",
+    "festivalId": "oscars",
+    "year": 1933,
     "edition": null,
     "startDate": null,
     "endDate": null

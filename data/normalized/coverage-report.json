@@ -1,8 +1,8 @@
 {
   "summary": {
-    "generatedAt": "2026-10-03T14:45:32.336Z",
+    "generatedAt": "2026-11-09T01:37:36.156Z",
     "festivals": 9,
-    "totalMissingYears": 12,
+    "totalMissingYears": 13,
     "totalWeakYears": 98
   },
   "festivals": [
@@ -11,813 +11,811 @@
       "festivalName": "Academy Awards",
       "foundedYear": 1929,
       "totalYears": 98,
-      "missingYears": [
-        1933
-      ],
+      "missingYears": [],
       "weakYears": [],
       "coverageYears": [
         {
           "year": 1929,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 18,
-          "nomineeCount": 17,
-          "categoryCount": 12
+          "winnerCount": 31,
+          "nomineeCount": 42,
+          "categoryCount": 24
         },
         {
           "year": 1930,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 11,
-          "nomineeCount": 81,
-          "categoryCount": 8
+          "winnerCount": 18,
+          "nomineeCount": 120,
+          "categoryCount": 15
         },
         {
           "year": 1931,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 8,
-          "nomineeCount": 32,
-          "categoryCount": 8
+          "winnerCount": 16,
+          "nomineeCount": 67,
+          "categoryCount": 16
         },
         {
           "year": 1932,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 12,
-          "nomineeCount": 28,
-          "categoryCount": 11
+          "winnerCount": 21,
+          "nomineeCount": 63,
+          "categoryCount": 20
         },
         {
           "year": 1933,
-          "hasData": false,
+          "hasData": true,
           "isInactive": false,
-          "winnerCount": 0,
-          "nomineeCount": 0,
-          "categoryCount": 0
+          "winnerCount": 19,
+          "nomineeCount": 46,
+          "categoryCount": 15
         },
         {
           "year": 1934,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 12,
-          "nomineeCount": 32,
-          "categoryCount": 12
+          "winnerCount": 31,
+          "nomineeCount": 78,
+          "categoryCount": 27
         },
         {
           "year": 1935,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 14,
-          "nomineeCount": 43,
-          "categoryCount": 14
+          "winnerCount": 30,
+          "nomineeCount": 91,
+          "categoryCount": 31
         },
         {
           "year": 1936,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 14,
-          "nomineeCount": 54,
-          "categoryCount": 14
+          "winnerCount": 31,
+          "nomineeCount": 120,
+          "categoryCount": 32
         },
         {
           "year": 1937,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 17,
-          "nomineeCount": 70,
-          "categoryCount": 17
+          "winnerCount": 37,
+          "nomineeCount": 157,
+          "categoryCount": 38
         },
         {
           "year": 1938,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 17,
-          "nomineeCount": 84,
-          "categoryCount": 17
+          "winnerCount": 37,
+          "nomineeCount": 187,
+          "categoryCount": 39
         },
         {
           "year": 1939,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 17,
-          "nomineeCount": 99,
-          "categoryCount": 17
+          "winnerCount": 35,
+          "nomineeCount": 214,
+          "categoryCount": 37
         },
         {
           "year": 1940,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 19,
-          "nomineeCount": 111,
-          "categoryCount": 19
+          "winnerCount": 39,
+          "nomineeCount": 219,
+          "categoryCount": 41
         },
         {
           "year": 1941,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 21,
-          "nomineeCount": 128,
-          "categoryCount": 21
+          "winnerCount": 43,
+          "nomineeCount": 266,
+          "categoryCount": 44
         },
         {
           "year": 1942,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 22,
-          "nomineeCount": 144,
-          "categoryCount": 22
+          "winnerCount": 45,
+          "nomineeCount": 302,
+          "categoryCount": 47
         },
         {
           "year": 1943,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 25,
-          "nomineeCount": 146,
-          "categoryCount": 22
+          "winnerCount": 51,
+          "nomineeCount": 305,
+          "categoryCount": 47
         },
         {
           "year": 1944,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 130,
-          "categoryCount": 23
+          "winnerCount": 47,
+          "nomineeCount": 270,
+          "categoryCount": 49
         },
         {
           "year": 1945,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 130,
-          "categoryCount": 23
+          "winnerCount": 47,
+          "nomineeCount": 274,
+          "categoryCount": 49
         },
         {
           "year": 1946,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 24,
-          "nomineeCount": 118,
-          "categoryCount": 26
+          "winnerCount": 48,
+          "nomineeCount": 253,
+          "categoryCount": 51
         },
         {
           "year": 1947,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 22,
-          "nomineeCount": 73,
-          "categoryCount": 22
+          "winnerCount": 45,
+          "nomineeCount": 155,
+          "categoryCount": 47
         },
         {
           "year": 1948,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 26,
-          "nomineeCount": 72,
-          "categoryCount": 25
+          "winnerCount": 50,
+          "nomineeCount": 152,
+          "categoryCount": 50
         },
         {
           "year": 1949,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 25,
-          "nomineeCount": 72,
-          "categoryCount": 26
+          "winnerCount": 50,
+          "nomineeCount": 155,
+          "categoryCount": 54
         },
         {
           "year": 1950,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 27,
-          "nomineeCount": 74,
-          "categoryCount": 26
+          "winnerCount": 54,
+          "nomineeCount": 157,
+          "categoryCount": 54
         },
         {
           "year": 1951,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 26,
-          "nomineeCount": 78,
-          "categoryCount": 26
+          "winnerCount": 52,
+          "nomineeCount": 160,
+          "categoryCount": 54
         },
         {
           "year": 1952,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 25,
-          "nomineeCount": 84,
-          "categoryCount": 26
+          "winnerCount": 50,
+          "nomineeCount": 175,
+          "categoryCount": 54
         },
         {
           "year": 1953,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 24,
-          "nomineeCount": 91,
-          "categoryCount": 25
+          "winnerCount": 49,
+          "nomineeCount": 190,
+          "categoryCount": 53
         },
         {
           "year": 1954,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 25,
-          "nomineeCount": 92,
-          "categoryCount": 25
+          "winnerCount": 50,
+          "nomineeCount": 190,
+          "categoryCount": 52
         },
         {
           "year": 1955,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 26,
-          "nomineeCount": 86,
-          "categoryCount": 26
+          "winnerCount": 52,
+          "nomineeCount": 179,
+          "categoryCount": 54
         },
         {
           "year": 1956,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 26,
-          "nomineeCount": 91,
-          "categoryCount": 26
+          "winnerCount": 52,
+          "nomineeCount": 187,
+          "categoryCount": 53
         },
         {
           "year": 1957,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 26,
-          "nomineeCount": 91,
-          "categoryCount": 26
+          "winnerCount": 53,
+          "nomineeCount": 189,
+          "categoryCount": 55
         },
         {
           "year": 1958,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 19,
-          "nomineeCount": 69,
-          "categoryCount": 19
+          "winnerCount": 39,
+          "nomineeCount": 143,
+          "categoryCount": 40
         },
         {
           "year": 1959,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 22,
-          "nomineeCount": 81,
-          "categoryCount": 22
+          "winnerCount": 45,
+          "nomineeCount": 167,
+          "categoryCount": 46
         },
         {
           "year": 1960,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 24,
-          "nomineeCount": 84,
-          "categoryCount": 24
+          "winnerCount": 49,
+          "nomineeCount": 173,
+          "categoryCount": 50
         },
         {
           "year": 1961,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 24,
-          "nomineeCount": 91,
-          "categoryCount": 26
+          "winnerCount": 49,
+          "nomineeCount": 186,
+          "categoryCount": 53
         },
         {
           "year": 1962,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 24,
-          "nomineeCount": 87,
-          "categoryCount": 24
+          "winnerCount": 49,
+          "nomineeCount": 181,
+          "categoryCount": 51
         },
         {
           "year": 1963,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 24,
-          "nomineeCount": 88,
-          "categoryCount": 24
+          "winnerCount": 48,
+          "nomineeCount": 177,
+          "categoryCount": 49
         },
         {
           "year": 1964,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 25,
-          "nomineeCount": 90,
-          "categoryCount": 25
+          "winnerCount": 50,
+          "nomineeCount": 182,
+          "categoryCount": 51
         },
         {
           "year": 1965,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 26,
-          "nomineeCount": 90,
-          "categoryCount": 26
+          "winnerCount": 51,
+          "nomineeCount": 182,
+          "categoryCount": 53
         },
         {
           "year": 1966,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 24,
-          "nomineeCount": 89,
-          "categoryCount": 27
+          "winnerCount": 49,
+          "nomineeCount": 183,
+          "categoryCount": 55
         },
         {
           "year": 1967,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 25,
-          "nomineeCount": 90,
-          "categoryCount": 25
+          "winnerCount": 50,
+          "nomineeCount": 182,
+          "categoryCount": 52
         },
         {
           "year": 1968,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 22,
-          "nomineeCount": 78,
-          "categoryCount": 22
+          "winnerCount": 44,
+          "nomineeCount": 158,
+          "categoryCount": 46
         },
         {
           "year": 1969,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 76,
-          "categoryCount": 21
+          "winnerCount": 46,
+          "nomineeCount": 156,
+          "categoryCount": 44
         },
         {
           "year": 1970,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 21,
-          "nomineeCount": 76,
-          "categoryCount": 21
+          "winnerCount": 42,
+          "nomineeCount": 153,
+          "categoryCount": 43
         },
         {
           "year": 1971,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 20,
-          "nomineeCount": 76,
-          "categoryCount": 21
+          "winnerCount": 41,
+          "nomineeCount": 170,
+          "categoryCount": 46
         },
         {
           "year": 1972,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 22,
-          "nomineeCount": 75,
-          "categoryCount": 22
+          "winnerCount": 43,
+          "nomineeCount": 171,
+          "categoryCount": 47
         },
         {
           "year": 1973,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 21,
-          "nomineeCount": 72,
-          "categoryCount": 21
+          "winnerCount": 41,
+          "nomineeCount": 146,
+          "categoryCount": 43
         },
         {
           "year": 1974,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 20,
-          "nomineeCount": 73,
-          "categoryCount": 20
+          "winnerCount": 40,
+          "nomineeCount": 149,
+          "categoryCount": 43
         },
         {
           "year": 1975,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 20,
-          "nomineeCount": 75,
-          "categoryCount": 20
+          "winnerCount": 40,
+          "nomineeCount": 153,
+          "categoryCount": 42
         },
         {
           "year": 1976,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 21,
-          "nomineeCount": 76,
-          "categoryCount": 21
+          "winnerCount": 41,
+          "nomineeCount": 156,
+          "categoryCount": 45
         },
         {
           "year": 1977,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 20,
-          "nomineeCount": 72,
-          "categoryCount": 21
+          "winnerCount": 40,
+          "nomineeCount": 149,
+          "categoryCount": 43
         },
         {
           "year": 1978,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 22,
-          "nomineeCount": 77,
-          "categoryCount": 22
+          "winnerCount": 43,
+          "nomineeCount": 154,
+          "categoryCount": 43
         },
         {
           "year": 1979,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 20,
-          "nomineeCount": 75,
-          "categoryCount": 20
+          "winnerCount": 40,
+          "nomineeCount": 152,
+          "categoryCount": 42
         },
         {
           "year": 1980,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 21,
-          "nomineeCount": 79,
-          "categoryCount": 21
+          "winnerCount": 42,
+          "nomineeCount": 161,
+          "categoryCount": 45
         },
         {
           "year": 1981,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 19,
-          "nomineeCount": 71,
-          "categoryCount": 19
+          "winnerCount": 38,
+          "nomineeCount": 142,
+          "categoryCount": 39
         },
         {
           "year": 1982,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 21,
-          "nomineeCount": 74,
-          "categoryCount": 21
+          "winnerCount": 42,
+          "nomineeCount": 151,
+          "categoryCount": 45
         },
         {
           "year": 1983,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 80,
-          "categoryCount": 23
+          "winnerCount": 46,
+          "nomineeCount": 161,
+          "categoryCount": 47
         },
         {
           "year": 1984,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 21,
-          "nomineeCount": 72,
-          "categoryCount": 21
+          "winnerCount": 42,
+          "nomineeCount": 144,
+          "categoryCount": 44
         },
         {
           "year": 1985,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 21,
-          "nomineeCount": 77,
-          "categoryCount": 22
+          "winnerCount": 43,
+          "nomineeCount": 154,
+          "categoryCount": 46
         },
         {
           "year": 1986,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 22,
-          "nomineeCount": 78,
-          "categoryCount": 23
+          "winnerCount": 44,
+          "nomineeCount": 155,
+          "categoryCount": 46
         },
         {
           "year": 1987,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 76,
-          "categoryCount": 22
+          "winnerCount": 46,
+          "nomineeCount": 153,
+          "categoryCount": 45
         },
         {
           "year": 1988,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 21,
-          "nomineeCount": 73,
-          "categoryCount": 21
+          "winnerCount": 42,
+          "nomineeCount": 149,
+          "categoryCount": 44
         },
         {
           "year": 1989,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 22,
-          "nomineeCount": 77,
-          "categoryCount": 22
+          "winnerCount": 44,
+          "nomineeCount": 172,
+          "categoryCount": 48
         },
         {
           "year": 1990,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 75,
-          "categoryCount": 23
+          "winnerCount": 45,
+          "nomineeCount": 172,
+          "categoryCount": 50
         },
         {
           "year": 1991,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 21,
-          "nomineeCount": 78,
-          "categoryCount": 21
+          "winnerCount": 42,
+          "nomineeCount": 158,
+          "categoryCount": 44
         },
         {
           "year": 1992,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 22,
-          "nomineeCount": 76,
-          "categoryCount": 22
+          "winnerCount": 44,
+          "nomineeCount": 151,
+          "categoryCount": 45
         },
         {
           "year": 1993,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 22,
-          "nomineeCount": 82,
-          "categoryCount": 22
+          "winnerCount": 44,
+          "nomineeCount": 164,
+          "categoryCount": 45
         },
         {
           "year": 1994,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 80,
-          "categoryCount": 24
+          "winnerCount": 45,
+          "nomineeCount": 160,
+          "categoryCount": 47
         },
         {
           "year": 1995,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 17,
-          "nomineeCount": 73,
-          "categoryCount": 22
+          "winnerCount": 41,
+          "nomineeCount": 153,
+          "categoryCount": 47
         },
         {
           "year": 1996,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 80,
-          "categoryCount": 23
+          "winnerCount": 46,
+          "nomineeCount": 166,
+          "categoryCount": 47
         },
         {
           "year": 1997,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 85,
-          "categoryCount": 23
+          "winnerCount": 46,
+          "nomineeCount": 171,
+          "categoryCount": 47
         },
         {
           "year": 1998,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 24,
-          "nomineeCount": 86,
-          "categoryCount": 24
+          "winnerCount": 47,
+          "nomineeCount": 172,
+          "categoryCount": 47
         },
         {
           "year": 1999,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 82,
-          "categoryCount": 23
+          "winnerCount": 46,
+          "nomineeCount": 167,
+          "categoryCount": 47
         },
         {
           "year": 2000,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 22,
-          "nomineeCount": 81,
-          "categoryCount": 22
+          "winnerCount": 44,
+          "nomineeCount": 163,
+          "categoryCount": 45
         },
         {
           "year": 2001,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 18,
-          "nomineeCount": 80,
-          "categoryCount": 22
+          "winnerCount": 40,
+          "nomineeCount": 159,
+          "categoryCount": 45
         },
         {
           "year": 2002,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 81,
-          "categoryCount": 24
+          "winnerCount": 46,
+          "nomineeCount": 162,
+          "categoryCount": 48
         },
         {
           "year": 2003,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 81,
-          "categoryCount": 24
+          "winnerCount": 46,
+          "nomineeCount": 164,
+          "categoryCount": 47
         },
         {
           "year": 2004,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 80,
-          "categoryCount": 23
+          "winnerCount": 46,
+          "nomineeCount": 161,
+          "categoryCount": 46
         },
         {
           "year": 2005,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 84,
-          "categoryCount": 23
+          "winnerCount": 46,
+          "nomineeCount": 169,
+          "categoryCount": 47
         },
         {
           "year": 2006,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 83,
-          "categoryCount": 23
+          "winnerCount": 46,
+          "nomineeCount": 164,
+          "categoryCount": 46
         },
         {
           "year": 2007,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 24,
-          "nomineeCount": 82,
-          "categoryCount": 24
+          "winnerCount": 47,
+          "nomineeCount": 166,
+          "categoryCount": 49
         },
         {
           "year": 2008,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 84,
-          "categoryCount": 23
+          "winnerCount": 46,
+          "nomineeCount": 167,
+          "categoryCount": 46
         },
         {
           "year": 2009,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 81,
-          "categoryCount": 23
+          "winnerCount": 46,
+          "nomineeCount": 163,
+          "categoryCount": 47
         },
         {
           "year": 2010,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 92,
-          "categoryCount": 23
+          "winnerCount": 46,
+          "nomineeCount": 179,
+          "categoryCount": 47
         },
         {
           "year": 2011,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 92,
-          "categoryCount": 23
+          "winnerCount": 46,
+          "nomineeCount": 178,
+          "categoryCount": 46
         },
         {
           "year": 2012,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 94,
-          "categoryCount": 24
+          "winnerCount": 46,
+          "nomineeCount": 181,
+          "categoryCount": 48
         },
         {
           "year": 2013,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 24,
-          "nomineeCount": 93,
-          "categoryCount": 23
+          "winnerCount": 48,
+          "nomineeCount": 182,
+          "categoryCount": 46
         },
         {
           "year": 2014,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 95,
-          "categoryCount": 24
+          "winnerCount": 46,
+          "nomineeCount": 185,
+          "categoryCount": 47
         },
         {
           "year": 2015,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 93,
-          "categoryCount": 23
+          "winnerCount": 47,
+          "nomineeCount": 183,
+          "categoryCount": 47
         },
         {
           "year": 2016,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 24,
-          "nomineeCount": 93,
-          "categoryCount": 23
+          "winnerCount": 47,
+          "nomineeCount": 183,
+          "categoryCount": 46
         },
         {
           "year": 2017,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 17,
-          "nomineeCount": 79,
-          "categoryCount": 22
+          "winnerCount": 40,
+          "nomineeCount": 169,
+          "categoryCount": 46
         },
         {
           "year": 2018,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 25,
-          "nomineeCount": 97,
-          "categoryCount": 24
+          "winnerCount": 48,
+          "nomineeCount": 186,
+          "categoryCount": 47
         },
         {
           "year": 2019,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 17,
-          "nomineeCount": 29,
-          "categoryCount": 21
+          "winnerCount": 40,
+          "nomineeCount": 118,
+          "categoryCount": 44
         },
         {
           "year": 2020,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 23,
-          "nomineeCount": 18,
-          "categoryCount": 23
+          "winnerCount": 46,
+          "nomineeCount": 109,
+          "categoryCount": 46
         },
         {
           "year": 2021,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 12,
-          "nomineeCount": 28,
-          "categoryCount": 22
+          "winnerCount": 34,
+          "nomineeCount": 138,
+          "categoryCount": 48
         },
         {
           "year": 2022,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 7,
-          "nomineeCount": 14,
-          "categoryCount": 9
+          "winnerCount": 29,
+          "nomineeCount": 101,
+          "categoryCount": 31
         },
         {
           "year": 2023,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 9,
-          "nomineeCount": 24,
-          "categoryCount": 13
+          "winnerCount": 31,
+          "nomineeCount": 111,
+          "categoryCount": 35
         },
         {
           "year": 2024,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 10,
-          "nomineeCount": 16,
-          "categoryCount": 15
+          "winnerCount": 32,
+          "nomineeCount": 107,
+          "categoryCount": 37
         },
         {
           "year": 2025,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 9,
-          "nomineeCount": 22,
-          "categoryCount": 12
+          "winnerCount": 31,
+          "nomineeCount": 113,
+          "categoryCount": 35
         },
         {
           "year": 2026,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 14,
-          "nomineeCount": 14,
-          "categoryCount": 19
+          "winnerCount": 38,
+          "nomineeCount": 110,
+          "categoryCount": 43
         }
       ],
       "catalogue": {
         "festivalId": "oscars",
-        "totalRecords": 9506,
-        "winners": 2030,
-        "nominees": 7476,
-        "missingPoster": 64,
-        "missingRuntime": 1,
-        "missingCountry": 8,
-        "missingImdb": 0,
-        "missingGenres": 66,
-        "missingSynopsis": 1,
-        "posterCoveragePct": 99.3,
-        "runtimeCoveragePct": 100,
-        "countryCoveragePct": 99.9,
-        "imdbCoveragePct": 100,
-        "genresCoveragePct": 99.3,
-        "synopsisCoveragePct": 100
+        "totalRecords": 20120,
+        "winners": 4186,
+        "nominees": 15934,
+        "missingPoster": 1434,
+        "missingRuntime": 1338,
+        "missingCountry": 1463,
+        "missingImdb": 1284,
+        "missingGenres": 1411,
+        "missingSynopsis": 1292,
+        "posterCoveragePct": 92.9,
+        "runtimeCoveragePct": 93.3,
+        "countryCoveragePct": 92.7,
+        "imdbCoveragePct": 93.6,
+        "genresCoveragePct": 93,
+        "synopsisCoveragePct": 93.6
       }
     },
     {
@@ -905,7 +903,7 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 9,
-          "nomineeCount": 39,
+          "nomineeCount": 38,
           "categoryCount": 8
         },
         {
@@ -1455,21 +1453,21 @@
       ],
       "catalogue": {
         "festivalId": "bafta",
-        "totalRecords": 6734,
+        "totalRecords": 6733,
         "winners": 1549,
-        "nominees": 5185,
-        "missingPoster": 1469,
-        "missingRuntime": 1387,
-        "missingCountry": 1426,
-        "missingImdb": 1341,
-        "missingGenres": 1370,
-        "missingSynopsis": 1351,
+        "nominees": 5184,
+        "missingPoster": 1467,
+        "missingRuntime": 1384,
+        "missingCountry": 1429,
+        "missingImdb": 1338,
+        "missingGenres": 1368,
+        "missingSynopsis": 1348,
         "posterCoveragePct": 78.2,
         "runtimeCoveragePct": 79.4,
         "countryCoveragePct": 78.8,
         "imdbCoveragePct": 80.1,
         "genresCoveragePct": 79.7,
-        "synopsisCoveragePct": 79.9
+        "synopsisCoveragePct": 80
       }
     },
     {
@@ -2055,7 +2053,7 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 29,
-          "nomineeCount": 94,
+          "nomineeCount": 92,
           "categoryCount": 32
         },
         {
@@ -2093,20 +2091,20 @@
       ],
       "catalogue": {
         "festivalId": "berlinale",
-        "totalRecords": 3517,
+        "totalRecords": 3515,
         "winners": 650,
-        "nominees": 2867,
-        "missingPoster": 822,
+        "nominees": 2865,
+        "missingPoster": 824,
         "missingRuntime": 724,
         "missingCountry": 796,
-        "missingImdb": 698,
-        "missingGenres": 792,
-        "missingSynopsis": 706,
+        "missingImdb": 697,
+        "missingGenres": 789,
+        "missingSynopsis": 705,
         "posterCoveragePct": 76.6,
         "runtimeCoveragePct": 79.4,
         "countryCoveragePct": 77.4,
         "imdbCoveragePct": 80.2,
-        "genresCoveragePct": 77.5,
+        "genresCoveragePct": 77.6,
         "synopsisCoveragePct": 79.9
       }
     },
@@ -2115,7 +2113,10 @@
       "festivalName": "Cannes Film Festival",
       "foundedYear": 1946,
       "totalYears": 81,
-      "missingYears": [],
+      "missingYears": [
+        1948,
+        1950
+      ],
       "weakYears": [
         2020
       ],
@@ -2124,9 +2125,9 @@
           "year": 1946,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 28,
-          "nomineeCount": 55,
-          "categoryCount": 9
+          "winnerCount": 27,
+          "nomineeCount": 88,
+          "categoryCount": 8
         },
         {
           "year": 1947,
@@ -2138,66 +2139,66 @@
         },
         {
           "year": 1948,
-          "hasData": true,
+          "hasData": false,
           "isInactive": false,
-          "winnerCount": 12,
-          "nomineeCount": 62,
-          "categoryCount": 10
+          "winnerCount": 0,
+          "nomineeCount": 0,
+          "categoryCount": 0
         },
         {
           "year": 1949,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 12,
-          "nomineeCount": 62,
-          "categoryCount": 10
+          "nomineeCount": 61,
+          "categoryCount": 9
         },
         {
           "year": 1950,
-          "hasData": true,
+          "hasData": false,
           "isInactive": false,
-          "winnerCount": 16,
-          "nomineeCount": 48,
-          "categoryCount": 17
+          "winnerCount": 0,
+          "nomineeCount": 0,
+          "categoryCount": 0
         },
         {
           "year": 1951,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 19,
-          "nomineeCount": 39,
-          "categoryCount": 15
+          "winnerCount": 18,
+          "nomineeCount": 73,
+          "categoryCount": 14
         },
         {
           "year": 1952,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 18,
-          "nomineeCount": 48,
-          "categoryCount": 18
+          "winnerCount": 16,
+          "nomineeCount": 81,
+          "categoryCount": 17
         },
         {
           "year": 1953,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 24,
-          "nomineeCount": 78,
-          "categoryCount": 21
+          "winnerCount": 23,
+          "nomineeCount": 77,
+          "categoryCount": 19
         },
         {
           "year": 1954,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 20,
-          "nomineeCount": 94,
-          "categoryCount": 8
+          "winnerCount": 19,
+          "nomineeCount": 93,
+          "categoryCount": 7
         },
         {
           "year": 1955,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 19,
-          "nomineeCount": 42,
+          "nomineeCount": 74,
           "categoryCount": 14
         },
         {
@@ -2205,7 +2206,7 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 17,
-          "nomineeCount": 37,
+          "nomineeCount": 73,
           "categoryCount": 13
         },
         {
@@ -2213,7 +2214,7 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 17,
-          "nomineeCount": 30,
+          "nomineeCount": 60,
           "categoryCount": 14
         },
         {
@@ -2221,7 +2222,7 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 15,
-          "nomineeCount": 25,
+          "nomineeCount": 50,
           "categoryCount": 13
         },
         {
@@ -2229,7 +2230,7 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 20,
-          "nomineeCount": 27,
+          "nomineeCount": 55,
           "categoryCount": 18
         },
         {
@@ -2237,7 +2238,7 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 16,
-          "nomineeCount": 33,
+          "nomineeCount": 61,
           "categoryCount": 11
         },
         {
@@ -2245,15 +2246,15 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 17,
-          "nomineeCount": 61,
-          "categoryCount": 16
+          "nomineeCount": 59,
+          "categoryCount": 14
         },
         {
           "year": 1962,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 19,
-          "nomineeCount": 39,
+          "nomineeCount": 73,
           "categoryCount": 15
         },
         {
@@ -2261,39 +2262,39 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 18,
-          "nomineeCount": 35,
+          "nomineeCount": 59,
           "categoryCount": 17
         },
         {
           "year": 1964,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 20,
-          "nomineeCount": 36,
-          "categoryCount": 16
+          "winnerCount": 19,
+          "nomineeCount": 59,
+          "categoryCount": 15
         },
         {
           "year": 1965,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 21,
-          "nomineeCount": 35,
+          "nomineeCount": 60,
           "categoryCount": 17
         },
         {
           "year": 1966,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 17,
-          "nomineeCount": 25,
-          "categoryCount": 15
+          "winnerCount": 15,
+          "nomineeCount": 48,
+          "categoryCount": 14
         },
         {
           "year": 1967,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 19,
-          "nomineeCount": 32,
+          "nomineeCount": 55,
           "categoryCount": 17
         },
         {
@@ -2301,55 +2302,55 @@
           "hasData": true,
           "isInactive": true,
           "winnerCount": 0,
-          "nomineeCount": 14,
-          "categoryCount": 2
+          "nomineeCount": 42,
+          "categoryCount": 3
         },
         {
           "year": 1969,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 16,
-          "nomineeCount": 33,
-          "categoryCount": 14
+          "winnerCount": 14,
+          "nomineeCount": 166,
+          "categoryCount": 15
         },
         {
           "year": 1970,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 14,
-          "nomineeCount": 32,
+          "winnerCount": 13,
+          "nomineeCount": 164,
           "categoryCount": 16
         },
         {
           "year": 1971,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 17,
-          "nomineeCount": 33,
+          "winnerCount": 16,
+          "nomineeCount": 135,
           "categoryCount": 16
         },
         {
           "year": 1972,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 14,
-          "nomineeCount": 43,
+          "winnerCount": 12,
+          "nomineeCount": 117,
           "categoryCount": 15
         },
         {
           "year": 1973,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 18,
-          "nomineeCount": 29,
+          "winnerCount": 16,
+          "nomineeCount": 94,
           "categoryCount": 17
         },
         {
           "year": 1974,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 16,
-          "nomineeCount": 32,
+          "winnerCount": 14,
+          "nomineeCount": 92,
           "categoryCount": 17
         },
         {
@@ -2357,151 +2358,151 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 12,
-          "nomineeCount": 29,
-          "categoryCount": 12
+          "nomineeCount": 80,
+          "categoryCount": 13
         },
         {
           "year": 1976,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 13,
-          "nomineeCount": 42,
-          "categoryCount": 12
+          "nomineeCount": 88,
+          "categoryCount": 13
         },
         {
           "year": 1977,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 13,
-          "nomineeCount": 59,
-          "categoryCount": 12
+          "nomineeCount": 108,
+          "categoryCount": 13
         },
         {
           "year": 1978,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 15,
-          "nomineeCount": 32,
-          "categoryCount": 15
+          "nomineeCount": 75,
+          "categoryCount": 16
         },
         {
           "year": 1979,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 19,
-          "nomineeCount": 38,
-          "categoryCount": 20
+          "nomineeCount": 78,
+          "categoryCount": 21
         },
         {
           "year": 1980,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 17,
-          "nomineeCount": 42,
-          "categoryCount": 17
+          "nomineeCount": 88,
+          "categoryCount": 18
         },
         {
           "year": 1981,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 21,
-          "nomineeCount": 46,
-          "categoryCount": 19
+          "winnerCount": 20,
+          "nomineeCount": 100,
+          "categoryCount": 21
         },
         {
           "year": 1982,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 21,
-          "nomineeCount": 38,
-          "categoryCount": 20
+          "nomineeCount": 84,
+          "categoryCount": 21
         },
         {
           "year": 1983,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 18,
-          "nomineeCount": 45,
-          "categoryCount": 17
+          "nomineeCount": 91,
+          "categoryCount": 18
         },
         {
           "year": 1984,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 18,
-          "nomineeCount": 37,
-          "categoryCount": 20
+          "nomineeCount": 74,
+          "categoryCount": 21
         },
         {
           "year": 1985,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 18,
-          "nomineeCount": 37,
-          "categoryCount": 19
+          "nomineeCount": 74,
+          "categoryCount": 20
         },
         {
           "year": 1986,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 20,
-          "nomineeCount": 49,
-          "categoryCount": 21
+          "nomineeCount": 86,
+          "categoryCount": 22
         },
         {
           "year": 1987,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 21,
-          "nomineeCount": 62,
-          "categoryCount": 19
+          "nomineeCount": 101,
+          "categoryCount": 20
         },
         {
           "year": 1988,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 20,
-          "nomineeCount": 50,
-          "categoryCount": 23
+          "nomineeCount": 88,
+          "categoryCount": 24
         },
         {
           "year": 1989,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 22,
-          "nomineeCount": 58,
-          "categoryCount": 21
+          "nomineeCount": 94,
+          "categoryCount": 22
         },
         {
           "year": 1990,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 26,
-          "nomineeCount": 56,
-          "categoryCount": 24
+          "nomineeCount": 94,
+          "categoryCount": 25
         },
         {
           "year": 1991,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 23,
-          "nomineeCount": 53,
-          "categoryCount": 21
+          "nomineeCount": 89,
+          "categoryCount": 22
         },
         {
           "year": 1992,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 21,
-          "nomineeCount": 61,
-          "categoryCount": 23
+          "nomineeCount": 112,
+          "categoryCount": 24
         },
         {
           "year": 1993,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 24,
-          "nomineeCount": 53,
+          "nomineeCount": 102,
           "categoryCount": 22
         },
         {
@@ -2509,103 +2510,103 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 23,
-          "nomineeCount": 40,
-          "categoryCount": 24
+          "nomineeCount": 97,
+          "categoryCount": 26
         },
         {
           "year": 1995,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 22,
-          "nomineeCount": 55,
-          "categoryCount": 23
+          "nomineeCount": 104,
+          "categoryCount": 24
         },
         {
           "year": 1996,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 22,
-          "nomineeCount": 60,
-          "categoryCount": 22
+          "nomineeCount": 109,
+          "categoryCount": 23
         },
         {
           "year": 1997,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 28,
-          "nomineeCount": 53,
-          "categoryCount": 25
+          "winnerCount": 27,
+          "nomineeCount": 97,
+          "categoryCount": 26
         },
         {
           "year": 1998,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 32,
-          "nomineeCount": 59,
-          "categoryCount": 31
+          "nomineeCount": 107,
+          "categoryCount": 32
         },
         {
           "year": 1999,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 34,
-          "nomineeCount": 56,
-          "categoryCount": 31
+          "nomineeCount": 109,
+          "categoryCount": 32
         },
         {
           "year": 2000,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 32,
-          "nomineeCount": 53,
-          "categoryCount": 30
+          "nomineeCount": 129,
+          "categoryCount": 31
         },
         {
           "year": 2001,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 38,
-          "nomineeCount": 63,
-          "categoryCount": 35
+          "nomineeCount": 121,
+          "categoryCount": 36
         },
         {
           "year": 2002,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 36,
-          "nomineeCount": 71,
-          "categoryCount": 33
+          "nomineeCount": 137,
+          "categoryCount": 34
         },
         {
           "year": 2003,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 36,
-          "nomineeCount": 67,
-          "categoryCount": 37
+          "nomineeCount": 117,
+          "categoryCount": 38
         },
         {
           "year": 2004,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 37,
-          "nomineeCount": 97,
-          "categoryCount": 36
+          "nomineeCount": 147,
+          "categoryCount": 37
         },
         {
           "year": 2005,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 37,
-          "nomineeCount": 91,
-          "categoryCount": 33
+          "winnerCount": 36,
+          "nomineeCount": 148,
+          "categoryCount": 34
         },
         {
           "year": 2006,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 40,
-          "nomineeCount": 119,
+          "winnerCount": 39,
+          "nomineeCount": 171,
           "categoryCount": 40
         },
         {
@@ -2613,151 +2614,151 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 29,
-          "nomineeCount": 98,
-          "categoryCount": 30
+          "nomineeCount": 142,
+          "categoryCount": 32
         },
         {
           "year": 2008,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 35,
-          "nomineeCount": 91,
-          "categoryCount": 37
+          "nomineeCount": 179,
+          "categoryCount": 40
         },
         {
           "year": 2009,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 37,
-          "nomineeCount": 102,
-          "categoryCount": 35
+          "nomineeCount": 144,
+          "categoryCount": 37
         },
         {
           "year": 2010,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 34,
-          "nomineeCount": 74,
-          "categoryCount": 33
+          "winnerCount": 33,
+          "nomineeCount": 147,
+          "categoryCount": 37
         },
         {
           "year": 2011,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 37,
-          "nomineeCount": 67,
-          "categoryCount": 35
+          "winnerCount": 36,
+          "nomineeCount": 148,
+          "categoryCount": 37
         },
         {
           "year": 2012,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 39,
-          "nomineeCount": 82,
-          "categoryCount": 41
+          "nomineeCount": 153,
+          "categoryCount": 44
         },
         {
           "year": 2013,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 42,
-          "nomineeCount": 77,
-          "categoryCount": 40
+          "winnerCount": 41,
+          "nomineeCount": 145,
+          "categoryCount": 42
         },
         {
           "year": 2014,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 45,
-          "nomineeCount": 82,
-          "categoryCount": 44
+          "winnerCount": 44,
+          "nomineeCount": 149,
+          "categoryCount": 46
         },
         {
           "year": 2015,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 50,
-          "nomineeCount": 89,
-          "categoryCount": 47
+          "nomineeCount": 165,
+          "categoryCount": 51
         },
         {
           "year": 2016,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 49,
-          "nomineeCount": 115,
-          "categoryCount": 48
+          "winnerCount": 48,
+          "nomineeCount": 177,
+          "categoryCount": 52
         },
         {
           "year": 2017,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 42,
-          "nomineeCount": 98,
-          "categoryCount": 44
+          "winnerCount": 43,
+          "nomineeCount": 179,
+          "categoryCount": 47
         },
         {
           "year": 2018,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 48,
-          "nomineeCount": 80,
-          "categoryCount": 46
+          "winnerCount": 47,
+          "nomineeCount": 158,
+          "categoryCount": 49
         },
         {
           "year": 2019,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 52,
-          "nomineeCount": 122,
-          "categoryCount": 51
+          "winnerCount": 51,
+          "nomineeCount": 200,
+          "categoryCount": 53
         },
         {
           "year": 2020,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 0,
-          "nomineeCount": 116,
-          "categoryCount": 7
+          "nomineeCount": 142,
+          "categoryCount": 8
         },
         {
           "year": 2021,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 41,
-          "nomineeCount": 102,
-          "categoryCount": 40
+          "nomineeCount": 178,
+          "categoryCount": 42
         },
         {
           "year": 2022,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 54,
-          "nomineeCount": 133,
-          "categoryCount": 54
+          "nomineeCount": 167,
+          "categoryCount": 57
         },
         {
           "year": 2023,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 52,
-          "nomineeCount": 103,
-          "categoryCount": 54
+          "winnerCount": 51,
+          "nomineeCount": 183,
+          "categoryCount": 58
         },
         {
           "year": 2024,
           "hasData": true,
           "isInactive": false,
           "winnerCount": 59,
-          "nomineeCount": 159,
-          "categoryCount": 55
+          "nomineeCount": 189,
+          "categoryCount": 59
         },
         {
           "year": 2025,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 55,
-          "nomineeCount": 151,
+          "winnerCount": 54,
+          "nomineeCount": 180,
           "categoryCount": 56
         },
         {
@@ -2765,27 +2766,27 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 53,
-          "nomineeCount": 166,
-          "categoryCount": 55
+          "nomineeCount": 197,
+          "categoryCount": 58
         }
       ],
       "catalogue": {
         "festivalId": "cannes",
-        "totalRecords": 7195,
-        "winners": 2118,
-        "nominees": 5077,
-        "missingPoster": 2024,
-        "missingRuntime": 1786,
-        "missingCountry": 1991,
-        "missingImdb": 1710,
-        "missingGenres": 1967,
-        "missingSynopsis": 1755,
-        "posterCoveragePct": 71.9,
-        "runtimeCoveragePct": 75.2,
-        "countryCoveragePct": 72.3,
-        "imdbCoveragePct": 76.2,
-        "genresCoveragePct": 72.7,
-        "synopsisCoveragePct": 75.6
+        "totalRecords": 10789,
+        "winners": 2059,
+        "nominees": 8730,
+        "missingPoster": 1841,
+        "missingRuntime": 1534,
+        "missingCountry": 1630,
+        "missingImdb": 1458,
+        "missingGenres": 1734,
+        "missingSynopsis": 1545,
+        "posterCoveragePct": 82.9,
+        "runtimeCoveragePct": 85.8,
+        "countryCoveragePct": 84.9,
+        "imdbCoveragePct": 86.5,
+        "genresCoveragePct": 83.9,
+        "synopsisCoveragePct": 85.7
       }
     },
     {
@@ -3476,18 +3477,18 @@
         "totalRecords": 5190,
         "winners": 1019,
         "nominees": 4171,
-        "missingPoster": 305,
-        "missingRuntime": 298,
-        "missingCountry": 317,
-        "missingImdb": 279,
-        "missingGenres": 295,
-        "missingSynopsis": 283,
+        "missingPoster": 304,
+        "missingRuntime": 297,
+        "missingCountry": 322,
+        "missingImdb": 278,
+        "missingGenres": 297,
+        "missingSynopsis": 282,
         "posterCoveragePct": 94.1,
         "runtimeCoveragePct": 94.3,
-        "countryCoveragePct": 93.9,
+        "countryCoveragePct": 93.8,
         "imdbCoveragePct": 94.6,
         "genresCoveragePct": 94.3,
-        "synopsisCoveragePct": 94.5
+        "synopsisCoveragePct": 94.6
       }
     },
     {
@@ -3771,7 +3772,7 @@
           "year": 1975,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 10,
+          "winnerCount": 9,
           "nomineeCount": 0,
           "categoryCount": 9
         },
@@ -4132,7 +4133,7 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 2,
-          "nomineeCount": 121,
+          "nomineeCount": 120,
           "categoryCount": 28
         },
         {
@@ -4186,21 +4187,21 @@
       ],
       "catalogue": {
         "festivalId": "locarno",
-        "totalRecords": 5075,
-        "winners": 1161,
-        "nominees": 3914,
-        "missingPoster": 3571,
-        "missingRuntime": 3479,
-        "missingCountry": 3540,
-        "missingImdb": 3363,
-        "missingGenres": 3558,
-        "missingSynopsis": 3409,
-        "posterCoveragePct": 29.6,
-        "runtimeCoveragePct": 31.4,
-        "countryCoveragePct": 30.2,
-        "imdbCoveragePct": 33.7,
-        "genresCoveragePct": 29.9,
-        "synopsisCoveragePct": 32.8
+        "totalRecords": 5073,
+        "winners": 1160,
+        "nominees": 3913,
+        "missingPoster": 3567,
+        "missingRuntime": 3473,
+        "missingCountry": 3537,
+        "missingImdb": 3355,
+        "missingGenres": 3551,
+        "missingSynopsis": 3401,
+        "posterCoveragePct": 29.7,
+        "runtimeCoveragePct": 31.5,
+        "countryCoveragePct": 30.3,
+        "imdbCoveragePct": 33.9,
+        "genresCoveragePct": 30,
+        "synopsisCoveragePct": 33
       }
     },
     {
@@ -4657,17 +4658,17 @@
         "winners": 1213,
         "nominees": 5,
         "missingPoster": 197,
-        "missingRuntime": 158,
+        "missingRuntime": 157,
         "missingCountry": 204,
-        "missingImdb": 149,
-        "missingGenres": 182,
-        "missingSynopsis": 150,
+        "missingImdb": 148,
+        "missingGenres": 181,
+        "missingSynopsis": 149,
         "posterCoveragePct": 83.8,
-        "runtimeCoveragePct": 87,
+        "runtimeCoveragePct": 87.1,
         "countryCoveragePct": 83.3,
         "imdbCoveragePct": 87.8,
         "genresCoveragePct": 85.1,
-        "synopsisCoveragePct": 87.7
+        "synopsisCoveragePct": 87.8
       }
     },
     {
@@ -4893,7 +4894,7 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 2,
-          "nomineeCount": 8,
+          "nomineeCount": 7,
           "categoryCount": 8
         },
         {
@@ -5099,21 +5100,21 @@
       ],
       "catalogue": {
         "festivalId": "tiff",
-        "totalRecords": 612,
+        "totalRecords": 611,
         "winners": 64,
-        "nominees": 548,
-        "missingPoster": 137,
+        "nominees": 547,
+        "missingPoster": 136,
         "missingRuntime": 128,
         "missingCountry": 135,
         "missingImdb": 118,
         "missingGenres": 136,
         "missingSynopsis": 122,
-        "posterCoveragePct": 77.6,
+        "posterCoveragePct": 77.7,
         "runtimeCoveragePct": 79.1,
         "countryCoveragePct": 77.9,
         "imdbCoveragePct": 80.7,
-        "genresCoveragePct": 77.8,
-        "synopsisCoveragePct": 80.1
+        "genresCoveragePct": 77.7,
+        "synopsisCoveragePct": 80
       }
     },
     {
@@ -5541,7 +5542,7 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 10,
-          "nomineeCount": 74,
+          "nomineeCount": 73,
           "categoryCount": 13
         },
         {
@@ -5772,7 +5773,7 @@
           "year": 2011,
           "hasData": true,
           "isInactive": false,
-          "winnerCount": 30,
+          "winnerCount": 29,
           "nomineeCount": 207,
           "categoryCount": 63
         },
@@ -5805,7 +5806,7 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 52,
-          "nomineeCount": 168,
+          "nomineeCount": 167,
           "categoryCount": 80
         },
         {
@@ -5813,8 +5814,8 @@
           "hasData": true,
           "isInactive": false,
           "winnerCount": 75,
-          "nomineeCount": 168,
-          "categoryCount": 92
+          "nomineeCount": 167,
+          "categoryCount": 91
         },
         {
           "year": 2017,
@@ -5899,21 +5900,21 @@
       ],
       "catalogue": {
         "festivalId": "venice",
-        "totalRecords": 7715,
-        "winners": 1493,
-        "nominees": 6222,
-        "missingPoster": 1881,
-        "missingRuntime": 1831,
-        "missingCountry": 1965,
-        "missingImdb": 1666,
-        "missingGenres": 1912,
-        "missingSynopsis": 1740,
+        "totalRecords": 7711,
+        "winners": 1492,
+        "nominees": 6219,
+        "missingPoster": 1879,
+        "missingRuntime": 1830,
+        "missingCountry": 1969,
+        "missingImdb": 1663,
+        "missingGenres": 1917,
+        "missingSynopsis": 1737,
         "posterCoveragePct": 75.6,
         "runtimeCoveragePct": 76.3,
         "countryCoveragePct": 74.5,
         "imdbCoveragePct": 78.4,
-        "genresCoveragePct": 75.2,
-        "synopsisCoveragePct": 77.4
+        "genresCoveragePct": 75.1,
+        "synopsisCoveragePct": 77.5
       }
     }
   ]

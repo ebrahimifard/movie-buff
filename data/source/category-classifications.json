@@ -2260,6 +2260,12 @@
     },
     {
       "festivalId": "cannes",
+      "category": "3rd Prize",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
       "category": "40th Anniversary Prize",
       "isAward": true,
       "isHonoraryAward": false
@@ -2752,6 +2758,12 @@
     },
     {
       "festivalId": "cannes",
+      "category": "Carrosse d’Or",
+      "isAward": true,
+      "isHonoraryAward": true
+    },
+    {
+      "festivalId": "cannes",
       "category": "Chopard Trophy",
       "isAward": true,
       "isHonoraryAward": true
@@ -2872,6 +2884,12 @@
     },
     {
       "festivalId": "cannes",
+      "category": "Critics' Week – Grand prix",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
       "category": "Critics' Week (Semaine de la critique)",
       "isAward": false,
       "isHonoraryAward": false
@@ -2962,6 +2980,12 @@
     },
     {
       "festivalId": "cannes",
+      "category": "Europa Cinemas Label",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
       "category": "Europa Cinemas Label Award",
       "isAward": true,
       "isHonoraryAward": false
@@ -2986,6 +3010,18 @@
     },
     {
       "festivalId": "cannes",
+      "category": "FIPRESCI Prize – In Competition",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "FIPRESCI Prize – Un Certain Regard",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
       "category": "FIPRESCI Prize of the Festival de Cannes",
       "isAward": true,
       "isHonoraryAward": false
@@ -2993,6 +3029,30 @@
     {
       "festivalId": "cannes",
       "category": "FIPRESCI Prizes",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "FIPRESCI Prizes – In Competition",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "FIPRESCI Prizes – Parallel section",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "FIPRESCI Prizes – Un Certain Regard",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "First Jury Prize",
       "isAward": true,
       "isHonoraryAward": false
     },
@@ -3017,6 +3077,12 @@
     {
       "festivalId": "cannes",
       "category": "François Chalais Prize",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "French Film",
       "isAward": true,
       "isHonoraryAward": false
     },
@@ -3070,7 +3136,61 @@
     },
     {
       "festivalId": "cannes",
+      "category": "Grand Jury Prize",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
       "category": "Grand Prix",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Grand Prix Canal+ (short film)",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Grand prix de la semaine de la critique",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Grand Prix du Festival International du Film pour le Meilleur Film Scientifique",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Grand Prix du Jury",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Grand Prix International du Festival",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Grand Prix Nespresso",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Grand Prix Primagaz",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Grand Prix Spécial du Jury",
       "isAward": true,
       "isHonoraryAward": false
     },
@@ -3101,6 +3221,12 @@
     {
       "festivalId": "cannes",
       "category": "Gras Savoye Award",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Heart Throb Jury Prize",
       "isAward": true,
       "isHonoraryAward": false
     },
@@ -3178,13 +3304,67 @@
     },
     {
       "festivalId": "cannes",
+      "category": "International Critics' Week Grand Prix",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
       "category": "International Critics' Week Grand Prize",
       "isAward": true,
       "isHonoraryAward": false
     },
     {
       "festivalId": "cannes",
+      "category": "International Jury Prize",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "International Prize",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
       "category": "Jury Prize",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Jury Prize - animation",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Jury Prize - Best Short Film",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Jury Prize - fiction",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Jury Prize - Short Film",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Jury Prize for Animation",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Jury Prize for Fiction",
       "isAward": true,
       "isHonoraryAward": false
     },
@@ -3239,6 +3419,12 @@
     {
       "festivalId": "cannes",
       "category": "L'Œil d'or",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "L'Œil d'or – Special Jury Prize",
       "isAward": true,
       "isHonoraryAward": false
     },
@@ -3364,6 +3550,12 @@
     },
     {
       "festivalId": "cannes",
+      "category": "Palm Dog – Special Jury Prize",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
       "category": "Palm Dog Award",
       "isAward": true,
       "isHonoraryAward": false
@@ -3460,6 +3652,12 @@
     },
     {
       "festivalId": "cannes",
+      "category": "Prix d'interprétation féminine",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
       "category": "Prix de la (Toute) Jeune Critique",
       "isAward": true,
       "isHonoraryAward": false
@@ -3497,6 +3695,12 @@
     {
       "festivalId": "cannes",
       "category": "Prix du Jury Œcuménique",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Prix du Président du Jury Un Certain Regard",
       "isAward": true,
       "isHonoraryAward": false
     },
@@ -3676,6 +3880,18 @@
     },
     {
       "festivalId": "cannes",
+      "category": "Second Jury Prize",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Second Prize",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
       "category": "Second Prize of the Jury",
       "isAward": true,
       "isHonoraryAward": false
@@ -3684,6 +3900,12 @@
       "festivalId": "cannes",
       "category": "Short and medium-length films",
       "isAward": false,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Short film - Special Mention",
+      "isAward": true,
       "isHonoraryAward": false
     },
     {
@@ -3707,6 +3929,18 @@
     {
       "festivalId": "cannes",
       "category": "Short Film Gran Prix",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Short Film Grand Prix",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Short Film Jury Prize",
       "isAward": true,
       "isHonoraryAward": false
     },
@@ -3773,6 +4007,18 @@
     {
       "festivalId": "cannes",
       "category": "Short Films Competition",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Short Films Competition – Grand Prix",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Short Films Competition – Jury Prize",
       "isAward": true,
       "isHonoraryAward": false
     },
@@ -3898,6 +4144,12 @@
     },
     {
       "festivalId": "cannes",
+      "category": "Third Prize",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
       "category": "Three films for Ukraine",
       "isAward": false,
       "isHonoraryAward": false
@@ -3917,6 +4169,24 @@
     {
       "festivalId": "cannes",
       "category": "Un Certain Regard",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Un Certain Regard – Jury Prize",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Un Certain Regard – Special Jury Prize",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Un Certain Regard « Coup de cœur » Prize",
       "isAward": true,
       "isHonoraryAward": false
     },
@@ -4061,6 +4331,12 @@
     {
       "festivalId": "cannes",
       "category": "Un Certain Regard Special Prize for Promising Future",
+      "isAward": true,
+      "isHonoraryAward": false
+    },
+    {
+      "festivalId": "cannes",
+      "category": "Un Certain Regard Youth Prize",
       "isAward": true,
       "isHonoraryAward": false
     },
