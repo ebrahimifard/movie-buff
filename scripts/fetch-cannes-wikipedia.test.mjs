@@ -887,3 +887,42 @@ describe("award list articles", () => {
     expect(titlesLooselyMatch("The Mother", "The Brother")).toBe(false);
   });
 });
+
+describe("parseCannesWikipedia — sub-prizes inside a prize's own section", () => {
+  it("keeps a short-film jury prize apart from the Short Film Palme d'Or", () => {
+    const html = wrapHtml(`
+      <h2>Official Awards</h2>
+      <h3><a href="/wiki/Short_Film_Palme_d%27Or">Short Film Palme d'Or</a></h3>
+      <ul>
+        <li><i>Seaside Woman</i> by Oscar Grillo</li>
+        <li><b>Jury Prize</b>: <a href="/wiki/Canada_Vignettes">Canada Vignettes</a>: <i>The Performer</i> by Norma Bailey &amp; <i><a href="/wiki/Krychle">Krychle</a></i> by Zdenek Smetana</li>
+      </ul>
+    `);
+    expect(parseCannesWikipedia(html, 1980).map((r) => [r.category, r.film.title])).toEqual([
+      ["Short Film Palme d'Or", "Seaside Woman"],
+      ["Short Film Jury Prize", "The Performer"],
+      ["Short Film Jury Prize", "Krychle"]
+    ]);
+  });
+
+  it("records a Caméra d'Or special mention as the Caméra d'Or's", () => {
+    const html = wrapHtml(`
+      <h2>Official Awards</h2>
+      <h3><i><a href="/wiki/Cam%C3%A9ra_d%27Or">Caméra d'Or</a></i></h3>
+      <ul>
+        <li><i><a href="/wiki/Jellyfish">Jellyfish</a></i> by Etgar Keret
+          <ul><li><b>Special mention</b>: <i><a href="/wiki/Control">Control</a></i> by Anton Corbijn</li></ul>
+        </li>
+        <li><i><a href="/wiki/Toto">Toto le Héros</a></i> by Jaco Van Dormael
+          <ul><li><b>Special Mention</b>:<ul><li><i><a href="/wiki/Proof">Proof</a></i> by Jocelyn Moorhouse</li></ul></li></ul>
+        </li>
+      </ul>
+    `);
+    expect(parseCannesWikipedia(html, 1991).map((r) => [r.category, r.film.title])).toEqual([
+      ["Caméra d'Or", "Jellyfish"],
+      ["Caméra d'Or – Special Mention", "Control"],
+      ["Caméra d'Or", "Toto le Héros"],
+      ["Caméra d'Or – Special Mention", "Proof"]
+    ]);
+  });
+});

@@ -84,6 +84,10 @@ const STRAND_SPECIFIC_AWARD_PATTERN =
   /^(grand (prix|prize)|grand jury prize|(special\s+)?jury prize|special prize|special distinction|jury'?s? special award|best (short )?film|best short|audience award|discovery prize)$/i;
 const FLAGSHIP_COMPETITION_SECTION_PATTERN = /^(main competition|in competition|palme d'?or)$/i;
 
+// The Caméra d'Or's own awards section: a "Special Mention" nested under
+// its winner is the Caméra d'Or's mention, not a festival-wide one.
+const CAMERA_DOR_SECTION_PATTERN = /^cam[eé]ra d'?or$/i;
+
 // The main competition's own selection list/table. Its heading text varies
 // by era — "Competition" (1946), "Films in competition" (1947), "Feature
 // film competition" (1949), "In Competition"/"Main Competition" (1951+) —
@@ -196,6 +200,7 @@ export function canonicalCannesAward(raw, year) {
     return MAIN_COMPETITION_CATEGORY;
   }
   if (/^short film grand prix\s*–\s*best short film$/.test(text)) return "Short Film Grand Prix";
+  if (/^camera d'?or\s*–\s*special mentions?$/.test(text)) return "Caméra d'Or – Special Mention";
   const ordinal = (word) => ({ "1st": "First", first: "First", "2nd": "Second", second: "Second", "3rd": "Third", third: "Third" })[word];
 
   // Cinéfondation / La Cinef prizes (bare "Second Prize"/"Third Prize" in
@@ -707,7 +712,12 @@ export function parseCannesWikipedia(html, year) {
     // isHonoraryCategory (see addRecord) still sees the "Honorary" prefix
     // and so the Short Film prize keeps its own identity.
     if (/^honorary\b/i.test(text)) return text;
-    if (/short film/i.test(text) && /palme d'?or/i.test(text)) return "Short Film Palme d'Or";
+    if (/short film/i.test(text) && /palme d'?or/i.test(text)) {
+      // "Short Film Palme d'Or – Jury Prize" (1980) is the short-film
+      // section's jury prize, not a second Palme.
+      const sub = text.match(/palme d'?or(?: du court m[ée]trage)?\s*[–-]\s*(.+)$/i);
+      return sub ? `Short Films Competition – ${sub[1].trim()}` : "Short Film Palme d'Or";
+    }
     if (/palme d'?or/i.test(text)) return "Palme d'Or";
     // The same top prize under its historical names: "Grand Prix du
     // Festival International du Film" (1946, and again 1964–1974 when the
@@ -945,6 +955,7 @@ export function parseCannesWikipedia(html, year) {
         (AMBIGUOUS_SUB_AWARD_PATTERN.test(trustedSubLabel) ||
           (/short films?( competition)?$/i.test(sectionCategory) && !/short|court|palme|kodak|canal|illy|discovery/i.test(trustedSubLabel)) ||
           (/^un certain regard$/i.test(sectionCategory) && !/un certain regard|fipresci|ecumenical|queer|palm dog|cam[eé]ra/i.test(trustedSubLabel)) ||
+          (CAMERA_DOR_SECTION_PATTERN.test(sectionCategory) && /^special mentions?$/i.test(trustedSubLabel)) ||
           (STRAND_SPECIFIC_AWARD_PATTERN.test(trustedSubLabel) && !FLAGSHIP_COMPETITION_SECTION_PATTERN.test(sectionCategory) && !/awards?$/i.test(sectionCategory)));
       const category =
         (hasLinkedLabel && linkedAward) ||
@@ -1017,8 +1028,10 @@ export function parseCannesWikipedia(html, year) {
       // the enclosing section.
       const labelIsFilm = Boolean(label) && !isTierOnly && extractTitleAndPerson(li, nestedUl).title === label;
       const qualifiedTier =
-        label && /short films?( competition)?$/i.test(sectionCategory ?? "") && !/short|court|palme|kodak|canal|illy|discovery/i.test(label)
-          ? `${sectionCategory} – ${label}`
+        label &&
+        ((/short films?( competition)?$/i.test(sectionCategory ?? "") && !/short|court|palme|kodak|canal|illy|discovery/i.test(label)) ||
+          (CAMERA_DOR_SECTION_PATTERN.test(sectionCategory ?? "") && /^special mentions?:?$/i.test(label)))
+          ? `${sectionCategory} – ${label.replace(/:$/, "")}`
           : label;
       const childSectionCategory = (!labelIsFilm && label && (linkedAward || qualifiedTier)) || sectionCategory;
       parseAwardsItems(Array.from(nestedUl.children).filter((child) => child.tagName === "LI"), childSectionCategory);
