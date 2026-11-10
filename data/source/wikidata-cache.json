@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T00:48:19.530Z",
+  "updatedAt": "2026-11-10T00:04:45.983Z",
   "byWikipediaTitle": {
     "¡Qué hacer!": {
       "qid": "Q8076381",
@@ -20641,6 +20641,9 @@
         "Drama",
         "Comedy"
       ],
+      "directors": [
+        "Georg Wilhelm Pabst"
+      ],
       "posterUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Don%20Quichotte%20affiche%20film%201933.png?width=500"
     },
     "tt0033320": {
@@ -20648,17 +20651,26 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Michael Powell"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/6/66/An_Airman%27s_Letter_to_His_Mother_film_Opening_titles_%281941%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0034135": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Roberto Rossellini"
+      ],
       "posterUrl": ""
     },
     "tt0038150": {
       "runtimeMinutes": 0,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Márton Keleti"
       ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/2/25/The_Schoolmistress_%28film%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
@@ -20667,6 +20679,9 @@
       "genres": [
         "Fantasy"
       ],
+      "directors": [
+        "Paul Călinescu"
+      ],
       "posterUrl": ""
     },
     "tt0039130": {
@@ -20674,12 +20689,36 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Helmar Lerski"
+      ],
+      "posterUrl": ""
+    },
+    "tt0039726": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0041135": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0041333": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0043114": {
       "runtimeMinutes": 0,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Eusebio Fernández Ardavín"
       ],
       "posterUrl": ""
     },
@@ -20688,6 +20727,9 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Gian Gaspare Napolitano"
+      ],
       "posterUrl": ""
     },
     "tt0045968": {
@@ -20695,22 +20737,30 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Vladimír Vlček"
+      ],
       "posterUrl": ""
     },
     "tt0048245": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0050925": {
       "runtimeMinutes": 93,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0051842": {
       "runtimeMinutes": 0,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Narendra Suri"
       ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/a/aa/Lajwanti_%281958_film%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
@@ -20719,6 +20769,9 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Ugo Gregoretti"
+      ],
       "posterUrl": ""
     },
     "tt0056569": {
@@ -20726,11 +20779,17 @@
       "genres": [
         "Adventure"
       ],
+      "directors": [
+        "Yves Allégret"
+      ],
       "posterUrl": ""
     },
     "tt0058867": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Pim de la Parra"
+      ],
       "posterUrl": ""
     },
     "tt0061227": {
@@ -20738,13 +20797,19 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Alf Sjöberg"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/8/8e/%C3%96n_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0061359": {
       "runtimeMinutes": 137,
       "genres": [
-        "Drama",
-        "Romance"
+        "Romance",
+        "Drama"
+      ],
+      "directors": [
+        "Aleksandr Zarkhi"
       ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/1/13/Anna_Karenina_FilmPoster.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
@@ -20753,6 +20818,9 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Michel Cournot"
+      ],
       "posterUrl": ""
     },
     "tt0064407": {
@@ -20760,11 +20828,21 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Kjell Grede"
+      ],
       "posterUrl": ""
     },
     "tt0064544": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0065013": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0065663": {
@@ -20772,17 +20850,24 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Dan Wolman"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/c/c8/The_Dreamer_FilmPoster.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0065706": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0066044": {
       "runtimeMinutes": 80,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Peter Lilienthal"
       ],
       "posterUrl": ""
     },
@@ -20791,12 +20876,20 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Raúl Ruiz",
+        "Nina Serrano",
+        "Saul Landau"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/d/d0/Que_hacer%21_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0067032": {
       "runtimeMinutes": 110,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Manuel Octavio Gómez"
       ],
       "posterUrl": ""
     },
@@ -20805,6 +20898,9 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Peter Schamoni"
+      ],
       "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Tulln_Hundertwasser_Regentag.JPG/500px-Tulln_Hundertwasser_Regentag.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     "tt0068558": {
@@ -20812,22 +20908,38 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Raúl Ruiz"
+      ],
       "posterUrl": ""
     },
     "tt0069294": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Pascal Aubier"
+      ],
       "posterUrl": ""
     },
     "tt0069965": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0070419": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0070881": {
       "runtimeMinutes": 112,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Marco Leto"
       ],
       "posterUrl": ""
     },
@@ -20836,27 +20948,37 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Bertrand Van Effenterre"
+      ],
       "posterUrl": ""
     },
     "tt0071865": {
       "runtimeMinutes": 224,
       "genres": [
-        "Documentary",
-        "Drama",
         "Music",
-        "History"
+        "History",
+        "Drama",
+        "Documentary"
+      ],
+      "directors": [
+        "Klaus Kirschner"
       ],
       "posterUrl": ""
     },
     "tt0071941": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0072214": {
       "runtimeMinutes": 100,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Matjaž Klopčič"
       ],
       "posterUrl": ""
     },
@@ -20866,11 +20988,17 @@
         "Drama",
         "Comedy"
       ],
+      "directors": [
+        "Paula Delsol"
+      ],
       "posterUrl": ""
     },
     "tt0074890": {
       "runtimeMinutes": 90,
       "genres": [],
+      "directors": [
+        "Jean-Luis Jorge"
+      ],
       "posterUrl": ""
     },
     "tt0075898": {
@@ -20878,17 +21006,32 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Giorgio Ferrara"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/a/ab/A_Simple_Heart_%281977_film%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0076356": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0077581": {
       "runtimeMinutes": 104,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Hans Noever"
+      ],
+      "posterUrl": ""
+    },
+    "tt0078202": {
+      "runtimeMinutes": 120,
+      "genres": [],
+      "directors": [
+        "Eduardo Geada"
       ],
       "posterUrl": ""
     },
@@ -20897,13 +21040,19 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Michel Andrieu"
+      ],
       "posterUrl": ""
     },
     "tt0080135": {
       "runtimeMinutes": 103,
       "genres": [
-        "Drama",
-        "Comedy"
+        "Comedy",
+        "Drama"
+      ],
+      "directors": [
+        "Niklaus Schilling"
       ],
       "posterUrl": ""
     },
@@ -20912,6 +21061,9 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Frédéric Rossif"
+      ],
       "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Jacques_Brel_1971_2.jpg/500px-Jacques_Brel_1971_2.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     "tt0084175": {
@@ -20919,11 +21071,16 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Ababacar Samb Makharam",
+        "Ababacar Samb"
+      ],
       "posterUrl": ""
     },
     "tt0085554": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0086196": {
@@ -20931,17 +21088,26 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Brigitte Sauriol"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/4/4c/Just_a_Game_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0086903": {
       "runtimeMinutes": 96,
       "genres": [],
+      "directors": [
+        "Jean-Claude Labrecque"
+      ],
       "posterUrl": ""
     },
     "tt0087510": {
       "runtimeMinutes": 87,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Jean Pierre Lefebvre"
       ],
       "posterUrl": ""
     },
@@ -20951,12 +21117,18 @@
         "Drama",
         "Comedy"
       ],
+      "directors": [
+        "León Ichaso"
+      ],
       "posterUrl": ""
     },
     "tt0089485": {
       "runtimeMinutes": 89,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Maria Knilli"
       ],
       "posterUrl": ""
     },
@@ -20965,17 +21137,24 @@
       "genres": [
         "Comedy"
       ],
+      "directors": [
+        "Michel Mitrani"
+      ],
       "posterUrl": ""
     },
     "tt0092176": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0092728": {
       "runtimeMinutes": 98,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Memè Perlini"
       ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/f/fc/Italian_Postcards.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
@@ -20984,30 +21163,41 @@
       "genres": [
         "Music"
       ],
+      "directors": [
+        "Claude d'Anna"
+      ],
       "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Shirley_Verrett_dans_Macbeth_de_Claude_d%27Anna._%22La_luce_langue...%22.jpg/500px-Shirley_Verrett_dans_Macbeth_de_Claude_d%27Anna._%22La_luce_langue...%22.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     "tt0094285": {
       "runtimeMinutes": 0,
       "genres": [
-        "Drama",
-        "History"
+        "History",
+        "Drama"
+      ],
+      "directors": [
+        "Peter Patzak"
       ],
       "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Fritz_Luckhardt_-_Richard_y_Cosima_Wagner_%289_de_mayo_de_1872%2C_Viena%29.jpg/500px-Fritz_Luckhardt_-_Richard_y_Cosima_Wagner_%289_de_mayo_de_1872%2C_Viena%29.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     "tt0094652": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0095620": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0096752": {
       "runtimeMinutes": 95,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Jörg Graser"
       ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/f/f8/Abraham%27s_Gold_poster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
@@ -21016,13 +21206,19 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Mohamed Zran"
+      ],
       "posterUrl": ""
     },
     "tt0097526": {
       "runtimeMinutes": 0,
       "genres": [
-        "Drama",
-        "History"
+        "History",
+        "Drama"
+      ],
+      "directors": [
+        "Jean Dréville"
       ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/c/ca/Endless_Horizons.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
@@ -21031,6 +21227,9 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Ruy Guerra"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/9/96/Kuarup_film.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0099780": {
@@ -21038,16 +21237,23 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Leo Berkeley"
+      ],
       "posterUrl": ""
     },
     "tt0100144": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Lawrence Ah Mon"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/c/c5/Queen_of_Temple_Street_1990_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0100179": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0101030": {
@@ -21055,22 +21261,36 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Zsolt Kézdi-Kovács"
+      ],
       "posterUrl": ""
     },
     "tt0101511": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0102010": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0102197": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0102251": {
       "runtimeMinutes": 80,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Drissa Touré"
       ],
       "posterUrl": ""
     },
@@ -21079,12 +21299,18 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Jeanne Labrune"
+      ],
       "posterUrl": ""
     },
     "tt0103661": {
       "runtimeMinutes": 88,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Christoph Schaub"
       ],
       "posterUrl": ""
     },
@@ -21093,17 +21319,26 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Helma Sanders-Brahms"
+      ],
       "posterUrl": ""
     },
     "tt0103715": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Pierre Granier-Deferre"
+      ],
       "posterUrl": ""
     },
     "tt0103732": {
       "runtimeMinutes": 92,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Mehdi Charef"
       ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/6/63/Au_pays_des_Juliets_%28film%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
@@ -21112,11 +21347,15 @@
       "genres": [
         "Comedy"
       ],
+      "directors": [
+        "Pascale Bailly"
+      ],
       "posterUrl": ""
     },
     "tt0104600": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0104641": {
@@ -21124,11 +21363,15 @@
       "genres": [
         "Horror"
       ],
+      "directors": [
+        "Tonia Marketaki"
+      ],
       "posterUrl": ""
     },
     "tt0106790": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0106879": {
@@ -21137,11 +21380,15 @@
         "Drama",
         "Comedy"
       ],
+      "directors": [
+        "Edwin Baily"
+      ],
       "posterUrl": ""
     },
     "tt0107039": {
       "runtimeMinutes": 165,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0107256": {
@@ -21150,12 +21397,18 @@
         "Drama",
         "Comedy"
       ],
+      "directors": [
+        "Guy Jacques"
+      ],
       "posterUrl": ""
     },
     "tt0109221": {
       "runtimeMinutes": 124,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Mario Brenta"
       ],
       "posterUrl": ""
     },
@@ -21164,11 +21417,16 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Alain Ferrari",
+        "Bernard-Henri Lévy"
+      ],
       "posterUrl": ""
     },
     "tt0109870": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0110210": {
@@ -21176,22 +21434,36 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Charles Van Damme"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/9/97/Le_joueur_de_violon.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0110326": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0110713": {
       "runtimeMinutes": 22,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0110810": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0111124": {
       "runtimeMinutes": 100,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Alessandro D'Alatri"
       ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/7/76/No_Skin.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
@@ -21200,21 +21472,38 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Shaji N. Karun"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/b/b6/Swahamposter.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0111844": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0112411": {
       "runtimeMinutes": 10,
       "genres": [],
+      "directors": [
+        "Sophie Marceau"
+      ],
       "posterUrl": ""
     },
     "tt0112584": {
       "runtimeMinutes": 16,
       "genres": [],
+      "directors": [
+        "Luke Cresswell",
+        "Steve McNicholas"
+      ],
+      "posterUrl": ""
+    },
+    "tt0112601": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0112808": {
@@ -21222,16 +21511,23 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Steve Wang"
+      ],
       "posterUrl": ""
     },
     "tt0112992": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0113042": {
       "runtimeMinutes": 54,
       "genres": [],
+      "directors": [
+        "Christophe Blanc"
+      ],
       "posterUrl": ""
     },
     "tt0113258": {
@@ -21239,32 +21535,46 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Drissa Touré"
+      ],
       "posterUrl": ""
     },
     "tt0113847": {
       "runtimeMinutes": 95,
       "genres": [],
+      "directors": [
+        "Xiao-Yen Wang"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/7/74/The_Monkey_Kid_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0114276": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0114583": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Veit Helmer"
+      ],
       "posterUrl": ""
     },
     "tt0114617": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0116939": {
       "runtimeMinutes": 96,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Srinivas Krishna"
       ],
       "posterUrl": ""
     },
@@ -21274,59 +21584,86 @@
         "Drama",
         "Comedy"
       ],
+      "directors": [
+        "Zeka Laplaine"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/6/68/Macadam_tribu_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0117035": {
       "runtimeMinutes": 90,
       "genres": [
-        "Drama",
-        "Thriller"
+        "Thriller",
+        "Drama"
       ],
+      "directors": [
+        "Tatiana Gaviola"
+      ],
+      "posterUrl": ""
+    },
+    "tt0117347": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0118037": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0119119": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0119387": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0119414": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0119516": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0119627": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0119725": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0119938": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0120388": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0121475": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0121848": {
@@ -21334,14 +21671,20 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Manuel Antín"
+      ],
       "posterUrl": ""
     },
     "tt0122267": {
       "runtimeMinutes": 0,
       "genres": [
-        "Drama",
+        "Romance",
         "Comedy",
-        "Romance"
+        "Drama"
+      ],
+      "directors": [
+        "Beat Lottaz"
       ],
       "posterUrl": ""
     },
@@ -21350,12 +21693,24 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Benoît Jacquot"
+      ],
+      "posterUrl": ""
+    },
+    "tt0122472": {
+      "runtimeMinutes": 16,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0124779": {
       "runtimeMinutes": 0,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Živojin Pavlović"
       ],
       "posterUrl": ""
     },
@@ -21364,16 +21719,37 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Sergiu Nicolaescu"
+      ],
       "posterUrl": ""
     },
     "tt0126766": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0126935": {
+      "runtimeMinutes": 21,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0128306": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0128913": {
+      "runtimeMinutes": 12,
+      "genres": [
+        "Comedy"
+      ],
+      "directors": [
+        "Ramón Barea"
+      ],
       "posterUrl": ""
     },
     "tt0128924": {
@@ -21381,46 +21757,93 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Clay Borris"
+      ],
       "posterUrl": ""
     },
     "tt0130042": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0131473": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Ion Popescu-Gopo"
+      ],
       "posterUrl": ""
     },
     "tt0134302": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0134861": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0135857": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0136466": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0140506": {
+      "runtimeMinutes": 0,
+      "genres": [
+        "Documentary"
+      ],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0140545": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0141114": {
       "runtimeMinutes": 18,
       "genres": [],
+      "directors": [
+        "Carolee Schneemann"
+      ],
       "posterUrl": ""
     },
     "tt0142822": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0143914": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0145849": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0147867": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0152703": {
@@ -21428,16 +21851,41 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Yaky Yosha"
+      ],
       "posterUrl": ""
     },
     "tt0155168": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Shantaram Athavale"
+      ],
+      "posterUrl": ""
+    },
+    "tt0155587": {
+      "runtimeMinutes": 0,
+      "genres": [
+        "Documentary"
+      ],
+      "directors": [
+        "Jacques Cousteau"
+      ],
+      "posterUrl": ""
+    },
+    "tt0155999": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0156388": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Bruno Bontzolakis"
+      ],
       "posterUrl": ""
     },
     "tt0156478": {
@@ -21445,26 +21893,60 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Claude Mouriéras"
+      ],
+      "posterUrl": ""
+    },
+    "tt0156541": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0156613": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0156716": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0156722": {
       "runtimeMinutes": 94,
       "genres": [],
+      "directors": [
+        "Zaïda Ghorab-Volta",
+        "Zaîda Ghorab-Volta"
+      ],
+      "posterUrl": ""
+    },
+    "tt0156912": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0157105": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0157345": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0157392": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0161425": {
@@ -21472,41 +21954,87 @@
       "genres": [
         "Comedy"
       ],
+      "directors": [],
       "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Cheating_Inc_Web_Poster.jpg/500px-Cheating_Inc_Web_Poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+    },
+    "tt0162658": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
     },
     "tt0163426": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Horst Bienek"
+      ],
       "posterUrl": ""
     },
     "tt0163644": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Edgar Reitz"
+      ],
+      "posterUrl": ""
+    },
+    "tt0163820": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0163854": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0163892": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0164572": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0164640": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0165551": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Kō Nakahira"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/4/4b/A_Soul_to_Devils_film_Theatrical_release_poster_%281971-2%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    "tt0169189": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
     },
     "tt0169226": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Mark Sawers"
+      ],
+      "posterUrl": ""
+    },
+    "tt0169748": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0170278": {
@@ -21514,21 +22042,67 @@
       "genres": [
         "Comedy"
       ],
+      "directors": [
+        "Zvonimir Berković"
+      ],
       "posterUrl": ""
     },
     "tt0170582": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0171539": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0171708": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0172074": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0172875": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0173109": {
+      "runtimeMinutes": 0,
+      "genres": [
+        "Documentary"
+      ],
+      "directors": [
+        "Jean Mihail"
+      ],
+      "posterUrl": ""
+    },
+    "tt0173427": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0174177": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0174254": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0175023": {
@@ -21536,42 +22110,68 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Pierre Prévert"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Rue_de_Rivoli_en_1928_et_en_1959_dans_Paris_la_belle.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0175150": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0176717": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0176726": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0176913": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "François Dupeyron"
+      ],
+      "posterUrl": ""
+    },
+    "tt0178830": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0178936": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0178958": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0181578": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0184839": {
       "runtimeMinutes": 71,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Edgardo Cozarinsky"
       ],
       "posterUrl": ""
     },
@@ -21580,21 +22180,29 @@
       "genres": [
         "Crime"
       ],
+      "directors": [
+        "Marc Monnet"
+      ],
       "posterUrl": ""
     },
     "tt0188121": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0188613": {
       "runtimeMinutes": 82,
       "genres": [],
+      "directors": [
+        "Guylaine Dionne"
+      ],
       "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Les_Fant%C3%B4mes_des_3_Madeleine.jpg/500px-Les_Fant%C3%B4mes_des_3_Madeleine.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
     "tt0188907": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0190668": {
@@ -21602,11 +22210,29 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Ulrik Theer"
+      ],
+      "posterUrl": ""
+    },
+    "tt0191713": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [
+        "Luca Ronconi"
+      ],
       "posterUrl": ""
     },
     "tt0191948": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0192079": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0193733": {
@@ -21614,42 +22240,94 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Eli Lotar"
+      ],
       "posterUrl": ""
     },
     "tt0193966": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0194714": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "André Cauvin"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/6/62/Bongolo_%28film%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0194930": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0195135": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0195821": {
       "runtimeMinutes": 14,
       "genres": [],
+      "directors": [
+        "Karin Westerlund"
+      ],
       "posterUrl": ""
     },
     "tt0196120": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0197306": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0197574": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0198489": {
+      "runtimeMinutes": 14,
+      "genres": [],
+      "directors": [
+        "Pierre-Henri Salfati"
+      ],
+      "posterUrl": ""
+    },
+    "tt0199041": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [
+        "Thomas Bardinet"
+      ],
       "posterUrl": ""
     },
     "tt0199434": {
       "runtimeMinutes": 87,
       "genres": [
         "Drama"
+      ],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0200853": {
+      "runtimeMinutes": 105,
+      "genres": [
+        "Drama"
+      ],
+      "directors": [
+        "Helvio Soto"
       ],
       "posterUrl": ""
     },
@@ -21658,6 +22336,19 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Eric Mendelsohn"
+      ],
+      "posterUrl": ""
+    },
+    "tt0201440": {
+      "runtimeMinutes": 0,
+      "genres": [
+        "Documentary"
+      ],
+      "directors": [
+        "Robert Vernay"
+      ],
       "posterUrl": ""
     },
     "tt0201741": {
@@ -21665,49 +22356,75 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Víctor Urruchúa"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/1/14/Light_in_the_High_Plains_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0203072": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0205452": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Fabienne Godet"
+      ],
       "posterUrl": ""
     },
     "tt0206725": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0210397": {
       "runtimeMinutes": 5,
       "genres": [],
+      "directors": [
+        "André Leduc",
+        "Jean-Jacques Leduc"
+      ],
       "posterUrl": ""
     },
     "tt0211022": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0211287": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Marian Handwerker"
+      ],
       "posterUrl": ""
     },
     "tt0211914": {
       "runtimeMinutes": 77,
       "genres": [
-        "Drama",
-        "Comedy"
+        "Comedy",
+        "Drama"
+      ],
+      "directors": [
+        "Jean Pierre Lefebvre"
       ],
       "posterUrl": ""
     },
     "tt0212102": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0216189": {
+      "runtimeMinutes": 5,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0216204": {
@@ -21715,17 +22432,32 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Raphael Nadjari"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/4/40/The_Shade_1999.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    "tt0217468": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [
+        "Yvon Marciano"
+      ],
+      "posterUrl": ""
     },
     "tt0217807": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0218026": {
       "runtimeMinutes": 65,
       "genres": [
         "Documentary"
+      ],
+      "directors": [
+        "Jean-Jacques Manigot"
       ],
       "posterUrl": ""
     },
@@ -21734,6 +22466,9 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Erick Zonca"
+      ],
       "posterUrl": ""
     },
     "tt0222257": {
@@ -21741,31 +22476,73 @@
       "genres": [
         "Fantasy"
       ],
+      "directors": [
+        "Emile Degelin"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/2/25/Palaver_%281969_film%29.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0222770": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0223904": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0224015": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0224088": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0225803": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0226188": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0226274": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0226828": {
+      "runtimeMinutes": 28,
+      "genres": [],
+      "directors": [
+        "Pernille Fischer Christensen"
+      ],
+      "posterUrl": ""
+    },
+    "tt0227009": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0228284": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "José Varela"
+      ],
       "posterUrl": ""
     },
     "tt0228352": {
@@ -21773,6 +22550,15 @@
       "genres": [
         "Romance"
       ],
+      "directors": [
+        "Hans Bertram"
+      ],
+      "posterUrl": ""
+    },
+    "tt0229638": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0230186": {
@@ -21780,36 +22566,135 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Benoît Jacquot"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/c/cb/Les_Enfants_du_Placard_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    "tt0231065": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
     },
     "tt0231142": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0231181": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0231195": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0231447": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0231482": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0231671": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0231965": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0232031": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0232042": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0232052": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0232064": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0232176": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0232239": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0232303": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0232507": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0232517": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0232646": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0232681": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0232843": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0232983": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0235415": {
@@ -21817,11 +22702,15 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Eugen Schuhmacher"
+      ],
       "posterUrl": ""
     },
     "tt0236080": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0236861": {
@@ -21829,11 +22718,15 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Wolfgang Liebeneiner"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/6/6a/A_Devil_of_a_Woman.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0239242": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0240250": {
@@ -21841,21 +22734,111 @@
       "genres": [
         "Animation"
       ],
+      "directors": [
+        "Jiří Trnka"
+      ],
       "posterUrl": ""
     },
     "tt0241397": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Vincent Perez"
+      ],
+      "posterUrl": ""
+    },
+    "tt0241414": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0241489": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0241701": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0241745": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0241769": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0241771": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0241805": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0241818": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [
+        "Bruno Chiche"
+      ],
+      "posterUrl": ""
+    },
+    "tt0241890": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0241936": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0241959": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0242130": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0242245": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [
+        "Nicole Garcia"
+      ],
+      "posterUrl": ""
+    },
+    "tt0242306": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0242319": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0242341": {
@@ -21863,36 +22846,59 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Bruno Gebel"
+      ],
       "posterUrl": ""
     },
     "tt0242351": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0242471": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0242539": {
       "runtimeMinutes": 4,
       "genres": [],
+      "directors": [
+        "Zbigniew Rybczyński"
+      ],
+      "posterUrl": ""
+    },
+    "tt0242687": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0242752": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0242761": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0242775": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0242776": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0242791": {
@@ -21900,37 +22906,64 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Sabine Franel"
+      ],
       "posterUrl": ""
     },
     "tt0242805": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0242863": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0242965": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Bruce Krebs"
+      ],
+      "posterUrl": ""
+    },
+    "tt0242974": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0243037": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0243382": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Scott Patterson"
+      ],
       "posterUrl": ""
     },
     "tt0243417": {
       "runtimeMinutes": 17,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0243440": {
       "runtimeMinutes": 0,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Noboru Nakamura"
       ],
       "posterUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Nami_1952.jpg/500px-Nami_1952.jpg?utm_source=fr.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
     },
@@ -21939,159 +22972,397 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Anne Villacèque"
+      ],
       "posterUrl": ""
     },
     "tt0244246": {
       "runtimeMinutes": 0,
       "genres": [
-        "Drama",
-        "Romance"
+        "Romance",
+        "Drama"
       ],
+      "directors": [
+        "Johanna Vuoksenmaa"
+      ],
+      "posterUrl": ""
+    },
+    "tt0244973": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0244979": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0244982": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0245026": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0245085": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0245143": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0245334": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0245398": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0245513": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0245528": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Éric Guirado"
+      ],
+      "posterUrl": ""
+    },
+    "tt0245588": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0245590": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0245862": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0245873": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0247048": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0247251": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0248948": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0250423": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0250971": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0251100": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0254092": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0255663": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Henry Jacques",
+        "Youssef Maalouf"
+      ],
+      "posterUrl": ""
+    },
+    "tt0257998": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0258221": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0259824": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0260126": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0260134": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0260137": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [
+        "Jean-Paul Török"
+      ],
+      "posterUrl": ""
+    },
+    "tt0260370": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0260385": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Renate Druks"
+      ],
+      "posterUrl": ""
+    },
+    "tt0260700": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0260782": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0260879": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0261165": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0261882": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Raoul Servais"
+      ],
       "posterUrl": ""
     },
     "tt0262412": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0263043": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0263068": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0263096": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0263105": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0263249": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0263312": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0263337": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0263448": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [
+        "Henri Glaeser"
+      ],
       "posterUrl": ""
     },
     "tt0263647": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0263700": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Paul Vecchiali"
+      ],
       "posterUrl": ""
     },
     "tt0263856": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0263862": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0263925": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0263943": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0263951": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0263967": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0263979": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0264044": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0264049": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0264072": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0264098": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Herman van der Horst"
+      ],
+      "posterUrl": ""
+    },
+    "tt0264152": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0264184": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0264214": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0266255": {
@@ -22099,180 +23370,397 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Paul Anczykowski"
+      ],
+      "posterUrl": ""
+    },
+    "tt0266279": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0266312": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0266416": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0266423": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0266466": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [
+        "Eduardo Calcagno"
+      ],
       "posterUrl": ""
     },
     "tt0266514": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0266540": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0266567": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Jean Chapot"
+      ],
+      "posterUrl": ""
+    },
+    "tt0266584": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0266585": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0266671": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0266738": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0266748": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0266770": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0266840": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0266865": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0266974": {
       "runtimeMinutes": 9,
       "genres": [
-        "Comedy",
         "Animation",
-        "Adventure"
+        "Adventure",
+        "Comedy"
+      ],
+      "directors": [
+        "Václav Bedřich"
       ],
       "posterUrl": ""
     },
     "tt0266993": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0267003": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0267061": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0267066": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0267136": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0267441": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0267451": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0267734": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0267768": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0268002": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0269222": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0269533": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0269548": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0269598": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0269708": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0269920": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Mark Sawers"
+      ],
       "posterUrl": ""
     },
     "tt0270670": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0271331": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0272473": {
+      "runtimeMinutes": 90,
+      "genres": [
+        "Drama"
+      ],
+      "directors": [
+        "Gérard Vergez"
+      ],
       "posterUrl": ""
     },
     "tt0275750": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0276005": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0276307": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0276414": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0276567": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Linus Tunström"
+      ],
+      "posterUrl": ""
+    },
+    "tt0277099": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0278014": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0278015": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0279632": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0279746": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0280057": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0280667": {
       "runtimeMinutes": 5,
       "genres": [],
+      "directors": [
+        "Tim MacMillan"
+      ],
+      "posterUrl": ""
+    },
+    "tt0281121": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0281218": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0281558": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0281682": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0281727": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0281884": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0282029": {
       "runtimeMinutes": 14,
       "genres": [],
+      "directors": [
+        "Neil Jordan"
+      ],
       "posterUrl": ""
     },
     "tt0282456": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0282531": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0282617": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0282632": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0282899": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0283036": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0283104": {
@@ -22280,106 +23768,199 @@
       "genres": [
         "Science Fiction"
       ],
+      "directors": [
+        "Camillo Bazzoni"
+      ],
       "posterUrl": ""
     },
     "tt0283116": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0283163": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0283257": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0283264": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0283301": {
       "runtimeMinutes": 10,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0283505": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Jens Lien"
+      ],
       "posterUrl": ""
     },
     "tt0284315": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Jean Pierre Lefebvre"
+      ],
+      "posterUrl": ""
+    },
+    "tt0285010": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0285443": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0285488": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0286583": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0286887": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Murali Nair"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/9/98/Pattiyude_Divasam.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0287426": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Jean-Michel Carré"
+      ],
       "posterUrl": ""
     },
     "tt0287446": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0289750": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0293263": {
+      "runtimeMinutes": 34,
+      "genres": [],
+      "directors": [
+        "Christoffer Boe"
+      ],
       "posterUrl": ""
     },
     "tt0293439": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0293469": {
       "runtimeMinutes": 3,
       "genres": [],
+      "directors": [
+        "Luis Briceño"
+      ],
       "posterUrl": ""
     },
     "tt0295531": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0296912": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0297381": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0298074": {
       "runtimeMinutes": 21,
       "genres": [],
+      "directors": [
+        "Bouli Lanners"
+      ],
       "posterUrl": ""
     },
     "tt0298452": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0298462": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0298597": {
       "runtimeMinutes": 28,
       "genres": [],
+      "directors": [
+        "Artavazd Peleshyan"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/9/96/Seasons_of_the_Year_title_card.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0301248": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0302794": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0303942": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0305498": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0306040": {
@@ -22388,11 +23969,31 @@
         "Drama",
         "Comedy"
       ],
+      "directors": [
+        "Jean-Claude Biette"
+      ],
+      "posterUrl": ""
+    },
+    "tt0306153": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0308256": {
+      "runtimeMinutes": 20,
+      "genres": [
+        "Documentary"
+      ],
+      "directors": [
+        "Jean Epstein"
+      ],
       "posterUrl": ""
     },
     "tt0308698": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0308865": {
@@ -22400,49 +24001,101 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Max Färberböck"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/2/29/September_2003_Poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0309498": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0309718": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0310656": {
       "runtimeMinutes": 98,
       "genres": [
-        "Drama",
-        "War"
+        "War",
+        "Drama"
+      ],
+      "directors": [
+        "Fadhel Jaziri",
+        "Fadhel Jaïbi"
       ],
       "posterUrl": ""
     },
     "tt0312490": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0312904": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0312949": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0312994": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0316011": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Jean-Daniel Simon"
+      ],
       "posterUrl": ""
     },
     "tt0316274": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0316501": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0316664": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0317095": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0317099": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0317119": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0317137": {
@@ -22450,41 +24103,101 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Dariush Mehrjui"
+      ],
+      "posterUrl": ""
+    },
+    "tt0317227": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0317372": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0317475": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0317492": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0317514": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0317517": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0317579": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0317631": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0317806": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0317824": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0318056": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0318084": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0318161": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0318191": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0318549": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [
+        "Roger Leenhardt"
+      ],
       "posterUrl": ""
     },
     "tt0318559": {
@@ -22492,52 +24205,98 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Carlos Vilardebó"
+      ],
       "posterUrl": ""
     },
     "tt0318633": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0318710": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Henning Carlsen"
+      ],
       "posterUrl": ""
     },
     "tt0319625": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0322281": {
       "runtimeMinutes": 76,
       "genres": [],
+      "directors": [
+        "Jean-Pierre Lajournade"
+      ],
+      "posterUrl": ""
+    },
+    "tt0323239": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0324077": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0325031": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0325088": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [
+        "Christian Dor"
+      ],
       "posterUrl": ""
     },
     "tt0325133": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Jean Palardy"
+      ],
       "posterUrl": ""
     },
     "tt0331559": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0334989": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0336525": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0337250": {
       "runtimeMinutes": 0,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Ruth Mader"
       ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/4/48/Struggle_FilmPoster.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
@@ -22546,12 +24305,19 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Claire Doyon"
+      ],
       "posterUrl": ""
     },
     "tt0340642": {
       "runtimeMinutes": 0,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Lin Cheng-Sheng",
+        "Lin Cheng-sheng"
       ],
       "posterUrl": ""
     },
@@ -22560,12 +24326,18 @@
       "genres": [
         "Adventure"
       ],
+      "directors": [
+        "Zygmunt Sulistrowski"
+      ],
       "posterUrl": ""
     },
     "tt0342007": {
       "runtimeMinutes": 8,
       "genres": [
         "Thriller"
+      ],
+      "directors": [
+        "Jacob Tschernia"
       ],
       "posterUrl": ""
     },
@@ -22574,22 +24346,30 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Oumarou Ganda"
+      ],
       "posterUrl": ""
     },
     "tt0345233": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0347059": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0348269": {
       "runtimeMinutes": 81,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Paul Martin"
       ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/1/1d/The_Deadly_Dreams.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
@@ -22598,36 +24378,67 @@
       "genres": [
         "Animation"
       ],
+      "directors": [
+        "Anders Morgenthaler"
+      ],
       "posterUrl": ""
     },
     "tt0357862": {
       "runtimeMinutes": 41,
       "genres": [],
+      "directors": [
+        "Georges Perec"
+      ],
       "posterUrl": ""
     },
     "tt0358511": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0361829": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0363243": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Glendyn Ivin"
+      ],
+      "posterUrl": ""
+    },
+    "tt0365950": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0366615": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0366774": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0367617": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0368044": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0368082": {
@@ -22635,6 +24446,7 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0368598": {
@@ -22642,27 +24454,36 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Pavle Vuckovic"
+      ],
       "posterUrl": ""
     },
     "tt0368847": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0368942": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0369008": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0369064": {
       "runtimeMinutes": 116,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Narjiss Nejjar"
       ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/b/b0/Les_Yeux_Secs_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
@@ -22671,31 +24492,79 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Pierre Petel"
+      ],
+      "posterUrl": ""
+    },
+    "tt0371875": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0377764": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0379310": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0381501": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0382173": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0382565": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0386251": {
+      "runtimeMinutes": 0,
+      "genres": [
+        "Drama"
+      ],
+      "directors": [
+        "Marco Leto"
+      ],
       "posterUrl": ""
     },
     "tt0387302": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0388776": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0389467": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0389974": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0398713": {
@@ -22703,46 +24572,83 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Tawfik Abu Wael"
+      ],
       "posterUrl": ""
     },
     "tt0398831": {
       "runtimeMinutes": 22,
       "genres": [],
+      "directors": [
+        "Philippe Ramos"
+      ],
       "posterUrl": ""
     },
     "tt0400506": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0402402": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0402410": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0403997": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0405287": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0405334": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0408095": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0408635": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0408682": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0408829": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0409201": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0409396": {
@@ -22750,6 +24656,15 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Cătălin Mitulescu"
+      ],
+      "posterUrl": ""
+    },
+    "tt0409526": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0409895": {
@@ -22757,11 +24672,15 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Jean-Charles Fitoussi"
+      ],
       "posterUrl": ""
     },
     "tt0411751": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0415147": {
@@ -22769,11 +24688,33 @@
       "genres": [
         "Romance"
       ],
+      "directors": [
+        "Laïla Marrakchi"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/e/e2/Marock.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    "tt0415682": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0417436": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
     },
     "tt0417530": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0420538": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0423232": {
@@ -22781,26 +24722,44 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Kirill Mikhanovsky",
+        "Paolo Marinou-Blanco"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/8/84/Fish_Dreams_2006_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0423805": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Micha Wald"
+      ],
       "posterUrl": ""
     },
     "tt0424342": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Nicolas Saada"
+      ],
       "posterUrl": ""
     },
     "tt0424576": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0426072": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0426144": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0430484": {
@@ -22810,14 +24769,40 @@
       ],
       "posterUrl": ""
     },
+    "tt0431758": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0433126": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0433663": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
     "tt0434128": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0435253": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0437189": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0439548": {
@@ -22825,11 +24810,87 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Bertrand Bonello"
+      ],
       "posterUrl": ""
     },
     "tt0439568": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0442788": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0461174": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0461960": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0468655": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0468656": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0468698": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0468741": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0468772": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0468838": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0468841": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0468855": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0468886": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0470612": {
@@ -22837,99 +24898,146 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Niki Karimi"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/2/21/One_Night_%282005_film%29_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0481010": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0484140": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0485209": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0487456": {
       "runtimeMinutes": 98,
       "genres": [
-        "Drama",
-        "Crime"
+        "Crime",
+        "Drama"
+      ],
+      "directors": [
+        "Patrick Grandperret"
       ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/e/e1/Meurtri%C3%A8res_FilmPoster.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0488851": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0492359": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0492935": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0498365": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0498538": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0499507": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Diourka Medveczky"
+      ],
       "posterUrl": ""
     },
     "tt0675564": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "David Greene"
+      ],
       "posterUrl": ""
     },
     "tt0757228": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0778830": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0783850": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0792954": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0800217": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Monte Hellman"
+      ],
       "posterUrl": ""
     },
     "tt0800350": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0800960": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0800961": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0800962": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0800964": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0810797": {
@@ -22937,11 +25045,27 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Adam Guziński"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/4/4b/The_Boy_on_the_Galloping_Horse_FilmPoster.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0812400": {
       "runtimeMinutes": 95,
       "genres": [],
+      "directors": [
+        "Gilbert Prouteau"
+      ],
+      "posterUrl": ""
+    },
+    "tt0813408": {
+      "runtimeMinutes": 0,
+      "genres": [
+        "Documentary"
+      ],
+      "directors": [
+        "Michale Boganim"
+      ],
       "posterUrl": ""
     },
     "tt0814669": {
@@ -22949,37 +25073,60 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Yann Gonzalez"
+      ],
       "posterUrl": ""
     },
     "tt0814673": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0814779": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0814781": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0814789": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0814800": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0816439": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0823247": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0826713": {
       "runtimeMinutes": 43,
       "genres": [
         "Documentary"
+      ],
+      "directors": [
+        "Alex Grasshoff"
       ],
       "posterUrl": ""
     },
@@ -22988,11 +25135,51 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Tahani Rached"
+      ],
+      "posterUrl": ""
+    },
+    "tt0833621": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0835494": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0851404": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0865301": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0865302": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0865310": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0865315": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0865334": {
@@ -23000,12 +25187,38 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Jørgen Roos"
+      ],
+      "posterUrl": ""
+    },
+    "tt0865350": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0865360": {
+      "runtimeMinutes": 0,
+      "genres": [
+        "Documentary"
+      ],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0865364": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0906678": {
       "runtimeMinutes": 0,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Marco van Geffen"
       ],
       "posterUrl": ""
     },
@@ -23014,6 +25227,10 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Noël Simsolo",
+        "Noel Simsolo"
+      ],
       "posterUrl": ""
     },
     "tt0926118": {
@@ -23021,16 +25238,21 @@
       "genres": [
         "Drama"
       ],
+      "directors": [],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/5/5b/The_Oates%27_Valor_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0928078": {
       "runtimeMinutes": 23,
       "genres": [],
+      "directors": [
+        "Roland Lethem"
+      ],
       "posterUrl": ""
     },
     "tt0929438": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0939669": {
@@ -23038,11 +25260,21 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Alison Thompson"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/a/a5/The_Third_Wave_VideoCover.jpeg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt0977221": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt0995003": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt0996994": {
@@ -23050,6 +25282,7 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/1/1a/The_War_Miniseries.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt10094226": {
@@ -23057,41 +25290,83 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Martin Monk"
+      ],
+      "posterUrl": ""
+    },
+    "tt10125414": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1013882": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt10224890": {
       "runtimeMinutes": 8,
       "genres": [],
+      "directors": [
+        "Yona Rozenkier"
+      ],
       "posterUrl": ""
     },
     "tt10241482": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt10270138": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt10280050": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt10290566": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt10307380": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt10390454": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt10396328": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt10415642": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt10415710": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1043510": {
@@ -23099,22 +25374,38 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Andrey Paounov"
+      ],
+      "posterUrl": ""
+    },
+    "tt10460868": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1046977": {
       "runtimeMinutes": 15,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt10551100": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Steve McQueen"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/0/0c/Poster_for_2020_film_Mangrove.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt10551102": {
       "runtimeMinutes": 68,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Steve McQueen"
       ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/3/3c/Lovers_Rock_2020_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
@@ -23123,6 +25414,9 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Philo Bregstein"
+      ],
       "posterUrl": ""
     },
     "tt1059895": {
@@ -23130,31 +25424,53 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Bassem Breish"
+      ],
       "posterUrl": ""
     },
     "tt1062912": {
       "runtimeMinutes": 12,
       "genres": [],
+      "directors": [
+        "Christina Andreef"
+      ],
       "posterUrl": ""
     },
     "tt1062919": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1062962": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt1066452": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1074203": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt10938946": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt10945654": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1111836": {
@@ -23162,11 +25478,21 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Martin de Thurah"
+      ],
+      "posterUrl": ""
+    },
+    "tt1125791": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt11328790": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt11378936": {
@@ -23174,104 +25500,196 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Kiyoshi Saeki"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/8/89/Man_in_the_Storm_film_Theatrical_release_poster_%281952-2%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt11433860": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt11433872": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt1157703": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt11639308": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/a/a3/Yuri_2019_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    "tt11783488": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt1189077": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
     },
     "tt11899784": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt11901548": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt1193135": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1196950": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1219758": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1226305": {
       "runtimeMinutes": 100,
       "genres": [
-        "Drama",
-        "Romance"
+        "Romance",
+        "Drama"
+      ],
+      "directors": [
+        "Yin Lichuan"
       ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/0/00/Knitting_Film_Poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt1226307": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1226311": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt12300750": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1232785": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1238292": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1255494": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "József Nepp"
+      ],
       "posterUrl": ""
     },
     "tt12578228": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1267387": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt12749208": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "George Sluizer"
+      ],
       "posterUrl": ""
     },
     "tt1275538": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Jacques Brunius"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/e/eb/The_Blakes_Slept_Here_film_frame_%281953%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    "tt12756632": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt1278067": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt12805918": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
     },
     "tt1289787": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1291121": {
       "runtimeMinutes": 14,
       "genres": [],
+      "directors": [
+        "Marie Benito"
+      ],
       "posterUrl": ""
     },
     "tt1291126": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt13057926": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt13101040": {
@@ -23279,16 +25697,41 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Ethan Hawke"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/6/61/The_Last_Movie_Stars_%282022%29_Official_Poster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt13242098": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Graham Foy"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/6/61/August_22%2C_This_Year.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt1326738": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt1329247": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt13367330": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt13598960": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1361551": {
@@ -23296,18 +25739,25 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Elad Keidan"
+      ],
       "posterUrl": ""
     },
     "tt1364451": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt13649314": {
       "runtimeMinutes": 0,
       "genres": [
-        "Drama",
-        "Thriller"
+        "Thriller",
+        "Drama"
+      ],
+      "directors": [
+        "Olivier Assayas"
       ],
       "posterUrl": ""
     },
@@ -23316,12 +25766,24 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Bun'yō Kimura"
+      ],
+      "posterUrl": ""
+    },
+    "tt1392262": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1400357": {
       "runtimeMinutes": 0,
       "genres": [
         "Documentary"
+      ],
+      "directors": [
+        "Anne Aghion"
       ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/f/fe/My_Neighbor%2C_My_Killer.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
@@ -23330,18 +25792,31 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/9/9b/30_for_30_Volume_I_logo.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    "tt14214318": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
     },
     "tt1426368": {
       "runtimeMinutes": 83,
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Alain Cavalier"
+      ],
       "posterUrl": ""
     },
     "tt1426370": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Shanon Shah"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/a/ac/Karaoke_2009_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt1426377": {
@@ -23349,12 +25824,30 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Souleymane Cissé"
+      ],
+      "posterUrl": ""
+    },
+    "tt1434421": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt1437630": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1450633": {
       "runtimeMinutes": 0,
       "genres": [
         "Documentary"
+      ],
+      "directors": [
+        "Harry Hunkele"
       ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/8/8a/BDC_Official_Movie_Poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
@@ -23363,31 +25856,52 @@
       "genres": [
         "Comedy"
       ],
+      "directors": [
+        "Mark Albiston",
+        "Louis Sutherland"
+      ],
       "posterUrl": ""
     },
     "tt1451394": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1470856": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt14812798": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt14812822": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1486883": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt14902352": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt14923382": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt14954666": {
@@ -23395,11 +25909,15 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Sam Levinson"
+      ],
       "posterUrl": ""
     },
     "tt14963616": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1534484": {
@@ -23407,42 +25925,66 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Herman van der Horst"
+      ],
       "posterUrl": ""
     },
     "tt1539315": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt1600415": {
+      "runtimeMinutes": 10,
+      "genres": [
+        "Animation"
+      ],
+      "directors": [
+        "Jean-Christophe Lie"
+      ],
       "posterUrl": ""
     },
     "tt1613118": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1624397": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1630233": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1634870": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Pradeepan Raveendran"
+      ],
       "posterUrl": ""
     },
     "tt1645874": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1646121": {
       "runtimeMinutes": 75,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Lodge Kerrigan"
       ],
       "posterUrl": ""
     },
@@ -23451,61 +25993,109 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Pluton Vasi"
+      ],
       "posterUrl": ""
     },
     "tt1647680": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1648121": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1651079": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1661873": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Isamu Hirabayashi"
+      ],
       "posterUrl": ""
     },
     "tt1669557": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt1672809": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1699497": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Aliocha"
+      ],
       "posterUrl": ""
     },
     "tt1742041": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt17492132": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1753537": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1798136": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1813707": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt1822327": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1841580": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt1872063": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt1920908": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1922569": {
@@ -23513,31 +26103,83 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Vimukthi Jayasundara"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/a/ab/Chatrak_film_poster.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt1926225": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt1941510": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt19814970": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt19844646": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt19844738": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt19844752": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt19844770": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt19844794": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt1986058": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt1999853": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt1999860": {
+      "runtimeMinutes": 16,
+      "genres": [],
+      "directors": [
+        "Pauline Gay"
+      ],
       "posterUrl": ""
     },
     "tt1999997": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt2044056": {
@@ -23545,39 +26187,63 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Mark Cousins"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/0/0a/The_Story_of_Film_-_An_Odyssey_%28poster%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt2106685": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt21090978": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt21279748": {
       "runtimeMinutes": 0,
       "genres": [
-        "Drama",
-        "Romance"
+        "Romance",
+        "Drama"
+      ],
+      "directors": [
+        "Valeria Golino",
+        "Nicolangelo Gelormini"
       ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/0/0a/L%27arte_della_gioia_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt2139753": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt2172154": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt2172194": {
+      "runtimeMinutes": 0,
+      "genres": [
+        "Drama"
+      ],
+      "directors": [
+        "Miguel Ángel Moulet"
+      ],
       "posterUrl": ""
     },
     "tt2204694": {
       "runtimeMinutes": 15,
       "genres": [],
+      "directors": [
+        "Marie-Ève Juste"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/e/e6/With_Jeff_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt2213550": {
@@ -23585,76 +26251,137 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Yaelle Kayam"
+      ],
       "posterUrl": ""
     },
     "tt2229092": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt2239898": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt2258347": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt2258661": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt2327415": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt2368829": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt2375409": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt2381150": {
+      "runtimeMinutes": 0,
+      "genres": [
+        "Documentary"
+      ],
+      "directors": [
+        "André Zwobada"
+      ],
       "posterUrl": ""
     },
     "tt2619376": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt2707114": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt2713714": {
       "runtimeMinutes": 61,
       "genres": [],
+      "directors": [
+        "Alberto Gracia"
+      ],
+      "posterUrl": ""
+    },
+    "tt27458238": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt27549437": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt27550420": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt27604407": {
       "runtimeMinutes": 45,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt27729024": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt27770035": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt27770872": {
       "runtimeMinutes": 20,
       "genres": [],
+      "directors": [
+        "Jean-Luc Godard"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/d/da/FILM_annonce_du_film_%22Dr%C3%B4les_de_Guerres%22.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     "tt2785278": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt28240797": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt28298265": {
@@ -23662,84 +26389,175 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Mikhail Slutsky"
+      ],
+      "posterUrl": ""
+    },
+    "tt2852318": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt28799729": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt2881498": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Nicolas Pariser"
+      ],
       "posterUrl": ""
     },
     "tt2894632": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt2894668": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt2896784": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt2907124": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt2922072": {
       "runtimeMinutes": 20,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt2922118": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt2922608": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt2958234": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Gunvor Nelson"
+      ],
+      "posterUrl": ""
+    },
+    "tt3053694": {
+      "runtimeMinutes": 50,
+      "genres": [
+        "Mystery",
+        "Comedy"
+      ],
+      "directors": [
+        "Bruno Dumont"
+      ],
+      "posterUrl": "https://upload.wikimedia.org/wikipedia/en/6/65/P%27tit_Quinquin_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    "tt31281742": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt3147928": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt31616357": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt31616403": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt32129556": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt32129617": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt32345074": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt32476297": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt3479062": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Gitanjali Rao"
+      ],
       "posterUrl": ""
     },
     "tt3511510": {
       "runtimeMinutes": 99,
       "genres": [
-        "Documentary",
-        "History"
+        "History",
+        "Documentary"
+      ],
+      "directors": [
+        "Sally Sussman Morina"
       ],
       "posterUrl": ""
     },
     "tt36164712": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt36581998": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt36645498": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt36724188": {
@@ -23747,71 +26565,165 @@
       "genres": [
         "Drama"
       ],
+      "directors": [
+        "Adnan Al Rajeev"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/b/b7/Ali_Short_film_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    "tt3672566": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
     },
     "tt3672586": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt3672624": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Petra Szőcs"
+      ],
+      "posterUrl": ""
+    },
+    "tt36750881": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt3683632": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [
+        "Jonas Carpignano"
+      ],
       "posterUrl": ""
     },
     "tt3685362": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt3710104": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt3729106": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt3785034": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt38268531": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt3834018": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt3852492": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt3861418": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt3861446": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt3868664": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt3890726": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt3914372": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Richard Frankland"
+      ],
+      "posterUrl": ""
+    },
+    "tt39163316": {
+      "runtimeMinutes": 60,
+      "genres": [],
+      "directors": [
+        "Mark Cousins"
+      ],
       "posterUrl": ""
     },
     "tt39195284": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt4039544": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt40721682": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt42004468": {
       "runtimeMinutes": 15,
       "genres": [],
+      "directors": [
+        "Hadrien Bels"
+      ],
+      "posterUrl": ""
+    },
+    "tt42004472": {
+      "runtimeMinutes": 15,
+      "genres": [],
+      "directors": [
+        "Mathilde Bédouet"
+      ],
       "posterUrl": ""
     },
     "tt42004601": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt42007282": {
@@ -23820,71 +26732,192 @@
         "Drama",
         "Comedy"
       ],
+      "directors": [
+        "Laetitia Masson"
+      ],
+      "posterUrl": ""
+    },
+    "tt42415328": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt42823497": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt42823518": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt42824214": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt42825707": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt42863463": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt42863485": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt42998752": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt4396330": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt4431994": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt4441890": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt4459014": {
       "runtimeMinutes": 15,
       "genres": [],
+      "directors": [
+        "Jan Roosens",
+        "Raf Roosens"
+      ],
       "posterUrl": ""
     },
     "tt4692518": {
       "runtimeMinutes": 14,
       "genres": [],
+      "directors": [
+        "João Paulo Miranda Maria"
+      ],
       "posterUrl": ""
     },
     "tt4714174": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt4714184": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt4745298": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt4766436": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt4769464": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt4786566": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt4789320": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt4796596": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt4796612": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt4796640": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt4817054": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt48301620": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt4830636": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt4830754": {
+      "runtimeMinutes": 0,
+      "genres": [
+        "Documentary"
+      ],
+      "directors": [
+        "Edgar Bartenev"
+      ],
       "posterUrl": ""
     },
     "tt4859824": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt4859990": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt4866148": {
@@ -23892,77 +26925,146 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Henri Verneuil"
+      ],
       "posterUrl": ""
     },
     "tt4877588": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt4945358": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [
+        "Henri Fabiani"
+      ],
+      "posterUrl": ""
+    },
+    "tt5042428": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt5045778": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt5085630": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt5326096": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt5338528": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt5358076": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt5361000": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt5361654": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt5519972": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt5647798": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt5682022": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt5721374": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt5721420": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt5749244": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt5796474": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt6053914": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt6070152": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt6107558": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt6365482": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt6517320": {
       "runtimeMinutes": 55,
       "genres": [
         "Crime"
+      ],
+      "directors": [
+        "Nicolas Winding Refn"
       ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/b/ba/Too_Old_to_Die_Young.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
@@ -23971,13 +27073,47 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Jean-Luc Godard"
+      ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/0/0a/Histoire%28s%29DuCinema01.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    "tt6687318": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
     },
     "tt6706136": {
       "runtimeMinutes": 0,
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Marcel Ichac"
+      ],
+      "posterUrl": ""
+    },
+    "tt6884650": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt6885412": {
+      "runtimeMinutes": 99,
+      "genres": [
+        "Documentary"
+      ],
+      "directors": [
+        "Mariana Otero"
+      ],
+      "posterUrl": ""
+    },
+    "tt6890846": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt6895800": {
@@ -23985,77 +27121,208 @@
       "genres": [
         "Documentary"
       ],
+      "directors": [
+        "Laura Ferrés Moreno"
+      ],
       "posterUrl": ""
     },
     "tt6953844": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt6957834": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt6982852": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt7024756": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt7046878": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt7124382": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt7128854": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt7305762": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt7385420": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [
+        "Serge Hanin"
+      ],
+      "posterUrl": ""
+    },
+    "tt7486530": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt7651632": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt7665996": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt7786634": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt7941254": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt8049154": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt8140128": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt8338768": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt8424870": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt8435402": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt8515140": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt8517694": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt8591606": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt8667938": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt8883412": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt9072652": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt9336038": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt9339924": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt9356068": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [
+        "Henry Brandt"
+      ],
       "posterUrl": ""
     },
     "tt9434738": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
+      "posterUrl": ""
+    },
+    "tt9448616": {
+      "runtimeMinutes": 0,
+      "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt9506304": {
       "runtimeMinutes": 0,
       "genres": [],
+      "directors": [],
       "posterUrl": ""
     },
     "tt9848536": {
       "runtimeMinutes": 62,
       "genres": [
         "Drama"
+      ],
+      "directors": [
+        "Luca Guadagnino"
       ],
       "posterUrl": "https://upload.wikimedia.org/wikipedia/en/9/9a/We_Are_Who_We_Are_Title.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     }

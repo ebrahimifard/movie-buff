@@ -355,15 +355,6 @@
     "tmdbId": null
   },
   {
-    "id": "person:adam-bessa",
-    "name": "Adam Bessa",
-    "roles": [
-      "cast"
-    ],
-    "imdbId": null,
-    "tmdbId": null
-  },
-  {
     "id": "person:adam-curtis",
     "name": "Adam Curtis",
     "roles": [
@@ -3078,6 +3069,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:alfredo-joskowicz",
+    "name": "Alfredo Joskowicz",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:alfredo-landa-and-francisco-rabal",
     "name": "Alfredo Landa and Francisco Rabal",
     "roles": [
@@ -4888,6 +4888,15 @@
   {
     "id": "person:andrew-marton",
     "name": "Andrew Marton",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:andrew-mollo",
+    "name": "Andrew Mollo",
     "roles": [
       "director"
     ],
@@ -9071,6 +9080,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:belma-ba",
+    "name": "Belma Baş",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:belma-bas",
     "name": "Belma Bas",
     "roles": [
@@ -9968,15 +9986,6 @@
     "tmdbId": null
   },
   {
-    "id": "person:best-actor",
-    "name": "Best Actor",
-    "roles": [
-      "cast"
-    ],
-    "imdbId": null,
-    "tmdbId": null
-  },
-  {
     "id": "person:best-actor-in-a-leading-role",
     "name": "Best Actor in a Leading Role",
     "roles": [
@@ -9988,15 +9997,6 @@
   {
     "id": "person:best-actor-in-a-supporting-role",
     "name": "Best Actor in a Supporting Role",
-    "roles": [
-      "cast"
-    ],
-    "imdbId": null,
-    "tmdbId": null
-  },
-  {
-    "id": "person:best-actress",
-    "name": "Best Actress",
     "roles": [
       "cast"
     ],
@@ -10051,15 +10051,6 @@
   {
     "id": "person:best-direction",
     "name": "Best Direction",
-    "roles": [
-      "director"
-    ],
-    "imdbId": null,
-    "tmdbId": null
-  },
-  {
-    "id": "person:best-director",
-    "name": "Best Director",
     "roles": [
       "director"
     ],
@@ -10998,6 +10989,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:bob-rosen",
+    "name": "Bob Rosen",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:bob-shaw",
     "name": "Bob Shaw",
     "roles": [
@@ -11099,6 +11099,15 @@
   {
     "id": "person:bolotbek-shamshiyev",
     "name": "Bolotbek Shamshiyev",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:bondo-shoshitaishvili",
+    "name": "Bondo Shoshitaishvili",
     "roles": [
       "director"
     ],
@@ -11373,15 +11382,6 @@
     "tmdbId": null
   },
   {
-    "id": "person:brandon-christensen",
-    "name": "Brandon Christensen",
-    "roles": [
-      "director"
-    ],
-    "imdbId": null,
-    "tmdbId": null
-  },
-  {
     "id": "person:brandon-cronenberg",
     "name": "Brandon Cronenberg",
     "roles": [
@@ -11420,6 +11420,24 @@
   {
     "id": "person:branko-ple-a",
     "name": "Branko Pleša",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:branko-ranitovi",
+    "name": "Branko Ranitović",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:brassa",
+    "name": "Brassaï",
     "roles": [
       "director"
     ],
@@ -11996,6 +12014,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:bruno-chiche",
+    "name": "Bruno Chiche",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:bruno-collet",
     "name": "Bruno Collet",
     "roles": [
@@ -12246,15 +12273,6 @@
     "name": "Bulgaria",
     "roles": [
       "cast"
-    ],
-    "imdbId": null,
-    "tmdbId": null
-  },
-  {
-    "id": "person:bulmaro-osornio",
-    "name": "Bulmaro Osornio",
-    "roles": [
-      "director"
     ],
     "imdbId": null,
     "tmdbId": null
@@ -14562,6 +14580,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:charles-williams",
+    "name": "Charles Williams",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:charles-wood",
     "name": "Charles Wood",
     "roles": [
@@ -14836,7 +14863,7 @@
   },
   {
     "id": "person:chiang-wei-liang",
-    "name": "Chiang Wei Liang",
+    "name": "Chiang Wei-liang",
     "roles": [
       "director"
     ],
@@ -14993,6 +15020,15 @@
   {
     "id": "person:cho-eun-ryung",
     "name": "Cho Eun-ryung",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:chou-tchen-wang",
+    "name": "Chou-Tchen Wang",
     "roles": [
       "director"
     ],
@@ -15317,6 +15353,15 @@
   {
     "id": "person:christian-carion",
     "name": "Christian Carion",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:christian-dor",
+    "name": "Christian Dor",
     "roles": [
       "director"
     ],
@@ -18454,6 +18499,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:danielle-stolz",
+    "name": "Danielle Stolz",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:danilo-donati",
     "name": "Danilo Donati",
     "roles": [
@@ -18587,6 +18641,15 @@
   {
     "id": "person:darezhan-omirbaev",
     "name": "Darezhan Omirbaev",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:darezhan-omirbayev",
+    "name": "Darezhan Omirbayev",
     "roles": [
       "director"
     ],
@@ -19322,6 +19385,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:david-larcher",
+    "name": "David Larcher",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:david-lassiter",
     "name": "David Lassiter",
     "roles": [
@@ -19871,6 +19943,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:davit-takaishvili",
+    "name": "Davit Takaishvili",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:davy-chou",
     "name": "Davy Chou",
     "roles": [
@@ -20226,6 +20307,15 @@
   {
     "id": "person:delbert-mann",
     "name": "Delbert Mann",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:delilah-napier",
+    "name": "Delilah Napier",
     "roles": [
       "director"
     ],
@@ -20636,6 +20726,15 @@
     "name": "Destin Cretton",
     "roles": [
       "cast"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:detten-schleiermacher",
+    "name": "Detten Schleiermacher",
+    "roles": [
+      "director"
     ],
     "imdbId": null,
     "tmdbId": null
@@ -21887,6 +21986,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:dorotheea-petre",
+    "name": "Dorotheea Petre",
+    "roles": [
+      "cast"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:dorothy-alison",
     "name": "Dorothy Alison",
     "roles": [
@@ -22457,6 +22565,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:ebru-ceylan",
+    "name": "Ebru Ceylan",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:eckehard-munck",
     "name": "Eckehard Munck",
     "roles": [
@@ -22578,6 +22695,15 @@
   {
     "id": "person:edgar-barens",
     "name": "Edgar Barens",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:edgar-bartenev",
+    "name": "Edgar Bartenev",
     "roles": [
       "director"
     ],
@@ -23730,6 +23856,15 @@
     "name": "Elizabeth McGovern",
     "roles": [
       "cast"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:elizabeth-montagu",
+    "name": "Elizabeth Montagu",
+    "roles": [
+      "director"
     ],
     "imdbId": null,
     "tmdbId": null
@@ -26228,6 +26363,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:farshid-mesghali",
+    "name": "Farshid Mesghali",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:father-and-daughter",
     "name": "Father and Daughter",
     "roles": [
@@ -26892,6 +27036,15 @@
   {
     "id": "person:fina-torres",
     "name": "Fina Torres",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:finn-carlsby",
+    "name": "Finn Carlsby",
     "roles": [
       "director"
     ],
@@ -28984,6 +29137,15 @@
   {
     "id": "person:g-rard-valet",
     "name": "Gérard Valet",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:g-rard-vergez",
+    "name": "Gérard Vergez",
     "roles": [
       "director"
     ],
@@ -31821,6 +31983,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:goro-miyazaki",
+    "name": "Goro Miyazaki",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:goston-koll-nyi",
     "name": "Ágoston Kollányi",
     "roles": [
@@ -34570,6 +34741,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:henri-fabiani",
+    "name": "Henri Fabiani",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:henri-fescourt",
     "name": "Henri Fescourt",
     "roles": [
@@ -34590,6 +34770,15 @@
   {
     "id": "person:henri-georges-clouzot",
     "name": "Henri-Georges Clouzot",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:henri-glaeser",
+    "name": "Henri Glaeser",
     "roles": [
       "director"
     ],
@@ -36428,6 +36617,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:il-gon-song",
+    "name": "Il-Gon Song",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:ilan-klipper",
     "name": "Ilan Klipper",
     "roles": [
@@ -36737,6 +36935,15 @@
   {
     "id": "person:iosif-pasternak",
     "name": "Iosif Pasternak",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:iouri-tcherenkov",
+    "name": "Iouri Tcherenkov",
     "roles": [
       "director"
     ],
@@ -37430,6 +37637,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:ivan-popov",
+    "name": "Ivan Popov",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:ivan-pyryev",
     "name": "Ivan Pyryev",
     "roles": [
@@ -37450,6 +37666,15 @@
   {
     "id": "person:ivan-sen",
     "name": "Ivan Sen",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:ivan-vesselinov",
+    "name": "Ivan Vesselinov",
     "roles": [
       "director"
     ],
@@ -37530,7 +37755,7 @@
   },
   {
     "id": "person:j-c-chandor",
-    "name": "J. C. Chandor",
+    "name": "J.C. Chandor",
     "roles": [
       "director",
       "writer"
@@ -40935,6 +41160,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:jean-louis-bertuccelli",
+    "name": "Jean-Louis Bertuccelli",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:jean-louis-bertucelli",
     "name": "Jean-Louis Bertucelli",
     "roles": [
@@ -41115,6 +41349,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:jean-mihail",
+    "name": "Jean Mihail",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:jean-mitry",
     "name": "Jean Mitry",
     "roles": [
@@ -41210,6 +41453,15 @@
     "name": "Jean-Paul Sartre",
     "roles": [
       "writer"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:jean-paul-t-r-k",
+    "name": "Jean-Paul Török",
+    "roles": [
+      "director"
     ],
     "imdbId": null,
     "tmdbId": null
@@ -41688,6 +41940,15 @@
   {
     "id": "person:jeff-goldblum",
     "name": "Jeff Goldblum",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:jeff-keen",
+    "name": "Jeff Keen",
     "roles": [
       "director"
     ],
@@ -43208,6 +43469,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:jo-sung-hee",
+    "name": "Jo Sung-hee",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:jo-van-fleet",
     "name": "Jo Van Fleet",
     "roles": [
@@ -43257,6 +43527,15 @@
     "name": "Joan Allen",
     "roles": [
       "cast"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:joan-baptista-bellsolell",
+    "name": "Joan-Baptista Bellsolell",
+    "roles": [
+      "director"
     ],
     "imdbId": null,
     "tmdbId": null
@@ -47723,6 +48002,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:julio-saraceni",
+    "name": "Julio Saraceni",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:julius-avery",
     "name": "Julius Avery",
     "roles": [
@@ -50709,6 +50997,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:kyla-romero",
+    "name": "Kyla Romero",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:kyle-henry",
     "name": "Kyle Henry",
     "roles": [
@@ -50756,6 +51053,15 @@
   {
     "id": "person:l-a-pool",
     "name": "Léa Pool",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:l-gorokhov",
+    "name": "L. Gorokhov",
     "roles": [
       "director"
     ],
@@ -50988,6 +51294,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:laila-pakalnina",
+    "name": "Laila Pakalnina",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:laila-stieler",
     "name": "Laila Stieler",
     "roles": [
@@ -51082,6 +51397,15 @@
     "name": "Lana Turner",
     "roles": [
       "cast"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:lana-wachowski",
+    "name": "Lana Wachowski",
+    "roles": [
+      "director"
     ],
     "imdbId": null,
     "tmdbId": null
@@ -53078,7 +53402,7 @@
   },
   {
     "id": "person:liane-cho-han",
-    "name": "Liane-Cho Han",
+    "name": "Liane-cho Han",
     "roles": [
       "director"
     ],
@@ -55047,6 +55371,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:luiz-carlos-saldanha",
+    "name": "Luiz Carlos Saldanha",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:lukas-dhont",
     "name": "Lukas Dhont",
     "roles": [
@@ -56206,6 +56539,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:marc-james-roels",
+    "name": "Marc James Roels",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:marc-levin",
     "name": "Marc Levin",
     "roles": [
@@ -56291,6 +56633,15 @@
   {
     "id": "person:marcel-carn",
     "name": "Marcel Carné",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:marcel-carri-re",
+    "name": "Marcel Carrière",
     "roles": [
       "director"
     ],
@@ -60072,6 +60423,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:mehmet-can-mertoglu",
+    "name": "Mehmet Can Mertoglu",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:mei-feng",
     "name": "Mei Feng",
     "roles": [
@@ -61101,6 +61461,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:michael-labarca",
+    "name": "Michael Labarca",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:michael-lah",
     "name": "Michael Lah",
     "roles": [
@@ -61324,6 +61693,15 @@
     "name": "Michael Sacks",
     "roles": [
       "cast"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:michael-sarne",
+    "name": "Michael Sarne",
+    "roles": [
+      "director"
     ],
     "imdbId": null,
     "tmdbId": null
@@ -62084,6 +62462,15 @@
   {
     "id": "person:miguel-morayta",
     "name": "Miguel Morayta",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:miguel-ngel-moulet",
+    "name": "Miguel Ángel Moulet",
     "roles": [
       "director"
     ],
@@ -62859,6 +63246,15 @@
   {
     "id": "person:mircea-veroiu",
     "name": "Mircea Veroiu",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:mirel-ilie-iu",
+    "name": "Mirel Ilieșiu",
     "roles": [
       "director"
     ],
@@ -63911,6 +64307,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:n-s-thapa",
+    "name": "N. S. Thapa",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:n-t-binh",
     "name": "N. T. Binh",
     "roles": [
@@ -64866,6 +65271,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:ngel-tavira",
+    "name": "Ángel Tavira",
+    "roles": [
+      "cast"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:nguy-n-thi-n-n",
     "name": "Nguyễn Thiên Ân",
     "roles": [
@@ -65607,6 +66021,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:nikos-nikolaidis",
+    "name": "Nikos Nikolaidis",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:nikos-panayotopoulos",
     "name": "Nikos Panayotopoulos",
     "roles": [
@@ -66019,6 +66442,15 @@
     "name": "Norman Corwin",
     "roles": [
       "writer"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:norman-ferguson",
+    "name": "Norman Ferguson",
+    "roles": [
+      "director"
     ],
     "imdbId": null,
     "tmdbId": null
@@ -66810,6 +67242,15 @@
   {
     "id": "person:orestes-calpini",
     "name": "Orestes Calpini",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:orhan-o-uz",
+    "name": "Orhan Oğuz",
     "roles": [
       "director"
     ],
@@ -68167,15 +68608,6 @@
     "name": "Patrick Swayze",
     "roles": [
       "cast"
-    ],
-    "imdbId": null,
-    "tmdbId": null
-  },
-  {
-    "id": "person:patrick-t-griffin",
-    "name": "Patrick T. Griffin",
-    "roles": [
-      "director"
     ],
     "imdbId": null,
     "tmdbId": null
@@ -69597,6 +70029,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:pernille-fischer-christensen",
+    "name": "Pernille Fischer Christensen",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:perry-ferguson",
     "name": "Perry Ferguson",
     "roles": [
@@ -70211,6 +70652,15 @@
   {
     "id": "person:peter-peake",
     "name": "Peter Peake",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:peter-r-hunt",
+    "name": "Peter R. Hunt",
     "roles": [
       "director"
     ],
@@ -71246,6 +71696,15 @@
   {
     "id": "person:pierre-henri-gibert",
     "name": "Pierre-Henri Gibert",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:pierre-henri-salfati",
+    "name": "Pierre-Henri Salfati",
     "roles": [
       "director"
     ],
@@ -73076,6 +73535,15 @@
   {
     "id": "person:ratchapoom-boonbunchachoke",
     "name": "Ratchapoom Boonbunchachoke",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:rattana-pestonji",
+    "name": "Rattana Pestonji",
     "roles": [
       "director"
     ],
@@ -77107,6 +77575,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:rolando-klein",
+    "name": "Rolando Klein",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:rolands-kalni",
     "name": "Rolands Kalniņš",
     "roles": [
@@ -79464,6 +79941,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:sang-il-lee",
+    "name": "Sang-il Lee",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:sanjay-leela-bhansali",
     "name": "Sanjay Leela Bhansali",
     "roles": [
@@ -79677,6 +80163,15 @@
     "name": "Sarah Halley Finn",
     "roles": [
       "cast"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:sarah-hirtt",
+    "name": "Sarah Hirtt",
+    "roles": [
+      "director"
     ],
     "imdbId": null,
     "tmdbId": null
@@ -80441,6 +80936,15 @@
   {
     "id": "person:serge-gainsbourg",
     "name": "Serge Gainsbourg",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:serge-hanin",
+    "name": "Serge Hanin",
     "roles": [
       "director"
     ],
@@ -81434,6 +81938,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:shu-qi",
+    "name": "Shu Qi",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:shuhan-liao",
     "name": "Shuhan Liao",
     "roles": [
@@ -82271,6 +82784,15 @@
   {
     "id": "person:sompot-chidgasornpongse",
     "name": "Sompot Chidgasornpongse",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:son-tae-gyum",
+    "name": "Son Tae-gyum",
     "roles": [
       "director"
     ],
@@ -83168,6 +83690,15 @@
   {
     "id": "person:stephan-muller",
     "name": "Stephan Muller",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:stephanie-black",
+    "name": "Stephanie Black",
     "roles": [
       "director"
     ],
@@ -84338,15 +84869,6 @@
     "name": "Suwa Nobuhiro",
     "roles": [
       "director"
-    ],
-    "imdbId": null,
-    "tmdbId": null
-  },
-  {
-    "id": "person:suzanne-cl-ment",
-    "name": "Suzanne Clément",
-    "roles": [
-      "cast"
     ],
     "imdbId": null,
     "tmdbId": null
@@ -86231,6 +86753,15 @@
   {
     "id": "person:thomas-bangalter",
     "name": "Thomas Bangalter",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:thomas-bardinet",
+    "name": "Thomas Bardinet",
     "roles": [
       "director"
     ],
@@ -88472,6 +89003,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:uwe-brandner",
+    "name": "Uwe Brandner",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:v-clav-bed-ich",
     "name": "Václav Bedřich",
     "roles": [
@@ -89262,15 +89802,6 @@
     "name": "Vicky Jenson",
     "roles": [
       "director"
-    ],
-    "imdbId": null,
-    "tmdbId": null
-  },
-  {
-    "id": "person:vicky-krieps",
-    "name": "Vicky Krieps",
-    "roles": [
-      "cast"
     ],
     "imdbId": null,
     "tmdbId": null
@@ -90300,7 +90831,7 @@
   },
   {
     "id": "person:waad-al-kateab",
-    "name": "Waad Al-Kateab",
+    "name": "Waad al-Kateab",
     "roles": [
       "director"
     ],
@@ -90526,7 +91057,7 @@
   },
   {
     "id": "person:walter-lima-jr",
-    "name": "Walter Lima Jr",
+    "name": "Walter Lima Jr.",
     "roles": [
       "director"
     ],
@@ -92855,6 +93386,15 @@
     "tmdbId": null
   },
   {
+    "id": "person:you-lei",
+    "name": "You Lei",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:you-ll-be-in-my-heart",
     "name": "You'll Be in My Heart",
     "roles": [
@@ -93539,8 +94079,35 @@
     "tmdbId": null
   },
   {
+    "id": "person:zdenka-doitcheva",
+    "name": "Zdenka Doitcheva",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:zdenko-ga-parovi",
+    "name": "Zdenko Gašparović",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
     "id": "person:zdravko-velimirovi",
     "name": "Zdravko Velimirović",
+    "roles": [
+      "director"
+    ],
+    "imdbId": null,
+    "tmdbId": null
+  },
+  {
+    "id": "person:zeka-laplaine",
+    "name": "Zeka Laplaine",
     "roles": [
       "director"
     ],
