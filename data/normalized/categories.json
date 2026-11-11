@@ -3051,39 +3051,12 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:3-me-label-europa-cin-ma",
-    "festivalId": "cannes",
-    "name": "3ème Label Europa Cinéma",
-    "normalizedName": "3-me-label-europa-cin-ma",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:3-me-prix-regards-jeunes",
-    "festivalId": "cannes",
-    "name": "3ème Prix Regards Jeunes",
-    "normalizedName": "3-me-prix-regards-jeunes",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "cannes:35th-anniversary-prize",
     "festivalId": "cannes",
     "name": "35th Anniversary Prize",
     "normalizedName": "35th-anniversary-prize",
     "scope": "film",
     "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:3rd-prize",
-    "festivalId": "cannes",
-    "name": "3rd Prize",
-    "normalizedName": "3rd-prize",
-    "scope": "film",
-    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -3100,15 +3073,6 @@
     "festivalId": "cannes",
     "name": "45th Anniversary Prize",
     "normalizedName": "45th-anniversary-prize",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:50th-anniversary-prize",
-    "festivalId": "cannes",
-    "name": "50th Anniversary Prize",
-    "normalizedName": "50th-anniversary-prize",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -3132,15 +3096,6 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:70th-anniversary-prize",
-    "festivalId": "cannes",
-    "name": "70th Anniversary Prize",
-    "normalizedName": "70th-anniversary-prize",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "cannes:75th-anniversary-prize",
     "festivalId": "cannes",
     "name": "75th Anniversary Prize",
@@ -3150,46 +3105,19 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:a-certain-talent",
+    "id": "cannes:acid",
     "festivalId": "cannes",
-    "name": "A Certain Talent",
-    "normalizedName": "a-certain-talent",
+    "name": "ACID",
+    "normalizedName": "acid",
     "scope": "film",
-    "isAward": true,
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:acid-award",
+    "id": "cannes:acid-prize",
     "festivalId": "cannes",
-    "name": "ACID Award",
-    "normalizedName": "acid-award",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:acid-ccas-award",
-    "festivalId": "cannes",
-    "name": "ACID/CCAS Award",
-    "normalizedName": "acid-ccas-award",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:acid-ccas-prize",
-    "festivalId": "cannes",
-    "name": "ACID/CCAS Prize",
-    "normalizedName": "acid-ccas-prize",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:acid-trip-1-serbia",
-    "festivalId": "cannes",
-    "name": "ACID Trip #1 - Serbia",
-    "normalizedName": "acid-trip-1-serbia",
+    "name": "ACID Prize",
+    "normalizedName": "acid-prize",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -3348,15 +3276,6 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:awards",
-    "festivalId": "cannes",
-    "name": "Awards",
-    "normalizedName": "awards",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
     "id": "cannes:best-acting-award",
     "festivalId": "cannes",
     "name": "Best Acting Award",
@@ -3384,10 +3303,10 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:best-animation",
+    "id": "cannes:best-animation-design",
     "festivalId": "cannes",
-    "name": "Best Animation",
-    "normalizedName": "best-animation",
+    "name": "Best Animation Design",
+    "normalizedName": "best-animation-design",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -3411,6 +3330,15 @@
     "isHonoraryAward": false
   },
   {
+    "id": "cannes:best-avant-garde-film",
+    "festivalId": "cannes",
+    "name": "Best Avant-garde Film",
+    "normalizedName": "best-avant-garde-film",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
     "id": "cannes:best-cinematic-transposition",
     "festivalId": "cannes",
     "name": "Best Cinematic Transposition",
@@ -3424,6 +3352,15 @@
     "festivalId": "cannes",
     "name": "Best Cinematography",
     "normalizedName": "best-cinematography",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:best-colour",
+    "festivalId": "cannes",
+    "name": "Best Colour",
+    "normalizedName": "best-colour",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -3465,28 +3402,19 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:best-documentary",
-    "festivalId": "cannes",
-    "name": "Best Documentary",
-    "normalizedName": "best-documentary",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:best-documentary-film",
-    "festivalId": "cannes",
-    "name": "Best Documentary Film",
-    "normalizedName": "best-documentary-film",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "cannes:best-dramatic-film",
     "festivalId": "cannes",
     "name": "Best Dramatic Film",
     "normalizedName": "best-dramatic-film",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:best-editing",
+    "festivalId": "cannes",
+    "name": "Best Editing",
+    "normalizedName": "best-editing",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -3510,33 +3438,6 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:best-fiction-film",
-    "festivalId": "cannes",
-    "name": "Best Fiction Film",
-    "normalizedName": "best-fiction-film",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:best-fictional-film",
-    "festivalId": "cannes",
-    "name": "Best Fictional Film",
-    "normalizedName": "best-fictional-film",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:best-film",
-    "festivalId": "cannes",
-    "name": "Best Film",
-    "normalizedName": "best-film",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "cannes:best-film-for-the-youth",
     "festivalId": "cannes",
     "name": "Best Film for the Youth",
@@ -3546,10 +3447,10 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:best-film-on-art",
+    "id": "cannes:best-filmed-coverage",
     "festivalId": "cannes",
-    "name": "Best Film on Art",
-    "normalizedName": "best-film-on-art",
+    "name": "Best Filmed Coverage",
+    "normalizedName": "best-filmed-coverage",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -3600,15 +3501,6 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:best-performance",
-    "festivalId": "cannes",
-    "name": "Best Performance",
-    "normalizedName": "best-performance",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "cannes:best-poetic-humour",
     "festivalId": "cannes",
     "name": "Best Poetic Humour",
@@ -3636,10 +3528,10 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:best-short",
+    "id": "cannes:best-short-documentary",
     "festivalId": "cannes",
-    "name": "Best Short",
-    "normalizedName": "best-short",
+    "name": "Best Short Documentary",
+    "normalizedName": "best-short-documentary",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -3649,6 +3541,15 @@
     "festivalId": "cannes",
     "name": "Best Short Film",
     "normalizedName": "best-short-film",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:best-subject",
+    "festivalId": "cannes",
+    "name": "Best Subject",
+    "normalizedName": "best-subject",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -3672,19 +3573,19 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:c-i-c-a-e-award",
+    "id": "cannes:cam-ra-d-or",
     "festivalId": "cannes",
-    "name": "C.I.C.A.E. Award",
-    "normalizedName": "c-i-c-a-e-award",
+    "name": "Caméra d'Or",
+    "normalizedName": "cam-ra-d-or",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:cam-ra-d-or",
+    "id": "cannes:cam-ra-d-or-special-mention",
     "festivalId": "cannes",
-    "name": "Caméra d'Or",
-    "normalizedName": "cam-ra-d-or",
+    "name": "Caméra d'Or – Special Mention",
+    "normalizedName": "cam-ra-d-or-special-mention",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -3708,24 +3609,6 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:canal-gran-prix-for-short-film",
-    "festivalId": "cannes",
-    "name": "Canal+ Gran Prix for short film",
-    "normalizedName": "canal-gran-prix-for-short-film",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:canal-short-film-award",
-    "festivalId": "cannes",
-    "name": "Canal+ Short Film Award",
-    "normalizedName": "canal-short-film-award",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "cannes:cannes-best-director-award",
     "festivalId": "cannes",
     "name": "Cannes Best Director Award",
@@ -3739,6 +3622,24 @@
     "festivalId": "cannes",
     "name": "Cannes Classics",
     "normalizedName": "cannes-classics",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:cannes-classics-documentaries-about-cinema",
+    "festivalId": "cannes",
+    "name": "Cannes Classics – Documentaries about Cinema",
+    "normalizedName": "cannes-classics-documentaries-about-cinema",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:cannes-classics-special-screenings",
+    "festivalId": "cannes",
+    "name": "Cannes Classics – Special Screenings",
+    "normalizedName": "cannes-classics-special-screenings",
     "scope": "film",
     "isAward": false,
     "isHonoraryAward": false
@@ -3789,55 +3690,10 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:carrosse-d-or",
-    "festivalId": "cannes",
-    "name": "Carrosse d’Or",
-    "normalizedName": "carrosse-d-or",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:cicae-jury-cannes",
-    "festivalId": "cannes",
-    "name": "CICAE Jury Cannes",
-    "normalizedName": "cicae-jury-cannes",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "cannes:cin-fondation",
     "festivalId": "cannes",
     "name": "Cinéfondation",
     "normalizedName": "cin-fondation",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:cin-fondation-1st-prize",
-    "festivalId": "cannes",
-    "name": "Cinéfondation – 1st Prize",
-    "normalizedName": "cin-fondation-1st-prize",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:cin-fondation-2nd-prize",
-    "festivalId": "cannes",
-    "name": "Cinéfondation – 2nd Prize",
-    "normalizedName": "cin-fondation-2nd-prize",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:cin-fondation-3rd-prize",
-    "festivalId": "cannes",
-    "name": "Cinéfondation – 3rd Prize",
-    "normalizedName": "cin-fondation-3rd-prize",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -3933,10 +3789,10 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:critics-week-grand-prix",
+    "id": "cannes:critics-week",
     "festivalId": "cannes",
-    "name": "Critics' Week – Grand prix",
-    "normalizedName": "critics-week-grand-prix",
+    "name": "Critics' Week",
+    "normalizedName": "critics-week",
     "scope": "film",
     "isAward": false,
     "isHonoraryAward": false
@@ -3948,24 +3804,6 @@
     "normalizedName": "critics-week-grand-prize",
     "scope": "film",
     "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:critics-week-nespresso-grand-prize",
-    "festivalId": "cannes",
-    "name": "Critics Week Nespresso Grand Prize",
-    "normalizedName": "critics-week-nespresso-grand-prize",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:critics-week-semaine-de-la-critique",
-    "festivalId": "cannes",
-    "name": "Critics' Week (Semaine de la critique)",
-    "normalizedName": "critics-week-semaine-de-la-critique",
-    "scope": "film",
-    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -3992,25 +3830,16 @@
     "name": "Directors' Fortnight",
     "normalizedName": "directors-fortnight",
     "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:directors-fortnight-audience-award",
+    "festivalId": "cannes",
+    "name": "Directors' Fortnight – Audience Award",
+    "normalizedName": "directors-fortnight-audience-award",
+    "scope": "film",
     "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:directors-fortnight-quinzaine-des-cin-astes",
-    "festivalId": "cannes",
-    "name": "Directors' Fortnight (Quinzaine des cinéastes)",
-    "normalizedName": "directors-fortnight-quinzaine-des-cin-astes",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:directors-fortnight-quinzaine-des-r-alizateurs",
-    "festivalId": "cannes",
-    "name": "Directors' Fortnight (Quinzaine des Réalizateurs)",
-    "normalizedName": "directors-fortnight-quinzaine-des-r-alizateurs",
-    "scope": "film",
-    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -4018,15 +3847,6 @@
     "festivalId": "cannes",
     "name": "Discovery Award for short film",
     "normalizedName": "discovery-award-for-short-film",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:discovery-prize",
-    "festivalId": "cannes",
-    "name": "Discovery Prize",
-    "normalizedName": "discovery-prize",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -4050,66 +3870,12 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:documentary-prize",
-    "festivalId": "cannes",
-    "name": "Documentary Prize",
-    "normalizedName": "documentary-prize",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:ecumenical-jury-special-award",
-    "festivalId": "cannes",
-    "name": "Ecumenical Jury - Special Award",
-    "normalizedName": "ecumenical-jury-special-award",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "cannes:europa-cinemas-label",
     "festivalId": "cannes",
     "name": "Europa Cinemas Label",
     "normalizedName": "europa-cinemas-label",
     "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:europa-cinemas-label-award",
-    "festivalId": "cannes",
-    "name": "Europa Cinemas Label Award",
-    "normalizedName": "europa-cinemas-label-award",
-    "scope": "film",
     "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:europa-cinemas-label-award-for-best-european-film",
-    "festivalId": "cannes",
-    "name": "Europa Cinemas Label Award for Best European Film",
-    "normalizedName": "europa-cinemas-label-award-for-best-european-film",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:female-revelation-of-the-year",
-    "festivalId": "cannes",
-    "name": "Female Revelation of the Year",
-    "normalizedName": "female-revelation-of-the-year",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:films-in-competition",
-    "festivalId": "cannes",
-    "name": "Films in competition",
-    "normalizedName": "films-in-competition",
-    "scope": "film",
-    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -4127,7 +3893,7 @@
     "name": "FIPRESCI Prize – In Competition",
     "normalizedName": "fipresci-prize-in-competition",
     "scope": "film",
-    "isAward": false,
+    "isAward": true,
     "isHonoraryAward": false
   },
   {
@@ -4140,48 +3906,21 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:fipresci-prize-un-certain-regard",
+    "id": "cannes:fipresci-prize-parallel-sections",
     "festivalId": "cannes",
-    "name": "FIPRESCI Prize – Un Certain Regard",
-    "normalizedName": "fipresci-prize-un-certain-regard",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:fipresci-prizes",
-    "festivalId": "cannes",
-    "name": "FIPRESCI Prizes",
-    "normalizedName": "fipresci-prizes",
+    "name": "FIPRESCI Prize – Parallel Sections",
+    "normalizedName": "fipresci-prize-parallel-sections",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:fipresci-prizes-in-competition",
+    "id": "cannes:fipresci-prize-un-certain-regard",
     "festivalId": "cannes",
-    "name": "FIPRESCI Prizes – In Competition",
-    "normalizedName": "fipresci-prizes-in-competition",
+    "name": "FIPRESCI Prize – Un Certain Regard",
+    "normalizedName": "fipresci-prize-un-certain-regard",
     "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:fipresci-prizes-parallel-section",
-    "festivalId": "cannes",
-    "name": "FIPRESCI Prizes – Parallel section",
-    "normalizedName": "fipresci-prizes-parallel-section",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:fipresci-prizes-un-certain-regard",
-    "festivalId": "cannes",
-    "name": "FIPRESCI Prizes – Un Certain Regard",
-    "normalizedName": "fipresci-prizes-un-certain-regard",
-    "scope": "film",
-    "isAward": false,
+    "isAward": true,
     "isHonoraryAward": false
   },
   {
@@ -4190,7 +3929,7 @@
     "name": "First Jury Prize",
     "normalizedName": "first-jury-prize",
     "scope": "film",
-    "isAward": false,
+    "isAward": true,
     "isHonoraryAward": false
   },
   {
@@ -4198,15 +3937,6 @@
     "festivalId": "cannes",
     "name": "First Prize of the Jury",
     "normalizedName": "first-prize-of-the-jury",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:fran-ois-chalais-award",
-    "festivalId": "cannes",
-    "name": "François Chalais Award",
-    "normalizedName": "fran-ois-chalais-award",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -4235,7 +3965,7 @@
     "name": "French Film",
     "normalizedName": "french-film",
     "scope": "film",
-    "isAward": false,
+    "isAward": true,
     "isHonoraryAward": false
   },
   {
@@ -4266,15 +3996,6 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:gan-foundation-support-for-distribution-award",
-    "festivalId": "cannes",
-    "name": "Gan Foundation Support for Distribution Award",
-    "normalizedName": "gan-foundation-support-for-distribution-award",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "cannes:gary-cooper-award",
     "festivalId": "cannes",
     "name": "Gary Cooper Award",
@@ -4282,15 +4003,6 @@
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:golden-coach",
-    "festivalId": "cannes",
-    "name": "Golden Coach",
-    "normalizedName": "golden-coach",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": true
   },
   {
     "id": "cannes:golden-eye",
@@ -4302,21 +4014,12 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:grand-golden-rail",
-    "festivalId": "cannes",
-    "name": "Grand Golden Rail",
-    "normalizedName": "grand-golden-rail",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "cannes:grand-jury-prize",
     "festivalId": "cannes",
     "name": "Grand Jury Prize",
     "normalizedName": "grand-jury-prize",
     "scope": "film",
-    "isAward": false,
+    "isAward": true,
     "isHonoraryAward": false
   },
   {
@@ -4329,109 +4032,10 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:grand-prix-canal-short-film",
-    "festivalId": "cannes",
-    "name": "Grand Prix Canal+ (short film)",
-    "normalizedName": "grand-prix-canal-short-film",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:grand-prix-de-la-semaine-de-la-critique",
-    "festivalId": "cannes",
-    "name": "Grand prix de la semaine de la critique",
-    "normalizedName": "grand-prix-de-la-semaine-de-la-critique",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:grand-prix-du-festival-international-du-film",
-    "festivalId": "cannes",
-    "name": "Grand Prix du Festival International du Film",
-    "normalizedName": "grand-prix-du-festival-international-du-film",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:grand-prix-du-festival-international-du-film-pour-le-meilleur-fi",
-    "festivalId": "cannes",
-    "name": "Grand Prix du Festival International du Film pour le Meilleur Film Scientifique",
-    "normalizedName": "grand-prix-du-festival-international-du-film-pour-le-meilleur-fi",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:grand-prix-du-jury",
-    "festivalId": "cannes",
-    "name": "Grand Prix du Jury",
-    "normalizedName": "grand-prix-du-jury",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:grand-prix-international-du-festival",
-    "festivalId": "cannes",
-    "name": "Grand Prix International du Festival",
-    "normalizedName": "grand-prix-international-du-festival",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:grand-prix-nespresso",
-    "festivalId": "cannes",
-    "name": "Grand Prix Nespresso",
-    "normalizedName": "grand-prix-nespresso",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
     "id": "cannes:grand-prix-primagaz",
     "festivalId": "cannes",
     "name": "Grand Prix Primagaz",
     "normalizedName": "grand-prix-primagaz",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:grand-prix-sp-cial-du-jury",
-    "festivalId": "cannes",
-    "name": "Grand Prix Spécial du Jury",
-    "normalizedName": "grand-prix-sp-cial-du-jury",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:grand-prize",
-    "festivalId": "cannes",
-    "name": "Grand Prize",
-    "normalizedName": "grand-prize",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:grand-prize-of-the-festival",
-    "festivalId": "cannes",
-    "name": "Grand Prize of the Festival",
-    "normalizedName": "grand-prize-of-the-festival",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:grand-prize-of-the-jury",
-    "festivalId": "cannes",
-    "name": "Grand Prize of the Jury",
-    "normalizedName": "grand-prize-of-the-jury",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -4439,7 +4043,7 @@
   {
     "id": "cannes:grand-rail-d-or",
     "festivalId": "cannes",
-    "name": "Grand Rail d'or",
+    "name": "Grand Rail d'Or",
     "normalizedName": "grand-rail-d-or",
     "scope": "film",
     "isAward": true,
@@ -4452,15 +4056,6 @@
     "normalizedName": "gras-savoye-award",
     "scope": "film",
     "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:heart-throb-jury-prize",
-    "festivalId": "cannes",
-    "name": "Heart Throb Jury Prize",
-    "normalizedName": "heart-throb-jury-prize",
-    "scope": "film",
-    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -4482,15 +4077,6 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:hommage",
-    "festivalId": "cannes",
-    "name": "Hommage",
-    "normalizedName": "hommage",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
     "id": "cannes:illy-prize-for-short-film",
     "festivalId": "cannes",
     "name": "Illy Prize for Short Film",
@@ -4500,19 +4086,10 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:illy-short-film-award",
+    "id": "cannes:illy-prize-for-short-film-special-mention",
     "festivalId": "cannes",
-    "name": "Illy Short Film Award",
-    "normalizedName": "illy-short-film-award",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:illy-special-mention",
-    "festivalId": "cannes",
-    "name": "Illy special mention",
-    "normalizedName": "illy-special-mention",
+    "name": "Illy Prize for Short Film – Special Mention",
+    "normalizedName": "illy-prize-for-short-film-special-mention",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -4527,15 +4104,6 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:independent-awards",
-    "festivalId": "cannes",
-    "name": "Independent awards",
-    "normalizedName": "independent-awards",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
     "id": "cannes:international-award",
     "festivalId": "cannes",
     "name": "International Award",
@@ -4545,48 +4113,21 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:international-confederation-of-art-cinemas",
+    "id": "cannes:international-peace-award",
     "festivalId": "cannes",
-    "name": "International Confederation of Art Cinemas",
-    "normalizedName": "international-confederation-of-art-cinemas",
+    "name": "International Peace Award",
+    "normalizedName": "international-peace-award",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:international-critics-week",
+    "id": "cannes:international-prize",
     "festivalId": "cannes",
-    "name": "International Critics' Week",
-    "normalizedName": "international-critics-week",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:international-critics-week-grand-prix",
-    "festivalId": "cannes",
-    "name": "International Critics' Week Grand Prix",
-    "normalizedName": "international-critics-week-grand-prix",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:international-critics-week-grand-prize",
-    "festivalId": "cannes",
-    "name": "International Critics' Week Grand Prize",
-    "normalizedName": "international-critics-week-grand-prize",
+    "name": "International Prize",
+    "normalizedName": "international-prize",
     "scope": "film",
     "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:international-jury-prize",
-    "festivalId": "cannes",
-    "name": "International Jury Prize",
-    "normalizedName": "international-jury-prize",
-    "scope": "film",
-    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -4601,28 +4142,19 @@
   {
     "id": "cannes:jury-prize-animation",
     "festivalId": "cannes",
-    "name": "Jury Prize - animation",
+    "name": "Jury Prize – animation",
     "normalizedName": "jury-prize-animation",
     "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:jury-prize-best-short-film",
-    "festivalId": "cannes",
-    "name": "Jury Prize - Best Short Film",
-    "normalizedName": "jury-prize-best-short-film",
-    "scope": "film",
-    "isAward": false,
+    "isAward": true,
     "isHonoraryAward": false
   },
   {
     "id": "cannes:jury-prize-fiction",
     "festivalId": "cannes",
-    "name": "Jury Prize - fiction",
+    "name": "Jury Prize – fiction",
     "normalizedName": "jury-prize-fiction",
     "scope": "film",
-    "isAward": false,
+    "isAward": true,
     "isHonoraryAward": false
   },
   {
@@ -4631,7 +4163,7 @@
     "name": "Jury Prize for Animation",
     "normalizedName": "jury-prize-for-animation",
     "scope": "film",
-    "isAward": false,
+    "isAward": true,
     "isHonoraryAward": false
   },
   {
@@ -4640,50 +4172,14 @@
     "name": "Jury Prize for Fiction",
     "normalizedName": "jury-prize-for-fiction",
     "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:jury-prize-short-film",
-    "festivalId": "cannes",
-    "name": "Jury Prize - Short Film",
-    "normalizedName": "jury-prize-short-film",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:jury-s-special-award",
-    "festivalId": "cannes",
-    "name": "Jury's Special Award",
-    "normalizedName": "jury-s-special-award",
-    "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:jury-special-prize",
+    "id": "cannes:jury-prize-short-film-special-mention",
     "festivalId": "cannes",
-    "name": "Jury Special Prize",
-    "normalizedName": "jury-special-prize",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:jury-special-prize-legion-of-honour",
-    "festivalId": "cannes",
-    "name": "Jury Special Prize - Legion of Honour",
-    "normalizedName": "jury-special-prize-legion-of-honour",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:knockout-prize",
-    "festivalId": "cannes",
-    "name": "Knockout Prize",
-    "normalizedName": "knockout-prize",
+    "name": "Jury Prize – Short Film – Special Mention",
+    "normalizedName": "jury-prize-short-film-special-mention",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -4709,7 +4205,7 @@
   {
     "id": "cannes:kodak-short-film-award-special-mention",
     "festivalId": "cannes",
-    "name": "Kodak Short Film Award - Special Mention",
+    "name": "Kodak Short Film Award – Special Mention",
     "normalizedName": "kodak-short-film-award-special-mention",
     "scope": "film",
     "isAward": true,
@@ -4725,37 +4221,19 @@
     "isHonoraryAward": false
   },
   {
+    "id": "cannes:l-il-d-or-jury-s-special-award",
+    "festivalId": "cannes",
+    "name": "L'Œil d'or – Jury's Special Award",
+    "normalizedName": "l-il-d-or-jury-s-special-award",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
     "id": "cannes:l-il-d-or-special-jury-prize",
     "festivalId": "cannes",
     "name": "L'Œil d'or – Special Jury Prize",
     "normalizedName": "l-il-d-or-special-jury-prize",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:label-europa-cin-ma",
-    "festivalId": "cannes",
-    "name": "Label Europa Cinéma",
-    "normalizedName": "label-europa-cin-ma",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:le-premier-regard-award",
-    "festivalId": "cannes",
-    "name": "Le Premier Regard Award",
-    "normalizedName": "le-premier-regard-award",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:leica-cine-discovery-prize-for-short-film",
-    "festivalId": "cannes",
-    "name": "Leica Cine Discovery Prize for Short Film",
-    "normalizedName": "leica-cine-discovery-prize-for-short-film",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -4770,37 +4248,10 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:little-golden-rail",
-    "festivalId": "cannes",
-    "name": "Little Golden Rail",
-    "normalizedName": "little-golden-rail",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "cannes:louis-roederer-foundation-rising-star-award",
     "festivalId": "cannes",
     "name": "Louis Roederer Foundation Rising Star Award",
     "normalizedName": "louis-roederer-foundation-rising-star-award",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:main-competition",
-    "festivalId": "cannes",
-    "name": "Main Competition",
-    "normalizedName": "main-competition",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:male-revelation-of-the-year",
-    "festivalId": "cannes",
-    "name": "Male Revelation of the Year",
-    "normalizedName": "male-revelation-of-the-year",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -4833,15 +4284,6 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:nespresso-grand-prize",
-    "festivalId": "cannes",
-    "name": "Nespresso Grand Prize",
-    "normalizedName": "nespresso-grand-prize",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "cannes:ocic-award",
     "festivalId": "cannes",
     "name": "OCIC Award",
@@ -4869,42 +4311,6 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:official-awards",
-    "festivalId": "cannes",
-    "name": "Official awards",
-    "normalizedName": "official-awards",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:official-awards-grand-prix",
-    "festivalId": "cannes",
-    "name": "Official awards – Grand Prix",
-    "normalizedName": "official-awards-grand-prix",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:official-sections",
-    "festivalId": "cannes",
-    "name": "Official sections",
-    "normalizedName": "official-sections",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:omnibus-film",
-    "festivalId": "cannes",
-    "name": "Omnibus Film",
-    "normalizedName": "omnibus-film",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
     "id": "cannes:out-of-competition",
     "festivalId": "cannes",
     "name": "Out of Competition",
@@ -4923,19 +4329,19 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:palm-dog-award",
+    "id": "cannes:palm-dog-grand-jury-prize",
     "festivalId": "cannes",
-    "name": "Palm Dog Award",
-    "normalizedName": "palm-dog-award",
+    "name": "Palm Dog – Grand Jury Prize",
+    "normalizedName": "palm-dog-grand-jury-prize",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:palm-dog-manitarian-award",
+    "id": "cannes:palm-dog-jury-grand-jury-prize",
     "festivalId": "cannes",
-    "name": "Palm Dog Manitarian Award",
-    "normalizedName": "palm-dog-manitarian-award",
+    "name": "Palm Dog Jury – Grand Jury Prize",
+    "normalizedName": "palm-dog-jury-grand-jury-prize",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -4945,24 +4351,6 @@
     "festivalId": "cannes",
     "name": "Palm Dog – Special Jury Prize",
     "normalizedName": "palm-dog-special-jury-prize",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:palm-hound-dog",
-    "festivalId": "cannes",
-    "name": "Palm Hound Dog",
-    "normalizedName": "palm-hound-dog",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:palm-of-the-palms",
-    "festivalId": "cannes",
-    "name": "Palm of the Palms",
-    "normalizedName": "palm-of-the-palms",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -4977,10 +4365,10 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:petit-rail-d-orpresented-by-cinephile-railwaymen",
+    "id": "cannes:petit-rail-d-or",
     "festivalId": "cannes",
-    "name": "Petit Rail d'Orpresented by \"cinephile railwaymen\"",
-    "normalizedName": "petit-rail-d-orpresented-by-cinephile-railwaymen",
+    "name": "Petit Rail d'Or",
+    "normalizedName": "petit-rail-d-or",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -5010,60 +4398,6 @@
     "normalizedName": "premier-prix",
     "scope": "film",
     "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:premier-prix-illy-for-short-filmmaking",
-    "festivalId": "cannes",
-    "name": "Premier Prix Illy for Short Filmmaking",
-    "normalizedName": "premier-prix-illy-for-short-filmmaking",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prix-acid",
-    "festivalId": "cannes",
-    "name": "Prix Acid",
-    "normalizedName": "prix-acid",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prix-art-and-essay",
-    "festivalId": "cannes",
-    "name": "Prix Art and Essay",
-    "normalizedName": "prix-art-and-essay",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prix-art-essai-cicae",
-    "festivalId": "cannes",
-    "name": "Prix Art & Essai CICAE",
-    "normalizedName": "prix-art-essai-cicae",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prix-d-interpr-tation-f-minine",
-    "festivalId": "cannes",
-    "name": "Prix d'interprétation féminine",
-    "normalizedName": "prix-d-interpr-tation-f-minine",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prix-d-interpr-tation-masculine",
-    "festivalId": "cannes",
-    "name": "Prix d'interprétation masculine",
-    "normalizedName": "prix-d-interpr-tation-masculine",
-    "scope": "film",
-    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -5103,114 +4437,6 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:prix-du-jury",
-    "festivalId": "cannes",
-    "name": "Prix du Jury",
-    "normalizedName": "prix-du-jury",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prix-du-jury-cum-nique",
-    "festivalId": "cannes",
-    "name": "Prix du Jury Œcuménique",
-    "normalizedName": "prix-du-jury-cum-nique",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prix-du-pr-sident-du-jury-un-certain-regard",
-    "festivalId": "cannes",
-    "name": "Prix du Président du Jury Un Certain Regard",
-    "normalizedName": "prix-du-pr-sident-du-jury-un-certain-regard",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prix-du-regard-original",
-    "festivalId": "cannes",
-    "name": "Prix du Regard Original",
-    "normalizedName": "prix-du-regard-original",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prix-du-regard-vers-l-avenir",
-    "festivalId": "cannes",
-    "name": "Prix du Regard vers l'Avenir",
-    "normalizedName": "prix-du-regard-vers-l-avenir",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prix-fran-ois-chalais",
-    "festivalId": "cannes",
-    "name": "Prix François Chalais",
-    "normalizedName": "prix-fran-ois-chalais",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prix-grand-rail-d-or",
-    "festivalId": "cannes",
-    "name": "Prix Grand Rail d'Or",
-    "normalizedName": "prix-grand-rail-d-or",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prix-gras-savoye",
-    "festivalId": "cannes",
-    "name": "Prix Gras Savoye",
-    "normalizedName": "prix-gras-savoye",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prix-petit-rail-d-or",
-    "festivalId": "cannes",
-    "name": "Prix Petit Rail d'Or",
-    "normalizedName": "prix-petit-rail-d-or",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prix-pour-la-couleur",
-    "festivalId": "cannes",
-    "name": "Prix pour la couleur",
-    "normalizedName": "prix-pour-la-couleur",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prix-regard-jeune",
-    "festivalId": "cannes",
-    "name": "Prix Regard Jeune",
-    "normalizedName": "prix-regard-jeune",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prix-sacd",
-    "festivalId": "cannes",
-    "name": "Prix SACD",
-    "normalizedName": "prix-sacd",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "cannes:prix-sacd-best-french-language-short",
     "festivalId": "cannes",
     "name": "Prix SACD best french-language short",
@@ -5233,60 +4459,6 @@
     "festivalId": "cannes",
     "name": "Prix Spécial",
     "normalizedName": "prix-sp-cial",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prix-sp-cial-du-jury",
-    "festivalId": "cannes",
-    "name": "Prix spécial du Jury",
-    "normalizedName": "prix-sp-cial-du-jury",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prix-sp-cial-du-jury-film-scientifique-ou-p-dagogique",
-    "festivalId": "cannes",
-    "name": "Prix spécial du Jury - film scientifique ou pédagogique",
-    "normalizedName": "prix-sp-cial-du-jury-film-scientifique-ou-p-dagogique",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prix-un-certain-regard",
-    "festivalId": "cannes",
-    "name": "Prix Un Certain Regard",
-    "normalizedName": "prix-un-certain-regard",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prix-un-certain-talent",
-    "festivalId": "cannes",
-    "name": "Prix Un Certain Talent",
-    "normalizedName": "prix-un-certain-talent",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prize-for-film-in-nature",
-    "festivalId": "cannes",
-    "name": "Prize for Film in Nature",
-    "normalizedName": "prize-for-film-in-nature",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:prize-of-hope",
-    "festivalId": "cannes",
-    "name": "Prize of Hope",
-    "normalizedName": "prize-of-hope",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -5319,28 +4491,37 @@
     "isHonoraryAward": false
   },
   {
+    "id": "cannes:queer-palm-best-film",
+    "festivalId": "cannes",
+    "name": "Queer Palm – Best Film",
+    "normalizedName": "queer-palm-best-film",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:queer-palm-best-short-film",
+    "festivalId": "cannes",
+    "name": "Queer Palm – Best Short Film",
+    "normalizedName": "queer-palm-best-short-film",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:queer-palm-discovery-prize",
+    "festivalId": "cannes",
+    "name": "Queer Palm – Discovery Prize",
+    "normalizedName": "queer-palm-discovery-prize",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
     "id": "cannes:regards-jeunes-prize",
     "festivalId": "cannes",
     "name": "Regards Jeunes Prize",
     "normalizedName": "regards-jeunes-prize",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:rising-star-award",
-    "festivalId": "cannes",
-    "name": "Rising Star Award",
-    "normalizedName": "rising-star-award",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:sacd-award",
-    "festivalId": "cannes",
-    "name": "SACD Award",
-    "normalizedName": "sacd-award",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -5373,10 +4554,10 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:sacd-special-mention",
+    "id": "cannes:sacd-prize-special-mention",
     "festivalId": "cannes",
-    "name": "SACD special mention",
-    "normalizedName": "sacd-special-mention",
+    "name": "SACD Prize – Special Mention",
+    "normalizedName": "sacd-prize-special-mention",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -5387,16 +4568,7 @@
     "name": "Second Jury Prize",
     "normalizedName": "second-jury-prize",
     "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:second-prize",
-    "festivalId": "cannes",
-    "name": "Second Prize",
-    "normalizedName": "second-prize",
-    "scope": "film",
-    "isAward": false,
+    "isAward": true,
     "isHonoraryAward": false
   },
   {
@@ -5409,39 +4581,12 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:short-and-medium-length-films",
-    "festivalId": "cannes",
-    "name": "Short and medium-length films",
-    "normalizedName": "short-and-medium-length-films",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:short-film-competition",
-    "festivalId": "cannes",
-    "name": "Short film competition",
-    "normalizedName": "short-film-competition",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:short-film-gran-prix",
-    "festivalId": "cannes",
-    "name": "Short Film Gran Prix",
-    "normalizedName": "short-film-gran-prix",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "cannes:short-film-grand-prix",
     "festivalId": "cannes",
     "name": "Short Film Grand Prix",
     "normalizedName": "short-film-grand-prix",
     "scope": "film",
-    "isAward": false,
+    "isAward": true,
     "isHonoraryAward": false
   },
   {
@@ -5450,7 +4595,7 @@
     "name": "Short Film Jury Prize",
     "normalizedName": "short-film-jury-prize",
     "scope": "film",
-    "isAward": false,
+    "isAward": true,
     "isHonoraryAward": false
   },
   {
@@ -5490,9 +4635,27 @@
     "isHonoraryAward": false
   },
   {
+    "id": "cannes:short-film-special-jury-prize",
+    "festivalId": "cannes",
+    "name": "Short Film Special Jury Prize",
+    "normalizedName": "short-film-special-jury-prize",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-film-special-mention",
+    "festivalId": "cannes",
+    "name": "Short Film – Special Mention",
+    "normalizedName": "short-film-special-mention",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
     "id": "cannes:short-film-technical-prize",
     "festivalId": "cannes",
-    "name": "Short film Technical Prize",
+    "name": "Short Film Technical Prize",
     "normalizedName": "short-film-technical-prize",
     "scope": "film",
     "isAward": true,
@@ -5501,19 +4664,10 @@
   {
     "id": "cannes:short-film-technical-prize-special-mention",
     "festivalId": "cannes",
-    "name": "Short film Technical Prize - Special mention",
+    "name": "Short Film Technical Prize – Special Mention",
     "normalizedName": "short-film-technical-prize-special-mention",
     "scope": "film",
     "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:short-films",
-    "festivalId": "cannes",
-    "name": "Short films",
-    "normalizedName": "short-films",
-    "scope": "film",
-    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -5526,28 +4680,262 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:short-films-competition-grand-prix",
+    "id": "cannes:short-films-competition-best-animation",
     "festivalId": "cannes",
-    "name": "Short Films Competition – Grand Prix",
-    "normalizedName": "short-films-competition-grand-prix",
+    "name": "Short Films Competition – Best Animation",
+    "normalizedName": "short-films-competition-best-animation",
     "scope": "film",
-    "isAward": false,
+    "isAward": true,
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:short-films-competition-jury-prize",
+    "id": "cannes:short-films-competition-best-documentary",
     "festivalId": "cannes",
-    "name": "Short Films Competition – Jury Prize",
-    "normalizedName": "short-films-competition-jury-prize",
+    "name": "Short films competition – Best Documentary",
+    "normalizedName": "short-films-competition-best-documentary",
     "scope": "film",
-    "isAward": false,
+    "isAward": true,
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:small-golden-rail",
+    "id": "cannes:short-films-competition-best-documentary-film",
     "festivalId": "cannes",
-    "name": "Small Golden Rail",
-    "normalizedName": "small-golden-rail",
+    "name": "Short Films Competition – Best Documentary Film",
+    "normalizedName": "short-films-competition-best-documentary-film",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-best-fiction-film",
+    "festivalId": "cannes",
+    "name": "Short films competition – Best Fiction Film",
+    "normalizedName": "short-films-competition-best-fiction-film",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-best-fictional-film",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Best Fictional Film",
+    "normalizedName": "short-films-competition-best-fictional-film",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-best-film-on-art",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Best Film on Art",
+    "normalizedName": "short-films-competition-best-film-on-art",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-documentary-prize",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Documentary Prize",
+    "normalizedName": "short-films-competition-documentary-prize",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-film-in-nature",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Film in Nature",
+    "normalizedName": "short-films-competition-film-in-nature",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-grand-prix-du-festival-international-du-",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Grand Prix du Festival International du Film pour le Meilleur Film Scientifique",
+    "normalizedName": "short-films-competition-grand-prix-du-festival-international-du-",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-hommage",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Hommage",
+    "normalizedName": "short-films-competition-hommage",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-mention-sp-ciale",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Mention Spéciale",
+    "normalizedName": "short-films-competition-mention-sp-ciale",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-prix-du-film-de-divertissement",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Prix du Film de Divertissement",
+    "normalizedName": "short-films-competition-prix-du-film-de-divertissement",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-prix-du-film-de-fantaisie-poetique",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Prix du Film de Fantaisie Poetique",
+    "normalizedName": "short-films-competition-prix-du-film-de-fantaisie-poetique",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-prix-du-film-de-marionettes",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Prix du Film de Marionettes",
+    "normalizedName": "short-films-competition-prix-du-film-de-marionettes",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-prix-du-film-de-nature",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Prix du Film de Nature",
+    "normalizedName": "short-films-competition-prix-du-film-de-nature",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-prix-du-film-de-realit",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Prix du Film de Realité",
+    "normalizedName": "short-films-competition-prix-du-film-de-realit",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-prix-du-jury",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Prix du Jury",
+    "normalizedName": "short-films-competition-prix-du-jury",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-prix-du-jury-animation",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Prix du Jury – Animation",
+    "normalizedName": "short-films-competition-prix-du-jury-animation",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-prix-du-jury-ex-quo",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Prix du Jury Ex-æquo",
+    "normalizedName": "short-films-competition-prix-du-jury-ex-quo",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-prix-du-reportage-film",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Prix du reportage filmé",
+    "normalizedName": "short-films-competition-prix-du-reportage-film",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-prix-pour-la-couleur",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Prix pour la couleur",
+    "normalizedName": "short-films-competition-prix-pour-la-couleur",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-prix-sp-cial-du-jury-film-scientifique-o",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Prix spécial du Jury – film scientifique ou pédagogique",
+    "normalizedName": "short-films-competition-prix-sp-cial-du-jury-film-scientifique-o",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-second-prize",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Second Prize",
+    "normalizedName": "short-films-competition-second-prize",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-special-distinction",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Special Distinction",
+    "normalizedName": "short-films-competition-special-distinction",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-special-mention-investigative-film",
+    "festivalId": "cannes",
+    "name": "Short films competition – Special Mention – Investigative Film",
+    "normalizedName": "short-films-competition-special-mention-investigative-film",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-special-prize",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Special Prize",
+    "normalizedName": "short-films-competition-special-prize",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-technical-grand-prize",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Technical Grand Prize",
+    "normalizedName": "short-films-competition-technical-grand-prize",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-third-prize",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Third Prize",
+    "normalizedName": "short-films-competition-third-prize",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:short-films-competition-troisi-me-prix",
+    "festivalId": "cannes",
+    "name": "Short Films Competition – Troisième Prix",
+    "normalizedName": "short-films-competition-troisi-me-prix",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -5616,60 +5004,6 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:special-mention-investigative-film",
-    "festivalId": "cannes",
-    "name": "Special Mention - Investigative Film",
-    "normalizedName": "special-mention-investigative-film",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:special-mention-prix-illy",
-    "festivalId": "cannes",
-    "name": "Special mention Prix Illy",
-    "normalizedName": "special-mention-prix-illy",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:special-mention-prix-sacd",
-    "festivalId": "cannes",
-    "name": "Special mention Prix SACD",
-    "normalizedName": "special-mention-prix-sacd",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:special-mentions",
-    "festivalId": "cannes",
-    "name": "Special Mentions",
-    "normalizedName": "special-mentions",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:special-prize",
-    "festivalId": "cannes",
-    "name": "Special Prize",
-    "normalizedName": "special-prize",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:special-prize-of-the-festival",
-    "festivalId": "cannes",
-    "name": "Special Prize of the Festival",
-    "normalizedName": "special-prize-of-the-festival",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
     "id": "cannes:special-screenings",
     "festivalId": "cannes",
     "name": "Special Screenings",
@@ -5688,66 +5022,12 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:the-faithful-or-at-least-selected-once-before",
+    "id": "cannes:technical-grand-prize-special-mention",
     "festivalId": "cannes",
-    "name": "The Faithful (or at least selected once before)",
-    "normalizedName": "the-faithful-or-at-least-selected-once-before",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:the-newcomers",
-    "festivalId": "cannes",
-    "name": "The Newcomers",
-    "normalizedName": "the-newcomers",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:the-past",
-    "festivalId": "cannes",
-    "name": "The Past",
-    "normalizedName": "the-past",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:the-poetry-of-cinema-award",
-    "festivalId": "cannes",
-    "name": "The Poetry of Cinema Award",
-    "normalizedName": "the-poetry-of-cinema-award",
+    "name": "Technical Grand Prize – Special Mention",
+    "normalizedName": "technical-grand-prize-special-mention",
     "scope": "film",
     "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:third-prize",
-    "festivalId": "cannes",
-    "name": "Third Prize",
-    "normalizedName": "third-prize",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:this-must-be-the-place",
-    "festivalId": "cannes",
-    "name": "This Must Be the Place",
-    "normalizedName": "this-must-be-the-place",
-    "scope": "film",
-    "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:three-films-for-ukraine",
-    "festivalId": "cannes",
-    "name": "Three films for Ukraine",
-    "normalizedName": "three-films-for-ukraine",
-    "scope": "film",
-    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -5757,15 +5037,6 @@
     "normalizedName": "tribute",
     "scope": "film",
     "isAward": false,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:troph-e-chopard",
-    "festivalId": "cannes",
-    "name": "Trophée Chopard",
-    "normalizedName": "troph-e-chopard",
-    "scope": "film",
-    "isAward": true,
     "isHonoraryAward": false
   },
   {
@@ -5787,46 +5058,19 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:un-certain-regard-award-for-best-actor",
+    "id": "cannes:un-certain-regard-best-actor",
     "festivalId": "cannes",
-    "name": "Un Certain Regard Award for Best Actor",
-    "normalizedName": "un-certain-regard-award-for-best-actor",
+    "name": "Un Certain Regard – Best Actor",
+    "normalizedName": "un-certain-regard-best-actor",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:un-certain-regard-award-for-best-actress",
+    "id": "cannes:un-certain-regard-best-actress",
     "festivalId": "cannes",
-    "name": "Un Certain Regard Award for Best Actress",
-    "normalizedName": "un-certain-regard-award-for-best-actress",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:un-certain-regard-award-for-best-director",
-    "festivalId": "cannes",
-    "name": "Un Certain Regard Award for Best Director",
-    "normalizedName": "un-certain-regard-award-for-best-director",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:un-certain-regard-award-for-best-screenplay",
-    "festivalId": "cannes",
-    "name": "Un Certain Regard Award for Best Screenplay",
-    "normalizedName": "un-certain-regard-award-for-best-screenplay",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:un-certain-regard-best-actress-award",
-    "festivalId": "cannes",
-    "name": "Un Certain Regard Best Actress Award",
-    "normalizedName": "un-certain-regard-best-actress-award",
+    "name": "Un Certain Regard – Best Actress",
+    "normalizedName": "un-certain-regard-best-actress",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -5834,17 +5078,8 @@
   {
     "id": "cannes:un-certain-regard-best-director",
     "festivalId": "cannes",
-    "name": "Un Certain Regard Best Director",
+    "name": "Un Certain Regard – Best Director",
     "normalizedName": "un-certain-regard-best-director",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:un-certain-regard-best-director-award",
-    "festivalId": "cannes",
-    "name": "Un Certain Regard Best Director Award",
-    "normalizedName": "un-certain-regard-best-director-award",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -5852,26 +5087,26 @@
   {
     "id": "cannes:un-certain-regard-best-first-film",
     "festivalId": "cannes",
-    "name": "Un Certain Regard Best First Film",
+    "name": "Un Certain Regard – Best First Film",
     "normalizedName": "un-certain-regard-best-first-film",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:un-certain-regard-best-performance-prize",
+    "id": "cannes:un-certain-regard-best-performance",
     "festivalId": "cannes",
-    "name": "Un Certain Regard Best Performance Prize",
-    "normalizedName": "un-certain-regard-best-performance-prize",
+    "name": "Un Certain Regard – Best Performance",
+    "normalizedName": "un-certain-regard-best-performance",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:un-certain-regard-best-screenplay-prize",
+    "id": "cannes:un-certain-regard-best-screenplay",
     "festivalId": "cannes",
-    "name": "Un Certain Regard Best Screenplay Prize",
-    "normalizedName": "un-certain-regard-best-screenplay-prize",
+    "name": "Un Certain Regard – Best Screenplay",
+    "normalizedName": "un-certain-regard-best-screenplay",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -5879,7 +5114,7 @@
   {
     "id": "cannes:un-certain-regard-coup-de-c-ur-prize",
     "festivalId": "cannes",
-    "name": "Un Certain Regard «Coup de cœur» Prize",
+    "name": "Un Certain Regard – Coup de Cœur Prize",
     "normalizedName": "un-certain-regard-coup-de-c-ur-prize",
     "scope": "film",
     "isAward": true,
@@ -5888,7 +5123,7 @@
   {
     "id": "cannes:un-certain-regard-ensemble-prize",
     "festivalId": "cannes",
-    "name": "Un Certain Regard Ensemble Prize",
+    "name": "Un Certain Regard – Ensemble Prize",
     "normalizedName": "un-certain-regard-ensemble-prize",
     "scope": "film",
     "isAward": true,
@@ -5904,10 +5139,19 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:un-certain-regard-jury-award-for-best-performance",
+    "id": "cannes:un-certain-regard-heart-throb-jury-prize",
     "festivalId": "cannes",
-    "name": "Un Certain Regard Jury Award for Best Performance",
-    "normalizedName": "un-certain-regard-jury-award-for-best-performance",
+    "name": "Un Certain Regard – Heart Throb Jury Prize",
+    "normalizedName": "un-certain-regard-heart-throb-jury-prize",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:un-certain-regard-jury-president-s-prize",
+    "festivalId": "cannes",
+    "name": "Un Certain Regard – Jury President's Prize",
+    "normalizedName": "un-certain-regard-jury-president-s-prize",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -5918,7 +5162,25 @@
     "name": "Un Certain Regard – Jury Prize",
     "normalizedName": "un-certain-regard-jury-prize",
     "scope": "film",
-    "isAward": false,
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:un-certain-regard-knockout-prize",
+    "festivalId": "cannes",
+    "name": "Un Certain Regard – Knockout Prize",
+    "normalizedName": "un-certain-regard-knockout-prize",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:un-certain-regard-le-premier-regard-award",
+    "festivalId": "cannes",
+    "name": "Un Certain Regard – Le Premier Regard Award",
+    "normalizedName": "un-certain-regard-le-premier-regard-award",
+    "scope": "film",
+    "isAward": true,
     "isHonoraryAward": false
   },
   {
@@ -5931,10 +5193,46 @@
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:un-certain-regard-performance-prize",
+    "id": "cannes:un-certain-regard-prix-de-l-espoir",
     "festivalId": "cannes",
-    "name": "Un Certain Regard Performance Prize",
-    "normalizedName": "un-certain-regard-performance-prize",
+    "name": "Un Certain Regard Prix de l'espoir",
+    "normalizedName": "un-certain-regard-prix-de-l-espoir",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:un-certain-regard-prix-de-l-intimit",
+    "festivalId": "cannes",
+    "name": "Un Certain Regard Prix de l'intimité",
+    "normalizedName": "un-certain-regard-prix-de-l-intimit",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:un-certain-regard-prix-du-regard-original",
+    "festivalId": "cannes",
+    "name": "Un Certain Regard – Prix du Regard Original",
+    "normalizedName": "un-certain-regard-prix-du-regard-original",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:un-certain-regard-prix-du-regard-vers-l-avenir",
+    "festivalId": "cannes",
+    "name": "Un Certain Regard – Prix du Regard vers l'Avenir",
+    "normalizedName": "un-certain-regard-prix-du-regard-vers-l-avenir",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:un-certain-regard-prix-un-certain-talent",
+    "festivalId": "cannes",
+    "name": "Un Certain Regard – Prix Un Certain Talent",
+    "normalizedName": "un-certain-regard-prix-un-certain-talent",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -5958,6 +5256,15 @@
     "isHonoraryAward": false
   },
   {
+    "id": "cannes:un-certain-regard-prize-of-hope",
+    "festivalId": "cannes",
+    "name": "Un Certain Regard – Prize of Hope",
+    "normalizedName": "un-certain-regard-prize-of-hope",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
     "id": "cannes:un-certain-regard-prize-of-originality",
     "festivalId": "cannes",
     "name": "Un Certain Regard Prize of Originality",
@@ -5967,9 +5274,18 @@
     "isHonoraryAward": false
   },
   {
+    "id": "cannes:un-certain-regard-promising-future-prize",
+    "festivalId": "cannes",
+    "name": "Un Certain Regard – Promising Future Prize",
+    "normalizedName": "un-certain-regard-promising-future-prize",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
     "id": "cannes:un-certain-regard-special-distinction",
     "festivalId": "cannes",
-    "name": "Un Certain Regard Special Distinction",
+    "name": "Un Certain Regard – Special Distinction",
     "normalizedName": "un-certain-regard-special-distinction",
     "scope": "film",
     "isAward": true,
@@ -5981,23 +5297,50 @@
     "name": "Un Certain Regard – Special Jury Prize",
     "normalizedName": "un-certain-regard-special-jury-prize",
     "scope": "film",
-    "isAward": false,
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:un-certain-regard-special-mention",
+    "festivalId": "cannes",
+    "name": "Un Certain Regard – Special Mention",
+    "normalizedName": "un-certain-regard-special-mention",
+    "scope": "film",
+    "isAward": true,
     "isHonoraryAward": false
   },
   {
     "id": "cannes:un-certain-regard-special-prize",
     "festivalId": "cannes",
-    "name": "Un Certain Regard Special Prize",
+    "name": "Un Certain Regard – Special Prize",
     "normalizedName": "un-certain-regard-special-prize",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
   },
   {
-    "id": "cannes:un-certain-regard-special-prize-for-promising-future",
+    "id": "cannes:un-certain-regard-the-poetry-of-cinema-award",
     "festivalId": "cannes",
-    "name": "Un Certain Regard Special Prize for Promising Future",
-    "normalizedName": "un-certain-regard-special-prize-for-promising-future",
+    "name": "Un Certain Regard – The Poetry of Cinema Award",
+    "normalizedName": "un-certain-regard-the-poetry-of-cinema-award",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:un-certain-regard-un-certain-talent-prize",
+    "festivalId": "cannes",
+    "name": "Un Certain Regard – Un Certain Talent Prize",
+    "normalizedName": "un-certain-regard-un-certain-talent-prize",
+    "scope": "film",
+    "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "cannes:un-certain-regard-youth-prize",
+    "festivalId": "cannes",
+    "name": "Un Certain Regard Youth Prize",
+    "normalizedName": "un-certain-regard-youth-prize",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -6016,15 +5359,6 @@
     "festivalId": "cannes",
     "name": "Very Young Critics Prize",
     "normalizedName": "very-young-critics-prize",
-    "scope": "film",
-    "isAward": true,
-    "isHonoraryAward": false
-  },
-  {
-    "id": "cannes:vulcan-award",
-    "festivalId": "cannes",
-    "name": "Vulcan Award",
-    "normalizedName": "vulcan-award",
     "scope": "film",
     "isAward": true,
     "isHonoraryAward": false
@@ -6059,7 +5393,7 @@
   {
     "id": "cannes:young-critics-award-best-feature",
     "festivalId": "cannes",
-    "name": "Young Critics Award - Best Feature",
+    "name": "Young Critics Award – Best Feature",
     "normalizedName": "young-critics-award-best-feature",
     "scope": "film",
     "isAward": true,
@@ -6068,7 +5402,7 @@
   {
     "id": "cannes:young-critics-award-best-short",
     "festivalId": "cannes",
-    "name": "Young Critics Award - Best Short",
+    "name": "Young Critics Award – Best Short",
     "normalizedName": "young-critics-award-best-short",
     "scope": "film",
     "isAward": true,
@@ -13320,6 +12654,42 @@
     "isHonoraryAward": false
   },
   {
+    "id": "oscars:2",
+    "festivalId": "oscars",
+    "name": "2",
+    "normalizedName": "2",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:3",
+    "festivalId": "oscars",
+    "name": "3",
+    "normalizedName": "3",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:4",
+    "festivalId": "oscars",
+    "name": "4",
+    "normalizedName": "4",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:5",
+    "festivalId": "oscars",
+    "name": "5",
+    "normalizedName": "5",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "oscars:academy-award-for-achievement-in-casting",
     "festivalId": "oscars",
     "name": "Academy Award for Achievement in Casting",
@@ -13770,12 +13140,939 @@
     "isHonoraryAward": false
   },
   {
+    "id": "oscars:best-actor",
+    "festivalId": "oscars",
+    "name": "Best Actor",
+    "normalizedName": "best-actor",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-actor-in-a-leading-role",
+    "festivalId": "oscars",
+    "name": "Best Actor in a Leading Role",
+    "normalizedName": "best-actor-in-a-leading-role",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-actor-in-a-supporting-role",
+    "festivalId": "oscars",
+    "name": "Best Actor in a Supporting Role",
+    "normalizedName": "best-actor-in-a-supporting-role",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-actress",
+    "festivalId": "oscars",
+    "name": "Best Actress",
+    "normalizedName": "best-actress",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-actress-in-a-leading-role",
+    "festivalId": "oscars",
+    "name": "Best Actress in a Leading Role",
+    "normalizedName": "best-actress-in-a-leading-role",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-actress-in-a-supporting-role",
+    "festivalId": "oscars",
+    "name": "Best Actress in a Supporting Role",
+    "normalizedName": "best-actress-in-a-supporting-role",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-adaptation",
+    "festivalId": "oscars",
+    "name": "Best Adaptation",
+    "normalizedName": "best-adaptation",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-animated-feature-film",
+    "festivalId": "oscars",
+    "name": "Best Animated Feature Film",
+    "normalizedName": "best-animated-feature-film",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-animated-short-film",
+    "festivalId": "oscars",
+    "name": "Best Animated Short Film",
+    "normalizedName": "best-animated-short-film",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-art-direction",
+    "festivalId": "oscars",
+    "name": "Best Art Direction",
+    "normalizedName": "best-art-direction",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-art-direction-black-and-white",
+    "festivalId": "oscars",
+    "name": "Best Art Direction (Black-and-White)",
+    "normalizedName": "best-art-direction-black-and-white",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-art-direction-color",
+    "festivalId": "oscars",
+    "name": "Best Art Direction (Color)",
+    "normalizedName": "best-art-direction-color",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-assistant-director",
+    "festivalId": "oscars",
+    "name": "Best Assistant Director",
+    "normalizedName": "best-assistant-director",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-casting",
+    "festivalId": "oscars",
+    "name": "Best Casting",
+    "normalizedName": "best-casting",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-cinematography",
+    "festivalId": "oscars",
+    "name": "Best Cinematography",
+    "normalizedName": "best-cinematography",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-cinematography-black-and-white",
+    "festivalId": "oscars",
+    "name": "Best Cinematography (Black-and-White)",
+    "normalizedName": "best-cinematography-black-and-white",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-cinematography-color",
+    "festivalId": "oscars",
+    "name": "Best Cinematography (Color)",
+    "normalizedName": "best-cinematography-color",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-costume-design",
+    "festivalId": "oscars",
+    "name": "Best Costume Design",
+    "normalizedName": "best-costume-design",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-costume-design-black-and-white",
+    "festivalId": "oscars",
+    "name": "Best Costume Design (Black-and-White)",
+    "normalizedName": "best-costume-design-black-and-white",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-costume-design-color",
+    "festivalId": "oscars",
+    "name": "Best Costume Design (Color)",
+    "normalizedName": "best-costume-design-color",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-dance-direction",
+    "festivalId": "oscars",
+    "name": "Best Dance Direction",
+    "normalizedName": "best-dance-direction",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-directing",
+    "festivalId": "oscars",
+    "name": "Best Directing",
+    "normalizedName": "best-directing",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-directing-comedy-picture",
+    "festivalId": "oscars",
+    "name": "Best Directing (Comedy Picture)",
+    "normalizedName": "best-directing-comedy-picture",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-directing-dramatic-picture",
+    "festivalId": "oscars",
+    "name": "Best Directing (Dramatic Picture)",
+    "normalizedName": "best-directing-dramatic-picture",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-director",
+    "festivalId": "oscars",
+    "name": "Best Director",
+    "normalizedName": "best-director",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-documentary",
+    "festivalId": "oscars",
+    "name": "Best Documentary",
+    "normalizedName": "best-documentary",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-documentary-feature",
+    "festivalId": "oscars",
+    "name": "Best Documentary (Feature)",
+    "normalizedName": "best-documentary-feature",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-documentary-feature-film",
+    "festivalId": "oscars",
+    "name": "Best Documentary Feature Film",
+    "normalizedName": "best-documentary-feature-film",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-documentary-short-film",
+    "festivalId": "oscars",
+    "name": "Best Documentary Short Film",
+    "normalizedName": "best-documentary-short-film",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-documentary-short-subject",
+    "festivalId": "oscars",
+    "name": "Best Documentary (Short Subject)",
+    "normalizedName": "best-documentary-short-subject",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-engineering-effects",
+    "festivalId": "oscars",
+    "name": "Best Engineering Effects",
+    "normalizedName": "best-engineering-effects",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-film-editing",
+    "festivalId": "oscars",
+    "name": "Best Film Editing",
+    "normalizedName": "best-film-editing",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-foreign-language-film",
+    "festivalId": "oscars",
+    "name": "Best Foreign Language Film",
+    "normalizedName": "best-foreign-language-film",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-international-feature-film",
+    "festivalId": "oscars",
+    "name": "Best International Feature Film",
+    "normalizedName": "best-international-feature-film",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-live-action-short-film",
+    "festivalId": "oscars",
+    "name": "Best Live Action Short Film",
+    "normalizedName": "best-live-action-short-film",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-makeup",
+    "festivalId": "oscars",
+    "name": "Best Makeup",
+    "normalizedName": "best-makeup",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-makeup-and-hairstyling",
+    "festivalId": "oscars",
+    "name": "Best Makeup and Hairstyling",
+    "normalizedName": "best-makeup-and-hairstyling",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-motion-picture",
+    "festivalId": "oscars",
+    "name": "Best Motion Picture",
+    "normalizedName": "best-motion-picture",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-adaptation-score",
+    "festivalId": "oscars",
+    "name": "Best Music (Adaptation Score)",
+    "normalizedName": "best-music-adaptation-score",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-music-score-of-a-dramatic-or-comedy-picture",
+    "festivalId": "oscars",
+    "name": "Best Music (Music Score of a Dramatic or Comedy Picture)",
+    "normalizedName": "best-music-music-score-of-a-dramatic-or-comedy-picture",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-music-score-of-a-dramatic-picture",
+    "festivalId": "oscars",
+    "name": "Best Music (Music Score of a Dramatic Picture)",
+    "normalizedName": "best-music-music-score-of-a-dramatic-picture",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-music-score-substantially-original",
+    "festivalId": "oscars",
+    "name": "Best Music (Music Score -- Substantially Original)",
+    "normalizedName": "best-music-music-score-substantially-original",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-original-dramatic-score",
+    "festivalId": "oscars",
+    "name": "Best Music (Original Dramatic Score)",
+    "normalizedName": "best-music-original-dramatic-score",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-original-music-score",
+    "festivalId": "oscars",
+    "name": "Best Music (Original Music Score)",
+    "normalizedName": "best-music-original-music-score",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-original-musical-or-comedy-score",
+    "festivalId": "oscars",
+    "name": "Best Music (Original Musical or Comedy Score)",
+    "normalizedName": "best-music-original-musical-or-comedy-score",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-original-score",
+    "festivalId": "oscars",
+    "name": "Best Music (Original Score)",
+    "normalizedName": "best-music-original-score",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-original-score-for-a-motion-picture-not-a-musical",
+    "festivalId": "oscars",
+    "name": "Best Music (Original Score -- for a Motion Picture (Not a Musical))",
+    "normalizedName": "best-music-original-score-for-a-motion-picture-not-a-musical",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-original-song",
+    "festivalId": "oscars",
+    "name": "Best Music (Original Song)",
+    "normalizedName": "best-music-original-song",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-original-song-score",
+    "festivalId": "oscars",
+    "name": "Best Music (Original Song Score)",
+    "normalizedName": "best-music-original-song-score",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-original-song-score-and-its-adaptation-or-adaptation-",
+    "festivalId": "oscars",
+    "name": "Best Music (Original Song Score and Its Adaptation -or- Adaptation Score)",
+    "normalizedName": "best-music-original-song-score-and-its-adaptation-or-adaptation-",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-original-song-score-or-adaptation-score",
+    "festivalId": "oscars",
+    "name": "Best Music (Original Song Score or Adaptation Score)",
+    "normalizedName": "best-music-original-song-score-or-adaptation-score",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-score-of-a-musical-picture-original-or-adaptation",
+    "festivalId": "oscars",
+    "name": "Best Music (Score of a Musical Picture -- Original or Adaptation)",
+    "normalizedName": "best-music-score-of-a-musical-picture-original-or-adaptation",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-scoring",
+    "festivalId": "oscars",
+    "name": "Best Music (Scoring)",
+    "normalizedName": "best-music-scoring",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-scoring-adaptation-and-original-song-score",
+    "festivalId": "oscars",
+    "name": "Best Music (Scoring: Adaptation and Original Song Score)",
+    "normalizedName": "best-music-scoring-adaptation-and-original-song-score",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-scoring-of-a-musical-picture",
+    "festivalId": "oscars",
+    "name": "Best Music (Scoring of a Musical Picture)",
+    "normalizedName": "best-music-scoring-of-a-musical-picture",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-scoring-of-music-adaptation-or-treatment",
+    "festivalId": "oscars",
+    "name": "Best Music (Scoring of Music -- Adaptation or Treatment)",
+    "normalizedName": "best-music-scoring-of-music-adaptation-or-treatment",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-scoring-original-song-score-and-adaptation-or-scoring",
+    "festivalId": "oscars",
+    "name": "Best Music (Scoring: Original Song Score and Adaptation -or- Scoring: Adaptation)",
+    "normalizedName": "best-music-scoring-original-song-score-and-adaptation-or-scoring",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-song",
+    "festivalId": "oscars",
+    "name": "Best Music (Song)",
+    "normalizedName": "best-music-song",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-music-song-original-for-the-picture",
+    "festivalId": "oscars",
+    "name": "Best Music (Song -- Original for the Picture)",
+    "normalizedName": "best-music-song-original-for-the-picture",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-original-story",
+    "festivalId": "oscars",
+    "name": "Best Original Story",
+    "normalizedName": "best-original-story",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "oscars:best-picture",
     "festivalId": "oscars",
     "name": "Best Picture",
     "normalizedName": "best-picture",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-production-design",
+    "festivalId": "oscars",
+    "name": "Best Production Design",
+    "normalizedName": "best-production-design",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-short-film-animated",
+    "festivalId": "oscars",
+    "name": "Best Short Film (Animated)",
+    "normalizedName": "best-short-film-animated",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-short-film-dramatic-live-action",
+    "festivalId": "oscars",
+    "name": "Best Short Film (Dramatic Live Action)",
+    "normalizedName": "best-short-film-dramatic-live-action",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-short-film-live-action",
+    "festivalId": "oscars",
+    "name": "Best Short Film (Live Action)",
+    "normalizedName": "best-short-film-live-action",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-short-subject-animated",
+    "festivalId": "oscars",
+    "name": "Best Short Subject (Animated)",
+    "normalizedName": "best-short-subject-animated",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-short-subject-cartoon",
+    "festivalId": "oscars",
+    "name": "Best Short Subject (Cartoon)",
+    "normalizedName": "best-short-subject-cartoon",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-short-subject-color",
+    "festivalId": "oscars",
+    "name": "Best Short Subject (Color)",
+    "normalizedName": "best-short-subject-color",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-short-subject-comedy",
+    "festivalId": "oscars",
+    "name": "Best Short Subject (Comedy)",
+    "normalizedName": "best-short-subject-comedy",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-short-subject-live-action",
+    "festivalId": "oscars",
+    "name": "Best Short Subject (Live Action)",
+    "normalizedName": "best-short-subject-live-action",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-short-subject-novelty",
+    "festivalId": "oscars",
+    "name": "Best Short Subject (Novelty)",
+    "normalizedName": "best-short-subject-novelty",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-short-subject-one-reel",
+    "festivalId": "oscars",
+    "name": "Best Short Subject (One-Reel)",
+    "normalizedName": "best-short-subject-one-reel",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-short-subject-two-reel",
+    "festivalId": "oscars",
+    "name": "Best Short Subject (Two-Reel)",
+    "normalizedName": "best-short-subject-two-reel",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-song-original-for-the-picture",
+    "festivalId": "oscars",
+    "name": "Best Song Original for the Picture",
+    "normalizedName": "best-song-original-for-the-picture",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-sound",
+    "festivalId": "oscars",
+    "name": "Best Sound",
+    "normalizedName": "best-sound",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-sound-editing",
+    "festivalId": "oscars",
+    "name": "Best Sound Editing",
+    "normalizedName": "best-sound-editing",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-sound-effects",
+    "festivalId": "oscars",
+    "name": "Best Sound Effects",
+    "normalizedName": "best-sound-effects",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-sound-effects-editing",
+    "festivalId": "oscars",
+    "name": "Best Sound Effects Editing",
+    "normalizedName": "best-sound-effects-editing",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-sound-mixing",
+    "festivalId": "oscars",
+    "name": "Best Sound Mixing",
+    "normalizedName": "best-sound-mixing",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-sound-recording",
+    "festivalId": "oscars",
+    "name": "Best Sound Recording",
+    "normalizedName": "best-sound-recording",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-special-effects",
+    "festivalId": "oscars",
+    "name": "Best Special Effects",
+    "normalizedName": "best-special-effects",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-special-visual-effects",
+    "festivalId": "oscars",
+    "name": "Best Special Visual Effects",
+    "normalizedName": "best-special-visual-effects",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-unique-and-artistic-picture",
+    "festivalId": "oscars",
+    "name": "Best Unique and Artistic Picture",
+    "normalizedName": "best-unique-and-artistic-picture",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-visual-effects",
+    "festivalId": "oscars",
+    "name": "Best Visual Effects",
+    "normalizedName": "best-visual-effects",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-writing",
+    "festivalId": "oscars",
+    "name": "Best Writing",
+    "normalizedName": "best-writing",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-writing-adaptation",
+    "festivalId": "oscars",
+    "name": "Best Writing (Adaptation)",
+    "normalizedName": "best-writing-adaptation",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-writing-adapted-screenplay",
+    "festivalId": "oscars",
+    "name": "Best Writing (Adapted Screenplay)",
+    "normalizedName": "best-writing-adapted-screenplay",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-writing-motion-picture-story",
+    "festivalId": "oscars",
+    "name": "Best Writing (Motion Picture Story)",
+    "normalizedName": "best-writing-motion-picture-story",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-writing-original-motion-picture-story",
+    "festivalId": "oscars",
+    "name": "Best Writing (Original Motion Picture Story)",
+    "normalizedName": "best-writing-original-motion-picture-story",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-writing-original-screenplay",
+    "festivalId": "oscars",
+    "name": "Best Writing (Original Screenplay)",
+    "normalizedName": "best-writing-original-screenplay",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-writing-original-story",
+    "festivalId": "oscars",
+    "name": "Best Writing (Original Story)",
+    "normalizedName": "best-writing-original-story",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-writing-screenplay",
+    "festivalId": "oscars",
+    "name": "Best Writing (Screenplay)",
+    "normalizedName": "best-writing-screenplay",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-writing-screenplay-adapted",
+    "festivalId": "oscars",
+    "name": "Best Writing (Screenplay -- Adapted)",
+    "normalizedName": "best-writing-screenplay-adapted",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-writing-screenplay-adapted-from-other-material",
+    "festivalId": "oscars",
+    "name": "Best Writing (Screenplay Adapted from Other Material)",
+    "normalizedName": "best-writing-screenplay-adapted-from-other-material",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-writing-screenplay-based-on-material-from-another-medium",
+    "festivalId": "oscars",
+    "name": "Best Writing (Screenplay Based on Material from Another Medium)",
+    "normalizedName": "best-writing-screenplay-based-on-material-from-another-medium",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-writing-screenplay-based-on-material-previously-produced-or",
+    "festivalId": "oscars",
+    "name": "Best Writing (Screenplay Based on Material Previously Produced or Published)",
+    "normalizedName": "best-writing-screenplay-based-on-material-previously-produced-or",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-writing-screenplay-original",
+    "festivalId": "oscars",
+    "name": "Best Writing (Screenplay -- Original)",
+    "normalizedName": "best-writing-screenplay-original",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-writing-screenplay-written-directly-for-the-screen",
+    "festivalId": "oscars",
+    "name": "Best Writing (Screenplay Written Directly for the Screen)",
+    "normalizedName": "best-writing-screenplay-written-directly-for-the-screen",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-writing-screenplay-written-directly-for-the-screen-based-on",
+    "festivalId": "oscars",
+    "name": "Best Writing (Screenplay Written Directly for the Screen -- Based on Factual Material or on Story Material Not Previously Published or Produced)",
+    "normalizedName": "best-writing-screenplay-written-directly-for-the-screen-based-on",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-writing-story-and-screenplay",
+    "festivalId": "oscars",
+    "name": "Best Writing (Story and Screenplay)",
+    "normalizedName": "best-writing-story-and-screenplay",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-writing-story-and-screenplay-based-on-factual-material-or-m",
+    "festivalId": "oscars",
+    "name": "Best Writing (Story and Screenplay -- Based on Factual Material or Material Not Previously Published or Produced)",
+    "normalizedName": "best-writing-story-and-screenplay-based-on-factual-material-or-m",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-writing-story-and-screenplay-based-on-material-not-previous",
+    "festivalId": "oscars",
+    "name": "Best Writing (Story and Screenplay -- Based on Material Not Previously Published or Produced)",
+    "normalizedName": "best-writing-story-and-screenplay-based-on-material-not-previous",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-writing-story-and-screenplay-written-directly-for-the-scree",
+    "festivalId": "oscars",
+    "name": "Best Writing (Story and Screenplay -- Written Directly for the Screen)",
+    "normalizedName": "best-writing-story-and-screenplay-written-directly-for-the-scree",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:best-writing-title-writing",
+    "festivalId": "oscars",
+    "name": "Best Writing (Title Writing)",
+    "normalizedName": "best-writing-title-writing",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {
@@ -13788,12 +14085,201 @@
     "isHonoraryAward": false
   },
   {
+    "id": "oscars:class-ii-awards",
+    "festivalId": "oscars",
+    "name": "Class II Awards",
+    "normalizedName": "class-ii-awards",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:class-iii-awards",
+    "festivalId": "oscars",
+    "name": "Class III Awards",
+    "normalizedName": "class-iii-awards",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:honorary-award",
+    "festivalId": "oscars",
+    "name": "Honorary Award",
+    "normalizedName": "honorary-award",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:honorary-awards",
+    "festivalId": "oscars",
+    "name": "Honorary Awards",
+    "normalizedName": "honorary-awards",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:honorary-foreign-language-film-award",
+    "festivalId": "oscars",
+    "name": "Honorary Foreign Language Film Award",
+    "normalizedName": "honorary-foreign-language-film-award",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:irving-g-thalberg-memorial-award",
+    "festivalId": "oscars",
+    "name": "Irving G. Thalberg Memorial Award",
+    "normalizedName": "irving-g-thalberg-memorial-award",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:jean-hersholt-humanitarian-award",
+    "festivalId": "oscars",
+    "name": "Jean Hersholt Humanitarian Award",
+    "normalizedName": "jean-hersholt-humanitarian-award",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:jean-hersholt-humanitarian-awards",
+    "festivalId": "oscars",
+    "name": "Jean Hersholt Humanitarian Awards",
+    "normalizedName": "jean-hersholt-humanitarian-awards",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:outstanding-motion-picture",
+    "festivalId": "oscars",
+    "name": "Outstanding Motion Picture",
+    "normalizedName": "outstanding-motion-picture",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:outstanding-picture",
+    "festivalId": "oscars",
+    "name": "Outstanding Picture",
+    "normalizedName": "outstanding-picture",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:outstanding-production",
+    "festivalId": "oscars",
+    "name": "Outstanding Production",
+    "normalizedName": "outstanding-production",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
     "id": "oscars:special-achievement-academy-award",
     "festivalId": "oscars",
     "name": "Special Achievement Academy Award",
     "normalizedName": "special-achievement-academy-award",
     "scope": "film",
     "isAward": true,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:special-achievement-award",
+    "festivalId": "oscars",
+    "name": "Special Achievement Award",
+    "normalizedName": "special-achievement-award",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:special-achievement-award-sound-editing",
+    "festivalId": "oscars",
+    "name": "Special Achievement Award (Sound Editing)",
+    "normalizedName": "special-achievement-award-sound-editing",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:special-achievement-award-sound-effects",
+    "festivalId": "oscars",
+    "name": "Special Achievement Award (Sound Effects)",
+    "normalizedName": "special-achievement-award-sound-effects",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:special-achievement-award-sound-effects-editing",
+    "festivalId": "oscars",
+    "name": "Special Achievement Award (Sound Effects Editing)",
+    "normalizedName": "special-achievement-award-sound-effects-editing",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:special-achievement-award-visual-effects",
+    "festivalId": "oscars",
+    "name": "Special Achievement Award (Visual Effects)",
+    "normalizedName": "special-achievement-award-visual-effects",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:special-achievement-awards-visual-effects",
+    "festivalId": "oscars",
+    "name": "Special Achievement Awards (Visual Effects)",
+    "normalizedName": "special-achievement-awards-visual-effects",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:special-award",
+    "festivalId": "oscars",
+    "name": "Special Award",
+    "normalizedName": "special-award",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:special-awards",
+    "festivalId": "oscars",
+    "name": "Special awards",
+    "normalizedName": "special-awards",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:special-foreign-language-film-award",
+    "festivalId": "oscars",
+    "name": "Special Foreign Language Film Award",
+    "normalizedName": "special-foreign-language-film-award",
+    "scope": "film",
+    "isAward": false,
+    "isHonoraryAward": false
+  },
+  {
+    "id": "oscars:unknown-category",
+    "festivalId": "oscars",
+    "name": "Unknown category",
+    "normalizedName": "unknown-category",
+    "scope": "film",
+    "isAward": false,
     "isHonoraryAward": false
   },
   {

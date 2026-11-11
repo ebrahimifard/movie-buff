@@ -104,7 +104,13 @@ function findExistingLocalPoster(filmId) {
 }
 
 async function downloadPoster(film) {
-  const response = await fetchWithRetry(film.posterUrl, {}, `poster ${film.id}`);
+  // Wikimedia (Wikidata/Wikipedia poster fallback — see enrich-wikidata.mjs)
+  // rejects requests without a descriptive User-Agent; TMDB doesn't mind.
+  const response = await fetchWithRetry(
+    film.posterUrl,
+    { headers: { "User-Agent": "movie-buff-archive-bot/0.2 (https://example.com)" } },
+    `poster ${film.id}`
+  );
   const contentType = response.headers.get("content-type");
   const buffer = Buffer.from(await response.arrayBuffer());
 

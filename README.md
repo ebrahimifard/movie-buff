@@ -133,7 +133,7 @@ npm run data:update
 
 ## Occasional: Wikipedia Data-Completeness Pass
 
-Beyond the routine monthly pipeline, eight additional sources — Cannes, Golden Globes, BAFTA, Berlinale, Venice, Locarno, Sundance, and TIFF Wikipedia scrapers — can fill in festival-years the Wikidata/TMDB pipeline is missing or weak on. These are **not** part of `npm run data:collect` and do **not** run automatically: historical years rarely change once filled, so re-scraping Wikipedia every month would add load for little benefit. Run this manually, occasionally:
+Beyond the routine monthly pipeline, nine additional sources — Cannes, Golden Globes, BAFTA, Berlinale, Venice, Locarno, Sundance, TIFF, and Oscars Wikipedia scrapers — can fill in festival-years the Wikidata/TMDB pipeline is missing or weak on. For Oscars specifically, this isn't just filling gaps: the regular pipeline's Oscars data comes entirely from Wikidata, which reliably records winners but is nowhere near complete for the full nominee slate across all ~24 categories (confirmed live: 20-40 records for a ceremony that really has ~115-125) — the Wikipedia scraper is what actually fills that out. These are **not** part of `npm run data:collect` and do **not** run automatically: historical years rarely change once filled, so re-scraping Wikipedia every month would add load for little benefit. Run this manually, occasionally:
 
 ```bash
 # 1. Ensure normalized data + coverage report are current
@@ -152,6 +152,7 @@ npm run data:fetch:venice-wikipedia
 npm run data:fetch:locarno-wikipedia
 npm run data:fetch:sundance-wikipedia
 npm run data:fetch:tiff-wikipedia
+npm run data:fetch:oscars-wikipedia
 
 # 3. Re-merge (⚠️ always re-run TMDB enrichment right after any data:merge —
 #    merge-sources.mjs rebuilds master-data.generated.json from raw sources

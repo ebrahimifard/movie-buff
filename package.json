@@ -13,11 +13,16 @@
     "data:fetch:wikidata": "node scripts/fetch-wikidata-awards.mjs",
     "data:merge": "node scripts/merge-sources.mjs",
     "data:enrich:tmdb": "node scripts/enrich-tmdb.mjs",
+    "data:enrich:wikidata-ids": "node scripts/enrich-wikidata.mjs --phase=ids",
+    "data:enrich:wikidata-fill": "node scripts/enrich-wikidata.mjs --phase=fill",
+    "data:enrich:imdb-ids": "node scripts/enrich-imdb.mjs --phase=ids",
+    "data:enrich:imdb-posters": "node scripts/enrich-imdb.mjs --phase=posters",
     "data:build": "node scripts/build-comprehensive-data.mjs",
     "data:posters": "node scripts/download-posters.mjs",
     "data:validate": "node scripts/validate-data.mjs",
     "data:validate:strict": "node scripts/validate-data.mjs --strict",
     "data:coverage": "node scripts/coverage-report.mjs",
+    "data:audit:cannes": "node scripts/audit-cannes-competition.mjs",
     "data:update": "node scripts/update-data.mjs",
     "data:fetch:cannes-wikipedia": "node scripts/fetch-cannes-wikipedia.mjs",
     "data:fetch:golden-globes-wikipedia": "node scripts/fetch-golden-globes-wikipedia.mjs",
@@ -26,7 +31,8 @@
     "data:fetch:venice-wikipedia": "node scripts/fetch-venice-wikipedia.mjs",
     "data:fetch:locarno-wikipedia": "node scripts/fetch-locarno-wikipedia.mjs",
     "data:fetch:sundance-wikipedia": "node scripts/fetch-sundance-wikipedia.mjs",
-    "data:fetch:tiff-wikipedia": "node scripts/fetch-tiff-wikipedia.mjs"
+    "data:fetch:tiff-wikipedia": "node scripts/fetch-tiff-wikipedia.mjs",
+    "data:fetch:oscars-wikipedia": "node scripts/fetch-oscars-wikipedia.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.2.12",

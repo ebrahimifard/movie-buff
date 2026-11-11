@@ -62,6 +62,31 @@ export function isFabricatedHonoraryRecord(entry, isHonoraryAward) {
   return isHonoraryAward === true && !hasRealFilmSignal;
 }
 
+// The source's own director credit wins; when it names none (award rows
+// like Best Actor carry the honoree instead, and many selection lists omit
+// the director), fall back to the directors TMDB credits for the matched
+// film (film.tmdbDirectors, set by enrich-tmdb.mjs).
+export function resolveDirectorNames(entry) {
+  if (entry?.directors?.length) return entry.directors;
+  if (entry?.film?.tmdbDirectors?.length) return entry.film.tmdbDirectors;
+  return entry?.film?.wikidataDirectors ?? [];
+}
+
+// A film can't be released after any festival edition or ceremony it took
+// part in, and a source record without its own year only carries that
+// edition's year as a placeholder — so a film's release year is the
+// earliest of every record's releaseYear, TMDB's own date
+// (film.tmdbReleaseYear) and every edition year it appeared at. Without
+// this, whichever record was seen first won: a 2025 re-screening made
+// Star Wars: Episode III "2025", a 2016 Classics slot made Taste of Cherry
+// "2016".
+export function earliestReleaseYear(entry, currentYear) {
+  const years = [currentYear, entry?.film?.releaseYear, entry?.film?.tmdbReleaseYear, entry?.year].filter(
+    (year) => Number.isInteger(year) && year > 1870
+  );
+  return years.length ? Math.min(...years) : currentYear;
+}
+
 export function slugify(input) {
   return input
     .toLowerCase()
@@ -105,6 +130,31 @@ export function mergeFilmFields(existing, incoming) {
     genres: existing.genres?.length ? existing.genres : incoming.genres,
     synopsis: existing.synopsis || incoming.synopsis
   };
+}
+
+// Folds a second source record for the SAME nomination id (same film, year,
+// festival and category) into the first, in place: a winner result always
+// wins over nominee, and any director/country/credits the first record
+// lacked are backfilled from the second rather than discarded.
+export function mergeNomination(existing, incoming) {
+  if (incoming.result === "winner") {
+    existing.result = "winner";
+  }
+  if (!existing.directorIds.length && incoming.directorIds?.length) {
+    existing.director = incoming.directorNames.join(", ");
+    existing.directorIds = incoming.directorIds;
+  }
+  if ((!existing.country || existing.country === "XX") && incoming.country) {
+    existing.country = incoming.country;
+  }
+  if (incoming.credits?.length) {
+    const seen = new Set((existing.credits ?? []).map((c) => `${c.personId}|${c.role}`));
+    const added = incoming.credits.filter((c) => !seen.has(`${c.personId}|${c.role}`));
+    if (added.length) {
+      existing.credits = [...(existing.credits ?? []), ...added];
+    }
+  }
+  return existing;
 }
 
 // Gets-or-creates a Person record, merging `role` into an existing person's
@@ -152,6 +202,7 @@ async function run() {
   const categoryMap = new Map();
   const ceremonyMap = new Map();
   const nominations = [];
+  const nominationsById = new Map();
 
   for (const entry of source.records) {
     const isHonoraryAward = resolveCategoryIsHonoraryAward(categoryLookup, entry.festivalId, entry.category);
@@ -164,7 +215,7 @@ async function run() {
       filmMap.set(filmId, {
         id: filmId,
         title: entry.film.title,
-        releaseYear: entry.film.releaseYear,
+        releaseYear: earliestReleaseYear(entry, entry.film.releaseYear),
         imdbId: entry.film.imdbId,
         posterUrl: entry.film.posterUrl,
         runtimeMinutes: entry.film.runtimeMinutes,
@@ -174,7 +225,8 @@ async function run() {
         synopsis: entry.film.synopsis
       });
     } else {
-      filmMap.set(filmId, mergeFilmFields(filmMap.get(filmId), entry.film));
+      const existingFilm = filmMap.get(filmId);
+      filmMap.set(filmId, { ...mergeFilmFields(existingFilm, entry.film), releaseYear: earliestReleaseYear(entry, existingFilm.releaseYear) });
     }
 
     const ceremonyId = `${entry.festivalId}-${entry.year}`;
@@ -213,7 +265,7 @@ async function run() {
       });
     }
 
-    const directorNames = uniqueSorted(entry.directors);
+    const directorNames = uniqueSorted(resolveDirectorNames(entry));
     const directorIds = directorNames.map((name) => resolvePersonId(personMap, name, "director"));
 
     // entry.credits (populated by the Wikipedia scrapers for individual-award
@@ -225,8 +277,19 @@ async function run() {
       .filter((credit) => credit?.name && credit?.role)
       .map(({ name, role }) => ({ personId: resolvePersonId(personMap, name, role), role }));
 
-    nominations.push({
-      id: `${entry.year}-${entry.festivalId}-${slugify(entry.category)}-${filmId}`,
+    const nominationId = `${entry.year}-${entry.festivalId}-${slugify(entry.category)}-${filmId}`;
+    // Two source records can still resolve to the same film for the same
+    // category/year after TMDB matching gives both one imdbId — e.g. a
+    // festival's awards list and its competition lineup naming the same
+    // film under two different titles. One nomination per film, winner wins.
+    const existingNomination = nominationsById.get(nominationId);
+    if (existingNomination) {
+      mergeNomination(existingNomination, { result: entry.result, directorNames, directorIds, credits, country: entry.film.countryCodes[0] });
+      continue;
+    }
+
+    const nomination = {
+      id: nominationId,
       year: entry.year,
       festivalId: entry.festivalId,
       festivalName: festivals.find((festival) => festival.id === entry.festivalId)?.name ?? entry.festivalId,
@@ -241,7 +304,9 @@ async function run() {
       imdbId: entry.film.imdbId,
       filmId,
       ...(credits.length > 0 ? { credits } : {})
-    });
+    };
+    nominationsById.set(nominationId, nomination);
+    nominations.push(nomination);
   }
 
   const films = [...filmMap.values()].sort((a, b) => b.releaseYear - a.releaseYear || a.title.localeCompare(b.title));

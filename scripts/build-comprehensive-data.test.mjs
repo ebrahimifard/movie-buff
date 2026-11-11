@@ -1,8 +1,11 @@
 import { describe, expect, it } from "vitest";
 import {
   buildCategoryClassificationLookup,
+  mergeNomination,
   isFabricatedHonoraryRecord,
   mergeFilmFields,
+  resolveDirectorNames,
+  earliestReleaseYear,
   resolveCategoryIsAward,
   resolveCategoryIsHonoraryAward,
   resolveFilmId,
@@ -193,5 +196,48 @@ describe("isFabricatedHonoraryRecord", () => {
         true
       )
     ).toBe(false);
+  });
+});
+
+describe("mergeNomination", () => {
+  it("promotes to winner and backfills a missing director/country/credits from a duplicate record of the same nomination", () => {
+    const existing = { result: "nominee", director: "", directorIds: [], country: "XX", credits: [{ personId: "person:a", role: "cast" }] };
+    mergeNomination(existing, {
+      result: "winner",
+      directorNames: ["Jane Doe"],
+      directorIds: ["person:jane-doe"],
+      country: "FR",
+      credits: [{ personId: "person:a", role: "cast" }, { personId: "person:b", role: "writer" }]
+    });
+    expect(existing).toEqual({
+      result: "winner",
+      director: "Jane Doe",
+      directorIds: ["person:jane-doe"],
+      country: "FR",
+      credits: [{ personId: "person:a", role: "cast" }, { personId: "person:b", role: "writer" }]
+    });
+  });
+
+  it("never demotes a winner or overwrites fields that are already set", () => {
+    const existing = { result: "winner", director: "A", directorIds: ["person:a"], country: "US" };
+    mergeNomination(existing, { result: "nominee", directorNames: ["B"], directorIds: ["person:b"], country: "FR", credits: [] });
+    expect(existing).toEqual({ result: "winner", director: "A", directorIds: ["person:a"], country: "US" });
+  });
+});
+
+describe("resolveDirectorNames", () => {
+  it("prefers the source's directors and falls back to TMDB's", () => {
+    expect(resolveDirectorNames({ directors: ["A"], film: { tmdbDirectors: ["B"] } })).toEqual(["A"]);
+    expect(resolveDirectorNames({ directors: [], film: { tmdbDirectors: ["B"] } })).toEqual(["B"]);
+    expect(resolveDirectorNames({ directors: [], film: {} })).toEqual([]);
+  });
+});
+
+describe("earliestReleaseYear", () => {
+  it("takes the earliest of the current, record, TMDB and edition years", () => {
+    expect(earliestReleaseYear({ year: 2025, film: { releaseYear: 2025, tmdbReleaseYear: 2005 } }, 2025)).toBe(2005);
+    expect(earliestReleaseYear({ year: 2016, film: { releaseYear: 2016 } }, 1997)).toBe(1997);
+    expect(earliestReleaseYear({ year: 2019, film: { releaseYear: 2019, tmdbReleaseYear: 2020 } }, 2019)).toBe(2019);
+    expect(earliestReleaseYear({ year: 2019, film: {} }, undefined)).toBe(2019);
   });
 });

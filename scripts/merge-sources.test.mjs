@@ -11,7 +11,8 @@ import {
   normalizeCategory,
   normalizeRecord,
   normalizeWikipediaPayload,
-  slugify
+  slugify,
+  dropContradictedRecords
 } from "./merge-sources.mjs";
 
 describe("slugify", () => {
@@ -384,5 +385,18 @@ describe("mergeCandidatesInto", () => {
     mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, [candidate]);
 
     expect(outputRecords).toHaveLength(2);
+  });
+});
+
+describe("dropContradictedRecords", () => {
+  const rec = (festivalId, year, title) => ({ festivalId, year, category: "Jury Prize", film: { title } });
+  it("drops a Cannes Wikidata record whose year the Wikipedia lineup contradicts, keeping unlisted films and other festivals", () => {
+    const wikipedia = [rec("cannes", 2022, "EO"), rec("cannes", 2015, "The Lobster")];
+    const wikidata = [rec("cannes", 2023, "EO"), rec("cannes", 2022, "EO"), rec("cannes", 2016, "Lobster"), rec("cannes", 2005, "The Child"), rec("venice", 2023, "EO")];
+    expect(dropContradictedRecords(wikidata, wikipedia).map((r) => `${r.festivalId} ${r.year} ${r.film.title}`)).toEqual([
+      "cannes 2022 EO",
+      "cannes 2005 The Child",
+      "venice 2023 EO"
+    ]);
   });
 });

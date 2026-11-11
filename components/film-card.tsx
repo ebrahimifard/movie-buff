@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { Poster } from "./poster";
-import { getFilmByImdbId } from "@/lib/data";
+import { getCategoriesById, getFilmByImdbId } from "@/lib/data";
 import type { Nomination } from "@/lib/data";
 import { buildMissingInfoIssueUrl, getMissingFields } from "@/lib/missing-info";
+import { resultLabel } from "@/lib/result-label";
 
 export type FilmCardData = Pick<
   Nomination,
-  "title" | "director" | "year" | "category" | "result" | "imdbId" | "festivalName" | "filmId"
+  "title" | "director" | "year" | "category" | "categoryId" | "result" | "imdbId" | "festivalName" | "filmId"
 >;
 
 export function FilmCard({
@@ -14,6 +15,7 @@ export function FilmCard({
   director,
   year,
   category,
+  categoryId,
   result,
   imdbId,
   festivalName,
@@ -38,7 +40,7 @@ export function FilmCard({
             result === "winner" ? "bg-gold/20 text-gold" : "bg-bone/10 text-bone/80"
           }`}
         >
-          {result}
+          {resultLabel(result, getCategoriesById().get(categoryId)?.isAward)}
         </span>
         <div className="flex gap-3">
           {imdbId ? (

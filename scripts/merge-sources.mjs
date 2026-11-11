@@ -23,7 +23,8 @@ export const WIKIPEDIA_SOURCES = [
   { sourceId: "veniceWikipedia", filePath: path.join(root, "data", "source", "venice-wikipedia.json") },
   { sourceId: "locarnoWikipedia", filePath: path.join(root, "data", "source", "locarno-wikipedia.json") },
   { sourceId: "sundanceWikipedia", filePath: path.join(root, "data", "source", "sundance-wikipedia.json") },
-  { sourceId: "tiffWikipedia", filePath: path.join(root, "data", "source", "tiff-wikipedia.json") }
+  { sourceId: "tiffWikipedia", filePath: path.join(root, "data", "source", "tiff-wikipedia.json") },
+  { sourceId: "oscarsWikipedia", filePath: path.join(root, "data", "source", "oscars-wikipedia.json") }
 ];
 
 export function slugify(input) {
@@ -44,7 +45,12 @@ export function mergeFilm(primary, secondary) {
     languages: primary.languages?.length ? primary.languages : secondary.languages || [],
     genres: primary.genres?.length ? primary.genres : secondary.genres || [],
     synopsis: primary.synopsis || secondary.synopsis || "",
-    posterUrl: primary.posterUrl || secondary.posterUrl || ""
+    posterUrl: primary.posterUrl || secondary.posterUrl || "",
+    // Matching-only hints (selection tables' native-language title, and the
+    // film's own Wikipedia article) — read by enrich-tmdb.mjs and
+    // enrich-wikidata.mjs, never written into data/normalized.
+    ...(primary.originalTitle || secondary.originalTitle ? { originalTitle: primary.originalTitle || secondary.originalTitle } : {}),
+    ...(primary.wikipediaTitle || secondary.wikipediaTitle ? { wikipediaTitle: primary.wikipediaTitle || secondary.wikipediaTitle } : {})
   };
 }
 
@@ -84,7 +90,9 @@ export function normalizeRecord(input) {
       languages: input.film.languages ?? [],
       genres: input.film.genres ?? [],
       synopsis: input.film.synopsis ?? "",
-      posterUrl: input.film.posterUrl ?? ""
+      posterUrl: input.film.posterUrl ?? "",
+      ...(input.film.originalTitle ? { originalTitle: input.film.originalTitle } : {}),
+      ...(input.film.wikipediaTitle ? { wikipediaTitle: input.film.wikipediaTitle } : {})
     },
     directors: [...new Set((input.directors ?? []).filter(Boolean))],
     credits: dedupeCredits(input.credits)
@@ -144,6 +152,41 @@ export function buildSlugKey(record, crosswalkLookup) {
 
 // Cannes/Golden Globes scrapers write a bare array; BAFTA's writes
 // { generatedAt, records }. Accept either shape uniformly.
+// Festivals whose Wikipedia scrape covers every selection section of every
+// edition, making it the source of truth for which year a film was there.
+const AUTHORITATIVE_LINEUP_FESTIVALS = new Set(["cannes"]);
+
+function lineupTitleKey(title) {
+  return String(title ?? "")
+    .normalize("NFKD")
+    .replace(/\p{M}+/gu, "")
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, " ")
+    .trim()
+    .replace(/^(the|a|an) /, "");
+}
+
+// Drops Wikidata records that Wikipedia's complete lineup contradicts: the
+// film is listed at that festival, but only in OTHER years (Wikidata dates
+// some awards a year late — EO "Cannes 2023" for its 2022 Jury Prize). A
+// film the lineup doesn't list at all is kept (title spellings differ).
+export function dropContradictedRecords(records, wikipediaRecords) {
+  const years = new Map();
+  for (const record of wikipediaRecords) {
+    if (!AUTHORITATIVE_LINEUP_FESTIVALS.has(record?.festivalId)) continue;
+    for (const title of [record.film?.title, record.film?.originalTitle].filter(Boolean)) {
+      const key = `${record.festivalId}|${lineupTitleKey(title)}`;
+      if (!years.has(key)) years.set(key, new Set());
+      years.get(key).add(record.year);
+    }
+  }
+  return records.filter((record) => {
+    if (!AUTHORITATIVE_LINEUP_FESTIVALS.has(record?.festivalId)) return true;
+    const listed = years.get(`${record.festivalId}|${lineupTitleKey(record.film?.title)}`);
+    return !listed || listed.has(record.year);
+  });
+}
+
 export function normalizeWikipediaPayload(raw) {
   return Array.isArray(raw) ? raw : raw?.records ?? [];
 }
@@ -229,7 +272,12 @@ async function run() {
     outputRecords.push(normalized);
   }
 
-  mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, wikidataRecords, crosswalkLookup);
+  const allWikipediaRecords = wikipediaSources.flatMap(({ records }) => records);
+  const keptWikidata = dropContradictedRecords(wikidataRecords, allWikipediaRecords);
+  if (keptWikidata.length !== wikidataRecords.length) {
+    logStep(`Dropped ${wikidataRecords.length - keptWikidata.length} Wikidata record(s) dated to a year the festival's Wikipedia lineup contradicts`);
+  }
+  mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, keptWikidata, crosswalkLookup);
   for (const { records } of wikipediaSources) {
     mergeCandidatesInto(outputRecords, primaryIndex, titleIndex, records, crosswalkLookup);
   }

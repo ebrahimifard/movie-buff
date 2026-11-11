@@ -2,10 +2,11 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BackLink } from "@/components/back-link";
 import { Poster } from "@/components/poster";
-import { FILMS, getFilmByImdbId, getNominationsByImdbId, getPersonById } from "@/lib/data";
+import { FILMS, getCategoriesById, getFilmByImdbId, getNominationsByImdbId, getPersonById } from "@/lib/data";
 import { simplifyCategoryLabel } from "@/lib/category-labels";
 import { groupNominationsByFestival } from "@/lib/festival-filters";
 import { buildMissingInfoIssueUrl, getMissingFields } from "@/lib/missing-info";
+import { resultLabel } from "@/lib/result-label";
 import { IMDB_ID_PATTERN } from "@/lib/schemas.mjs";
 
 type FilmPageProps = {
@@ -105,7 +106,9 @@ export default async function FilmPage({ params }: FilmPageProps) {
                         <p className="meta text-xs text-bone/60">{entry.year}</p>
                         <p className="mt-1 text-sm" title={entry.category}>
                           {simplifyCategoryLabel(entry.category, entry.festivalId)} ·{" "}
-                          <span className={entry.result === "winner" ? "text-gold" : "text-bone/80"}>{entry.result}</span>
+                          <span className={entry.result === "winner" ? "text-gold" : "text-bone/80"}>
+                            {resultLabel(entry.result, getCategoriesById().get(entry.categoryId)?.isAward)}
+                          </span>
                         </p>
                         {creditNames.length > 0 ? <p className="mt-1 text-xs text-bone/60">{creditNames.join(" · ")}</p> : null}
                       </li>
